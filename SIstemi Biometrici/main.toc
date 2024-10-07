@@ -1,0 +1,65 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduzione alla biometria}{2}{}%
+\contentsline {section}{\numberline {1.1}Riconoscimento biometrico e tecniche tradizionali}{2}{}%
+\contentsline {subsubsection}{Nuovo modo di identificare e autenticare}{2}{}%
+\contentsline {subsubsection}{Definizione di biometria}{2}{}%
+\contentsline {subsection}{\numberline {1.1.1}Riconoscimento}{2}{}%
+\contentsline {subsubsection}{Autenticazione}{2}{}%
+\contentsline {subsubsection}{Identificazione}{3}{}%
+\contentsline {subsubsection}{Autenticazione/Identificazione Positiva e Negativa}{3}{}%
+\contentsline {subsection}{\numberline {1.1.2}Metodi classici di autenticazione}{3}{}%
+\contentsline {subsubsection}{Metodi classici: problemi}{3}{}%
+\contentsline {subsection}{\numberline {1.1.3}Metodi biometrici}{4}{}%
+\contentsline {subsubsection}{Alcuni vantaggi}{4}{}%
+\contentsline {subsubsection}{Alcuni svantaggi}{5}{}%
+\contentsline {subsubsection}{Biometrics and Biometry}{5}{}%
+\contentsline {subsubsection}{Le 7 proprietà del tratto biometrico}{6}{}%
+\contentsline {section}{\numberline {1.2}Aspetto e funzionamento dei sistemi biometrici}{6}{}%
+\contentsline {subsubsection}{Enrollment}{6}{}%
+\contentsline {subsubsection}{Identificazione/Verifica}{6}{}%
+\contentsline {section}{\numberline {1.3}Tratti biometrici: caratteristiche}{8}{}%
+\contentsline {subsubsection}{Impronta digitale}{8}{}%
+\contentsline {subsubsection}{Volto}{8}{}%
+\contentsline {subsubsection}{Mano}{9}{}%
+\contentsline {subsubsection}{Iride}{11}{}%
+\contentsline {subsubsection}{Firma}{11}{}%
+\contentsline {subsubsection}{Voce}{11}{}%
+\contentsline {subsubsection}{Sistemi multimodali}{11}{}%
+\contentsline {section}{\numberline {1.4}Comparazione dei sistemi biometrici}{12}{}%
+\contentsline {subsubsection}{Autenticazione/Identificazione}{12}{}%
+\contentsline {subsubsection}{Variazioni del tratto}{12}{}%
+\contentsline {subsubsection}{Velocità del sistema}{13}{}%
+\contentsline {subsubsection}{Interoperabilità}{13}{}%
+\contentsline {section}{\numberline {1.5}Impiego di un sistema biometrico: aspetti di privacy e legislativi}{14}{}%
+\contentsline {subsubsection}{Percezione degli utenti}{14}{}%
+\contentsline {subsubsection}{Discussione sui vantaggi}{14}{}%
+\contentsline {subsubsection}{Discussione sugli svantaggi}{14}{}%
+\contentsline {subsubsection}{L'anello debole della catena}{14}{}%
+\contentsline {subsubsection}{Sample o Template?}{15}{}%
+\contentsline {subsubsection}{Il problema della proscrizione}{16}{}%
+\contentsline {subsubsection}{Privacy e variazioni del tratto}{16}{}%
+\contentsline {subsection}{\numberline {1.5.1}Decalogo del garante sulla biometria}{16}{}%
+\contentsline {subsection}{\numberline {1.5.2}GDPR}{17}{}%
+\contentsline {subsubsection}{Pesudonomizzazione}{17}{}%
+\contentsline {subsubsection}{Resilienza}{17}{}%
+\contentsline {chapter}{\numberline {2}Sistema biometrico: elementi caratteristici}{18}{}%
+\contentsline {section}{\numberline {2.1}Struttura di un sistema biometrico}{18}{}%
+\contentsline {subsection}{\numberline {2.1.1}Struttura di un sistema biometrico (generale)}{18}{}%
+\contentsline {subsubsection}{Fase di enrollment}{18}{}%
+\contentsline {subsubsection}{Verification usando un DB}{19}{}%
+\contentsline {subsubsection}{Identification}{20}{}%
+\contentsline {subsection}{\numberline {2.1.2}Struttura per documenti biometrici}{20}{}%
+\contentsline {subsubsection}{Fase di enrollment}{20}{}%
+\contentsline {subsubsection}{Verification (con documento biometrico)}{21}{}%
+\contentsline {subsection}{\numberline {2.1.3}Struttura dei sistemi multimodali}{21}{}%
+\contentsline {subsection}{\numberline {2.1.4}Struttura dei sistemi biometrici distribuiti}{21}{}%
+\contentsline {subsection}{\numberline {2.1.5}Sistemi biometrici on card}{22}{}%
+\contentsline {section}{\numberline {2.2}Tratto biometrico: aspetti analitici}{23}{}%
+\contentsline {subsubsection}{Variabilità intraclasse}{23}{}%
+\contentsline {subsubsection}{Similitudine interclasse}{23}{}%
+\contentsline {section}{\numberline {2.3}Regole Generali di Progettazione}{23}{}%
+\contentsline {subsection}{\numberline {2.3.1}Acquisizione del tratto}{23}{}%
+\contentsline {subsubsection}{Estrarre molte informazioni}{23}{}%
+\contentsline {subsection}{\numberline {2.3.2}Controllo della qualità}{24}{}%
+\contentsline {subsection}{\numberline {2.3.3}Signal/Image enhancement}{24}{}%
