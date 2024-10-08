@@ -1,0 +1,8 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Standard e Concetti base}{2}{}%
+\contentsline {section}{\numberline {1.1}Sicurezza informatica - definizioni}{2}{}%
+\contentsline {subsubsection}{Le sfide della sicurezza informatica}{2}{}%
+\contentsline {subsubsection}{Attacchi passivi e attivi}{4}{}%
+\contentsline {section}{\numberline {1.2}Minacce e conseguenze}{4}{}%
+\contentsline {subsubsection}{Superificie di attacco}{5}{}%
