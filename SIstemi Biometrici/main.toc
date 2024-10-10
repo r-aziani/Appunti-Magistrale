@@ -58,8 +58,18 @@
 \contentsline {section}{\numberline {2.2}Tratto biometrico: aspetti analitici}{23}{}%
 \contentsline {subsubsection}{Variabilità intraclasse}{23}{}%
 \contentsline {subsubsection}{Similitudine interclasse}{23}{}%
-\contentsline {section}{\numberline {2.3}Regole Generali di Progettazione}{23}{}%
-\contentsline {subsection}{\numberline {2.3.1}Acquisizione del tratto}{23}{}%
-\contentsline {subsubsection}{Estrarre molte informazioni}{23}{}%
-\contentsline {subsection}{\numberline {2.3.2}Controllo della qualità}{24}{}%
-\contentsline {subsection}{\numberline {2.3.3}Signal/Image enhancement}{24}{}%
+\contentsline {chapter}{\numberline {3}Regole Generali di Progettazione}{24}{}%
+\contentsline {section}{\numberline {3.1}Acquisizione del tratto}{24}{}%
+\contentsline {subsubsection}{Estrarre molte informazioni}{24}{}%
+\contentsline {subsection}{\numberline {3.1.1}Controllo della qualità}{25}{}%
+\contentsline {subsubsection}{Signal/Image enhancement}{25}{}%
+\contentsline {section}{\numberline {3.2}Rappresentazione}{25}{}%
+\contentsline {subsection}{\numberline {3.2.1}Rappresentazione del sample}{26}{}%
+\contentsline {subsection}{\numberline {3.2.2}Estrazione di caratteristiche}{26}{}%
+\contentsline {section}{\numberline {3.3}Matching}{27}{}%
+\contentsline {section}{\numberline {3.4}Ricerca ed organizzazione dei DB biometrici}{28}{}%
+\contentsline {subsubsection}{Scalabilità}{28}{}%
+\contentsline {subsection}{\numberline {3.4.1}Organizzazione del DB (indexing) e tasso di prenetazione nel DB}{28}{}%
+\contentsline {subsection}{\numberline {3.4.2}Binning}{29}{}%
+\contentsline {subsubsection}{Calcolo del numero di bin ottimale}{29}{}%
+\contentsline {subsubsection}{Binning error}{29}{}%

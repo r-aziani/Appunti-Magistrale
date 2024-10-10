@@ -106,9 +106,9 @@ Può essere dovuto a:
 
 Particolare vicinanza dei \textbf{sample} o delle \textbf{feature} acquisiti da individui diversi.
 
-\section{Regole Generali di Progettazione}
+\chapter{Regole Generali di Progettazione}
 
-\subsection{Acquisizione del tratto}
+\section{Acquisizione del tratto}
 
 Analizziamo i metodi per \textbf{progettare} ed eventualmente \textbf{migliorare} il modulo di acquisizione.
 
@@ -146,8 +146,147 @@ Il concetto di base è semplice, ma la progettazione e realizzazione dell'indice
     \item non sempre esistono \textbf{metriche rigorose e robuste} per misurare la distanza del sample in ingresso con il riferimento ottimale
 \end{itemize}
 
-\subsection{Signal/Image enhancement}
+\subsubsection{Signal/Image enhancement}
 In alcuni casi non è possibile rifiutare un sample perché il suo indice di qualità è basso (ad esempio database giudiziari); in questo caso, il sistema cerca di estrarre le informazioni (foreground) dal rumore (background) in modo tale da far funzionare il resto della catena di moduli del sistema.
 
 Solitamente questa fase è ad alta complessità computazionale. Può generare i cosidetti \textbf{artefatti}; ad esempio, data un'impronta rumorosa genere delle minuzie che non erano presenti nell'immagine originale.
+
+\section{Rappresentazione}
+
+Un'acquisizione di un sistema non elaborata, chiamata sample, è:
+\begin{itemize}
+    \item \textbf{non invariante} rispetto al momento dell'acquisizione
+    \item \textbf{non discriminatoria} (sono tutte diverse)
+\end{itemize}
+
+In un sistema biometrico occorre \textbf{studiare come rappresentare al meglio l'informazione} per rispondere 
+alla domanda: \textit{"Quale rappresentazione machine-readable cattura \textbf{completamente} l'informazione \textbf{invariante} e \textbf{discriminatoria} 
+della misura in ingresso?}
+
+Il problema della rappresentazione consiste nel determinare uno spazio di misura che sia:
+\begin{itemize}
+    \item \textbf{invariante} (meno variante) rispetto ad acquisizioni dello stesso individuo
+    \item che si \textbf{differinzi massivamente} dalla acquisizioni di individui diversi
+\end{itemize}
+In altre parole, si può dire che la rappresentazione deve fornire:
+\begin{itemize}
+    \item \textbf{alta variabilità interclasse} (io diverso da tutti gli altri)
+    \item \textbf{bassa variabilità intraclasse} (io simile a me stesso nei miei sample)
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap2/rappresentazione.png}
+    \caption{Visualizzazione del problema della
+    rappresentazione in un spazio delle features
+    N-dimensionale}
+    \label{fig:rappr}
+\end{figure}
+
+Il problema della rappresentazione si suddivide in:
+\begin{itemize}
+    \item rappresentazione del sample
+    \item estrazione delle caratteristiche
+    \item rappresentazione del template
+\end{itemize}
+
+\subsection{Rappresentazione del sample}
+
+Si riferisce alle caratteristiche tecniche del processo di acquisizione e memorizzazione del sample.
+Varia a seconda del tratto biometrico, ci si riferisce a questi dati come \textbf{\textit{raw data}}.
+
+\subsection{Estrazione di caratteristiche}
+
+L'estrazione delle caratteristiche impatta sul modulo evidenziato
+presente sia in fase di enrollment che di verification/identification.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap2/estrazione.png}
+    \caption{Impatto dell'estrazione delle caratterisiche}
+\end{figure}
+
+Avendo i dati raw provenienti dalle misurazioni occorre ora \textbf{estrarne la rappresentazione nello spazio delle caratteristiche.}
+Questo non è mai un problema semplice, specialmente con dati rumorosi.
+
+Può essere fatta in maniera manuale da un operatore oppure utilizzando un sistema automatico; \textbf{lo spazio delle 
+caratteristiche di un sistema automatico tende ad essere diverso} da quello di un sistema con estrazione manuale.
+
+\section{Matching}
+
+Il matching impatta sul modulo evidenziato solo nella fase di verification\\/identification.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap2/matching.png}
+    \caption{Impatto del matching}
+\end{figure}
+
+\section{Ricerca ed organizzazione dei DB biometrici}
+
+\subsubsection{Scalabilità}
+
+I sistemi che devono gestire una grande quantità di
+identità dovrebbero essere in grado di operare
+efficacemente quando il numero di utenti registrati nel DB
+aumenta.
+
+L'introduzione della biometria in un sistema di identificazione di grandi dimensioni produce dei vantaggi:
+\begin{itemize}
+    \item non soffrono del problema della produzione e del rinnovo dei documenti di identità
+    \item sono competitivi in termini di costo e mantenimento
+\end{itemize}
+
+\subsection{Organizzazione del DB (indexing) e tasso di prenetazione nel DB}
+
+L’obiettivo di gestire efficacemente la complessità delle
+ricerche rispetto all’incremento del numero di template nel
+DB del sistema può essere raggiunto solo con una attenta
+organizzazione dei DB (indexing); un DB organizzato permette di non confrontare un
+template in ingresso con tutti i template nel DB ma solo
+con quelli contenuti in una partizione.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{chapters/images-chap2/indexing.png}
+    \caption{Esempio di indexing}
+\end{figure}
+
+In generale si può definire il tasso di penetrazione come la
+percentuale del database totale da esaminare in media per
+ogni ricerca. Più basso è il tasso di penetrazione, più
+efficiente è il sistema.
+
+Tuttavia, per i sistemi biometrici serve fare un distinguo: 
+
+\textit{\textbf{la proporzione attesa dei template da cercare su tutti i campioni di input secondo
+la regola che la ricerca prosegue attraverso l'intera partizione, indipendentemente
+dal fatto che venga trovata una corrispondenza o meno}}.
+
+\subsection{Binning}
+
+Per giovare delle partizioni del DB occorre disporre di un
+\textbf{algoritmo automatico molto robusto} per la classificazione
+dei template; quando il DB viene creato, i template vengono disposti nelle partizioni (\textbf{\textit{bins}}).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap2/binning.png}
+    \caption{Esempio di suddivisioni in bins di un DB}
+\end{figure}
+
+\subsubsection{Calcolo del numero di bin ottimale}
+
+Se ho \textbf{N} impronte disitnguibili (indice, medio...) tutte divisibili \textbf{M} tipi (arch, whorl, ...), allora 
+numero migliore di bin è = \textbf{$M^N$}.
+
+\subsubsection{Binning error}
+
+I  problemi nascono quando un individuo presenta i propri
+tratti biometrici al sistema e l’algoritmo di classificazione
+del tratto sbaglia il bin (binning error); se l'indivduo era registrato nel DB, probabilmente non si avrà un match in quanto i template che matchano sono in un bin differente.
+
+
+
+
 
