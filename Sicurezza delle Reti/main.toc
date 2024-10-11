@@ -5,4 +5,31 @@
 \contentsline {subsubsection}{Le sfide della sicurezza informatica}{2}{}%
 \contentsline {subsubsection}{Attacchi passivi e attivi}{4}{}%
 \contentsline {section}{\numberline {1.2}Minacce e conseguenze}{4}{}%
-\contentsline {subsubsection}{Superificie di attacco}{5}{}%
+\contentsline {section}{\numberline {1.3}Principi fondamentali di progettazione della sicurezza}{5}{}%
+\contentsline {subsection}{\numberline {1.3.1}Principle of Fail-Safe Defaults (default libero da fallimento)}{5}{}%
+\contentsline {subsection}{\numberline {1.3.2}Principle of Economy of Mechanism (economia dei meccanismi)}{5}{}%
+\contentsline {subsection}{\numberline {1.3.3}Principle of Complete Mediation}{5}{}%
+\contentsline {subsection}{\numberline {1.3.4}Principle of Open Design}{5}{}%
+\contentsline {subsection}{\numberline {1.3.5}Principle of Separation of Privilege}{5}{}%
+\contentsline {subsection}{\numberline {1.3.6}Principle of Least Privilege (privilegio minimo)}{6}{}%
+\contentsline {subsection}{\numberline {1.3.7}Principle of Psychological Acceptability}{6}{}%
+\contentsline {section}{\numberline {1.4}Superificie di attacco}{6}{}%
+\contentsline {section}{\numberline {1.5}Progettazione della Sicurezza}{6}{}%
+\contentsline {subsection}{\numberline {1.5.1}Implementazione della Sicurezza}{7}{}%
+\contentsline {chapter}{\numberline {2}Access Control}{8}{}%
+\contentsline {subsubsection}{Principi del AC}{8}{}%
+\contentsline {subsubsection}{Elementi del AC}{8}{}%
+\contentsline {section}{\numberline {2.1}Politiche di Controllo degli Accessi}{8}{}%
+\contentsline {subsection}{\numberline {2.1.1}DAC (Controllo Discrezionale degli Accessi)}{8}{}%
+\contentsline {subsection}{\numberline {2.1.2}MAC (Controllo Obbligatorio degli Accessi)}{9}{}%
+\contentsline {subsubsection}{Vantaggi}{9}{}%
+\contentsline {subsubsection}{Svantaggi}{10}{}%
+\contentsline {subsection}{\numberline {2.1.3}RBAC (Controllo degli Accessi Basato su Ruoli)}{10}{}%
+\contentsline {subsection}{\numberline {2.1.4}ABAC (Controllo degli Accessi Basato su Attributi)}{10}{}%
+\contentsline {section}{\numberline {2.2}Domini di Protezione}{10}{}%
+\contentsline {section}{\numberline {2.3}Access Control in Sistemi Operativi}{11}{}%
+\contentsline {subsection}{\numberline {2.3.1}UNIX Security Model}{11}{}%
+\contentsline {subsection}{\numberline {2.3.2}Windows Security Architecture}{11}{}%
+\contentsline {section}{\numberline {2.4}Elementi di Sicurezza Specifici}{12}{}%
+\contentsline {subsection}{\numberline {2.4.1}SetUID e SetGID in UNIX}{12}{}%
+\contentsline {subsection}{\numberline {2.4.2}MAC in Windows}{12}{}%

@@ -76,20 +76,65 @@ Le minacce possono essere divise in quattro gruppi:
         \item \textbf{falsificazione:} alterazione di dati validi o inserimento di dati falsi in un database
         \item \textbf{ripudio:} un utente rinnega di aver inviato o ricevuto dei dati
     \end{itemize}
-    \item \textbf{interruzione;} è una minaccia alla disponibilità o integrità di un sistema
+    \item \textbf{Interruzione;} è una minaccia alla disponibilità o integrità di un sistema
     \begin{itemize}
         \item \textbf{interdizione:} danneggiamento dell'hardware
         \item \textbf{corruzione:} le risorse funzionano in modo non voluto
         \item \textbf{ostruzione:} interferire con le comunicazioni alterandone i collegamenti
     \end{itemize}
-    \item \textbf{usurpazione;} è una minaccia all'integrità del sistema.
+    \item \textbf{Usurpazione;} è una minaccia all'integrità del sistema.
     \begin{itemize}
         \item \textbf{approprazione indebita:} ad esempio una sottrazione del servizio (DDOS)
         \item \textbf{uso improprio:} ad esempio dopo che un utente ha ottenuto un accesso non autorizzato  
     \end{itemize}
 \end{itemize}
 
-\subsubsection{Superificie di attacco}
+\section{Principi fondamentali di progettazione della sicurezza}
+
+Sono delle regole generali della sicurezza informatica. 
+
+\subsection{Principle of Fail-Safe Defaults (default libero da fallimento)}
+
+A meno che un soggetto non abbia accesso esplicito a un oggetto, dovrebbe essergli negato l'accesso a tale oggetto.
+
+In caso di fallimento del sistema, il sistema deve rimanere in uno stato di sicurezza
+
+\subsection{Principle of Economy of Mechanism (economia dei meccanismi)}
+
+I meccanismi di sicurezza dovrebbero essere il più semplice possibile; questo implica meno errori, meno controlli e testing; nella complessità si nasconde
+ una maggiore possibilità di fallimenti o vulnerabilità.
+
+\subsection{Principle of Complete Mediation}
+
+Ogni accesso ad una risorsa deve sempre essere controllato da un meccanismo di sicurezza.
+
+
+\subsection{Principle of Open Design}
+
+La sicurezza di un meccanismo non dovrebbe dipendere dalla segretezza della sua progettazione
+o attuazione.
+
+La sicurezza non deve essere garantita dal fatto che l'attaccante non sa come è stata progettata una cosa.
+
+\subsection{Principle of Separation of Privilege}
+
+Un sistema non dovrebbe concedere l'autorizzazione in base a una singola condizione;
+principio di separazione dei doveri.
+
+\subsection{Principle of Least Privilege (privilegio minimo)}
+
+A un soggetto dovrebbero essere concessi solo i privilegi di cui ha bisogno per completare il suo
+compito.
+
+Un caso di eccezione può essere quando per determinate azioni, il diritto di accesso del soggetto può essere
+aumentato ma rilasciato immediatamente al completamento dell'azione.
+
+\subsection{Principle of Psychological Acceptability}
+
+I meccanismi di sicurezza non dovrebbero rendere l'accesso alla risorsa più difficile che se i
+meccanismi di sicurezza non fossero presenti.
+
+\section{Superificie di attacco}
 È costituita dalle vulnerabilità raggiungibili e sfruttabili in un sistema, come ad esempio:
 \begin{itemize}
     \item le porte aperte verso l'esterno
@@ -104,4 +149,25 @@ Alcune superfici di attacco:
     \item \textbf{superificie di attacco software}; sono incluse vulnerabilità nel codice delle applicazioni
     \item \textbf{superificie di attacco umano;} sono incluse vulnerabilità create dal personale (errori, social engeneering)
 \end{itemize}
+
+\section{Progettazione della Sicurezza}
+
+Una strategia di sicurezza globale comprende tre aspetti:
+\begin{itemize}
+    \item \textbf{Specifiche/Politiche:} cosa dovrebbe fare lo schema di sicurezza?
+    \item \textbf{Implementazione/Meccanismi:} come funziona?
+    \item \textbf{Correttezza/Sicurezza:} funziona davvero?
+\end{itemize}
+
+\subsection{Implementazione della Sicurezza}
+
+Prevede quattro linee d'azione complementari:
+\begin{itemize}
+    \item \textbf{Prevenzione:} uno schema di sicurezza ideale è uno schema in cui nessun attacco ha successo
+    \item \textbf{Detection (rilevamento):} ad esempio sistemi di rilevamento di instrusioni
+    \item \textbf{Risposta:} se viene rilevato un attacco, rispondere in modo tale da fermarlo ed evitare ulteriori danni 
+    \item \textbf{Recovery (ripristino):} ad esempio l'uso di sistemi di backup nel caso in cui venga compromessa l'integrità dei dati
+\end{itemize}
+
+
 
