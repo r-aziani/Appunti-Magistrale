@@ -1,75 +1,84 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione alla biometria}{2}{}%
-\contentsline {section}{\numberline {1.1}Riconoscimento biometrico e tecniche tradizionali}{2}{}%
-\contentsline {subsubsection}{Nuovo modo di identificare e autenticare}{2}{}%
-\contentsline {subsubsection}{Definizione di biometria}{2}{}%
-\contentsline {subsection}{\numberline {1.1.1}Riconoscimento}{2}{}%
-\contentsline {subsubsection}{Autenticazione}{2}{}%
-\contentsline {subsubsection}{Identificazione}{3}{}%
-\contentsline {subsubsection}{Autenticazione/Identificazione Positiva e Negativa}{3}{}%
-\contentsline {subsection}{\numberline {1.1.2}Metodi classici di autenticazione}{3}{}%
-\contentsline {subsubsection}{Metodi classici: problemi}{3}{}%
-\contentsline {subsection}{\numberline {1.1.3}Metodi biometrici}{4}{}%
-\contentsline {subsubsection}{Alcuni vantaggi}{4}{}%
-\contentsline {subsubsection}{Alcuni svantaggi}{5}{}%
-\contentsline {subsubsection}{Biometrics and Biometry}{5}{}%
-\contentsline {subsubsection}{Le 7 proprietà del tratto biometrico}{6}{}%
-\contentsline {section}{\numberline {1.2}Aspetto e funzionamento dei sistemi biometrici}{6}{}%
-\contentsline {subsubsection}{Enrollment}{6}{}%
-\contentsline {subsubsection}{Identificazione/Verifica}{6}{}%
-\contentsline {section}{\numberline {1.3}Tratti biometrici: caratteristiche}{8}{}%
-\contentsline {subsubsection}{Impronta digitale}{8}{}%
-\contentsline {subsubsection}{Volto}{8}{}%
-\contentsline {subsubsection}{Mano}{9}{}%
-\contentsline {subsubsection}{Iride}{11}{}%
-\contentsline {subsubsection}{Firma}{11}{}%
-\contentsline {subsubsection}{Voce}{11}{}%
-\contentsline {subsubsection}{Sistemi multimodali}{11}{}%
-\contentsline {section}{\numberline {1.4}Comparazione dei sistemi biometrici}{12}{}%
-\contentsline {subsubsection}{Autenticazione/Identificazione}{12}{}%
-\contentsline {subsubsection}{Variazioni del tratto}{12}{}%
-\contentsline {subsubsection}{Velocità del sistema}{13}{}%
-\contentsline {subsubsection}{Interoperabilità}{13}{}%
-\contentsline {section}{\numberline {1.5}Impiego di un sistema biometrico: aspetti di privacy e legislativi}{14}{}%
-\contentsline {subsubsection}{Percezione degli utenti}{14}{}%
-\contentsline {subsubsection}{Discussione sui vantaggi}{14}{}%
-\contentsline {subsubsection}{Discussione sugli svantaggi}{14}{}%
-\contentsline {subsubsection}{L'anello debole della catena}{14}{}%
-\contentsline {subsubsection}{Sample o Template?}{15}{}%
-\contentsline {subsubsection}{Il problema della proscrizione}{16}{}%
-\contentsline {subsubsection}{Privacy e variazioni del tratto}{16}{}%
-\contentsline {subsection}{\numberline {1.5.1}Decalogo del garante sulla biometria}{16}{}%
-\contentsline {subsection}{\numberline {1.5.2}GDPR}{17}{}%
-\contentsline {subsubsection}{Pesudonomizzazione}{17}{}%
-\contentsline {subsubsection}{Resilienza}{17}{}%
-\contentsline {chapter}{\numberline {2}Sistema biometrico: elementi caratteristici}{18}{}%
-\contentsline {section}{\numberline {2.1}Struttura di un sistema biometrico}{18}{}%
-\contentsline {subsection}{\numberline {2.1.1}Struttura di un sistema biometrico (generale)}{18}{}%
-\contentsline {subsubsection}{Fase di enrollment}{18}{}%
-\contentsline {subsubsection}{Verification usando un DB}{19}{}%
-\contentsline {subsubsection}{Identification}{20}{}%
-\contentsline {subsection}{\numberline {2.1.2}Struttura per documenti biometrici}{20}{}%
-\contentsline {subsubsection}{Fase di enrollment}{20}{}%
-\contentsline {subsubsection}{Verification (con documento biometrico)}{21}{}%
-\contentsline {subsection}{\numberline {2.1.3}Struttura dei sistemi multimodali}{21}{}%
-\contentsline {subsection}{\numberline {2.1.4}Struttura dei sistemi biometrici distribuiti}{21}{}%
-\contentsline {subsection}{\numberline {2.1.5}Sistemi biometrici on card}{22}{}%
-\contentsline {section}{\numberline {2.2}Tratto biometrico: aspetti analitici}{23}{}%
-\contentsline {subsubsection}{Variabilità intraclasse}{23}{}%
-\contentsline {subsubsection}{Similitudine interclasse}{23}{}%
-\contentsline {chapter}{\numberline {3}Regole Generali di Progettazione}{24}{}%
-\contentsline {section}{\numberline {3.1}Acquisizione del tratto}{24}{}%
-\contentsline {subsubsection}{Estrarre molte informazioni}{24}{}%
-\contentsline {subsection}{\numberline {3.1.1}Controllo della qualità}{25}{}%
-\contentsline {subsubsection}{Signal/Image enhancement}{25}{}%
-\contentsline {section}{\numberline {3.2}Rappresentazione}{25}{}%
-\contentsline {subsection}{\numberline {3.2.1}Rappresentazione del sample}{26}{}%
-\contentsline {subsection}{\numberline {3.2.2}Estrazione di caratteristiche}{26}{}%
-\contentsline {section}{\numberline {3.3}Matching}{27}{}%
-\contentsline {section}{\numberline {3.4}Ricerca ed organizzazione dei DB biometrici}{28}{}%
-\contentsline {subsubsection}{Scalabilità}{28}{}%
-\contentsline {subsection}{\numberline {3.4.1}Organizzazione del DB (indexing) e tasso di prenetazione nel DB}{28}{}%
-\contentsline {subsection}{\numberline {3.4.2}Binning}{29}{}%
-\contentsline {subsubsection}{Calcolo del numero di bin ottimale}{29}{}%
-\contentsline {subsubsection}{Binning error}{29}{}%
+\contentsline {chapter}{\numberline {1}Introduzione alla biometria}{3}{}%
+\contentsline {section}{\numberline {1.1}Riconoscimento biometrico e tecniche tradizionali}{3}{}%
+\contentsline {subsubsection}{Nuovo modo di identificare e autenticare}{3}{}%
+\contentsline {subsubsection}{Definizione di biometria}{3}{}%
+\contentsline {subsection}{\numberline {1.1.1}Riconoscimento}{3}{}%
+\contentsline {subsubsection}{Autenticazione}{3}{}%
+\contentsline {subsubsection}{Identificazione}{4}{}%
+\contentsline {subsubsection}{Autenticazione/Identificazione Positiva e Negativa}{4}{}%
+\contentsline {subsection}{\numberline {1.1.2}Metodi classici di autenticazione}{4}{}%
+\contentsline {subsubsection}{Metodi classici: problemi}{4}{}%
+\contentsline {subsection}{\numberline {1.1.3}Metodi biometrici}{5}{}%
+\contentsline {subsubsection}{Alcuni vantaggi}{5}{}%
+\contentsline {subsubsection}{Alcuni svantaggi}{6}{}%
+\contentsline {subsubsection}{Biometrics and Biometry}{6}{}%
+\contentsline {subsubsection}{Le 7 proprietà del tratto biometrico}{7}{}%
+\contentsline {section}{\numberline {1.2}Aspetto e funzionamento dei sistemi biometrici}{7}{}%
+\contentsline {subsubsection}{Enrollment}{7}{}%
+\contentsline {subsubsection}{Identificazione/Verifica}{7}{}%
+\contentsline {section}{\numberline {1.3}Tratti biometrici: caratteristiche}{9}{}%
+\contentsline {subsubsection}{Impronta digitale}{9}{}%
+\contentsline {subsubsection}{Volto}{9}{}%
+\contentsline {subsubsection}{Mano}{10}{}%
+\contentsline {subsubsection}{Iride}{12}{}%
+\contentsline {subsubsection}{Firma}{12}{}%
+\contentsline {subsubsection}{Voce}{12}{}%
+\contentsline {subsubsection}{Sistemi multimodali}{12}{}%
+\contentsline {section}{\numberline {1.4}Comparazione dei sistemi biometrici}{13}{}%
+\contentsline {subsubsection}{Autenticazione/Identificazione}{13}{}%
+\contentsline {subsubsection}{Variazioni del tratto}{13}{}%
+\contentsline {subsubsection}{Velocità del sistema}{14}{}%
+\contentsline {subsubsection}{Interoperabilità}{14}{}%
+\contentsline {section}{\numberline {1.5}Impiego di un sistema biometrico: aspetti di privacy e legislativi}{15}{}%
+\contentsline {subsubsection}{Percezione degli utenti}{15}{}%
+\contentsline {subsubsection}{Discussione sui vantaggi}{15}{}%
+\contentsline {subsubsection}{Discussione sugli svantaggi}{15}{}%
+\contentsline {subsubsection}{L'anello debole della catena}{15}{}%
+\contentsline {subsubsection}{Sample o Template?}{16}{}%
+\contentsline {subsubsection}{Il problema della proscrizione}{17}{}%
+\contentsline {subsubsection}{Privacy e variazioni del tratto}{17}{}%
+\contentsline {subsection}{\numberline {1.5.1}Decalogo del garante sulla biometria}{17}{}%
+\contentsline {subsection}{\numberline {1.5.2}GDPR}{18}{}%
+\contentsline {subsubsection}{Pesudonomizzazione}{18}{}%
+\contentsline {subsubsection}{Resilienza}{18}{}%
+\contentsline {chapter}{\numberline {2}Sistema biometrico: elementi caratteristici}{19}{}%
+\contentsline {section}{\numberline {2.1}Struttura di un sistema biometrico}{19}{}%
+\contentsline {subsection}{\numberline {2.1.1}Struttura di un sistema biometrico (generale)}{19}{}%
+\contentsline {subsubsection}{Fase di enrollment}{19}{}%
+\contentsline {subsubsection}{Verification usando un DB}{20}{}%
+\contentsline {subsubsection}{Identification}{21}{}%
+\contentsline {subsection}{\numberline {2.1.2}Struttura per documenti biometrici}{21}{}%
+\contentsline {subsubsection}{Fase di enrollment}{21}{}%
+\contentsline {subsubsection}{Verification (con documento biometrico)}{22}{}%
+\contentsline {subsection}{\numberline {2.1.3}Struttura dei sistemi multimodali}{22}{}%
+\contentsline {subsection}{\numberline {2.1.4}Struttura dei sistemi biometrici distribuiti}{22}{}%
+\contentsline {subsection}{\numberline {2.1.5}Sistemi biometrici on card}{23}{}%
+\contentsline {section}{\numberline {2.2}Tratto biometrico: aspetti analitici}{24}{}%
+\contentsline {subsubsection}{Variabilità intraclasse}{24}{}%
+\contentsline {subsubsection}{Similitudine interclasse}{24}{}%
+\contentsline {chapter}{\numberline {3}Regole Generali di Progettazione}{25}{}%
+\contentsline {section}{\numberline {3.1}Acquisizione del tratto}{25}{}%
+\contentsline {subsubsection}{Estrarre molte informazioni}{25}{}%
+\contentsline {subsection}{\numberline {3.1.1}Controllo della qualità}{26}{}%
+\contentsline {subsubsection}{Signal/Image enhancement}{26}{}%
+\contentsline {section}{\numberline {3.2}Rappresentazione}{26}{}%
+\contentsline {subsection}{\numberline {3.2.1}Rappresentazione del sample}{27}{}%
+\contentsline {subsection}{\numberline {3.2.2}Estrazione di caratteristiche}{27}{}%
+\contentsline {section}{\numberline {3.3}Matching}{28}{}%
+\contentsline {section}{\numberline {3.4}Ricerca ed organizzazione dei DB biometrici}{29}{}%
+\contentsline {subsubsection}{Scalabilità}{29}{}%
+\contentsline {subsection}{\numberline {3.4.1}Organizzazione del DB (indexing) e tasso di prenetazione nel DB}{29}{}%
+\contentsline {subsection}{\numberline {3.4.2}Binning}{30}{}%
+\contentsline {subsubsection}{Calcolo del numero di bin ottimale}{30}{}%
+\contentsline {subsubsection}{Binning error}{30}{}%
+\contentsline {subsubsection}{Calcolo del binning error}{31}{}%
+\contentsline {section}{\numberline {3.5}Introduzione alla misura dei parametri}{31}{}%
+\contentsline {subsubsection}{Genuini ed impostori}{31}{}%
+\contentsline {subsection}{\numberline {3.5.1}Verifica}{32}{}%
+\contentsline {subsubsection}{Problema della verifica}{32}{}%
+\contentsline {subsubsection}{Regola di decisione per la verifica}{32}{}%
+\contentsline {subsection}{\numberline {3.5.2}Identificazione}{32}{}%
+\contentsline {subsubsection}{Problema di identificazione}{32}{}%
+\contentsline {subsubsection}{Regola di decisione per l'identificazione}{33}{}%
