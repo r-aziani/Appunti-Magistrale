@@ -74,11 +74,27 @@
 \contentsline {subsubsection}{Calcolo del numero di bin ottimale}{30}{}%
 \contentsline {subsubsection}{Binning error}{30}{}%
 \contentsline {subsubsection}{Calcolo del binning error}{31}{}%
-\contentsline {section}{\numberline {3.5}Introduzione alla misura dei parametri}{31}{}%
-\contentsline {subsubsection}{Genuini ed impostori}{31}{}%
-\contentsline {subsection}{\numberline {3.5.1}Verifica}{32}{}%
-\contentsline {subsubsection}{Problema della verifica}{32}{}%
-\contentsline {subsubsection}{Regola di decisione per la verifica}{32}{}%
-\contentsline {subsection}{\numberline {3.5.2}Identificazione}{32}{}%
-\contentsline {subsubsection}{Problema di identificazione}{32}{}%
-\contentsline {subsubsection}{Regola di decisione per l'identificazione}{33}{}%
+\contentsline {chapter}{\numberline {4}Introduzione alla misura dei parametri}{32}{}%
+\contentsline {subsubsection}{Genuini ed impostori}{32}{}%
+\contentsline {section}{\numberline {4.1}Verifica e Identificazione}{33}{}%
+\contentsline {subsection}{\numberline {4.1.1}Verifica}{33}{}%
+\contentsline {subsubsection}{Problema della verifica}{33}{}%
+\contentsline {subsubsection}{Regola di decisione per la verifica}{33}{}%
+\contentsline {subsection}{\numberline {4.1.2}Identificazione}{33}{}%
+\contentsline {subsubsection}{Problema di identificazione}{33}{}%
+\contentsline {subsubsection}{Regola di decisione per l'identificazione}{34}{}%
+\contentsline {section}{\numberline {4.2}Distanza tra template}{34}{}%
+\contentsline {subsubsection}{Genuini ed impostori}{34}{}%
+\contentsline {subsection}{\numberline {4.2.1}Distribuzioni dei match score}{35}{}%
+\contentsline {section}{\numberline {4.3}False Match e False Non-Match}{35}{}%
+\contentsline {subsection}{\numberline {4.3.1}FM Rate, FNM Rate}{35}{}%
+\contentsline {section}{\numberline {4.4}Decision Error Tradeoff (DET) e Receiver Operating Characteristic (ROC)}{36}{}%
+\contentsline {subsubsection}{DET: Regioni di funzionamento}{36}{}%
+\contentsline {subsubsection}{DET: Equal Error Rate}{37}{}%
+\contentsline {subsubsection}{ROC = 1 - DET}{37}{}%
+\contentsline {section}{\numberline {4.5}Metodi statistici per la stima dei parametri in un sistema biometrico}{37}{}%
+\contentsline {subsection}{\numberline {4.5.1}Che modello usiamo?}{37}{}%
+\contentsline {subsection}{\numberline {4.5.2}Regola dei 3}{38}{}%
+\contentsline {subsubsection}{Esempio}{38}{}%
+\contentsline {subsection}{\numberline {4.5.3}Regola dei 30}{38}{}%
+\contentsline {subsubsection}{Esempio}{38}{}%
