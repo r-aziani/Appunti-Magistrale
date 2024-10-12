@@ -55,46 +55,46 @@
 \contentsline {subsection}{\numberline {2.1.3}Struttura dei sistemi multimodali}{22}{}%
 \contentsline {subsection}{\numberline {2.1.4}Struttura dei sistemi biometrici distribuiti}{22}{}%
 \contentsline {subsection}{\numberline {2.1.5}Sistemi biometrici on card}{23}{}%
-\contentsline {section}{\numberline {2.2}Tratto biometrico: aspetti analitici}{24}{}%
-\contentsline {subsubsection}{Variabilità intraclasse}{24}{}%
-\contentsline {subsubsection}{Similitudine interclasse}{24}{}%
-\contentsline {chapter}{\numberline {3}Regole Generali di Progettazione}{25}{}%
-\contentsline {section}{\numberline {3.1}Acquisizione del tratto}{25}{}%
-\contentsline {subsubsection}{Estrarre molte informazioni}{25}{}%
-\contentsline {subsection}{\numberline {3.1.1}Controllo della qualità}{26}{}%
-\contentsline {subsubsection}{Signal/Image enhancement}{26}{}%
-\contentsline {section}{\numberline {3.2}Rappresentazione}{26}{}%
-\contentsline {subsection}{\numberline {3.2.1}Rappresentazione del sample}{27}{}%
-\contentsline {subsection}{\numberline {3.2.2}Estrazione di caratteristiche}{27}{}%
-\contentsline {section}{\numberline {3.3}Matching}{28}{}%
-\contentsline {section}{\numberline {3.4}Ricerca ed organizzazione dei DB biometrici}{29}{}%
-\contentsline {subsubsection}{Scalabilità}{29}{}%
-\contentsline {subsection}{\numberline {3.4.1}Organizzazione del DB (indexing) e tasso di prenetazione nel DB}{29}{}%
-\contentsline {subsection}{\numberline {3.4.2}Binning}{30}{}%
-\contentsline {subsubsection}{Calcolo del numero di bin ottimale}{30}{}%
-\contentsline {subsubsection}{Binning error}{30}{}%
-\contentsline {subsubsection}{Calcolo del binning error}{31}{}%
-\contentsline {chapter}{\numberline {4}Introduzione alla misura dei parametri}{32}{}%
-\contentsline {subsubsection}{Genuini ed impostori}{32}{}%
-\contentsline {section}{\numberline {4.1}Verifica e Identificazione}{33}{}%
-\contentsline {subsection}{\numberline {4.1.1}Verifica}{33}{}%
-\contentsline {subsubsection}{Problema della verifica}{33}{}%
-\contentsline {subsubsection}{Regola di decisione per la verifica}{33}{}%
-\contentsline {subsection}{\numberline {4.1.2}Identificazione}{33}{}%
-\contentsline {subsubsection}{Problema di identificazione}{33}{}%
-\contentsline {subsubsection}{Regola di decisione per l'identificazione}{34}{}%
-\contentsline {section}{\numberline {4.2}Distanza tra template}{34}{}%
-\contentsline {subsubsection}{Genuini ed impostori}{34}{}%
-\contentsline {subsection}{\numberline {4.2.1}Distribuzioni dei match score}{35}{}%
-\contentsline {section}{\numberline {4.3}False Match e False Non-Match}{35}{}%
-\contentsline {subsection}{\numberline {4.3.1}FM Rate, FNM Rate}{35}{}%
-\contentsline {section}{\numberline {4.4}Decision Error Tradeoff (DET) e Receiver Operating Characteristic (ROC)}{36}{}%
-\contentsline {subsubsection}{DET: Regioni di funzionamento}{36}{}%
-\contentsline {subsubsection}{DET: Equal Error Rate}{37}{}%
-\contentsline {subsubsection}{ROC = 1 - DET}{37}{}%
-\contentsline {section}{\numberline {4.5}Metodi statistici per la stima dei parametri in un sistema biometrico}{37}{}%
-\contentsline {subsection}{\numberline {4.5.1}Che modello usiamo?}{37}{}%
-\contentsline {subsection}{\numberline {4.5.2}Regola dei 3}{38}{}%
-\contentsline {subsubsection}{Esempio}{38}{}%
-\contentsline {subsection}{\numberline {4.5.3}Regola dei 30}{38}{}%
-\contentsline {subsubsection}{Esempio}{38}{}%
+\contentsline {section}{\numberline {2.2}Tratto biometrico: aspetti analitici}{23}{}%
+\contentsline {subsubsection}{Variabilità intraclasse}{23}{}%
+\contentsline {subsubsection}{Similitudine interclasse}{23}{}%
+\contentsline {chapter}{\numberline {3}Regole Generali di Progettazione}{24}{}%
+\contentsline {section}{\numberline {3.1}Acquisizione del tratto}{24}{}%
+\contentsline {subsubsection}{Estrarre molte informazioni}{24}{}%
+\contentsline {subsection}{\numberline {3.1.1}Controllo della qualità}{25}{}%
+\contentsline {subsubsection}{Signal/Image enhancement}{25}{}%
+\contentsline {section}{\numberline {3.2}Rappresentazione}{25}{}%
+\contentsline {subsection}{\numberline {3.2.1}Rappresentazione del sample}{26}{}%
+\contentsline {subsection}{\numberline {3.2.2}Estrazione di caratteristiche}{26}{}%
+\contentsline {section}{\numberline {3.3}Matching}{27}{}%
+\contentsline {section}{\numberline {3.4}Ricerca ed organizzazione dei DB biometrici}{28}{}%
+\contentsline {subsubsection}{Scalabilità}{28}{}%
+\contentsline {subsection}{\numberline {3.4.1}Organizzazione del DB (indexing) e tasso di prenetazione nel DB}{28}{}%
+\contentsline {subsection}{\numberline {3.4.2}Binning}{29}{}%
+\contentsline {subsubsection}{Calcolo del numero di bin ottimale}{29}{}%
+\contentsline {subsubsection}{Binning error}{29}{}%
+\contentsline {subsubsection}{Calcolo del binning error}{30}{}%
+\contentsline {chapter}{\numberline {4}Introduzione alla misura dei parametri}{31}{}%
+\contentsline {subsubsection}{Genuini ed impostori}{31}{}%
+\contentsline {section}{\numberline {4.1}Verifica e Identificazione}{32}{}%
+\contentsline {subsection}{\numberline {4.1.1}Verifica}{32}{}%
+\contentsline {subsubsection}{Problema della verifica}{32}{}%
+\contentsline {subsubsection}{Regola di decisione per la verifica}{32}{}%
+\contentsline {subsection}{\numberline {4.1.2}Identificazione}{32}{}%
+\contentsline {subsubsection}{Problema di identificazione}{32}{}%
+\contentsline {subsubsection}{Regola di decisione per l'identificazione}{33}{}%
+\contentsline {section}{\numberline {4.2}Distanza tra template}{33}{}%
+\contentsline {subsubsection}{Genuini ed impostori}{33}{}%
+\contentsline {subsection}{\numberline {4.2.1}Distribuzioni dei match score}{34}{}%
+\contentsline {section}{\numberline {4.3}False Match e False Non-Match}{34}{}%
+\contentsline {subsection}{\numberline {4.3.1}FM Rate, FNM Rate}{34}{}%
+\contentsline {section}{\numberline {4.4}Decision Error Tradeoff (DET) e Receiver Operating Characteristic (ROC)}{35}{}%
+\contentsline {subsubsection}{DET: Regioni di funzionamento}{35}{}%
+\contentsline {subsubsection}{DET: Equal Error Rate}{36}{}%
+\contentsline {subsubsection}{ROC = 1 - DET}{36}{}%
+\contentsline {section}{\numberline {4.5}Metodi statistici per la stima dei parametri in un sistema biometrico}{36}{}%
+\contentsline {subsection}{\numberline {4.5.1}Che modello usiamo?}{36}{}%
+\contentsline {subsection}{\numberline {4.5.2}Regola dei 3}{37}{}%
+\contentsline {subsubsection}{Esempio}{37}{}%
+\contentsline {subsection}{\numberline {4.5.3}Regola dei 30}{37}{}%
+\contentsline {subsubsection}{Esempio}{37}{}%

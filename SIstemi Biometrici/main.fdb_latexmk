@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1728742217.63391 "/home/azi/Desktop/Appunti-Magistrale/SIstemi Biometrici/main.tex" "main.pdf" "main" 1728742220.71414 0
+["pdflatex"] 1728742341.60061 "/home/azi/Desktop/Appunti-Magistrale/SIstemi Biometrici/main.tex" "main.pdf" "main" 1728742344.87407 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/azi/Desktop/Appunti-Magistrale/SIstemi Biometrici/main.tex" 1728736522.23182 350 aad5852c05bbf20048e479a105312387 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -56,11 +56,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1728322823.34097 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1728323065 8214324 2349c6972aa9b130e072b9fdd090f5e2 ""
-  "chapters/chapter1.aux" 1728742219.30823 6907 eec1f0d6e0da54503efbb7b3038cce75 "pdflatex"
+  "chapters/chapter1.aux" 1728742343.38227 6907 eec1f0d6e0da54503efbb7b3038cce75 "pdflatex"
   "chapters/chapter1.tex" 1728543060.24726 22018 29999fe7543784e091fa34571e8cb24c ""
-  "chapters/chapter2.aux" 1728742220.24725 6449 d550f536a462e73780ea6089680a05bb "pdflatex"
-  "chapters/chapter2.tex" 1728736488.78199 12824 64f9dfaf8a771b2dfa24fa9d72558de6 ""
-  "chapters/chapter4.aux" 1728742220.61226 3511 9743a82fa268b449a207ad303bed1306 "pdflatex"
+  "chapters/chapter2.aux" 1728742344.34228 6449 d284ed904a4bbe78b3892e5631587be8 "pdflatex"
+  "chapters/chapter2.tex" 1728742337.91919 12814 d35ac6a8e6d5200f39522c69dc3733b9 ""
+  "chapters/chapter4.aux" 1728742344.75229 3511 f5f0d2eceb56b9bf007edecc9caa6cf7 "pdflatex"
   "chapters/chapter4.tex" 1728742217.3842 8534 f3949eb09d39a9270daa2e926b065672 ""
   "chapters/images-chap1/comparazione.png" 1728543060.24926 75842 de8b2b06160c6765e0734c28487fb23a ""
   "chapters/images-chap1/enrollment-identification.png" 1728543060.25226 236363 e15399f543f10cc73d0ba1d13230b60a ""
@@ -91,9 +91,9 @@
   "chapters/images-chap4/det-roc.png" 1728739303.25915 130529 7310dd5ba6fa6cc009422bc98961189b ""
   "chapters/images-chap4/det.png" 1728739135.2841 74787 3d27fe2fe1d401c80fca33d8050a28fb ""
   "chapters/images-chap4/rate.png" 1728737572.60821 109331 61f65a226b5aa5175dc55e791e140e82 ""
-  "main.aux" 1728742220.61226 228 ebc3ac5a496342548f9b0f70c5ea8621 "pdflatex"
+  "main.aux" 1728742344.75329 228 147068ebdc28a23bdfc676cf6c389a4c "pdflatex"
   "main.tex" 1728736522.23182 350 aad5852c05bbf20048e479a105312387 ""
-  "main.toc" 1728742220.61826 6910 7882e632fcc809679d6b5c7d73bb36f8 "pdflatex"
+  "main.toc" 1728742344.76029 6910 2de46f49c1bb0923322f357a49660d88 "pdflatex"
   (generated)
   "chapters/chapter1.aux"
   "chapters/chapter2.aux"
