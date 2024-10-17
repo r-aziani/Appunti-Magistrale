@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  12 OCT 2024 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  17 OCT 2024 11:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -81,7 +81,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count268
 \l__pdf_internal_box=\box51
-) (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux))
+) (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux) (./chapters/chapter5.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -358,25 +358,79 @@ File: chapters/images-chap4/det-roc.png Graphic file (type png)
 <use chapters/images-chap4/det-roc.png>
 Package pdftex.def Info: chapters/images-chap4/det-roc.png  used on input line 177.
 (pdftex.def)             Requested size: 345.0pt x 129.33492pt.
- [36 <./chapters/images-chap4/det-roc.png>]) [37] (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux))
+ [36 <./chapters/images-chap4/det-roc.png>]) [37]
+\openout2 = `chapters/chapter5.aux'.
+
+ (./chapters/chapter5.tex
+Capitolo 5.
+<images-chap5/classificazione.png, id=194, 483.8075pt x 693.59125pt>
+File: images-chap5/classificazione.png Graphic file (type png)
+<use images-chap5/classificazione.png>
+Package pdftex.def Info: images-chap5/classificazione.png  used on input line 28.
+(pdftex.def)             Requested size: 207.0021pt x 296.75676pt.
+[38
+
+
+
+
+] [39 <./images-chap5/classificazione.png>] [40]
+<images-chap5/caratteristiche.png, id=205, 963.6pt x 313.17pt>
+File: images-chap5/caratteristiche.png Graphic file (type png)
+<use images-chap5/caratteristiche.png>
+Package pdftex.def Info: images-chap5/caratteristiche.png  used on input line 118.
+(pdftex.def)             Requested size: 258.75pt x 84.09349pt.
+<images-chap5/livello3.png, id=206, 668.4975pt x 344.28625pt>
+File: images-chap5/livello3.png Graphic file (type png)
+<use images-chap5/livello3.png>
+Package pdftex.def Info: images-chap5/livello3.png  used on input line 130.
+(pdftex.def)             Requested size: 172.5pt x 88.83987pt.
+ [41 <./images-chap5/caratteristiche.png> <./images-chap5/livello3.png>]
+<images-chap5/diversita.png, id=212, 1074.0125pt x 311.1625pt>
+File: images-chap5/diversita.png Graphic file (type png)
+<use images-chap5/diversita.png>
+Package pdftex.def Info: images-chap5/diversita.png  used on input line 149.
+(pdftex.def)             Requested size: 345.0pt x 99.95387pt.
+ [42 <./images-chap5/diversita.png>] [43]
+<images-chap5/ottici.png, id=221, 1090.0725pt x 732.7375pt>
+File: images-chap5/ottici.png Graphic file (type png)
+<use images-chap5/ottici.png>
+Package pdftex.def Info: images-chap5/ottici.png  used on input line 221.
+(pdftex.def)             Requested size: 345.0pt x 231.89806pt.
+<images-chap5/statosolido.png, id=222, 1036.87375pt x 439.6425pt>
+File: images-chap5/statosolido.png Graphic file (type png)
+<use images-chap5/statosolido.png>
+Package pdftex.def Info: images-chap5/statosolido.png  used on input line 233.
+(pdftex.def)             Requested size: 345.0pt x 146.28326pt.
+ [44 <./images-chap5/ottici.png> <./images-chap5/statosolido.png>]
+<images-chap5/pressione.png, id=228, 985.6825pt x 274.02374pt>
+File: images-chap5/pressione.png Graphic file (type png)
+<use images-chap5/pressione.png>
+Package pdftex.def Info: images-chap5/pressione.png  used on input line 254.
+(pdftex.def)             Requested size: 258.75pt x 71.93439pt.
+<images-chap5/unicita.png, id=229, 377.41pt x 424.58624pt>
+File: images-chap5/unicita.png Graphic file (type png)
+<use images-chap5/unicita.png>
+Package pdftex.def Info: images-chap5/unicita.png  used on input line 291.
+(pdftex.def)             Requested size: 172.5pt x 194.06166pt.
+ [45 <./images-chap5/pressione.png>]) [46 <./images-chap5/unicita.png>] (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux) (./chapters/chapter5.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3573 strings out of 474222
- 64417 string characters out of 5748733
- 1933975 words of memory out of 5000000
- 25804 multiletter control sequences out of 15000+600000
+ 3654 strings out of 474222
+ 67101 string characters out of 5748733
+ 1934975 words of memory out of 5000000
+ 25878 multiletter control sequences out of 15000+600000
  564576 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,444b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (38 pages, 3841406 bytes).
+ 57i,7n,65p,444b,248s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (47 pages, 5980509 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
+ 298 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
