@@ -139,7 +139,7 @@ Questo filtro tende ad attenuare il rumore locale.
 
 \section{Estrazione di caratteristiche}
 
-Ci concetriamo sull'estrazione delle feature di I livello (direzione dei ridge, core, delta, ridge count).
+In questa sezione ci concetriamo sull'estrazione delle feature di I livello (direzione dei ridge, core, delta, ridge count).
 
 \subsection{Ridge counting}
 
@@ -173,5 +173,87 @@ Usando l’informazione ricavata dalle frequenze di
 ridge per ogni blocco dell’immagine è possibile
 avere la mappa delle frequenze dell’immagine.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap6/spazio-freq.png}
+\end{figure}
 
+\subsection{Core detection: metodo delle normali}
 
+I punti di core possono essere calcolati utilizzando le normali.
+
+Se seguendo N ridge e calcolando M normali abbiamo un numero sufficientemente
+alto di intersezioni in un punto, allora abbiamo trovato un core.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{chapters/images-chap6/core-detection.png}
+\end{figure}
+
+\newpage
+\section{Estrazione delle minuzie}
+
+In questa sezione esaminiamo gli algoritmi per l'estrazione del II livello (minutiae).
+
+\subsubsection{Metodi di binarizzazione}
+
+I metodi di binarizzazione portano una immagine in toni di
+grigio in una immagine in bianco e nero dove sono
+evidenziati i ridge.
+
+\subsubsection{Thinning}
+
+L’operazione di thinning corrisponde ad ridurre
+progressivamente le linee dell’immagine
+binarizzata fino allo spessore di 1 pixel (scheletro
+dell’immagine).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{chapters/images-chap6/thinning.png}
+\end{figure}
+
+L’algoritmo deve anche (se possibile) riempire i
+buchi nei ridge per non creare profili di questo
+tipo:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap6/thinning-bif.png}
+\end{figure}
+
+\newpage
+\subsection{Come identificare le minuzie}
+
+Esaminando l’intorno di ogni punto lungo un ridge
+di una immagine scheletrizzata è immediato capire in 
+quale punto dell'impronta ci troviamo: basta contare le intersezioni
+della matrice 3x3 attorno al punto.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap6/identificazione-minuzie.png}
+\end{figure}
+
+\subsection{Metodi di post processing}
+
+I moduli di post processing servono per rimuovere le
+minutiae spurie introdotte dei moduli precedenti per errore.
+
+L’errore che si può commettere è quello di togliere una
+minutia corretta commettendo quindi errori.
+
+Esistono due categorie principali di post processing:
+\begin{itemize}
+    \item structural post processing
+    \item minutiae filtering in the gray-scale domain
+\end{itemize}
+
+\subsubsection{Structural post processing}
+
+Questi moduli sono tipicamente basati su regole che fanno riferimento
+a caratteristiche dello scheeltro.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{chapters/images-chap6/structural-post.png}
+\end{figure}

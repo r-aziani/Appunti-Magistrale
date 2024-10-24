@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  24 OCT 2024 10:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  24 OCT 2024 11:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -455,25 +455,58 @@ File: chapters/images-chap6/ridge-freq.png Graphic file (type png)
 <use chapters/images-chap6/ridge-freq.png>
 Package pdftex.def Info: chapters/images-chap6/ridge-freq.png  used on input line 167.
 (pdftex.def)             Requested size: 345.0pt x 177.05225pt.
-) [51 <./chapters/images-chap6/ridge-freq.png>] (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux))
+<chapters/images-chap6/spazio-freq.png, id=264, 1068.99374pt x 484.81125pt>
+File: chapters/images-chap6/spazio-freq.png Graphic file (type png)
+<use chapters/images-chap6/spazio-freq.png>
+Package pdftex.def Info: chapters/images-chap6/spazio-freq.png  used on input line 178.
+(pdftex.def)             Requested size: 345.0pt x 156.46693pt.
+ [51 <./chapters/images-chap6/ridge-freq.png> <./chapters/images-chap6/spazio-freq.png>]
+<chapters/images-chap6/core-detection.png, id=270, 457.71pt x 416.55624pt>
+File: chapters/images-chap6/core-detection.png Graphic file (type png)
+<use chapters/images-chap6/core-detection.png>
+Package pdftex.def Info: chapters/images-chap6/core-detection.png  used on input line 190.
+(pdftex.def)             Requested size: 258.75pt x 235.49454pt.
+ [52 <./chapters/images-chap6/core-detection.png>]
+<chapters/images-chap6/thinning.png, id=275, 727.71875pt x 240.9pt>
+File: chapters/images-chap6/thinning.png Graphic file (type png)
+<use chapters/images-chap6/thinning.png>
+Package pdftex.def Info: chapters/images-chap6/thinning.png  used on input line 213.
+(pdftex.def)             Requested size: 258.75pt x 85.65793pt.
+<chapters/images-chap6/thinning-bif.png, id=276, 811.03pt x 158.5925pt>
+File: chapters/images-chap6/thinning-bif.png Graphic file (type png)
+<use chapters/images-chap6/thinning-bif.png>
+Package pdftex.def Info: chapters/images-chap6/thinning-bif.png  used on input line 221.
+(pdftex.def)             Requested size: 345.0pt x 67.46503pt.
+ [53 <./chapters/images-chap6/thinning.png> <./chapters/images-chap6/thinning-bif.png>]
+<chapters/images-chap6/identificazione-minuzie.png, id=282, 1041.8925pt x 337.26pt>
+File: chapters/images-chap6/identificazione-minuzie.png Graphic file (type png)
+<use chapters/images-chap6/identificazione-minuzie.png>
+Package pdftex.def Info: chapters/images-chap6/identificazione-minuzie.png  used on input line 234.
+(pdftex.def)             Requested size: 345.0pt x 111.67696pt.
+<chapters/images-chap6/structural-post.png, id=283, 785.93625pt x 399.4925pt>
+File: chapters/images-chap6/structural-post.png Graphic file (type png)
+<use chapters/images-chap6/structural-post.png>
+Package pdftex.def Info: chapters/images-chap6/structural-post.png  used on input line 258.
+(pdftex.def)             Requested size: 258.75pt x 131.52203pt.
+) [54 <./chapters/images-chap6/identificazione-minuzie.png> <./chapters/images-chap6/structural-post.png>] (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3721 strings out of 474222
- 69752 string characters out of 5748733
- 1937975 words of memory out of 5000000
- 25938 multiletter control sequences out of 15000+600000
+ 3763 strings out of 474222
+ 71713 string characters out of 5748733
+ 1938975 words of memory out of 5000000
+ 25980 multiletter control sequences out of 15000+600000
  564576 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,444b,248s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (52 pages, 7511182 bytes).
+Output written on main.pdf (55 pages, 8669760 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
+ 348 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

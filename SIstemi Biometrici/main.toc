@@ -145,3 +145,10 @@
 \contentsline {subsection}{\numberline {6.2.1}Ridge counting}{50}{}%
 \contentsline {subsection}{\numberline {6.2.2}Analisi delle frequenze spaziali}{51}{}%
 \contentsline {subsubsection}{Mappa delle frequenze spaziali}{51}{}%
+\contentsline {subsection}{\numberline {6.2.3}Core detection: metodo delle normali}{52}{}%
+\contentsline {section}{\numberline {6.3}Estrazione delle minuzie}{53}{}%
+\contentsline {subsubsection}{Metodi di binarizzazione}{53}{}%
+\contentsline {subsubsection}{Thinning}{53}{}%
+\contentsline {subsection}{\numberline {6.3.1}Come identificare le minuzie}{54}{}%
+\contentsline {subsection}{\numberline {6.3.2}Metodi di post processing}{54}{}%
+\contentsline {subsubsection}{Structural post processing}{54}{}%
