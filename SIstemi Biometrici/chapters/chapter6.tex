@@ -185,12 +185,11 @@ I punti di core possono essere calcolati utilizzando le normali.
 Se seguendo N ridge e calcolando M normali abbiamo un numero sufficientemente
 alto di intersezioni in un punto, allora abbiamo trovato un core.
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
-    \includegraphics[width=0.75\linewidth]{chapters/images-chap6/core-detection.png}
+    \includegraphics[width=0.5\linewidth]{chapters/images-chap6/core-detection.png}
 \end{figure}
 
-\newpage
 \section{Estrazione delle minuzie}
 
 In questa sezione esaminiamo gli algoritmi per l'estrazione del II livello (minutiae).
@@ -213,6 +212,7 @@ dell’immagine).
     \includegraphics[width=0.75\linewidth]{chapters/images-chap6/thinning.png}
 \end{figure}
 
+\newpage
 L’algoritmo deve anche (se possibile) riempire i
 buchi nei ridge per non creare profili di questo
 tipo:
@@ -221,7 +221,7 @@ tipo:
     \includegraphics[width=1\linewidth]{chapters/images-chap6/thinning-bif.png}
 \end{figure}
 
-\newpage
+
 \subsection{Come identificare le minuzie}
 
 Esaminando l’intorno di ogni punto lungo un ridge
@@ -248,6 +248,7 @@ Esistono due categorie principali di post processing:
     \item minutiae filtering in the gray-scale domain
 \end{itemize}
 
+\newpage
 \subsubsection{Structural post processing}
 
 Questi moduli sono tipicamente basati su regole che fanno riferimento
