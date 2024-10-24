@@ -129,3 +129,19 @@
 \contentsline {subsubsection}{Formati di interscambio}{45}{}%
 \contentsline {subsection}{\numberline {5.3.2}Unicità delle impronte}{45}{}%
 \contentsline {subsubsection}{Esempio con parametri comuni}{46}{}%
+\contentsline {chapter}{\numberline {6}Algoritmi per le impronte digitali}{47}{}%
+\contentsline {section}{\numberline {6.1}Algoritmi di prefiltraggio ed enhancement}{47}{}%
+\contentsline {subsection}{\numberline {6.1.1}Filtraggi iniziali}{47}{}%
+\contentsline {subsubsection}{Contrast streching}{47}{}%
+\contentsline {subsubsection}{Manipolazione dell'istogramma}{48}{}%
+\contentsline {subsubsection}{Filtro di Wiener}{48}{}%
+\contentsline {subsubsection}{Normalizzazione}{49}{}%
+\contentsline {subsubsection}{Segmentazione}{49}{}%
+\contentsline {subsubsection}{Regioni con diversa qualità}{49}{}%
+\contentsline {subsection}{\numberline {6.1.2}Manipolazione dell'immagine}{49}{}%
+\contentsline {subsubsection}{Filtri contestuali}{50}{}%
+\contentsline {subsubsection}{Filtro di O'Gorman e Nickerson}{50}{}%
+\contentsline {section}{\numberline {6.2}Estrazione di caratteristiche}{50}{}%
+\contentsline {subsection}{\numberline {6.2.1}Ridge counting}{50}{}%
+\contentsline {subsection}{\numberline {6.2.2}Analisi delle frequenze spaziali}{51}{}%
+\contentsline {subsubsection}{Mappa delle frequenze spaziali}{51}{}%
