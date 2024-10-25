@@ -33,11 +33,26 @@
 \contentsline {section}{\numberline {2.4}Elementi di Sicurezza Specifici}{13}{}%
 \contentsline {subsection}{\numberline {2.4.1}SetUID e SetGID in UNIX}{13}{}%
 \contentsline {subsection}{\numberline {2.4.2}MAC in Windows}{13}{}%
-\contentsline {chapter}{\numberline {3}SetUID}{14}{}%
-\contentsline {section}{\numberline {3.1}Comandi Linux}{14}{}%
-\contentsline {section}{\numberline {3.2}Tipi di Accessi a File e Directory}{14}{}%
-\contentsline {section}{\numberline {3.3}Programmi Privilegiati: Set-UID}{15}{}%
-\contentsline {section}{\numberline {3.4}Attacchi Basati su Set-UID}{15}{}%
-\contentsline {subsection}{\numberline {3.4.1}Privilege Escalation to execute programs:}{15}{}%
-\contentsline {subsection}{\numberline {3.4.2}Privilege escalation to root shell:}{15}{}%
-\contentsline {section}{\numberline {3.5}Variabili d'ambiente}{16}{}%
+\contentsline {chapter}{\numberline {3}Security Management, Risk and Security Policy}{14}{}%
+\contentsline {section}{\numberline {3.1}Plan-Do-Check-Act Process Model}{15}{}%
+\contentsline {section}{\numberline {3.2}Rischio}{15}{}%
+\contentsline {section}{\numberline {3.3}Vulnerabilità}{16}{}%
+\contentsline {section}{\numberline {3.4}Obiettivi della sicurezza}{16}{}%
+\contentsline {chapter}{\numberline {4}Malware}{17}{}%
+\contentsline {section}{\numberline {4.1}Classificazione}{17}{}%
+\contentsline {section}{\numberline {4.2}Virus}{18}{}%
+\contentsline {subsubsection}{Composizione dei virus}{18}{}%
+\contentsline {subsubsection}{Fasi di un virus}{19}{}%
+\contentsline {subsection}{\numberline {4.2.1}Macrovirus}{19}{}%
+\contentsline {subsection}{\numberline {4.2.2}Classificazione dei virus}{19}{}%
+\contentsline {section}{\numberline {4.3}Worm}{20}{}%
+\contentsline {section}{\numberline {4.4}Drive-by-downloads}{20}{}%
+\contentsline {section}{\numberline {4.5}Clickjacking}{20}{}%
+\contentsline {section}{\numberline {4.6}Zombie \& Botnet}{20}{}%
+\contentsline {section}{\numberline {4.7}Rootkit}{21}{}%
+\contentsline {section}{\numberline {4.8}Spear Phishing}{21}{}%
+\contentsline {section}{\numberline {4.9}Approcci alle contromisure per i malware}{21}{}%
+\contentsline {chapter}{\numberline {5}Buffer Overflow}{22}{}%
+\contentsline {section}{\numberline {5.1}Organizzazione della memoria di \\un programma}{22}{}%
+\contentsline {section}{\numberline {5.2}Chiamate a funzioni}{23}{}%
+\contentsline {subsubsection}{Un esempio}{23}{}%
