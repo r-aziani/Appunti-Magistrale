@@ -190,7 +190,7 @@ alto di intersezioni in un punto, allora abbiamo trovato un core.
     \includegraphics[width=0.5\linewidth]{chapters/images-chap6/core-detection.png}
 \end{figure}
 
-\section{Estrazione delle minuzie}
+\section{Estrazione delle minuzie di II livello}
 
 In questa sezione esaminiamo gli algoritmi per l'estrazione del II livello (minutiae).
 
@@ -258,3 +258,53 @@ a caratteristiche dello scheeltro.
     \centering
     \includegraphics[width=0.75\linewidth]{chapters/images-chap6/structural-post.png}
 \end{figure}
+
+\section{Estrazione delle minuzie di III livello}
+
+Nelle feature di III livello, tipicamente si studiano
+le posizioni dei pori, attraverso le tecniche di segmentazione ed operatori morfologici.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap6/es-conclusivo.png}
+\end{figure}
+
+\newpage
+\section{Spoofing e anti-spoofing}
+Esistono molti modi per frodare un sistema biometrico:
+\begin{itemize}
+    \item attaccare i canali di comunicazione del sistema
+    \item attaccare dei moduli specifici (ad esempio il modulo SW di estrazione delle caratteristiche)
+    \item attaccare il DB con tutti i dati di enrollment
+    \item ingannare il sensore, presentando un sample finto
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{chapters/images-chap6/frodare.png}
+\end{figure}
+
+\subsection{Test di vitalità per sensori ottici}
+Un metodo per effettuare anti-spoofing è quello di effettuare il test di vitalità:
+consiste nell'usare uno o più segni vitali comuni a tutta la popolazione,
+come ad esempio:
+\begin{itemize}
+    \item il \textbf{flusso sanguigno e la sua pulsazione}, che possono essere rilevati mediante la luce riflessa/trasmessa attraverso il dito 
+    \item la \textbf{temperatura e la sua distribuzione}, in grado di indicare se il dito è vivo, morto o fasullo
+    \item i \textbf{dettagli del III livello} rilevati da sensori ad alta risoluzione (>700 dpi), che sono difficili da imitare in un dito artificiale
+    \item il \textbf{colore della pelle del dito}, che cambia colore per effetto della pressione
+\end{itemize}
+
+Inoltre, gli scanner ottici di tipo \textit{live-scan} o i sensori allo stato solido 
+utilizzano un \textbf{meccanismo di acquisizione differenziata per le creste e i solchi} delle impronte, 
+leggendo le differenze 3D dei ridge; in questo modo, sono in grado di difendersi
+da attacchi che usano immagini 2D fasulle.
+
+\subsection{Test di vitalità per sensori allo stato solido}
+Le proprietà elettriche di un dito vivente possono essere facilmente 
+misurate in un sensore a stato-solido, come ad esempio:
+\begin{itemize}
+    \item la \textbf{differenza di potenziale} tra due specifici punti della muscolatura del dito
+    \item la \textbf{impedenza} del dito (resistenza di opposizione al passaggio della corrente elettrica)
+    \item la \textbf{sudorazione}
+\end{itemize}
