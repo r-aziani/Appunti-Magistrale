@@ -89,3 +89,44 @@ Solo una parte dell'iride è utile al riconoscimento; occorre segmentare
 solo la parte utile dell'iride.
 
 Se manca più del 50\% dell'iride occorre riacquisire l'immagine.
+
+\subsection{Linearizzaione dell'iride}
+Per aumentare l'efficienza degli algoritmi, l'iride non viene elaborata
+direttamente nell'immagine in ingresso ma convertita in un rettangolo.
+
+Questa operazione viene fatta passando da delle coordinate cartesiane $(x, y)$ a polari $(r, 0)$.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/images-chap7/linear-1.png}
+\end{figure}
+
+\begin{enumerate}
+    \item vengono individuati i raggi e centri
+    \item si fissano le dimensioni dei settori dell'iride, 
+    scegliendo numero di corone e ampiezza dell'angolo di scansione
+    \item ogni pixel del \textit{rubber sheet model} è la media del colore del relativo settore
+\end{enumerate}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{chapters/images-chap7/linear-2.png}
+\end{figure}
+
+\section{Proprietà dell'iris code}
+
+La codifica dell'iride in uno spazio 2D, rendendo la codifica invariante
+rispetto alla dimensione dell'iride, zoom dei sistemi ottici e dilatazione dell'iride.
+
+L'informazione estratta dall'iride è invariante rispetto al contrasto dell'immagine, il livello di grigio e l'illuminazione.
+È inoltre molto compatta (256 byte).
+
+La probabilità di ogni bit di essere 1 è del 50\%, rendendo l'iriscode un codice a \textbf{massima entropia}.
+
+
+
+
+
+
+
+

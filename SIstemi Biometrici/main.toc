@@ -163,3 +163,5 @@
 \contentsline {section}{\numberline {7.4}Rappresentazione delle iridi}{60}{}%
 \contentsline {subsection}{\numberline {7.4.1}Calcolo dei centri e raggi di iride e pupilla}{60}{}%
 \contentsline {subsection}{\numberline {7.4.2}Rimozione di palpebre e ciglia}{60}{}%
+\contentsline {subsection}{\numberline {7.4.3}Linearizzaione dell'iride}{60}{}%
+\contentsline {section}{\numberline {7.5}Proprietà dell'iris code}{61}{}%
