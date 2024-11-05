@@ -156,3 +156,10 @@
 \contentsline {section}{\numberline {6.5}Spoofing e anti-spoofing}{56}{}%
 \contentsline {subsection}{\numberline {6.5.1}Test di vitalità per sensori ottici}{56}{}%
 \contentsline {subsection}{\numberline {6.5.2}Test di vitalità per sensori allo stato solido}{57}{}%
+\contentsline {chapter}{\numberline {7}Sistemi biometrici basati sull'iride}{58}{}%
+\contentsline {section}{\numberline {7.1}Vantaggi e svantaggi}{58}{}%
+\contentsline {section}{\numberline {7.2}Struttura dell'iride}{59}{}%
+\contentsline {section}{\numberline {7.3}Unicità dell'iride}{59}{}%
+\contentsline {section}{\numberline {7.4}Rappresentazione delle iridi}{60}{}%
+\contentsline {subsection}{\numberline {7.4.1}Calcolo dei centri e raggi di iride e pupilla}{60}{}%
+\contentsline {subsection}{\numberline {7.4.2}Rimozione di palpebre e ciglia}{60}{}%

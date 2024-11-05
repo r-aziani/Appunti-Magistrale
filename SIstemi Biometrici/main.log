@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  26 OCT 2024 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  5 NOV 2024 10:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -81,7 +81,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count268
 \l__pdf_internal_box=\box51
-) (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux))
+) (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux) (./chapters/chapter7.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -499,25 +499,46 @@ File: chapters/images-chap6/frodare.png Graphic file (type png)
 <use chapters/images-chap6/frodare.png>
 Package pdftex.def Info: chapters/images-chap6/frodare.png  used on input line 284.
 (pdftex.def)             Requested size: 258.75pt x 126.09955pt.
- [56 <./chapters/images-chap6/frodare.png>]) [57] (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux))
+ [56 <./chapters/images-chap6/frodare.png>]) [57]
+\openout2 = `chapters/chapter7.aux'.
+
+ (./chapters/chapter7.tex
+Capitolo 7.
+[58
+
+
+
+
+]
+<chapters/images-chap7/struttura-iride.png, id=306, 272.01625pt x 240.9pt>
+File: chapters/images-chap7/struttura-iride.png Graphic file (type png)
+<use chapters/images-chap7/struttura-iride.png>
+Package pdftex.def Info: chapters/images-chap7/struttura-iride.png  used on input line 45.
+(pdftex.def)             Requested size: 137.9979pt x 122.21777pt.
+<chapters/images-chap7/unicita.png, id=307, 1005.7575pt x 301.125pt>
+File: chapters/images-chap7/unicita.png Graphic file (type png)
+<use chapters/images-chap7/unicita.png>
+Package pdftex.def Info: chapters/images-chap7/unicita.png  used on input line 60.
+(pdftex.def)             Requested size: 345.0pt x 103.29091pt.
+ [59 <./chapters/images-chap7/struttura-iride.png> <./chapters/images-chap7/unicita.png>]) [60] (./main.aux (./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux) (./chapters/chapter7.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3777 strings out of 474222
- 72313 string characters out of 5748733
+ 3816 strings out of 474222
+ 73715 string characters out of 5748733
  1939975 words of memory out of 5000000
- 25994 multiletter control sequences out of 15000+600000
+ 26026 multiletter control sequences out of 15000+600000
  564576 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,7n,65p,444b,248s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (58 pages, 9384920 bytes).
+Output written on main.pdf (61 pages, 9908140 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
+ 375 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 256 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 266 words of extra memory for PDF output out of 10000 (max. 10000000)
 
