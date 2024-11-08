@@ -4,229 +4,211 @@
 \usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{xcolor}
 
-\title{Priacy in Data Publication}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0} % RGB per un verde scuro
+
+
+\title{Privacy e Protezione dei dati in Scenari Emergenti}
+\date{Parte I}
 
 \begin{document}
 
 \maketitle
 
+\tableofcontents
 
-
-
-
-\section{Privacy and Data Protection in Emerging Scenarios}
-
-La continua crescita riguarda:
+\newpage
+Una continua crescita riguardante:
 \begin{itemize}
-    \item database governativi e aziendali;
-    \item contenuti generati dagli utenti (Youtube, Flickr, ...);
-    \item informazioni personali identificabili (creazione account, compilazione questionario, ..).
+    \item database governativi e aziendali
+    \item contenuti generati dagli utenti 
+    \item informazioni personali identificative collezioante quando un utente crea un account, scarica un'applicazione, \dots
 \end{itemize}
-
-\subsection{Data Sharing and Dissemination}
 La condivisione dei dati serve per:
 \begin{itemize}
-    \item studiare tendenze e fare inferenze statistiche utili;
-    \item condividere conoscenza;
-    \item accedere a servizi online.
+    \item studiare le tendenze e fare inferenze statistiche
+    \item condividere conoscenza
+    \item accedere ai servizi online
+\end{itemize}
+C'è inoltre l'archiviazione e il calcolo esterno (cloud), che offorno:
+\begin{itemize}
+    \item risparmio sui costi e benefici dei servizi
+    \item maggiore disponibilità e protezione da eventuali disastri
 \end{itemize}
 
-\subsection{External Data Storage and Computation}
-L'archiviazione e il calcolo esterni (es. Cloud) offrono:
+\textbf{Per questa serie di motivazioni è fondamentale garantire che la privacy e l’integrità dei dati siano
+adeguatamente protette.}
+
+\chapter{Privacy nella Pubblicazione dei Dati}
+
+Quando si parla del rilascio di informazioni per scopi statistici,
+è possibile fare una distinzione tra:
 \begin{itemize}
-    \item risparmio sui costi e benefici di servizio;
-    \item maggiore disponibilità e protezione più efficace dai disastri.
+    \item \textbf{statistical DBMS:} c'è un'interazione tra client e DBMS, con quest'ultimo che risponde a delle query. Richiede un \textbf{controllo a runtime} delle informazioni rilasciate.
+    \item \textbf{statistical data:} non c'è un'interazione; il controllo viene fatto prima del rilascio dei dati, tramite delle autorità competenti
 \end{itemize}
 
-\paragraph{Outline} 
-È fondamentale garantire che la privacy e l'integrità dei dati siano adeguatamente protette.
+\section{Macrodata, microdata, disclosure}
+Per \textbf{macrodata} si intendono dati aggregati; le tabelle possono essere classificate in due gruppi:
 \begin{itemize}
-    \item Privacy nella pubblicazione dei dati: rilascio e disseminazione dei dati.
-    \item Privacy nel data outsourcing: terze parti memorizzano e gestiscono i dati.
+    \item \textbf{Conteggio/Frequenza:} ogni cella contiene il numero o la percentuali di rispondenti che hanno lo stesso valore per gli attributi considerati.
+    Mostrano il numero di volte che un valore compare nei dati (quanti studenti hanno preso un certo voto).
+    \item \textbf{Magnitudo:} ogni cella contiene un valore di una \textit{quantità di interesse}. 
+    Riportano la somma o media di un valore numerico associato a una cateogoria (somma degli stipendi per dipartimento). 
 \end{itemize}
 
+Per \textbf{microdata} si intendono dati non aggregati, ovvero dati specifici e individuali; questo 
+tipo di dati sono soggetti a un maggiore rischio di violazione della privacy (attacchi di collegamento).
 
-\section{Privacy in Data Publication}
+\subsubsection{Rilascio di informazioni}
+Il rilascio di informazioni si riferisce all'\textbf{attribuzione di informazioni sensibili a un rispondente}.
 
-\subsection{Statistical DBMS vs Statistical Data}
-\noindent \textbf{DBMS statistici} - Interazione interattiva tra Client e DBMS:
+Si può fare una distinzione tra:
 \begin{itemize}
-    \item Il sistema risponde solo a query statistiche.
-    \item Necessario un controllo dinamico per proteggere la privacy e prevenire il rilascio indiretto di informazioni.
+    \item \textbf{Identity disclosure:} è quando un terzo può \textbf{identificare} un rispondente tramite le informazioni rilasciate; è un problema
+    quando si tratta di microdata, dato che i dati sono dettagliati 
+    \item \textbf{Attribute disclosure:} è quando \textbf{informazioni confidenziali} di un rispondente sono 
+    rilasciate o possono essere a lui attribuite, con esattezza o con un grado di precisione inferiore a quello atteso 
+    \item \textbf{Inferential disclosure:} è quando informazioni sensibili vengono \textbf{dedotte con alta certezza dalle proprietà statistiche dei dati rilasciati}.
 \end{itemize}
 
-\noindent \textbf{Dati statistici} - Interazione non interattiva tra Client e DBMS:
+\subsubsection{Tecniche di protezione per macrodata}
 \begin{itemize}
-    \item Pubblicano statistiche.
-    \item Il controllo sul rilascio indiretto viene eseguito prima della pubblicazione.
+    \item \textbf{Sampling:} pubblicare solo una porzione della popolazione totale; deve essere rappresentativo e privo di bias
+    \item \textbf{Special rules:} si definiscono delle restrizioni sul livello di dettaglio che può essere fornito (ad esempio, non pubblicare o rendere
+    deducibili i redditi sotto un intervallo di 1000\$)
+    \item \textbf{Threshold rules:} definire una cella come sensibile se il numero di rispondenti è inferiore a un soglia
 \end{itemize}
 
-\paragraph{Privacy Issues}
+\subsubsection{Tecniche di protezione per microdata}
 \begin{itemize}
-    \item \textbf{Observation Window}: Si verifica quando più query successive rivelano informazioni sensibili.
-    \item \textbf{Collusion}: Si verifica quando utenti collaborano per dedurre dati non deducibili singolarmente.
-\end{itemize}
-
-\subsection{Macrodata vs Microdata}
-In passato, i dati erano principalmente rilasciati in forma tabellare (macrodata: dati aggregati) e attraverso database statistici. 
-Oggi, molte situazioni richiedono il rilascio dei dati specifici memorizzati (microdata: dati disaggregati) che offrono maggiore flessibilità e disponibilità di informazioni per gli utenti. 
-Tuttavia, i microdata sono soggetti a un maggiore rischio di violazioni della privacy, come i linking attacks: attacchi di collegamento.
-
-\paragraph{Classification of Macrodata Tables}
-Classifizione in due gruppi:
-\begin{itemize}
-    \item \textbf{Count/Frequency}: Ogni cella della tabella contiene il numero di rispondenti (count) o la percentuale di rispondenti (frequency) che hanno lo stesso valore su tutti gli attributi analizzati.
-    \item \textbf{Magnitude Data}: Ogni cella della tabella contiene un valore aggregato di una quantità di interesse su tutti gli attributi analizzati.
-\end{itemize}
-
-\subsection{Information Disclosure}
-Disclosure: attribuzione di informazioni sensibili a un rispondente (individuo o organizzazione). \\
-Si ha divulgazione quando:
-\begin{itemize}
-    \item \textbf{Identity Disclosure}: un rispondente è identificato dai dati rilasciati;
-    \item \textbf{Attribute Disclosure}: info sensibili su un rispondente vengono rivelate dai dati rilasciati;
-    \item \textbf{Inferential Disclosure}: i dati rilasciati consentono di inferire il valore di alcune caratteristiche di un rispondente, anche se nessun record rilasciato fa riferimento a quel rispondente.
-\end{itemize}
-
-\paragraph{Identity Disclosure}
-La divulgazione dell'identità si verifica quando una terza parte può identificare un rispondente dai dati rilasciati. 
-La rivelazione di un individuo come rispondente in una raccolta di dati può o meno violare i requisiti di riservatezza:
-\begin{itemize}
-    \item \textbf{Macrodata}: La rivelazione dell'identità generalmente non è un problema, a meno che non porti a divulgare informazioni riservate (divulgazione degli attributi).
-    \item \textbf{Microdata}: L'identificazione è considerata un problema, poiché i record di microdata sono dettagliati; la divulgazione dell'identità implica solitamente anche la divulgazione degli attributi.
-\end{itemize}
-
-\paragraph{Attribute Disclosure}
-La divulgazione degli attributi si verifica quando informazioni riservate su un rispondente vengono rivelate e possono essere attribuite a quest'ultimo. \\ 
-Le informazioni possono essere rivelate esattamente o stimate con un certo grado di approssimazione (è un problema quando il grado di incertezza è inferiore a quello atteso).
-
-\paragraph{Inferential Disclosure}
-La divulgazione inferenziale si verifica quando informazioni riservate e/o sensibili possono essere dedotte con alta confidenza dalle proprietà statistiche dei dati rilasciati. \\
-La divulgazione inferenziale non rappresenta sempre un rischio:
-\begin{itemize}
-    \item I dati vengono rilasciati per consentire agli utenti di comprendere le relazioni tra le variabili.
-    \item Le inferenze sono progettate per prevedere comportamenti aggregati, non attributi individuali.
-\end{itemize}
-
-\subsection{Restricted Data and Restricted Access}
-La scelta dei metodi di limitazione della divulgazione statistica dipende dalla natura dei dati di cui si vuole garantire la riservatezza. 
-Rimuovere identificatori espliciti presenti nei microdati (nome, CF, ...) è un primo passo per preparare il rilascio di tali dati. La riservatezza può essere protetta mediante:
-\begin{itemize}
-    \item limitazione della quantità di informazioni presenti nelle tabelle rilasciate (dati riservati);
-    \item imposizione di condizioni sull'accesso ai dati rilasciati (accesso limitato);
-    \item una combinazione di queste due strategie.
-\end{itemize}
-
-\subsection{Protection for Count/Frequencies Macrodata}
-I dati raccolti dalla maggior parte dei sondaggi sulle persone sono pubblicati in tabelle che mostrano conteggi (numero di persone per categoria) o frequenze (frazione o percentuale di persone per categoria). Le tecniche di protezione includono:
-\begin{itemize}
-    \item \textbf{Sampling}: pubblicare un sondaggio anziché un censimento;
-    \item \textbf{Special Rules}: definire restrizioni sul livello di dettaglio che può essere fornito in una tabella (ad esempio, non pubblicare o rendere deducibili i redditi all'interno di un intervallo di \$1.000);
-    \item \textbf{Threshold Rules}: definire una cella di una tabella come sensibile se il numero di rispondenti è inferiore a una certa soglia specificata.
-\end{itemize}
-
-\subsection{Disclosure Protection Techniques for Microdata}
-Le tecniche di protezione classiche, spesso applicate prima del calcolo delle statistiche, possono essere classificate come segue:
-\begin{itemize}
-    \item \textbf{Masking Techniques}: trasformano il dataset non rilasciando o perturbando i suoi valori.
+    \item \textbf{Masking:} si trasforma il dataset non rilasciando o modificando i suoi valori. Possono essere:
     \begin{itemize}
-        \item \textbf{\textit{Non-Perturbative}}: i dati originali non vengono modificati, ma alcuni dati sono soppressi e/o alcuni dettagli vengono rimossi (es. campionamento, soppressione locale, generalizzazione);
-        \item \textbf{\textit{Perturbative}}: i dati originali vengono modificati (es. arrotondamento, scambio).
+        \item \textit{non-perturbative:} il dataset non viene modificato, ma alcuni dati sono soppressi o alcuni dettagli rimossi (sampling, generalizzazione)
+        \item \textit{perturbative:} il dataset viene modificato (arrotondamento, \\swapping); viene introdotto del rumore
     \end{itemize}
-    \item \textbf{Synthetic Data Generation Techniques}: rilasciano valori plausibili ma sintetici.
+    \item \textbf{Dati sintetici:} vengono usati dati plausibili ma sintetici;
     \begin{itemize}
-        \item \textbf{\textit{Fully Synthetic}}: il dataset rilasciato contiene solo dati sintetici;
-        \item \textbf{\textit{Partially Synthetic}}: il dataset rilasciato contiene un mix di dati originali e sintetici.
+        \item \textit{fully synthetic:} il dataset contiene solo dati sintetici
+        \item \textit{partially synthetic:} il dataset contiene sia dati sintetici che dati originali
     \end{itemize}
 \end{itemize}
 
-\paragraph{The Anonymity Problem}
-La quantità di registri di proprietà privata che descrivono le finanze, gli interessi e i dati demografici di ciascun cittadino è in costante aumento. 
-Questi dati vengono de-identificati prima del rilascio, ovvero qualsiasi identificatore esplicito viene rimosso. Tuttavia, la de-identificazione non è sufficiente. 
-Molti comuni vendono registri della popolazione che includono le identità degli individui insieme a dati demografici di base. 
-Questi dati possono quindi essere utilizzati per linkare identità con informazioni de-identificate, portando alla \textbf{re-identificazione}.
+\section{Anonimity problem}
+È in continua crescita il numero di record che contengono dati sensibili dei cittadini. Questi record
+vengono \textit{de-identificati} prima della loro pubblicazione; tuttavia, questo \textbf{non è sufficiente}: possono essere 
+usati altri dati per fare dei collegamenti tra identità de-identificate, facendo dunque
+una \textbf{re-identificazione}.
 
-\subsection{Classification of Attributes in a Microdata Table}
-Gli attributi nella tabella di microdata originale possono essere classificati come segue:
+\subsubsection{Esempio}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/anon-1.png}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/anon-2.png}
+\end{figure}
+
+\subsubsection{Classificazione degli attributi in una tabella microdata}
+
 \begin{itemize}
-    \item \textbf{Identifiers}: attributi che identificano univocamente un rispondente (es. SSN).
-    \item \textbf{Quasi-Identifiers}: attributi che, in combinazione, possono essere utilizzati con info esterne per reidentificare alcuni rispondenti o ridurre l'incertezza sulla loro identità (es. Race, DoB, ...).
-    \item \textbf{Confidential}: attributi che contengono informazioni sensibili (es. Disease).
-    \item \textbf{Non-Confidential}: attributi che non sono considerati sensibili dai rispondenti e il cui rilascio non causa divulgazione.
+    \item \textbf{Identificatori:} attributi che identificano univocamente un rispondente
+    \item \textbf{Quasi identificatori:} attributi che linkati ad informazioni esterne possono reidentificare un rispondente, o ridurre 
+    l'incertezza sulla loro identità (Data di nascita, ZIP, sesso)
+    \item \textbf{Confidenziale:} attributi sensibili
+    \item \textbf{Non confidenziale:} attributi non considerati sensibili
 \end{itemize}
 
-\subsection{Factors Contributing to Increase the Disclosure Risk}
-I possibili fattori che contribuiscono al rischio di divulgazione dei microdata includono:
-
+\subsubsection{\textcolor{red}{Fattori che contribuiscono al disclosure risk}}
 \begin{itemize}
-    \item \textbf{Esistenza di Registri ad Alta Visibilità}: alcuni registri possono rappresentare rispondenti con caratteristiche uniche, come lavori molto insoliti (es. star del cinema) o redditi molto elevati.
-    \item \textbf{Possibilità di Matchare i Microdata con Informazioni Esterne}: esistono individui che possiedono una combinazione unica o peculiare delle variabili caratteristiche nei microdata. 
+    \item esistenza di record con \textit{caratteristiche peculiari}
+    \item possibilità di matchare microdata con informazioni esterne 
+\end{itemize}
+
+\subsubsection{\textcolor{darkgreen}{Fattori che diminuiscono il disclosure risk}}
+\begin{itemize}
+    \item le tabelle spesso contengono un sample della popolazione totale
+    \item le tabelle potrebbero non essere aggiornate o esprimere i dati con formati diversi rispetto alle fonti esterne 
+    \item le tabelle (anche quelle esterne) contengono rumore
+\end{itemize}
+
+\subsubsection{Valutazione del rischio di disclosure}
+La valutazione del rischio di \textit{disclosure} viene fatta tenendo in considerazione:
+\begin{itemize}
+    \item la probabilità che il rispondente di interesse sia presente sulle tabelle di mircodata e sulle tabelle esterne 
+    \item la probabilità che le variabili di matching siano registrate in modo linkabile tra microdata e tabella esterna 
+    \item la probabilità che il rispondente di interesse è peculiare nella popolazione del file esterno 
+\end{itemize}
+
+\chapter{$k$ - anonimity}
+
+La $k$ - anonimity mira a proteggere l'identità dei rispondenti, tramite generalizzazione e soppressione, 
+rilasciando allo stesso tempo informazioni veritiere.
+
+Cerca di garantire che \textbf{ogni 
+combinazione di quasi identificatori sia correlata indistintamente ad almeno \textit{k} individui}.
+
+\subsubsection{Condizione sufficiente per soddisfare la $k$ - anonimity}
+Ogni combinazione di quasi identificatori deve avere almeno $k$ occorrenze.
+
+\section{Generalizzazione}
+Consiste nel sostituire i valori di un dato attributo con dei valori più generali;
+si basa sulla definizione di una \textbf{gerarchia di generalizzazioni}.
+
+\subsection{Gerarchia di generalizzazione del dominio}
+\begin{itemize}
+    \item Una relazione di generalizzazione $\leq_D$ definisce un mapping tra il dominio $D$ e le sue generalizzazioni.
+    \item Dati due domini $D_i, D_j \in \text{Dom}$, $D_i \leq_D D_j$ indica che i valori nel dominio $D_j$ sono generalizzazioni dei valori in $D_i$.
+    \item $\leq_D$ implica l'esistenza, per ogni dominio $D$, di una gerarchia di generalizzazione del dominio $DGH_D = (\text{Dom}, \leq_D)$:
     \begin{itemize}
-        \item Se alcuni di questi individui vengono scelti nel campione della popolazione, il rischio di divulgazione aumenta, è importante mantenere segreta l'identità degli individui scelti.
-    \end{itemize}
-\end{itemize}
-
-La possibilità di collegamento o la sua precisione aumentano con:
-\begin{itemize}
-    \item l'esistenza di un elevato numero di attributi comuni tra la tabella di microdata e le fonti esterne;
-    \item l'accuratezza o la risoluzione dei dati;
-    \item il numero e la ricchezza delle fonti esterne, non tutte le fonti disponibili potrebbero essere conosciute dall'agenzia che rilascia i microdata.
-\end{itemize}
-
-\subsection{Factors Contributing to Decrease the Disclosure Risk}
-I seguenti fattori possono contribuire a diminuire il rischio di divulgazione nei microdata:
-
-\begin{itemize}
-    \item \textbf{Sottogruppo della Popolazione}: una tabella di microdata spesso contiene solo un subset dell'intera popolazione $ \rightarrow $ le informazioni di un rispondente potrebbero non essere incluse.
-    \item \textbf{Disallineamento Temporale e/o di Formato tra le Varie Fontie}: il rischio di divulgazione nei microdata è influenzato da un disallineamento temporale, poiché le informazioni nelle tabelle possono non essere aggiornate (spesso obsolete di uno o due anni). Inoltre, le fonti esterne possono esprimere i dati in formati diversi, il che riduce la capacità di collegare informazioni e aumenta il rischio di errore nell'identificazione dei rispondenti.
-    \item \textbf{Presenza di Rumore}: sia le tabelle di microdata che le fonti esterne contengono naturalmente rumore, il che riduce la capacità di collegare le informazioni.
-\end{itemize}
-
-\paragraph{Measures of Risk}
-La valutazione del rischio di divulgazione richiede di considerare diversi fattori:
-
-\begin{itemize}
-    \item \textbf{Probabilità di Rappresentazione}: la probabilità che il rispondente di interesse sia presente sia nei microdata che in un file esterno.
-    \item \textbf{Variabili di Collegamento}: la probabilità che le variabili di matching siano registrate in modo linkabile nei microdata e nel file esterno.
-    \item \textbf{Unicità del Rispondente}: la probabilità che il rispondente sia unico o peculiare rispetto alla popolazione del file esterno (cruciale per il rischio di divulgazione).
-\end{itemize}
-
-\noindent Ogni rispondente unico nella popolazione è anche unico nel campione, ma non viceversa.
-
-\subsection{k-anonymity}
-La k-anonymity, insieme alla sua applicazione attraverso la generalizzazione e la soppressione, mira a proteggere le identità dei rispondenti durante la pubblicazione di informazioni veritiere. 
-Essa cerca di garantire che i dati rilasciati siano indistinguibili rispetto ad un numero minimo di rispondenti. 
-La scelta di k definisce il grado di sicurezza $ \rightarrow $ \textbf{TRADE OFF: INFO LOSS} VS \textbf{PRIVACY GAIN}.
-
-\noindent I \textbf{QI: Quasi-identificatori} sono insieme di attributi che possono essere sfruttati per il linking, di conseguenza la pubblicazione di quest'ultimi deve essere controllata.
-
-\paragraph{Basic Idea} Tradurre il requisito di k-anonymity sui dati rilasciati
-
-\noindent Ogni combinazione di valori dei quasi-identificatori deve essere abbinata indistintamente ad almeno \( k \) rispondenti. 
-Di conseguenza, i rispondenti devono essere indistinguibili (all'interno di un dato insieme) rispetto a un insieme di attributi. 
-Inoltre, per soddisfare il requisito di k-anonymity, ogni valore di quasi-identificatore che appare nella tabella rilasciata deve avere almeno \( k \) occorrenze, il che rappresenta una condizione sufficiente per la soddisfazione del requisito.
-
-\subsubsection{Generalization and Suppression}
-Tecniche di mascheramento non-perturbative per raggiungere la k-anonymity:
-\begin{itemize} 
-\item \textbf{Generalization} I valori di un dato attributo vengono sostituiti con valori più generali, basandosi sulla definizione di una gerarchia di generalizzazione.
-\item \textbf{Suppression} Per proteggere informazioni sensibili, si rimuovono tali informazioni. 
-\end{itemize}
-
-\noindent L'introduzione della soppressione può ridurre la quantità di generalizzazione necessaria per soddisfare il vincolo di k-anonymity.
-Inoltre, tali tecniche non introducono rumore.
-
-\subsubsection{Domain Generalization Hierarchy}
-Una relazione di generalizzazione $\leq_D$ definisce un mapping tra il dominio $D$ e le sue generalizzazioni.
-Dati due domini $D_i, D_j \in \text{Dom}$, $D_i \leq_D D_j$ indica che i valori nel dominio $D_j$ sono generalizzazioni dei valori in $D_i$.
-
-\noindent $\leq_D$ implica l'esistenza, per ogni dominio $D$, di una gerarchia di generalizzazione del dominio $DGH_D = (\text{Dom}, \leq_D)$:
-    \begin{itemize}
-        \item $\forall D_i, D_j, D_z \in \text{Dom}: D_i \leq_D D_j, D_i \leq_D D_z \Rightarrow D_j \leq_D D_z \lor D_z \leq_D D_j$.
+        \item $\forall D_i, D_j, D_z \in \text{Dom}: D_i \leq_D D_j, D_i \leq_D D_z \Rightarrow D_j \leq_D D_z \lor D_z \leq_D D_j$. (\textit{relazione d'ordine totale})
         \item Tutti gli elementi massimali di $\text{Dom}$ sono singleton.
     \end{itemize}
-Data una tupla di dominio $DT = \langle D_1, \ldots, D_n \rangle$ tale che $D_i \in \text{Dom}$, $i = 1, \ldots, n$, la gerarchia di generalizzazione del dominio di $DT$ è $DGH_{DT} = DGH_{D_1} \times \ldots \times DGH_{D_n}$.
+    \item Data una tupla di dominio $DT = \langle D_1, \ldots, D_n \rangle$ tale che $D_i \in \text{Dom}$, $i = 1, \ldots, n$, la gerarchia di generalizzazione del dominio di $DT$ è $DGH_{DT} = DGH_{D_1} \times \ldots \times DGH_{D_n}$. 
+\end{itemize}  
+
+\subsubsection{Esempio}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/domger.png}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+\chapter{2}
+
+
+
+\subsubsection{Domain Generalization Hierarchy}
+
+
+
+
 
 \subsubsection{Value generalization hierarchy}
 La relazione di generalizzazione dei valori \( \leq V \) associa a ogni valore nel dominio \( D_i \) un valore unico nel dominio \( D_j \), rappresentando una generalizzazione diretta di \( D_i \). 
