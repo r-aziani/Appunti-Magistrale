@@ -390,63 +390,59 @@ La \textbf{k-anonymity} cambia a seconda del livello di generalizzazione applica
 
 \noindent La generalizzazione a livello di cella permette una maggiore flessibilità rispetto alla gen a livello di attributo.
 
+\section{Attribute disclosure}
 
-
-
-
-
-
-
-\newpage
-
-\chapter{2}
-
-
-\subsection{Attribute Disclosure}
-La \textbf{k-anonymity} è suscettibile a diversi attacchi:
-
+La \textit{k-anonimity} è vulnerabile a diversi attacchi.
 \begin{itemize}
-    \item \textbf{Homogeneity of the Sensitive Attribute Values:} 
-    Tutte le tuple con lo stesso QI in una tabella k-anonima possono avere lo stesso valore per l'attributo sensibile.
-    \begin{itemize}
-        \item Ad esempio, un avversario sa che Carol è una donna di colore e che i suoi dati sono inclusi nella tabella. Se tutte le tuple con quel quasi-identificatore condividono lo stesso valore dell'attributo sensibile, l'avversario può dedurre che Carol soffre di mancanza di respiro.
-    \end{itemize}
-    
-    \item \textbf{Background Knowledge:} 
-    Un avversario può utilizzare informazioni esterne già note per dedurre informazioni sensibili.
-    \begin{itemize}
-        \item Ad esempio, un avversario sa che Hellen è una donna bianca presente nella tabella. Se le opzioni possibili per la sua malattia sono "dolore al petto" o "mancanza di respiro", e l'avversario sa che Hellen corre per 2 ore al giorno, può escludere la "mancanza di respiro" e dedurre che Hellen soffre di "dolore al petto".
-    \end{itemize}
+    \item \textbf{Omogeneità degli dei valori di attributi sensibili:} se tutti gli appartenenti ad un gruppo
+    hanno la stessa informazione sensibile, mi basta conoscere che appartieni a quel gruppo per sapere che hai quella informazione sensibile
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.5\linewidth]{images/omogen.png}
+    \end{figure}
+    \item \textbf{Conoscenza pregressa:} è conoscenza a livello di istanza che posso avere e mi permette di scartare alcune possibilità; nella figura, se
+    so che corri due ore al giorno deduco che non hai il fiato corto.
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.5\linewidth]{images/back.know.png}
+    \end{figure}
 \end{itemize}
 
-\subsubsection{\texorpdfstring{$\ell$}{l}-Diversity}
-Un \textit{q-block} (cioè, un insieme di tuple con lo stesso valore per i \textit{quasi-identifiers}) è detto $\ell$-diverse se contiene almeno $\ell$ valori differenti e \textit{ben rappresentati} per l'attributo sensibile. 
+\subsection{\texorpdfstring{$\ell$}{l}-Diversity}
+Definiamo un \textit{q-block} come un gruppo di tuple con lo stesso \textit{quasi-identifier};
+diciamo che un \textit{q-block} è \texorpdfstring{$\ell$}{l}-diverse se contiene almeno
+\texorpdfstring{$\ell$}{l} valori \textbf{differenti} e \textit{\textbf{ben rappresentati}} per l'attributo sensibile.
+
+Questo implica che un attaccante deve eliminare almeno \texorpdfstring{$\ell$}{l}$-1$ valori 
+possibili per inferire un valore sensibile di un rispondente.
+
+Una tabella è \texorpdfstring{$\ell$}{l}-diverse se tutti i suoi \textit{q-block} sono
+\texorpdfstring{$\ell$}{l}-diverse; questo implica che:
 \begin{itemize}
-    \item \textit{ben rappresentati} può essere definito tramite entropia o ricorsione. 
-    \item la $\ell$-diversity implica che un avversario deve eliminare almeno $\ell-1$ valori possibili per inferire un valore sensibile di un rispondente.
+    \item l'attacco di omogeneità non è possibile
+    \item l'attacco di conoscenza pregressa è più difficile (devo eliminare \texorpdfstring{$\ell$}{l}-1 possibilità)
 \end{itemize}
 
-\noindent Una tabella viene definita $\ell$-diverse se tutti i suoi \textit{q-blocks} sono $\ell$-diverse, rendendo impossibili attacchi di omogeneità e più difficili quelli basati su \textit{background knowledge}. 
-La $\ell$-diversity è monotona rispetto alle gerarchie di generalizzazione usate per la \textit{k-anonymity}. 
-Tuttavia, la $\ell$-diversity può lasciare spazio a nuovi attacchi basati sulla distribuzione dei valori all'interno dei \textit{q-blocks}, come:
+\texorpdfstring{$\ell$}{l}-diversity può lasciare spazio a degli attacchi basati sulla distribuzione 
+dei valori all'interno dei \textit{q-block}.
 
-\subsubsection{Skewness Attack}
-Un \textit{skewness attack} avviene quando la distribuzione dei valori in un \textit{q-block} è diversa da quella della popolazione originale.
+\subsubsection{Skewness attack (attacco di distorsione)}
+Avviene quando un  \textit{q-block} ha una distribuzione diversa da quella del mondo reale;
+quando faccio i gruppi devo sia avere dei valori diversi che dei valori simili a quelli attesi.
 
-\subsubsection{Similarity Attack}
-Un \textit{similarity attack} si verifica quando un \textit{q-block} contiene valori diversi ma semanticamente simili per l'attributo sensibile.
+\subsubsection{Attacco di similarità}
+Avviene quando un \textit{q-block} contiene dei valori che sono diversi ma semanticamente 
+simili (ad esempio, ulcera allo stomaco/gastrite).
 
-\subsubsection{Group Closeness}
-Un \textit{q-block} rispetta la \textit{t-closeness} se la distanza tra la distribuzione dei valori dell'attributo sensibile nel \textit{q-block} e nella popolazione è inferiore a una soglia $t$.
-\begin{itemize}
-    \item Una tabella rispetta la \textit{t-closeness} se tutti i suoi \textit{q-blocks} rispettano tale condizione.
-    \item La \textit{t-closeness} è monotona rispetto alle gerarchie di generalizzazione per la \textit{k-anonymity}.
-\end{itemize}
+\subsubsection{\textit{t}-closeness}
+Diciamo che un \textit{q-block} rispetta \textit{t-closeness} se la distanza 
+tra la distribuzione dei valori degli attributi sensibili nel \textit{q-block} 
+e quella della popolazione di riferimento è minore di \textit{t}.
 
-\noindent Qualsiasi algoritmo per la \textit{k-anonymity} può essere esteso per rispettare la \textit{t-closeness}, ma tale proprietà può essere difficile da ottenere. 
-Inoltre, un osservatore potrebbe usare conoscenze esterne o pregresse per inferire informazioni.
+Una tabella rispetta \textit{t-closeness} se tutti i suoi \textit{q-blocks}
+rispettano \textit{t-closeness}.
 
-\subsubsection{Types of Background Knowledge}
+\subsection{Tipi di conoscenza pregressa}
 Le conoscenze possono riguardare:
 \begin{itemize}
     \item l'individuo target
@@ -454,12 +450,12 @@ Le conoscenze possono riguardare:
     \item famiglie di valori uguali, come informazioni genomiche che collegano un gruppo di persone.
 \end{itemize}
 
-\subsubsection{Multiple Releases}
-I dati possono essere soggetti a frequenti cambiamenti e necessitare di pubblicazioni regolari. 
-Tuttavia, rilasci multipli di una tabella di microdati possono causare fughe di informazioni poiché un destinatario malevolo può correlare i dataset rilasciati.
- Pertanto, i rilasci multipli (o longitudinali) non possono essere indipendenti, e devono essere protetti contro attacchi di intersezione.
+\subsection{Rilasci multipli}
+I dati potrebbe essere soggetti a rilasci multipli, come aggiornamenti o pubblicazioni 
+ricorrenti.
+Con il rilascio multiplo di multiplo ci si espone ad attacchi di intersezione, 
 
-\subsubsection{m-invariance}
+\subsection{\textit{m-invariance}}
 Per affrontare il problema dei rilasci longitudinali, una sequenza $T_1, ..., T_n$ di tabelle di microdati rilasciate soddisfa la proprietà di \textit{m-invariance} se:
 
 \begin{itemize}
@@ -470,43 +466,11 @@ Per affrontare il problema dei rilasci longitudinali, una sequenza $T_1, ..., T_
 
 \noindent Ciò implica che la correlazione delle tuple in $T_1, ..., T_n$ non permette a un destinatario malevolo di associare meno di $m$ valori sensibili differenti a ciascun rispondente.
 
-\subsubsection{Extended Scenarios}
-Le tecniche di \textit{k-anonymity}, $\ell$-diversity e \textit{t-closeness} si basano su ipotesi che non sempre sono applicabili in scenari specifici. In particolare:
+\section{\textit{k-anonimity} in altre applicazioni}
 
-\begin{itemize}
-    \item \textbf{Multiple tuples per respondent}
-    \item \textbf{Rilascio di più tabelle con dipendenze funzionali}
-    \item \textbf{Più quasi-identificatori}
-    \item \textbf{Quasi-identificatori non predefiniti}
-    \item \textbf{Rilascio di stream di dati}
-    \item \textbf{Preferenze di privacy fine-grained}
-\end{itemize}
+\subsection{Social Networks}
 
-\subsubsection{ k-anonymity in Various Applications}
-Oltre al classico problema del rilascio di microdati, il concetto di \textit{k-anonymity} e le sue estensioni possono essere applicati in diversi scenari, come ad esempio:
-
-\begin{itemize}
-    \item \textbf{Social Networks}
-    \item \textbf{Data Mining}
-    \item \textbf{Location Data}
-\end{itemize}
-
-\subsubsection{ Neighborhood Attack in Social Networks}
-Un \textit{neighborhood attack} si verifica quando, dato un grafo de-identificato $G'$ di una rete sociale $G$, un avversario sfrutta la conoscenza sui vicini di un utente $u$ per re-identificare il vertice che rappresenta $u$. 
-
-\subsubsection{k-anonymity in Social Networks}
-L'idea è di adattare il requisito di \textit{k-anonymity} alle reti sociali. 
-Un vertice $u$ è \textit{k-anonymous} se esistono almeno $k-1$ altri vertici $v_1, ..., v_{k-1}$ tali che i sottografi indotti dal vicinato di $u$ e dal vicinato di $v_1, ..., v_{k-1}$ sono isomorfi. 
-Un grafo $G'$ è \textit{k-anonymous} se ogni vertice $u$ in $G'$ è \textit{k-anonymous}. 
-
-\noindent \textbf{Intuizione}: aggiungere archi fittizi per soddisfare il requisito di k-anonimato.
-
-\noindent Se $G'$ è \textit{k-anonymous}, con una neighborhood background knowledge, qualsiasi vertice in $G$ non può essere re-identificato in $G'$ con una confidenza maggiore di $1/k$.
-
-\noindent \textbf{Obiettivo}: calcolare una versione \textit{k-anonymous} di una grafo minimizzando il numero di archi aggiunti.
-
-\subsubsection{ k-anonymous Data Mining}
-Le tecniche di \textit{privacy-preserving data mining} dipendono dalla definizione di privacy, catturando quali informazioni sono sensibili nei dati originali e dovrebbero essere protette. 
+\subsection{Data Mining}
 Il \textit{k-anonymous data mining} mira a garantire che i risultati del data mining non violino i requisiti di \textit{k-anonymity} sui dati originali.
 Alcuni esempi di tecniche per compromettere la k-anonymity sfruttando il data mining ncludono:
 
@@ -515,114 +479,50 @@ Alcuni esempi di tecniche per compromettere la k-anonymity sfruttando il data mi
     \item \textbf{Classification Mining}: tecniche di classificazione possono portare a minacce per la privacy.
 \end{itemize}
 
-\subsubsection{ k-anonymity in Location-Based Services}
-Per proteggere l'identità degli utenti in base alla loro posizione geografica, è possibile adottare il concetto di \textit{k-anonymity}, come segue:
+\subsection{Location-Based Services}
+Bisogna preocupparsi del fatto che la locazione di un individuo potrebbe 
+rivelare la sua identità. Così come si generalizza il valore dei dati per aumentare
+il numero degli utenti ed avere più incertezza, lo stesso viene fatto con
+la posizione.
 
+\noindent \\Si può adottare il concetto di \textit{k-anonimity} come segue:
 \begin{itemize}
     \item Considerare solo le aree che contengono almeno $k$ individui
     \item Ingrandire l'area per includere almeno altri $k-1$ utenti (\textit{k-anonymity})
     \item Obfuscazione delle aree (\textit{location privacy}) per ridurre la precisione o la confidenza dei dati
-    \item Protezione del percorso degli utenti (\textit{trajectory privacy}) tramite mix/modifica delle traiettorie
+    \item Protezione del percorso degli utenti (\textit{trajectory privacy}) tramite modifica delle traiettorie
 \end{itemize}
 
-\subsubsection{ Re-identification with Any Information}
-Qualsiasi tipo di informazione può essere utilizzata per re-identificare dati anonimi. Questo rende la protezione della privacy particolarmente difficile a causa della crescente quantità e varietà di dati raccolti sugli individui. Di seguito, due esempi noti.
-
-\subsubsection{ AOL Data Release}
-Nel 2006, AOL pubblicò 20 milioni di query di ricerca effettuate da 650,000 utenti per favorire la comunità di ricerca. Nonostante l'anonimizzazione di username e indirizzi IP, l'uso di numeri identificativi unici permise la re-identificazione di utenti attraverso query specifiche. 
-Il caso più noto riguarda \textit{Thelma Arnold}, re-identificata tramite ricerche locali e mediche. Questo evidenzia come dati apparentemente anonimi possano essere utilizzati per risalire all'identità delle persone.
-
-\subsubsection{ Netflix Prize Data Study}
-Nel 2006, Netflix lanciò una sfida per migliorare il proprio algoritmo di raccomandazione fornendo un dataset di 100 milioni di record sui rating dei film di circa 500,000 utenti. Studi successivi mostrarono che pochissime informazioni ausiliarie sono necessarie per de-anonimizzare un utente:
+\section{Privacy Sintattica e Semantica}
 \begin{itemize}
-    \item Con 6 rating e date (± 2 settimane), il 99\% degli utenti può essere identificato univocamente
-    \item Con 2 rating e date (± 3 giorni), il 68\% degli utenti può essere identificato univocamente
-\end{itemize}
-Informazioni ausiliarie possono essere ottenute da fonti esterne, come IMDb. Questo sollevò preoccupazioni legate alla privacy, poiché le preferenze cinematografiche possono rivelare orientamenti politici, religiosi o sessuali.
-
-\subsubsection{ Other Privacy Breaches}
-L'uso di app per il fitness che tracciano la posizione degli utenti ha mostrato come mappe dettagliate possano esporre informazioni sensibili sulla posizione e sull'identità delle persone.
-
-\subsubsection{ Syntactic vs Semantic Privacy Definitions}
-\begin{itemize}
-    \item \textbf{Syntactic Privacy Definitions}
-    Le definizioni di privacy sintattiche misurano il grado di protezione di una persona nei dati con un valore numerico. Ad esempio:
+    \item \textbf{Syntactic Privacy:}
+    le definizioni di privacy sintattiche misurano il grado di protezione di una persona nei dati con un valore numerico. 
+    
+    Ad esempio:
     \begin{itemize}
         \item Ogni rilascio di dati deve essere indistinguibilmente associato ad almeno un certo numero di individui nella popolazione.
     \end{itemize}
 
-    \item \textbf{Semantic Privacy Definitions}
-    Le definizioni di privacy semantiche soddisfano un requisito di privacy semantico. Ad esempio:
+    \item \textbf{Semantic Privacy:}
+    le definizioni di privacy semantiche soddisfano un requisito di privacy semantico. 
+    
+    Ad esempio:
     \begin{itemize}
         \item Il risultato di un'analisi eseguita su un dataset rilasciato non deve essere influenzato dalla presenza o assenza di una singola tupla nel dataset.
     \end{itemize}
 \end{itemize}
 
-\subsubsection{ Differential Privacy}
-\begin{itemize}
-    \item \textbf{Informal Definition}
-    La \textit{differential privacy} mira a prevenire che un avversario sia in grado di rilevare la presenza o assenza di un individuo in un dataset. 
-    Ad esempio, il conteggio degli individui affetti da una malattia in un database medico, con un meccanismo che fornisce probabilmente lo stesso risultato su dataset che differiscono per un solo individuo.
-    \item \textbf{Formal Definition}
-    Una funzione randomizzata $K$ fornisce $\varepsilon$-differential privacy se per tutti i dataset $D$ e $D'$ che differiscono per al massimo una riga, e per ogni insieme $S \subseteq \text{Range}(K)$:
-    \[
-    \text{Pr}[K(D) \in S] \leq e^{\varepsilon} \times \text{Pr}[K(D') \in S]
-    \]
-\end{itemize}
+\section{Differential Privacy}
+La \textit{Differential Privacy} mira a prevenire che un attaccante sia in grado di stabilire
+la presenza o l'assenza di un individuo in un dataset.
+\subsubsection{Definizione informale}
+La distribuzione della probabilità sui dati pubblicati deve essere \textit{essenzialmente la stessa}
+indipendentemente dal fatto che in individuo sia incluso o meno nel dataset.
 
-
-\subsubsection{ Differential Privacy Scenarios}
-La differential privacy si applica a due scenari principali:
-\begin{itemize}
-    \item \textbf{Scenario Interattivo}: valutazione di query in tempo reale (Statistical DBMS).
-    \item \textbf{Scenario non Interattivo}: rilascio di tabelle di macro-dati pre-calcolate (Statistical Data).
-\end{itemize}
-Essa viene solitamente implementata tramite l'aggiunta di rumore casuale, ma ciò non preserva necessariamente la veridicità dei dati.
-
-\subsubsection{ Differential Privacy Variations}
-Per ridurre la quantità di rumore aggiunto, sono state proposte diverse varianti:
-\begin{itemize}
-    \item \textbf{($\epsilon$, $\delta$)-differential privacy}: l'approssimazione $\epsilon$ può essere violata con bassa probabilità (controllata da $\delta$).
-    \item Metodi basati su trasformate wavelet per migliorare l'utilità dei dati.
-\end{itemize}
-
-\subsubsection{ Differential Privacy Applications}
-Meccanismi basati su differential privacy sono stati sviluppati per vari domini:
-\begin{itemize}
-    \item \textbf{Social networks} 
-    \item \textbf{Data mining} 
-    \item \textbf{Location data}
-\end{itemize}
-
-\subsubsection{ Is Differential Privacy Enough?}
-La differential privacy limita l'inferenza sulla presenza di una tupla, ma non necessariamente l'inferenza sulla partecipazione di un individuo al processo di generazione dei dati. 
-Ad esempio, la partecipazione di Bob in un social network potrebbe influenzare le relazioni tra i suoi amici, non solo la sua tupla.
-
-\subsubsection{ k-anonymity vs Differential Privacy}
-
-\begin{itemize}
-    \item \textbf{k-anonymity}:
-    \begin{itemize}
-        \item \textbf{Pro}: Cattura bene i requisiti del mondo reale.
-        \item \textbf{Contro}: Non offre una protezione completa.
-    \end{itemize}
-    
-    \item \textbf{Differential Privacy}:
-    \begin{itemize}
-        \item \textbf{Pro}: Offre garanzie di protezione migliori.
-        \item \textbf{Contro}: Non facile da capire o applicare, e non garantisce una protezione completa.
-    \end{itemize}
-\end{itemize}
-
-
-\section{Some Examples of Other Privacy Issues}
-
-\subsection{Sensitive Value Distributions}
-\begin{itemize}
-    \item Le tuple individuali non sono intrinsecamente sensibili.
-    \item Una raccolta di tuple potrebbe rivelare informazioni sensibili non esplicitamente riportate, in particolare a causa di distribuzioni di valori peculiari.
-\end{itemize}
-
+\chapter{Alcuni esempi di altri problemi di priacy}
+\section{Distribuzione di valori sensibili}
+Riesco ad inferire informazioni non dalla singola tupla, ma dall'insieme di tuple.
+\subsubsection{Esempio}
 \subsubsection{Example: Soldiers' Medical Records}
 \begin{itemize}
     \item I record individuali non sono sensibili.
@@ -633,53 +533,22 @@ Ad esempio, la partecipazione di Bob in un social network potrebbe influenzare l
     \end{itemize}
 \end{itemize}
 
-\subsubsection{Counteracting Inference Channels}
-\begin{itemize}
-    \item La valutazione dell'esposizione dei dati rilasciati può essere effettuata attraverso:
-    \begin{itemize}
-        \item ll calcolo a priori del numero massimo di tuple rispetto alla baseline distribution, inclusi il numero di rilasci per diversi valori di attributi.
-        \item La valutazione delle metriche di esposizione sulle tuple richieste.
-    \end{itemize}
-\end{itemize}
-
-\subsection{Privacy and Genomic Data}
+\section{Dati del genoma}
 Le informazioni genomiche presentano opportunità in medicina ma sollevano anche diversi problemi di privacy:
 \begin{itemize}
-    \item Il genoma umano può identificare il suo proprietario.
-    \item Contiene info sensibili sulla provenienza etnica, predisposizione a malattie e altri tratti fenotipici.
-    \item I dati genomici possono rivelare informazioni sui parenti e sui discendenti sulla base del genoma.
+    \item Il genoma umano può identificare il suo proprietario
+    \item Contiene informazioni sensibili sulla provenienza etnica, predisposizione a malattie e altri tratti fenotipici
+    \item I dati genomici possono rivelare informazioni sui parenti e sui discendenti sulla base del genoma (non solo tua)
 \end{itemize}
 
-\subsubsection{Individuals' Re-identification}
-\subsubsection{Example: The 1000 Genomes Project:} Un'iniziativa internazionale avviata nel 2008 per definire un catalogo della variazione genetica umana. 
-Durante il progetto, cinque uomini coinvolti sia in questo progetto sia in uno studio su famiglie mormoni nello Utah sono stati ri-identificati attraverso un'analisi incrociata condotta dal Whitehead Institute for Biomedical Research. 
-Il processo di identificazione includeva l'estrazione degli haplotipi del cromosoma Y, l'inserimento di questi dati in database genealogici per identificare possibili cognomi e l'uso di tali cognomi in database demografici per raccogliere ulteriori informazioni sui donatori e i loro familiari.
-
-
-\subsection{Sensitive Inference from Data Mining}
-
-\subsubsection{The Target case:} 
-Target, il secondo rivenditore di sconti più grande negli Stati Uniti, assegna a ogni cliente un numero di identificazione (Guest ID) collegato a informazioni personali come carta di credito, nome e indirizzo email. Questa identificazione consente a Target di raccogliere e analizzare la storia degli acquisti dei clienti per scopi pubblicitari mirati. 
-Gli analisti di Target hanno identificato circa 25 prodotti che consentono di assegnare a ciascun acquirente un punteggio di previsione della gravidanza. Ad esempio, una donna di 23 anni che acquista lozione al burro di cacao, una borsa sufficientemente grande da fungere da borsa per pannolini, integratori di zinco e magnesio e un tappeto blu brillante potrebbe avere un'87\% di probabilità di essere in attesa a fine agosto. Queste informazioni vengono utilizzate per inviare coupon in momenti specifici durante la gravidanza. 
-L'analisi dei dati ha rivelato eventi significativi nella vita dei clienti, come lauree, nuovi lavori o traslochi, rendendo le abitudini di acquisto più flessibili e prevedibili, il che si traduce in un potenziale profitto significativo per i rivenditori. Tra il 2002 e il 2010, le entrate di Target sono cresciute da 44 miliardi a 67 miliardi di dollari grazie a queste campagne di marketing mirato.
-
-
-\subsection{Social Media}
-
-\subsubsection{Profiling in Social Media}
+\section{Social Media}
 Le nostre attività sui social media e i "like" possono rivelare informazioni sensibili. 
+
 È importante notare che i social media condividono frequentemente i nostri dati con terze parti, come inserzionisti e aziende di analisi, il che può portare a violazioni della privacy.
 
-\subsubsection{Cambridge Analytica Scandal}
-Un esempio eclatante è lo scandalo di Cambridge Analytica, dove i dati di milioni di utenti di Facebook sono stati raccolti senza il consenso degli stessi per influenzare campagne politiche. 
-Questo caso ha messo in luce le vulnerabilità legate alla privacy degli utenti e all'uso improprio di tali informazioni.
-
-\subsubsection{User Profiling - OCEAN Model}
-Inoltre, la profilazione degli utenti avviene attraverso modelli come il modello OCEAN (apertura, coscienziosità, estroversione, amicalità e nevroticismo), che categorizza gli utenti in base a tratti della personalità, consentendo una pubblicità mirata e la manipolazione comportamentale.
-
-\subsubsection{Biometric Data Privacy}
-Infine, la privacy dei dati biometrici, come il riconoscimento facciale, solleva ulteriori preoccupazioni. 
-Questi sistemi possono identificare gli individui senza il loro consenso, sollevando interrogativi etici e legali sulla sorveglianza e sulla protezione dei dati personali.
+\section{Dati Biometrici}
+La privacy dei dati biometrici solleva ulteriori preoccupazioni; sono sistemi in grado di identificare gli utenti 
+senza il loro consenso.
 
 
 
