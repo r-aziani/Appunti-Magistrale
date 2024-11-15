@@ -6,6 +6,9 @@
 \usepackage{amsmath}
 \usepackage{xcolor}
 
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+
+
 \title{Protezione di Macrodata e Microdata}
 \date{Parte II}
 
@@ -15,6 +18,17 @@
 
 \tableofcontents
 \newpage
+
+Spesso il rilascio di dati statistici può inferire a dati non 
+intesi per il rilascio.
+
+La rivelazione può avvenire:
+\begin{itemize}
+    \item con i soli dati rilasciati
+    \item dalla combinazione dei dati rilasciati con informazioni disponibili al pubblico
+    \item dalla combinazione dei dati rilasciati con informazioni provenienti da altre fonti 
+\end{itemize}
+
 
 \chapter{Statistical DBMS}
 Un \textbf{DBMS statistico} è un DBMS che offre accesso a statistiche 
@@ -32,11 +46,101 @@ Le informazioni confidenziali possono essere dedotte:
     \includegraphics[width=1\linewidth]{images/stat-dbms.png}
 \end{figure}
 
+Una \textit{sensitive query} è una query che può provocare una \textit{disclosure}, ovvero la rivelazione di informazioni sensibili su un individuo.
+Le query, prese singolarmente, potrebbero non essere sensibili, ovvero non rivelare informazioni confidenziali. 
+Tuttavia, un insieme di query considerate nel loro complesso può diventare sensibile. Questo fenomeno è noto come \textit{\textbf{collusione}}. 
+Attraverso la collusione, le informazioni aggregate da query non sensibili possono portare alla deduzione di dati privati o confidenziali.
+
 Questa è la ragione per cui mi serve il controllo basato sulla 
 storia: devo tenere traccia di quello che mi chiedi e della 
 conoscenza che hai, e quindi di cosa puoi inferire.
 
-\chapter{Protezione dei Macrodati}
+\chapter{Protezione per Tabelle di Conteggio o Frequenze}
+
+La protezione di questo tipo di tabelle si divide in tre fasi:
+\begin{enumerate}
+    \item Sampling
+    \item Identificazione delle celle sensibili
+    \begin{itemize}
+        \item special rules 
+        \item threshold rules 
+    \end{itemize}
+    \item Protezione delle celle sensibili
+    \begin{itemize}
+        \item table restructuring
+        \item soppressione 
+        \item rounding 
+        \item confidentiality edit
+    \end{itemize}
+\end{enumerate}
+
+\section{Sampling}
+Stabilisco un campione della popolazione totale (che sia rappresentativo, senza bias, \dots) 
+e faccio la statistica su tale campione.
+
+Prima di aggregare i dati, i singoli valori vengono moltiplicati per un peso (\textit{sampling weight});
+in questo modo viene mantenuta la correlazione statistica dei dati ma introducendo del rumore (se i pesi non vengono pubblicati), rendendo 
+più difficile identificare i dati dei singoli rispondenti dai valori pubblicati.
+
+\section{Identificazione delle celle sensibili}
+
+\subsection{Regole Speciali}
+Le regole speciali definiscono il livello di dettaglio oltre il quale non è consentito
+rilasciare dati.
+
+Vengono chiamate in questo modo perché dipendono dall'agenzia e dal tipo di tabella
+(dominio di applicazione).
+
+Per soddisfare le regole speciali si può utilizzare:
+\begin{itemize}
+    \item table restructuring
+    \item category combination
+\end{itemize}
+
+\subsection{Threshold rules}
+Una cella viene considerata sensibile se il numero di rispondenti è inferiore 
+a un certo numero specificato. 
+
+\section{Protezione delle celle sensibili}
+\subsection{Table Restructuring}
+La tabella viene ristrutturata e righe o colonne vengono 
+combinate (\textit{rolling-up categories}).
+
+\subsection{Soppressione delle celle}
+È una delle tecniche di protezione più usata. La sola soppressione delle celle 
+sensibili non è sufficiente (\textbf{soppressione primaria}): è necessaria una seconda soppressione (\textbf{soppressione complementare})
+per ogni riga e colonna in cui viene soppressa una cella sensibile, altrimenti 
+il valore della cella sensibile potrebbe essere calcolabile dal totale marginale.
+
+La scelta delle celle per la soppressione complementare è un problema difficile; possono essere
+utilizzati modelli di programmazione lineare in cui l'obiettivo è 
+massimizzare o minimizzare una funzione obiettivo, soggetta a dei vincoli:
+\begin{itemize}
+    \item la funzione obiettivo potrebbe essere la minimizzazione delle celle soppresse o la massimizzazione della protezione dei dati 
+    \item i vincoli possono essere dei requisiti di riservatezza, come il numero minimo di celle da sopprimere o la necessità di mantenere la validità statistica dei dati 
+\end{itemize}
+
+\subsection{Rounding}
+Per ridurre la perdita di dati dovuta alla soppressione, si utilizza il \textit{rounding} 
+dei valori a un multiplo della soglia di sensibilità. Esistono due approcci possibili:
+\begin{itemize}
+    \item \textbf{Random:} viene scelto in maniera casuale se arrotondare i valori per eccesso o per difetto 
+    \begin{itemize}
+        \item la conseguenza è che la somma dei valori in una riga o in una colonna 
+        potrebbe differire dai totali marginali
+    \end{itemize}
+    \item \textbf{Controllato:} garantisce che la somma delle righe e colonne siano uguali 
+    ai totali marginali
+    \begin{itemize}
+        \item \textbf{\textcolor{darkgreen}{Vantaggi:}} garantisce che i dati pubbliati siano coerenti con i totali marginali
+        \item \textbf{\textcolor{red}{Svantaggi:}} richiede l'uso di programmi informatici specializzati per il calcolo delle soluzioni di arrotondamento; non sempre potrebbero esistere soluzioni
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Nota}
+Tutti i valori delle celle devono essere multiplo del valore di \textit{sensitivity threshold}; è 
+fondamentale per mantenere la riservatezza e l'integrità dei dati.
+
 
 
 
@@ -72,156 +176,7 @@ conoscenza che hai, e quindi di cosa puoi inferire.
 
 
 \newpage
-
-\section{Macrodata and Microdata Protection}
-
-\subsection{Statistical DBMS vs Statistical Data}
-\noindent \textbf{DBMS statistici} - Interazione interattiva tra Client e DBMS:
-\begin{itemize}
-    \item Il sistema risponde solo a query statistiche.
-    \item Necessario un controllo dinamico per proteggere la privacy e prevenire il rilascio indiretto di informazioni.
-\end{itemize}
-
-\noindent \textbf{Dati statistici} - Interazione non interattiva tra Client e DBMS:
-\begin{itemize}
-    \item Pubblicano statistiche (macrodata release).
-    \item Il controllo sul rilascio indiretto viene eseguito prima della pubblicazione.
-\end{itemize}
-
-\subsection{Statistical DBMS}
-Un \textit{DBMS Statistico} è un sistema di gestione di database che fornisce accesso a statistiche su gruppi di individui. 
-Deve garantire che non venga rivelata alcuna informazione su un individuo specifico.
-
-\paragraph{Deduzione di informazioni confidenziali}
-Tali informazioni possono essere dedotte in vari modi, tra cui:
-\begin{itemize}
-    \item combinando i risultati di statistiche differenti
-    \item combinando i risultati delle statistiche con conoscenza esterna (anche ev. sul contenuto del DB)
-\end{itemize}
-
-\subsection{Sensitive Query}
-Una \textit{sensitive query} è una query che può provocare una \textit{disclosure}, ovvero la rivelazione di informazioni sensibili su un individuo (es: income molto elevato identifica un individuo peculiare).
-Le query, prese singolarmente, potrebbero non essere sensibili, ovvero non rivelare informazioni confidenziali. 
-Tuttavia, un insieme di query considerate nel loro complesso può diventare sensibile. Questo fenomeno è noto come \textit{collusione}. 
-Attraverso la collusione, le informazioni aggregate da query non sensibili possono portare alla deduzione di dati privati o confidenziali.
-
-\subsection{Macrodata}
-Le \textit{Macrodata Tables} possono essere classificate nei seguenti due gruppi (tipi di tabelle):
-\begin{itemize}
-    \item \textbf{Count/Frequency:} Ogni cella contiene il numero (conteggio) o la percentuale (frequenza) di rispondenti che hanno lo stesso valore su tutti gli attributi nella tabella.
-    \item \textbf{Magnitude Data:} Ogni cella contiene un valore aggregato di una quantità di interesse (somma, media, \dots) su tutti gli attributi nella tabella.
-\end{itemize}
-
-\section{Macrodata Disclosure Prot. Techniques: Tables of C or F}
-
-\subsection{Data Protection in Count/Frequency Tables}
-I dati raccolti dalla maggior parte dei sondaggi sono pubblicati in tabelle di conteggio o frequenze.\\ 
-Le tecniche di protezione per tali dati operano in 3 passi:
-\begin{enumerate}
-    \item \textbf{Sampling}
-    \item \textbf{Identification of sensitive cells}
-    \begin{itemize}
-        \item \textbf{Special Rules}
-        \item \textbf{Threshold Rules}
-    \end{itemize}
-    \item \textbf{Protection of sensitive cells}
-    \begin{itemize}
-        \item \textbf{Table Restructuring}
-        \item \textbf{Suppression}
-        \item \textbf{Rounding}
-        \item \textbf{Confidentiality Edit}
-    \end{itemize}
-\end{enumerate}
-
-\subsection{Sampling}
-Condurre (e pubblicare) un \textit{sample survey} piuttosto che un censimento.
-\begin{itemize}
-    \item Le stime vengono effettuate moltiplicando le risposte individuali per un peso di campionamento (\textit{sampling weight}) prima di aggregarle.
-    \item Se i pesi non vengono pubblicati, il \textit{weighting} aiuta a rendere i dati di un singolo rispondente meno identificabili dai totali pubblicati.
-    \item Le stime devono raggiungere una precisione specificata $\rightarrow$ i dati che non soddisfano i requisiti di precisione non vengono pubblicati (non sono considerati significativi).
-\end{itemize}
-
-
-\subsection{Special Rules}
-Quando le \textit{Macrodata Tables} sono definite sull'intera popolazione, necessarie procedure di limitazione della disclosure. 
-Le \textit{special rules} definiscono restrizioni sul livello di dettaglio fornito in una tabella.
-\begin{itemize}
-    \item Le \textit{special rules} variano a seconda del dominio applicativo considerato e del tipo di tabella.
-    \item Per soddisfare le \textit{special rules}, si possono applicare:
-    \begin{itemize}
-        \item \textbf{Table Restructuring}
-        \item \textbf{Category Combination}
-    \end{itemize}
-\end{itemize}
-
-\subsubsection{Esempi di special rules}
-Le \textit{special rules} possono richiedere di evitare situazioni in cui un valore in una tabella è uguale a un totale marginale, oppure in cui i dati consentono agli utenti di determinare:
-
-\begin{itemize}
-    \item l'età di un individuo all'interno di un intervallo di cinque anni
-    \item il reddito all'interno di un intervallo di $1,000$
-    \item i benefici all'interno di un intervallo di $50$
-\end{itemize}
-
-\subsection{Threshold Rules}
-Una cella è considerata sensibile se il numero di rispondenti è inferiore a un certo numero specificato (ad esempio, alcune agenzie considerano 5, altre 3). 
-Una cella sensibile non può essere divulgata.
-Diverse tecniche possono essere applicate per proteggere le celle sensibili:
-\begin{itemize}
-    \item \textbf{Table Restructuring \& Category Combination}
-    \item \textbf{Cell Suppression}
-    \item \textbf{Random Rounding}
-    \item \textbf{Controlled Rounding}
-    \item \textbf{Confidentiality Edit}
-\end{itemize}
-
-\subsection{Table Restructuring}
-Per proteggere la riservatezza, la tabella può essere ristrutturata e righe o colonne possono essere combinate (\textit{rolling-up categories}). 2 righe $\rightarrow$ 1 riga aggregata (analogo per colonne).
-
-\subsection{Cell Suppression}
-Una delle modalità più comuni per proteggere le celle sensibili è la \textit{suppression}.\\
-Rimuovere i valori presenti nelle celle sensibili (\textbf{primary suppression}) non è sufficiente. 
-\begin{itemize}
-    \item È necessario sopprimere almeno un'altra cella (\textbf{complementary suppression}) per ogni riga o colonna contenente una cella sensibile dalla \textbf{primary suppression}. 
-    \begin{itemize}
-        \item Altrimenti il valore nella cella sensibile può essere calcolato dal totale marginale.
-    \end{itemize}
-    \item Anche con la \textbf{complementary suppression}, è difficile garantire una protezione adeguata.
-\end{itemize}
-
-\subsection{Complementary Suppressions}
-La selezione delle celle per la \textit{complementary suppression} è complicata. 
-\begin{itemize}
-    \item Vengono utilizzate tecniche di programmazione lineare per selezionare automaticamente le celle da sopprimere. Queste tecniche consentono di formulare il problema di soppressione come un modello matematico, in cui l'obiettivo è massimizzare o minimizzare una funzione obiettivo soggetta a determinati vincoli.
-    \begin{itemize}
-        \item In questo contesto, la funzione obiettivo potrebbe essere la minimizzazione del numero di celle soppresse o la massimizzazione della protezione dei dati sensibili.
-        \item I vincoli possono includere requisiti di riservatezza, come il numero minimo di celle da sopprimere in ogni riga/colonna e la necessità di mantenere la validità statistica dei dati.
-    \end{itemize}
-    \item Tecniche di audit possono essere applicate per valutare il modello di soppressione proposto e verificare se fornisce la protezione richiesta.
-\end{itemize}
-
-\subsection{Rounding}
-Per ridurre la perdita di dati dovuta alla soppressione, si utilizza il \textit{rounding} dei valori a un multiplo della soglia di sensibilità.
-Esistono due approcci possibili:
-\begin{itemize}
-    \item \textbf{Random Rounding}: In questa tecnica, si prende una decisione casuale su come arrotondare i valori delle celle, sia verso l'alto (eccesso) che verso il basso (difetto). 
-    \begin{itemize}
-        \item Il risultato di questo approccio è che la somma dei valori in una riga o colonna potrebbe differire dai totali marginali pubblicati $\rightarrow$ perdita di fiducia nei dati da parte dei destinatari, poiché non possono ricavare con precisione le informazioni aggregate.
-    \end{itemize}
-    \item \textbf{Controlled Rounding}: Questa tecnica garantisce che la somma delle voci pubblicate sia uguale ai totali marginali pubblicati. 
-    \begin{itemize}
-        \item Nonostante l'arrotondamento, le informazioni aggregate rimangono coerenti e affidabili.
-    \end{itemize}
-    \item \textbf{Nota}: Tutti i valori delle celle devono essere un multiplo del valore del \textit{sensitivity threshold}. 
-    Fondamentale per mantenere la riservatezza e l'integrità dei dati dopo il \textit{rounding process}.
-\end{itemize}
-
-\subsection{Controlled Rounding}
-\paragraph{Vantaggi:}
-Garantisce che i dati pubblicati siano coerenti con i totali marginali e riduce il rischio di deduzione di informazioni sensibili.
-
-\paragraph{Svantaggi:}
-Richiede l'uso di programmi informatici specializzati per l'implementazione e le soluzioni di arrotondamento controllato potrebbero non esistere sempre per tabelle complesse.
+\newpage
 
 \subsection{Confidentiality Edit}
 La \textit{Confidentiality Edit} è stata sviluppata dal U.S. Census Bureau per fornire protezione alle tabelle preparate utilizzando il Censimento del 1990. Questa tecnica si basa su due approcci distinti:
