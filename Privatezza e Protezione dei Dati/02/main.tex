@@ -55,7 +55,7 @@ Questa è la ragione per cui mi serve il controllo basato sulla
 storia: devo tenere traccia di quello che mi chiedi e della 
 conoscenza che hai, e quindi di cosa puoi inferire.
 
-\chapter{Protezione per Tabelle di Conteggio o Frequenze}
+\chapter{Protezione di Macrodata: tabelle di conteggio o frequenze}
 
 La protezione di questo tipo di tabelle si divide in tre fasi:
 \begin{enumerate}
@@ -142,129 +142,40 @@ Tutti i valori delle celle devono essere multiplo del valore di \textit{sensitiv
 fondamentale per mantenere la riservatezza e l'integrità dei dati.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-\newpage
-
 \subsection{Confidentiality Edit}
-La \textit{Confidentiality Edit} è stata sviluppata dal U.S. Census Bureau per fornire protezione alle tabelle preparate utilizzando il Censimento del 1990. Questa tecnica si basa su due approcci distinti:
-\begin{itemize}
-    \item \textbf{Protezione dei dati del Censimento decennale regolare} (100\% della popolazione).
-    \item \textbf{Protezione Long-Form del Censimento} (campione della popolazione).
-\end{itemize}
-
-\noindent Entrambi gli approcci applicano tecniche di \textbf{statistical disclosure limitation} ai microdati sui quali sono calcolate le statistiche, protezione ottenuta mediante la modifica dei dati di input.
-
-\paragraph{Procedura di Switching per il file di microdati al 100\% $\rightarrow$} 
-Per il file di microdati al 100\% (1° caso), la \textit{confidentiality edit} si applica attraverso un processo di switching:
+La \textit{confidentiality edit} viene applicata attraverso un processo di switching:
 \begin{enumerate}
-    \item Prendere un campione di record dal file di microdati.
-    \item Trovare una corrispondenza per tali record in un'altra regione geografica, effettuando il matching in base a un insieme specifico di attributi importanti.
-    \item Scambiare tutti gli attributi sui record corrispondenti.
+    \item si prende un campione di record dal file di microdati
+    \item si trova una corrispondenza per tali record in una popolazione contenente altri record (ad esempio un'altra regione geografica)
+    \item si scambiano tutti gli attributi sui record che corrispondono
 \end{enumerate}
 
-\noindent Per piccoli blocchi, la frazione di campionamento può essere aumentata per fornire una protezione aggiuntiva. 
-Se aumentiamo la frazione di campionamento e decidiamo di includere più soggetti nel campione, ci saranno più dati a disposizione e più variabilità, 
-riducendo il rischio di identificare singoli residenti basandosi sui risultati. Inoltre, il file di microdati può essere utilizzato direttamente per preparare tabelle di macrodata, 
-mantenendo le correlazioni statistiche ottenibili dai  \textit{raw data}.
+\subsubsection{Nota}
+Si opera non sulla statistica ma sui dati su cui viene prodotta tale statistica; la 
+protezione è garantita dal fatto che sto introducendo del rumore nei dati.
 
+\chapter{Protezione di Macrodata: tabelle di magnitudo}
+È probabile che la distribuzione dei valori riportati nelle tabelle di magnitudo sia
+asimmetrica (\textit{skewed}); le tecniche di limitazione di disclosure si concentrano 
+sulla prevenzione della stima precisa dei valori per gli outlier.
 
-\section{Macrodata Disclosure Prot. Techniques: Tables of M}
+\section{Identificazione delle celle sensibili}
+Per identificare le celle sensibili si utilizzano le \textit{regole di soppressione},
+che cercano di verificare
+se è sufficientemente difficile per un rispondente stimare il valore di un altro 
+rispondente in modo troppo preciso.
 
-\subsection{Data Protection in Magnitude Tables}
-I \textit{Magnitudine Data} sono generalmente quantità non negative riportate in sondaggi o censimenti. È probabile che la distribuzione di questi valori sia asimmetrica (skewed). Le tecniche di limitazione della divulgazione si concentrano sulla prevenzione della stima precisa dei valori per gli outlier.
+Queste regole vengono definite \textbf{regole di soppressione primaria}.
 
-\begin{itemize}
-    \item Esempi: informazioni su redditi, spese o altre quantità aggregate.
-    \item Le tecniche di protezione si concentrano principalmente su come gestire i valori estremi (\textit{outliers}), maggiormente a rischio di disclosure di informazioni sensibili.
-    \item Il campionamento è meno efficace nel fornire protezione (NO riservatezza \textit{outliers}).
-\end{itemize}
-
-\noindent La protezione delle tabelle di dati di magnitudine implica diversi passaggi fondamentali:
-\begin{enumerate}
-    \item \textbf{Identification of sensitive cells}
-    \begin{itemize}
-        \item \textbf{p-percent}: soglia percentuale sotto la quale i valori possono essere considerati sensibili.
-        \item \textbf{pq}: combinazione di valori che possono rivelare informazioni riservate.
-        \item \textbf{(n,k)}: criterio basato su dimensioni per identificare celle sensibili.
-    \end{itemize}
-    
-    \item \textbf{Protection of sensitive cells}
-    \begin{itemize}
-        \item \textbf{Suppression}: tecnica comune utilizzata per prevenire la divulgazione di dati riservati.
-    \end{itemize}
-    
-    \item \textbf{Verify result}
-    \begin{itemize}
-        \item \textbf{Audit}: processo che verifica se le tecniche di protezione sono state applicate correttamente.
-        \item \textbf{Information loss}: analisi dell'\textit{information loss} per garantire la significatività dei dati.
-        \item \textbf{Parameters are not disclosed}: importante per mantenere la riservatezza dei dati.
-    \end{itemize}
-\end{enumerate}
-
-\subsection{Suppression Rules - 1}
-
-Le \textit{regole di soppressione} sono fondamentali per proteggere le informazioni sensibili nelle tabelle di dati. Esse si concentrano su due aspetti principali:
+\subsection{\textit{p-percent} rule}
+Questa regola stabilisce una soglia percentuale al di sotto della quale i valori 
+delle celle sono considerati sensibili.; verifica se è sufficientemente difficile per 
+un rispondente stimare troppo accuratamente il contributo di un rispondente.
 
 \begin{itemize}
-    \item \textbf{Regole di Soppressione Primarie}: Determinano se una cella potrebbe rivelare informazioni su un singolo rispondente. Se una cella è considerata sensibile, non può essere rilasciata.
-    \item \textbf{Regole di Soppressione Comuni}: Le regole più comuni includono:
-    \begin{itemize}
-        \item \textit{p-percent rule}: Stabilisce una soglia percentuale al di sotto della quale i valori delle celle sono considerati sensibili.
-        \item \textit{pq rule}: Si basa sulla combinazione di variabili per determinare la sensibilità delle celle.
-        \item \textit{(n,k) rule}: Utilizza un criterio dimensionale per identificare le celle sensibili.
-    \end{itemize}
-\end{itemize}
-
-\paragraph{Verifica della Sensibilità}
-Queste regole sono utilizzate per identificare celle sensibili verificando se è sufficientemente difficile per un rispondente stimare il valore riportato da un altro rispondente in modo troppo preciso.
-
-\subsection{Suppression Rules - 2}
-Le \textbf{Primary Suppression Rules} determinano se una cella potrebbe rivelare informazioni su un singolo rispondente $\rightarrow$ in tal caso tali celle sono considerate sensibili e non possono essere rilasciate.
-Le regole di soppressione più comuni sono:
-    \begin{itemize}
-        \item la \textit{the p-percent rule}
-        \item la \textit{the pq rule}
-        \item la \textit{the (n,k) rule}
-    \end{itemize}
-Queste regole vengono utilizzate per identificare celle sensibili verificando se è sufficientemente difficile per un rispondente stimare con accuratezza il valore riportato da un altro rispondente.
-
-\subsection{Primary Suppression Rule: p-percent}
-Tale regola stabilisce che la divulgazione di informazioni sensibili a partire dai \textit{Magnitude Data} si verifica se l'utente può stimare troppo accuratamente il contributo di un rispondente. 
-\begin{itemize}
-    \item Una cella è considerata \textbf{sensibile} se le stime superiori e inferiori per il valore del rispondente sono più vicine al valore riportato di una percentuale predefinita \( p \).
+    \item Una cella è considerata \textbf{sensibile} se le stime superiori e inferiori per 
+    il valore del rispondente sono più vicine al valore riportato di una percentuale 
+    stabilita $p$.
     \item Formalmente, una cella è considerata protetta se:
     \[
     \sum_{i=c+2}^{N} x_i \geq \frac{p}{100} x_1
@@ -277,11 +188,19 @@ Tale regola stabilisce che la divulgazione di informazioni sensibili a partire d
     \end{itemize}
 \end{itemize}
 
-\subsection{Primary Suppression Rule: pq}
-La \textbf{p-percent rule} assume che non ci sia alcuna conoscenza precedente sui valori dei rispondenti. Tuttavia, le agenzie non dovrebbero fare questa assunzione.
+\subsubsection{Esempio}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/p-perc.png}
+\end{figure}
+
+\subsection{\textit{pq} rule}
+Possiamo definire questa regola come un affiniamento della regola precedente, che introduce 
+la conoscenza pregressa con il valore $q$: rappresenta quanto accuratamente i rispondenti 
+possono stimare il valore di un altro rispondente prima che i dati vengano pubblicati ($p<q<100$).
+
 \begin{itemize}
-    \item Nella regola pq, le agenzie possono specificare quanto sia nota precedentemente l'informazione assegnando un valore \( q \), che rappresenta quanto accuratamente i rispondenti possono stimare il valore di un altro rispondente prima che i dati vengano pubblicati (\( p < q < 100 \)).
-    \item Il parametro \( q \) rappresenta l'errore nell'estimazione prima che la cella venga pubblicata.
+    \item $q$ indica l'errore nella stima prima della pubblicazione 
     \item Formalmente, una cella è considerata protetta se:
     \[
     \frac{q}{100} \sum_{i=c+2}^{N} x_i \geq \frac{p}{100} x_1
@@ -295,53 +214,51 @@ La \textbf{p-percent rule} assume che non ci sia alcuna conoscenza precedente su
     \end{itemize}
 \end{itemize}
 
-\subsection{Primary Suppression Rule: (n,k)}
-Tale regola stabilisce che, indipendentemente dal numero di rispondenti in una cella, se un numero ridotto (\( n \) o meno) di questi rispondenti contribuisce a una grande percentuale (\( k\% \) o più) del valore totale della cella, la cella è considerata sensibile.
+\subsection{\textit{(n,k)} rule}
+Questa regola stabilisce che, indipendentemente dal numero di rispondenti in una cella, 
+se un numero ridotto ($\leq n$) di questi rispondenti contribuisce a una grande percentuale 
+($\geq k$) del valore totale della cella, allora la cella viene considerata 
+sensibile.
 
-\begin{itemize}
-    \item \textbf{Regola Intuitiva}: Se una determinata cella è dominata da un solo rispondente, il totale pubblicato rappresenta una stima superiore per il suo valore.
-    \item Il valore \( n \) è selezionato per essere maggiore del numero di eventuali coalizioni sospettate.
-    \item Molte agenzie utilizzano una regola \( (n,k) \) con \( n = 1 \) o \( n = 2 \).
-\end{itemize}
+\subsubsection{Regola intuitiva}
+Se una cella è dominata da un solo rispondente, il totale pubblicato rappresenta 
+una stima superiore per il suo valore.
 
-\noindent Esempio: n = 2 \& k = 70: cella sensibile se 2 tuple contengono f(info sensibile) $>$ 70\% tot \\ (f: sum or avg or \dots)
 
-\subsection{Secondary Suppression}
+\section{Protezione delle celle sensibili}
 Una volta identificate le celle sensibili, ci sono due opzioni:
 \begin{itemize}
-    \item \textbf{Ristrutturare la tabella} e combinare le celle fino a quando non rimangono più celle sensibili.
-    \item \textbf{Soppressione delle celle}: non pubblicare celle sensibili (\textit{Primary Suppression}) e rimuovere altre celle (\textit{Secondary Suppression}). 
-    Un modo amministrativo per evitare la soppressione delle celle consiste nell'ottenere un permesso scritto dai rispondenti.
+    \item \textbf{ristrutturare la tabella e combinare le celle} fino a quando non 
+    rimangono più celle sensibili
+    \item \textbf{soppressione} delle celle sensibili
 \end{itemize}
 
+\subsubsection{Soppressione secondaria}
+È necessario selezionare altre celle non sensibili da sopprimere, per garantire che i 
+dati nelle celle sensibili non possano essere stimati con troppa accuratezza.
 
+\noindent Le celle sensibili potrebbero essere divulgate a causa del fatto che:
 \begin{itemize}
-    \item \textbf{Secondary Sup:} è necessario selezionare altre celle non sensibili per la \textit{suppression} per garantire che i dati a livello di rispondente nelle celle sensibili non possano essere stimati con troppa accuratezza
-    $\rightarrow$ i dati di un rispondente non possono essere stimati troppo dettagliatamente.
-    \item Le celle sensibili potrebbero essere divulgate a causa del fatto che:
-    \begin{itemize}
-        \item le unioni delle celle soppresse possono essere sensibili secondo la regola di sensibilità adottata,
-        \item le equazioni delle righe e delle colonne rappresentate dalla tabella pubblicata possono essere risolte, e il valore per una cella soppressa stimato con troppa accuratezza.
-    \end{itemize}
+    \item le unioni delle celle soppresse possono essere sensibili secondo la regola di sensibilità adottata,
+    \item le equazioni delle righe e delle colonne rappresentate dalla tabella pubblicata possono essere risolte, e il valore per una cella soppressa stimato con troppa accuratezza.
 \end{itemize}
 
-Qualsiasi soppressione complementare è accettabile fintanto che le celle sensibili sono protette:
-\begin{itemize}
-    \item Per tabelle piccole, la selezione delle celle complementari può essere fatta manualmente.
-    Gli analisti dei dati sanno quali celle sono di maggiore interesse e non dovrebbero essere utilizzate per la soppressione complementare. 
-    La selezione manuale delle celle complementari è accettabile purché la tabella risultante fornisca una protezione sufficiente per le celle sensibili.
-    \item  Un audit automatizzato dovrebbe essere applicato per garantire che ciò sia vero.
-\end{itemize}
-
+\newpage
+\section{Verifica dei risultati}
 \subsection{Audit}
-Se i totali vengono pubblicati, la somma delle celle soppresse (primary/secondary) può essere derivata. È necessario applicare la regola di sensibilità a queste somme per garantire che non siano sensibili.
+L'audit è una fase di verifica in cui controllo che tutto sia protetto.
+
+\noindent Se i totali vengono pubblicati, la somma delle celle soppresse può essere 
+derivata. È necessario applicare la regola di sensibilità a queste somme per garantire
+che non siano sensibili:
 \begin{itemize}
-    \item Le righe e le colonne possono essere viste come un grande sistema di equazioni lineari.
-    \item Stimare un \textit{lower bound} e \textit{upper bound} di ciascuna cella soppressa utilizzando \textit{linear programming}.
-    \item Se i limiti sono troppo vicini al valore originale, la cella è considerata sensibile.
+    \item le righe e le colonne possono essere viste come un grande sistema di equazioni lineari 
+    \item viene stimato un \textit{lower bound} e un \textit{upper bound} di ciascuna cella soppressa utilizzando la programmazione lineare 
+    \item se i limiti sono troppo vicini al valore originale, la cella è considerata sensibile  
 \end{itemize}
 
-\noindent Semplice per tabelle piccole, ma potrebbe risultare computazionalmente infattibile per tabelle grandi.
+\noindent Questa operazione è semplice per tabelle di piccole dimensioni, ma potrebbe essere 
+computazionalmente infattibile per grandi tabelle.
 
 \subsection{Information Loss}
 La selezione delle celle complementari dovrebbe comportare una minima perdita di informazioni. 
@@ -354,121 +271,161 @@ Non esiste una definizione unica di perdita di informazioni.
     \end{itemize}
 \end{itemize}
 
-\subsection{Information in Parameter Values}
-Mentre le \textit{sup rules} possono essere pubblicate, i valori dei parametri dovrebbero rimanere riservati. 
-Una volta che il valore di una cella soppressa è stato determinato in modo univoco, i valori delle altre celle sono facilmente derivabili.
+\subsection{Informazioni dei valori dei parametri}
+Mentre le regole di soppressione possono essere pubblicate, i valori dei parametri 
+dovrebbero rimanere riservati. 
 
-\section{Microdata}
+\chapter{Protezione di Microdati}
+Oggi sempre più spesso vengono rilasciati microdati; questo tipo di dati sono
+soggetti ai \textit{linking attack}. 
 
-\subsection{Macrodata vs Microdata}
-In passato, i dati venivano principalmente rilasciati in forma tabellare (macrodata) e DBMS. 
-Oggi, molte situazioni richiedono che i dati specifici memorizzati, chiamati microdata, siano rilasciati. 
+Per proteggere la privacy dei rispondenti, si ricorre al rimozione o crittografia degli identificatori
+espliciti; tuttavia questo non offre la garanzia di anonimato: spesso le informazioni 
+rilasciate contengono dei quasi identificatori, che collegati ad altri dati (pubblici o
+conoscenza pregressa) permettono di reidentificare i rispondenti o ridurre l'incertezza
+sulla loro identità.
 
+Le tecniche di protezione di microdata seguono due strategie:
 \begin{itemize}
-    \item Aumento della flessibilità e disponibilità delle informazioni per i destinatari.
-    \item I microdata sono soggetti a un maggiore rischio di violazioni della privacy (linking attacks).
+    \item \textbf{non perturbative:} ridurre il contenuto informativo, diminuiscono il livello di dettaglio senza introdurre rumore
+    \item \textbf{perturbative:} modificare i dati in modo che il contenuto venga mantenuto il più possibile
 \end{itemize}
 
-\subsection{Microdata}
-Per proteggere la privacy dei rispondenti, i data owner spesso rimuovono/crittografano identificatori espliciti come nomi, indirizzi e numeri di telefono. Tuttavia, la de-identificazione dei dati non offre alcuna garanzia di anonimato.
-Le informazioni rilasciate spesso contengono altri dati quasi identificativi (ad esempio, razza, data di nascita, sesso e codice postale) che possono essere collegati a informazioni disponibili pubblicamente per reidentificare i rispondenti o ridurre l'incertezza sulle loro identità. 
-I destinatari dei dati possono determinare (o limitare l'incertezza) a quale rispondente si riferiscono alcuni dati rilasciati. Questo ha creato una crescente domanda nel dedicare risorse per una protezione adeguata dei dati sensibili.
-Le tecniche di protezione dei microdata seguono due strategie principali:
+\noindent Queste tecniche si basano sul principio che la reidentificazione può essere 
+contrastata riducendo la quantità di informazioni rilasciate; possiamo classificare le
+tecniche di protezione come:
 \begin{itemize}
-    \item ridurre il contenuto informativo (P),
-    \item modificare i dati in modo che il contenuto informativo venga mantenuto il più possibile (NP).
+    \item \textbf{Masking techniques} (perturbative o non perturbative)
+    \item \textbf{Synthetic data generation }
 \end{itemize}
 
-
-\subsection{Microdata Disclosure Protection Techniques}
-Per limitare il rischio di divulgazione, devono essere applicate le seguenti procedure:
+\noindent Le tecniche possono essere applicate su due diversi tipi di dati:
 \begin{itemize}
-    \item Inclusione di dati provenienti solo da un campione dell'intera popolazione.
-    \item Rimozione degli identificatori.
-    \item Limitazione dei dettagli geografici.
-    \item Limitazione del numero di variabili.
+    \item \textbf{Continui:} dati numerici, su cui ha senso fare operazioni matematiche
+    \item \textbf{Categorici:} dati che possono assumere un insieme limitato di valori, su cui non ha senso fare operazioni matematiche
 \end{itemize}
 
-\subsection{Classification of Microdata Protection Techniques}
-Queste tecniche si basano sul principio che la reidentificazione può essere contrastata riducendo la quantità di informazioni rilasciate:
-\begin{itemize}
-    \item Mascheramento dei dati (ad esempio, non rilasciando o perturbando i loro valori).
-    \item Rilascio di valori plausibili al posto di quelli reali.
-\end{itemize}
+\newpage
+\section{Masking Techniques}
+In questa sezione esaminiamo diverse tecniche di \textit{masking}, usando
+come esempio di riferimento la tabella seguente.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/base-ex.png}
+\end{figure}
 
-\noindent Secondo questo principio, le tecniche di protezione possono essere classificate in due categorie principali:
-\begin{itemize}
-    \item \textbf{Masking techniques (perturbative or not perturbative)}
-    \item \textbf{Synthetic data generation techniques}
-\end{itemize}
+\subsection{Sampling [NP]}
+La tabella protetta viene ottenuta facendo un campione della tabella di microdata 
+originale. Viene introdotta dell'incertezza riguardo alla partecipazione di un 
+rispondente, dunque diminuisce il rischio di reidentificazione.
 
-\subsection{Microdata Types}
-Le tecniche di protezione possono operare su diversi tipi di dati:
-\begin{itemize}
-    \item \textbf{Continuous}. attr. definito continuo se numerico e su di esso sono definite operazioni aritmetiche.
-    \textbf{Esempio}: data di nascita, temperatura, ecc.
-    
-    \item \textbf{Categorical}. attr. definito categorico se può assumere un insieme limitato e specificato di valori e le operazioni aritmetiche non hanno senso su di esso.
-    \textbf{Esempio}: stato civile, razza, ecc.
-\end{itemize}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/sampling.png}
+\end{figure}
 
+\subsection{Local Suppression [NP]}
+Sopprime il valore di un attributo che potrebbe contribuire in modo 
+significativo al rischio di divulgazione, limitando le possibilità
+di analisi.
 
-\section{Microdata Disclosure Prot. Techniques: Masking}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/local-sup.png}
+\end{figure}
 
-\subsection{Masking Techniques}
-Le tecniche di masking trasformano i dati originali per produrre nuovi dati che sono validi per l'analisi statistica e che preservano la riservatezza dei rispondenti. Esse sono classificate come segue:
-\begin{itemize}
-    \item \textbf{Non-perturbative}: i dati originali non vengono modificati, ma alcuni dati vengono soppressi e/o alcuni dettagli vengono rimossi.
-    \item \textbf{Perturbative}: i dati originali vengono modificati.
-\end{itemize}
+\subsection{Global Recoding [NP]}
+Comporta la suddivisione del dominio di un attributo in diversi
+intervalli disgiunti, tipicamente della stessa ampiezza, dove per 
+ogni intervallo viene associata una \textit{label}.
 
-\subsection{Sampling}
-La tabella di microdata protetta è ottenuta come un campione della tabella di microdata originale. 
-Incertezza riguardo alla partecipazione di un rispondente $\rightarrow$ il rischio di reidentificazione diminuisce.
+La tabella protetta è ottenuta sostituendo i valori dell'attributo
+con la \textit{label} associata all'intervallo corrispondente.
 
-\subsection{Local Suppression}
-La local suppression sopprime il valore di un attributo (cioè lo sostituisce con un valore mancante), limitando così le possibilità di analisi. 
-Questa tecnica annulla alcuni valori degli attributi/celle sensibili che potrebbero contribuire in modo significativo al rischio di divulgazione della tupla coinvolta.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/global-recoding.png}
+\end{figure}
 
-\subsection{Global Recoding}
-Il global recoding comporta la suddivisione del dominio di un attributo in diversi intervalli disgiunti, tipicamente della stessa ampiezza, e ad ogni intervallo è associata \textit{label}. 
-La tabella di microdata protetta è ottenuta sostituendo i valori dell'attributo con la label associata all'intervallo corrispondente.
+\subsection{Top-coding e Bottom-coding [NP]}
+Il \textit{top-coding} stabilisce un limite superiore per ciascun attributo 
+da proteggere; qualsiasi valore maggiore di tale limite viene sostituito con 
+una \textit{flag} che indica all'utente che tale valore supera il limite.
 
-\subsection{Top-coding e Bottom-coding}
-Il top-coding definisce un limite superiore (top-code) per ciascun attributo da proteggere. Qualsiasi valore maggiore di questo limite viene sostituito con un flag che informa l'utente del top-code e indica che il valore supera questo limite. Questa tecnica può essere applicata ad attributi categorici che possono essere ordinati linearmente, così come ad attributi continui.
-Analogo per bottom-coding rispetto al limite inferiore (bottom-code).
+La procedura è ananloga per il \textit{bottom-coding} rispetto a un limite inferiore.
 
-\subsection{Generalization}
-La generalization sostituisce i valori con valori più generali. È tipicamente basata sulla definizione di una gerarchia di generalizzazione, dove il valore più generale è la radice e le foglie corrispondono ai valori più specifici. 
-Possono essere costruite diverse tabelle di microdata generalizzate, a seconda del numero di passi di generalizzazione applicati.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/top-bottom.png}
+\end{figure}
 
-\subsection{Random Noise}
-Il random noise perturba un attributo sensibile aggiungendo o moltiplicando il valore di quest'ultimo con una variabile casuale di una distribuzione specificata. 
-È necessario decidere se pubblicare o meno la distribuzione/i utilizzata/e per aggiungere rumore ai dati. 
-La pubblicazione della distribuzione/i potrebbe aumentare il rischio di divulgazione dei dati (Disclosure di Informazioni Sensibili).
+\subsection{Generalizzazione [NP]}
+I valori vengono sostituiti con altri più generali. È basata 
+sulla definizione di una gerarchia di generalizzazione.
 
-\subsection{Swapping}
-Una piccola percentuale di record viene abbinata con altri record nello stesso file, forse in diverse regioni geografiche, su un insieme di variabili predeterminate. 
-I valori di tutte le altre variabili nel file vengono quindi scambiati tra i record selezionati. Questa tecnica riduce il rischio di reidentificazione poiché introduce incertezza riguardo al valore reale dei dati di un rispondente.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/gener.png}
+\end{figure}
 
-\subsection{Micro-aggregation (Blurring)}
-La micro-aggregation consiste nel raggruppare tuple individuali in piccoli gruppi di dimensione fissa \( k \). Viene pubblicata la media di ciascun gruppo invece dei valori individuali. I gruppi sono formati utilizzando criteri di massima similarità. Ci sono diverse variazioni della micro-aggregazione:
-\begin{itemize}
-    \item la media può sostituire il valore originale solo per una tupla nel gruppo o per tutte;
-    \item diversi attributi possono essere protetti attraverso la micro-aggregazione utilizzando lo stesso o diversi raggruppamenti;
-    \item \ldots
-\end{itemize}
+\subsection{Rumore casuale [P]}
+Il rumore casuale perturba un attributo sensibile aggiungendo o moltiplicando 
+il suo valore con una variabile casuale di una distribuzione specificata.
 
+È necessario decidere se pubblicare o meno la distribuzione usata per aggiugere rumore ai dati;
+la pubblicazione potrebbe aumentare il rischio di disclosure.
 
-\section{Microdata Disclosure Prot. Techniques: Synthetic}
+La somma del rumore introdotto deve essere pari a 0 per preservare la statistica.
 
-\subsection{Synthetic techniques}
-Poiché il contenuto statistico dei dati non è correlato alle informazioni fornite da ciascun rispondente, un modello che rappresenti bene i dati potrebbe, in linea di principio, sostituire i dati stessi. 
-Un requisito importante per la generazione di dati sintetici è che tali dati e quelli originali devono presentare la stessa qualità nell'analisi statistica. Il principale vantaggio di questa classe di tecniche è che i dati sintetici rilasciati non sono riferiti a nessun rispondente e, pertanto, il loro rilascio non può portare a reidentificazione.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/noise1.png}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/noise2.png}
+\end{figure}
 
+\newpage
+\subsection{Swapping [P]}
+\subsubsection{Spiegazione con esempio}
+Alcuni record potrebbero \textit{matchare} con altri record dello stesso 
+file su alcuni attributi prefissati, ma appartenere a diverse zone geografiche.
 
+I valori di tutte le altre variabili vengono scambiati. Questa tecnica 
+riduce il rischio di reidentificazione dato che introduce incertezza
+sulla veridicità del dato di un rispondente.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/swapping1.png}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/swapping2.png}
+\end{figure}
 
+\newpage
+\subsection{Micro-aggregation [P]}
+La micro-aggregazione consiste nel raggruppare più tuple in dei gruppi 
+di dimensione $k$. Viene poi pubblicata la media di tale gruppo al posto 
+dei singoli valori.
+
+I gruppi sono formati usando critieri di massima similarità.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/micro-agg.png}
+\end{figure}
+
+\newpage
+\section{Tecniche Sintetiche}
+Consistono nel generare dati sintetici per sostituire quelli dei rispondenti, 
+in modo che venga mantenuta la correlazione statistica.
+
+Il vantaggio nell'utilizzo di queste tecniche è che i dati sintetici
+rilasciati non sono riferiti a nessun rispondente e il loro rilascio 
+non può portare a reidentificazione.
 
 
 

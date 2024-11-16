@@ -1,7 +1,7 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \contentsline {chapter}{\numberline {1}Statistical DBMS}{4}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Protezione per Tabelle di Conteggio o Frequenze}{6}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Protezione di Macrodata: tabelle di conteggio o frequenze}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Sampling}{6}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Identificazione delle celle sensibili}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Regole Speciali}{7}{subsection.2.2.1}%
@@ -11,35 +11,30 @@
 \contentsline {subsection}{\numberline {2.3.2}Soppressione delle celle}{7}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Rounding}{8}{subsection.2.3.3}%
 \contentsline {subsubsection}{Nota}{8}{section*.2}%
-\contentsline {subsection}{\numberline {2.3.4}Confidentiality Edit}{9}{subsection.2.3.4}%
-\contentsline {paragraph}{Procedura di Switching per il file di microdati al 100\% $\rightarrow $}{9}{section*.3}%
-\contentsline {section}{\numberline {2.4}Macrodata Disclosure Prot. Techniques: Tables of M}{9}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Data Protection in Magnitude Tables}{9}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Suppression Rules - 1}{10}{subsection.2.4.2}%
-\contentsline {paragraph}{Verifica della Sensibilità}{11}{section*.4}%
-\contentsline {subsection}{\numberline {2.4.3}Suppression Rules - 2}{11}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Primary Suppression Rule: p-percent}{11}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Primary Suppression Rule: pq}{11}{subsection.2.4.5}%
-\contentsline {subsection}{\numberline {2.4.6}Primary Suppression Rule: (n,k)}{12}{subsection.2.4.6}%
-\contentsline {subsection}{\numberline {2.4.7}Secondary Suppression}{12}{subsection.2.4.7}%
-\contentsline {subsection}{\numberline {2.4.8}Audit}{13}{subsection.2.4.8}%
-\contentsline {subsection}{\numberline {2.4.9}Information Loss}{14}{subsection.2.4.9}%
-\contentsline {subsection}{\numberline {2.4.10}Information in Parameter Values}{14}{subsection.2.4.10}%
-\contentsline {section}{\numberline {2.5}Microdata}{14}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Macrodata vs Microdata}{14}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Microdata}{14}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Microdata Disclosure Protection Techniques}{15}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Classification of Microdata Protection Techniques}{15}{subsection.2.5.4}%
-\contentsline {subsection}{\numberline {2.5.5}Microdata Types}{15}{subsection.2.5.5}%
-\contentsline {section}{\numberline {2.6}Microdata Disclosure Prot. Techniques: Masking}{15}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Masking Techniques}{15}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Sampling}{16}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}Local Suppression}{16}{subsection.2.6.3}%
-\contentsline {subsection}{\numberline {2.6.4}Global Recoding}{16}{subsection.2.6.4}%
-\contentsline {subsection}{\numberline {2.6.5}Top-coding e Bottom-coding}{16}{subsection.2.6.5}%
-\contentsline {subsection}{\numberline {2.6.6}Generalization}{16}{subsection.2.6.6}%
-\contentsline {subsection}{\numberline {2.6.7}Random Noise}{16}{subsection.2.6.7}%
-\contentsline {subsection}{\numberline {2.6.8}Swapping}{17}{subsection.2.6.8}%
-\contentsline {subsection}{\numberline {2.6.9}Micro-aggregation (Blurring)}{17}{subsection.2.6.9}%
-\contentsline {section}{\numberline {2.7}Microdata Disclosure Prot. Techniques: Synthetic}{17}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Synthetic techniques}{17}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.3.4}Confidentiality Edit}{8}{subsection.2.3.4}%
+\contentsline {subsubsection}{Nota}{8}{section*.3}%
+\contentsline {chapter}{\numberline {3}Protezione di Macrodata: tabelle di magnitudo}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Identificazione delle celle sensibili}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}\textit {p-percent} rule}{9}{subsection.3.1.1}%
+\contentsline {subsubsection}{Esempio}{10}{section*.4}%
+\contentsline {subsection}{\numberline {3.1.2}\textit {pq} rule}{10}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}\textit {(n,k)} rule}{11}{subsection.3.1.3}%
+\contentsline {subsubsection}{Regola intuitiva}{11}{section*.5}%
+\contentsline {section}{\numberline {3.2}Protezione delle celle sensibili}{11}{section.3.2}%
+\contentsline {subsubsection}{Soppressione secondaria}{11}{section*.6}%
+\contentsline {section}{\numberline {3.3}Verifica dei risultati}{12}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Audit}{12}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Information Loss}{12}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Informazioni dei valori dei parametri}{12}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Protezione di Microdati}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Masking Techniques}{14}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Sampling [NP]}{14}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Local Suppression [NP]}{15}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Global Recoding [NP]}{15}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Top-coding e Bottom-coding [NP]}{15}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Generalizzazione [NP]}{16}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Rumore casuale [P]}{16}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}Swapping [P]}{17}{subsection.4.1.7}%
+\contentsline {subsubsection}{Spiegazione con esempio}{17}{section*.7}%
+\contentsline {subsection}{\numberline {4.1.8}Micro-aggregation [P]}{18}{subsection.4.1.8}%
+\contentsline {section}{\numberline {4.2}Tecniche Sintetiche}{19}{section.4.2}%
