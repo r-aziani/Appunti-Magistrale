@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1731503690.12505 "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/01-privacy_in_data_publication/main.tex" "main.pdf" "main" 1731503692.51545 0
+["pdflatex"] 1731851304.44774 "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/01-privacy_in_data_publication/main.tex" "main.pdf" "main" 1731851306.5317 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/01-privacy_in_data_publication/main.tex" 1731503689.78778 29609 91273867e638150b02e3c8e77117d01a ""
+  "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/01-privacy_in_data_publication/main.tex" 1731851301.85224 32491 3ff4c4371e9789bb2dc64fd7cb1f8c96 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -166,16 +166,18 @@
   "images/anon-1.png" 1731059893.96789 128521 7c28563c440ef8d001fa1eb4e7bff539 ""
   "images/anon-2.png" 1731064374.20207 131892 29a81ab53970b1a887c0e9a08ef88cb2 ""
   "images/back.know.png" 1731485312.54333 24978 16c8fa8d153c077c52430411625bc2e4 ""
+  "images/diff.png" 1731850378.03867 39244 d6f25e20cc2ed09deebfb4d95571bee8 ""
   "images/domger.png" 1731065198.49875 64569 8d319874a3ec508472627f68b70363a1 ""
+  "images/incognito.png" 1731848233.66254 116293 1c7c32b790f62dba9070c4b62bca3ab1 ""
   "images/k-minimal.png" 1731162836.5578 102357 9e4420c6a47181a1ae20673fadef5d9c ""
   "images/mondrian1.png" 1731169706.1043 45037 0d7351b716e1f3f782db19ce210344f4 ""
   "images/mondrian2.png" 1731169815.44592 52362 8b22370e0d35dcf655b84e737b77b579 ""
   "images/omogen.png" 1731485126.23667 25189 3fe5b6f3c9e38dd672869592ba88c10f ""
   "images/valuegen.png" 1731161840.01849 35126 eecb960b1f0f21e65d4ce613c917398e ""
-  "main.aux" 1731503692.33174 7115 b309b81ddb56e2d75a46d7fca9956206 "pdflatex"
-  "main.out" 1731503692.33574 4935 b765317f3ff149e385f5396eba2903f0 "pdflatex"
-  "main.tex" 1731503689.78778 29609 91273867e638150b02e3c8e77117d01a ""
-  "main.toc" 1731503692.33674 4580 8d83f53634f289a1a14c88dbef752692 "pdflatex"
+  "main.aux" 1731851306.39428 7264 ca3fc34b4d7983a0346066f586698917 "pdflatex"
+  "main.out" 1731851306.39628 4940 47b377b244316a684069bd6522aec701 "pdflatex"
+  "main.tex" 1731851301.85224 32491 3ff4c4371e9789bb2dc64fd7cb1f8c96 ""
+  "main.toc" 1731851306.39728 4686 8e68b67a3a1d3b0451bbaf4dfc04c014 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

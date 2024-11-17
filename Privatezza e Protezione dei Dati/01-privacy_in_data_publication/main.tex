@@ -333,6 +333,18 @@ Il processo iterativo dell'algoritmo procede come segue:
 \noindent L'algoritmo procede dunque costruendo progressivamente soluzioni, partendo da singoli attributi e combinandoli in gruppi via via più grandi fino a considerare tutti gli attributi del quasi-identificatore.
 
 \newpage
+\subsubsection{Esempio}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/incognito.png}
+\end{figure}
+In questo caso vogliamo un $k=2$; per questa ragione l'ultima riga della tabella 
+(\textit{widow}) viene scartato poiché c'è solo un rispondente per tale valore.
+
+È per questo che $M_0$ non è presente; viene sopppresso e si parte da $M_1$.
+
+
+\newpage
 \section{Algoritmi per \_CS e CG\_}
 
 \subsection{Mondrian Multidimensional Algorithm}
@@ -359,7 +371,7 @@ L'algoritmo \textbf{Mondrian Multidimensional} si basa su una rappresentazione s
     \end{itemize}
     \item \textbf{Con diverse strategie di partizionamento:} 
     \begin{itemize}
-        \item \textit{Strict or Relaxed partitioning}: senza o con possibili sovrapposizioni.
+        \item \textit{Strict or Relaxed partitioning}: senza o con possibili sovrapposizioni (con \textit{relaxed} due occorrenze uguali possono appartenere a cluster diversi).
     \end{itemize}
     \item \textbf{Utilizzando metriche diverse per determinare come dividere ogni dimensione.}
 \end{itemize}
@@ -371,6 +383,12 @@ Wished $k = 3$
     \centering
     \includegraphics[width=1\linewidth]{images/mondrian1.png}
 \end{figure}
+
+\noindent Ogni tupla è un punto nello spazio; in questo caso ogni taglio deve rispettare $k=3$.
+C'è un'idea di ordinamento dei valori; con i numeri ha senso con altri valori è forzato.
+
+Le tuple vengono divise in cluster; le tuple di ogni cluster vengono rese uguali generalizzandole.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{images/mondrian2.png}
@@ -394,7 +412,7 @@ La \textbf{k-anonymity} cambia a seconda del livello di generalizzazione applica
 
 La \textit{k-anonimity} è vulnerabile a diversi attacchi.
 \begin{itemize}
-    \item \textbf{Omogeneità degli dei valori di attributi sensibili:} se tutti gli appartenenti ad un gruppo
+    \item \textbf{Omogeneità dei valori di attributi sensibili:} se tutti gli appartenenti ad un gruppo
     hanno la stessa informazione sensibile, mi basta conoscere che appartieni a quel gruppo per sapere che hai quella informazione sensibile
     \begin{figure}[ht]
         \centering
@@ -469,10 +487,16 @@ Per affrontare il problema dei rilasci longitudinali, una sequenza $T_1, ..., T_
 \section{\textit{k-anonimity} in altre applicazioni}
 
 \subsection{Social Networks}
+In una rete sociale ciò che ti può rendere peculiare è il numero
+di connessioni che hai (esempio influencer); si cerca di avere ogni nodo 
+uguale ad almeno altri $k$, dove $k$ è il grado di protezione che voglio ottenere.
+
+Per fare questo si è possibile sopprimere o aggiungere archi.
+
 
 \subsection{Data Mining}
 Il \textit{k-anonymous data mining} mira a garantire che i risultati del data mining non violino i requisiti di \textit{k-anonymity} sui dati originali.
-Alcuni esempi di tecniche per compromettere la k-anonymity sfruttando il data mining ncludono:
+Alcuni esempi di tecniche per compromettere la k-anonymity sfruttando il data mining includono:
 
 \begin{itemize}
     \item \textbf{Association Rule Mining}: tecniche per trovare regole di associazione possono compromettere la k-anonymity.
@@ -489,7 +513,7 @@ la posizione.
 \begin{itemize}
     \item Considerare solo le aree che contengono almeno $k$ individui
     \item Ingrandire l'area per includere almeno altri $k-1$ utenti (\textit{k-anonymity})
-    \item Obfuscazione delle aree (\textit{location privacy}) per ridurre la precisione o la confidenza dei dati
+    \item Obfuscazione delle aree (\textit{location privacy}) per ridurre la precisione o la confidenza dei dati; magari non si può semplicemente ingrandire perché l'utente si troverebbe al centro
     \item Protezione del percorso degli utenti (\textit{trajectory privacy}) tramite modifica delle traiettorie
 \end{itemize}
 
@@ -514,16 +538,55 @@ la posizione.
 
 \section{Differential Privacy}
 La \textit{Differential Privacy} mira a prevenire che un attaccante sia in grado di stabilire
-la presenza o l'assenza di un individuo in un dataset.
+la presenza o l'assenza di un individuo in un dataset. È un tipo di \textit{semantic privacy}.
 \subsubsection{Definizione informale}
 La distribuzione della probabilità sui dati pubblicati deve essere \textit{essenzialmente la stessa}
-indipendentemente dal fatto che in individuo sia incluso o meno nel dataset.
+indipendentemente dal fatto che un individuo sia incluso o meno nel dataset.
 
-\chapter{Alcuni esempi di altri problemi di priacy}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/diff.png}
+\end{figure}
+
+L'obiettivo della funzione randomizzata è quello di aggiungere rumore;
+c'è da tenere in considerazione il \textit{trade-off} tra introduzione del rumore 
+e utilizzabilità dei dati. 
+
+\noindent $e^\epsilon$ indica il \textit{privacy budget}, che diminuisce man mano che il dataset 
+viene interrogato; quando si esaurisce non si potrà più interrogare quel dataset. 
+\begin{itemize}
+    \item $\epsilon = 0 \rightarrow$ non mi dice niente, risposta qualsiasi
+    \item $\epsilon = 1 \rightarrow$ dato preciso, utile ma poca privacy
+    \item $0 < \epsilon < 1 \rightarrow$ c'è del rumore ma ho dati utili
+\end{itemize}
+
+La \textit{differential privacy} può essere applicata in due scenari:
+\begin{itemize}
+    \item \textbf{Interattivo:} valutazione a run-time delle query (statistical DBMS)
+    \item \textbf{Non interattivo:} rilascio di tabelle pre-computate (statistical data)
+\end{itemize}
+
+Viene rinforzata aggiungendo del rumore casuale, a discapito della veridicità dei dati.
+
+\subsubsection{\textit{k-anonimity} vs \textit{differential privacy}}
+\begin{itemize}
+    \item \textbf{\textit{k-anonimity}}
+    \begin{itemize}
+        \item \textcolor{darkgreen}{rappresenta bene il mondo reale}
+        \item \textcolor{red}{protezione non completa}
+    \end{itemize}
+    \item \textbf{\textit{differential privacy}}
+    \begin{itemize}
+        \item \textcolor{darkgreen}{garantisce una miglior protezione}
+        \item \textcolor{red}{non garantisce protezione completa, è più complicato fare \textit{enforce}}
+    \end{itemize}
+\end{itemize}
+
+
+\chapter{Alcuni esempi di altri problemi di privacy}
 \section{Distribuzione di valori sensibili}
 Riesco ad inferire informazioni non dalla singola tupla, ma dall'insieme di tuple.
-\subsubsection{Esempio}
-\subsubsection{Example: Soldiers' Medical Records}
+\subsubsection{Esempio: Soldiers' Medical Records}
 \begin{itemize}
     \item I record individuali non sono sensibili.
     \item La distribuzione dell'età dei soldati in una località può indicare il tipo di località:
