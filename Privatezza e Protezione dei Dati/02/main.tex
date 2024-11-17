@@ -175,7 +175,7 @@ un rispondente stimare troppo accuratamente il contributo di un rispondente.
 \begin{itemize}
     \item Una cella è considerata \textbf{sensibile} se le stime superiori e inferiori per 
     il valore del rispondente sono più vicine al valore riportato di una percentuale 
-    stabilita $p$.
+    stabilita $p$. (è possibile inferire sotto a un certo intervallo di incertezza il dato)
     \item Formalmente, una cella è considerata protetta se:
     \[
     \sum_{i=c+2}^{N} x_i \geq \frac{p}{100} x_1
@@ -218,11 +218,14 @@ possono stimare il valore di un altro rispondente prima che i dati vengano pubbl
 Questa regola stabilisce che, indipendentemente dal numero di rispondenti in una cella, 
 se un numero ridotto ($\leq n$) di questi rispondenti contribuisce a una grande percentuale 
 ($\geq k$) del valore totale della cella, allora la cella viene considerata 
-sensibile.
+sensibile (spesso si usa $n=1$ o $n=2$).
 
 \subsubsection{Regola intuitiva}
 Se una cella è dominata da un solo rispondente, il totale pubblicato rappresenta 
 una stima superiore per il suo valore.
+
+\subsubsection{Esempio}
+$(2, 70) \rightarrow $ sensibile se $\leq 2$ rispondenti fanno il $\geq 70$\% del totale.
 
 
 \section{Protezione delle celle sensibili}
