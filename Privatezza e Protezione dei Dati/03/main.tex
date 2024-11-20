@@ -19,12 +19,178 @@
 \tableofcontents
 \newpage
 
+\chapter{Introduzione}
+Gli avanzamenti tecnologici degli ultimi anni hanno cambiato 
+la nostra società: nella società in cui viviamo oggi la tecnologia è 
+pervasiva (\textit{Internet of Things}), abbiamo tutto quello che avevamo
+prima però smart.
+
+\noindent Inoltre il cluod viene utilizzato per storage o computing $ \rightarrow $ tutto questo
+signfica \textbf{flusso di dati da me a fuori}.
+
+\subsubsection{Vantaggi:}
+\begin{itemize}
+    \item Migliori meccanismi di protezione
+    \item Resilienza rispetto a malfunzionamenti
+    \item Miglior prevenzione e risposta (dato che il sistema è smart, può inividuare certe anomalie e prevenire 
+    un attacco che sta per accadere)
+\end{itemize}
+
+\subsubsection{Svantaggi:}
+\begin{itemize}
+    \item Maggiore complessità: basta una singola porta per accedere a tutto,
+    la stessa velocità che abbiamo in positivo per le funzionalità, ce l'hanno anche gli attaccanti.
+    \item Incremento di danni e violazioni
+    \item Perdita di controllo su dati e processi
+\end{itemize}
+
+Due ulteriori problemi:
+\begin{itemize}
+    \item devices vulnerabili ad attacchi esterni
+    \item devices che contengono dati sensibili che, se attaccati, possono essere portati fuori
+\end{itemize}
+
+\subsubsection{Sicurezza}
+La sicurezza è un problema complesso poichè richiede una soluzione a molti problemi: 
+protezione delle infrastrutture, dei dati, dei dispositivi, della rete e della comunicazione.
+
+Ciò che rende un sistema \textit{smart} è la capacità di acquisire, analizzare e processare dati per acquisire conoscenza 
+da iniettare nuovamente nel sistema $ \rightarrow $ prevedibilità dell'utente
+
+\section{Cloud computing}
+Il cloud permette a organizzazioni e utenti finali di avvalersi di servizi esterni per 
+immagazzinare, processare e accedere ai loro dati.
+Vantaggi:
+\begin{itemize}
+    \item Altà configurabilità
+    \item Dati e servizi sono sempre disponibili
+    \item Scalabilità
+\end{itemize}
+
+$ \rightarrow $ gli utenti perdono il controllo dei loro dati, necessità di nuove soluzioni di sicurezza per \textbf{proteggere i dati e 
+processarli in maniera sicura nel cloud}.
+
+\subsubsection{Today}
+Oggigiorno i cloud providers applicano misure di protezione solamente da eventuali utenti esterni (protezione rispetto al perimetro).
+Due opzioni:
+\begin{itemize}
+    \item implica \textbf{piena fiducia} nel cloud provider in quanto ha pieno accesso ai dati
+    \item proteggiamo i dati anche dai cloud provider ma abbiamo funzioni limitate, uso del provider solo come storage
+\end{itemize}
+
+\subsubsection{Nuova visione}
+Si vogliono adottare soluzioni che offrono garanzie di protezione dando al data owner sia pieno controllo dei dati che alta funzionalità su di essi.
+Sia sicurezza verso l'esterno che verso il cloud provider stesso.
+\begin{itemize}
+    \item \textbf{client-side trust boundary:} solo i comportamenti del client dovrebbero essere considerati fidati
+\end{itemize}
 
 
+\section{Data protection}
+Proteggere i dati non è semplice, bisogna minimizzare l'esposizione ricordandosi:
+\begin{itemize}
+    \item correlazione tra diverse sorgenti
+    \item esposizione indiretta di informazioni sensibili (ciò che potrebbe portare inferenza)
+    \item non identificabilità $ \neq $ anonimato
+\end{itemize}
 
+\chapter{Caraterizzaizone delle sfide di protezione dei dati nel cloud}
+\section{Le tre dimensioni del problema}
+Queste sono le tre dimensioni del problema "privatezza e protezione nel cloud"
+Non c'è sicurezza assoluta, dipedne sempre da quella richiesta e dal contesto applicativo.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/3 dimensioni.png}
+\end{figure}
 
+\subsection{Proprietà di sicurezza (CIA)}
+\begin{itemize}
+    \item \textbf{ Confidenzialità:}
+    \begin{itemize}
+        \item protezione dei dati archiviati nel cloud
+        \item autenticazione fatta non su chi l'utente è ma sulle proprietà che ha (certificazioni); \textit{se devo andare in biblioteca, non serve dire chi sono ma solo che
+        sono uno studente della statale}.
+        \item portezione rispetto alle azioni che può fare un utente (Confidenzialità sulla query)
+    \end{itemize}
+    \item \textbf{Integrità: }
+    per essere integro il dato deve essere corretto, completo e fresco (\textit{up to date})
+    \begin{itemize}
+        \item integrità rispetto ai dati archiviati nel cloud
+        \item integrità rispetto alla computazione e ai risultati delle queries: è molto più difficie garantirla in computazione,
+        per questo motivo si aggiungono punti di controllo/si pongono domande di cui si sa già la risposta 
+    \end{itemize}
+    \item \textbf{SLA compliance (Server Level Agreement)}
+    indica l'availability del cloud, quindi non soffrire di negazioni del servizio; gli utenti devono poter fare sempre ciò per 
+    cui sono autorizzati.
+\end{itemize}
 
+\subsection{Access requirements (funzionalità richieste)}
+\begin{itemize}
+    \item \textbf{Archivio dati:}
+    \begin{itemize}
+        \item operazioni di upload/download
+        \item protezione dei dati in storage: devo garantire che i file che ho memorizzato fuori siano protetti;
+        se cripto, cripto a livello di file.
+    \end{itemize}
+    \item \textbf{Recupero ed estrazione dei dati:}
+    voglio avere la capacità di eseguire delle query
+    \begin{itemize}
+        \item supporto per un livello di granularità più fine
+        \item protezione della computazione della query (Confidenzialità della query e integrità del risultato)
+    \end{itemize}
+    \item \textbf{Data update:}
+    In questo contesto ho dei dati dinamici: 
+    \begin{itemize}
+        \item devo supportare operazioni di insert/update (granularità più fine)
+        \item protezione della confidenzialità delle azioni, poichè potrebbero essere osseravti i cambiamenti
+    \end{itemize}
+\end{itemize}
 
+\subsection{Architetture}
 
+\begin{itemize}
+    \item \textbf{1 user - 1 provider: }protezione dei dati in storage, granularità fine a livello di recupero dati, privatezza e integrità delle query
+    \item \textbf{n users - * providers:}autorizzazione e controllo dell'accesso, gestione di scritture multiple
+    \item \textbf{* users - n providers:} caso in cui ho diverse sorgenti dati che devono fare computazione insieme
+\end{itemize}
+
+\subsection{Combinazione delle dimensioni}
+Ogni combinazione delle istanze delle tre dimensioni, identifica nuovi problemi; le proprietà di sicurezza da garantire
+dipendono dai requisiti di accesso e sulle assunzioni di fiducia (\textit{trust assumption}) sui provider.
+
+I providers possono essere:
+\begin{itemize}
+    \item \textbf{curious:} scenario \textit{honest-but-curious}, trusted rispetto all'affidabilità del servizio ma non trusted rispetto alla confidenzialità (sbircia nei dati)
+    \item \textbf{lazy:} in questo caso anche problema di integrità, provider che non svolge correttamente il suo compito (es: ritorna query incomplete per risprmiare risorse)
+    \item \textbf{malicious:} maggiore problema di integrità, dall'altra parte c'è qualcuno (non solamente il provider stesso) che fa uno sforzo per compromettere i dati
+\end{itemize}
+
+\chapter{Digital Data Market}
+Vi sono diversi data owner che contribuiscono a uno spazio dati comune, per poi fare analisi.
+Il problema è che i dati possono essere sensibili, bisogna capire il livello di protezione.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/digital data market.png}
+\end{figure}
+
+\subsubsection{Dimensioni del problema:}
+\begin{itemize}
+    \item \textbf{Comprensione dei requisiti:} la politica è difficile da controllare. 
+    
+    \textit{Sticky policy:} la politica dovrebbe essere attaccata ai dati (non c'è certezza)
+    \item \textbf{Tencologie di applicazione (enforcing):}
+    \begin{itemize}
+        \item Data wrapping: livello crittografico, può essere invertito
+        \item Sanitizzazione: dati vengono sanitizzati, non può essere invertito
+    \end{itemize}
+    \item \textbf{Fasi di applicazione:} ingestion, storage, analytics
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/i bellissimi dati.png}
+\end{figure}
+Nella fase di \textbf{ingestion} prendiamo i dati, in fase di \textbf{storage} li archiviamo con tutte le loro politiche, sanitizzati e/o wrappati, e poi 
+nell'ultima fase li \textbf{analizziamo} $ \rightarrow$ dovrebbero restare così come sono stati ceduti. 
 
 \end{document}
