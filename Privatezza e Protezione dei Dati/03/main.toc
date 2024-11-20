@@ -9,7 +9,7 @@
 \contentsline {subsubsection}{Cloud: oggi}{3}{section*.6}%
 \contentsline {subsubsection}{Cloud: nuova visione}{3}{section*.7}%
 \contentsline {section}{\numberline {1.2}Data protection}{4}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Caraterizzaizone delle sfide di protezione dei dati nel cloud}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Caratteristiche delle sfide di Protezione dei Dati nel Cloud}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Le tre dimensioni del problema}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Proprietà di sicurezza (CIA)}{6}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Access requirements (funzionalità richieste)}{6}{subsection.2.1.2}%
