@@ -316,6 +316,35 @@ Tuttavia, poiché l'albero ha $2^{|I|}$ nodi, la visita completa non è praticab
 \end{itemize}
 
 \newpage
+\noindent \subsubsection{LO SPIEGHINO FATTO DA NOI:}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/foto k-optimize.jpg}
+\end{figure}
+
+\noindent L'algoritmo considera il dominio degli attributi del quasi-identifier e li indicizza globalmente ( indice numerico per ogni valore di ogni attributo, prendendo 
+tutti i valori di tutti gli attributi).
+A partire da questi ultimi fa un albero nel quale è presente ogni possibile partizionamento degli attributi, corrispondente alla creazione di cluster nella tabella. 
+Ogni cluster avrà la propria generalizzazione e il proprio costo (per costo si intende quanti passi di generalizzaizone servono).
+Ogni nodo del grafo corrisonde a un partizionamento e ogni figlio è un partizionamento successivo del padre (è un partizionamento della parte destra).
+L'algoritmo, partendo dalla radice, esegue depth first search valutando per ogni nodo la k-anonimity della tabella: se la k-anonimity non è rispettata viene fatto \textbf{pruning}
+su tutti i nodi figli e il depth firsy search continua sui nodi rimanenti.
+Se, invece, k-anpnimity è rispettata depth first search continua verso i figli.
+Viene infine scelta la soluzione che , soddisfando k-anonimity, ha il costo minore (minor numero di passi di generalizzazione).
+
+\noindent Attenzione: se vediamo 6 significa che i cluster sono due: i numeri prima di 6, i numeri dopo 6 compreso il 6.
+Se invece troviamo 5,6 allora i cluster saranno 3 $ \rightarrow $ 4 $ | $ 5 $ | $ 6 7
+
+\noindent Es: a livello 5 i valori vengono divisi in due cluster, il primo con i valori prima di 5, il secondo con i valori dopo 5 (5 compreso).
+In questa situazione ci troveremo con due cluster, il primo formato solo dal valore 135, il secondo con i valori 148, 235, 237.
+Il valore 135 essendo da solo non necessita di nessun passo di generalizzazione, a differenza del secondo cluster che, avendo tre valori
+completamente differenti andrà generalizzato al massimo.
+L'algorito elabora una soluzione e verifica che rispetto alla nostra tabella, e al k richiesto, la soluzione sia k anonima.
+Se è k anonima l'algoritmo va a controllare le soluzioni discendenti che potrebbero contenere soluzioni migliori,
+nel caso non lo sia applica la tecnica del \textbf{pruning} e va a tagliare tutte le soluzioni sottostanti poichè non conterranno soluzione.
+
+
+\newpage
 \subsubsection{Incognito Algorithm}
 L'algoritmo \textbf{Incognito} verifica \textbf{k-anonimity} con riferimento a un adeguato sottoinsieme del QI. \\ 
 Esso adotta un approccio \textbf{bottom-up} per visitare le gerarchie di generalizzazione dei domini (DGHs). 
