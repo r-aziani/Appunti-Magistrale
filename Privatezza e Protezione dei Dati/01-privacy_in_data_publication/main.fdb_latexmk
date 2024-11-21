@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1732196592.84929 "c:/Users/annal/OneDrive/Desktop/magi/Appunti magi repo/Appunti-Magistrale/Privatezza e Protezione dei Dati/01-privacy_in_data_publication/main.tex" "main.pdf" "main" 1732196595.18196 0
-  "c:/Users/annal/OneDrive/Desktop/magi/Appunti magi repo/Appunti-Magistrale/Privatezza e Protezione dei Dati/01-privacy_in_data_publication/main.tex" 1732196591 34885 0eeb374c89cd4e8da197e28838f21235 ""
+["pdflatex"] 1732196683.45215 "c:/Users/annal/OneDrive/Desktop/magi/Appunti magi repo/Appunti-Magistrale/Privatezza e Protezione dei Dati/01-privacy_in_data_publication/main.tex" "main.pdf" "main" 1732196686.1403 0
+  "c:/Users/annal/OneDrive/Desktop/magi/Appunti magi repo/Appunti-Magistrale/Privatezza e Protezione dei Dati/01-privacy_in_data_publication/main.tex" 1732196682 34870 637ed331896a6b687dd86efe1354ac6a ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1731680233 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1731681227 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1731680834 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -174,10 +174,10 @@
   "images/mondrian2.png" 1731687937 52362 079fb9073d0976c38bdb43eb9968d51d ""
   "images/omogen.png" 1731687937 25189 3f9322e0d8472360b21b52a6edcf6bd0 ""
   "images/valuegen.png" 1731687937 35126 e766c6a59faded190d1151020b58b700 ""
-  "main.aux" 1732196594 7419 1c6fe1c23c7596abcd9e8d20d7ed0bce "pdflatex"
-  "main.out" 1732196594 4940 47b377b244316a684069bd6522aec701 "pdflatex"
-  "main.tex" 1732196591 34885 0eeb374c89cd4e8da197e28838f21235 ""
-  "main.toc" 1732196594 4762 ac0f720da0ad0148a05c52168e0ed702 "pdflatex"
+  "main.aux" 1732196685 7419 1c6fe1c23c7596abcd9e8d20d7ed0bce "pdflatex"
+  "main.out" 1732196685 4940 47b377b244316a684069bd6522aec701 "pdflatex"
+  "main.tex" 1732196682 34870 637ed331896a6b687dd86efe1354ac6a ""
+  "main.toc" 1732196685 4762 ac0f720da0ad0148a05c52168e0ed702 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

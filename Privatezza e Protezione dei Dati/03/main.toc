@@ -3,16 +3,17 @@
 \contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}%
 \contentsline {subsubsection}{Vantaggi:}{2}{section*.2}%
 \contentsline {subsubsection}{Svantaggi:}{2}{section*.3}%
-\contentsline {subsubsection}{Sicurezza}{3}{section*.4}%
+\contentsline {subsubsection}{Sicurezza\dots un problema complesso}{3}{section*.4}%
+\contentsline {subsubsection}{Sistema Smart}{3}{section*.5}%
 \contentsline {section}{\numberline {1.1}Cloud computing}{3}{section.1.1}%
-\contentsline {subsubsection}{Today}{3}{section*.5}%
-\contentsline {subsubsection}{Nuova visione}{3}{section*.6}%
-\contentsline {section}{\numberline {1.2}Data protection}{3}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Caraterizzaizone delle sfide di protezione dei dati nel cloud}{5}{chapter.2}%
+\contentsline {subsubsection}{Cloud: oggi}{3}{section*.6}%
+\contentsline {subsubsection}{Cloud: nuova visione}{3}{section*.7}%
+\contentsline {section}{\numberline {1.2}Data protection}{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Caratteristiche delle sfide di Protezione dei Dati nel Cloud}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Le tre dimensioni del problema}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Proprietà di sicurezza (CIA)}{6}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Access requirements (funzionalità richieste)}{6}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Architetture}{7}{subsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.1.4}Combinazione delle dimensioni}{7}{subsection.2.1.4}%
 \contentsline {chapter}{\numberline {3}Digital Data Market}{8}{chapter.3}%
-\contentsline {subsubsection}{Dimensioni del problema:}{8}{section*.7}%
+\contentsline {subsubsection}{Dimensioni del problema:}{8}{section*.8}%
