@@ -3,6 +3,12 @@
 \contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}%
 \contentsline {subsubsection}{Privacy dell'identità degli utenti}{2}{section*.2}%
 \contentsline {section}{\numberline {1.1}Rilascio diretto}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Controllo di acesso interattivo}{3}{section.1.2}%
-\contentsline {subsubsection}{Interazione a due step:}{4}{section*.3}%
-\contentsline {subsubsection}{Esistenti/emegenti tecnologie di supporto a ABAC}{4}{section*.4}%
+\contentsline {subsubsection}{Esempio}{3}{section*.3}%
+\contentsline {section}{\numberline {1.2}Controllo di accesso interattivo}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Interazione senza condizioni da parte del client}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Negoziazione \textit {multi-step}}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Interazione a due step}{5}{subsection.1.2.3}%
+\contentsline {subsubsection}{Esistenti/emegenti tecnologie di supporto a ABAC}{5}{section*.4}%
+\contentsline {section}{\numberline {1.3}Preferenze degli utenti}{5}{section.1.3}%
+\contentsline {subsubsection}{\textit {Desiderata}}{6}{section*.5}%
+\contentsline {chapter}{\numberline {2}Cost-sensitive Trust Negotiation}{7}{chapter.2}%
