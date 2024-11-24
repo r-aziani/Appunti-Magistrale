@@ -139,6 +139,74 @@ che andiamo a vedere nei prossimi capitoli.
 
 \chapter{Cost-sensitive Trust Negotiation}
 
+\begin{itemize}
+    \item Due parti (client e server) interagiscono per stabilire fiducia reciproca tramite lo scambio di credenziali 
+    $\rightarrow$ \textbf{\textit{trust negotation protocol}}
+    \item Il \textbf{rilascio di una credenziale} è regolato da una politica che specifica dei prerequisiti da soddisfare 
+    affinché la credenziale possa essere rilasciata
+    \item Credenziali e politiche sono asssociate ad un costo 
+
+    $\rightarrow$ più sono sensibili, più il costo è maggiore 
+\end{itemize}
+
+\noindent L'obiettivo è di \textbf{minimizzare i costi totali} di rilascio di credenziali 
+e politiche durante la \textit{trust negotation}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.83\linewidth]{images/cost-sensitive.png}
+\end{figure}
+
+Con $c_1 \leftarrow s_1$ si intende \textit{io rilascio se tu hai}. Il rettangolo nel 
+\textit{policy graph} corrisponde ad un AND.
+
+\subsubsection{Conclusioni}
+
+\begin{itemize}
+    \item La \textit{cost-sensitive trust negotation} offre un meccanismo per il rilascio delle credenziali 
+    in base alla loro sensibilità. Si concentra sulla negoziazione stessa piuttosto che 
+    sul controllo da parte dell'utente.
+    \item Supporta soltanto specifiche sulle credenziali; \textit{sensitive association} e \textit{forbidden releases} 
+    non possono essere specificate.
+    \item Questo tipo di approccio (minimizzazione del costo totale) ha un'applicabilità limitata;
+    inolte, la combinazione lineare dei costi potrebbe non essere desiderabile.
+\end{itemize}
+
+
+\chapter{Point-based Trust Management Model}
+\begin{itemize}
+    \item Il server assegna dei \textbf{punti} a ciascuna credenziale
+    \begin{itemize}
+        \item rappresentano il livello di affidabilità del proprietario 
+        \item devono essere tenuti privati
+    \end{itemize}
+    \item Il server richiede una \textbf{soglia minima di punti totali} per offrire accesso alla risorsa; deve essere tenuto privata
+    \item Il client assegna a ciascuna sua credenziale un \textbf{punteggio} (privato), che indica la \textbf{sensibilità} della credenziale
+\end{itemize}
+
+$\rightarrow$ l'obiettivo è trovare un sottoinsieme delle credenziali del client che \textbf{soddisfa 
+la soglia} stabilita dal server che ha \textbf{valore di privacy minimo} per il client
+
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\linewidth]{images/point-based.png}
+\end{figure}
+
+\subsubsection{Conclusioni}
+
+\begin{itemize}
+    \item Il calcolo della soluzione viene ottenuto convertendo il problema convertendolo 
+    al \textit{problema dello zaino}, utilizzando un protocollo sicuro che interagisce con entrambe le parti (client e server), in modo 
+    che i punteggi privati non vengano rivelati da una parte all'altra.
+    \item Si concentra sulla negoziazione piuttosto che sul controllo da parte dell'utente 
+    \item \textit{sensitive association} e \textit{forbidden disclosure} non possono essere specificate
+    \item il client e il server devono concordarsi sull'universo dei possibili tipi di credenziali (potrebbe compromettere la confidenzialità delle politiche del server)
+\end{itemize}
+
+
+\chapter{Logic-based Minimal Credential Disclosure}
+
 
 
 
