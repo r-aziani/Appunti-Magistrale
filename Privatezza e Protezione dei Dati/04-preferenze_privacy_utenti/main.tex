@@ -213,20 +213,20 @@ la soglia} stabilita dal server che ha \textbf{valore di privacy minimo} per il 
     \item Combinando le politiche si ottengono diversi \textbf{\textit{negotiation paths}} (set di credenziali per il rilascio) che soddisfano la negoziazione (sia il server che il client possono chiedere qualcosa)
 \end{itemize}
 
-$ \rightarrow $ Si usa l'approccio logico per pemrettere agli utenti di specificare le preferenze sulla privacy e selezionare un negotiation path.
+$ \rightarrow $ Si usa l'approccio logico per pemrettere agli utenti di specificare le preferenze sulla privacy e selezionare un \textit{negotiation path}.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\linewidth]{images/logical-based minimal cred.png}
 \end{figure}
 
-Nella colonna di \textit{Alice's policy} sappiamo che Alice sarà disposta a rilasciare determinate informazioni a patto che la controparte abbia determinati certificati.
+Nella colonna di \textit{Alice's Policy} sappiamo che Alice sarà disposta a rilasciare determinate informazioni a patto che la controparte abbia determinati certificati.
 
-\noindent Ciascuna delle righe di negotiation paths corrisponde a un possibile rilascio di credenziali al server, con lo scopo di soddisfare \textit{purchase}.
-Ogni strategia può essere vista come un vettore binario
+\noindent Ciascuna delle righe di \textit{negotiation paths} corrisponde a un possibile rilascio di credenziali al server, con lo scopo di soddisfare \textit{purchase}.
+Ogni strategia può essere vista come un vettore binario.
 
 \begin{itemize}
-    \item Cosa preferiamo: non rilasciare una credenziale è meglio che rilasciarla.
+    \item Preferenza di default: non rilasciare una credenziale è meglio che rilasciarla.
     \item I set di rilascio sono confrontati secondo la \textbf{Pareto composition} ($>_P$): 
     
     $ S_i $ domina $ S_j $ se $ S_i $ ha valori migliori o uguali di $ S_j $, ripsettano le preferenze di rilascio delle credenziali ed
@@ -237,15 +237,23 @@ Ogni strategia può essere vista come un vettore binario
     \includegraphics[width=0.85\linewidth]{images/Pareto.png}
 \end{figure}
 
-La gerarchia specifica le preferenze di rilascio delle credenziali ( $ c_i \rightarrow c_j $ signifca che preferiamo rilasciare $ c_i $ rispetto a $ c_j$ )
+La gerarchia specifica le preferenze di rilascio delle credenziali ($c_i \rightarrow c_j$ signifca che preferiamo rilasciare $ c_i $ rispetto a $ c_j$)
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\linewidth]{images/Gerarchia.png}
 \end{figure}
+
 È possibile esprimere preferzne condizionate in relazione a cosa ho rilasciato precedentemente.
 
-MANCA FOTO SLIDE 28 RIGHE ARANCIO E ROSSO
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/logic-ex.png}
+\end{figure}
 
+Le righe arancione vengono scartate sulle preferenze degli utenti; le righe rosse 
+sono scartate perché rilasciano più informazioni di quelle necessarie.
+
+\newpage
 \subsubsection{Conclusioni}
 \begin{itemize}
     \item Gli utenti sono coinvolti nella scelta del disclosure set
@@ -255,7 +263,9 @@ MANCA FOTO SLIDE 28 RIGHE ARANCIO E ROSSO
     \item \textit{Forbidden releases} non sono supportati
 \end{itemize}
 
-\chapter{Privacy preferences in Credential-based Interactions}
+\chapter{Privacy Preferences in Credential-based Interactions}
+
+
 
 
 \end{document}
