@@ -291,19 +291,28 @@ Le informazioni del client formano il  \textit{Client portfolio}; è composto da
     \includegraphics[width=0.7\linewidth]{images/client portfolio.png}
 \end{figure}
 
-\subsection{Client portfolio - proprietà}
+\subsection{Client Portfolio - Proprietà}
 \begin{itemize}
-    \item Credential - indipendent: il valore è sempre lp stesso indipendentemente da chi lo rilascia
-    \item Credential - dipendent: il valore dipende dalla credenziale che lo certifica (es: passaporto)
-    \item Atmoic: rilasciate unitamente 
-    \item Non - atomic: le proprietà possono essere rilasciate disgiuntamente 
+    \item \textbf{Credential-indipendent:} il valore è sempre lp stesso indipendentemente da chi lo rilascia
+    \item \textbf{Credential-dipendent:} il valore dipende dalla credenziale che lo certifica (es: passaporto)
+    \item \textbf{Atomic:} rilasciate unitamente; se rilasciata, tutte le sue proprietà vengono rilasciate 
+    \begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/ atomic.png}
+    \end{figure}
+    \item \textbf{Non-atomic:} le proprietà possono essere rilasciate disgiuntamente 
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.4\linewidth]{images/non-atomi.png}
+    \end{figure}
 \end{itemize}
 
+\newpage
 \subsection{Disclosure}
 Un rilascio è un sottoinsieme the portflio del client che soddisfa:
 \begin{itemize}
-    \item Certificabilità: ogni proprietà è certificata da una credenziale
-    \item Atomicità: se la proprietà di una credenziale atomica è rilasciata, tutte le sue proprietà sono rilasciate 
+    \item \textbf{Certificabilità:} ogni proprietà è certificata da una credenziale
+    \item \textbf{Atomicità:} se la proprietà di una credenziale atomica è rilasciata, tutte le sue proprietà sono rilasciate 
 \end{itemize}
 
 

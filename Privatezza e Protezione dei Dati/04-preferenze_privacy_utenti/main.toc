@@ -20,4 +20,5 @@
 \contentsline {chapter}{\numberline {5}Privacy Preferences in Credential-based Interactions}{14}{chapter.5}%
 \contentsline {subsubsection}{Obiettivo}{14}{section*.9}%
 \contentsline {section}{\numberline {5.1}Client porfolio}{14}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Client portfolio - proprietà}{15}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.1}Client Portfolio - Proprietà}{15}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Disclosure}{16}{subsection.5.1.2}%
