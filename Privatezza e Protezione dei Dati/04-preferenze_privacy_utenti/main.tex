@@ -265,6 +265,46 @@ sono scartate perché rilasciano più informazioni di quelle necessarie.
 
 \chapter{Privacy Preferences in Credential-based Interactions}
 
+\subsubsection{Obiettivo}
+Abilitare gli utenti a regolare efficientemente il rilascio delle loro proprietà è credenziali 
+\begin{itemize}
+    \item Identificare i requisiti e i concetti che necesitano di catturati
+    \item Organizzare le proprietà e credenziali dell'utente nel \textit{\textbf{user portofolio}}
+    \item Permettere all'utente di specificare quanto valuta le componenti del \textit{portfolio} 
+\end{itemize}
+
+\section{Client porfolio}
+Le informazioni del client formano il  \textit{Client portfolio}; è composto da:
+\begin{itemize}
+    \item \textbf{Credenziale:} certificato rilasciato e certificato da una terza parte; 
+    \begin{itemize}
+        \item certifica delle proprietà
+        \item ha un tipo, identificatore e un'entità che la rilascia
+    \end{itemize}
+    \item \textbf{Dichiarazione:} credenziale \textit{self-signed} (rilasciata da me stesso)
+\end{itemize}
+
+\noindent Si definisce una \textbf{gerarchia di astrazione} di tipi di credenziali.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/client portfolio.png}
+\end{figure}
+
+\subsection{Client portfolio - proprietà}
+\begin{itemize}
+    \item Credential - indipendent: il valore è sempre lp stesso indipendentemente da chi lo rilascia
+    \item Credential - dipendent: il valore dipende dalla credenziale che lo certifica (es: passaporto)
+    \item Atmoic: rilasciate unitamente 
+    \item Non - atomic: le proprietà possono essere rilasciate disgiuntamente 
+\end{itemize}
+
+\subsection{Disclosure}
+Un rilascio è un sottoinsieme the portflio del client che soddisfa:
+\begin{itemize}
+    \item Certificabilità: ogni proprietà è certificata da una credenziale
+    \item Atomicità: se la proprietà di una credenziale atomica è rilasciata, tutte le sue proprietà sono rilasciate 
+\end{itemize}
 
 
 
