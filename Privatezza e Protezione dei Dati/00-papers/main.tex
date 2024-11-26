@@ -1,0 +1,34 @@
+\documentclass{report}
+\usepackage{graphicx} % Required for inserting images
+\newtheorem{definition}{Definizione}
+\newtheorem{condition}{Condizione}
+
+\usepackage[acronym]{glossaries}
+\usepackage{hyperref}
+
+%\usepackage[demo]{graphicx}
+
+\usepackage{subcaption}
+
+\title{Privatezza e Protezione dei Dati - Papers}
+\author{Alessandro Marchetti}
+\date{2024}
+
+\glsenablehyper         %abilita hyperref
+
+\begin{document}
+
+\maketitle
+
+\printglossaries
+%\printglossary[type=\acronymtype]
+
+\section{Introduction}
+
+\include{paper_k-anon/k-Anonymity}
+\include{paper_microdata_protection/MicrodataProtection}
+
+%\bibliographystyle{plain}
+%\bibliography{./Bibliografia}
+
+\end{document}
