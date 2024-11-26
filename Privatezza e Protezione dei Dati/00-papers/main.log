@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  26 NOV 2024 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  26 NOV 2024 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -379,7 +379,7 @@ Package caption Info: New subtype `subtable' on input line 238.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count328
 \l__pdf_internal_box=\box60
-) (./main.aux (./paper_k-anon/k-Anonymity.aux))
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -420,7 +420,6 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 19.
- (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -447,6 +446,12 @@ l.28 \include{paper_k-anon/k-Anonymity}
 Chapter 1.
 \c@corol=\count335
 
+LaTeX Warning: Reference `def:kanon_occorrenze' on page 2 undefined on input line 30.
+
+
+LaTeX Warning: Reference `def:kanon_occorrenze' on page 2 undefined on input line 38.
+
+
 
 [2
 
@@ -454,7 +459,10 @@ Chapter 1.
 ]
 
 [3{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<paper_k-anon/DGH_e_DVgraph.jpg, id=100, 1084.05pt x 575.90157pt>
+
+LaTeX Warning: Reference `fig:distvect_lattice' on page 4 undefined on input line 116.
+
+<paper_k-anon/DGH_e_DVgraph.jpg, id=54, 1084.05pt x 575.90157pt>
 File: paper_k-anon/DGH_e_DVgraph.jpg Graphic file (type jpg)
 <use paper_k-anon/DGH_e_DVgraph.jpg>
 Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 121.
@@ -469,12 +477,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
 
 [5 <./paper_k-anon/DGH_e_DVgraph.jpg>]
-<paper_k-anon/k-anon-tech.jpg, id=124, 1409.265pt x 576.65437pt>
+
+LaTeX Warning: Reference `fig:k-anon-tech' on page 6 undefined on input line 156.
+
+<paper_k-anon/k-anon-tech.jpg, id=79, 1409.265pt x 576.65437pt>
 File: paper_k-anon/k-anon-tech.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-tech.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-tech.jpg  used on input line 160.
 (pdftex.def)             Requested size: 276.00105pt x 112.93549pt.
-<paper_k-anon/k-anon-alg.jpg, id=125, 1109.64563pt x 380.17032pt>
+<paper_k-anon/k-anon-alg.jpg, id=80, 1109.64563pt x 380.17032pt>
 File: paper_k-anon/k-anon-alg.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-alg.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 169.
@@ -510,27 +521,181 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
 [7])
 
-[8] (./main.aux (./paper_k-anon/k-Anonymity.aux))
+[8]
+\openout2 = `paper_cloud/cloud.aux'.
+
+ (./paper_cloud/cloud.tex
+
+./paper_cloud/cloud.tex:1: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \documentclass
+                  {report}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./paper_cloud/cloud.tex:2: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \usepackage
+               {graphicx} % Required for inserting images
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./paper_cloud/cloud.tex:3: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \usepackage
+               [italian]{babel}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./paper_cloud/cloud.tex:4: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \usepackage
+               {tikz}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./paper_cloud/cloud.tex:5: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \usepackage
+               {hyperref}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./paper_cloud/cloud.tex:6: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage
+               {amsmath}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./paper_cloud/cloud.tex:7: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \usepackage
+               {xcolor}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./paper_cloud/cloud.tex:9: Undefined control sequence.
+l.9 \definecolor
+                {darkgreen}{rgb}{0.0, 0.5, 0.0} % RGB per un verde scuro
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./paper_cloud/cloud.tex:15: LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \begin{document}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+
+[9
+
+
+
+]
+No file main.toc.
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+
+
+[10
+
+]
+
+[11] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_cloud/cloud.aux))
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 248F486A87A4A024303F23AC8553CFF9;2063.
- ) 
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  DA5A8652D20CF6F47F881D4ED30CF78D;2537.
+ ) )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 15 (\begingroup)
+### bottom level
+(\end occurred when \iftrue on line 30 was incomplete)
+(\end occurred when \ifx on line 30 was incomplete)
+(\end occurred when \ifnum on line 30 was incomplete) 
 Here is how much of TeX's memory you used:
- 14790 strings out of 473361
- 237852 string characters out of 5725029
- 682460 words of memory out of 5000000
+ 14799 strings out of 473361
+ 238145 string characters out of 5725029
+ 681624 words of memory out of 5000000
  37644 multiletter control sequences out of 15000+600000
- 568135 words of font info for 70 fonts, out of 8000000 for 9000
+ 568434 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,9n,131p,2455b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (9 pages, 682851 bytes).
+Output written on main.pdf (12 pages, 684861 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 188 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
- 112 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 223 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
