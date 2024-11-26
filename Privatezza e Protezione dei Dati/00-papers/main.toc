@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {0.1}Introduction}{1}{section.0.1}%
+\contentsline {chapter}{\numberline {1}\textit {k}-anonimity}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduzione}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}\textit {k}-anonimity e Table \textit {k}-anonime}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}\textit {Generalization}}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}\textit {Suppression}}{4}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Generalizzazione \textit {k}-Minima}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Classificazione tecniche di \textit {k}-anonimity}{6}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Algoritmo Samarati (AG_TS) }{6}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Evitare il calcolo delle table generalizzate}{7}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.6}Bayardo-Agrawal: \textit {k-Optimize} (AG_TS) }{8}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Incognito}{8}{section.1.7}%
