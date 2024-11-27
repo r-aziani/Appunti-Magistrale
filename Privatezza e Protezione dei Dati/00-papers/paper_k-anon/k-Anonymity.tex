@@ -290,10 +290,26 @@ Incognito genera tutte le possibili table \textit{k}-anonime minime secondo i se
 
 \noindent Utilizzando approccio bottom-up, per la condizione citata prima, se una \gen\ soddisfa \kanon\ allora anche sue ulteriori dirette generalizzazioni soddisfano \kanon\ e pertanto non sono considerate ulteriormente.
 
+$\\$
+Un esempio per $QI=\{Race, \, Sex, \, Marital \, Status\}$ è riportato nella figura \ref{fig:kanon_incognito} che segue:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\linewidth]{paper_k-anon/k-anon-incognito.jpg}
+    \caption{}
+    \label{fig:kanon_incognito}
+\end{figure}
 
 
-\subsection{esempio Incognito}
+\section{Algoritmi Euristici}
 
+\kanon\ è un problema NP-difficile e pertanto ha complessità esponenziale nella dimensione del $QI$.
 
+Alcuni approcci alternativi proposti:
 
+\begin{itemize}
+    \item Iyengar - algoritmi genetici e ricerca stocastica incompleta.
+    \item Winkler - "simulated annealing" che non garantisce qualità ed è costoso.
+    \item Fung, Wang, Yu - Top-down che specializza gni attributo
+\end{itemize}
 
