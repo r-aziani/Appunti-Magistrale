@@ -1,4 +1,0 @@
-\babel@toc {italian}{}\relax 
-\babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione}{2}{}%
-\contentsline {chapter}{\numberline {2}Sicurezza delle informazioni e organizzazione}{3}{}%
