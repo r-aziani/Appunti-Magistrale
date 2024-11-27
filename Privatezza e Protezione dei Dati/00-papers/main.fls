@@ -1,8 +1,8 @@
-PWD c:/RepositoryGitHub/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers
+PWD c:/Users/Alfredo/Desktop/AppuntiSama/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/RepositoryGitHub/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers/main.tex
+INPUT c:/Users/Alfredo/Desktop/AppuntiSama/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/report.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/report.cls
@@ -157,9 +157,6 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./main.aux
-INPUT ./main.aux
-INPUT main.aux
 OUTPUT main.aux
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -229,6 +226,37 @@ INPUT ./paper_k-anon/k-anon-alg.jpg
 INPUT ./paper_k-anon/k-anon-alg.jpg
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT ./paper_microdata/MicrodataProtection.tex
+INPUT ./paper_microdata/MicrodataProtection.tex
+OUTPUT paper_microdata/MicrodataProtection.aux
+INPUT ./paper_microdata/MicrodataProtection.tex
+INPUT ./paper_microdata/MicrodataProtection.tex
+INPUT paper_microdata/MicrodataProtection.tex
+INPUT ./paper_microdata/Fig3.png
+INPUT ./paper_microdata/Fig3.png
+INPUT ./paper_microdata/Fig3.png
+INPUT ./paper_microdata/Fig3.png
+INPUT ./paper_microdata/Fig3.png
+INPUT ./paper_microdata/Fig4.png
+INPUT ./paper_microdata/Fig4.png
+INPUT ./paper_microdata/Fig4.png
+INPUT ./paper_microdata/Fig4.png
+INPUT ./paper_microdata/Fig4.png
+INPUT ./paper_microdata/Fig5.png
+INPUT ./paper_microdata/Fig5.png
+INPUT ./paper_microdata/Fig5.png
+INPUT ./paper_microdata/Fig5.png
+INPUT ./paper_microdata/Fig5.png
+INPUT ./paper_microdata/Fig6.png
+INPUT ./paper_microdata/Fig6.png
+INPUT ./paper_microdata/Fig6.png
+INPUT ./paper_microdata/Fig6.png
+INPUT ./paper_microdata/Fig6.png
+INPUT ./paper_microdata/Fig8.png
+INPUT ./paper_microdata/Fig8.png
+INPUT ./paper_microdata/Fig8.png
+INPUT ./paper_microdata/Fig8.png
+INPUT ./paper_microdata/Fig8.png
 INPUT ./paper_cloud/cloud.tex
 INPUT ./paper_cloud/cloud.tex
 OUTPUT paper_cloud/cloud.aux
@@ -241,6 +269,9 @@ INPUT main.aux
 INPUT ./paper_k-anon/k-Anonymity.aux
 INPUT ./paper_k-anon/k-Anonymity.aux
 INPUT paper_k-anon/k-Anonymity.aux
+INPUT ./paper_microdata/MicrodataProtection.aux
+INPUT ./paper_microdata/MicrodataProtection.aux
+INPUT paper_microdata/MicrodataProtection.aux
 INPUT ./paper_cloud/cloud.aux
 INPUT ./paper_cloud/cloud.aux
 INPUT paper_cloud/cloud.aux

@@ -10,3 +10,11 @@
 \contentsline {subsection}{\numberline {1.5.1}Evitare il calcolo delle table generalizzate}{7}{subsection.1.5.1}%
 \contentsline {section}{\numberline {1.6}Bayardo-Agrawal: \textit {k-Optimize} (AG_TS) }{8}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Incognito}{8}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Protezione Microdati}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduzione}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Macrodata vs Microdata}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Classificazione delle tecniche di protezione riguardo il Disclosure dei microdati}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Tecniche di Mascheramento}{12}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Tecniche non perturbative}{12}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Tecniche perturbative}{13}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Tecniche per la Generazione di Dati Sintetici}{15}{section.2.5}%
