@@ -141,8 +141,7 @@ Per bilanciare tra perdita di precisione dovuta a \gen\ e perdita di completezza
 Ultima espressione rende meglio come $DV_{i,z} \geq DV_{i,j}$. Il concetto che esprime è che \textit{"non esiste un'altra \gen\ $T_z$ che soddisfi 1 e 2 con un DV minore di quello di $T_j$"} 
 
 $\\$
-
-\noindent Diversi \textbf{preference criteria} possono essere applicati nella scelta della generalizzazione minimale preferita:
+Diversi \textbf{preference criteria} possono essere applicati nella scelta della generalizzazione minimale preferita:
 
 \begin{itemize}
     \item \textbf{Distanza assoluta minima}: minor numero totale di passi di generalizzazione (indipendentemente dalle gerarchie di \gen\ considerate).
@@ -179,15 +178,13 @@ Il primo algoritmo per garantire \kanon\ è stato proposto insieme alla definizi
 La definizione di \kanon\ è basata sul QI quindi l'algoritmo lavora solo su questo set di attributi e su table con più di \textit{k} tuple. 
 
 $\\$
-
-\noindent Data una $DGH$ ci sono diversi percorsi dall'elemento in fondo alla gerarchia alla radice. Ogni percorso è una differente \textit{strategia} di generalizzazione.
+Data una $DGH$ ci sono diversi percorsi dall'elemento in fondo alla gerarchia alla radice. Ogni percorso è una differente \textit{strategia} di generalizzazione.
 Su ogni percorso c'è esattamente una \gen\ minima localmente (nodo più basso che garantisce \kanon).
 
 \noindent In maniera naif si può cercare su ogni percorso il minimo locale per poi trovare il minimo globale tra questi ma non è praticabile per l'elevato numero di percorsi.
 
 $\\$
-
-\noindent Per ottimizzare la ricerca si sfrutta la proprietà che salendo nella gerarchia la soppressione richiesta per avere \kanon\ diminuisce:
+Per ottimizzare la ricerca si sfrutta la proprietà che salendo nella gerarchia la soppressione richiesta per avere \kanon\ diminuisce:
 
 \begin{itemize}
     \item Ogni nodo in $DGH$ viene associato ad un numero, \textbf{height}, corrispondente alla somma degli elementi nel Distance Vector associato.
@@ -198,8 +195,7 @@ Se non c'è soluzione che soddisfi \kanon\ sopprimendo meno di \texttt{MaxSup} a
 
 
 $\\$
-
-\noindent L'algoritmo usa binary search cercando la minore altezza in cui esiste un $DV$ che soddisfa \kanon\ rispettando \texttt{MaxSup} e ha come primo passo:
+L'algoritmo usa binary search cercando la minore altezza in cui esiste un $DV$ che soddisfa \kanon\ rispettando \texttt{MaxSup} e ha come primo passo:
 
 \begin{equation}
     \text{Cerco ad altezza } \lfloor \frac{h}{2} \rfloor : \begin{cases}
@@ -222,14 +218,12 @@ Per evitarlo introduciamo il concetto di $DV$ tra tuple.
 \end{definition}
 
 $\\$
+In altri termini ogni distanza in $V_{x,y}$ è una distanza uguale dal dominio di $v'_i$ e $v''_i$ al dominio in cui sono generalizzati allo stesso valore $v_i$.
 
-\noindent In altri termini ogni distanza in $V_{x,y}$ è una distanza uguale dal dominio di $v'_i$ e $v''_i$ al dominio in cui sono generalizzati allo stesso valore $v_i$.
-
-\noindent Allo stesso modo $V_{x,y}$ per $x,y \in T_i$ equivale a $DV_{i,j}$ per $T_i \preceq T_j$ per cui $x$ e $y$ vengono generalizzate alla stessa tupla $t$.
+Allo stesso modo $V_{x,y}$ per $x,y \in T_i$ equivale a $DV_{i,j}$ per $T_i \preceq T_j$ per cui $x$ e $y$ vengono generalizzate alla stessa tupla $t$.
 
 $\\$
-
-\textbf{Per il momento il resto è delirio}
+{Per il momento il resto è delirio}
 
 
 
@@ -272,12 +266,9 @@ Se un nodo viene prunato allora anche altri nodi, non per forza del sottoalbero,
 
 \section{LeFevre-DeWitt et al.: Incognito (AG$\_$TS) }
 
-Aggregazione bottom-up.
-
-$\\$
 Idea di base è riassunta nella seguente definizione:
 
-\begin{definition} $\\$
+\begin{definition} [\textit{k}-anonimity dei subset di $QI$]$\\$
     Se una table $T$ con \qi\ $QI$ composto da $m \, = |QI|$ attributi soddisfa \kanon, $T$ soddisfa \kanon\ anch per qualunque \qi\ $QI'$ talce che $QI' \subset QI$.
     
     Pertanto \kanon\ su un subset di $QI$ è condizione necessaria (e non sufficiente) per \kanon\ di $T$ sull'intero $QI$.
@@ -298,4 +289,11 @@ Incognito genera tutte le possibili table \textit{k}-anonime minime secondo i se
 \end{enumerate}
 
 \noindent Utilizzando approccio bottom-up, per la condizione citata prima, se una \gen\ soddisfa \kanon\ allora anche sue ulteriori dirette generalizzazioni soddisfano \kanon\ e pertanto non sono considerate ulteriormente.
+
+
+
+\subsection{esempio Incognito}
+
+
+
 

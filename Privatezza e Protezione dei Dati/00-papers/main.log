@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  27 NOV 2024 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  27 NOV 2024 15:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -643,7 +643,7 @@ Chapter 1.
 ]
 
 [3{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<paper_k-anon/DGH_e_DVgraph.jpg, id=119, 1084.05pt x 575.90157pt>
+<paper_k-anon/DGH_e_DVgraph.jpg, id=123, 1084.05pt x 575.90157pt>
 File: paper_k-anon/DGH_e_DVgraph.jpg Graphic file (type jpg)
 <use paper_k-anon/DGH_e_DVgraph.jpg>
 Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
@@ -651,82 +651,52 @@ Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
 
 
 [4 <./paper_k-anon/DGH_e_DVgraph.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-
 
 [5]
-<paper_k-anon/k-anon-tech.jpg, id=143, 1409.265pt x 576.65437pt>
+<paper_k-anon/k-anon-tech.jpg, id=147, 1409.265pt x 576.65437pt>
 File: paper_k-anon/k-anon-tech.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-tech.jpg>
-Package pdftex.def Info: paper_k-anon/k-anon-tech.jpg  used on input line 162.
+Package pdftex.def Info: paper_k-anon/k-anon-tech.jpg  used on input line 161.
 (pdftex.def)             Requested size: 276.00105pt x 112.93549pt.
-<paper_k-anon/k-anon-alg.jpg, id=144, 1109.64563pt x 380.17032pt>
+<paper_k-anon/k-anon-alg.jpg, id=148, 1109.64563pt x 380.17032pt>
 File: paper_k-anon/k-anon-alg.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-alg.jpg>
-Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 171.
+Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 170.
 (pdftex.def)             Requested size: 276.00105pt x 94.56087pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 176.
+(hyperref)                removing `math shift' on input line 175.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 176.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
- []
+(hyperref)                removing `math shift' on input line 175.
 
 
 
 [6 <./paper_k-anon/k-anon-tech.jpg> <./paper_k-anon/k-anon-alg.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
-
- []
-
-
 
 [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 240.
+(hyperref)                removing `math shift' on input line 234.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 240.
+(hyperref)                removing `math shift' on input line 234.
 
-<paper_k-anon/set_enum_tree.jpg, id=160, 521.69907pt x 464.4853pt>
+<paper_k-anon/set_enum_tree.jpg, id=164, 521.69907pt x 464.4853pt>
 File: paper_k-anon/set_enum_tree.jpg Graphic file (type jpg)
 <use paper_k-anon/set_enum_tree.jpg>
-Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 264.
+Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 258.
 (pdftex.def)             Requested size: 137.9979pt x 122.86122pt.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 273.
+(hyperref)                removing `math shift' on input line 267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 273.
+(hyperref)                removing `math shift' on input line 267.
 
 
 
@@ -752,21 +722,21 @@ LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1B1E3B1B9D6B49150DB85BA70DE7468A;2841.
+(rerunfilecheck)             Checksum: 451562BEB1DCFFAF3F90CF4C3CC451C2;2991.
  ) 
 Here is how much of TeX's memory you used:
- 25256 strings out of 473361
- 463522 string characters out of 5725029
- 881890 words of memory out of 5000000
- 47877 multiletter control sequences out of 15000+600000
+ 25258 strings out of 473361
+ 463556 string characters out of 5725029
+ 881893 words of memory out of 5000000
+ 47878 multiletter control sequences out of 15000+600000
  568974 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,9n,131p,2434b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (12 pages, 718435 bytes).
+Output written on main.pdf (12 pages, 718533 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 
