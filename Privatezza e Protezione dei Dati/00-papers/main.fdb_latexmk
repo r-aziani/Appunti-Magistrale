@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1732632235.01331 "c:/RepositoryGitHub/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers/main.tex" "main.pdf" "main" 1732632236.39509 0
-  "c:/RepositoryGitHub/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers/main.tex" 1732632207 770 80ca94116e03a76addd5aed5b3f10f3d ""
+["pdflatex"] 1732717050.46967 "c:/RepositoryGitHub/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers/main.tex" "main.pdf" "main" 1732717052.14467 0
+  "c:/RepositoryGitHub/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers/main.tex" 1732711791 812 32a23e73051b2446f84141318cee7f63 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1732540185 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1732541885 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1732541309 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -194,16 +194,17 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732548879 5521760 8d14e9f23704d5fbe9a015e30cb48126 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732548999 3342727 45941c6734f4cbe55cf2b7d44f1a7564 ""
   "c:/texlive/2024/texmf.cnf" 1732548861 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1732632236 452 f4b5291f043c79dd1fabd674058be58f "pdflatex"
-  "main.out" 1732632236 2766 a7dfa055fc81b6fec91d648bbd086798 "pdflatex"
-  "main.tex" 1732632207 770 80ca94116e03a76addd5aed5b3f10f3d ""
-  "paper_cloud/cloud.aux" 1732632236 1571 56fef6e8533fb183abdb196e4963eab7 "pdflatex"
+  "main.aux" 1732717051 452 b3240d802fc73bc56aaebe6fdd25280a "pdflatex"
+  "main.out" 1732717051 2841 1b1e3b1b9d6b49150db85ba70de7468a "pdflatex"
+  "main.tex" 1732711791 812 32a23e73051b2446f84141318cee7f63 ""
+  "paper_cloud/cloud.aux" 1732717051 1573 18cc8d473cad7a7dd5bb9378ebf15eae "pdflatex"
   "paper_cloud/cloud.tex" 1732632232 490 a6ae3f25fdf93386b6518fd9f2c9fa05 ""
   "paper_k-anon/DGH_e_DVgraph.jpg" 1732615358 68922 f794324b8b2c42d6a806b7af6173bf3c ""
-  "paper_k-anon/k-Anonymity.aux" 1732632236 3425 9061ffa7427b074d56d4686e01e75bf7 "pdflatex"
-  "paper_k-anon/k-Anonymity.tex" 1732628173 12138 ea91dea74849ac269889474b70783eff ""
+  "paper_k-anon/k-Anonymity.aux" 1732717051 3655 3bf6716b2fa161f3a8b08fd0c508899a "pdflatex"
+  "paper_k-anon/k-Anonymity.tex" 1732717049 15225 2ce19084bce450d1d2d6780917a65419 ""
   "paper_k-anon/k-anon-alg.jpg" 1732615358 180549 660ed5751cd28393f394da8caa2786f6 ""
   "paper_k-anon/k-anon-tech.jpg" 1732615358 180701 d669b4eb0be1f26e47b1bb1eb258cd4f ""
+  "paper_k-anon/set_enum_tree.jpg" 1732714356 25354 28aa7b6e82e46e44679c7b6127ce71dd ""
   (generated)
   "main.aux"
   "main.log"

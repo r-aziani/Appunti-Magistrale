@@ -9,7 +9,9 @@
 \newcommand{\gen}{\textit{Generalization}}
 \newcommand{\supp}{\textit{Suppression}}
 
-\section{Introduzione}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Contesto è il rilascio di \textit{microdata}. 
 De-identificazione non garantisce anonimità.
 
@@ -68,7 +70,7 @@ Sostituzione dei valori di un attributo con valori più generali. Consideriamo:
 \end{condition}
 
 \begin{condition}[C2 - ] $\\$
-    Tutti gli elementi massimali di \texttt{Dom} sono singleton \footnote{La condizione assicura che tutti i valori in ogni dominio possano essere generalizzati ad un singolo valore}.     
+    Tutti gli elementi massimali di \texttt{Dom} sono singoletti (singleton) \footnote{La condizione assicura che tutti i valori in ogni dominio possano essere generalizzati ad un singolo valore}.     
 \end{condition}
 
 \begin{itemize}
@@ -171,7 +173,7 @@ Casi \textit{not applicable} (\textbf{CG$\_$TS} e \textbf{CG$\_$AS}): supportare
     \label{fig:enter-label}
 \end{figure}
 
-\section{Algoritmo Samarati \detokenize{(AG_TS)} }
+\section{Algoritmo Samarati (AG$\_$TS) }
 
 Il primo algoritmo per garantire \kanon\ è stato proposto insieme alla definizione di \kanon.
 La definizione di \kanon\ è basata sul QI quindi l'algoritmo lavora solo su questo set di attributi e su table con più di \textit{k} tuple. 
@@ -235,9 +237,65 @@ $\\$
 
 \newpage
 
-\section{Bayardo-Agrawal: \textit{k-Optimize} \detokenize{(AG_TS)} }
+\section{Bayardo-Agrawal: \textit{k-Optimize} (AG$\_$TS) }
 
 Approccio considera che la generalizzazione di attributo $A$ su dominio \textbf{ordinato} $D$ corrisponde ad un partizionamento del dominio dell'attributo in intervalli.  
+Ogni valore del dominio deve comparire in un intervallo e ogni valore in un intervallo precede ogni valore degli intervalli che lo seguono.
+
+Si assume quindi un ordine tra gli attributi del \qi. Inoltre associa un valore intero chiamato \textit{index} ad ogni intervallo di ogni dominio degli attributi del \qi.
 
 
-\section{Incognito}
+$\\$
+Una \gen\ è quindi rappresentata come l'unione dei valori di indice per ogni attributo (il valore più piccolo in un dominio viene omesso perchè comparirà sicuramente nella generalizzazione per quel dominio).
+
+\textit{k-Optimize} costruisce un \textit{set enumeration tree} sul set $I$ di valori di indice, con radice vuota.
+Ogni nodo figlio è costruito dal padre inserendo in coda un index di $I$ maggiore degli altri index già presenti nel padre (per ordinamento totale).
+
+
+$\\$
+La visita dell'albero permette di valutare con Depth First Search ogni nodo, prunando ogni nodo e tutti i suoi figli se questi non possono corrispondere a soluzioni ottimali.
+Nello specifico \textit{k-Optimize} pruna un nodo $n$ quando determina che nessuno dei suoi discendenti può essere ottimale. Data una funzione di costo l'algoritmo calcola un limite inferiore sul costo che può essere ottenuto sul subtree del nodo $n$, prunando se nodo a costo minore è già stato trovato.
+
+$\\$
+Se un nodo viene prunato allora anche altri nodi, non per forza del sottoalbero, possono essere prunati: supponendo di prunare il nodo $\{$1,3$\}$ in figura \ref{fig:set_enum_tree} allora posso prunare qualunque altro nodo contenente $1$ E $3$, come ad esempio $\{$1,2,3$\}$.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\linewidth]{paper_k-anon/set_enum_tree}
+    \caption{Set enumeration tree sull'insieme di indici I=$\{$1,2,3$\}$}
+    \label{fig:set_enum_tree}
+\end{figure}
+
+
+
+
+
+\section{LeFevre-DeWitt et al.: Incognito (AG$\_$TS) }
+
+Aggregazione bottom-up.
+
+$\\$
+Idea di base è riassunta nella seguente definizione:
+
+\begin{definition} $\\$
+    Se una table $T$ con \qi\ $QI$ composto da $m \, = |QI|$ attributi soddisfa \kanon, $T$ soddisfa \kanon\ anch per qualunque \qi\ $QI'$ talce che $QI' \subset QI$.
+    
+    Pertanto \kanon\ su un subset di $QI$ è condizione necessaria (e non sufficiente) per \kanon\ di $T$ sull'intero $QI$.
+\end{definition}
+
+
+Algoritmo esclude in anticipo alcune generalizzazioni della gerarchia con un calcolo a priori.
+
+$\\$
+Strategia: bottom-up BFS sulla $DGH$. 
+Incognito genera tutte le possibili table \textit{k}-anonime minime secondo i seguenti passaggi:
+
+\begin{enumerate}
+    \item (Iterazione 1): verifica \kanon\ per ogni singolo attributo nel \qi, scartando quelle che non soddisfano.
+    \item (Iterazione 2): combina a coppie le \gen\ non scartate al passo 1 verificando \kanon.
+    \item (...)
+    \item (Iterazione $m$): arriva a considerare l'intero set di attributi di $QI$  
+\end{enumerate}
+
+\noindent Utilizzando approccio bottom-up, per la condizione citata prima, se una \gen\ soddisfa \kanon\ allora anche sue ulteriori dirette generalizzazioni soddisfano \kanon\ e pertanto non sono considerate ulteriormente.
+

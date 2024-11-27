@@ -343,8 +343,15 @@ INPUT ./paper_k-anon/k-anon-alg.jpg
 INPUT ./paper_k-anon/k-anon-alg.jpg
 INPUT ./paper_k-anon/k-anon-alg.jpg
 INPUT ./paper_k-anon/k-anon-alg.jpg
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT ./paper_k-anon/set_enum_tree.jpg
+INPUT ./paper_k-anon/set_enum_tree.jpg
+INPUT ./paper_k-anon/set_enum_tree.jpg
+INPUT ./paper_k-anon/set_enum_tree.jpg
 INPUT ./paper_cloud/cloud.tex
 INPUT ./paper_cloud/cloud.tex
 OUTPUT paper_cloud/cloud.aux
