@@ -6,4 +6,8 @@
 *.fls
 *.log
 *.synctex.gz
+<<<<<<< HEAD
 *.toc
+=======
+*.toc
+>>>>>>> d3f7ad75cdab3a8f496fb7d3e22b1100f2bd9a96

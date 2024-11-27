@@ -1,8 +1,8 @@
-PWD c:/Users/Alfredo/Desktop/AppuntiSama/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers
+PWD c:/RepositoryGitHub/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers
 INPUT c:/texlive/2024/texmf.cnf
 INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Alfredo/Desktop/AppuntiSama/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers/main.tex
+INPUT c:/RepositoryGitHub/Appunti-Magistrale/Privatezza e Protezione dei Dati/00-papers/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/report.cls
 INPUT c:/texlive/2024/texmf-dist/tex/latex/base/report.cls
