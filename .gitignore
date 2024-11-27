@@ -1,1 +1,9 @@
 # Ignora file temporanei
+
+
+# Ignora file con estensioni di latex tranne i tex
+*.aux
+*.fls
+*.log
+*.synctex.gz
+*.toc
