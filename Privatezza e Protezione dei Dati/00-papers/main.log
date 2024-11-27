@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  27 NOV 2024 15:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  27 NOV 2024 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -571,7 +571,7 @@ Package caption Info: New subtype `subtable' on input line 238.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count349
 \l__pdf_internal_box=\box71
-) (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_cloud/cloud.aux))
+) (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -643,7 +643,7 @@ Chapter 1.
 ]
 
 [3{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<paper_k-anon/DGH_e_DVgraph.jpg, id=123, 1084.05pt x 575.90157pt>
+<paper_k-anon/DGH_e_DVgraph.jpg, id=155, 1084.05pt x 575.90157pt>
 File: paper_k-anon/DGH_e_DVgraph.jpg Graphic file (type jpg)
 <use paper_k-anon/DGH_e_DVgraph.jpg>
 Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
@@ -653,12 +653,12 @@ Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
 [4 <./paper_k-anon/DGH_e_DVgraph.jpg>]
 
 [5]
-<paper_k-anon/k-anon-tech.jpg, id=147, 1409.265pt x 576.65437pt>
+<paper_k-anon/k-anon-tech.jpg, id=180, 1409.265pt x 576.65437pt>
 File: paper_k-anon/k-anon-tech.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-tech.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-tech.jpg  used on input line 161.
 (pdftex.def)             Requested size: 276.00105pt x 112.93549pt.
-<paper_k-anon/k-anon-alg.jpg, id=148, 1109.64563pt x 380.17032pt>
+<paper_k-anon/k-anon-alg.jpg, id=181, 1109.64563pt x 380.17032pt>
 File: paper_k-anon/k-anon-alg.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-alg.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 170.
@@ -685,7 +685,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 234.
 
-<paper_k-anon/set_enum_tree.jpg, id=164, 521.69907pt x 464.4853pt>
+<paper_k-anon/set_enum_tree.jpg, id=197, 521.69907pt x 464.4853pt>
 File: paper_k-anon/set_enum_tree.jpg Graphic file (type jpg)
 <use paper_k-anon/set_enum_tree.jpg>
 Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 258.
@@ -703,9 +703,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [8 <./paper_k-anon/set_enum_tree.jpg>])
 
 [9]
-\openout2 = `paper_cloud/cloud.aux'.
+\openout2 = `paper_microdata/MicrodataProtection.aux'.
 
- (./paper_cloud/cloud.tex
+ (./paper_microdata/MicrodataProtection.tex
 Chapter 2.
 
 
@@ -714,29 +714,108 @@ Chapter 2.
 
 
 
+]
+Overfull \hbox (14.88954pt too wide) in paragraph at lines 35--36
+[]\OT1/cmr/m/n/10 Una ta-ble di mi-cro-dati e le in-for-mazioni es-terne con-tengono ru-more, riducendo
+ []
+
+<paper_microdata/Fig3.png, id=218, 469.00218pt x 175.40532pt>
+File: paper_microdata/Fig3.png Graphic file (type png)
+<use paper_microdata/Fig3.png>
+Package pdftex.def Info: paper_microdata/Fig3.png  used on input line 41.
+(pdftex.def)             Requested size: 172.5pt x 64.51353pt.
+
+Overfull \hbox (7.05618pt too wide) in paragraph at lines 52--54
+\OT1/cmr/m/n/10 es-sere con-trastata riducendo la quan-tit^^Ra delle in-for-mazioni ri-las-ci-ate, mascherando
+ []
+
+
+
+[11 <./paper_microdata/Fig3.png>]
+<paper_microdata/Fig4.png, id=226, 301.125pt x 127.97812pt>
+File: paper_microdata/Fig4.png Graphic file (type png)
+<use paper_microdata/Fig4.png>
+Package pdftex.def Info: paper_microdata/Fig4.png  used on input line 75.
+(pdftex.def)             Requested size: 172.5pt x 73.3154pt.
+<paper_microdata/Fig5.png, id=227, 317.68687pt x 177.66376pt>
+File: paper_microdata/Fig5.png Graphic file (type png)
+<use paper_microdata/Fig5.png>
+Package pdftex.def Info: paper_microdata/Fig5.png  used on input line 82.
+(pdftex.def)             Requested size: 172.5pt x 96.47104pt.
+
+
+[12 <./paper_microdata/Fig4.png> <./paper_microdata/Fig5.png>]
+Overfull \hbox (11.77829pt too wide) in paragraph at lines 94--95
+\OT1/cmr/m/n/10 uno speci-fico re-spon-dent sia pre-sente nei sam-ple, il ris-chio di re-identificazione
+ []
+
+<paper_microdata/Fig6.png, id=237, 347.79938pt x 160.34906pt>
+File: paper_microdata/Fig6.png Graphic file (type png)
+<use paper_microdata/Fig6.png>
+Package pdftex.def Info: paper_microdata/Fig6.png  used on input line 107.
+(pdftex.def)             Requested size: 172.5pt x 79.52838pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[13]
+<paper_microdata/Fig8.png, id=242, 428.35031pt x 536.75531pt>
+File: paper_microdata/Fig8.png Graphic file (type png)
+<use paper_microdata/Fig8.png>
+Package pdftex.def Info: paper_microdata/Fig8.png  used on input line 120.
+(pdftex.def)             Requested size: 172.5pt x 216.15617pt.
+
+
+[14 <./paper_microdata/Fig6.png> <./paper_microdata/Fig8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 127--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+
+[15])
+
+[16]
+\openout2 = `paper_cloud/cloud.aux'.
+
+ (./paper_cloud/cloud.tex
+Chapter 3.
+
+
+[17
+
+
+
+
 ])
 
-[11] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_cloud/cloud.aux))
+[18] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux))
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 451562BEB1DCFFAF3F90CF4C3CC451C2;2991.
+(rerunfilecheck)             Checksum: A0506D81149C702BE3C13B6E62A3EA07;4758.
  ) 
 Here is how much of TeX's memory you used:
- 25258 strings out of 473361
- 463556 string characters out of 5725029
- 881893 words of memory out of 5000000
- 47878 multiletter control sequences out of 15000+600000
+ 25359 strings out of 473361
+ 466363 string characters out of 5725029
+ 883847 words of memory out of 5000000
+ 47948 multiletter control sequences out of 15000+600000
  568974 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,9n,131p,2434b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,11n,131p,2434b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (12 pages, 718533 bytes).
+Output written on main.pdf (19 pages, 849372 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 379 PDF objects out of 1000 (max. 8388607)
+ 299 compressed objects within 3 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 258 words of extra memory for PDF output out of 10000 (max. 10000000)
 
