@@ -154,7 +154,7 @@ Diversi \textbf{preference criteria} possono essere applicati nella scelta della
 
 \section{Classificazione tecniche di \kanon}
 
-Classificazione in fig. \ref{fig:k-anon-tech}.
+Classificazione delle tipologie di composizione \gen\ e \supp\ sono mostrati in fig.\ref{fig:k-anon-tech}.
 
 \begin{figure}[ht]
     \centering
@@ -165,14 +165,17 @@ Classificazione in fig. \ref{fig:k-anon-tech}.
 
 Casi \textit{not applicable} (\textbf{CG$\_$TS} e \textbf{CG$\_$AS}): supportare \gen\ a grana fine (cella) implica poter applicare soppressione allo stesso livello.
 
+$\\$
+Vengono esposte qui di seguito alcune soluzioni algoritmiche in letteratura, riassunte in fig.\ref{fig:kanon_alg} 
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\linewidth]{paper_k-anon/k-anon-alg.jpg}
     \caption{Alcuni approcci a \kanon (\textit{n} è numero di tuple in PT).}
-    \label{fig:enter-label}
+    \label{fig:kanon_alg}
 \end{figure}
 
-\section{Algoritmo Samarati (AG$\_$TS) }
+\section{Algoritmo Samarati (AG\textunderscore TS) }
 
 Il primo algoritmo per garantire \kanon\ è stato proposto insieme alla definizione di \kanon.
 La definizione di \kanon\ è basata sul QI quindi l'algoritmo lavora solo su questo set di attributi e su table con più di \textit{k} tuple. 
@@ -231,7 +234,7 @@ $\\$
 
 \newpage
 
-\section{Bayardo-Agrawal: \textit{k-Optimize} (AG$\_$TS) }
+\section{Bayardo-Agrawal: \textit{k-Optimize} (AG\textunderscore TS) }
 
 Approccio considera che la generalizzazione di attributo $A$ su dominio \textbf{ordinato} $D$ corrisponde ad un partizionamento del dominio dell'attributo in intervalli.  
 Ogni valore del dominio deve comparire in un intervallo e ogni valore in un intervallo precede ogni valore degli intervalli che lo seguono.
@@ -264,7 +267,7 @@ Se un nodo viene prunato allora anche altri nodi, non per forza del sottoalbero,
 
 
 
-\section{LeFevre-DeWitt et al.: Incognito (AG$\_$TS) }
+\section{LeFevre-DeWitt et al.: Incognito (AG\textunderscore TS) }
 
 Idea di base è riassunta nella seguente definizione:
 
@@ -305,11 +308,110 @@ Un esempio per $QI=\{Race, \, Sex, \, Marital \, Status\}$ è riportato nella fi
 
 \kanon\ è un problema NP-difficile e pertanto ha complessità esponenziale nella dimensione del $QI$.
 
-Alcuni approcci alternativi proposti:
+Alcuni approcci euristici alternativi proposti:
 
 \begin{itemize}
     \item Iyengar - algoritmi genetici e ricerca stocastica incompleta.
     \item Winkler - "simulated annealing" che non garantisce qualità ed è costoso.
-    \item Fung, Wang, Yu - Top-down che specializza gni attributo
+    \item Fung, Wang, Yu - Top-down che, partendo dalla soluzione più generale e specializza iterativamente alcuni valori della soluzione corrente finchè non viola \kanon \footnote{Algoritmo determina ad ogni passo una "buona" specializzazione guidata da una metrica che compara sia \textit{information gain} che \textit{anonimity loss}}.
 \end{itemize}
 
+Essendo metodi euristici non esiste un limite di efficienza per queste soluzioni.
+
+
+
+
+\section{Algoritmi per \textunderscore CS e CG\textunderscore}
+
+Algoritmi esatti per \textunderscore CS e CG\textunderscore, operando a livello di cella, possono avere costo computazionale esponenziale nel numero di tuple della table. Per questo motivo si sfruttano algoritmi di approssimazione.
+
+La descrizione degli algoritmi è qui omessa in quanto non presentati a lezione, ma indicazione sul nome e sul costo computazionale sono riportati in fig.\ref{fig:kanon_alg}.
+
+
+
+
+
+\section{Ulteriori studi riguardo \kanon}
+
+Breve resoconto di alcuni studi riguardanti \kanon.
+
+
+\subsection{\kanon\ multidimensionale}
+
+Nella proposta originale di \kanon\ si assume che ogni valore abbia una sola generalizzazione. Tuttavia un \gen\ step potrebbe portare a diversi valori generalizzati (e.g. 91412 $\rightarrow$ 9141* \textit{oppure} 914*2) e quindi avremmo, invece che un albero, un grafo per la DGH.
+
+$\\$
+LeFevre, DeWitt e Ramakrishnan hanno proposto un modello multidimensionale NP-difficile con approssimazione greedy, sia per domini numerici che categorici.
+Complessità è O($n \log n$) con $n$ numero di tuple, e la qualità della GT è migliore rispetto alla monodimensionale.
+
+
+
+\subsection{\textit{l}-diversity}
+Qui riportata \textit{l}-diversity come presentata a lezione, in considerazione dell'\textit{homogeneity attack} e del \textit{background knowledge attack}. 
+Autori del concetto di \textit{l}-diversity sono Machanavajjhala, Gehrke, and Kifer.
+
+
+
+\subsection{Valutazione della \kanon}
+Analizzando il risultato della \kanon\ con mining, Aggarwal mostra che all'aumentare della dimensione $|QI|$ la perdita di informazione potrebbe diventare elevata (perchè la probabiità che \textit{k} tuple siano simili è molto bassa).
+
+
+\subsection{Algoritmi distribuiti}
+Anonimizzare dati distribuiti tra diverse parti interconnesse. Diverse proposte:
+
+\begin{itemize}
+    \item Jiang e Clifton: partizione verticale della table e storage in siti diversi. Ricostruzione con join tramite una chiave comune. Necessaria strategia di \kanon\ comune.
+    \item Wang, Fung e Dong: come Jiang ma strategia negoziata interattivamente tra le parti.
+    \item  Zhong, Yang e Wright: partizione orizzontale e due soluzioni di cui una prevede crypto valori sensibili e l'altra prevede \textunderscore CS.
+\end{itemize}
+
+
+
+\subsection{\kanon\ con viste multiple}
+
+\begin{definition}[Data Association] $\\$
+    Due o più attributi sono da considerare più sensibili quando i loro valori sono associati rispetto a quando questi valori appaiono separatamente.
+\end{definition}
+
+Un problema di questo tipo risulta evidente nell'esempio in fig.\ref{fig:kanon_multiple_views} in cui è facile ricostruire le associazioni \texttt{John\textunderscore Obesity} e \texttt{David\textunderscore Obesity} dalle viste $v_1$ e $v_2$.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{paper_k-anon/k-anon-mult-views.jpg}
+    \caption{Una \texttt{PT} e due sue possibili viste $v_1$ e $v_2$}
+    \label{fig:kanon_multiple_views}
+\end{figure}
+
+Yao, Wang e Jajodia mostrano che il problema è $NP^{NP}$-difficile, mentre se non ci sono dipendenze funzionali tra le viste esiste soluzione polinomiale.
+
+
+
+
+\subsection{\kanon\ con Micro-Aggregazione}
+Domingo-Ferrer e Mateo-Sanz propongono di usare Micro-Aggregation al posto di \gen e \supp.
+
+\begin{definition}[Micro-Aggregation] $\\$
+    Micro-Aggregation consiste nel: \begin{enumerate}
+        \item dividere microdata in cluster di almeno \textit{k} tuple ciascuno.
+        \item per ogni attributo, il valore medio sul cluster sostituisce il valore della tupla nel cluster.
+    \end{enumerate}
+    $\\$
+    La partizione ottimale è quella che massimizza l'homogeneity nel cluster, ossia clusterizza valori simili. Questo riduce l'information loss. 
+\end{definition}
+
+La somma dei quadrati è il metodo tradizionale per determinare il cluster.
+
+$\\$
+Essendo NP-difficile, si riduce complessità riducendo lo spazio delle soluzioni a cluster di dimensione tra $k$ e $2k$\footnote{$k$ per garantire \kanon, $2k$ per ridurre information loss.}.
+
+
+
+
+\subsection{\kanon\ per la Location Privacy}
+Solzioni che garantiscono \kanon\ non tra tuple in un database ma in un set di individui che inviano un messaggio nello stesso contesto spazio-temporale.
+
+
+
+
+\subsection{\kanon per i Protocolli di Comunicazione}
+Un protocollo di comunicazione è \textit{sender $k$-anonymous} (\textit{receiver $k$-anonymous}) se l'attaccante può rilevare solo un set di $k$ possibili \textit{sender (receiver)} er un messaggio. 

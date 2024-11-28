@@ -346,9 +346,6 @@ INPUT ./paper_k-anon/k-anon-alg.jpg
 INPUT ./paper_k-anon/k-anon-alg.jpg
 INPUT ./paper_k-anon/k-anon-alg.jpg
 INPUT ./paper_k-anon/k-anon-alg.jpg
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./paper_k-anon/set_enum_tree.jpg
@@ -360,6 +357,12 @@ INPUT ./paper_k-anon/k-anon-incognito.jpg
 INPUT ./paper_k-anon/k-anon-incognito.jpg
 INPUT ./paper_k-anon/k-anon-incognito.jpg
 INPUT ./paper_k-anon/k-anon-incognito.jpg
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
+INPUT ./paper_k-anon/k-anon-mult-views.jpg
+INPUT ./paper_k-anon/k-anon-mult-views.jpg
+INPUT ./paper_k-anon/k-anon-mult-views.jpg
+INPUT ./paper_k-anon/k-anon-mult-views.jpg
+INPUT ./paper_k-anon/k-anon-mult-views.jpg
 INPUT ./paper_microdata/MicrodataProtection.tex
 INPUT ./paper_microdata/MicrodataProtection.tex
 OUTPUT paper_microdata/MicrodataProtection.aux
@@ -428,5 +431,6 @@ INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
