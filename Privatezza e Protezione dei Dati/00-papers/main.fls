@@ -328,6 +328,8 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmitt10.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt8.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./paper_k-anon/DGH_e_DVgraph.jpg
 INPUT ./paper_k-anon/DGH_e_DVgraph.jpg
@@ -357,7 +359,6 @@ INPUT ./paper_k-anon/k-anon-incognito.jpg
 INPUT ./paper_k-anon/k-anon-incognito.jpg
 INPUT ./paper_k-anon/k-anon-incognito.jpg
 INPUT ./paper_k-anon/k-anon-incognito.jpg
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT ./paper_k-anon/k-anon-mult-views.jpg
 INPUT ./paper_k-anon/k-anon-mult-views.jpg
 INPUT ./paper_k-anon/k-anon-mult-views.jpg
@@ -433,4 +434,5 @@ INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
