@@ -303,17 +303,90 @@ Le informazioni del client formano il  \textit{Client portfolio}; è composto da
     \item \textbf{Non-atomic:} le proprietà possono essere rilasciate disgiuntamente 
     \begin{figure}[ht]
         \centering
-        \includegraphics[width=0.4\linewidth]{images/non-atomi.png}
+        \includegraphics[width=0.6\linewidth]{images/non-atomi.png}
     \end{figure}
 \end{itemize}
 
 \newpage
 \subsection{Disclosure}
-Un rilascio è un sottoinsieme the portflio del client che soddisfa:
+Un rilascio è un sottoinsieme del \textit{portfolio} del client che soddisfa:
 \begin{itemize}
     \item \textbf{Certificabilità:} ogni proprietà è certificata da una credenziale
     \item \textbf{Atomicità:} se la proprietà di una credenziale atomica è rilasciata, tutte le sue proprietà sono rilasciate 
 \end{itemize}
+
+\section{Sensibilità del portfolio}
+
+\begin{itemize}
+    \item Diverse componenti del portfolio potrebbero avere sensibilità diverse
+    
+    $\rightarrow$ l'utente potrebbe preferire il rilascio di una sulle altre
+    \item I requisiti di privacy vengono espressi usando delle \textbf{etichette di sensibilità:} 
+    \begin{itemize}
+        \item stabiliscono una gerarchia con ordine parziale $\geq$
+        \item e una composizione additiva dei valori $\oplus$ 
+        
+        $\rightarrow$ la composizione di due etichette $\lambda_1 \oplus \lambda_2$ è anch'essa un'etichetta di sensibilità 
+    \end{itemize}
+    \item Assumiamo che le etichette abbiano valori interi, e la loro composizione si ottiene attraverso l'operatore $+$
+\end{itemize}
+
+\newpage
+\subsection{Sensibilità di proprietà e credenziali}
+Specificano come il client valuta la sensibilità delle informazioni nel suo portfolio.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/cred-prop-sens.png}
+\end{figure}
+
+\begin{itemize}
+    \item A sinistra viene riportata la sensibilità associata all'\textbf{esistenza della credenziale};
+    \textit{che il mio nome sia su una carta d'identità non ha lo stesso valore di una denuncia penale}
+    \item A destra viene riportata la sensibilità della \textbf{proprietà presea singolarmente}
+\end{itemize}
+
+\newpage
+\subsection{Sensibilità delle associazioni}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/sens-ass-1.png}
+\end{figure}
+In questo caso viene riportata la sensibilità dell'associazione della credenziale 
+\textit{carta di credito} con \textit{indirizzo}; in questo caso sto aggiungendo 
+delle informazioni $\rightarrow 5$ rappresenta la sensibilità che devo aggiugere dovuta all'associazione
+
+\subsubsection{Esempio}
+Il mio \textit{nome} e \textit{nickname} presi singolarmente non sono sensibili; la loro 
+associazione però è sensibile.
+
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/sens-ass-2.png}
+\end{figure}
+In questo caso sto aggiungendo un'informazione (\textit{country}) che in realtà non mi 
+dice niente, dato che una implica l'altra
+
+$\rightarrow $ togliamo $2$ perché questa associazione non mi dice niente di nuovo
+
+\newpage
+\subsection{Disclosure Constraints}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/disclosure-constraints.png}
+\end{figure}
+Permettono di indicare quegli elementi il cui rilascio deve essere controllato.
+
+\begin{itemize}
+    \item La prima $X$ indica che il rilascio dell'associazione è \textbf{proibita}; \textit{non voglio che siano rilasciate insieme}
+    \item La seconda $X$ indica un rilascio \textbf{limitato}; al massimo $n$ (in questo caso $n=1$) elementi 
+    dell'associazione possono essere rilasciati (in questo caso al massimo $1$ tra \textit{address, phone, email})
+\end{itemize}
+
+\noindent Un rilascio è \textbf{valido} se nessun \textit{disclosure constraint} viene violato.  
+
+
 
 
 

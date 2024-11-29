@@ -1,0 +1,29 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}%
+\contentsline {subsubsection}{Privacy dell'identità degli utenti}{2}{section*.2}%
+\contentsline {section}{\numberline {1.1}Rilascio diretto}{3}{section.1.1}%
+\contentsline {subsubsection}{Esempio}{3}{section*.3}%
+\contentsline {section}{\numberline {1.2}Controllo di accesso interattivo}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Interazione senza condizioni da parte del client}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Negoziazione \textit {multi-step}}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Interazione a due step}{5}{subsection.1.2.3}%
+\contentsline {subsubsection}{Esistenti/emegenti tecnologie di supporto a ABAC}{5}{section*.4}%
+\contentsline {section}{\numberline {1.3}Preferenze degli utenti}{6}{section.1.3}%
+\contentsline {subsubsection}{\textit {Desiderata}}{6}{section*.5}%
+\contentsline {chapter}{\numberline {2}Cost-sensitive Trust Negotiation}{7}{chapter.2}%
+\contentsline {subsubsection}{Conclusioni}{8}{section*.6}%
+\contentsline {chapter}{\numberline {3}Point-based Trust Management Model}{9}{chapter.3}%
+\contentsline {subsubsection}{Conclusioni}{10}{section*.7}%
+\contentsline {chapter}{\numberline {4}Logic-based Minimal Credential Disclosure}{11}{chapter.4}%
+\contentsline {subsubsection}{Conclusioni}{13}{section*.8}%
+\contentsline {chapter}{\numberline {5}Privacy Preferences in Credential-based Interactions}{14}{chapter.5}%
+\contentsline {subsubsection}{Obiettivo}{14}{section*.9}%
+\contentsline {section}{\numberline {5.1}Client porfolio}{14}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Client Portfolio - Proprietà}{15}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Disclosure}{16}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Sensibilità del portfolio}{16}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Sensibilità di proprietà e credenziali}{17}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Sensibilità delle associazioni}{18}{subsection.5.2.2}%
+\contentsline {subsubsection}{Esempio}{18}{section*.10}%
+\contentsline {subsection}{\numberline {5.2.3}Disclosure Constraints}{20}{subsection.5.2.3}%
