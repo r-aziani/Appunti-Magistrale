@@ -46,3 +46,62 @@ Le sezioni riportano invece:
 
 \section{Concetti Base e \textit{Desiderata}}
 
+\subsection{Client Portfolio}
+
+\begin{definition}[\textit{Client} Portfolio] $\\$
+    Insieme delle informazioni che un cliente può fornire al server per avere accesso ad un servizio è racchiuso in un \textbf{Portfolio} contenente \begin{itemize}
+        \item \textbf{Credenziali} firmate da third party.
+        \item \textbf{Dichiarazioni} che comprendono proprietà non certificate dichiarate dall'utente.
+    \end{itemize} 
+\end{definition}
+
+\subsubsection{Struttura Credenziale}
+Ogni credenziale $c$ è composta da:
+\begin{itemize}
+    \item Identificatore univoco $id(c)$.
+    \item Emittente $issuer(c)$.
+    \item Un set di attributi $attributes(c)$.
+    \item La tipologia della credenziale $type(c)$.
+\end{itemize}
+
+
+\subsubsection{Gerarchia Tipologie}
+I tipi di credenziale sono organizzati tipicamente in una gerarchia radicata, dove i nodi intermedi sono astrazione delle specifiche credenziali presenti sulle foglie. Un esempio è in fig. \ref{fig:00_pref_cred_hierarchy}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg}
+    \caption{}
+    \label{fig:00_pref_cred_hierarchy}
+\end{figure}
+
+La gerarchia è nota sia al client che al server. Il server tuttavia crea richieste di credential types in quanto non può conoscere le effettive credenziali possedute dal client\footnote{Inoltre client può avere più credenziali dello stesso tipo}.
+
+\subsection{Atomicità Credenziali}
+Le credenziali si distinguono in \textbf{atomiche} e \textbf{non-atomiche}.
+
+$\\$
+Le credenziali \textbf{atomiche} sono la tipologia più comune (vedi X.509) e possono essere rilasciato solo interamente.
+Per questo anche attributi non richiesti vengono rivelati al server.
+
+$\\$
+Le credenziali \textbf{non-atomiche} permettono di limitare il rilascio di attributi rivelando selettivamente un subset degi attributi certificati dalla credenziale.
+
+$\\$
+Ovviamente le \textit{declaration} sono credenziali non-atomiche.
+
+
+\subsubsection{Attributi}
+Attributi nelle credenziali sono caratterizzati da:
+\begin{itemize}
+    \item Tipo
+    \item Nome
+    \item Valore
+\end{itemize}
+Essi possono essere \textit{credential-independent} e dipendere dal client ma non dalla credenziale, o \textit{credential-dependent} e dipendere da client e credenziale che la certifica.
+
+
+
+\subsection{Policy di Disclosure}
+
+
