@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  28 NOV 2024 12:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  29 NOV 2024 14:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -641,9 +641,14 @@ Chapter 1.
 
 
 ]
+Overfull \hbox (3.18858pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 Consideriamo Sop-pres-sione di Tu-pla. Questa "mod-era" la \OT1/cmr/m/it/10 Gen-er-al-iza-tion \OT1/cmr/m/n/10 quando
+ []
+
+
 
 [3{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<paper_k-anon/DGH_e_DVgraph.jpg, id=200, 1084.05pt x 575.90157pt>
+<paper_k-anon/DGH_e_DVgraph.jpg, id=201, 1084.05pt x 575.90157pt>
 File: paper_k-anon/DGH_e_DVgraph.jpg Graphic file (type jpg)
 <use paper_k-anon/DGH_e_DVgraph.jpg>
 Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
@@ -653,12 +658,12 @@ Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
 [4 <./paper_k-anon/DGH_e_DVgraph.jpg>]
 
 [5]
-<paper_k-anon/k-anon-tech.jpg, id=224, 1409.265pt x 576.65437pt>
+<paper_k-anon/k-anon-tech.jpg, id=228, 1409.265pt x 576.65437pt>
 File: paper_k-anon/k-anon-tech.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-tech.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-tech.jpg  used on input line 161.
 (pdftex.def)             Requested size: 276.00105pt x 112.93549pt.
-<paper_k-anon/k-anon-alg.jpg, id=226, 1109.64563pt x 380.17032pt>
+<paper_k-anon/k-anon-alg.jpg, id=230, 1109.64563pt x 380.17032pt>
 File: paper_k-anon/k-anon-alg.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-alg.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 173.
@@ -668,7 +673,7 @@ Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 173.
 [6 <./paper_k-anon/k-anon-tech.jpg> <./paper_k-anon/k-anon-alg.jpg>]
 
 [7]
-<paper_k-anon/set_enum_tree.jpg, id=242, 521.69907pt x 464.4853pt>
+<paper_k-anon/set_enum_tree.jpg, id=246, 521.69907pt x 464.4853pt>
 File: paper_k-anon/set_enum_tree.jpg Graphic file (type jpg)
 <use paper_k-anon/set_enum_tree.jpg>
 Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 261.
@@ -676,7 +681,7 @@ Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 261.
 
 
 [8 <./paper_k-anon/set_enum_tree.jpg>]
-<paper_k-anon/k-anon-incognito.jpg, id=249, 514.92375pt x 691.83469pt>
+<paper_k-anon/k-anon-incognito.jpg, id=253, 514.92375pt x 691.83469pt>
 File: paper_k-anon/k-anon-incognito.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-incognito.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-incognito.jpg  used on input line 301.
@@ -696,7 +701,7 @@ Overfull \hbox (22.78348pt too wide) in paragraph at lines 350--352
 
 
 [10 <./paper_k-anon/k-anon-incognito.jpg>]
-<paper_k-anon/k-anon-mult-views.jpg, id=269, 980.16188pt x 460.72125pt>
+<paper_k-anon/k-anon-mult-views.jpg, id=272, 980.16188pt x 460.72125pt>
 File: paper_k-anon/k-anon-mult-views.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-mult-views.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-mult-views.jpg  used on input line 380.
@@ -722,7 +727,7 @@ Overfull \hbox (14.88954pt too wide) in paragraph at lines 35--36
 []\OT1/cmr/m/n/10 Una ta-ble di mi-cro-dati e le in-for-mazioni es-terne con-tengono ru-more, riducendo
  []
 
-<paper_microdata/Fig3.png, id=292, 469.00218pt x 175.40532pt>
+<paper_microdata/Fig3.png, id=295, 469.00218pt x 175.40532pt>
 File: paper_microdata/Fig3.png Graphic file (type png)
 <use paper_microdata/Fig3.png>
 Package pdftex.def Info: paper_microdata/Fig3.png  used on input line 41.
@@ -735,12 +740,12 @@ Overfull \hbox (7.05618pt too wide) in paragraph at lines 52--54
 
 
 [14 <./paper_microdata/Fig3.png>]
-<paper_microdata/Fig4.png, id=300, 301.125pt x 127.97812pt>
+<paper_microdata/Fig4.png, id=304, 301.125pt x 127.97812pt>
 File: paper_microdata/Fig4.png Graphic file (type png)
 <use paper_microdata/Fig4.png>
 Package pdftex.def Info: paper_microdata/Fig4.png  used on input line 75.
 (pdftex.def)             Requested size: 172.5pt x 73.3154pt.
-<paper_microdata/Fig5.png, id=301, 317.68687pt x 177.66376pt>
+<paper_microdata/Fig5.png, id=305, 317.68687pt x 177.66376pt>
 File: paper_microdata/Fig5.png Graphic file (type png)
 <use paper_microdata/Fig5.png>
 Package pdftex.def Info: paper_microdata/Fig5.png  used on input line 82.
@@ -752,7 +757,7 @@ Overfull \hbox (11.77829pt too wide) in paragraph at lines 94--95
 \OT1/cmr/m/n/10 uno speci-fico re-spon-dent sia pre-sente nei sam-ple, il ris-chio di re-identificazione
  []
 
-<paper_microdata/Fig6.png, id=311, 347.79938pt x 160.34906pt>
+<paper_microdata/Fig6.png, id=314, 347.79938pt x 160.34906pt>
 File: paper_microdata/Fig6.png Graphic file (type png)
 <use paper_microdata/Fig6.png>
 Package pdftex.def Info: paper_microdata/Fig6.png  used on input line 107.
@@ -763,7 +768,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [16]
-<paper_microdata/Fig8.png, id=316, 428.35031pt x 536.75531pt>
+<paper_microdata/Fig8.png, id=319, 428.35031pt x 536.75531pt>
 File: paper_microdata/Fig8.png Graphic file (type png)
 <use paper_microdata/Fig8.png>
 Package pdftex.def Info: paper_microdata/Fig8.png  used on input line 120.
@@ -814,18 +819,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 9D96F4AB73420F543940F3BDA73C2C23;7310.
  ) 
 Here is how much of TeX's memory you used:
- 25408 strings out of 473361
- 467397 string characters out of 5725029
+ 25410 strings out of 473361
+ 467416 string characters out of 5725029
  883965 words of memory out of 5000000
- 47973 multiletter control sequences out of 15000+600000
- 568487 words of font info for 71 fonts, out of 8000000 for 9000
+ 47974 multiletter control sequences out of 15000+600000
+ 568655 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,11n,131p,2434b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (23 pages, 1079194 bytes).
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (23 pages, 1086691 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
+ 472 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
  104 named destinations out of 1000 (max. 500000)
  356 words of extra memory for PDF output out of 10000 (max. 10000000)
 
