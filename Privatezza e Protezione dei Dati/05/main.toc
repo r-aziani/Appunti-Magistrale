@@ -2,3 +2,8 @@
 \babel@toc {italian}{}\relax 
 \contentsline {chapter}{\numberline {1}Encryption}{2}{chapter.1}%
 \contentsline {subsubsection}{Approcci per accesso a diversi livelli di granularità}{2}{section*.2}%
+\contentsline {subsubsection}{Interval-based queries}{6}{section*.3}%
+\contentsline {section}{\numberline {1.1}\textit {Searchable Encryption}}{7}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}\textit {Order preserving encryption}}{7}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}\textit {Fully homomorphic encryption}}{7}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Esposizione all'inferenza}{8}{section.1.2}%

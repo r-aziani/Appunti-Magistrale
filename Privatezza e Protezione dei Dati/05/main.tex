@@ -99,13 +99,12 @@ Di base voglio avere una criptazione dei dati; il problema è il \textbf{bilanci
             \includegraphics[width=0.85\linewidth]{images/encryption/flattened-index.png}
         \end{figure}
 
-        \item \textbf{\textit{Partition-based:}} 
-        
-        $\circ$ si partiziona il dominio di un attributo 
-
-        $\circ$ a ciascuna partizione si assegna un'etichetta
-
-        $\circ$ il valore in chiaro viene sostituito dall'etichetta
+        \item \textbf{\textit{Partition-based:}}
+        \begin{enumerate}
+            \item si partiziona il dominio di un attributo
+            \item a ciascuna partizione si assegna un'etichetta
+            \item il valore in chiaro viene sostituito dall'etichetta
+        \end{enumerate}
 
         \begin{figure}[ht]
             \centering
@@ -146,15 +145,66 @@ Di base voglio avere una criptazione dei dati; il problema è il \textbf{bilanci
         \end{figure}
 
         \newpage
-        \item \textbf{\textit{Hash-based:}}
+        \item \textbf{\textit{Hash-based:}} basate sul concetto di \textit{one-way hash function}; ogni
+        attributo viene mappato ad un indice utilizzando una funzione di hash sicura.
 
+        \noindent Dat una funzione $h$ e il dominio degli attributi $D_i$, diciamo che $h$ è \textbf{sicura} se:
+        \begin{enumerate}
+            \item $\forall x, y \in D_i \implies h(x) = h(y)$ (\textbf{determinismo}) 
+            \item dati due valori $x, y \in D_i$ tali che $ x \neq y$, potremmo avere che $h(x)=h(y)$ (\textbf{collisione}, per proteggermi da attacchi di frequenza)
+            \item la distanza dei valori in chiaro deve essere \textbf{indipendente} dalla distanza dei valori di hash (\textit{strong mixing})
+        \end{enumerate}
 
-
+        \noindent Questo metodo supporta \textit{query} dove le condizioni sono espressioni booleane del tipo:
+        \begin{itemize}
+            \item $ Attribute = Value$
+            \item $Attribute_1 = Attribute_2$, se sono indicizzati con la stessa funzione di hash
+        \end{itemize}
+        
+        \noindent La traduzione funziona come nel metodo \textit{partion-based}; non 
+        sono supportate \textit{query di range}. 
     \end{itemize}
 \end{itemize}
 
+\subsubsection{Interval-based queries}
+\begin{itemize}
+    \item Le tecniche di indicizzazione che preservano l'ordine supportano 
+    query di range, ma sono esposte ad inferenza
+    \item Le tecniche di incizzazione che \textit{non} preservano l'ordine non sono esposte 
+    ad inferenza, ma non supportano query di range
+\end{itemize}
 
+$\rightarrow$ viene calcolato un $B_+ -tree$ dal client, ed ogni nodo viene criptato come un tutt'uno; successivamente 
+per rispondere alle query l'albero viene visitato (in ambiente trusted).
 
+\newpage
+\section{\textit{Searchable Encryption}}
+\subsection{\textit{Order preserving encryption}}
+\begin{itemize}
+    \item \textbf{\textit{Order Preserving Encryption Schema (OPES):}} prende in input una distribuzione target 
+    di valori per gli indici ed applica una trasformazione che preserva l'ordine e rispecchia 
+    la distribuzione di input.
+
+    \textcolor{darkgreen}{\textbf{+}} la comparazione può essere fatta direttamente sui dati criptati 
+
+    \textcolor{darkgreen}{\textbf{+}} le query non producono tuple spurie 
+
+    \textcolor{red}{\textbf{-}} vulnerabile ad attacchi di inferenza
+
+    \item \textbf{\textit{Order Preserving Encryption with Splitting and Scaling (OPESS):}}
+    
+    Questo schema crea degli indici in modo tale che la loro distribuzione delle frequenze sia piatta.
+\end{itemize}
+
+\subsection{\textit{Fully homomorphic encryption}}
+
+\begin{itemize}
+    \item Permette una performante computazione specifica sui dati criptati 
+    \item Decriptando il risultato, si ottiene lo stesso risultato delle stesse operazioni sui dati in chiaro
+\end{itemize}
+
+\newpage
+\section{Esposizione all'inferenza}
 
 
 
