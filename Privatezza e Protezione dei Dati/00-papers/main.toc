@@ -1,0 +1,45 @@
+\contentsline {section}{\numberline {0.1}Introduction}{2}{section.0.1}%
+\contentsline {chapter}{\numberline {1}\textit {k}-anonimity}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}\textit {k}-anonimity e Table \textit {k}-anonime}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}\textit {Generalization}}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}\textit {Suppression}}{5}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Generalizzazione \textit {k}-Minima}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Classificazione tecniche di \textit {k}-anonimity}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Algoritmo Samarati (AG\textunderscore TS) }{7}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Evitare il calcolo delle table generalizzate}{8}{subsection.1.4.1}%
+\contentsline {section}{\numberline {1.5}Bayardo-Agrawal: \textit {k-Optimize} (AG\textunderscore TS) }{9}{section.1.5}%
+\contentsline {section}{\numberline {1.6}LeFevre-DeWitt et al.: Incognito (AG\textunderscore TS) }{10}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Algoritmi Euristici}{10}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Algoritmi per \textunderscore CS e CG\textunderscore }{11}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Ulteriori studi riguardo \textit {k}-anonimity}{11}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}\textit {k}-anonimity\ multidimensionale}{11}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}\textit {l}-diversity}{12}{subsection.1.9.2}%
+\contentsline {subsection}{\numberline {1.9.3}Valutazione della \textit {k}-anonimity}{12}{subsection.1.9.3}%
+\contentsline {subsection}{\numberline {1.9.4}Algoritmi distribuiti}{12}{subsection.1.9.4}%
+\contentsline {subsection}{\numberline {1.9.5}\textit {k}-anonimity\ con viste multiple}{12}{subsection.1.9.5}%
+\contentsline {subsection}{\numberline {1.9.6}\textit {k}-anonimity\ con Micro-Aggregazione}{13}{subsection.1.9.6}%
+\contentsline {subsection}{\numberline {1.9.7}\textit {k}-anonimity\ per la Location Privacy}{13}{subsection.1.9.7}%
+\contentsline {subsection}{\numberline {1.9.8}\textit {k}-anonimity\ per i Protocolli di Comunicazione}{13}{subsection.1.9.8}%
+\contentsline {chapter}{\numberline {2}Protezione Microdati}{14}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduzione}{14}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Macrodata vs Microdata}{14}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Classificazione delle tecniche di protezione riguardo il Disclosure dei microdati}{14}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Tecniche di Mascheramento}{17}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Tecniche non perturbative}{17}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Tecniche perturbative}{18}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}Tecniche per la Generazione di Dati Sintetici}{20}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Misure per valutare la confidenzialità e l'utilità dei Microdati}{20}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Cloud Security: Issues and Concerns}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Summary}{23}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Introduzione}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.3}CIA nel Cloud}{23}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Problemi e Sfide}{23}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Supporting User Privacy Preferences in Digital Interactions}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduzione}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Concetti Base e \textit {Desiderata}}{25}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Client Portfolio}{25}{subsection.4.2.1}%
+\contentsline {subsubsection}{Struttura Credenziale}{25}{section*.13}%
+\contentsline {subsubsection}{Gerarchia Tipologie}{25}{section*.14}%
+\contentsline {subsection}{\numberline {4.2.2}Atomicità Credenziali}{26}{subsection.4.2.2}%
+\contentsline {subsubsection}{Attributi}{26}{section*.16}%
+\contentsline {subsection}{\numberline {4.2.3}Policy di Disclosure}{26}{subsection.4.2.3}%
