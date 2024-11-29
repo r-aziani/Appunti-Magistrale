@@ -273,6 +273,9 @@ INPUT paper_microdata/MicrodataProtection.aux
 INPUT ./paper_cloud/cloud.aux
 INPUT ./paper_cloud/cloud.aux
 INPUT paper_cloud/cloud.aux
+INPUT ./paper_user-privacy-preferences/user-privacy-preferences.aux
+INPUT ./paper_user-privacy-preferences/user-privacy-preferences.aux
+INPUT paper_user-privacy-preferences/user-privacy-preferences.aux
 OUTPUT main.aux
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -401,6 +404,12 @@ OUTPUT paper_cloud/cloud.aux
 INPUT ./paper_cloud/cloud.tex
 INPUT ./paper_cloud/cloud.tex
 INPUT paper_cloud/cloud.tex
+INPUT ./paper_user-privacy-preferences/user-privacy-preferences.tex
+INPUT ./paper_user-privacy-preferences/user-privacy-preferences.tex
+OUTPUT paper_user-privacy-preferences/user-privacy-preferences.aux
+INPUT ./paper_user-privacy-preferences/user-privacy-preferences.tex
+INPUT ./paper_user-privacy-preferences/user-privacy-preferences.tex
+INPUT paper_user-privacy-preferences/user-privacy-preferences.tex
 INPUT main.aux
 INPUT ./paper_k-anon/k-Anonymity.aux
 INPUT ./paper_k-anon/k-Anonymity.aux
@@ -411,6 +420,9 @@ INPUT paper_microdata/MicrodataProtection.aux
 INPUT ./paper_cloud/cloud.aux
 INPUT ./paper_cloud/cloud.aux
 INPUT paper_cloud/cloud.aux
+INPUT ./paper_user-privacy-preferences/user-privacy-preferences.aux
+INPUT ./paper_user-privacy-preferences/user-privacy-preferences.aux
+INPUT paper_user-privacy-preferences/user-privacy-preferences.aux
 INPUT ./main.out
 INPUT ./main.out
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

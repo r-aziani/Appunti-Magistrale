@@ -1,0 +1,48 @@
+\chapter{Supporting User Privacy Preferences in Digital Interactions}
+\label{ch.privacy_pref}
+%Alessandro
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduzione}
+Per la disponibilità dei servizi online si verifica la situazione in cui il server che fornisce il servizio e l'utente che lo richiede sono ignoti l'uno all'altro.
+Di conseguenza sistemi di access control tradizionali non possono essere adottati in quanto non adatti a scenari open.
+
+Soluzioni proposte sono basate su ABAC (Attribute-Based Access Control).
+Policy che regolamentano l'accesso ai servizi definiscono condizioni che il client richiedente deve soddisfare per avere accesso.
+
+Il server, a seguito di una richiesta di accesso risponde con le condizioni che il client deve soddisfare per essere autorizzato ad accedere al servizio.
+
+$\\$
+Per accedere il client rilascia \textbf{certificati digitali} come \textbf{credenziali} firmte da una \textbf{CA}.
+L'adozione delle credenziali nell'Access Control ha diversi vantaggi:
+\begin{itemize}
+    \item Non serve \textit{<username,password>} per ogni servizio.
+    \item Offre migliore protezione dall'acquisizione impropria dei privilegi di accesso.
+\end{itemize}
+
+$\\$
+L'uso di credenziali è stata approfonditamente studiata dal lato server con definizione di diversi \textit{policy languages}, \textit{policy engines} e strategie per la comunicazione delle consizioni di accesso.
+
+Le soluzioni trovate, sebbene potenti ed espressive, non supportano completamente gli specifici criteri di protezione dei client.
+Infatti i client necessitano di un sistema di preferenze che permetta di supportare una propria definizione di sensitivity/privacy per i propri dati.
+Queste preferenze verranno poi usate nella situazione in cui più di un subset di credenziali soddisfano la Access Control Policy definita dal server.
+
+
+
+
+Questo capitolo mostra una overview delle problematiche di privacy legate ai sistemi open, oltre che alcune soluzioni.
+Le sezioni riportano invece:
+\begin{itemize}
+    \item Concetti Base e \textit{Desiderata}
+    \item a 
+    \item V
+    \item c
+    \item d
+\end{itemize}
+
+
+\section{Concetti Base e \textit{Desiderata}}
+
