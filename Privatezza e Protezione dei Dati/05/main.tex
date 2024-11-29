@@ -120,6 +120,36 @@ Di base voglio avere una criptazione dei dati; il problema è il \textbf{bilanci
 
         dove \texttt{op}$=\{ =, <, >, \leq, \geq \}$
 
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.6\linewidth]{images/encryption/partition-based-ex.png}
+        \end{figure}
+
+        \noindent \textbf{Esecuzione delle query:}
+
+        \noindent Ogni query $Q$ sul DB in chiaro viene tradotta in:
+        \begin{enumerate}
+            \item una query $Q_s$ da eseguire sul server $\rightarrow$ query sull'indice per ottenere le tuple criptate
+            \item una query $Q_c$ da eseguire sul client $\rightarrow$ decriptare il risultato della query precedente e filtrare le tuple spurie
+        \end{enumerate}
+
+        La traduzione dovrebbe essere fatta in modo tale che il server sia responsabile 
+        della maggior parte del lavoro.
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.8\linewidth]{images/encryption/query-ex-1.png}
+        \end{figure}
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.8\linewidth]{images/encryption/query-ex-2.png}
+        \end{figure}
+
+        \newpage
+        \item \textbf{\textit{Hash-based:}}
+
+
+
     \end{itemize}
 \end{itemize}
 

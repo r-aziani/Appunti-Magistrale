@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1732891393.97424 "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex" "main.pdf" "main" 1732891396.63638 0
+["pdflatex"] 1732894135.53839 "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex" "main.pdf" "main" 1732894138.51787 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex" 1732891393.51542 5197 93a159e6d19c204632f2e7ea97fd05e9 ""
+  "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex" 1732894135.1136 6303 258d60c27536ed2b83d5915c5607eda3 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -26,6 +26,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1248133631 36554 b67dc2cfa451409e100b3fcf5f506509 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -161,12 +162,15 @@
   "images/encryption/indicizzazione.png" 1732888013.43023 106618 ab27ae6f6f629ce75bf7be73c9364f66 ""
   "images/encryption/onion.png" 1732887227.17852 35896 5676d90b68abf78d04b1d408aaad7325 ""
   "images/encryption/partion-based-index.png" 1732890835.70216 31230 fda1b85801d14cf27ec5cd24c56661ee ""
+  "images/encryption/partition-based-ex.png" 1732892294.84623 88652 212570c9321fb5d2adb2cbc584ef3d25 ""
+  "images/encryption/query-ex-1.png" 1732893606.44758 101521 5b01efcd4d50c9989d3094febfa27192 ""
+  "images/encryption/query-ex-2.png" 1732893657.60117 74138 bcc68a76ccc18e50792e9b9ae7d51b84 ""
   "images/encryption/schemas.png" 1732887024.76798 18181 2213d27a3831268c0fd77f2d6d75c319 ""
   "images/encryption/token-based-search.png" 1732886637.57758 42927 b499d8c33ec8ec51fe53dfa9f2feaebd ""
-  "main.aux" 1732891396.48241 590 78086a36bbff38a58bd0a4bb54a02f2f "pdflatex"
-  "main.out" 1732891396.48441 93 c537283869afd6cb4fe2d471c0673e17 "pdflatex"
-  "main.tex" 1732891393.51542 5197 93a159e6d19c204632f2e7ea97fd05e9 ""
-  "main.toc" 1732891396.48441 228 4cb403e3a983b967947c29dc438cf523 "pdflatex"
+  "main.aux" 1732894138.36064 590 439ad23b684f379f88400539f6aa2be6 "pdflatex"
+  "main.out" 1732894138.36164 93 c537283869afd6cb4fe2d471c0673e17 "pdflatex"
+  "main.tex" 1732894135.1136 6303 258d60c27536ed2b83d5915c5607eda3 ""
+  "main.toc" 1732894138.36264 228 4cb403e3a983b967947c29dc438cf523 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
