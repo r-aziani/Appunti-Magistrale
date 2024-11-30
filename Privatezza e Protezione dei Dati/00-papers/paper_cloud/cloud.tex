@@ -1,17 +1,52 @@
+
 \chapter{Cloud Security: Issues and Concerns}
 
-
-\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0} % RGB per un verde scuro
-
-\newpage
-
-
-\section{Summary}
-Il presente paper si pone l'obiettivo di spiegare come il garantire la sicurezza significa anche assicurare la \textit{confidenzialità}, \textit{integrità} dei dati e anche la loro \textit{disponibilità}, CIA in una parola.
-Di seguito
-
+Garantire la sicurezza significa garantire $\mathbb{C}$onfidenzialità, $\mathbb{I}$ntegrità e $\mathbb{A}$ccesso (=Disponibilità) ai dati. Nello scenario cloud tre sono i momenti chiave:
+\begin{itemize}
+    \item memorizzazione dei dati
+    \item gestione dei dati
+    \item processazione dei dati
+\end{itemize}
 \section{Introduzione}
-Nella prima parte
-\section{CIA nel Cloud}
+Usare il cloud è conveniente per benefici come ad esempio la scalabilità e l'elasticità, però comporta anche dei risbolti problematici perchè il proprietario dei dati non ne ha più il pieno controllo, con conseguente minaccia per la sicurezza che può minare la fiducia nell'adozione del cloud computing. Il NIST distingue 4 modelli di sviluppo del Cloud:
+\begin{enumerate}
+    \item \textit{privato}: mantenuto su una rete privata
+    \item \textit{pubblico}: una organizzazione offre servizi cloud a terzi
+    \item \textit{commmunity}: infrastruttura condivisa da diverse compagnie ma con interessi comuni
+    \item \textit{ibrido}: un cloud composto da una combinazione di cloud che siano $1$,$2$ oppure $3$
+\end{enumerate}
+Sempre lo stesso NIST identifica 3 modelli di servizio:
+\begin{enumerate}
+    \item \textit{IaaS}: \textbf{Infrastructure} as a Service
+    \item \textit{PaaS}: \textbf{Platform} as a Service
+    \item \textit{SaaS}: \textbf{Software} as a Service
+\end{enumerate}
+\section{$\mathbb{CIA}$ nel Cloud}
+I problemi di sicurezza possono essere classificati con il paradigma $\mathbb{CIA}$. $\mathbb{C}$ è garantire riservatezza delle informazioni salvate esternamente, $\mathbb{I}$ è garantire l'autenticità dei dati, $\mathbb{A}$ richiede che il provider soddisfi dei livelli di servizio attesi.\\
+In uno scenario complesso si richiede l'esecuzione di query sui dati e comunque operazioni in cui entra in gioco anche un rapporto di fiducia con il cloud provider (o fornitore) che può essere \textbf{completamente affidabile} (assunto in caso di cloud privati), \textbf{curioso} (archiviazione ed elaborazione coinvolgono informazioni sensibili), \textbf{pigro} (ovvero potenzialmente non affidabile nel caso in cui debba gestire info sensibili), \textbf{dannoso} o bizantino (fornitore si comporta in modo improprio nella gestione, archiviazione ed elaborazione dei dati compromettendo $\mathbb{CIA}$)
+\section{Problemi e sfide}
+Non vi è una ricetta come soluzione per preservare $\mathbb{CIA}$, però nonostante i differenti aspetti si possono considerare diversi scenari:
+\subsection{Protezione dei dati al rilascio}
+Un problema dei dati rilasciati nel cloud è garantire la loro protezione (ovvero rispettare la CIA); solitamente gli utenti devono fidarsi completamente dei cloud provider. Questi garantiscono riservatezza da esterni, ma non vi è nessuno che garantisca che il proprietario del cloud possa accedere ai miei dati personali salvati.
+\begin{itemize}
+    \item Una possibile soluzione potrebbe essere allora la \textbf{cifratura dei dati prima} di rilasciarli ai cloud provider. La cifratura quindi garantisce $\mathbb{C}$ e $\mathbb{I}$. Si preferisce la critto simmetrica. Ma usare la critto presenta problemi quando si vuole fare un \textit{recupero fine dei dati}.
+    \item Si adotta allora la frammentazione, al posto della critto, che protegge da associazioni di dati:
+    \begin{itemize}
+        \item dividendo le parti di informazioni
+        \item salvandole in frammenti separati non collegabili
+    \end{itemize}
+    \item Si può optare anche, nella versione \textit{two can keep a secret}, per fare sì che i frammenti separati siano proprio due provider non comunicanti tra loro, ciascuno dei quali detiene memorizzata una porzione di dati.
+    \item Talvolta vengono cifrati solamente gli attributi sensibili oppure non si cifra nulla se vi è fiducia nei confronti del provider.
+\end{itemize}
+$\mathbb{A}$ è invece garantita dalla replicazione dei dati su più cloud provider.
 
-\section{Problemi e Sfide}
+\subsection{Accesso a grana fine ai dati nel cloud}
+Mantenere 
+\subsection{Accesso selettivo}
+\subsection{Privacy dell'utente}
+\subsection{Privacy delle query}
+\subsection{Integrità della computazione e delle query}
+\subsection{Esecuzione delle query collaborative con provider multipli}
+\subsection{SLA e Auditing}
+\subsection{Multi-locazione e virtualizzazione}
+\section{Conclusioni}
