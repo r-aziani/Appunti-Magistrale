@@ -41,7 +41,18 @@ Un problema dei dati rilasciati nel cloud è garantire la loro protezione (ovver
 $\mathbb{A}$ è invece garantita dalla replicazione dei dati su più cloud provider.
 
 \subsection{Accesso a grana fine ai dati nel cloud}
-Mantenere 
+Mantenere i dati cifrati nel cloud impedisce la decifrazione da parte dei proprietari per eseguire query. Per realizzare questo approccio è necessario però operare query su dati cifrati, come ad esempio
+\begin{itemize}
+    \item la \textbf{crittografia omomorfica}: questa però ha svantaggi come ad es:
+        \begin{itemize}
+            \item realizzabilità solo su operazioni basilari
+            \item elevato costo computazionale
+        \end{itemize}
+    \item \textbf{CryptDB}: supporta maggiori operazioni e migliora l'efficienza rispetto alla omomorfica. In questo modello ogni relazione è cifrata a livello di colonna con diversi livelli di cifratura, ognuno dei quali supporta l'esecuzione di una specifica operazione SQL.
+    Funzionamento: quando server riceve la query, determina il livello di profondità di cifratura e il proxy invia al provider la chiave di quel livello per rimuovere i livelli soprastanti di cifratura.
+    \item Un altro approccio consiste nell'\textbf{allegare indici} ai dati cifrati per recuperare informazioni a grana fine ed eseguire query. L'indicizzazione può essere \textit{diretta} (1:1) oppure \textit{hash} (N:1) oppure \textit{piatta} (N:1). Queste tre tecniche forniscono diverse garanzie di protezione
+\end{itemize}
+
 \subsection{Accesso selettivo}
 \subsection{Privacy dell'utente}
 \subsection{Privacy delle query}
