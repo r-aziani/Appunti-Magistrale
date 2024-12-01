@@ -172,3 +172,61 @@ Esistono due soluzioni estreme per il rilascio di microdati, le quali sono:
     \item Crittare i dati originali (rimuove il rischio di disclosure e il massimo di information loss)
     \item Rilasciare i dati originali (massimo rischio di disclosure e nessun information loss)
 \end{itemize}
+$\\$
+In questa sezione andremo a descrivere alcuni dei pmetodi più importanti usati per quantificare il rischio di disclosure e di perdita di informazione (information loss).
+
+\subsection{Rischio di Disclosure}
+Generalmente ci sono due tipi di disclosure: \textit{disclosure di identità} e\textit{disclosure di attributi}. Il disclosure riguardo l'identita si occupa di una specifica identità la quale può essere linkata a tuple presenti nelle table di microdati. La disclosure riguardo gli attributi invece l'informazione che può essere spifferata di un attributo legato ad un individuo. In generale, due fattori che potrebbero avere un impatto sul disclosure di identità sono: 
+\begin{itemize}
+    \item \textit{univocità della popolazione}, ossia la probabilità di identificare un respondent, il quale è unico, con una specifica combinazione di attributi è elevata se quei attributi sono presenti nella table di microdati.
+    \item \textit{re-identificazione}, ossia, che i mcirodati rilasciati sono linkabili ad un'altra table pubblicata, dove gli \textit{identifiers} non sono stati rimossi.
+\end{itemize}
+$\\$
+Sono stati proposti diversi metodi per misurare il rischio di disclosure dei microdati rilasciati. Per esempio, \textit{la combinazione minima non sicura degli attributi} ritorna il numero degli attibuti con una combinazione unica presenti in una specifica tupla di microdati.
+Questo metodo può essere adottato solo con le tecniche di mascheramento non perturbative, e, più è alto questo valore tanto più basso sarà il rischio di disclosure.
+
+$\\$
+\textit{\textbf{Univocità}}
+$\\$
+Ogni qual volta un sample unico è anche una popolazione unica, il disclosure d'identità diventa molto più probabile. Esistono metodi differenti per valutare il rischio di univocità, e tutti i metodi si affidano alla valutazione della probabilità.
+\noindent Il primo metodo misura la probabilità dell'univocità della popolazione (\textit{population uniqueness (PU)}), ossia la probabilità che nella popolazione esista solo un individuo con una certa combinazione di valori su un determinato insieme di attributi. Questa probabilità è misurata come:
+\\ $Pr(PU)$ = $\sum_{j}I$, con $\frac{F_j = 1}{N}$, dove $N$ è la dimensione della popolazione e $F_j$ è il numero degli individui nella popolazione con la $j_{esima}$ combinazione sugli attributi considerati, e $I()$ è una funzione e \\
+$\begin{cases}
+    I(A) = 1, se A = true \\
+    0, altrimenti.
+\end{cases}$
+Il secondo metodo misura la probabilità che un sample unico \textit{sample unique (SU)} sia anche una popolazione unica \textit{(PU)}. questa probabilità è misurata come: \\
+$PR(PU|SU) = \frac{\sum_{j}I(f_j = 1, F_j = 1)}{\sum_{j}I(f_j = 1)}$,
+dove $f_j$ è il numero degli individui presenti nei sample con la $j_{esima}$ combinazione sugli attributi considerati.
+\\
+\\Questi metodi sono chiamati misure \textit{file-level} perché assegnano lo stesso rischio a tutte le tuple. Il rischio di disclosure \textit{tuple-level} è la probabilità di disclosure dell'identità di un individuo specifico.\\
+Questi tipi di misure sono state introdotte a causa della non-omogeneità del rischio di re-identificazione su un'intera tabella di microdati.\\ 
+Supponendo che ci siano $K$ combinazioni differenti dei valori legati ai quasi-identifiers. Queste combinazioni producono una partizione sia nella popolazione che nei sample. Assumendo che $F_k$ sia la frequenza della $k_{esima}$ partizione, il rischio di disclosure per una tupla presente in un sample con la $k_{esima}$ combinazione è $\frac{1}{F_k}$.
+\\ Il problema di questo metodo è che $F_k$ non è generalmente noto per la popolazione. Poiché le frequenze della distribuzione campionaria $f_k$
+sono note, si considera la distribuzione delle frequenze $F_k$, data $f_k$ ($F_k|f_k$ può essere modellata come una binomiale negativa).
+\\
+\\Si noti che l'univocità può essere utilizzata come misura del rischio di divulgazione solo solo se i microdati sono stati protetti attraverso una 
+tecnica di mascheramento non perturbativa.\\
+Le tecniche perturbative modificano i valori dei dati e quindi non è possibile stabilire correttamente la frequenza di un valore nel campione rilasciato, perché possono essere introdotte nuove combinazioni uniche e possono scomparire le combinazioni uniche originali.
+\\
+\\\textit{\textbf{Record Linkage}}
+\\
+Consiste nel trovare un match tra le tuple presenti nelle table di microdati protetti e le tuple presenti nelle fonti esterne di informazione pubbliche e non anonime. Poiché non è possibile conoscere a priori tutte le fonti esterne di informazione che possono essere utilizzate da un eventuale utente malintenzionato, viene eseguito un controllo probabilistico sui microdati protetti.\\
+È necessario adottare diversi metodi di record linkage a seconda che la tabella di microdati e le informazioni esterne abbiano o meno attributi comuni. Se ci sono attributi comuni, è necessario innanzitutto adottare una rappresentazione unica per gli attributi comuni. Ad esempio, abbreviazioni diverse nel nome di una persona porterebbero a concludere che due tuple non sono correlate, mentre in realtà si riferiscono allo stesso respondent. È quindi possibile adottare una strategia per il record linkage. I metodi di record linkage possono essere suddivisi in tre grandi categorie:
+\begin{itemize}
+    \item \textit{deterministici}: Cerca una corrispondenza esatta su uno o più attributi tra tuple di diversi set di dati. Il principale svantaggio di questo metodo è che non prende in considerazione la rilevanza dell'attributo nel trovare un collegamento.
+    
+    \item \textit{probabilistici}: Dati due dataset, $D_1$ e $D_2$, viene calcolato l'insieme di tutte le possibili coppie di tuple ($d_{1i}$, $d_{2j}$ ), dove
+    $\begin{cases}
+        d_{1i}$ $\in$ $D_1 \\
+        d_{2j}$ $\in$ $D_2. 
+    \end{cases}$ \\
+    A ogni coppia è associata una probabilità che rappresenta se la coppia è una corrispondenza reale. 
+    \begin{itemize}
+        \item Se la probabilità è inferiore a una soglia fissa $T_1$, la coppia viene scartata perché le tuple sono considerate non linked
+        \item Se la probabilità è superiore a una seconda soglia fissa $T_2$, la coppia è considerata una corrispondenza reale
+        \item Se la probabilità è compresa tra $T_1$ e $T_2$, è necessaria una valutazione umana per verificare se rappresenta una corrispondenza o meno. Tale probabilità viene calcolata considerando diversi pesi per i vari attributi e l'accordo o l'accordo parziale sui valori degli attributi. I pesi associati agli attributi e le due soglie $T_1$ e $T_2$ sono stabiliti dal proprietario dei dati.
+    \end{itemize}
+    
+    \item \textit{basati sulla distanza}: Dati due insiemi di dati, $D_1$ e $D_2$, ogni tupla $d_{1i} \in D_1$ viene abbinata alla tupla più vicina $d_{2j} \in D_2$. Questo metodo richiede la definizione di una funzione di distanza $f$ tra coppie di tuple. Per esempio, la definizione di $f$ può sfruttare funzioni di distanza definite sugli attributi e può assegnare pesi diversi a ciascun attributo, a seconda della sua importanza nel processo di link. Un esempio di funzione di distanza è la \textit{Distanza Euclidea}, che considera ogni tupla come un vettore e assegna lo stesso peso a ogni attributo. Questo metodo di record linkage non è adatto agli attributi categorici, perché è difficile definire la distanza tra due categorie, in particolare se il loro dominio non è ordinato.
+\end{itemize}
