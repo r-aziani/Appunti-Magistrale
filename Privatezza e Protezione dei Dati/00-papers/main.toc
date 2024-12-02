@@ -56,3 +56,7 @@
 \contentsline {subsection}{\numberline {4.2.2}Atomicità Credenziali}{33}{subsection.4.2.2}%
 \contentsline {subsubsection}{Attributi}{33}{section*.16}%
 \contentsline {subsection}{\numberline {4.2.3}Policy di Disclosure}{33}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Trust Negotiation}{34}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Client Privacy Preferences}{34}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Preferenze Privacy del Server}{35}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}Cost-Sensitive Trust Negotiation }{35}{section.4.3}%
