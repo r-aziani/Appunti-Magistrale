@@ -116,7 +116,7 @@ Questa interazione si basa tipicamente sul rilascio di credenziali, spesso subor
 
 Questa sequenza di scambi di credenziali è definita \textbf{strategia} e soddisfa le policy di server e client.
 
-Alcune strategie adottate permettono il rilascio di credenziali solo se esiste una \textit{strategia di successo} (successfull strategy) che garantisce l'accesso al servizio, mentre altre rilasciano credenziali appena sono richieste.
+Alcune strategie adottate permettono il rilascio di credenziali solo se esiste una \textit{strategia di successo} (successful strategy) che garantisce l'accesso al servizio, mentre altre rilasciano credenziali appena sono richieste.
 
 $\\$
 Il fatto che esistano preferenze sul rilascio di credenziali, sia da parte del server che del client, comporta che le successful strategies non siano tutte equivalenti. 
@@ -162,4 +162,63 @@ Il sistema lato server deve considerare:
 
 
 \section{Cost-Sensitive Trust Negotiation }
-Sensibilità espressa con costo $w(c)$ 
+Sensibilità espressa con costo $w(c)$ associata ad ogni credenziale $c$ nel portfolio e con ogni policy di access control $p$.
+$p$ viene definita come espressione booleana sulle credenziali della controparte, mentre i valori booleani delle credenziali $c$ sono espressi come $vero$ se già rivelati, $false$ altrimenti.
+
+$\\$
+Il costo di sensibilità, definito da utente, modella quanto l'owner ritiene sensibile il rilascio della credenziale e delle informazioni sensibili che certifica.
+
+In fig. \ref{fig:pref_cost_example} un esempio di portfolio per client e server.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{paper_user-privacy-preferences/00_pref_cost_tab_example.jpg}
+    \caption{Due esempi di portfolio con policy di rilascio}
+    \label{fig:pref_cost_example}
+\end{figure}
+
+L'obbiettivo per client e serveer è quindi quello di minimizzare il costo di credenziali e policy scambiate \textbf{in una strategia di negoziazione che ha successo}.
+
+
+\subsection{Minimizzare il Costo}
+Il problema della minimizzazione del costo viene formulata come segue:
+
+\begin{definition}[Problema del Minimo Costo di Sensibilità] $\\$
+    Dati: \begin{itemize}
+        \item $C_s$ set di credenziali e servizi server;
+        \item $P_s$ set di policy server;
+        \item $C_c$ set di credenziali client;
+        \item $P_c$ set policy client;
+        \item $w : \, C_s \cup P_s \cup C_c \cup P_c \, \rightarrow \mathbb{R}$ funzione costo;
+        \item $s \in Cs$ il servizio richiesto.
+    \end{itemize}
+    Per minimizzare il costo in una successful strategy occorre trovare una sequenza di scambio tale che:
+    \begin{enumerate}
+        \item $s$ è rilasciato al client;
+        \item ogni policy è soddisfatta prima del rilascio della corrispettiva credenziale;
+        \item la somma dei costi è \textbf{minima}.
+    \end{enumerate}
+\end{definition}
+
+\noindent Il problema è NP-difficile e con costo esponenziale nel numero di input(credenziali e policy).
+Tuttavia due soluzioni euristiche (non ottimali) ottengono una buona soluzione con costo polinomiale. 
+Queste considerano o meno il costo delle policy e sono brevemente\footnote{La completa descrizione degli algoritmi penso esuli dallo scope di questo riassunto} descritte qui di seguito:
+
+\subsubsection{Senza Costo delle Policy}
+Le policy non sono associate ad un costo, quindi possono essere pubblicate liberamente.
+
+$\\$
+Viene definito il DAG \textbf{policy graph $G(V,A,w)$} che modella le policy di rilascio delle credenziali sia lato server che lato client.
+
+Un esempio del grafo è riportato in fig.\ref{fig:pref_policy_graph} che segue:
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{paper_user-privacy-preferences/00_pref_policy_graph.jpg}
+    \caption{Policy graph e suo DAG minimo.}
+    \label{fig:pref_policy_graph}
+\end{figure}
+
+Il primo step riguarda sempre la disclosure delle policy, e ciò permette di costruire il grafo.
+
+$\\$
+FFormalmente il problema si riduce quindi al calcolo del DAG minimo.
