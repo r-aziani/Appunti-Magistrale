@@ -1,6 +1,3 @@
-
-\chapter{Cloud Security: Issues and Concerns}
-
 Garantire la sicurezza significa garantire $\mathbb{C}$onfidenzialità, $\mathbb{I}$ntegrità e $\mathbb{A}$ccesso (=Disponibilità) ai dati. Nello scenario cloud tre sono i momenti chiave:
 \begin{itemize}
     \item memorizzazione dei dati
@@ -50,14 +47,36 @@ Mantenere i dati cifrati nel cloud impedisce la decifrazione da parte dei propri
         \end{itemize}
     \item \textbf{CryptDB}: supporta maggiori operazioni e migliora l'efficienza rispetto alla omomorfica. In questo modello ogni relazione è cifrata a livello di colonna con diversi livelli di cifratura, ognuno dei quali supporta l'esecuzione di una specifica operazione SQL.
     Funzionamento: quando server riceve la query, determina il livello di profondità di cifratura e il proxy invia al provider la chiave di quel livello per rimuovere i livelli soprastanti di cifratura.
-    \item Un altro approccio consiste nell'\textbf{allegare indici} ai dati cifrati per recuperare informazioni a grana fine ed eseguire query. L'indicizzazione può essere \textit{diretta} (1:1) oppure \textit{hash} (N:1) oppure \textit{piatta} (N:1). Queste tre tecniche forniscono diverse garanzie di protezione
+    \item Un altro approccio consiste nell'\textbf{allegare indici} ai dati cifrati per recuperare informazioni a grana fine ed eseguire query. L'indicizzazione può essere \textit{diretta} (1:1) oppure \textit{hash} (N:1) oppure \textit{piatta} (N:1). Queste tre tecniche forniscono diverse garanzie di protezione. Quella hash e piatta garantiscono migliore riservatezza.
 \end{itemize}
 
-\subsection{Accesso selettivo}
+\subsection{Accesso selettivo ai dati nel cloud}
+Idea è che differenti utenti possano avere differenti viste dei dati. Si parla allora della creazione di vere e proprie ACL, spesso però sono delegate al provider (che medierà ogni richiesta di accesso) e questo richiede fiducia da parte del cliente. Se non vi è totale fiducia si può combinare ACL con crittografia con chiavi diverse, a seconda delle autorizzazioni che si detengono all'atto della richiesta di accesso.
+Una possibile soluzione al problema del cambio di autorizzazioni nelle ACL è dato dalla \textit{sovracrittografia}.\\
+Inoltre, per alleggerire il carico computazionale, si può operare crittografia basata su attributi (ABE), critto a chiave pubblica che regola l'accesso ai dati in base agli attributi descrittivi associati ai dati stessi.
 \subsection{Privacy dell'utente}
+Idea è di consentire l'accesso ai dati a utenti non registrati nel sistema, cioè senza che dichiarino la propria identità. L'accesso deve essere quindi basato sulle proprietà degli utenti e non sull'identità. Tale accesso può essere basato su:
+\begin{itemize}
+    \item attributi
+    \item credenziali
+    \item certificati
+\end{itemize}
 \subsection{Privacy delle query}
+In alcuni scenari non sono privati solo i dati o gli utenti, ma anche gli accessi che questi ultimi fanno per accedere ai dati. Una soluzione è Private Information Retrieval, che però ha un alto costo computazionale. Idea è prelevare l'i-esimo bit di una stringa senza rivelare al server quale bit si sia prelevato. Una soluzione meno onerosa è \textbf{RAM Oblivious}: \textit{ORAM} e \textit{PathORAM}, basati su una struttura dati \textit{gerarchica} e \textit{dinamica} basata su chiave (detta \textit{indice Shuffle}) modifica dinamicamente (shuffling) ad ogni accesso la posizione fisica dei dati, distruggendo la corrispondenza statica dati-blocchi fisici di memorizzazione. Viene creato un B+ albero contiene nodi con blocchi effettivi e blocchi fittizi per creare confusione al provider affinchè non rintracci il blocco mirato. L'indice di Shuffle predispone $n$ ricerche false per non fare capire quale elemento si sia cercato veramente.
 \subsection{Integrità della computazione e delle query}
-\subsection{Esecuzione delle query collaborative con provider multipli}
+In caso di mancata fiducia con il provider, il cliente deve poter verificare che il risultato di una query sia \textit{corretto} (= risultato calcolato sui dati originari), \textit{completo} (= non mancano dati dal risultato) e \textit{fresco} (= query è stata eseguita sulla versione più recente dei dati).\\
+Esistono soluzioni:
+\begin{itemize}
+    \item \textbf{deterministiche}: strutture dati autentiche come ad es. schemi di concatenamento delle firme (consentono la verifica di ordinamento tra le tuple $\xrightarrow{}$ verifica dell'integrità delle query) e Merkle hash tree (organizza i dati in una struttura ad albero basandosi su un attributo con cui si verifica il risultato della query).
+    \item \textbf{probabilistiche}: come ad esempio l'inserimento di \textit{tuple false} nei dati, \textit{replica} di dati, \textit{pre-calcolo dei token} associati ai risultati di una query.\\
+    La probabilità di trovare una compromissione dell'integrità dipende dalla quantità di controlli applicati.\\
+    Una possibile soluzione per la valutazione dell'integrità dei join calcolati da un provider non attendibile è usare server di archiviazione per inserire informazioni di controllo    
+\end{itemize}
+\subsection{Esecuzione collaborativa delle query con provider multipli}
+Scenario in cui ci sono più provider e anche più proprietari dei dati. Importante è garantire che le informazioni non vengano rese accessibili, rilasciate o trapelate: occorre un rilascio selettivo dei dati. [...]
 \subsection{SLA e Auditing}
+SLA è un accordo contrattuale che specifica le performance e disponibilità che un provider deve mantenere. In passato SLA era sinonimo di disponibilità, tempo di risposta,...) oggi indica anche criteri di sicurezza (crittografia, protezione perimetrale)
 \subsection{Multi-locazione e virtualizzazione}
+Multi-locazione significa capacità di fornire servizi informatici a diversi utenti usando infrastruttura cloud comune. Ogni utente dell'infrastruttura cloud condivide risorse di calcolo, come memoria e archiviazione... attività che vengono ben coordinate grazie alla virtualizzazione, che offre grande flessibilità ma introduce problemi di sicurezza come ad esempio \textbf{colpire} l'hypervisor (= sw che crea e coordina le macchine virtuali), riguardare l'\textbf{allocazione/deallocazione} delle risorse. Il rischio è quello di perdere informazioni in modo improprio se le risorse virtuali non sono isolate nel loro assegnamento al singolo utente 
 \section{Conclusioni}
+La rapida crescita di piattaforme cloud sollecita la considerazione di problemi e preoccupazioni riguardanti la sicurezza in questo scenario, soprattutto per quanto riguarda $\mathbb{CIA}$.

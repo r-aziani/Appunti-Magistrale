@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.22)  1 DEC 2024 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.22)  3 DEC 2024 12:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -642,7 +642,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.tocpdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 ...urity: Issues and Concerns}{22}{chapter.3}
+l.34 ...ne {2.9}Problemi e sfide}{23}{section.2.9}
                                                   % [1
 
 ])
@@ -664,30 +664,30 @@ Overfull \hbox (3.18858pt too wide) in paragraph at lines 93--94
  []
 
 [4]
-<paper_k-anon/DGH_e_DVgraph.jpg, id=319, 1084.05pt x 575.90157pt>
+<paper_k-anon/DGH_e_DVgraph.jpg, id=314, 1084.05pt x 575.90157pt>
 File: paper_k-anon/DGH_e_DVgraph.jpg Graphic file (type jpg)
 <use paper_k-anon/DGH_e_DVgraph.jpg>
 Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
 (pdftex.def)             Requested size: 172.5pt x 91.63644pt.
  [5 <./paper_k-anon/DGH_e_DVgraph.jpg>] [6]
-<paper_k-anon/k-anon-tech.jpg, id=348, 1409.265pt x 576.65437pt>
+<paper_k-anon/k-anon-tech.jpg, id=343, 1409.265pt x 576.65437pt>
 File: paper_k-anon/k-anon-tech.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-tech.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-tech.jpg  used on input line 161.
 (pdftex.def)             Requested size: 276.00105pt x 112.93549pt.
-<paper_k-anon/k-anon-alg.jpg, id=350, 1109.64563pt x 380.17032pt>
+<paper_k-anon/k-anon-alg.jpg, id=345, 1109.64563pt x 380.17032pt>
 File: paper_k-anon/k-anon-alg.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-alg.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 173.
 (pdftex.def)             Requested size: 276.00105pt x 94.56087pt.
  [7 <./paper_k-anon/k-anon-tech.jpg> <./paper_k-anon/k-anon-alg.jpg>] [8]
-<paper_k-anon/set_enum_tree.jpg, id=365, 521.69907pt x 464.4853pt>
+<paper_k-anon/set_enum_tree.jpg, id=360, 521.69907pt x 464.4853pt>
 File: paper_k-anon/set_enum_tree.jpg Graphic file (type jpg)
 <use paper_k-anon/set_enum_tree.jpg>
 Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 261.
 (pdftex.def)             Requested size: 137.9979pt x 122.86122pt.
  [9 <./paper_k-anon/set_enum_tree.jpg>]
-<paper_k-anon/k-anon-incognito.jpg, id=372, 514.92375pt x 691.83469pt>
+<paper_k-anon/k-anon-incognito.jpg, id=367, 514.92375pt x 691.83469pt>
 File: paper_k-anon/k-anon-incognito.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-incognito.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-incognito.jpg  used on input line 301.
@@ -703,7 +703,7 @@ Overfull \hbox (22.78348pt too wide) in paragraph at lines 350--352
  []
 
 [11 <./paper_k-anon/k-anon-incognito.jpg>]
-<paper_k-anon/k-anon-mult-views.jpg, id=391, 980.16188pt x 460.72125pt>
+<paper_k-anon/k-anon-mult-views.jpg, id=386, 980.16188pt x 460.72125pt>
 File: paper_k-anon/k-anon-mult-views.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-mult-views.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-mult-views.jpg  used on input line 380.
@@ -723,7 +723,7 @@ Overfull \hbox (14.88954pt too wide) in paragraph at lines 35--36
 []\OT1/cmr/m/n/10 Una ta-ble di mi-cro-dati e le in-for-mazioni es-terne con-tengono ru-more, riducendo
  []
 
-<paper_microdata/Fig3.png, id=414, 469.00218pt x 175.40532pt>
+<paper_microdata/Fig3.png, id=409, 469.00218pt x 175.40532pt>
 File: paper_microdata/Fig3.png Graphic file (type png)
 <use paper_microdata/Fig3.png>
 Package pdftex.def Info: paper_microdata/Fig3.png  used on input line 41.
@@ -734,12 +734,12 @@ Overfull \hbox (7.05618pt too wide) in paragraph at lines 52--54
  []
 
 [15 <./paper_microdata/Fig3.png>]
-<paper_microdata/Fig4.png, id=422, 301.125pt x 127.97812pt>
+<paper_microdata/Fig4.png, id=417, 301.125pt x 127.97812pt>
 File: paper_microdata/Fig4.png Graphic file (type png)
 <use paper_microdata/Fig4.png>
 Package pdftex.def Info: paper_microdata/Fig4.png  used on input line 75.
 (pdftex.def)             Requested size: 172.5pt x 73.3154pt.
-<paper_microdata/Fig5.png, id=423, 317.68687pt x 177.66376pt>
+<paper_microdata/Fig5.png, id=418, 317.68687pt x 177.66376pt>
 File: paper_microdata/Fig5.png Graphic file (type png)
 <use paper_microdata/Fig5.png>
 Package pdftex.def Info: paper_microdata/Fig5.png  used on input line 82.
@@ -749,7 +749,7 @@ Overfull \hbox (11.77829pt too wide) in paragraph at lines 94--95
 \OT1/cmr/m/n/10 uno speci-fico re-spon-dent sia pre-sente nei sam-ple, il ris-chio di re-identificazione
  []
 
-<paper_microdata/Fig6.png, id=432, 347.79938pt x 160.34906pt>
+<paper_microdata/Fig6.png, id=427, 347.79938pt x 160.34906pt>
 File: paper_microdata/Fig6.png Graphic file (type png)
 <use paper_microdata/Fig6.png>
 Package pdftex.def Info: paper_microdata/Fig6.png  used on input line 107.
@@ -758,7 +758,7 @@ Package pdftex.def Info: paper_microdata/Fig6.png  used on input line 107.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
-<paper_microdata/Fig8.png, id=437, 428.35031pt x 536.75531pt>
+<paper_microdata/Fig8.png, id=432, 428.35031pt x 536.75531pt>
 File: paper_microdata/Fig8.png Graphic file (type png)
 <use paper_microdata/Fig8.png>
 Package pdftex.def Info: paper_microdata/Fig8.png  used on input line 120.
@@ -782,41 +782,38 @@ Overfull \hbox (16.61452pt too wide) in paragraph at lines 163--163
 \openout2 = `paper_cloud/cloud.aux'.
 
  (./paper_cloud/cloud.tex
-Chapter 3.
-
-Overfull \hbox (10.55608pt too wide) in paragraph at lines 11--12
+Overfull \hbox (10.55608pt too wide) in paragraph at lines 8--9
 \OT1/cmr/m/n/10 Usare il cloud ^^Re con-ve-niente per ben-efici come ad es-em-pio la scal-a-bilit^^Ra e l'elasticit^^Ra,
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 24.
+(hyperref)                removing `math shift' on input line 21.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 24.
+(hyperref)                removing `math shift' on input line 21.
 
 [22
 
 
 
-
 ]
-Overfull \hbox (1.46498pt too wide) in paragraph at lines 32--33
+Overfull \hbox (1.46498pt too wide) in paragraph at lines 29--30
 []\OT1/cmr/m/n/10 Una pos-si-bile soluzione potrebbe es-sere al-lora la \OT1/cmr/bx/n/10 cifratura dei dati prima
  []
 
-[23]
-Overfull \hbox (6.0562pt too wide) in paragraph at lines 51--53
+
+Overfull \hbox (6.0562pt too wide) in paragraph at lines 48--50
 \OT1/cmr/m/n/10 colonna con di-versi liv-elli di cifratura, og-nuno dei quali sup-porta l'esecuzione
  []
 
-) [24]
+[23] [24] [25]) [26]
 \openout2 = `paper_user-privacy-preferences/user-privacy-preferences.aux'.
 
  (./paper_user-privacy-preferences/user-privacy-preferences.tex
-Chapter 4.
-[25
+Chapter 3.
+[27
 
 
 
@@ -826,28 +823,28 @@ Overfull \hbox (26.71408pt too wide) in paragraph at lines 51--52
 []\OT1/cmr/bx/it/10 Dichiarazioni \OT1/cmr/m/it/10 che com-pren-dono pro-priet^^Ra non cer-tifi-cate dichiarate dall'utente. 
  []
 
-<paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg, id=487, 1081.79156pt x 523.9575pt>
+<paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg, id=490, 1081.79156pt x 523.9575pt>
 File: paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg Graphic file (type jpg)
 <use paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg>
 Package pdftex.def Info: paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg  used on input line 70.
 (pdftex.def)             Requested size: 276.00105pt x 133.67535pt.
-[26]) [27 <./paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg>] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux) (./paper_user-privacy-preferences/user-privacy-preferences.aux))
+[28]) [29 <./paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg>] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux) (./paper_user-privacy-preferences/user-privacy-preferences.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B95B9B3576CB95A51990B11CEB0677FB;10501.
+(rerunfilecheck)             Checksum: E283EF865EF9F891AEC066FE3464BA0E;10373.
  ) 
 Here is how much of TeX's memory you used:
  26050 strings out of 478287
- 484151 string characters out of 5849288
- 785702 words of memory out of 5000000
- 43605 multiletter control sequences out of 15000+600000
+ 484147 string characters out of 5849288
+ 785701 words of memory out of 5000000
+ 43604 multiletter control sequences out of 15000+600000
  483871 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,11n,131p,1204b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 91i,12n,131p,1204b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (28 pages, 1171441 bytes).
+Output written on main.pdf (30 pages, 1177213 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 534 compressed objects within 6 object streams
- 138 named destinations out of 1000 (max. 500000)
- 481 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 639 PDF objects out of 1000 (max. 8388607)
+ 536 compressed objects within 6 object streams
+ 139 named destinations out of 1000 (max. 500000)
+ 473 words of extra memory for PDF output out of 10000 (max. 10000000)
 
