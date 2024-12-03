@@ -206,9 +206,33 @@ per rispondere alle query l'albero viene visitato (in ambiente trusted).
 \newpage
 \section{Esposizione all'inferenza}
 
+Ci sono due requisiti conflittuali quando si parla di 
+\textit{indicizzare} dati:
+\begin{itemize}
+    \item gli indici dovrebbero fornire una \textbf{esecuzione delle query efficiente}
+    \item gli indici non dovrebbero aprire porte ad attacchi di \textbf{inferenza} e \textit{linking}
+\end{itemize}
 
+$\rightarrow$ diventa importante misurare quantitativamente il livello di esposizione dovuto 
+alla pubblicazione degli indici:
 
+\centering $\epsilon =  $ \textit{Coefficiente di Esposizione}
 
+\noindent La computazione del \textit{Coefficiente di Esposizione} dipende da diversi fattori:
+\begin{itemize}
+    \item \textbf{Metodo di incizzazione utilizzato}
+    \begin{itemize}
+        \item \textit{direct encryption}
+        \item \textit{hashing}
+    \end{itemize}
+    \item \textbf{Conoscenza pregressa dell'attaccante}
+    \begin{itemize}
+        \item $Freq + DB^k$
+        \item $DB + DB^k$
+    \end{itemize}
+
+    \noindent In entrambi i casi l'attaccante può risalire alla funzione di incizzazione.
+\end{itemize}
 
 
 
