@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.22)  3 DEC 2024 12:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.22)  3 DEC 2024 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -402,9 +402,17 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-\c@definition=\count303
-\c@condition=\count304
+)) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen260
+\enit@toks=\toks34
+\enit@inbox=\box63
+\enit@count@id=\count303
+\enitdp@description=\count304
+)
+\c@definition=\count305
+\c@condition=\count306
  (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2021/11/01 v4.49 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
@@ -412,19 +420,19 @@ Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
  (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks34
-\XKV@tempa@toks=\toks35
+\XKV@toks=\toks35
+\XKV@tempa@toks=\toks36
 )
-\XKV@depth=\count305
+\XKV@depth=\count307
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2021/10/15 v2.07 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count306
+\etb@tempcnta=\count308
 )
-\@glsmfirst=\toks36
-\@glsmrest=\toks37
+\@glsmfirst=\toks37
+\@glsmrest=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/xfor/xfor.sty
@@ -433,25 +441,25 @@ Package: xfor 2009/02/05 v1.05 (NLCT)
 Package: datatool-base 2019/09/27 v2.32 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count307
+\c@su@anzahl=\count309
 ) (/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2019/09/27 v2.32 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
 Package: fp 1995/04/02
  `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count308
+\actioncount=\count310
 ) (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count309
-\FP@xia=\count310
-\FP@xib=\count311
-\FP@xfa=\count312
-\FP@xfb=\count313
-\FP@rega=\count314
-\FP@regb=\count315
-\FP@regs=\count316
-\FP@times=\count317
+\FP@xs=\count311
+\FP@xia=\count312
+\FP@xib=\count313
+\FP@xfa=\count314
+\FP@xfb=\count315
+\FP@rega=\count316
+\FP@regb=\count317
+\FP@regs=\count318
+\FP@times=\count319
 ) (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
 ) (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
@@ -464,7 +472,7 @@ Package: fp-trigo 1995/04/14
 Package: fp-pas 1994/08/29
 ) (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count318
+\FPseed=\count320
 ) (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
 ) (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
@@ -472,92 +480,92 @@ Package: fp-upn 1996/10/21
 ) (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks38
-\@dtl@tmpcount=\count319
-\dtl@tmplength=\skip53
-\dtl@sortresult=\count320
-\@dtl@numgrpsepcount=\count321
-\@dtl@datatype=\count322
-\dtl@codeA=\count323
-\dtl@codeB=\count324
-\@dtl@foreach@level=\count325
+\@dtl@toks=\toks39
+\@dtl@tmpcount=\count321
+\dtl@tmplength=\skip54
+\dtl@sortresult=\count322
+\@dtl@numgrpsepcount=\count323
+\@dtl@datatype=\count324
+\dtl@codeA=\count325
+\dtl@codeB=\count326
+\@dtl@foreach@level=\count327
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-307.sty
 Package: glossaries-compatible-307 2021/11/01 v4.49 (NLCT)
 )
-\gls@level=\count326
-\@gls@tmpb=\toks39
-\gls@tmplen=\skip54
-\glskeylisttok=\toks40
-\glslabeltok=\toks41
-\glsshorttok=\toks42
-\glslongtok=\toks43
+\gls@level=\count328
+\@gls@tmpb=\toks40
+\gls@tmplen=\skip55
+\glskeylisttok=\toks41
+\glslabeltok=\toks42
+\glsshorttok=\toks43
+\glslongtok=\toks44
  (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
 Package: glossary-hypernav 2021/11/01 v4.49 (NLCT)
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 Package: glossary-list 2021/11/01 v4.49 (NLCT)
-\glslistdottedwidth=\skip55
+\glslistdottedwidth=\skip56
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
 Package: glossary-long 2021/11/01 v4.49 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip56
-\LTright=\skip57
-\LTpre=\skip58
-\LTpost=\skip59
-\LTchunksize=\count327
-\LTcapwidth=\dimen260
-\LT@head=\box63
-\LT@firsthead=\box64
-\LT@foot=\box65
-\LT@lastfoot=\box66
-\LT@gbox=\box67
-\LT@cols=\count328
-\LT@rows=\count329
-\c@LT@tables=\count330
-\c@LT@chunks=\count331
-\LT@p@ftn=\toks44
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
+\LTchunksize=\count329
+\LTcapwidth=\dimen261
+\LT@head=\box64
+\LT@firsthead=\box65
+\LT@foot=\box66
+\LT@lastfoot=\box67
+\LT@gbox=\box68
+\LT@cols=\count330
+\LT@rows=\count331
+\c@LT@tables=\count332
+\c@LT@chunks=\count333
+\LT@p@ftn=\toks45
 )
-\glsdescwidth=\skip60
-\glspagelistwidth=\skip61
+\glsdescwidth=\skip61
+\glspagelistwidth=\skip62
 ) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
 Package: glossary-super 2021/11/01 v4.49 (NLCT)
  (/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
-\c@tracingst=\count332
-\ST@wd=\dimen261
-\ST@rightskip=\skip62
-\ST@leftskip=\skip63
-\ST@parfillskip=\skip64
-\ST@pageleft=\dimen262
-\ST@headht=\dimen263
-\ST@tailht=\dimen264
-\ST@pagesofar=\dimen265
-\ST@pboxht=\dimen266
-\ST@lineht=\dimen267
-\ST@prevht=\dimen268
-\ST@toadd=\dimen269
-\ST@dimen=\dimen270
-\ST@pbox=\box68
+\c@tracingst=\count334
+\ST@wd=\dimen262
+\ST@rightskip=\skip63
+\ST@leftskip=\skip64
+\ST@parfillskip=\skip65
+\ST@pageleft=\dimen263
+\ST@headht=\dimen264
+\ST@tailht=\dimen265
+\ST@pagesofar=\dimen266
+\ST@pboxht=\dimen267
+\ST@lineht=\dimen268
+\ST@prevht=\dimen269
+\ST@toadd=\dimen270
+\ST@dimen=\dimen271
+\ST@pbox=\box69
 )) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
 Package: glossary-tree 2021/11/01 v4.49 (NLCT)
-\glstreeindent=\skip65
+\glstreeindent=\skip66
 )) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen271
-\captionmargin@=\dimen272
-\captionwidth=\dimen273
-\caption@tempdima=\dimen274
-\caption@indent=\dimen275
-\caption@parindent=\dimen276
-\caption@hangindent=\dimen277
+\captionmargin=\dimen272
+\captionmargin@=\dimen273
+\captionwidth=\dimen274
+\caption@tempdima=\dimen275
+\caption@indent=\dimen276
+\caption@parindent=\dimen277
+\caption@hangindent=\dimen278
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count333
-\c@continuedfloat=\count334
+\c@caption@flags=\count335
+\c@continuedfloat=\count336
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
  (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -565,53 +573,53 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 )
 Package caption Info: supertabular package is loaded.
 )
-\c@subfigure=\count335
-\c@subtable=\count336
+\c@subfigure=\count337
+\c@subtable=\count338
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count337
-\l__pdf_internal_box=\box69
+\l__color_backend_stack_int=\count339
+\l__pdf_internal_box=\box70
 ) (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux) (./paper_user-privacy-preferences/user-privacy-preferences.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count338
-\scratchdimen=\dimen278
-\scratchbox=\box70
-\nofMPsegments=\count339
-\nofMParguments=\count340
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count341
-\MPscratchDim=\dimen279
-\MPnumerator=\count342
-\makeMPintoPDFobject=\count343
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count340
+\scratchdimen=\dimen279
+\scratchbox=\box71
+\nofMPsegments=\count341
+\nofMParguments=\count342
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count343
+\MPscratchDim=\dimen280
+\MPnumerator=\count344
+\makeMPintoPDFobject=\count345
+\everyMPtoPDFconversion=\toks47
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 24.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -619,22 +627,22 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count344
+\c@section@level=\count346
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -642,7 +650,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.tocpdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 ...ne {2.9}Problemi e sfide}{23}{section.2.9}
+l.34 ...ita di Informazione}{26}{subsection.2.6.3}
                                                   % [1
 
 ])
@@ -654,7 +662,7 @@ l.34 ...ne {2.9}Problemi e sfide}{23}{section.2.9}
 
  (./paper_k-anon/k-Anonymity.tex
 Chapter 1.
-\c@corol=\count345
+\c@corol=\count347
 [3
 
 
@@ -664,30 +672,30 @@ Overfull \hbox (3.18858pt too wide) in paragraph at lines 93--94
  []
 
 [4]
-<paper_k-anon/DGH_e_DVgraph.jpg, id=314, 1084.05pt x 575.90157pt>
+<paper_k-anon/DGH_e_DVgraph.jpg, id=356, 1084.05pt x 575.90157pt>
 File: paper_k-anon/DGH_e_DVgraph.jpg Graphic file (type jpg)
 <use paper_k-anon/DGH_e_DVgraph.jpg>
 Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
 (pdftex.def)             Requested size: 172.5pt x 91.63644pt.
  [5 <./paper_k-anon/DGH_e_DVgraph.jpg>] [6]
-<paper_k-anon/k-anon-tech.jpg, id=343, 1409.265pt x 576.65437pt>
+<paper_k-anon/k-anon-tech.jpg, id=384, 1409.265pt x 576.65437pt>
 File: paper_k-anon/k-anon-tech.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-tech.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-tech.jpg  used on input line 161.
 (pdftex.def)             Requested size: 276.00105pt x 112.93549pt.
-<paper_k-anon/k-anon-alg.jpg, id=345, 1109.64563pt x 380.17032pt>
+<paper_k-anon/k-anon-alg.jpg, id=386, 1109.64563pt x 380.17032pt>
 File: paper_k-anon/k-anon-alg.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-alg.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 173.
 (pdftex.def)             Requested size: 276.00105pt x 94.56087pt.
  [7 <./paper_k-anon/k-anon-tech.jpg> <./paper_k-anon/k-anon-alg.jpg>] [8]
-<paper_k-anon/set_enum_tree.jpg, id=360, 521.69907pt x 464.4853pt>
+<paper_k-anon/set_enum_tree.jpg, id=401, 521.69907pt x 464.4853pt>
 File: paper_k-anon/set_enum_tree.jpg Graphic file (type jpg)
 <use paper_k-anon/set_enum_tree.jpg>
 Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 261.
 (pdftex.def)             Requested size: 137.9979pt x 122.86122pt.
  [9 <./paper_k-anon/set_enum_tree.jpg>]
-<paper_k-anon/k-anon-incognito.jpg, id=367, 514.92375pt x 691.83469pt>
+<paper_k-anon/k-anon-incognito.jpg, id=408, 514.92375pt x 691.83469pt>
 File: paper_k-anon/k-anon-incognito.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-incognito.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-incognito.jpg  used on input line 301.
@@ -703,7 +711,7 @@ Overfull \hbox (22.78348pt too wide) in paragraph at lines 350--352
  []
 
 [11 <./paper_k-anon/k-anon-incognito.jpg>]
-<paper_k-anon/k-anon-mult-views.jpg, id=386, 980.16188pt x 460.72125pt>
+<paper_k-anon/k-anon-mult-views.jpg, id=427, 980.16188pt x 460.72125pt>
 File: paper_k-anon/k-anon-mult-views.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-mult-views.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-mult-views.jpg  used on input line 380.
@@ -723,23 +731,23 @@ Overfull \hbox (14.88954pt too wide) in paragraph at lines 35--36
 []\OT1/cmr/m/n/10 Una ta-ble di mi-cro-dati e le in-for-mazioni es-terne con-tengono ru-more, riducendo
  []
 
-<paper_microdata/Fig3.png, id=409, 469.00218pt x 175.40532pt>
+<paper_microdata/Fig3.png, id=451, 469.00218pt x 175.40532pt>
 File: paper_microdata/Fig3.png Graphic file (type png)
 <use paper_microdata/Fig3.png>
 Package pdftex.def Info: paper_microdata/Fig3.png  used on input line 41.
 (pdftex.def)             Requested size: 172.5pt x 64.51353pt.
 
-Overfull \hbox (7.05618pt too wide) in paragraph at lines 52--54
+Overfull \hbox (7.05618pt too wide) in paragraph at lines 52--55
 \OT1/cmr/m/n/10 es-sere con-trastata riducendo la quan-tit^^Ra delle in-for-mazioni ri-las-ci-ate, mascherando
  []
 
 [15 <./paper_microdata/Fig3.png>]
-<paper_microdata/Fig4.png, id=417, 301.125pt x 127.97812pt>
+<paper_microdata/Fig4.png, id=459, 301.125pt x 127.97812pt>
 File: paper_microdata/Fig4.png Graphic file (type png)
 <use paper_microdata/Fig4.png>
 Package pdftex.def Info: paper_microdata/Fig4.png  used on input line 75.
 (pdftex.def)             Requested size: 172.5pt x 73.3154pt.
-<paper_microdata/Fig5.png, id=418, 317.68687pt x 177.66376pt>
+<paper_microdata/Fig5.png, id=460, 317.68687pt x 177.66376pt>
 File: paper_microdata/Fig5.png Graphic file (type png)
 <use paper_microdata/Fig5.png>
 Package pdftex.def Info: paper_microdata/Fig5.png  used on input line 82.
@@ -749,7 +757,7 @@ Overfull \hbox (11.77829pt too wide) in paragraph at lines 94--95
 \OT1/cmr/m/n/10 uno speci-fico re-spon-dent sia pre-sente nei sam-ple, il ris-chio di re-identificazione
  []
 
-<paper_microdata/Fig6.png, id=427, 347.79938pt x 160.34906pt>
+<paper_microdata/Fig6.png, id=469, 347.79938pt x 160.34906pt>
 File: paper_microdata/Fig6.png Graphic file (type png)
 <use paper_microdata/Fig6.png>
 Package pdftex.def Info: paper_microdata/Fig6.png  used on input line 107.
@@ -758,13 +766,13 @@ Package pdftex.def Info: paper_microdata/Fig6.png  used on input line 107.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [17]
-<paper_microdata/Fig8.png, id=432, 428.35031pt x 536.75531pt>
+<paper_microdata/Fig8.png, id=474, 428.35031pt x 536.75531pt>
 File: paper_microdata/Fig8.png Graphic file (type png)
 <use paper_microdata/Fig8.png>
 Package pdftex.def Info: paper_microdata/Fig8.png  used on input line 120.
 (pdftex.def)             Requested size: 172.5pt x 216.15617pt.
  [18 <./paper_microdata/Fig6.png> <./paper_microdata/Fig8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 127--129
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
 
  []
 
@@ -778,11 +786,66 @@ Overfull \hbox (16.61452pt too wide) in paragraph at lines 163--163
 []\OT1/cmr/bx/n/14.4 Misure per va-l-utare la con-fi-den-zialit^^Ra e l'utilit^^Ra
  []
 
-[20]) [21]
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 188--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--219
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 221--230
+
+ []
+
+[22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 260--266
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 270--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--289
+
+ []
+
+
+Overfull \hbox (4.51138pt too wide) in paragraph at lines 281--289
+\OT1/cmr/m/n/10 L'idea ^^Re che la perdita di in-for-mazione possa es-sere mis-urata uti-liz-zando l'\OT1/cmr/m/it/10 entropia
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--297
+
+ []
+
+) [26] [27]
 \openout2 = `paper_cloud/cloud.aux'.
 
  (./paper_cloud/cloud.tex
-Overfull \hbox (10.55608pt too wide) in paragraph at lines 8--9
+Overfull \hbox (10.55608pt too wide) in paragraph at lines 8--10
 \OT1/cmr/m/n/10 Usare il cloud ^^Re con-ve-niente per ben-efici come ad es-em-pio la scal-a-bilit^^Ra e l'elasticit^^Ra,
  []
 
@@ -794,7 +857,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 21.
 
-[22
+[28
 
 
 
@@ -808,12 +871,12 @@ Overfull \hbox (6.0562pt too wide) in paragraph at lines 48--50
 \OT1/cmr/m/n/10 colonna con di-versi liv-elli di cifratura, og-nuno dei quali sup-porta l'esecuzione
  []
 
-[23] [24] [25]) [26]
+[29] [30] [31]) [32]
 \openout2 = `paper_user-privacy-preferences/user-privacy-preferences.aux'.
 
  (./paper_user-privacy-preferences/user-privacy-preferences.tex
 Chapter 3.
-[27
+[33
 
 
 
@@ -823,28 +886,33 @@ Overfull \hbox (26.71408pt too wide) in paragraph at lines 51--52
 []\OT1/cmr/bx/it/10 Dichiarazioni \OT1/cmr/m/it/10 che com-pren-dono pro-priet^^Ra non cer-tifi-cate dichiarate dall'utente. 
  []
 
-<paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg, id=490, 1081.79156pt x 523.9575pt>
+<paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg, id=560, 1081.79156pt x 523.9575pt>
 File: paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg Graphic file (type jpg)
 <use paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg>
 Package pdftex.def Info: paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg  used on input line 70.
 (pdftex.def)             Requested size: 276.00105pt x 133.67535pt.
-[28]) [29 <./paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg>] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux) (./paper_user-privacy-preferences/user-privacy-preferences.aux))
+[34] [35 <./paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg>]
+Overfull \hbox (4.19504pt too wide) in paragraph at lines 136--137
+\OT1/cmr/m/n/10 per-me-tte di cal-co-lare il val-ore di sen-si-bilit^^Ra di un set di at-tributi/credenziali. 
+ []
+
+[36]) [37] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux) (./paper_user-privacy-preferences/user-privacy-preferences.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E283EF865EF9F891AEC066FE3464BA0E;10373.
+(rerunfilecheck)             Checksum: 5803B437C967FE83449B3294394278AD;12256.
  ) 
 Here is how much of TeX's memory you used:
- 26050 strings out of 478287
- 484147 string characters out of 5849288
- 785701 words of memory out of 5000000
- 43604 multiletter control sequences out of 15000+600000
+ 26410 strings out of 478287
+ 490333 string characters out of 5849288
+ 793211 words of memory out of 5000000
+ 43942 multiletter control sequences out of 15000+600000
  483871 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,12n,131p,1204b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (30 pages, 1177213 bytes).
+ 91i,12n,131p,1260b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (38 pages, 1215253 bytes).
 PDF statistics:
- 639 PDF objects out of 1000 (max. 8388607)
- 536 compressed objects within 6 object streams
- 139 named destinations out of 1000 (max. 500000)
- 473 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 728 PDF objects out of 1000 (max. 8388607)
+ 614 compressed objects within 7 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 537 words of extra memory for PDF output out of 10000 (max. 10000000)
 

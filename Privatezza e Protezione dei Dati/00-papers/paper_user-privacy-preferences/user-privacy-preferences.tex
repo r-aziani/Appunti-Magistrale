@@ -31,10 +31,10 @@ Queste preferenze verranno poi usate nella situazione in cui più di un subset d
 
 
 Questo capitolo mostra una overview delle problematiche di privacy legate ai sistemi open, oltre che alcune soluzioni.
-Le sezioni riportano invece:
+Le sezioni riportano:
 \begin{itemize}
-    \item Concetti Base e \textit{Desiderata}
-    \item a 
+    \item Concetti Base e \textit{Desiderata}.
+    \item Soluzione Cost-Sensitive Trust Negotiation. 
     \item V
     \item c
     \item d
@@ -100,5 +100,66 @@ Essi possono essere \textit{credential-independent} e dipendere dal client ma no
 
 
 \subsection{Policy di Disclosure}
+Le policy lat server che regolano l'accesso sono definite sugli attributi e le credenziali fornite dall'utente, questo perchè il server considera solo la gerarchia di credenziali (conosciuta a priori anche dal server).
+
+Una Access Control Policy (policy di controllo di accesso) è quindi una espressione booleana composta da condizioni \textit{ $ term_1 \, op \, term_2 $ } , dove \textit{op} è un operatore del tipo $<, >, =$ etc.
+
+Un esempio di policy: \textit{ (type(c)= insurance) $\land$ (c.Company $\ne$ 'A') }
 
 
+
+
+
+\subsection{Trust Negotiation}
+L'interazione tra client e server mira a stabilire una relazione di fiducia (trust) tra le parti per permettere l'accesso al servizio.
+Questa interazione si basa tipicamente sul rilascio di credenziali, spesso subordinato al rilascio di altre credenziali da parte della controparte.
+
+Questa sequenza di scambi di credenziali è definita \textbf{strategia} e soddisfa le policy di server e client.
+
+Alcune strategie adottate permettono il rilascio di credenziali solo se esiste una \textit{strategia di successo} (successfull strategy) che garantisce l'accesso al servizio, mentre altre rilasciano credenziali appena sono richieste.
+
+$\\$
+Il fatto che esistano preferenze sul rilascio di credenziali, sia da parte del server che del client, comporta che le successful strategies non siano tutte equivalenti. 
+
+
+
+
+
+
+\subsection{Client Privacy Preferences}
+Per quanto riportato, è necessario fornire i client di un modello flessibile ed espressivo per rappresentare le preferenze di privacy.
+Questo modello dovrebbe avere le seguenti caratteristiche:
+
+\begin{itemize}
+    \item \textbf{Specific di Preferenze a Grana Fine}: il modello deve supportare la definizione di preferenze per ogni attributo per ogni \textbf{istanza} di credenziale.
+    \item \textbf{Ereditarietà delle Preferenze di Privacy}: se le istanze di credenziali sono numerose, il modello deve poter applicare sensibilità ai tipi astratti e così a tutte le istanze per cui non era stato specificato un livello di sensibilità.
+    \item \textbf{Rel. d'Ordine Parziale e Operatore Composizione}: ci deve essere ordinamento parziale per determinare se una informazione è più o meno sensibile di un'altra. Deve esistere un operatore di composizione $\bigoplus$ che permette di calcolare il valore di sensibilità di un set di attributi/credenziali.
+    \item \textbf{Associazioni Sensibili}: rilascio combinato di un set di attr./cred. risulta più o meno sensibile della somma dei rilasci singoli. Il modello deve comprendere anche questa definizione di preferenza.
+    \item \textbf{Vincoli di Rilascio}: modello deve permettere di definire vincoli sul rilascio combinoato di parti del portfolio, per evitare o limitare il rilascio dell'associazione tra questi.
+    \item \textbf{Context-Based Preferences}: preferenze dipendono dal contesto (rilasci certificato medico a una farmacia, non a un hotel).
+    \item \textbf{History-based Preferences}: rilascio dipende da interazioni passate (se a server X ho rilasciato un set, uso sempre quello e non fornisco nuove cred.).
+    \item \textbf{Prova di Possesso}: nuove tecnologie permettono di rilasciare prove di possesso di certificati e di soddisfazione requisiti di accesso. Risulta necessario poter specificare preferenze anche per queste prove (proof).
+    \item \textbf{User-Friendly Preference Specification}: necessario fornire interfacce ai client, che possono non essere abituati a sistemi di controllo dell'accesso, per poter specificare facilmente le preferenze.
+\end{itemize}
+
+
+
+
+\subsection{Preferenze Privacy del Server}
+Mentre la comunicazione della policy server completa favorisce la privacy del client, la comunicazione dei soli attributi coinvolti favorisce la privacy del server.
+
+Ricordare che anche server ha un portfolio di credenziali e attributi oltre alle policy.
+
+Il sistema lato server deve considerare:
+\begin{itemize}
+    \item \textbf{Disclosure Policy}: server deve poter decidere, a grana fine, come il rilascio policy dovrebbe essere regolato.
+    \item \textbf{Comunicazione Policy}: necessario un meccanismo che trasforma la A.C.Policy in modo da proteggere privacy della policy e permettere al client di sapere cosa è richiesto.
+    \item \textbf{Integrazione con Meccanismo Client}: Ci deve essere integrazione ra i sistemi lato server e lato client.
+\end{itemize}
+
+
+
+
+
+\section{Cost-Sensitive Trust Negotiation }
+Sensibilità espressa con costo $w(c)$ 

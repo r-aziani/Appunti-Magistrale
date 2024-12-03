@@ -29,25 +29,33 @@
 \contentsline {subsection}{\numberline {2.4.2}Tecniche perturbative}{18}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}Tecniche per la Generazione di Dati Sintetici}{20}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Misure per valutare la confidenzialità e l'utilità dei Microdati}{20}{section.2.6}%
-\contentsline {section}{\numberline {2.7}Introduzione}{22}{section.2.7}%
-\contentsline {section}{\numberline {2.8}$\mathbb {CIA}$ nel Cloud}{22}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Problemi e sfide}{23}{section.2.9}%
-\contentsline {subsection}{\numberline {2.9.1}Protezione dei dati al rilascio}{23}{subsection.2.9.1}%
-\contentsline {subsection}{\numberline {2.9.2}Accesso a grana fine ai dati nel cloud}{23}{subsection.2.9.2}%
-\contentsline {subsection}{\numberline {2.9.3}Accesso selettivo ai dati nel cloud}{24}{subsection.2.9.3}%
-\contentsline {subsection}{\numberline {2.9.4}Privacy dell'utente}{24}{subsection.2.9.4}%
-\contentsline {subsection}{\numberline {2.9.5}Privacy delle query}{24}{subsection.2.9.5}%
-\contentsline {subsection}{\numberline {2.9.6}Integrità della computazione e delle query}{25}{subsection.2.9.6}%
-\contentsline {subsection}{\numberline {2.9.7}Esecuzione collaborativa delle query con provider multipli}{25}{subsection.2.9.7}%
-\contentsline {subsection}{\numberline {2.9.8}SLA e Auditing}{25}{subsection.2.9.8}%
-\contentsline {subsection}{\numberline {2.9.9}Multi-locazione e virtualizzazione}{25}{subsection.2.9.9}%
-\contentsline {section}{\numberline {2.10}Conclusioni}{26}{section.2.10}%
-\contentsline {chapter}{\numberline {3}Supporting User Privacy Preferences in Digital Interactions}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduzione}{27}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Concetti Base e \textit {Desiderata}}{28}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Client Portfolio}{28}{subsection.3.2.1}%
-\contentsline {subsubsection}{Struttura Credenziale}{28}{section*.13}%
-\contentsline {subsubsection}{Gerarchia Tipologie}{28}{section*.14}%
-\contentsline {subsection}{\numberline {3.2.2}Atomicità Credenziali}{29}{subsection.3.2.2}%
-\contentsline {subsubsection}{Attributi}{29}{section*.16}%
-\contentsline {subsection}{\numberline {3.2.3}Policy di Disclosure}{29}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {2.6.1}Rischio di Disclosure (Disclosure Risk)}{21}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Perdita di Informazione (Information Loss)}{24}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Combnazione di Rischio di Disclosure e Perdita di Informazione}{26}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Conclusioni}{27}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Introduzione}{28}{section.2.8}%
+\contentsline {section}{\numberline {2.9}$\mathbb {CIA}$ nel Cloud}{28}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Problemi e sfide}{29}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}Protezione dei dati al rilascio}{29}{subsection.2.10.1}%
+\contentsline {subsection}{\numberline {2.10.2}Accesso a grana fine ai dati nel cloud}{29}{subsection.2.10.2}%
+\contentsline {subsection}{\numberline {2.10.3}Accesso selettivo ai dati nel cloud}{30}{subsection.2.10.3}%
+\contentsline {subsection}{\numberline {2.10.4}Privacy dell'utente}{30}{subsection.2.10.4}%
+\contentsline {subsection}{\numberline {2.10.5}Privacy delle query}{30}{subsection.2.10.5}%
+\contentsline {subsection}{\numberline {2.10.6}Integrità della computazione e delle query}{31}{subsection.2.10.6}%
+\contentsline {subsection}{\numberline {2.10.7}Esecuzione collaborativa delle query con provider multipli}{31}{subsection.2.10.7}%
+\contentsline {subsection}{\numberline {2.10.8}SLA e Auditing}{31}{subsection.2.10.8}%
+\contentsline {subsection}{\numberline {2.10.9}Multi-locazione e virtualizzazione}{31}{subsection.2.10.9}%
+\contentsline {section}{\numberline {2.11}Conclusioni}{32}{section.2.11}%
+\contentsline {chapter}{\numberline {3}Supporting User Privacy Preferences in Digital Interactions}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduzione}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Concetti Base e \textit {Desiderata}}{34}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Client Portfolio}{34}{subsection.3.2.1}%
+\contentsline {subsubsection}{Struttura Credenziale}{34}{section*.13}%
+\contentsline {subsubsection}{Gerarchia Tipologie}{34}{section*.14}%
+\contentsline {subsection}{\numberline {3.2.2}Atomicità Credenziali}{35}{subsection.3.2.2}%
+\contentsline {subsubsection}{Attributi}{35}{section*.16}%
+\contentsline {subsection}{\numberline {3.2.3}Policy di Disclosure}{35}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Trust Negotiation}{36}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Client Privacy Preferences}{36}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Preferenze Privacy del Server}{37}{subsection.3.2.6}%
+\contentsline {section}{\numberline {3.3}Cost-Sensitive Trust Negotiation }{37}{section.3.3}%
