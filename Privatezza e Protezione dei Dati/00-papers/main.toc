@@ -60,3 +60,5 @@
 \contentsline {subsection}{\numberline {4.2.5}Client Privacy Preferences}{34}{subsection.4.2.5}%
 \contentsline {subsection}{\numberline {4.2.6}Preferenze Privacy del Server}{35}{subsection.4.2.6}%
 \contentsline {section}{\numberline {4.3}Cost-Sensitive Trust Negotiation }{35}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Minimizzare il Costo}{36}{subsection.4.3.1}%
+\contentsline {subsubsection}{Senza Costo delle Policy}{37}{section*.18}%
