@@ -234,6 +234,272 @@ alla pubblicazione degli indici:
     \noindent In entrambi i casi l'attaccante può risalire alla funzione di incizzazione.
 \end{itemize}
 
+\raggedright
+
+\subsection{Direct Encryption}
+\subsubsection{\textbf{Freq + $DB^k$}}
+
+\begin{itemize}
+    \item La corrispondenza tra indice e valore in chiaro può essere determinata sulla base 
+    del numero di occorenze di indice/valore
+
+    $\rightarrow$ \textbf{Protezione base:} i valori con lo stesso numero di occorenze sono indistinguibili per l'attaccante
+    \item Valutazione dell'esposizione dell'indice basata sulla relazione di equivalenza
+    in cui i valori di indice/valore con lo stesso numero di occorrenze
+    appartengono alla stessa classe
+
+    $\rightarrow$ L'esposizione di un indice nella classe di equivalenza $C$ è $1 / |C|$ 
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/encryption/direct-freq-db.png}
+\end{figure}
+
+\newpage
+\begin{itemize}
+    \item nella tabella \textit{Quotient} ci sono le classi di equivalenza a cui appartengono gli indici
+    \item nella tabella \textit{Inverse Cardinality} c'è $1/|C|$ , si interpreta come:
+    \begin{itemize}
+        \item \textit{c'è 1 di 6 valori che non so distinguere}
+        \item \textit{c'è 1 di 4 valori che non so distinguere}
+        \item Sta esprimendo l'incertezza; più sarà grande $|C|$, più avrò incertezza 
+        
+        $\rightarrow$ quelli con $1/1$ rappresentano un problema dato che non c'è incertezza
+    \end{itemize}
+    \item A \textbf{livello di tupla} l'incertezza è il \textbf{prodotto} delle incertezze
+    \item A \textbf{livello di tabella} faccio la \textbf{media} dell'esposizione delle tuple ($\epsilon$)
+\end{itemize}
+
+\subsubsection{DB + $DB^k$}
+\begin{itemize}
+    \item Grafo \textbf{\textit{Row-Column-Value}} non-direzionato a 3 colori
+    \begin{itemize}
+        \item un vertice di colore \textit{column} per ogni attributo 
+        \item un vertice di colore \textit{row} per ogni tupla 
+        \item un vertice di colore \textit{value} per ogni valore distinto in una colonna
+        \item un arco connette ogni valore alla riga e colonna in cui compare
+    \end{itemize}
+    \item RCV sui valori in chiaro è uguale a quello sugli indici
+    \item posso avere una misura del grado di esposizione guardando quanto \textit{un nodo si confonde} (automorfismo)
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/encryption/direct-db-dbk1.png}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/encryption/direct-db-dbk2.png}
+\end{figure}
+
+\newpage
+Per \textit{Equitable Partion} si intende un insieme di vertici che costituiscono un automorfismo.
+
+\noindent L'esposizione si calcola come il rapporto tra il numero di \textit{equitable partition} e il numero totale degli elementi.
+
+\newpage
+\subsection{Hashing}
+\subsubsection{Freq + $DB^k$}
+\begin{itemize}
+    \item La funzione di hash è caratterizzata da un \textit{fattore di collisione}, ovvero il numero 
+    di valori che in media collidono sullo stesso indice 
+    \item Sono possibili diversi mapping dei valori negli indici, in relazione ai vincoli imposti dalle frequenze 
+    \item Per ogni mapping si calcola il coefficiente di esposizione
+\end{itemize}
+
+\subsubsection{DB + $DB^k$}
+\begin{itemize}
+    \item i grafi RCV tra dati in chiaro e criptati non sono uguali, dato che \textit{vertici diversi} nel grafo in chiaro 
+    potrebbro collassare nello \textit{stesso vertice} nel grafo criptato
+    \item il numero di archi che collega i vertici \textit{row} ai vertici \textit{value} è lo stesso
+    \item il problema diventa trovare un \textit{matching corretto} tra gli archi del grafo in chiaro e quello criptato
+\end{itemize}
+
+\newpage
+\section{Bloom Filter}
+Il \textit{Bloom Filter} sta alla base della costruzione di alcune tecniche 
+di indicizzazione; è un metodo efficiente per codificare l'appartenenza a un insieme.
+
+\begin{itemize}
+    \item set di $n$ elementi ($n$ è grande)
+    \item vettore di $l$ bit ($l$ è piccolo)
+    \item $h$ funzioni di hash indipendenti $H_i : \{0,1\}^* \rightarrow [1,l]$
+    \item \textbf{Insert x:} set a 1 i bit corrispondenti a $H_1(x), H_2(x), \dots, H_h(x)$
+    \item \textbf{Search x:} Computare $H_1(x), H_2(x), \dots, H_h(x)$ e verificare se quei valori sono settati a 1 nel vettore
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/encryption/bloom-filter.png}
+\end{figure}
+
+\begin{itemize}
+    \item è una generalizzazione dell'hashing (\textit{bloom filter} con 1 funzione di hash equivale all'hash ordinario)
+    
+    \textcolor{darkgreen}{\textbf{+}} efficiente nello spazio
+    
+    \textcolor{red}{\textbf{-}} gli elementi non possono essere rimossi
+
+    \item ha una costante di probabilità di ottenere un falso positivo
+
+    \textcolor{red}{\textbf{-}} teoricamente non accettabile 
+
+    \textcolor{darkgreen}{\textbf{+}} nella pratica è accettabile perché il costo viene messo in relazione ai guadagni in termini di spazio
+\end{itemize}
+
+\newpage
+\section{Integrità dei Dati}
+Due aspetti:
+\begin{itemize}
+    \item \textbf{Integrità in Storage:} i dati devono essere protetti da modifiche non autorizzate
+    
+    $\rightarrow$ update non autorizzate devono essere rilevati
+    \begin{itemize}
+        \item si ottiene utilizzando la \textbf{firma digitale} a livello di tupla (a livello di cella sarebbe troppo costoso)
+    \end{itemize}
+
+    \item \textbf{Integrità nelle query:} i risultati delle query devono essere corretti e completi
+    
+    $\rightarrow$ un comportamento non corretto del server deve essere rilevato
+\end{itemize}
+
+\section{\textit{Selective-Encryption} e \textit{Over-Encryption}}
+Utenti diversi potrebbero necessitare di viste diverse dei dati nel cloud
+
+$\rightarrow$ \textbf{Selective Encryption:} la politica di autorizzazione definita dal proprietario dei dati 
+viene tradotta in una politica di encryption equivalente
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/encryption/selective.png}
+\end{figure}
+
+\textit{Desiderata:}
+\begin{itemize}
+    \item i dati stessi dovrebbero regolare i controlli di accesso 
+    \item dovrebbero essere usate chiavi differenti per criptare i dati 
+    \item l'autorizzazione di accesso a una risorsa viene tradotta nella \textbf{conoscenza della chiave} con cui la risorsa è criptata 
+    \item ad ogni utente vengono comunicate le chiavi per decriptare i dati a cui ha diritto di accesso
+\end{itemize}
+
+\subsubsection{Politiche di Autorizzazione}
+Il \textit{data owner} definisce delle politiche di autorizzazione per regolare l'accesso ai dati.
+
+\begin{itemize}
+    \item Una politica di autorizzazione $\mathcal{A}$ è un set di permessi della forma $\left\langle user, resource \right\rangle$
+    
+    \noindent Può essere rappresentata sotto forma di:
+    \begin{itemize}
+        \item matrice 
+        \item grafo diretto bipartito
+    \end{itemize}
+    \item L'idea è che diverse autorizzazioni di accesso ai dati implicano diverse chiave per criptare 
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/encryption/auth-policy.png}
+\end{figure}
+
+\subsubsection{Politica di Encryption}
+La \textit{politica di autorizzazione} definita dal data owner viene tradotta
+in una \textit{politica di encyption} equivalente.
+
+\noindent Due possibili soluzioni:
+\begin{itemize}
+    \item criptare ogni risorsa con una chiave diversa e dare all'utente le chiavi 
+    che decriptano le risorse a cui ha accesso 
+
+    \textcolor{red}{\textbf{-}} l'utente deve gestire tante chiavi quante sono le risorse a cui ha accesso
+    \item usare un \textbf{metodo di derivazione delle chiavi} per permettere di derivare dalla propria chiave utente 
+    tutte le chiavi a cui hanno accesso 
+
+    \textcolor{darkgreen}{+} ad ogni utente viene rilasciata una sola chiave
+\end{itemize}
+
+\subsubsection{Metodi di Derivazione delle Chiavi}
+\begin{itemize}
+    \item Basata sulla definizione di una \textbf{gerarchia di derivazione delle chiavi} $(\mathcal{K}, \leq)$
+    \begin{itemize}
+        \item $\mathcal{K}$ è il set di chiavi 
+        \item $\leq$ è la relazione d'ordine parziale definita su $\mathcal{K}$
+    \end{itemize}
+    \item $(\mathcal{K}, \leq)$ può essere rappresentata come un grafo con un vertice per ogni $x \in \mathcal{K}$ e un percorso da $x$ a $y$ sse $y \leq x$
+\end{itemize}
+
+\subsubsection{Metodi di Derivazione delle Chiavi basati su Token}
+\begin{itemize}
+    \item Le chiavi sono assegnate arbitrariamente ai vertici 
+    \item Una label $l_i$ (pubblica) viene assegnata a ciascuna chiave $k_i$
+    \item Un token $t_{i,j}$ (pubblico) viene associato ad ogni arco nella gerarchia
+    \item Dato un arco $(k_i, k_j)$, il token $t_{i,j}$ viene calcolato come $k_j \oplus h(k_i, l_j)$, dove:
+    \begin{itemize}
+        \item $\oplus$ è l'operatore \texttt{xor}
+        \item $h$ è una funzione di hash sicura
+    \end{itemize}
+    \item \textcolor{darkgreen}{\textbf{+}} i token sono pubblici e permettono agli utenti di derivare più chiavi, ma dovendosi preoccupare solo di una 
+    \item \textcolor{darkgreen}{\textbf{+}} possono essere storati su un server così che ogni utente vi può accedere
+\end{itemize}
+
+\noindent Le relazioni delle chiavi tramite token possono essere rappresentate con un grafo:
+\begin{itemize}
+    \item un vertice per ogni coppia $\left\langle k, l \right\rangle$, dove $k \in \mathcal{K}$ è una chiave e $l \in \mathcal{L}$ è l'etichetta associata 
+    \item un arco dal vertice $\left\langle k_i, l_i \right\rangle$ a $\left\langle k_j, l_j \right\rangle$ se esiste un token $t_{i,j} \in \mathcal{T}$ che permette la derivazione di $k_j$ a partire da $k_i$
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/encryption/token-based-ex.png}
+\end{figure}
+
+
+\noindent Traduzione della politica di autorizzazione in una di encryption:
+\begin{itemize}
+    \item \textit{Desiderata:}
+    \begin{itemize}
+        \item ad ogni utente viene rilasciata una sola chiave 
+        \item le risorse vengono criptate una sola volta con una sola chiave 
+    \end{itemize}
+    \item Una funzione $\phi : \mathcal{U} \cup \mathcal{R} \rightarrow \mathcal{L}$ che descrive:
+    \begin{itemize}
+        \item l'associazione tra un utente la (etichetta della) sua chiave
+        \item l'associazione tra una risorsa e la (etichetta della) chiave usata per criptarla
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Definzione Formale della Politica Crittografica}
+Una \textbf{politica di encryption} su utenti $\mathcal{U}$ e risorse $\mathcal{R}$, denotata come $\mathcal{E}$,
+è una 6-tupla $\left\langle \mathcal{U, R, K, L, \phi, T} \right\rangle$, dove:
+\begin{itemize}
+    \item $\mathcal{K}$ è il set di chiavi del sistema e $\mathcal{L}$ l'insieme delle chiavi corrispondenti
+    \item $\phi$ è la funzione di assegnamento delle chiavi e schema crittografico 
+    \item $\mathcal{T}$ è il set di token definiti su $\mathcal{K}$ e $\mathcal{L}$
+\end{itemize}
+
+\noindent La politica di encryption può essere rappresentata come un grafo estendo quello di chiavi 
+e token per includere:
+\begin{itemize}
+    \item un vertice per ogni utente e ogni risorsa 
+    \item un arco da ogni vertice utente $u$ a $\left\langle k, l \right\rangle$ tale che $\phi(u)=l$
+    \item un arco da ogni vertice $\left\langle k, l \right\rangle$ a ogni vertice risorsa $r$ tale che $\phi(r)=l$
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/encryption/encryption-policy-graph.png}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
