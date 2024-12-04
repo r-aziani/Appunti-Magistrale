@@ -35,7 +35,7 @@ Le sezioni riportano:
 \begin{itemize}
     \item Concetti Base e \textit{Desiderata}.
     \item Soluzione Cost-Sensitive Trust Negotiation. 
-    \item V
+    \item Soluzione Point-Based Trust Management.
     \item c
     \item d
 \end{itemize}
@@ -203,7 +203,7 @@ Il problema della minimizzazione del costo viene formulata come segue:
 Tuttavia due soluzioni euristiche (non ottimali) ottengono una buona soluzione con costo polinomiale. 
 Queste considerano o meno il costo delle policy e sono brevemente\footnote{La completa descrizione degli algoritmi penso esuli dallo scope di questo riassunto} descritte qui di seguito:
 
-\subsubsection{Senza Costo delle Policy}
+\subsubsection{Senza Considerare Costo delle Policy}
 Le policy non sono associate ad un costo, quindi possono essere pubblicate liberamente.
 
 $\\$
@@ -221,4 +221,27 @@ Un esempio del grafo è riportato in fig.\ref{fig:pref_policy_graph} che segue:
 Il primo step riguarda sempre la disclosure delle policy, e ciò permette di costruire il grafo.
 
 $\\$
-FFormalmente il problema si riduce quindi al calcolo del DAG minimo.
+Formalmente il problema si riduce pertanto al calcolo del DAG minimo.
+
+
+\subsubsection{Considerando il Costo delle Policy}
+Soluzione greedy che si divide in due step:
+\begin{enumerate}
+    \item Le parti adottano una \textit{eager strategy} che consiste nello scambiarsi i nomi delle credenziali e i relativi costi, previa soddisfazione della relativa policy, in modo da identificare una strategia che abbia successo.
+    \item Applicazione della strategy trovata.
+\end{enumerate}
+
+In fig.\ref{} viene mostrato uno scambio per i portfolio mostrati precedentemente
+
+
+\subsubsection{Problematiche Aperte}
+Limitazioni dei due approcci: \begin{itemize}
+    \item mancano le restrizioni sul rilascio delle policy;
+    \item le parti non collaborano a minimizzare il costo a scapito della propria privacy (interessi delle parti);
+    \item non supporta completamente la definizione desiderata espressa precedentemente.
+\end{itemize}
+
+
+
+
+\section{Point-Based Trust Management}
