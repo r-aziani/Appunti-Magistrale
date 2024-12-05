@@ -645,7 +645,7 @@ su \textbf{due server indipendenti che non comunicano}.
 I constraint di confidenzialità $\mathcal{C}$ definiti su una relazione 
 $\mathcal{R}$ sono applicati scomponendo $\mathcal{R}$ come $\left\langle R_1, R_2, E \right\rangle$, dove:
 \begin{itemize}
-    \item $R_1$ e $R_2$ hanno un \textit{tuple ID} per garantire una decomposizione corretta 
+    \item $R_1$ e $R_2$ hanno un \textit{tuple ID} per garantire un join senza perdita di informazioni
     \item $R_1 \cup R_2 = R $
     \item $E$ è il set di attributi criptati, con $E \subset R_1, E \subset R_2$
     \item Nessun costraint di confidenzialità può essere contenuto insieme in chiaro  
@@ -764,6 +764,37 @@ Obiettivo:
     \item Computare una frammentazione corretta con affinità massima 
     \item Iterativamente si combinano i frammenti che hanno l'affinità massima e che non violano alcun constraint
 \end{itemize}
+
+\chapter{Frammentazione}
+L'idea di base è:
+\begin{itemize}
+    \item \textcolor{red}{\textbf{-}} la cifratura rende l'esecuzione delle query più costosa e non sempre possibile 
+    \item \textcolor{red}{\textbf{-}} la cifratura comporta un sovraccarico per la gestione delle chiavi
+    \item $\rightarrow$ si abbandona la cifratura, per coinvolgere l'\textbf{owner come una parte fidata che mantiene una quantità limitata di dati}
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/fragmentation/intro.png}
+\end{figure}
+
+Dati uno schema relazionale $R$ e dei constraint $\mathcal{C}$ su di esso, si 
+determina una frammentazione $\mathcal{F} = \left\langle F_O, F_S \right\rangle$, dove lo storage di
+$F_O$ è affidato all'owner e quello di $F_S$ al server, e:
+\begin{itemize}
+    \item $F_O \cup F_S = R$ (\textbf{completezza})
+    \item $\forall c \in \mathcal{C}, c \notin F_S$ (\textbf{riservatezza})
+    \item $F_O \cap F_S = \emptyset$ (\textbf{non ridondanza}, non è essenziale a fini di sicurezza)
+\end{itemize}
+
+A livello fisico i frammenti $F_O$ e $F_S$ hanno un attributo in comune (\textit{tuple ID} oppure attributo-chiave) 
+per garantire un join senza perdita di informazioni. 
+
+
+
+
+
+
 
 
 
