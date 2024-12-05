@@ -25,3 +25,6 @@
 \contentsline {subsubsection}{Politica di Trasformazione}{17}{section*.13}%
 \contentsline {subsubsection}{Costruzione di un grafo per chiavi e token}{17}{section*.14}%
 \contentsline {subsection}{\numberline {1.5.2}Over-Encryption}{19}{subsection.1.5.2}%
+\contentsline {subsubsection}{BEL}{19}{section*.15}%
+\contentsline {subsubsection}{SEL}{19}{section*.16}%
+\contentsline {subsection}{\numberline {1.5.3}Collusione}{20}{subsection.1.5.3}%

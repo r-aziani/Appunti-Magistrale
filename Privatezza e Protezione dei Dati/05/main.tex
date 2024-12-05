@@ -577,10 +577,41 @@ Le risorse vengono criptate due volte:
     $\rightarrow$ per accedere a una risorsa un utente deve conoscere sia la chiave BEL che SEL
 \end{itemize}
 
+\subsubsection{BEL}
+A livello BEL distinguiamo due tipi di chiavi: chiavi di \textbf{accesso} $k_a$ e di derivazione $k$
+\begin{itemize}
+    \item ogni nodo viene associato ad una coppia di chiavi $(k, k_a)$ dove $k_a=h(k)$ ($h$ funzione hash sicura \textit{one-way}) e 
+    ad una coppia di labels $(l, l_a)$
+    \item la chiave $k$ e la label $l$ sono usate per la derivazione 
+    \item la chiave $k_a$ e la label $l_a$ sono usate per criptare le risorse associate al nodo 
+    \item la distinzione delle chiavi separa i due ruoli: derivazione delle chiavi e accesso alle risorse
+\end{itemize}
 
+\subsubsection{SEL}
+A livello SEL viene fatta una politica di encryption come mostrato precedentemente; ci 
+si può dividere in due scenari:
+\begin{itemize}
+    \item \textbf{Full\underbar{}SEL:} inizia da un SEL identico al BEL e tiene il SEL sempre aggiornato per rispecchiare la politica corrente
+    \item \textbf{Delta\underbar{}SEL:} inizia da un SEL vuoto e aggiunge elementi man mano che la politica evolve, in modo tale che la coppia BEL SEL rispecchi la politica
+\end{itemize}
 
+\newpage
+L'evoluzione di BEL e SEL è gestita da:
+\begin{itemize}
+    \item procedura \textbf{over-encrypt} che regola il processo di update facendo over-encryption delle risorse a livello SEL 
+    \item procedure \textbf{grant} e \textbf{revoke} per gestire i privilegi
+\end{itemize}
 
+\subsection{Collusione}
+La collusione si verifica quando due entità, unendo le loro conoscenze, acquisicono conoscenza a cui 
+prima nessuna delle due aveva accesso.
 
+\noindent Ci può essere collusione tra utenti o con il server; dipende dalla visione che gli utenti hanno delle risorse.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/encryption/views.png}
+\end{figure}
 
 
 
