@@ -365,6 +365,7 @@ Due aspetti:
 \end{itemize}
 
 \section{\textit{Selective-Encryption} e \textit{Over-Encryption}}
+\subsection{Selective Encryption}
 Utenti diversi potrebbero necessitare di viste diverse dei dati nel cloud
 
 $\rightarrow$ \textbf{Selective Encryption:} la politica di autorizzazione definita dal proprietario dei dati 
@@ -489,11 +490,92 @@ e token per includere:
     \centering
     \includegraphics[width=1\linewidth]{images/encryption/encryption-policy-graph.png}
 \end{figure}
+ 
+\subsubsection{Politica di Trasformazione}
+\textbf{Obiettivo:} trasformare una politica di autorizzazione $\mathcal{A}$
+in una politica di encryption $\mathcal{E}$ \textbf{equivalente}.
 
+\noindent $\mathcal{A}$ e $\mathcal{E}$ si dicono equivalenti se
+garantiscono gli stessi accessi.
 
+\begin{itemize}
+    \item \textbf{Soluzione nativa}
+    \begin{itemize}
+        \item ad ogni utente viene associata una chiave 
+        \item ogni risorsa viene criptata con una chiave
+        \item per ogni permesso $\left\langle u,r \right\rangle$ viene generato un token $t_{u,r}$
+    \end{itemize}
 
+    $\rightarrow$ produrre e gestire un token per ogni singolo permesso non è realizzabile
+    \item $\rightarrow$ \textbf{Si sfruttano i gruppi di utente}
+    \begin{itemize}
+        \item si raggruppano gli utenti con gli stessi privilegi
+        \item si cripta ogni risorsa con la chiave associata al set di utenti che può accedervi
+    \end{itemize}
+\end{itemize}
 
+\begin{itemize}
+    \item È possibile creare un grafo sfruttando la gerarchia tra insiemi di utenti, indotta
+    dalla relazione d'ordine parziale di inclusione di insieme ($\subseteq$)
+    \item \textbf{Osservazione:} i gruppi che non corrispondono a nessun accesso non hanno bisogno di una chiave 
+    \item $\rightarrow$ \textbf{Obiettivo:} computare una politica di encryption minima, equivalente a una politica di autorizzazione data, 
+    che minimizza il numero di token gestiti dal server
+\end{itemize}
 
+\subsubsection{Costruzione di un grafo per chiavi e token}
+Partendo da un politica di autorizzazione $\mathcal{A}$:
+\begin{enumerate}
+    \item \textbf{Inizializzazione:} si crea un vertice (chiave) per ogni utente e gruppi di utenti (\textit{acl})
+    \item \textbf{Covering} minimo; mi fa in modo che ciascun utente possa raggiungere le sue chiavi
+    \item \textbf{Fattorizzazione} di antenati comuni (se ho $n$ nodi da una parte e $m$ dall'altra, mettendo un \textit{hub} in mezzo passo da $n*m$ a $n+m$)
+\end{enumerate}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.91\linewidth]{images/encryption/graph.png}
+\end{figure}
+
+\newpage
+\begin{itemize}
+    \item gli utenti riceveranno:
+    \begin{itemize}
+        \item $A = \left\langle k_1, l_1 \right\rangle$
+        \item $B = \left\langle k_2, l_2 \right\rangle$
+        \item $C = \left\langle k_3, l_3 \right\rangle$
+        \item $D = \left\langle k_4, l_4 \right\rangle$
+    \end{itemize}
+
+    tutto il resto è sul server
+    \item la funzione $\phi$ mi dice rispettivamente quali chiavi hanno gli utenti e quali chiavi sono associate alle risorse,
+    facendo riferimento alle \textit{label}
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.92\linewidth]{images/encryption/graph2.png}
+\end{figure}
+
+\noindent Quando le autorizzazioni cambiano dinamicamente, il data owner deve:
+\begin{itemize}
+    \item scaricare la risorsa dal server 
+    \item creare una nuova chiave 
+    \item decriptare la risorsa con la vecchia chiave 
+    \item criptare la risorsa con la nuova chiave 
+    \item upload della risorsa e comunicare l'update 
+    
+    $\rightarrow$ Non efficiente;
+
+    \item Possibile soluzione \textbf{over-encryption}
+\end{itemize}
+
+\subsection{Over-Encryption}
+Le risorse vengono criptate due volte:
+\begin{itemize}
+    \item dall'\textit{owner}, con una chiave condivisa a tutti gli utenti e sconosciuta dal server (\textbf{Base Encryption Layer - BEL})
+    \item dal \textit{server}, con una chiave condivisa agli utenti autorizzati (\textbf{Surface Encryption Layer - SEL})
+    
+    $\rightarrow$ per accedere a una risorsa un utente deve conoscere sia la chiave BEL che SEL
+\end{itemize}
 
 
 
