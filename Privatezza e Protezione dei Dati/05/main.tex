@@ -613,6 +613,163 @@ prima nessuna delle due aveva accesso.
     \includegraphics[width=0.7\linewidth]{images/encryption/views.png}
 \end{figure}
 
+\chapter{Fragmentation e Encryption}
+L'encryption rende la valutazione delle query e l'esecuzione delle applicazioni 
+più costosa e non sempre possibile.
+
+Spesso ciò che è sensibile è l'\textbf{associazione} tra valori di attributi diversi, 
+piuttosto che i valori stessi.
+
+$\rightarrow$ si proteggono le associazioni \textbf{spezzandole}, piuttosto che criptando
+
+\subsubsection{Constraint di confidenzialità}
+\begin{itemize}
+    \item \textbf{Attributi sensibili:} il \textbf{valore} di alcuni attributi potrebbe essere considerato sensibile e non dovrebbe essere visibile 
+    
+    $\rightarrow$ \textit{singleton constraint}
+    \item \textbf{Associazioni sensibili:} l'\textbf{associazione} dei valori di attributi dati è sensibile e non dovrebbe essere sensibile 
+    
+    $\rightarrow$ \textit{non-singleton constraint}
+\end{itemize}
+
+\section{Coppia di server non-comunicanti}
+I vincoli di riservatezza sono rispettati dividendo le informazioni
+su \textbf{due server indipendenti che non comunicano}.
+\begin{itemize}
+    \item le associazioni sensibili sono protette distribuendo i valori su 
+    i due server 
+    \item l'encryption viene usata per coprire i valori che non possono stare su nessuno dei due server (constraint oppure 
+    esporrebbe almeno una associazione sensibile)
+\end{itemize}
+
+I constraint di confidenzialità $\mathcal{C}$ definiti su una relazione 
+$\mathcal{R}$ sono applicati scomponendo $\mathcal{R}$ come $\left\langle R_1, R_2, E \right\rangle$, dove:
+\begin{itemize}
+    \item $R_1$ e $R_2$ hanno un \textit{tuple ID} per garantire una decomposizione corretta 
+    \item $R_1 \cup R_2 = R $
+    \item $E$ è il set di attributi criptati, con $E \subset R_1, E \subset R_2$
+    \item Nessun costraint di confidenzialità può essere contenuto insieme in chiaro  
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/encryption-fragmentation/couple-frag.png}
+\end{figure}
+
+\subsection{Esecuzione delle query}
+Per rispondere alle query sarà necessario interrogare entrambi i server; è possibile farlo 
+in due modi:
+\begin{itemize}
+    \item si mandano delle \textit{sub-queries} a \textcolor{orange}{$S_1$} e \textcolor{blue}{$S_2$} in parallelo, per poi 
+    joinare i risultati sul client 
+    \item si manda solo una delle \textit{sub-queries}, ad esempio a \textcolor{orange}{$S_1$}; il \textit{tuple ID} del risultato 
+    di \textcolor{orange}{$S_1$} è usato poi per fare un semi-join con il risultato della query di \textcolor{blue}{$S_2$}
+\end{itemize}
+
+\subsection{Identificare la scomposizione ottimale}
+Si utilizza una \textbf{matrice di affinità:} indica quanto spesso due attributi 
+sono acceduti insieme e la frequenza delle query.
+
+\noindent Matrice di affinità $M$:
+\begin{itemize}
+    \item $M_{i,j}$: costo di mettere attributi $i$ e $j$ in chiaro in frammenti diversi 
+    \item $M_{i,i}$: costo di criptare attributo $i$ (e metterlo in entrambi i frammenti)
+    \item \textbf{Obiettivo:} Minimizzare $\sum M_{i,j} + \sum M_{i,i}$ (la somma delle affinità e criptazione)
+\end{itemize}
+
+\newpage
+\section{Frammenti non comunicanti multipli}
+L'assunzione di avere (solo) due server non comunicanti:
+\begin{itemize}
+    \item \textcolor{red}{\textbf{-}} difficile da realizzare 
+    \item \textcolor{red}{\textbf{-}} limita il numero di associazioni che si possono risolvere solo con la frammentazione
+\end{itemize}
+
+$\rightarrow$ si utilizzano frammenti non comunicanti multipli
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/encryption-fragmentation/multi-frag.png}
+\end{figure}
+
+\begin{itemize}
+    \item Una frammentazione di $\mathcal{R}$ è un set di frammenti 
+    $\mathcal{F} = \{ F_1, \dots, F_m\}$ dove $F_i \subset R$ 
+    \item Una frammentazione $\mathcal{F}$ soddisfa correttamente un set constraint
+    di confidenzialità $\mathcal{C}$ se:
+    \begin{itemize}
+        \item ogni frammento soddisfa i constraint
+        \item i frammenti non hanno attributi in comune
+    \end{itemize}
+    \item Ogni frammento viene mappato in un \textit{frammento fisico} contenente:
+    \begin{itemize}
+        \item i suoi attributi in chiaro
+        \item tutti gli altri attributi criptati (per ogni criptazione viene applicato un \textit{salt})
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/encryption-fragmentation/multi-ex.png}
+\end{figure}
+
+\newpage
+\subsection{Esecuzione delle query}
+Dato che ogni frammento contiene tutti gli attributi, per rispondere a una query 
+basta accedere soltanto a uno; se la query coinvolge un attributo criptato, 
+potrebbe essere necessario fare delle query aggiuntive sul client.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/encryption-fragmentation/multi-frag-query.png}
+\end{figure}
+
+\newpage
+\subsection{Criteri di ottimizzazione}
+L'obiettivo è trovare una frammentazione che renda l'esecuzione delle query efficiente.
+
+\noindent Ci sono diversi criteri di ottimizzazione:
+\begin{itemize}
+    \item \textbf{Numero di frammenti minimo}
+    \item \textbf{Affinità tra attributi}
+    \item \textbf{Query workload} (minimizzare il costo dell'esecuzione delle query)
+\end{itemize}
+
+\noindent Ciascuno di questi criteri obbedisce alla \textbf{visibilità massima:}
+\begin{itemize}
+    \item solo gli attributi che appaiono in \textit{singleton constraint} vengono criptati 
+    \item tutti gli attributi che non sono sensibili appaiono in chiaro in un frammento
+\end{itemize}
+
+\subsubsection{Minimo numero di frammenti}
+\begin{itemize}
+    \item Si definisce una nozione di minimalità per computare in modo efficiente la soluzione
+    \begin{itemize}
+        \item $\mathcal{F}$ è minimale se prendendo due frammenti qualsiasi da $\mathcal{F}$ e unendoli si viola almeno un constraint di confidenzialità
+    \end{itemize}
+    \item Iterativamente si seleziona un attributo con il numero massimo di constraint non risolti e lo si inserisce 
+    in un frammento esistentente se non viene violato alcun constraint; se ne crea uno nuovo altrimenti
+\end{itemize}
+
+\subsubsection{Massima affinità tra attributi}
+Idea:
+\begin{itemize}
+    \item preservare le associazioni tra alcuni attributi 
+    \item \textbf{matrice di affinità} per rappresentare il vantaggio di avere una coppia 
+    di attributi nello stesso frammento
+\end{itemize}
+
+Obiettivo: 
+\begin{itemize}
+    \item Computare una frammentazione corretta con affinità massima 
+    \item Iterativamente si combinano i frammenti che hanno l'affinità massima e che non violano alcun constraint
+\end{itemize}
+
+
+
+
+
+
 
 
 

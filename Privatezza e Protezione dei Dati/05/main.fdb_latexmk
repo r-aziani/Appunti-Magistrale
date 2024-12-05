@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1733408364.27333 "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex" "main.pdf" "main" 1733408369.32951 0
+["pdflatex"] 1733423061.52386 "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex" "main.pdf" "main" 1733423063.97432 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex" 1733408363.66909 27296 3e2b9f119e9882ac63ccaec913db9c99 ""
+  "/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex" 1733423061.25536 33959 8e9d366df268230d69818988bfc145ea ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -25,6 +25,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1248133631 36554 b67dc2cfa451409e100b3fcf5f506509 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -157,6 +158,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1728322823.34097 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1728323065 8214324 2349c6972aa9b130e072b9fdd090f5e2 ""
+  "images/encryption-fragmentation/couple-frag.png" 1733417073.63756 46530 ed4320350f65eb140e0e9a83e3f7e058 ""
+  "images/encryption-fragmentation/multi-ex.png" 1733419930.31634 290019 1a831897de62933ee3c9784b492a31f2 ""
+  "images/encryption-fragmentation/multi-frag-query.png" 1733421266.69285 95733 d132fb281319a78916687c7553fdbdad ""
+  "images/encryption-fragmentation/multi-frag.png" 1733417386.33454 37142 401cc4393ab06cb91ba858e4f92cabbf ""
   "images/encryption/auth-policy.png" 1733307615.79882 66475 7dd08ce4bf70870b7a9d04f8de8aed33 ""
   "images/encryption/bloom-filter.png" 1733301994.07676 105031 b202bef323a29bfd66cba947e7334717 ""
   "images/encryption/bucket-index.png" 1732889068.9165 113928 df661a5845ea6ed8943ccfcede7322cc ""
@@ -180,10 +185,10 @@
   "images/encryption/token-based-ex.png" 1733310552.90858 50380 512a0a8c217c6307762ba7ab222cbd66 ""
   "images/encryption/token-based-search.png" 1732886637.57758 42927 b499d8c33ec8ec51fe53dfa9f2feaebd ""
   "images/encryption/views.png" 1733408326.90625 40491 d34ca5e1e06b6802da105fa27bacb61d ""
-  "main.aux" 1733408369.1455 3773 cd03f360e2c51656431d94ba55319d84 "pdflatex"
-  "main.out" 1733408369.1475 2026 d63bc68e621ec77436d3c5128b6875a7 "pdflatex"
-  "main.tex" 1733408363.66909 27296 3e2b9f119e9882ac63ccaec913db9c99 ""
-  "main.toc" 1733408369.1485 2338 306b66127f4a9b86961eabc5f794d19f "pdflatex"
+  "main.aux" 1733423063.88871 5158 68f0d7333f67a6932c008b5accafde69 "pdflatex"
+  "main.out" 1733423063.88971 3474 da25ddd5f5aaf5d10d51823ff7227d59 "pdflatex"
+  "main.tex" 1733423061.25536 33959 8e9d366df268230d69818988bfc145ea ""
+  "main.toc" 1733423063.88971 3237 80a6bbb8f045df283f61a53d12256e92 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

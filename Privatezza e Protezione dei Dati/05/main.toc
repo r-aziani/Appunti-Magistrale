@@ -28,3 +28,13 @@
 \contentsline {subsubsection}{BEL}{19}{section*.15}%
 \contentsline {subsubsection}{SEL}{19}{section*.16}%
 \contentsline {subsection}{\numberline {1.5.3}Collusione}{20}{subsection.1.5.3}%
+\contentsline {chapter}{\numberline {2}Fragmentation e Encryption}{21}{chapter.2}%
+\contentsline {subsubsection}{Constraint di confidenzialità}{21}{section*.17}%
+\contentsline {section}{\numberline {2.1}Coppia di server non-comunicanti}{21}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Esecuzione delle query}{22}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Identificare la scomposizione ottimale}{22}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Frammenti non comunicanti multipli}{23}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Esecuzione delle query}{24}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Criteri di ottimizzazione}{25}{subsection.2.2.2}%
+\contentsline {subsubsection}{Minimo numero di frammenti}{25}{section*.18}%
+\contentsline {subsubsection}{Massima affinità tra attributi}{25}{section*.19}%
