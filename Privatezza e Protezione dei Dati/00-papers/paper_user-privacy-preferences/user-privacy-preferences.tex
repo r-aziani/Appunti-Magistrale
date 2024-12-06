@@ -36,8 +36,8 @@ Le sezioni riportano:
     \item Concetti Base e \textit{Desiderata}.
     \item Soluzione Cost-Sensitive Trust Negotiation. 
     \item Soluzione Point-Based Trust Management.
-    \item c
-    \item d
+    \item Soluzione Logical-Based Minimal Credential Disclosure.
+    \item Soluzione Privacy Preferences in Credential-Based Interactions
 \end{itemize}
 
 
@@ -325,3 +325,30 @@ Le strategie sono comparate attraverso la comparazione degli attributi secondo l
     \item Richiede intervento utente per la scelta finale.
     \item Non considera le credenziali atomiche.
 \end{itemize}
+
+
+
+
+
+
+\section{Privacy Preferences in Credential-Based Interactions}
+Soluzione che rispetta le \textit{desiderata} creando un portfolio modeling che permette di:
+\begin{itemize}
+    \item rappresentare credenziali atomiche e non;
+    \item rappresentare dichiarazioni e attributi distinguendo chiaramente tra credential-dependent e credential-independent. 
+\end{itemize}
+Risulta più facile associare preferenze ad ogni credenziale e attributo.
+
+\subsection{Rappresentazione Grafica del Portfolio}
+Il portfolio viene rappresentato come un grafo bipartito $G(V_C \cup V_A , E_{CA})$ quale quello in figura fig.\ref{fig:pref_graph_portfolio}.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{paper_user-privacy-preferences/00_pref_graph_portfolio.jpg}
+    \caption{Rappresentazione gafica del portfolio utente}
+    \label{fig:pref_graph_portfolio}
+\end{figure}
+
+Il grafo ha a sinistra vertici rappresentanti le credenziali, a destra attributi, mentre gli archi associano gli attributi alle credenziali che li contengono.
+Viene inoltre specificat atomicità delle credenziali con il simbolo nero accanto al vertice credenziale.

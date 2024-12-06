@@ -70,3 +70,5 @@
 \contentsline {section}{\numberline {3.5}Logical-Based Minimal Credential Disclosure}{41}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Preferenze Qualitative}{41}{subsection.3.5.1}%
 \contentsline {subsubsection}{Problematiche Aperte}{42}{section*.24}%
+\contentsline {section}{\numberline {3.6}Privacy Preferences in Credential-Based Interactions}{42}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Rappresentazione Grafica del Portfolio}{42}{subsection.3.6.1}%
