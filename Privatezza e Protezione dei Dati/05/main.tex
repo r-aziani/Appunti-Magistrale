@@ -365,6 +365,7 @@ Due aspetti:
 \end{itemize}
 
 \section{\textit{Selective-Encryption} e \textit{Over-Encryption}}
+\subsection{Selective Encryption}
 Utenti diversi potrebbero necessitare di viste diverse dei dati nel cloud
 
 $\rightarrow$ \textbf{Selective Encryption:} la politica di autorizzazione definita dal proprietario dei dati 
@@ -489,6 +490,306 @@ e token per includere:
     \centering
     \includegraphics[width=1\linewidth]{images/encryption/encryption-policy-graph.png}
 \end{figure}
+ 
+\subsubsection{Politica di Trasformazione}
+\textbf{Obiettivo:} trasformare una politica di autorizzazione $\mathcal{A}$
+in una politica di encryption $\mathcal{E}$ \textbf{equivalente}.
+
+\noindent $\mathcal{A}$ e $\mathcal{E}$ si dicono equivalenti se
+garantiscono gli stessi accessi.
+
+\begin{itemize}
+    \item \textbf{Soluzione nativa}
+    \begin{itemize}
+        \item ad ogni utente viene associata una chiave 
+        \item ogni risorsa viene criptata con una chiave
+        \item per ogni permesso $\left\langle u,r \right\rangle$ viene generato un token $t_{u,r}$
+    \end{itemize}
+
+    $\rightarrow$ produrre e gestire un token per ogni singolo permesso non è realizzabile
+    \item $\rightarrow$ \textbf{Si sfruttano i gruppi di utente}
+    \begin{itemize}
+        \item si raggruppano gli utenti con gli stessi privilegi
+        \item si cripta ogni risorsa con la chiave associata al set di utenti che può accedervi
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item È possibile creare un grafo sfruttando la gerarchia tra insiemi di utenti, indotta
+    dalla relazione d'ordine parziale di inclusione di insieme ($\subseteq$)
+    \item \textbf{Osservazione:} i gruppi che non corrispondono a nessun accesso non hanno bisogno di una chiave 
+    \item $\rightarrow$ \textbf{Obiettivo:} computare una politica di encryption minima, equivalente a una politica di autorizzazione data, 
+    che minimizza il numero di token gestiti dal server
+\end{itemize}
+
+\subsubsection{Costruzione di un grafo per chiavi e token}
+Partendo da un politica di autorizzazione $\mathcal{A}$:
+\begin{enumerate}
+    \item \textbf{Inizializzazione:} si crea un vertice (chiave) per ogni utente e gruppi di utenti (\textit{acl})
+    \item \textbf{Covering} minimo; mi fa in modo che ciascun utente possa raggiungere le sue chiavi
+    \item \textbf{Fattorizzazione} di antenati comuni (se ho $n$ nodi da una parte e $m$ dall'altra, mettendo un \textit{hub} in mezzo passo da $n*m$ a $n+m$)
+\end{enumerate}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.91\linewidth]{images/encryption/graph.png}
+\end{figure}
+
+\newpage
+\begin{itemize}
+    \item gli utenti riceveranno:
+    \begin{itemize}
+        \item $A = \left\langle k_1, l_1 \right\rangle$
+        \item $B = \left\langle k_2, l_2 \right\rangle$
+        \item $C = \left\langle k_3, l_3 \right\rangle$
+        \item $D = \left\langle k_4, l_4 \right\rangle$
+    \end{itemize}
+
+    tutto il resto è sul server
+    \item la funzione $\phi$ mi dice rispettivamente quali chiavi hanno gli utenti e quali chiavi sono associate alle risorse,
+    facendo riferimento alle \textit{label}
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.92\linewidth]{images/encryption/graph2.png}
+\end{figure}
+
+\noindent Quando le autorizzazioni cambiano dinamicamente, il data owner deve:
+\begin{itemize}
+    \item scaricare la risorsa dal server 
+    \item creare una nuova chiave 
+    \item decriptare la risorsa con la vecchia chiave 
+    \item criptare la risorsa con la nuova chiave 
+    \item upload della risorsa e comunicare l'update 
+    
+    $\rightarrow$ Non efficiente;
+
+    \item Possibile soluzione \textbf{over-encryption}
+\end{itemize}
+
+\subsection{Over-Encryption}
+Le risorse vengono criptate due volte:
+\begin{itemize}
+    \item dall'\textit{owner}, con una chiave condivisa a tutti gli utenti e sconosciuta dal server (\textbf{Base Encryption Layer - BEL})
+    \item dal \textit{server}, con una chiave condivisa agli utenti autorizzati (\textbf{Surface Encryption Layer - SEL})
+    
+    $\rightarrow$ per accedere a una risorsa un utente deve conoscere sia la chiave BEL che SEL
+\end{itemize}
+
+\subsubsection{BEL}
+A livello BEL distinguiamo due tipi di chiavi: chiavi di \textbf{accesso} $k_a$ e di derivazione $k$
+\begin{itemize}
+    \item ogni nodo viene associato ad una coppia di chiavi $(k, k_a)$ dove $k_a=h(k)$ ($h$ funzione hash sicura \textit{one-way}) e 
+    ad una coppia di labels $(l, l_a)$
+    \item la chiave $k$ e la label $l$ sono usate per la derivazione 
+    \item la chiave $k_a$ e la label $l_a$ sono usate per criptare le risorse associate al nodo 
+    \item la distinzione delle chiavi separa i due ruoli: derivazione delle chiavi e accesso alle risorse
+\end{itemize}
+
+\subsubsection{SEL}
+A livello SEL viene fatta una politica di encryption come mostrato precedentemente; ci 
+si può dividere in due scenari:
+\begin{itemize}
+    \item \textbf{Full\underbar{}SEL:} inizia da un SEL identico al BEL e tiene il SEL sempre aggiornato per rispecchiare la politica corrente
+    \item \textbf{Delta\underbar{}SEL:} inizia da un SEL vuoto e aggiunge elementi man mano che la politica evolve, in modo tale che la coppia BEL SEL rispecchi la politica
+\end{itemize}
+
+\newpage
+L'evoluzione di BEL e SEL è gestita da:
+\begin{itemize}
+    \item procedura \textbf{over-encrypt} che regola il processo di update facendo over-encryption delle risorse a livello SEL 
+    \item procedure \textbf{grant} e \textbf{revoke} per gestire i privilegi
+\end{itemize}
+
+\subsection{Collusione}
+La collusione si verifica quando due entità, unendo le loro conoscenze, acquisicono conoscenza a cui 
+prima nessuna delle due aveva accesso.
+
+\noindent Ci può essere collusione tra utenti o con il server; dipende dalla visione che gli utenti hanno delle risorse.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/encryption/views.png}
+\end{figure}
+
+\chapter{Fragmentation e Encryption}
+L'encryption rende la valutazione delle query e l'esecuzione delle applicazioni 
+più costosa e non sempre possibile.
+
+Spesso ciò che è sensibile è l'\textbf{associazione} tra valori di attributi diversi, 
+piuttosto che i valori stessi.
+
+$\rightarrow$ si proteggono le associazioni \textbf{spezzandole}, piuttosto che criptando
+
+\subsubsection{Constraint di confidenzialità}
+\begin{itemize}
+    \item \textbf{Attributi sensibili:} il \textbf{valore} di alcuni attributi potrebbe essere considerato sensibile e non dovrebbe essere visibile 
+    
+    $\rightarrow$ \textit{singleton constraint}
+    \item \textbf{Associazioni sensibili:} l'\textbf{associazione} dei valori di attributi dati è sensibile e non dovrebbe essere sensibile 
+    
+    $\rightarrow$ \textit{non-singleton constraint}
+\end{itemize}
+
+\section{Coppia di server non-comunicanti}
+I vincoli di riservatezza sono rispettati dividendo le informazioni
+su \textbf{due server indipendenti che non comunicano}.
+\begin{itemize}
+    \item le associazioni sensibili sono protette distribuendo i valori su 
+    i due server 
+    \item l'encryption viene usata per coprire i valori che non possono stare su nessuno dei due server (constraint oppure 
+    esporrebbe almeno una associazione sensibile)
+\end{itemize}
+
+I constraint di confidenzialità $\mathcal{C}$ definiti su una relazione 
+$\mathcal{R}$ sono applicati scomponendo $\mathcal{R}$ come $\left\langle R_1, R_2, E \right\rangle$, dove:
+\begin{itemize}
+    \item $R_1$ e $R_2$ hanno un \textit{tuple ID} per garantire un join senza perdita di informazioni
+    \item $R_1 \cup R_2 = R $
+    \item $E$ è il set di attributi criptati, con $E \subset R_1, E \subset R_2$
+    \item Nessun costraint di confidenzialità può essere contenuto insieme in chiaro  
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/encryption-fragmentation/couple-frag.png}
+\end{figure}
+
+\subsection{Esecuzione delle query}
+Per rispondere alle query sarà necessario interrogare entrambi i server; è possibile farlo 
+in due modi:
+\begin{itemize}
+    \item si mandano delle \textit{sub-queries} a \textcolor{orange}{$S_1$} e \textcolor{blue}{$S_2$} in parallelo, per poi 
+    joinare i risultati sul client 
+    \item si manda solo una delle \textit{sub-queries}, ad esempio a \textcolor{orange}{$S_1$}; il \textit{tuple ID} del risultato 
+    di \textcolor{orange}{$S_1$} è usato poi per fare un semi-join con il risultato della query di \textcolor{blue}{$S_2$}
+\end{itemize}
+
+\subsection{Identificare la scomposizione ottimale}
+Si utilizza una \textbf{matrice di affinità:} indica quanto spesso due attributi 
+sono acceduti insieme e la frequenza delle query.
+
+\noindent Matrice di affinità $M$:
+\begin{itemize}
+    \item $M_{i,j}$: costo di mettere attributi $i$ e $j$ in chiaro in frammenti diversi 
+    \item $M_{i,i}$: costo di criptare attributo $i$ (e metterlo in entrambi i frammenti)
+    \item \textbf{Obiettivo:} Minimizzare $\sum M_{i,j} + \sum M_{i,i}$ (la somma delle affinità e criptazione)
+\end{itemize}
+
+\newpage
+\section{Frammenti non comunicanti multipli}
+L'assunzione di avere (solo) due server non comunicanti:
+\begin{itemize}
+    \item \textcolor{red}{\textbf{-}} difficile da realizzare 
+    \item \textcolor{red}{\textbf{-}} limita il numero di associazioni che si possono risolvere solo con la frammentazione
+\end{itemize}
+
+$\rightarrow$ si utilizzano frammenti non comunicanti multipli
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/encryption-fragmentation/multi-frag.png}
+\end{figure}
+
+\begin{itemize}
+    \item Una frammentazione di $\mathcal{R}$ è un set di frammenti 
+    $\mathcal{F} = \{ F_1, \dots, F_m\}$ dove $F_i \subset R$ 
+    \item Una frammentazione $\mathcal{F}$ soddisfa correttamente un set constraint
+    di confidenzialità $\mathcal{C}$ se:
+    \begin{itemize}
+        \item ogni frammento soddisfa i constraint
+        \item i frammenti non hanno attributi in comune
+    \end{itemize}
+    \item Ogni frammento viene mappato in un \textit{frammento fisico} contenente:
+    \begin{itemize}
+        \item i suoi attributi in chiaro
+        \item tutti gli altri attributi criptati (per ogni criptazione viene applicato un \textit{salt})
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/encryption-fragmentation/multi-ex.png}
+\end{figure}
+
+\newpage
+\subsection{Esecuzione delle query}
+Dato che ogni frammento contiene tutti gli attributi, per rispondere a una query 
+basta accedere soltanto a uno; se la query coinvolge un attributo criptato, 
+potrebbe essere necessario fare delle query aggiuntive sul client.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/encryption-fragmentation/multi-frag-query.png}
+\end{figure}
+
+\newpage
+\subsection{Criteri di ottimizzazione}
+L'obiettivo è trovare una frammentazione che renda l'esecuzione delle query efficiente.
+
+\noindent Ci sono diversi criteri di ottimizzazione:
+\begin{itemize}
+    \item \textbf{Numero di frammenti minimo}
+    \item \textbf{Affinità tra attributi}
+    \item \textbf{Query workload} (minimizzare il costo dell'esecuzione delle query)
+\end{itemize}
+
+\noindent Ciascuno di questi criteri obbedisce alla \textbf{visibilità massima:}
+\begin{itemize}
+    \item solo gli attributi che appaiono in \textit{singleton constraint} vengono criptati 
+    \item tutti gli attributi che non sono sensibili appaiono in chiaro in un frammento
+\end{itemize}
+
+\subsubsection{Minimo numero di frammenti}
+\begin{itemize}
+    \item Si definisce una nozione di minimalità per computare in modo efficiente la soluzione
+    \begin{itemize}
+        \item $\mathcal{F}$ è minimale se prendendo due frammenti qualsiasi da $\mathcal{F}$ e unendoli si viola almeno un constraint di confidenzialità
+    \end{itemize}
+    \item Iterativamente si seleziona un attributo con il numero massimo di constraint non risolti e lo si inserisce 
+    in un frammento esistentente se non viene violato alcun constraint; se ne crea uno nuovo altrimenti
+\end{itemize}
+
+\subsubsection{Massima affinità tra attributi}
+Idea:
+\begin{itemize}
+    \item preservare le associazioni tra alcuni attributi 
+    \item \textbf{matrice di affinità} per rappresentare il vantaggio di avere una coppia 
+    di attributi nello stesso frammento
+\end{itemize}
+
+Obiettivo: 
+\begin{itemize}
+    \item Computare una frammentazione corretta con affinità massima 
+    \item Iterativamente si combinano i frammenti che hanno l'affinità massima e che non violano alcun constraint
+\end{itemize}
+
+\chapter{Frammentazione}
+L'idea di base è:
+\begin{itemize}
+    \item \textcolor{red}{\textbf{-}} la cifratura rende l'esecuzione delle query più costosa e non sempre possibile 
+    \item \textcolor{red}{\textbf{-}} la cifratura comporta un sovraccarico per la gestione delle chiavi
+    \item $\rightarrow$ si abbandona la cifratura, per coinvolgere l'\textbf{owner come una parte fidata che mantiene una quantità limitata di dati}
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/fragmentation/intro.png}
+\end{figure}
+
+Dati uno schema relazionale $R$ e dei constraint $\mathcal{C}$ su di esso, si 
+determina una frammentazione $\mathcal{F} = \left\langle F_O, F_S \right\rangle$, dove lo storage di
+$F_O$ è affidato all'owner e quello di $F_S$ al server, e:
+\begin{itemize}
+    \item $F_O \cup F_S = R$ (\textbf{completezza})
+    \item $\forall c \in \mathcal{C}, c \notin F_S$ (\textbf{riservatezza})
+    \item $F_O \cap F_S = \emptyset$ (\textbf{non ridondanza}, non è essenziale a fini di sicurezza)
+\end{itemize}
+
+A livello fisico i frammenti $F_O$ e $F_S$ hanno un attributo in comune (\textit{tuple ID} oppure attributo-chiave) 
+per garantire un join senza perdita di informazioni. 
+
 
 
 

@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  5 DEC 2024 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  5 DEC 2024 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex"
-(/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/05/main.tex
+**"/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/06/main.tex"
+(/home/azi/Desktop/Appunti-Magistrale/Privatezza e Protezione dei Dati/06/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -506,200 +506,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.20 \newpage
               [1
 
-]
-Capitolo 1.
-<images/encryption/token-based-search.png, id=127, 501.875pt x 171.64125pt>
-File: images/encryption/token-based-search.png Graphic file (type png)
-<use images/encryption/token-based-search.png>
-Package pdftex.def Info: images/encryption/token-based-search.png  used on input line 39.
-(pdftex.def)             Requested size: 137.9979pt x 47.19493pt.
-<images/encryption/homomorphic.png, id=129, 504.88625pt x 220.825pt>
-File: images/encryption/homomorphic.png Graphic file (type png)
-<use images/encryption/homomorphic.png>
-Package pdftex.def Info: images/encryption/homomorphic.png  used on input line 44.
-(pdftex.def)             Requested size: 137.9979pt x 60.3581pt.
-<images/encryption/schemas.png, id=130, 299.1175pt x 321.2pt>
-File: images/encryption/schemas.png Graphic file (type png)
-<use images/encryption/schemas.png>
-Package pdftex.def Info: images/encryption/schemas.png  used on input line 50.
-(pdftex.def)             Requested size: 103.50105pt x 111.14249pt.
-<images/encryption/onion.png, id=131, 601.24625pt x 161.60374pt>
-File: images/encryption/onion.png Graphic file (type png)
-<use images/encryption/onion.png>
-Package pdftex.def Info: images/encryption/onion.png  used on input line 56.
-(pdftex.def)             Requested size: 276.00105pt x 74.18573pt.
-[2
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/encryption/token-based-search.png> <./images/encryption/homomorphic.png>]
-<images/encryption/indicizzazione.png, id=141, 678.535pt x 632.3625pt>
-File: images/encryption/indicizzazione.png Graphic file (type png)
-<use images/encryption/indicizzazione.png>
-Package pdftex.def Info: images/encryption/indicizzazione.png  used on input line 61.
-(pdftex.def)             Requested size: 207.0021pt x 192.9137pt.
-<images/encryption/index-direct.png, id=142, 1152.305pt x 348.30125pt>
-File: images/encryption/index-direct.png Graphic file (type png)
-<use images/encryption/index-direct.png>
-Package pdftex.def Info: images/encryption/index-direct.png  used on input line 73.
-(pdftex.def)             Requested size: 293.2521pt x 88.6376pt.
- [3 <./images/encryption/schemas.png> <./images/encryption/onion.png> <./images/encryption/indicizzazione.png>]
-<images/encryption/bucket-index.png, id=150, 1146.2825pt x 347.2975pt>
-File: images/encryption/bucket-index.png Graphic file (type png)
-<use images/encryption/bucket-index.png>
-Package pdftex.def Info: images/encryption/bucket-index.png  used on input line 87.
-(pdftex.def)             Requested size: 293.2521pt x 88.8485pt.
-<images/encryption/flattened-index.png, id=151, 1152.305pt x 354.32375pt>
-File: images/encryption/flattened-index.png Graphic file (type png)
-<use images/encryption/flattened-index.png>
-Package pdftex.def Info: images/encryption/flattened-index.png  used on input line 99.
-(pdftex.def)             Requested size: 293.2521pt x 90.17023pt.
- [4 <./images/encryption/index-direct.png> <./images/encryption/bucket-index.png> <./images/encryption/flattened-index.png>]
-<images/encryption/partion-based-index.png, id=161, 729.72626pt x 87.32625pt>
-File: images/encryption/partion-based-index.png Graphic file (type png)
-<use images/encryption/partion-based-index.png>
-Package pdftex.def Info: images/encryption/partion-based-index.png  used on input line 111.
-(pdftex.def)             Requested size: 207.0021pt x 24.77097pt.
-<images/encryption/partition-based-ex.png, id=162, 962.59625pt x 469.755pt>
-File: images/encryption/partition-based-ex.png Graphic file (type png)
-<use images/encryption/partition-based-ex.png>
-Package pdftex.def Info: images/encryption/partition-based-ex.png  used on input line 124.
-(pdftex.def)             Requested size: 207.0021pt x 101.01686pt.
-<images/encryption/query-ex-1.png, id=163, 1188.44pt x 315.1775pt>
-File: images/encryption/query-ex-1.png Graphic file (type png)
-<use images/encryption/query-ex-1.png>
-Package pdftex.def Info: images/encryption/query-ex-1.png  used on input line 140.
-(pdftex.def)             Requested size: 276.00105pt x 73.19624pt.
-<images/encryption/query-ex-2.png, id=164, 1031.855pt x 373.395pt>
-File: images/encryption/query-ex-2.png Graphic file (type png)
-<use images/encryption/query-ex-2.png>
-Package pdftex.def Info: images/encryption/query-ex-2.png  used on input line 144.
-(pdftex.def)             Requested size: 276.00105pt x 99.8722pt.
- [5 <./images/encryption/partion-based-index.png> <./images/encryption/partition-based-ex.png> <./images/encryption/query-ex-1.png>] [6 <./images/encryption/query-ex-2.png>]
-Overfull \hbox (6.76898pt too wide) in paragraph at lines 194--195
-[]\OT1/cmr/bx/it/10 Order Pre-ser-ving En-cryp-tion with Split-ting and Sca-ling (OPESS): 
- []
-
-[7]
-<images/encryption/direct-freq-db.png, id=195, 1048.91875pt x 753.81625pt>
-File: images/encryption/direct-freq-db.png Graphic file (type png)
-<use images/encryption/direct-freq-db.png>
-Package pdftex.def Info: images/encryption/direct-freq-db.png  used on input line 256.
-(pdftex.def)             Requested size: 310.4979pt x 223.14452pt.
- [8]
-<images/encryption/direct-db-dbk1.png, id=201, 876.27374pt x 380.42125pt>
-File: images/encryption/direct-db-dbk1.png Graphic file (type png)
-<use images/encryption/direct-db-dbk1.png>
-Package pdftex.def Info: images/encryption/direct-db-dbk1.png  used on input line 289.
-(pdftex.def)             Requested size: 241.49895pt x 104.83965pt.
-<images/encryption/direct-db-dbk2.png, id=202, 1255.69125pt x 761.84625pt>
-File: images/encryption/direct-db-dbk2.png Graphic file (type png)
-<use images/encryption/direct-db-dbk2.png>
-Package pdftex.def Info: images/encryption/direct-db-dbk2.png  used on input line 293.
-(pdftex.def)             Requested size: 345.0pt x 209.31656pt.
- [9 <./images/encryption/direct-freq-db.png>] [10 <./images/encryption/direct-db-dbk1.png> <./images/encryption/direct-db-dbk2.png>] [11]
-<images/encryption/bloom-filter.png, id=221, 1111.15125pt x 759.83875pt>
-File: images/encryption/bloom-filter.png Graphic file (type png)
-<use images/encryption/bloom-filter.png>
-Package pdftex.def Info: images/encryption/bloom-filter.png  used on input line 334.
-(pdftex.def)             Requested size: 276.00105pt x 188.74182pt.
- [12 <./images/encryption/bloom-filter.png>]
-<images/encryption/selective.png, id=229, 813.0375pt x 468.75125pt>
-File: images/encryption/selective.png Graphic file (type png)
-<use images/encryption/selective.png>
-Package pdftex.def Info: images/encryption/selective.png  used on input line 376.
-(pdftex.def)             Requested size: 241.49895pt x 139.2317pt.
- [13 <./images/encryption/selective.png>]
-<images/encryption/auth-policy.png, id=235, 942.52126pt x 459.7175pt>
-File: images/encryption/auth-policy.png Graphic file (type png)
-<use images/encryption/auth-policy.png>
-Package pdftex.def Info: images/encryption/auth-policy.png  used on input line 403.
-(pdftex.def)             Requested size: 241.49895pt x 117.79109pt.
- [14 <./images/encryption/auth-policy.png>]
-<images/encryption/token-based-ex.png, id=244, 642.4pt x 400.49625pt>
-File: images/encryption/token-based-ex.png Graphic file (type png)
-<use images/encryption/token-based-ex.png>
-Package pdftex.def Info: images/encryption/token-based-ex.png  used on input line 454.
-(pdftex.def)             Requested size: 207.0021pt x 129.05363pt.
- [15 <./images/encryption/token-based-ex.png>]
-<images/encryption/encryption-policy-graph.png, id=251, 1165.35374pt x 747.79375pt>
-File: images/encryption/encryption-policy-graph.png Graphic file (type png)
-<use images/encryption/encryption-policy-graph.png>
-Package pdftex.def Info: images/encryption/encryption-policy-graph.png  used on input line 491.
-(pdftex.def)             Requested size: 345.0pt x 221.37314pt.
- [16 <./images/encryption/encryption-policy-graph.png>]
-<images/encryption/graph.png, id=258, 1209.51875pt x 610.28pt>
-File: images/encryption/graph.png Graphic file (type png)
-<use images/encryption/graph.png>
-Package pdftex.def Info: images/encryption/graph.png  used on input line 535.
-(pdftex.def)             Requested size: 313.95126pt x 158.40831pt.
- [17]
-<images/encryption/graph2.png, id=268, 1057.9525pt x 724.7075pt>
-File: images/encryption/graph2.png Graphic file (type png)
-<use images/encryption/graph2.png>
-Package pdftex.def Info: images/encryption/graph2.png  used on input line 555.
-(pdftex.def)             Requested size: 317.39937pt x 217.41393pt.
- [18 <./images/encryption/graph.png> <./images/encryption/graph2.png>] [19]
-<images/encryption/views.png, id=282, 1053.9375pt x 301.125pt>
-File: images/encryption/views.png Graphic file (type png)
-<use images/encryption/views.png>
-Package pdftex.def Info: images/encryption/views.png  used on input line 613.
-(pdftex.def)             Requested size: 241.49895pt x 68.99997pt.
- [20 <./images/encryption/views.png>]
-Capitolo 2.
-[21
-
-]
-<images/encryption-fragmentation/couple-frag.png, id=293, 420.57124pt x 383.4325pt>
-File: images/encryption-fragmentation/couple-frag.png Graphic file (type png)
-<use images/encryption-fragmentation/couple-frag.png>
-Package pdftex.def Info: images/encryption-fragmentation/couple-frag.png  used on input line 656.
-(pdftex.def)             Requested size: 172.5pt x 157.26685pt.
- [22 <./images/encryption-fragmentation/couple-frag.png>]
-<images/encryption-fragmentation/multi-frag.png, id=300, 538.01pt x 228.855pt>
-File: images/encryption-fragmentation/multi-frag.png Graphic file (type png)
-<use images/encryption-fragmentation/multi-frag.png>
-Package pdftex.def Info: images/encryption-fragmentation/multi-frag.png  used on input line 692.
-(pdftex.def)             Requested size: 241.49895pt x 102.72537pt.
-<images/encryption-fragmentation/multi-ex.png, id=301, 1138.2525pt x 738.76pt>
-File: images/encryption-fragmentation/multi-ex.png Graphic file (type png)
-<use images/encryption-fragmentation/multi-ex.png>
-Package pdftex.def Info: images/encryption-fragmentation/multi-ex.png  used on input line 713.
-(pdftex.def)             Requested size: 345.0pt x 223.91803pt.
- [23 <./images/encryption-fragmentation/multi-frag.png>]
-<images/encryption-fragmentation/multi-frag-query.png, id=307, 1093.08376pt x 418.56375pt>
-File: images/encryption-fragmentation/multi-frag-query.png Graphic file (type png)
-<use images/encryption-fragmentation/multi-frag-query.png>
-Package pdftex.def Info: images/encryption-fragmentation/multi-frag-query.png  used on input line 724.
-(pdftex.def)             Requested size: 345.0pt x 132.10374pt.
- [24 <./images/encryption-fragmentation/multi-ex.png> <./images/encryption-fragmentation/multi-frag-query.png>] [25]
-Capitolo 3.
-<images/fragmentation/intro.png, id=321, 528.97626pt x 232.87pt>
-File: images/fragmentation/intro.png Graphic file (type png)
-<use images/fragmentation/intro.png>
-Package pdftex.def Info: images/fragmentation/intro.png  used on input line 778.
-(pdftex.def)             Requested size: 241.49895pt x 106.31488pt.
-[26
-
- <./images/fragmentation/intro.png>] (./main.aux)
+] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7E874F1E2E4B8FC1EAAEFE3A3B45324F;3588.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20906 strings out of 474222
- 393469 string characters out of 5748733
- 1932975 words of memory out of 5000000
- 42757 multiletter control sequences out of 15000+600000
- 566590 words of font info for 65 fonts, out of 8000000 for 9000
+ 20574 strings out of 474222
+ 383493 string characters out of 5748733
+ 1924975 words of memory out of 5000000
+ 42506 multiletter control sequences out of 15000+600000
+ 562384 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,93p,481b,672s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (27 pages, 2199772 bytes).
+ 84i,6n,93p,481b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on main.pdf (2 pages, 38383 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 78 named destinations out of 1000 (max. 500000)
- 321 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 40 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
