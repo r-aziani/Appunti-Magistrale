@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  4 DEC 2024 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.25)  6 DEC 2024 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -680,7 +680,7 @@ Overfull \hbox (3.18858pt too wide) in paragraph at lines 93--94
 
 
 [4{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<paper_k-anon/DGH_e_DVgraph.jpg, id=366, 1084.05pt x 575.90157pt>
+<paper_k-anon/DGH_e_DVgraph.jpg, id=386, 1084.05pt x 575.90157pt>
 File: paper_k-anon/DGH_e_DVgraph.jpg Graphic file (type jpg)
 <use paper_k-anon/DGH_e_DVgraph.jpg>
 Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
@@ -690,12 +690,12 @@ Package pdftex.def Info: paper_k-anon/DGH_e_DVgraph.jpg  used on input line 123.
 [5 <./paper_k-anon/DGH_e_DVgraph.jpg>]
 
 [6]
-<paper_k-anon/k-anon-tech.jpg, id=394, 1409.265pt x 576.65437pt>
+<paper_k-anon/k-anon-tech.jpg, id=414, 1409.265pt x 576.65437pt>
 File: paper_k-anon/k-anon-tech.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-tech.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-tech.jpg  used on input line 161.
 (pdftex.def)             Requested size: 276.00105pt x 112.93549pt.
-<paper_k-anon/k-anon-alg.jpg, id=396, 1109.64563pt x 380.17032pt>
+<paper_k-anon/k-anon-alg.jpg, id=416, 1109.64563pt x 380.17032pt>
 File: paper_k-anon/k-anon-alg.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-alg.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 173.
@@ -705,7 +705,7 @@ Package pdftex.def Info: paper_k-anon/k-anon-alg.jpg  used on input line 173.
 [7 <./paper_k-anon/k-anon-tech.jpg> <./paper_k-anon/k-anon-alg.jpg>]
 
 [8]
-<paper_k-anon/set_enum_tree.jpg, id=411, 521.69907pt x 464.4853pt>
+<paper_k-anon/set_enum_tree.jpg, id=431, 521.69907pt x 464.4853pt>
 File: paper_k-anon/set_enum_tree.jpg Graphic file (type jpg)
 <use paper_k-anon/set_enum_tree.jpg>
 Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 261.
@@ -713,7 +713,7 @@ Package pdftex.def Info: paper_k-anon/set_enum_tree.jpg  used on input line 261.
 
 
 [9 <./paper_k-anon/set_enum_tree.jpg>]
-<paper_k-anon/k-anon-incognito.jpg, id=418, 514.92375pt x 691.83469pt>
+<paper_k-anon/k-anon-incognito.jpg, id=438, 514.92375pt x 691.83469pt>
 File: paper_k-anon/k-anon-incognito.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-incognito.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-incognito.jpg  used on input line 301.
@@ -733,7 +733,7 @@ Overfull \hbox (22.78348pt too wide) in paragraph at lines 350--352
 
 
 [11 <./paper_k-anon/k-anon-incognito.jpg>]
-<paper_k-anon/k-anon-mult-views.jpg, id=437, 980.16188pt x 460.72125pt>
+<paper_k-anon/k-anon-mult-views.jpg, id=457, 980.16188pt x 460.72125pt>
 File: paper_k-anon/k-anon-mult-views.jpg Graphic file (type jpg)
 <use paper_k-anon/k-anon-mult-views.jpg>
 Package pdftex.def Info: paper_k-anon/k-anon-mult-views.jpg  used on input line 380.
@@ -759,7 +759,7 @@ Overfull \hbox (14.88954pt too wide) in paragraph at lines 35--36
 []\OT1/cmr/m/n/10 Una ta-ble di mi-cro-dati e le in-for-mazioni es-terne con-tengono ru-more, riducendo
  []
 
-<paper_microdata/Fig3.png, id=461, 469.00218pt x 175.40532pt>
+<paper_microdata/Fig3.png, id=481, 469.00218pt x 175.40532pt>
 File: paper_microdata/Fig3.png Graphic file (type png)
 <use paper_microdata/Fig3.png>
 Package pdftex.def Info: paper_microdata/Fig3.png  used on input line 41.
@@ -772,12 +772,12 @@ Overfull \hbox (7.05618pt too wide) in paragraph at lines 52--55
 
 
 [15 <./paper_microdata/Fig3.png>]
-<paper_microdata/Fig4.png, id=469, 301.125pt x 127.97812pt>
+<paper_microdata/Fig4.png, id=489, 301.125pt x 127.97812pt>
 File: paper_microdata/Fig4.png Graphic file (type png)
 <use paper_microdata/Fig4.png>
 Package pdftex.def Info: paper_microdata/Fig4.png  used on input line 75.
 (pdftex.def)             Requested size: 172.5pt x 73.3154pt.
-<paper_microdata/Fig5.png, id=470, 317.68687pt x 177.66376pt>
+<paper_microdata/Fig5.png, id=490, 317.68687pt x 177.66376pt>
 File: paper_microdata/Fig5.png Graphic file (type png)
 <use paper_microdata/Fig5.png>
 Package pdftex.def Info: paper_microdata/Fig5.png  used on input line 82.
@@ -789,7 +789,7 @@ Overfull \hbox (11.77829pt too wide) in paragraph at lines 94--95
 \OT1/cmr/m/n/10 uno speci-fico re-spon-dent sia pre-sente nei sam-ple, il ris-chio di re-identificazione
  []
 
-<paper_microdata/Fig6.png, id=479, 347.79938pt x 160.34906pt>
+<paper_microdata/Fig6.png, id=499, 347.79938pt x 160.34906pt>
 File: paper_microdata/Fig6.png Graphic file (type png)
 <use paper_microdata/Fig6.png>
 Package pdftex.def Info: paper_microdata/Fig6.png  used on input line 107.
@@ -800,7 +800,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 [17]
-<paper_microdata/Fig8.png, id=484, 428.35031pt x 536.75531pt>
+<paper_microdata/Fig8.png, id=504, 428.35031pt x 536.75531pt>
 File: paper_microdata/Fig8.png Graphic file (type png)
 <use paper_microdata/Fig8.png>
 Package pdftex.def Info: paper_microdata/Fig8.png  used on input line 120.
@@ -948,80 +948,91 @@ Chapter 3.
 
 
 ]
-Overfull \hbox (26.71408pt too wide) in paragraph at lines 51--52
+Overfull \hbox (26.71408pt too wide) in paragraph at lines 55--56
 []\OT1/cmr/bx/it/10 Dichiarazioni \OT1/cmr/m/it/10 che com-pren-dono pro-priet^^Ra non cer-tifi-cate dichiarate dall'utente. 
  []
 
-<paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg, id=570, 1081.79156pt x 523.9575pt>
+<paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg, id=590, 1081.79156pt x 523.9575pt>
 File: paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg Graphic file (type jpg)
 <use paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg>
-Package pdftex.def Info: paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg  used on input line 70.
+Package pdftex.def Info: paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg  used on input line 74.
 (pdftex.def)             Requested size: 276.00105pt x 133.67535pt.
 
 
 [34]
 
 [35 <./paper_user-privacy-preferences/00_pref_credential_hierarchy.jpg>]
-Overfull \hbox (4.19504pt too wide) in paragraph at lines 136--137
+Overfull \hbox (4.19504pt too wide) in paragraph at lines 140--141
 \OT1/cmr/m/n/10 per-me-tte di cal-co-lare il val-ore di sen-si-bilit^^Ra di un set di at-tributi/credenziali. 
  []
 
 
 
 [36]
-<paper_user-privacy-preferences/00_pref_cost_tab_example.jpg, id=592, 1064.47687pt x 410.2828pt>
+<paper_user-privacy-preferences/00_pref_cost_tab_example.jpg, id=612, 1064.47687pt x 410.2828pt>
 File: paper_user-privacy-preferences/00_pref_cost_tab_example.jpg Graphic file (type jpg)
 <use paper_user-privacy-preferences/00_pref_cost_tab_example.jpg>
-Package pdftex.def Info: paper_user-privacy-preferences/00_pref_cost_tab_example.jpg  used on input line 174.
+Package pdftex.def Info: paper_user-privacy-preferences/00_pref_cost_tab_example.jpg  used on input line 178.
 (pdftex.def)             Requested size: 276.00105pt x 106.37677pt.
 
 
 [37]
-Overfull \hbox (2.5561pt too wide) in paragraph at lines 202--205
+Overfull \hbox (2.5561pt too wide) in paragraph at lines 206--209
 \OT1/cmr/m/n/10 Il prob-lema ^^Re NP-difficile e con costo espo-nen-ziale nel nu-mero di in-put(credenziali
  []
 
 
 
 [38 <./paper_user-privacy-preferences/00_pref_cost_tab_example.jpg>]
-<paper_user-privacy-preferences/00_pref_policy_graph.jpg, id=609, 949.29657pt x 603.75563pt>
+<paper_user-privacy-preferences/00_pref_policy_graph.jpg, id=629, 949.29657pt x 603.75563pt>
 File: paper_user-privacy-preferences/00_pref_policy_graph.jpg Graphic file (type jpg)
 <use paper_user-privacy-preferences/00_pref_policy_graph.jpg>
-Package pdftex.def Info: paper_user-privacy-preferences/00_pref_policy_graph.jpg  used on input line 216.
+Package pdftex.def Info: paper_user-privacy-preferences/00_pref_policy_graph.jpg  used on input line 220.
 (pdftex.def)             Requested size: 276.00105pt x 175.53606pt.
+<paper_user-privacy-preferences/00_pref_policy_exchange.jpg, id=631, 721.19438pt x 347.04657pt>
+File: paper_user-privacy-preferences/00_pref_policy_exchange.jpg Graphic file (type jpg)
+<use paper_user-privacy-preferences/00_pref_policy_exchange.jpg>
+Package pdftex.def Info: paper_user-privacy-preferences/00_pref_policy_exchange.jpg  used on input line 242.
+(pdftex.def)             Requested size: 276.00105pt x 132.81107pt.
 
 
-LaTeX Warning: Reference `' on page 39 undefined on input line 234.
+[39 <./paper_user-privacy-preferences/00_pref_policy_graph.jpg>]
+
+[40 <./paper_user-privacy-preferences/00_pref_policy_exchange.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 285--287
+
+ []
+
+
+Overfull \hbox (5.85295pt too wide) in paragraph at lines 303--303
+[]\OT1/cmr/bx/n/14.4 Logical-Based Min-i-mal Cre-den-tial Dis-clo-sure 
+ []
 
 
 
-[39 <./paper_user-privacy-preferences/00_pref_policy_graph.jpg>])
+[41])
 
-[40] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux) (./paper_user-privacy-preferences/user-privacy-preferences.aux))
+[42] (./main.aux (./paper_k-anon/k-Anonymity.aux) (./paper_microdata/MicrodataProtection.aux) (./paper_cloud/cloud.aux) (./paper_user-privacy-preferences/user-privacy-preferences.aux))
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CDEDEF9DCE9C528CE81FD80EF76462A6;12625.
+(rerunfilecheck)             Checksum: 465E77D207580A1C41E51D53899CE0A5;13500.
  ) 
 Here is how much of TeX's memory you used:
- 26431 strings out of 473361
- 483780 string characters out of 5725029
- 894929 words of memory out of 5000000
- 48891 multiletter control sequences out of 15000+600000
+ 26453 strings out of 473361
+ 484461 string characters out of 5725029
+ 896010 words of memory out of 5000000
+ 48902 multiletter control sequences out of 15000+600000
  572681 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,12n,131p,2434b,633s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (41 pages, 1516242 bytes).
+Output written on main.pdf (43 pages, 1576392 bytes).
 PDF statistics:
- 769 PDF objects out of 1000 (max. 8388607)
- 650 compressed objects within 7 object streams
- 174 named destinations out of 1000 (max. 500000)
- 563 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 810 PDF objects out of 1000 (max. 8388607)
+ 688 compressed objects within 7 object streams
+ 185 named destinations out of 1000 (max. 500000)
+ 600 words of extra memory for PDF output out of 10000 (max. 10000000)
 

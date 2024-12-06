@@ -41,6 +41,10 @@ Le sezioni riportano:
 \end{itemize}
 
 
+
+
+
+%%%   %%%   %%%
 \section{Concetti Base e \textit{Desiderata}}
 
 \subsection{Client Portfolio}
@@ -160,7 +164,7 @@ Il sistema lato server deve considerare:
 
 
 
-
+%%%   %%%   %%%
 \section{Cost-Sensitive Trust Negotiation }
 Sensibilità espressa con costo $w(c)$ associata ad ogni credenziale $c$ nel portfolio e con ogni policy di access control $p$.
 $p$ viene definita come espressione booleana sulle credenziali della controparte, mentre i valori booleani delle credenziali $c$ sono espressi come $vero$ se già rivelati, $false$ altrimenti.
@@ -231,8 +235,14 @@ Soluzione greedy che si divide in due step:
     \item Applicazione della strategy trovata.
 \end{enumerate}
 
-In fig.\ref{} viene mostrato uno scambio per i portfolio mostrati precedentemente
+In fig.\ref{fig:pref_policy_exchange} viene mostrato uno scambio per i portfolio mostrati precedentemente:
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{paper_user-privacy-preferences/00_pref_policy_exchange.jpg}
+    \caption{Scambio di credenziali tra le parti}
+    \label{fig:pref_policy_exchange}
+\end{figure}
 
 \subsubsection{Problematiche Aperte}
 Limitazioni dei due approcci: \begin{itemize}
@@ -244,4 +254,74 @@ Limitazioni dei due approcci: \begin{itemize}
 
 
 
+%%%   %%%   %%%
 \section{Point-Based Trust Management}
+Questo sistema cambia il modello riguardante l'accesso alle risorse.
+Viene associato un punteggio \texttt{ptr} ad ogni credenziale (in base al livello di affidabilità) ed una soglia \texttt{thr} di punti richiesti per ottenere accesso ad ogni servizio.
+
+Il client deve quindi presentare un subset delle sue credenziali la cui somma dei punteggi supera la soglia richiesta dal server.
+
+Allo stesso modo il client valuta il rilascio di ogni credenziale nel suo portfolio con un privacy score \texttt{ps}. Più è alto il ps, maggiore è la sensibilità della credenziale per il client\footnote{Cient rilascia credenziali con valori di \texttt{ps} minori.}.
+
+
+$\\$
+Infine, siccome le policy possono essere sensibili, il server non rilascia \texttt{thr} o il punteggio \texttt{pt} che associa alle credenziali, così come il client non rilascia i \texttt{ps}. Non conoscendo cosa è richiesto nasce quindi il \textit{Credential Selection Problem}.
+
+\subsection{Credential Selection Problem}
+Il problema consiste nel:
+\begin{itemize}
+    \item Trovare un subset di credenziali che soddisfa \texttt{thr}.
+    \item Trovare un subset che sia minimo nella somma dei valori di \texttt{ps}.
+\end{itemize}
+
+E un problema NP-difficile.
+
+
+\subsection{Dynamic Programming Algorithm}
+Approccio che riscrive il problema in un \textit{knapsack problem}: vengono inseriti nel knapsack le credenziali che non verranno rilasciate.
+Il knapsack ha capacità data dalla somma dei \texttt{pt} - il valore di soglia \texttt{thr} 
+
+
+Tramite una matrice di appoggio vengono calcolate tutte le possibili modalità di riempimento del knapsack un elemento alla volta: ogni cella contiene il valore totale del knapsack per quello step di riempimento.
+$\\$
+
+Tuttavia \texttt{thr} e i \texttt{pt} vengono quindi comunicati.
+Questo non è accettato nello scenario considerato, al che gli autori hanno proposto una soluzione di programmazione dinamica che permette alle parti di risolvere insieme il problema knapsack tramite crittografia homomorphica.
+
+
+\subsubsection{Problematiche Aperte}
+\begin{itemize}
+    \item Comunicazione set di credenziali su cui basare lo scambio.
+    \item \texttt{thr} non basta, server necessita di policy più espressive.
+    \item Focus è sulla negoziazione e non sul management privacy preferences.
+\end{itemize}
+
+
+
+
+
+\section{Logical-Based Minimal Credential Disclosure}
+Può non essere facile per un utente finale definire le preferenze con valori numerici come nelle soluzioni precedenti.
+Inoltre valori numerici potrebbero imporre accidentalmente gerarchie come side effects.
+
+Vengono quindi introdotti valori qualitativi per i valori di preferenza.
+Le credenziali sono considerate singleton (certificano un solo attributo) e le policy server sono considerate note a tutti.
+
+Utente deve infine scegliere una $strategy$ tra diverse opzioni, filtrate da tutte le strategie possibili tramite le preferenze utente. 
+
+\subsection{Preferenze Qualitative}
+La soluzione pratica sfrutta la composizione di Pareto\footnote{Qui vengono volutamente omessi i dettagli del funzionamento}.
+
+$\\$
+In sintesi, si rappresentano tutte le strategie di successo in una table che riporta il rilascio di ogni attributo.
+
+Le preferenze sono invece espresse da foreste. Nodi a seguire di u arco direzionato sono più sensibili dei nodi alla partenza dell'arco.
+
+Le strategie sono comparate attraverso la comparazione degli attributi secondo le relazioni di preferenza espresse. 
+
+
+\subsubsection{Problematiche Aperte}
+\begin{itemize}
+    \item Richiede intervento utente per la scelta finale.
+    \item Non considera le credenziali atomiche.
+\end{itemize}
