@@ -790,15 +790,202 @@ $F_O$ è affidato all'owner e quello di $F_S$ al server, e:
 A livello fisico i frammenti $F_O$ e $F_S$ hanno un attributo in comune (\textit{tuple ID} oppure attributo-chiave) 
 per garantire un join senza perdita di informazioni. 
 
+\section{Valutazione delle query}
+Le query formulate su $R$ devono essere tradotte in \textbf{query equivalenti} su 
+$F_O$ e/o $F_S$
+
+$\rightarrow$ \texttt{SELECT $A$ FROM $R$ WHERE $C$}, dove $C$ è una congiunzione 
+di condizioni, che possono essere del tipo:
+\begin{itemize}
+    \item $C_O$: congiunzioni che involvono solo attributi storati nel client 
+    \item $C_S$ congiunzioni che involvono solo attributi storati nel server 
+    \item $C_{SO}$ congiunzioni che involvono attributi storati sia nel client che nel server 
+\end{itemize} 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/fragmentation/query-ex.png}
+\end{figure}
 
 
+\subsection{Strategia Server-Client}
+\begin{enumerate}
+    \item \textcolor{blue}{\textbf{Server:}} valuta $C_S$ e ritorna il risultato al client 
+    \item \textcolor{orange}{\textbf{Client:}} riceve il risultato dal server con $F_O$ (frammento dell'owner)
+    \item \textcolor{orange}{\textbf{Client:}} valuta $C_O$ e $C_SO$ dopo aver fatto il join 
+\end{enumerate}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/fragmentation/sc-1.png}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/fragmentation/sc-2.png}
+\end{figure}
+
+\subsection{Strategia Client-Server}
+\begin{enumerate}
+    \item \textcolor{orange}{\textbf{Client:}} valuta $C_O$ e manda i \textit{tuple ID} al server 
+    \item \textcolor{blue}{\textbf{Server:}} fa il join dell'input con $F_S$, valuta $C_S$, e ritorna il risultato al client 
+    \item \textcolor{orange}{\textbf{Client:}} fa il join del risultato con $F_O$ e valuta $C_SO$
+\end{enumerate}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/fragmentation/cs.png}
+\end{figure}
+
+\subsection{Strategie a confronto}
+\begin{itemize}
+    \item se il server \textbf{conosce o può inferire la query}, allora la strategia Client-Server rilascia informazioni
+    
+    $\rightarrow$ il server può inferire che alcune tuple sono associate a valori che soddisfano $C_O$
+    \item se il server \textbf{non conosce e non può inferire la query}, allora entrambe le strategie sono sicure 
+    
+    $\rightarrow$ si sceglie quella più performante, valutando per prime le condizioni più selettive
+\end{itemize}
+
+\newpage
+\section{Frammentazione minima}
+\begin{itemize}
+    \item L'obiettivo è \textbf{minimizzare il carico di lavoro dell'owner}, gestendo $F_O$
+    \item Si stabilisce una funzione peso $w$ che prende una coppia $\left\langle F_O, F_S \right\rangle$ come input
+    e ritorna il carico di lavoro dell'owner 
+    \item Una frammentazione $\mathcal{F} = \left\langle F_O, F_S \right\rangle$ si dice minimale sse:
+    \begin{itemize}
+        \item $\mathcal{F}$ è corretta (soddisfa le proprietà di correttezza, confidenzialità e non-ridondanza)
+        \item $ \not\exists \mathcal{F}'$ tale che $w(\mathcal{F}') < w(\mathcal{F})$ e $\mathcal{F}'$ è corretto 
+    \end{itemize}
+\end{itemize}
+
+\subsection{Metriche per la frammentazione}
+Possono essere usate diverse metriche per dividere gli attributi tra $F_O$ e $F_S$, 
+per minimizzare:
+\begin{itemize}
+    \item \textbf{Storage}
+    \begin{itemize}
+        \item Numero di attributi in $F_O$ (\textit{\textbf{Min-Attr}}):
+        
+        $\rightarrow w_a(\mathcal{F}) = |F_O|$
+
+        \item Dimensione degli attributi in $F_O$ (\textit{\textbf{Min-Size}}):
+        
+        $\rightarrow w_s(\mathcal{F}) = \sum_{A \in F_O} size(A)$
+    \end{itemize}
+    \item \textbf{Computazione/Traffico}
+    \begin{itemize}
+        \item Numero di query in cui l'owner viene coinvolto (\textit{\textbf{Min-Query}}):
+        
+        Si definisce un \textit{query workload profile}:
+
+        $\mathcal{Q} = \{(q_1, freq(q_1), Attr(q_1), \dots, q_n, freq(q_n), Attr(q_n)) \}$, con:
+        \begin{itemize}
+            \item $q_1, \dots, q_n$ query da eseguire 
+            \item $freq(q_i)$ frequenza attesa di $q_i$
+            \item $Attr(q_i)$ attributi che compaiono nella clausola \texttt{WHERE} di $q_i$
+        \end{itemize}
+
+        $\rightarrow w_q(\mathcal{F}) = \sum_{q \in \mathcal{Q}} freq(q)$ t.c. $Attr(q) \cap F_O \neq \emptyset$
+
+        \item Numero di condizioni nelle query in cui è necessario coinvolgere l'owner (\textit{\textbf{Min-Cond}}):
+        
+        Si definisce un \textit{query workload profile}:
+
+        $\mathcal{Q} = \{(q_1, freq(q_1), Cond(q_1), \dots, q_n, freq(q_n), Cond(q_n)) \}$, con:
+        \begin{itemize}
+            \item $q_1, \dots, q_n$ query da eseguire 
+            \item $freq(q_i)$ frequenza attesa di $q_i$
+            \item $Cond(q_i)$ condizioni che compaiono nella clausola \texttt{WHERE} di $q_i$
+        \end{itemize}
+
+        $\rightarrow w_c(\mathcal{F}) = \sum_{c \in Cond(\mathcal{Q})} freq(c)$ t.c. $c \cap F_O \neq \emptyset$
 
 
+    \end{itemize}
+\end{itemize}
 
+\subsection{Modellizzazione del problema di mininimzzazione}
+Tutti i problemi di minimizzazione mirano ad identificare 
+un \textit{\textbf{hitting set}}; metriche differenti corrispondo a criteri 
+differenti secondo cui l'\textit{hitting set} deve essere minimizzato.
 
+\noindent Tutti i criteri sono rappresentati in modo uniforme 
+con il seguente modello:
+\begin{itemize}
+    \item \textbf{target set:} elementi (attributi, query, condizioni) su cui è definito il problema di minimizzazione
+    \item \textbf{funzione peso:} funzione che associa un peso a ciascun elemento
+    \item \textbf{peso di un set di attributi:} somma dei pesi dei target che intersecano con il set
+\end{itemize}
 
+$\rightarrow$ si vuole computare un hitting set con peso minimo
 
+\subsection{Algoritmo Euristico}
+\begin{itemize}
+    \item \textbf{Input:}
+    \begin{itemize}
+        \item $\mathcal{A}$: set di attributi che non appaiono in \textit{singleton constraint} 
+        \item $\mathcal{C}$: set di constraint ben definiti 
+        \item $\mathcal{T}$: set di target 
+        \item $w$: funzione peso definita su $\mathcal{T}$
+    \end{itemize}
+    \item \textbf{Output:}
+    \begin{itemize}
+        \item $\mathcal{H}$: set di attributi che, uniti a quelli che appaiono in \textit{singleton constraint}, formano $F_O$
+        \item $F_S$ computato come $R / F_S$
+    \end{itemize}
+    \item \textbf{Struttura Dati:}
+    \textit{Priority-queue} $PQ$ con un elemento $E$ per ogni attributo:
+    \begin{itemize}
+        \item $E.A$: attributo 
+        \item $E.C$: puntatore a constraint non soddisfatti che contengono $E.A$
+        \item $E.T$: puntatore ai target che non intersecano $\mathcal{H}$ che contengono $E.A$
+        \item $E.n_c$: numero di constraint puntati da $E:C$
+        \item $E.w$. peso totale dei target puntati da $E.T$
+    \end{itemize}
 
+    $\rightarrow$ la priorità è dettata da $E.w / E.n_c$, ovvero il miglior rapporto \textit{costo / numero di vincoli risolti}
+\end{itemize}
+
+\newpage
+\subsubsection{Procedura}
+\begin{itemize}
+    \item \texttt{\textbf{while}} $PQ \neq \emptyset$ e $\exists E \in PQ$ t.c. $E.n_c \neq 0$
+    \begin{itemize}
+        \item estrai da $PQ$ elemento $E$ con $E.w/E.n_c$ minimo 
+        \item inserisci $E.A$ in $\mathcal{H}$
+        \item $\forall c$ puntato da $E.C$, rimuovi i puntatori a $c$ da ogni elemento $E'$, ed aggiorna $E'.n_c$ 
+        \item $\forall t$ puntato da $E.T$, rimuovi i puntatori a $t$ da ogni elemento $E'$, ed aggiorna $E'.w$
+        \item aggiusta $PQ$ secondo i nuovi $E.w / E.n_c$
+    \end{itemize}
+    \item \texttt{\textbf{for}} $A \in \mathcal{H}$
+    \begin{itemize}
+        \item se $\mathcal{H} / A$ è un \textit{hitting set} per $\mathcal{C}$, 
+        allora rimuovi $A$ da $\mathcal{H}$
+    \end{itemize}
+\end{itemize}
+
+\newpage
+\section{Frammentazione e inferenza}
+La frammentazione assume che gli attributi siano tra loro indipendenti;
+in caso di dipendenza tra attributi, potrebbe verificarsi l'esposizione indiretta di attributi/associazioni sensibili.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/fragmentation/inference1.png}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/fragmentation/inference2.png}
+\end{figure}
+
+\textit{Avere attributi in comune significa essere linkabili; ma non è vero 
+che essere linkabili significhi per forza dire avere attributi in comune.}
+
+\noindent I frammenti non dovrebbe contenere attributi/associazioni sensibili 
+\textbf{né direttamente che indirettamente.}
 
 
 
