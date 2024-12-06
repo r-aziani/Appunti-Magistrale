@@ -62,5 +62,11 @@
 \contentsline {subsection}{\numberline {3.3.1}Minimizzare il Costo}{38}{subsection.3.3.1}%
 \contentsline {subsubsection}{Senza Considerare Costo delle Policy}{39}{section*.18}%
 \contentsline {subsubsection}{Considerando il Costo delle Policy}{39}{section*.20}%
-\contentsline {subsubsection}{Problematiche Aperte}{39}{section*.21}%
+\contentsline {subsubsection}{Problematiche Aperte}{39}{section*.22}%
 \contentsline {section}{\numberline {3.4}Point-Based Trust Management}{40}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Credential Selection Problem}{40}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Dynamic Programming Algorithm}{41}{subsection.3.4.2}%
+\contentsline {subsubsection}{Problematiche Aperte}{41}{section*.23}%
+\contentsline {section}{\numberline {3.5}Logical-Based Minimal Credential Disclosure}{41}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Preferenze Qualitative}{41}{subsection.3.5.1}%
+\contentsline {subsubsection}{Problematiche Aperte}{42}{section*.24}%
