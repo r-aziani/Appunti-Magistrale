@@ -1,51 +1,68 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Encryption}{2}{chapter.1}%
-\contentsline {subsubsection}{Approcci per accesso a diversi livelli di granularità}{2}{section*.2}%
-\contentsline {subsubsection}{Interval-based queries}{6}{section*.3}%
-\contentsline {section}{\numberline {1.1}\textit {Searchable Encryption}}{7}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}\textit {Order preserving encryption}}{7}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}\textit {Fully homomorphic encryption}}{7}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Esposizione all'inferenza}{8}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Direct Encryption}{8}{subsection.1.2.1}%
-\contentsline {subsubsection}{\textbf {Freq + $DB^k$}}{8}{section*.4}%
-\contentsline {subsubsection}{DB + $DB^k$}{9}{section*.5}%
-\contentsline {subsection}{\numberline {1.2.2}Hashing}{11}{subsection.1.2.2}%
-\contentsline {subsubsection}{Freq + $DB^k$}{11}{section*.6}%
-\contentsline {subsubsection}{DB + $DB^k$}{11}{section*.7}%
-\contentsline {section}{\numberline {1.3}Bloom Filter}{12}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Integrità dei Dati}{13}{section.1.4}%
-\contentsline {section}{\numberline {1.5}\textit {Selective-Encryption} e \textit {Over-Encryption}}{13}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Selective Encryption}{13}{subsection.1.5.1}%
-\contentsline {subsubsection}{Politiche di Autorizzazione}{14}{section*.8}%
-\contentsline {subsubsection}{Politica di Encryption}{14}{section*.9}%
-\contentsline {subsubsection}{Metodi di Derivazione delle Chiavi}{14}{section*.10}%
-\contentsline {subsubsection}{Metodi di Derivazione delle Chiavi basati su Token}{15}{section*.11}%
-\contentsline {subsubsection}{Definzione Formale della Politica Crittografica}{16}{section*.12}%
-\contentsline {subsubsection}{Politica di Trasformazione}{17}{section*.13}%
-\contentsline {subsubsection}{Costruzione di un grafo per chiavi e token}{17}{section*.14}%
-\contentsline {subsection}{\numberline {1.5.2}Over-Encryption}{19}{subsection.1.5.2}%
-\contentsline {subsubsection}{BEL}{19}{section*.15}%
-\contentsline {subsubsection}{SEL}{19}{section*.16}%
-\contentsline {subsection}{\numberline {1.5.3}Collusione}{20}{subsection.1.5.3}%
-\contentsline {chapter}{\numberline {2}Fragmentation e Encryption}{21}{chapter.2}%
-\contentsline {subsubsection}{Constraint di confidenzialità}{21}{section*.17}%
-\contentsline {section}{\numberline {2.1}Coppia di server non-comunicanti}{21}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Esecuzione delle query}{22}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Identificare la scomposizione ottimale}{22}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Frammenti non comunicanti multipli}{23}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Esecuzione delle query}{24}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Criteri di ottimizzazione}{25}{subsection.2.2.2}%
-\contentsline {subsubsection}{Minimo numero di frammenti}{25}{section*.18}%
-\contentsline {subsubsection}{Massima affinità tra attributi}{25}{section*.19}%
-\contentsline {chapter}{\numberline {3}Frammentazione}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Valutazione delle query}{27}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Strategia Server-Client}{27}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Strategia Client-Server}{28}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Strategie a confronto}{28}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Frammentazione minima}{29}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Metriche per la frammentazione}{29}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Modellizzazione del problema di mininimzzazione}{30}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Algoritmo Euristico}{30}{subsection.3.2.3}%
-\contentsline {subsubsection}{Procedura}{31}{section*.20}%
-\contentsline {section}{\numberline {3.3}Frammentazione e inferenza}{32}{section.3.3}%
+\contentsline {chapter}{\numberline {1}Encryption}{3}{chapter.1}%
+\contentsline {subsubsection}{Approcci per accesso a diversi livelli di granularità}{3}{section*.2}%
+\contentsline {subsubsection}{Interval-based queries}{7}{section*.3}%
+\contentsline {section}{\numberline {1.1}\textit {Searchable Encryption}}{8}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}\textit {Order preserving encryption}}{8}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}\textit {Fully homomorphic encryption}}{8}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Esposizione all'inferenza}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Direct Encryption}{9}{subsection.1.2.1}%
+\contentsline {subsubsection}{\textbf {Freq + $DB^k$}}{9}{section*.4}%
+\contentsline {subsubsection}{DB + $DB^k$}{10}{section*.5}%
+\contentsline {subsection}{\numberline {1.2.2}Hashing}{12}{subsection.1.2.2}%
+\contentsline {subsubsection}{Freq + $DB^k$}{12}{section*.6}%
+\contentsline {subsubsection}{DB + $DB^k$}{12}{section*.7}%
+\contentsline {section}{\numberline {1.3}Bloom Filter}{13}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Integrità dei Dati}{14}{section.1.4}%
+\contentsline {section}{\numberline {1.5}\textit {Selective-Encryption} e \textit {Over-Encryption}}{14}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Selective Encryption}{14}{subsection.1.5.1}%
+\contentsline {subsubsection}{Politiche di Autorizzazione}{15}{section*.8}%
+\contentsline {subsubsection}{Politica di Encryption}{15}{section*.9}%
+\contentsline {subsubsection}{Metodi di Derivazione delle Chiavi}{15}{section*.10}%
+\contentsline {subsubsection}{Metodi di Derivazione delle Chiavi basati su Token}{16}{section*.11}%
+\contentsline {subsubsection}{Definzione Formale della Politica Crittografica}{17}{section*.12}%
+\contentsline {subsubsection}{Politica di Trasformazione}{18}{section*.13}%
+\contentsline {subsubsection}{Costruzione di un grafo per chiavi e token}{18}{section*.14}%
+\contentsline {subsection}{\numberline {1.5.2}Over-Encryption}{20}{subsection.1.5.2}%
+\contentsline {subsubsection}{BEL}{20}{section*.15}%
+\contentsline {subsubsection}{SEL}{20}{section*.16}%
+\contentsline {subsection}{\numberline {1.5.3}Collusione}{21}{subsection.1.5.3}%
+\contentsline {chapter}{\numberline {2}Fragmentation e Encryption}{22}{chapter.2}%
+\contentsline {subsubsection}{Constraint di confidenzialità}{22}{section*.17}%
+\contentsline {section}{\numberline {2.1}Coppia di server non-comunicanti}{22}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Esecuzione delle query}{23}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Identificare la scomposizione ottimale}{23}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Frammenti non comunicanti multipli}{24}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Esecuzione delle query}{25}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Criteri di ottimizzazione}{26}{subsection.2.2.2}%
+\contentsline {subsubsection}{Minimo numero di frammenti}{26}{section*.18}%
+\contentsline {subsubsection}{Massima affinità tra attributi}{26}{section*.19}%
+\contentsline {chapter}{\numberline {3}Frammentazione}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Valutazione delle query}{28}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Strategia Server-Client}{28}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Strategia Client-Server}{29}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Strategie a confronto}{29}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Frammentazione minima}{30}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Metriche per la frammentazione}{30}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Modellizzazione del problema di mininimzzazione}{31}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Algoritmo Euristico}{31}{subsection.3.2.3}%
+\contentsline {subsubsection}{Procedura}{32}{section*.20}%
+\contentsline {section}{\numberline {3.3}Frammentazione e inferenza}{33}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Pubblicazione di Associazioni Offuscate}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Anonimizzazione di Grafo Bipartito}{34}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}\textit {(k, l)} grouping}{35}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Frammenti e \textit {Loose Associations}}{36}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Frammentazione Corretta e Minima}{36}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}\textit {Loose Associations}}{36}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Grouping}{36}{subsection.4.2.3}%
+\contentsline {subsubsection}{Esempio - minimal (2,2)-grouping}{37}{section*.21}%
+\contentsline {subsubsection}{Associazione tra Gruppi}{37}{section*.22}%
+\contentsline {subsection}{\numberline {4.2.4}\textit {k}-loose association}{38}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}\textit {Alikeness}}{38}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Proprietà di Eterogeneità}{39}{subsection.4.2.6}%
+\contentsline {subsubsection}{Eterogeneità dei gruppi}{39}{section*.23}%
+\contentsline {subsubsection}{Eterogeneità delle associazioni}{39}{section*.24}%
+\contentsline {subsubsection}{Eterogeneità profonda}{40}{section*.25}%
+\contentsline {subsection}{\numberline {4.2.7}\textit {Flat grouping} vs \textit {Sparse grouping}}{40}{subsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.2.8}Privacy vs Utilità}{40}{subsection.4.2.8}%

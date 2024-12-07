@@ -987,6 +987,205 @@ che essere linkabili significhi per forza dire avere attributi in comune.}
 \noindent I frammenti non dovrebbe contenere attributi/associazioni sensibili 
 \textbf{né direttamente che indirettamente.}
 
+\chapter{Pubblicazione di Associazioni Offuscate}
+
+\section{Anonimizzazione di Grafo Bipartito}
+Si \textit{maschera} il mapping tra entità e nodi del grafo, 
+conservando la struttura del grafo (e quindi delle relazioni).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/publ-obf-ass/grafo-bipartito.png}
+\end{figure}
+
+\noindent Pubblicando una versione anonimizzata del grafo bipartito 
+si può rispondere a diverse query:
+\begin{itemize}
+    \item \textbf{Tipo 0 - Struttura del grafo}
+    
+    \textit{Qual è il numero medio di prodotti comprati?}
+    \item \textbf{Tipo 1 - Predicati su attributi di un solo lato}
+    
+    \textit{Qual è il numero medio di prodotti comprati da clienti del NJ?}
+    \item \textbf{Tipo 2 - Predicati su attributi di entrambi i lati}
+    
+    \textit{Qual è il numero medio di prodotti OTC acquistati dai clienti del NJ?}
+\end{itemize}
+
+\noindent La privacy delle associazioni viene rispettata.
+
+\subsection{\textit{(k, l)} grouping}
+L'idea è quella di preservare la struttura del grafo mappando 
+le singole entità a nodi:
+
+$\rightarrow \textbf{(k, l)}$ \textbf{grouping di un grafo bipartito} $\textbf{G=(V,W,E)}$
+\begin{itemize}
+    \item Si partiziona $V$ ($W$, rispettivamente) in sottoinsiemi che non intersecano tra loro di 
+    dimensione $\leq k$ ($l$, rispettivamente)
+    \item Si pubblicano gli archi $E'$, isomorfi ad $E$, dove la mappatura da $E$ a $E'$ è 
+    anonimizzata grazie alle partizioni di $V$ e $W$
+\end{itemize} 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.79\linewidth]{images/publ-obf-ass/k-l1.png}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.99\linewidth]{images/publ-obf-ass/k-l2.png}
+\end{figure}
+
+Per fare dei \textbf{raggruppamenti sicuri}, i nodi nello stesso gruppo di $V$ 
+non dovrebbero essere connessi a uno stesso nodo di $W$.
+
+\section{Frammenti e \textit{Loose Associations}}
+Per incrementare l'utilità delle informazioni pubblicate, 
+si possono fare delle associazioni tra gruppi di valori.
+
+\subsection{Frammentazione Corretta e Minima}
+\begin{itemize}
+    \item Una frammentazione è \textbf{corretta} se:
+    \begin{itemize}
+        \item ogni constraint di confidenzialità è soddisfatto da \textbf{tutti} i frammenti 
+        \item ogni requisito di visibilità è soddisfatto da \textbf{almeno} un frammento
+        \item i frammenti non hanno attributi in comune
+    \end{itemize}
+    \item Una frammentazione è \textbf{minimale} se:
+    \begin{itemize}
+        \item il numero di frammenti è \textbf{minimo}
+    \end{itemize}
+\end{itemize}
+
+\subsection{\textit{Loose Associations}}
+Dati due frammenti $F_l$ e $F_r$, una \textit{loose association} tra $F_l$ e $F_r$:
+\begin{itemize}
+    \item partiziona le tuple dei frammenti in \textbf{gruppi}
+    \item dà informazioni sulle associazioni a \textbf{livello di gruppo}
+    \item \textbf{non permette di ricostruire} esattamente le associazioni originali tra tuple 
+    \item aumenta l'utilità dei dati pubblicati 
+\end{itemize} 
+
+\subsection{Grouping}
+\begin{itemize}
+    \item Data l'istanza $f_i$ di un frammento $F_i$, un $k$-grouping partiziona le tuple in gruppi di dimensione
+    $\geq k$
+    \item Un $k-grouping$ è minimale se massimizza il numero di gruppi
+    \item La notazione $(\textcolor{orange}{k_l}, \textcolor{blue}{k_r})$-grouping denota i gruppi su \textcolor{orange}{$f_l$} e \textcolor{blue}{$f_r$}
+    \item $(\textcolor{orange}{k_l}, \textcolor{blue}{k_r})$-grouping è minimale se sia \textcolor{orange}{$k_l$}-grouping che \textcolor{blue}{$k_r$}-grouping sono minimali
+\end{itemize}
+
+\newpage
+\subsubsection{Esempio - minimal (2,2)-grouping}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/publ-obf-ass/minimal-grouping.png}
+\end{figure}
+
+\subsubsection{Associazione tra Gruppi}
+$(\textcolor{orange}{k_l}, \textcolor{blue}{k_r})$-grouping induce una 
+associazione $A$ tra gruppi di \textcolor{orange}{$f_l$} e \textcolor{blue}{$f_r$};
+
+\noindent definiamo una associazione $A$ come un set di coppie di \textit{identificatori di gruppo} tale che:
+
+\begin{itemize}
+    \item $A$ ha la stessa cardinalità della relazione originale
+    \item ogni tupla nella relazione originale è mappata in modo biietivo ad una coppia $(\textcolor{orange}{l}, \textcolor{blue}{r})$
+    con $\textcolor{orange}{l} \in \textcolor{orange}{f_l}$ e $\textcolor{blue}{r} \in \textcolor{blue}{f_r}$
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/publ-obf-ass/group-ass1.png}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/publ-obf-ass/group-ass2.png}
+\end{figure}
+
+\newpage
+\subsection{\textit{k}-loose association}
+Una associazione tra gruppi si dice \textbf{$k$-loose} se ogni tupla corrisponde indistintamente ad almeno $k$ associazioni tra tuple nei frammenti.
+
+\subsection{\textit{Alikeness}}
+Due tuple sono \textit{\textbf{alike}} rispetto a un constraint
+di confidenzialità $c$, denotata come $\textcolor{orange}{l_i} \simeq_c \textcolor{orange}{l_j}$ se:
+\begin{itemize}
+    \item $c$ è coperto da $\textcolor{orange}{F_l} \cup \textcolor{blue}{F_r}$
+    \item l'intersezione di $c$ sulle due tuple ha uguale valore
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/publ-obf-ass/alike.png}
+\end{figure}
+ 
+
+\newpage
+\subsection{Proprietà di Eterogeneità}
+C'è una relazione tra $\textcolor{orange}{k_l}, \textcolor{blue}{k_r}$ e 
+il grado di $k$-looseness:
+\begin{itemize}
+    \item un $(\textcolor{orange}{k_l}, \textcolor{blue}{k_r})$-grouping può indurre 
+    una $k$-loose association con al massimo $k = \textcolor{orange}{k_l}*\textcolor{blue}{k_r}$
+    \item il valore $k \leq \textcolor{orange}{k_l}*\textcolor{blue}{k_r}$ dipende da come sono definiti i gruppi
+    \item Se un $(\textcolor{orange}{k_l}, \textcolor{blue}{k_r})$-grouping rispetta le proprietà di eterogeneità, 
+    la relazione tra gruppi sarà $k$-loose con $k = \textcolor{orange}{k_l}*\textcolor{blue}{k_r}$
+\end{itemize}
+
+\subsubsection{Eterogeneità dei gruppi}
+Nessun gruppo può contenere tuple che sono \textit{alike} 
+
+$\rightarrow$ assicura diversità tra le tuple all'interno dei gruppi
+
+\subsubsection{Eterogeneità delle associazioni}
+Nessun gruppo può essere associato due volte allo stesso gruppo.
+
+$\rightarrow$ assicura che per ogni tupla della relazione originale, ci siano almeno 
+$\textcolor{orange}{k_l} * \textcolor{blue}{k_r}$ coppie a cui potrebbe corrispondere
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/publ-obf-ass/ass-hetero.png}
+\end{figure}
+
+\newpage
+\subsubsection{Eterogeneità profonda}
+Nessun gruppo può essere associato a due gruppi che contengono tuple \textit{alike}.
+
+$\rightarrow$ assicura che tutte le $\textcolor{orange}{k_l} * \textcolor{blue}{k_r}$ 
+a cui ogni tupla potrebbe corrispondere abbiano valori diversi (per quelli coinvolti nei constraint)
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/publ-obf-ass/deep-hetero.png}
+\end{figure}
+
+\subsection{\textit{Flat grouping} vs \textit{Sparse grouping}}
+Un $(\textcolor{orange}{k_l}, \textcolor{blue}{k_r})$-grouping si dice:
+\begin{itemize}
+    \item \textit{piatto} se uno tra $\textcolor{orange}{k_l}$ o $\textcolor{blue}{k_r}$ è uguale a 1
+    \item \textit{sparso} se sia $\textcolor{orange}{k_l}$ che $\textcolor{blue}{k_r}$ sono diveri da 1
+\end{itemize}
+
+\subsection{Privacy vs Utilità}
+\begin{itemize}
+    \item La pubblicazione delle \textit{loose associations} incrementa l'\textbf{utilità}
+    dei dati; permette di valutare le query in modo più preciso rispetto a se solamente 
+    i frammenti fossero pubblicati 
+    \item Una maggiore utilità corrisponde anche ad una maggiore \textbf{esposizione} (meno sicurezza)
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
 
 
 
