@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  5 DEC 2024 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  8 DEC 2024 23:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -506,27 +506,80 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.20 \newpage
               [1
 
-] (./main.aux)
+] [2{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Capitolo 1.
+[3
+
+]
+<images/path-oram.png, id=104, 1223.57124pt x 795.97375pt>
+File: images/path-oram.png Graphic file (type png)
+<use images/path-oram.png>
+Package pdftex.def Info: images/path-oram.png  used on input line 64.
+(pdftex.def)             Requested size: 276.00105pt x 179.5479pt.
+<images/path-oram2.png, id=106, 1223.57124pt x 795.97375pt>
+File: images/path-oram2.png Graphic file (type png)
+<use images/path-oram2.png>
+Package pdftex.def Info: images/path-oram2.png  used on input line 80.
+(pdftex.def)             Requested size: 276.00105pt x 179.5479pt.
+ [4 <./images/path-oram.png> <./images/path-oram2.png>]
+<images/path-oram3.png, id=114, 1223.57124pt x 795.97375pt>
+File: images/path-oram3.png Graphic file (type png)
+<use images/path-oram3.png>
+Package pdftex.def Info: images/path-oram3.png  used on input line 91.
+(pdftex.def)             Requested size: 276.00105pt x 179.5479pt.
+ [5 <./images/path-oram3.png>]
+Capitolo 2.
+<images/b+-tree.png, id=120, 1257.69875pt x 514.92375pt>
+File: images/b+-tree.png Graphic file (type png)
+<use images/b+-tree.png>
+Package pdftex.def Info: images/b+-tree.png  used on input line 143.
+(pdftex.def)             Requested size: 313.95126pt x 128.53418pt.
+[6
+
+ <./images/b+-tree.png>]
+<images/b+-tree-logical.png, id=129, 1201.48875pt x 372.39125pt>
+File: images/b+-tree-logical.png Graphic file (type png)
+<use images/b+-tree-logical.png>
+Package pdftex.def Info: images/b+-tree-logical.png  used on input line 160.
+(pdftex.def)             Requested size: 345.0pt x 106.92812pt.
+<images/b+-tree-physical.png, id=130, 1201.48875pt x 372.39125pt>
+File: images/b+-tree-physical.png Graphic file (type png)
+<use images/b+-tree-physical.png>
+Package pdftex.def Info: images/b+-tree-physical.png  used on input line 177.
+(pdftex.def)             Requested size: 345.0pt x 106.92812pt.
+ [7 <./images/b+-tree-logical.png> <./images/b+-tree-physical.png>]
+<images/data-access.png, id=139, 1294.8375pt x 736.7525pt>
+File: images/data-access.png Graphic file (type png)
+<use images/data-access.png>
+Package pdftex.def Info: images/data-access.png  used on input line 192.
+(pdftex.def)             Requested size: 345.0pt x 196.29523pt.
+ [8 <./images/data-access.png>]
+<images/cover-searches.png, id=146, 1209.51875pt x 801.99625pt>
+File: images/cover-searches.png Graphic file (type png)
+<use images/cover-searches.png>
+Package pdftex.def Info: images/cover-searches.png  used on input line 248.
+(pdftex.def)             Requested size: 345.0pt x 228.75487pt.
+ [9] [10 <./images/cover-searches.png>] [11] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 7D6764D43B6EA05D6915C61E783FA271;1981.
  ) 
 Here is how much of TeX's memory you used:
- 20574 strings out of 474222
- 383493 string characters out of 5748733
- 1924975 words of memory out of 5000000
- 42506 multiletter control sequences out of 15000+600000
- 562384 words of font info for 51 fonts, out of 8000000 for 9000
+ 20709 strings out of 474222
+ 386095 string characters out of 5748733
+ 1931975 words of memory out of 5000000
+ 42605 multiletter control sequences out of 15000+600000
+ 566063 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,481b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on main.pdf (2 pages, 38383 bytes).
+ 84i,6n,93p,481b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (12 pages, 621450 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
