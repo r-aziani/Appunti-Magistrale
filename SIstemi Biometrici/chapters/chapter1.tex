@@ -6,7 +6,7 @@
 
 La biometria ci offre un nuovo modo, \textbf{automatico}, di identificare le persone.
 
-Si passa da una cosa che \textbf{sappiamo} (password) o che \textbf{abbiamo} (documento, chiave), a ciò che \textbf{siamo} (iride, impronta) o ciò che \textbf{facciamo} (voce, firma).
+\noindent Si passa da una cosa che \textbf{sappiamo} (password) o che \textbf{abbiamo} (documento, chiave), a ciò che \textbf{siamo} (iride, impronta) o ciò che \textbf{facciamo} (voce, firma).
 
 \subsubsection{Definizione di biometria}
 
@@ -27,7 +27,7 @@ Queste due categorie hanno diversa funzione e complessità.
 
 La verifica dell'identità equivale a rispondere alla domanda: \textbf{sono chi dico di essere?}
 
-Si può dunque confermare o negare l'identità dichiarata dall'utente; viene fatto con metodi one-to-one (1:1).
+\noindent Si può dunque confermare o negare l'identità dichiarata dall'utente; viene fatto con metodi one-to-one (1:1).
 
 \subsubsection{Identificazione}
 
@@ -87,7 +87,7 @@ Alcuni sistemi utilizzano in modo \textbf{ibrido} queste due modalità; usi il b
     \end{itemize}
 \end{itemize}
 
-È stato provato che mediamente una persona deve ricordare oltre 20 password/codici; ne consegue che si tende ad usare la stessa password ovunque.
+\noindent È stato provato che mediamente una persona deve ricordare oltre 20 password/codici; ne consegue che si tende ad usare la stessa password ovunque.
 
 \subsection{Metodi biometrici}
 
@@ -110,7 +110,7 @@ Con i metodi biometrici il riconoscimento avviene in base alle caratteristiche f
     \end{itemize}
 \end{itemize}
 
-In figura \ref{fig:trad-vs-bio} viene confrontato il livello di sicurezza delle modalità che sono state trattate.
+\noindent In Figura \ref{fig:trad-vs-bio} viene confrontato il livello di sicurezza delle modalità che sono state trattate.
 
 \begin{figure}
     \centering
@@ -170,9 +170,9 @@ In inglese esistono due termini che in italiano corrispondono al termine biometr
 
 È la \textbf{fase di riconoscimento}, il tratto biometrico viene nuovamente acquisito. Se risulta sufficientemente aderente alle informazioni registrate nel sistema biometrico l'accesso viene consentito.
 
-In figura \ref{fig:enroll-ident} vengono mostrate le fasi di enrollment e identificazione.
+\noindent In Figura \ref{fig:enroll-ident} vengono mostrate le fasi di enrollment e identificazione.
 
-In figura \ref{fig:matching-score} viene mostrato il concetto di matching score e di soglia.
+\noindent In Figura \ref{fig:matching-score} viene mostrato il concetto di matching score e di soglia.
 
 \begin{figure}
     \centering
@@ -216,7 +216,7 @@ Per rilevarle vengono usati sensori:
     \item Scanner tradizionali
 \end{itemize}
 
-Il riconoscimento avviene attravero tre approcci, mostrati in figura \ref{fig:trad-vs-bio}.
+\noindent Il riconoscimento avviene attravero tre approcci, mostrati in Figura \ref{fig:trad-vs-bio}.
 
 \begin{figure}
     \centering
@@ -255,13 +255,13 @@ Il riconoscimento avviene con due approcci differenti, mostrati in figura \ref{f
 
 \subsubsection{Mano}
 
-È un tratto biometrico ben accettato dagli utenti in quanto è poco invasivo; offre un discreto livello di sicurezza, ed offre la possibilità di controllare più aspetti.
+\begin{itemize}
+    \item È un tratto biometrico ben accettato dagli utenti in quanto è poco invasivo; offre un discreto livello di sicurezza, ed offre la possibilità di controllare più aspetti
+    \item Di solito si lavora su tre viste: palmare, laterale e dorsale
+    \item Per il rilevamento del tratto, si utilizzano degli scanner o delle camere
+    \item Ci sono diversi approcci per il riconoscimento, mostrati in Figura \ref{fig:mano}
+\end{itemize}
 
-Di solito si lavora su tre viste: palmare, laterale e dorsale.
-
-Per il rilevamento del tratto, si utilizzano degli scanner o delle camere.
-
-Ci sono diversi approcci per il riconoscimento, mostrati in figura \ref{fig:mano}.
 
 \begin{figure}
     \centering
@@ -276,9 +276,9 @@ Ci sono diversi approcci per il riconoscimento, mostrati in figura \ref{fig:mano
 
 È considerato essere il tratto biometrico più accurato: l'iride presenta numerosissime caratteristiche che sono stabili nel tempo. Si tratta di un sistema piuttosto complesso e costoso, ma difficile da frodare.
 
-Per il rilevamento, vengono utilizzate delle camere ad alta definizione o delle ottiche speciali.
+\noindent Per il rilevamento, vengono utilizzate delle camere ad alta definizione o delle ottiche speciali.
 
-Il sistema possiede degli algoritmi per:
+\noindent Il sistema possiede degli algoritmi per:
 \begin{itemize}
     \item Trovare l'occhio e selezionare la parte utile
     \item Eliminare i riflessi e le ciglia
@@ -290,7 +290,7 @@ Il sistema possiede degli algoritmi per:
 
 È un metodo molto semplice e diffuso; ha una bassa accuratezza e un moderato costo del sensore.
 
-Il riconoscimento è basato sugli andamenti nel tempo di:
+\noindent Il riconoscimento è basato sugli andamenti nel tempo di:
 \begin{itemize}
     \item coordinate (x, y)
     \item pressione
@@ -327,19 +327,19 @@ Ad oggi, solo iride e impronta sono usati per \textbf{identificazione} (1:N) con
     \item tempo per un singolo confronto molto basso (minore di ms)
 \end{itemize}
 
-Per questo motivo mano, voce, volto e firma vengono usati solo per \textbf{autenticazione} (1:1) o identificazione (1:N) con N solo qualche decina di persone.
+\noindent Per questo motivo mano, voce, volto e firma vengono usati solo per \textbf{autenticazione} (1:1) o identificazione (1:N) con N solo qualche decina di persone.
 
 \subsubsection{Variazioni del tratto}
 
 Occore tenere presente se un un tratto biometrico cambia nell'arco di una vita o giorno dopo giorno; i tratti biometrici già formati dalla nascita e stabili per tutta la vita sono iride e impronta.
 
-L'alta variabilità del tratto biometrico nel tempo produce una peggiore accuratezza del sistema biometrico.
+\noindent L'alta variabilità del tratto biometrico nel tempo produce una peggiore accuratezza del sistema biometrico.
 
 \subsubsection{Velocità del sistema}
 
 Si calcola il \textbf{tempo misurato in secondi per eseguire completamente un singolo matching}, da cui si può stimare il \textbf{numero di utenti massimo identificabile/autenticabili in un'ora.}
 
-Ad esempio:
+\noindent Ad esempio:
 \begin{itemize}
     \item abbiamo 2000 iridi registrate in un sistema come persone indesiderate (N=2000)
     \item Vogliamo che la persona venga identificata negativamente in 2 secondi
@@ -356,7 +356,7 @@ I sistemi possono funzionare:
 
 È la capacità di un sistema biometrico di funzionare anche con sample biometrici acquisiti con sensori di diverso tipo usando lo stesso tratto biometrico.
 
-L'interoperabilità diventerà sempre più importante dato che il \textbf{tipo} di sensori è \textbf{destinato ad aumentare nel tempo}.
+\noindent L'interoperabilità diventerà sempre più importante dato che il \textbf{tipo} di sensori è \textbf{destinato ad aumentare nel tempo}.
 
 \begin{figure}[h]
     \centering
@@ -405,7 +405,7 @@ L'uso delle tecnologie biometriche viene spesso percepito dagli utenti in modo d
 
 L'anello debole della catena di identificazione rimane anche se usiamo le tecnologie biometriche: \textbf{il problema è la fonte}.
 
-Un documento biometrico nasce da altri documenti tradizionali: ad esempio, per il passaporto biometrico serve un documento di riconoscimento valido.
+\noindent Un documento biometrico nasce da altri documenti tradizionali: ad esempio, per il passaporto biometrico serve un documento di riconoscimento valido.
 
 \subsubsection{Sample o Template?}
 
@@ -504,7 +504,7 @@ Definisce i dati biometrici come una categoria speciale di dati personali e proi
     \item \textit{e soggette a misure tecniche e organizzative intese a garantire che tali dati personali non siano attirbuiti a una persona fisica indetificata o identificabile} 
 \end{enumerate}
 
-Viene garantita la \textbf{ricostruibilità} dei processi di mascheramento dell'identità, permettendo la reidentificazione e assicurando dunque \textbf{l'accountability} (processo con cui si è chiamati a rendere conto delle conseguenze delle proprie azioni).
+\noindent Viene garantita la \textbf{ricostruibilità} dei processi di mascheramento dell'identità, permettendo la reidentificazione e assicurando dunque \textbf{l'accountability} (processo con cui si è chiamati a rendere conto delle conseguenze delle proprie azioni).
 
 \subsubsection{Resilienza}
 

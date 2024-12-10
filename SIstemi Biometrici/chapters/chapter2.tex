@@ -77,7 +77,7 @@ Il termine “distribuito” si riferisce ad un sistema biometrico quando i modu
 Piuttosto raro quando si parla di sistemi di autenticazione; è invece comune quando si parla di sistemi di identificazione di grosse dimensioni. 
 
 
-Solitamente è il modulo dei database ad essere separato dai terminali.
+\noindent Solitamente è il modulo dei database ad essere separato dai terminali.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.95\linewidth]{chapters/images-chap2/distributed.png}
@@ -110,9 +110,9 @@ Particolare vicinanza dei \textbf{sample} o delle \textbf{feature} acquisiti da 
 
 Analizziamo i metodi per \textbf{progettare} ed eventualmente \textbf{migliorare} il modulo di acquisizione.
 
-L'acquisizione di una informazione rilevante \textbf{è un processo critico} e non sempre adeguatamente studiato.
+\noindent L'acquisizione di una informazione rilevante \textbf{è un processo critico} e non sempre adeguatamente studiato.
 
-La cura nel processo di acquisizione \textbf{influenza pesantemente l'accuratezza} finale del sistema.
+\noindent La cura nel processo di acquisizione \textbf{influenza pesantemente l'accuratezza} finale del sistema.
 
 Il processo di acquisizione si divide in \textbf{due fasi:}
 \begin{itemize}
@@ -132,13 +132,13 @@ Il processo di acquisizione si divide in \textbf{due fasi:}
 
 Dopo l'acquisizione molti sistemi attuano un controllo automatico della qualità del tratto rilevato per evitare problemi di funzionamento.
 
-I sistemi di controllo della qualità producono un \textbf{indice di qualità} del sample acquisito:
+\noindent I sistemi di controllo della qualità producono un \textbf{indice di qualità} del sample acquisito:
 \begin{itemize}
     \item se l'indice di qualità è sufficientemente alto si prosegue
     \item altrimenti si torna ad acquisire un altro sample
 \end{itemize}
 
-Il concetto di base è semplice, ma la progettazione e realizzazione dell'indice di qualità non lo è; alcuni punti sono che:
+\noindent Il concetto di base è semplice, ma la progettazione e realizzazione dell'indice di qualità non lo è; alcuni punti sono che:
 \begin{itemize}
     \item non sempre esiste un \textbf{modello rigoroso e realistico} della misura in ingresso da usare per calcolare l'indice; ad esempio, se potessimo definire come dovrebbe essere un'immagine ottimale di un'impronta, potremmo esprime l'indice di qualità come la "distanza" dell'immagine in ingresso da quella ottima
     \item non sempre esistono \textbf{metriche rigorose e robuste} per misurare la distanza del sample in ingresso con il riferimento ottimale
@@ -157,11 +157,11 @@ Un'acquisizione di un sistema non elaborata, chiamata sample, è:
     \item \textbf{non discriminatoria} (sono tutte diverse)
 \end{itemize}
 
-In un sistema biometrico occorre \textbf{studiare come rappresentare al meglio l'informazione} per rispondere 
+\noindent In un sistema biometrico occorre \textbf{studiare come rappresentare al meglio l'informazione} per rispondere 
 alla domanda: \textit{"Quale rappresentazione machine-readable cattura \textbf{completamente} l'informazione \textbf{invariante} e \textbf{discriminatoria} 
 della misura in ingresso?}
 
-Il problema della rappresentazione consiste nel determinare uno spazio di misura che sia:
+\noindent Il problema della rappresentazione consiste nel determinare uno spazio di misura che sia:
 \begin{itemize}
     \item \textbf{invariante} (meno variante) rispetto ad acquisizioni dello stesso individuo
     \item che si \textbf{differinzi massivamente} dalla acquisizioni di individui diversi
@@ -181,7 +181,7 @@ In altre parole, si può dire che la rappresentazione deve fornire:
     \label{fig:rappr}
 \end{figure}
 
-Il problema della rappresentazione si suddivide in:
+\noindent Il problema della rappresentazione si suddivide in:
 \begin{itemize}
     \item rappresentazione del sample
     \item estrazione delle caratteristiche
@@ -207,7 +207,7 @@ presente sia in fase di enrollment che di verification/identification.
 Avendo i dati raw provenienti dalle misurazioni occorre ora \textbf{estrarne la rappresentazione nello spazio delle caratteristiche.}
 Questo non è mai un problema semplice, specialmente con dati rumorosi.
 
-Può essere fatta in maniera manuale da un operatore oppure utilizzando un sistema automatico; \textbf{lo spazio delle 
+\noindent Può essere fatta in maniera manuale da un operatore oppure utilizzando un sistema automatico; \textbf{lo spazio delle 
 caratteristiche di un sistema automatico tende ad essere diverso} da quello di un sistema con estrazione manuale.
 
 \section{Matching}
@@ -229,7 +229,7 @@ identità dovrebbero essere in grado di operare
 efficacemente quando il numero di utenti registrati nel DB
 aumenta.
 
-L'introduzione della biometria in un sistema di identificazione di grandi dimensioni produce dei vantaggi:
+\noindent L'introduzione della biometria in un sistema di identificazione di grandi dimensioni produce dei vantaggi:
 \begin{itemize}
     \item non soffrono del problema della produzione e del rinnovo dei documenti di identità
     \item sono competitivi in termini di costo e mantenimento
@@ -250,14 +250,14 @@ con quelli contenuti in una partizione.
     \caption{Esempio di indexing}
 \end{figure}
 
-In generale si può definire il tasso di penetrazione come la
+\noindent In generale si può definire il tasso di penetrazione come la
 percentuale del database totale da esaminare in media per
 ogni ricerca. Più basso è il tasso di penetrazione, più
 efficiente è il sistema.
 
-Tuttavia, per i sistemi biometrici serve fare un distinguo: 
+\noindent Tuttavia, per i sistemi biometrici serve fare un distinguo: 
 
-\textit{\textbf{la proporzione attesa dei template da cercare su tutti i campioni di input secondo
+\noindent \textit{\textbf{la proporzione attesa dei template da cercare su tutti i campioni di input secondo
 la regola che la ricerca prosegue attraverso l'intera partizione, indipendentemente
 dal fatto che venga trovata una corrispondenza o meno}}.
 

@@ -6,7 +6,7 @@ Le impronte digitali sono \textbf{creste e valli della pelle} sui palmi delle di
 sono tratti biometrici \textbf{stabili} (dall'ottavo mese di gestazione) a meno di abrasioni
 o malattie.
 
-Durante la crescita, il dito cresce: la distanze si allargano ma le 
+\noindent Durante la crescita, il dito cresce: la distanze si allargano ma le 
 \textit{minutiae} rimangono le stesse.
 
 \subsection{Sistema di classificazione attuale}
@@ -21,11 +21,11 @@ di eventuali \textit{delta} o \textit{core}}, in:
 Questa divisione torna utile per ottimizzare la ricerca di un'impronta; le denominazioni
 nascono in base a come si muovono i ridge.
 
-Le classi \textbf{non} sono distribuite uniformemente.
+\noindent Le classi \textbf{non} sono distribuite uniformemente.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.6\linewidth]{images-chap5/classificazione.png}
+    \includegraphics[width=0.6\linewidth]{chapters/images-chap5/classificazione.png}
     \caption{Classificazione delle impronte; in verde sono indicati i delta, in rosso i core}
 \end{figure}
 
@@ -33,14 +33,14 @@ Le classi \textbf{non} sono distribuite uniformemente.
 
 Esistono diversi tipo di sistemi:
 \begin{itemize}
-    \item sistemi integrati (smartphone)
+    \item sistemi integrati (smartphone, \textit{integrato = non c'è un unico server})
     \item smartcard
     \item per PC
     \item stand alone
     \item distribuiti (AFIS)
 \end{itemize}
 
-Alcune tipologie di applicazioni sono:
+\noindent Alcune tipologie di applicazioni sono:
 \begin{itemize}
     \item \textbf{Forensi:}
     \begin{itemize}
@@ -73,8 +73,6 @@ per:
     dai terminali distribuiti
 \end{itemize}
 Tipicamente si usa per identificare un'impronta ignota.
-
-Integrato significa che non c'è un unico server.
 
 
 \subsection{Punti di forza e di debolezza}
@@ -112,10 +110,10 @@ A livello globale si osservano:
 A livello locale è possibile identificare fino a 150 diverse \textbf{caratteristiche locali
 delle minutiae}; \textit{zoomiamo} su ciò che accade intorno ad un ridge.
 
-Le due principali caratteristiche sono le \textbf{biforcazioni} e \textbf{terminazioni}.
+\noindent Le due principali caratteristiche sono le \textbf{biforcazioni} e \textbf{terminazioni}.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.75\linewidth]{images-chap5/caratteristiche.png}
+    \includegraphics[width=0.75\linewidth]{chapters/images-chap5/caratteristiche.png}
 \end{figure}
 
 \subsubsection{Livello III (ultra-fine)}
@@ -127,33 +125,33 @@ A livello ultra-fine è possibile individuare i seguenti dettagli:
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\linewidth]{images-chap5/livello3.png}
+    \includegraphics[width=0.5\linewidth]{chapters/images-chap5/livello3.png}
 \end{figure}
 
-I dettagli del livello III sono
+\noindent I dettagli del livello III sono
 considerati altamente distintivi,
 ma si rilevano solo ad altissima
 risoluzione (almeno 1000 dpi
 ed in condizioni ideali).
 
-Bastano pochi $mm^2$ per catturare molti dettagli di tutti e 3 i livelli.
+\noindent Bastano pochi $mm^2$ per catturare molti dettagli di tutti e 3 i livelli.
 
 \subsection{Quanto diverse?}
 
 Le impronte possono avere una struttura simile ma hanno sempre tanti
 punti di diversità.
 
-Di solito si ha la seguente scala di diversità:
+\noindent Di solito si ha la seguente scala di diversità:
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\linewidth]{images-chap5/diversita.png}
+    \includegraphics[width=1\linewidth]{chapters/images-chap5/diversita.png}
 \end{figure}
 
 \subsubsection{I gemelli?}
 
 Anche i gemelli omozigoti (con lo stesso DNA) hanno impronte diverse.
 
-Le impronte sono una manifestazione del \textit{fenotipo} (dipendente anche da fattori casuali ed 
+\noindent Le impronte sono una manifestazione del \textit{fenotipo} (dipendente anche da fattori casuali ed 
 ambientali) anche partendo dallo stesso \textit{genotipo}.
 
 \subsubsection{Quante minuzie?}
@@ -218,10 +216,10 @@ hw/sw per il rilevamento automatico della presenza del dito e delle condizioni (
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\linewidth]{images-chap5/ottici.png}
+    \includegraphics[width=1\linewidth]{chapters/images-chap5/ottici.png}
 \end{figure}
 
-Con la riflessione ottica si ottiene una risoluzione migliore.
+\noindent Con la riflessione ottica si ottiene una risoluzione migliore.
 
 \subsection{Sensori a stato solido}
 
@@ -230,10 +228,10 @@ del circuito del singolo pixel.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\linewidth]{images-chap5/statosolido.png}
+    \includegraphics[width=1\linewidth]{chapters/images-chap5/statosolido.png}
 \end{figure}
 
-Ci sono due laminette metalliche che misurano una tensione diversa a seconda
+\noindent Ci sono due laminette metalliche che misurano una tensione diversa a seconda
 della pressione; sotto ogni pixel c'è un circuito.
 hanno forma simile ma circuiti dedicati diversi per il singolo pixel
 
@@ -242,7 +240,7 @@ hanno forma simile ma circuiti dedicati diversi per il singolo pixel
 Sono dei sensori che riescono a rilevare la tridimensionalità dell'impronta digitale.
 I sensori a stato solido che rilevano la temperatura o la pressione.
 
-I sensori 3D sono utili nel fornire intrensicamente una funzione di anti-spoofing: 
+\noindent I sensori 3D sono utili nel fornire intrensicamente una funzione di anti-spoofing: 
 sanno riconoscere se l'onda attraversa un \textit{medium} diverso da quello atteso (la pelle).
 
 \subsection{Problemi di acquisizione: pressione}
@@ -251,7 +249,7 @@ All'aumentare della pressione, i ridge da discontinui iniziano a diventare conti
 meglio; quando diventa troppa, i ridge iniziano ad unirsi.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.75\linewidth]{images-chap5/pressione.png}
+    \includegraphics[width=0.75\linewidth]{chapters/images-chap5/pressione.png}
 \end{figure}
 
 \section{Rappresentazione, compressione,  e non unicità}
@@ -279,7 +277,7 @@ controlla la risoluzione e i bit per pixel.
 
 È possibile stimare la probabilità che due persone abbiano la stessa impronta.
 
-Data un'impronta con $n$ minutiae, è possibile calcolare la probabilità di
+\noindent Data un'impronta con $n$ minutiae, è possibile calcolare la probabilità di
 condividere $q$ minutiae con un altro template contenente $m$ minutiae
 
 $p(M, m, n, q)$ , con
@@ -288,14 +286,14 @@ $M= Area di overlap / Area di tolleranza = A/C$
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\linewidth]{images-chap5/unicita.png}
+    \includegraphics[width=0.5\linewidth]{chapters/images-chap5/unicita.png}
 \end{figure}
 
 \subsubsection{Esempio con parametri comuni}
 
 $p(M,m,n,q) = p(70, 12, 12, 12) = 1,22 * 10^-20$
 
-$M=70$ indica una stuazione tipica forense fra un intera ed una latent
+\noindent $M=70$ indica una stuazione tipica forense fra un intera ed una latent
 paziale con almeno 12 minutiae “buone”.
 
 

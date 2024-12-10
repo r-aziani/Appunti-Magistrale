@@ -4,11 +4,11 @@ L'iride è considerato il tratto biometrico più accurato
 dopo il DNA. È poco gradito dagli utenti per la sua
 "percepita" invasività.
 
-L'iride presenta caratteristiche numerosissime e stabili 
+\noindent L'iride presenta caratteristiche numerosissime e stabili 
 nel tempo; inizia a crearsi dal terzo mese nel feto, al settimo mese 
 il processo è completato ma diventa stabile dal secondo anno di vita.
 
-Il sistema è piuttosto complesso e costoso, ma difficile da frodare.
+\noindent Il sistema è piuttosto complesso e costoso, ma difficile da frodare.
 
 \section{Vantaggi e svantaggi}
 
@@ -49,21 +49,21 @@ posti a distanze diverse.
 
 Come nel caso delle impronte, \textbf{non esistono due iridi uguali}.
 
-Durante la formazione dell'iride si hanno delle componenti casuali che 
+\noindent Durante la formazione dell'iride si hanno delle componenti casuali che 
 producono un pattern di righe, tagli e pieghe (le feature iridee) \textbf{unico
 e distinguibile}.
 
-Anche i gemelli omozigoti hanno iridi diverse.
+\noindent Anche i gemelli omozigoti hanno iridi diverse.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{chapters/images-chap7/unicita.png}
 \end{figure}
 
-Le feature più interessanti per il sistema biometrico si \textbf{vedono meglio con luce IR} 
+\noindent Le feature più interessanti per il sistema biometrico si \textbf{vedono meglio con luce IR} 
 piuttosto che la luce visibile.
 
-È necessario inoltre usare \textbf{telecamere con ottiche variabili} per trovare
+\noindent È necessario inoltre usare \textbf{telecamere con ottiche variabili} per trovare
 l'occhio nel volto e poi zoomare verso l'occhio per acquisirlo alla massima
 risoluzione possibile.
 
@@ -71,7 +71,7 @@ risoluzione possibile.
 I moderni sistemi per il riconoscimento basati sull'iride rappresentano l'iride come 
 una stringa di bit, chiamata \textbf{iriscode}.
 
-I passi che permettono di passare da una immagine di un occhio ad un iriscode sono:
+\noindent I passi che permettono di passare da una immagine di un occhio ad un iriscode sono:
 \begin{enumerate}
     \item individuazione dei centri e raggi della pupilla e dell'iride 
     \item rimozione della parte non utile occupata da ciglia 
@@ -88,13 +88,13 @@ e il raggio esterno dell'iride.
 Solo una parte dell'iride è utile al riconoscimento; occorre segmentare 
 solo la parte utile dell'iride.
 
-Se manca più del 50\% dell'iride occorre riacquisire l'immagine.
+\noindent Se manca più del 50\% dell'iride occorre riacquisire l'immagine.
 
 \subsection{Linearizzaione dell'iride}
 Per aumentare l'efficienza degli algoritmi, l'iride non viene elaborata
 direttamente nell'immagine in ingresso ma convertita in un rettangolo.
 
-Questa operazione viene fatta passando da delle coordinate cartesiane $(x, y)$ a polari $(r, 0)$.
+\noindent Questa operazione viene fatta passando da delle coordinate cartesiane $(x, y)$ a polari $(r, 0)$.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\linewidth]{chapters/images-chap7/linear-1.png}
@@ -115,13 +115,26 @@ Questa operazione viene fatta passando da delle coordinate cartesiane $(x, y)$ a
 
 \section{Proprietà dell'iris code}
 
-La codifica dell'iride in uno spazio 2D, rendendo la codifica invariante
-rispetto alla dimensione dell'iride, zoom dei sistemi ottici e dilatazione dell'iride.
-
-L'informazione estratta dall'iride è invariante rispetto al contrasto dell'immagine, il livello di grigio e l'illuminazione.
-È inoltre molto compatta (256 byte).
-
-La probabilità di ogni bit di essere 1 è del 50\%, rendendo l'iriscode un codice a \textbf{massima entropia}.
+\begin{itemize}
+    \item La codifica dell'iride avviene in uno spazio 2D, rendendo la codifica \textbf{invariante}
+    rispetto a:
+    \begin{itemize}
+        \item dimensione dell'iride
+        \item zoom dei sistemi ottici
+        \item e dilatazione dell'iride
+    \end{itemize}
+    \item È \textbf{invariante} rispetto a:
+    \begin{itemize}
+        \item contrasto dell'immagine 
+        \item livello di grigio medio nell'immagine 
+        \item illuminazione
+    \end{itemize}
+    \item È \textbf{molto compatto}, di solito bastano 256 byte per rappresentare una iride, più altri 
+    256 byte di controllo per escludere i bit dovuti ad artefatti (\textit{riflessi sulla cornea, ciglia, palpebre, troppo poco contrasto})
+    \item La probabilità di ogni bit di essere 1 è pari al 50\%
+    
+    $\rightarrow$ l'iriscode è un codice a \textbf{massima entropia}
+\end{itemize}
 
 
 

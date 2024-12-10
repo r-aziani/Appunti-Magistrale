@@ -72,7 +72,7 @@ gli algoritmi successivi.
 Gli algoritmi per la segmentazione estraggono il foreground
 dal background (impronta dallo sfondo).
 
-Permettono di focalizzarsi solo sulle regioni della immagine che 
+\noindent Permettono di focalizzarsi solo sulle regioni della immagine che 
 portano informazione utile al processo biometrico.
 
 \subsubsection{Regioni con diversa qualità}
@@ -80,7 +80,7 @@ portano informazione utile al processo biometrico.
 Una volta che l’impronta è stata individuata nella immagine
 dalla segmentazione si iniziano le analisi successive.
 
-Una volta che l’impronta è stata individuata nella immagine
+\noindent Una volta che l’impronta è stata individuata nella immagine
 dalla segmentazione si iniziano le analisi successive:
 \begin{itemize}
     \item diversa pressione
@@ -104,7 +104,7 @@ Ha due obiettivi:
     \item \textbf{marcare le regioni dove non è possibile estrarre informazione} perché c'è troppo rumore
 \end{itemize}
 
-Prende in ingresso una immagine di toni di grigio, e produce un'immagine 
+\noindent Prende in ingresso una immagine di toni di grigio, e produce un'immagine 
 a toni di grigio binarizzata.
 
 \subsubsection{Filtri contestuali}
@@ -120,11 +120,11 @@ al mutare delle condizioni dell’immagine, basandosi su:
     \item livello di rumore presente
 \end{itemize}
 
-Questi filtri lavorano sulla immagine in ingresso
+\noindent Questi filtri lavorano sulla immagine in ingresso
 attraverso un’operazione chiamata convoluzione con una
 maschera di filtraggio.
 
-A seconda del tipo di maschera usata il filtro
+\noindent A seconda del tipo di maschera usata il filtro
 aumenta/diminuisce alcune caratteristiche piuttosto che
 altre.
 
@@ -135,7 +135,7 @@ La forma particolare di questa maschera è fatta per fare
 separazione, il valore del massimo e del minimo in un
 intorno del punto di esame.
 
-Questo filtro tende ad attenuare il rumore locale.
+\noindent Questo filtro tende ad attenuare il rumore locale.
 
 \section{Estrazione di caratteristiche}
 
@@ -182,7 +182,7 @@ avere la mappa delle frequenze dell’immagine.
 
 I punti di core possono essere calcolati utilizzando le normali.
 
-Se seguendo N ridge e calcolando M normali abbiamo un numero sufficientemente
+\noindent Se seguendo N ridge e calcolando M normali abbiamo un numero sufficientemente
 alto di intersezioni in un punto, allora abbiamo trovato un core.
 
 \begin{figure}[ht]
@@ -213,7 +213,7 @@ dell’immagine).
 \end{figure}
 
 \newpage
-L’algoritmo deve anche (se possibile) riempire i
+\noindent L’algoritmo deve anche (se possibile) riempire i
 buchi nei ridge per non creare profili di questo
 tipo:
 \begin{figure}[ht]
@@ -239,10 +239,10 @@ della matrice 3x3 attorno al punto.
 I moduli di post processing servono per rimuovere le
 minutiae spurie introdotte dei moduli precedenti per errore.
 
-L’errore che si può commettere è quello di togliere una
+\noindent L’errore che si può commettere è quello di togliere una
 minutia corretta commettendo quindi errori.
 
-Esistono due categorie principali di post processing:
+\noindent Esistono due categorie principali di post processing:
 \begin{itemize}
     \item structural post processing
     \item minutiae filtering in the gray-scale domain
@@ -295,7 +295,7 @@ come ad esempio:
     \item il \textbf{colore della pelle del dito}, che cambia colore per effetto della pressione
 \end{itemize}
 
-Inoltre, gli scanner ottici di tipo \textit{live-scan} o i sensori allo stato solido 
+\noindent Inoltre, gli scanner ottici di tipo \textit{live-scan} o i sensori allo stato solido 
 utilizzano un \textbf{meccanismo di acquisizione differenziata per le creste e i solchi} delle impronte, 
 leggendo le differenze 3D dei ridge; in questo modo, sono in grado di difendersi
 da attacchi che usano immagini 2D fasulle.

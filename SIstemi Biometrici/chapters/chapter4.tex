@@ -3,7 +3,7 @@ Nel caso dei sistemi biometrici non è banale rispondere alla domanda: \textit{\
     "qual è il tasso di errore di verifica/identificazione?"
 }}
 
-Per descrivere le performance del sistema è necessario disporre di \textbf{un insieme di dati} e \textbf{curve di funzionamento};
+\noindent Per descrivere le performance del sistema è necessario disporre di \textbf{un insieme di dati} e \textbf{curve di funzionamento};
 per questo motivo diventa difficile comparare due sistemi in quanto non basta confrontare 2 numeri.
 
 \subsubsection{Genuini ed impostori}
@@ -14,7 +14,7 @@ Si impiegano i termini:
     \item \textbf{impostore} per chi prova ad accedere senza averne titolo
 \end{itemize}
 
-La formulazione del problema risulterà diversa a seconda che il sistema funzioni in \textbf{verification} o \textbf{identification}.
+\noindent La formulazione del problema risulterà diversa a seconda che il sistema funzioni in \textbf{verification} o \textbf{identification}.
 
 \newpage
 
@@ -35,7 +35,7 @@ occorre determinare se $(I, X_Q)$ appartiene a $w_1$ o $w_2$, dove:
     \item $w_2$ indica che la richiesta è falsa (un impostore)
 \end{itemize}
 
-Tipicamente, le caratteristiche $X_Q$ vengono controllate con le caratteristiche $X_I$ (il template associato alla identità $I$).
+\noindent Tipicamente, le caratteristiche $X_Q$ vengono controllate con le caratteristiche $X_I$ (il template associato alla identità $I$).
 
 \subsubsection{Regola di decisione per la verifica}
 
@@ -45,7 +45,7 @@ Si tratta di una comparazione con soglia:
     \includegraphics[width=0.5\linewidth]{chapters/images-chap2/regola-verifica.png}
 \end{figure}
 
-Dove:
+\noindent Dove:
 \begin{itemize}
     \item $S$ è la funzione che misura la similitudine tra $X_Q$ e $X_I$
     \item $T$ è la soglia prefissata
@@ -61,7 +61,7 @@ Dato in ingresso un insieme di caratteristiche $X_Q$, determinare l'identità
 $I_k$, con $k \in \{1,2,3,...,M,M+1\}$ dove $I_1, I_2,...,I_M$ sono 
 le M identità memorizzate nel sistema e $I_M+1$ rappresenta il \textbf{caso di reiezione}.
 
-Nel caso di reiezione nessuna delle M identità registrate è sufficientemente simile al dato in ingresso.
+\noindent Nel caso di reiezione nessuna delle M identità registrate è sufficientemente simile al dato in ingresso.
 
 \newpage
 
@@ -72,7 +72,7 @@ Si tratta di M comparazioni con soglia con la seguente regola di decisione:
     \includegraphics[width=1\linewidth]{chapters/images-chap2/regola-identificazione.png}
 \end{figure}
 
-Dove:
+\noindent Dove:
 \begin{itemize}
     \item $X_Ik$ è il template corrispondente alla identità $I_k$
     \item $T$ è la soglia prefissata
@@ -87,13 +87,13 @@ $X_Q$ e $X_I$; una \textbf{grande distanza} fra i vettori di features porta ad u
 N template, provenienti dalla stessa persona ma acquisiti in tempi diversi,
 NON sono \textbf{mai uguali}.
 
-Esiste sempre una distanza nello spazio delle features che separa i template anche della 
+\noindent Esiste sempre una distanza nello spazio delle features che separa i template anche della 
 stessa persona (rumore, posa del soggetto, illuminazione, condizione ambientiali, \dots)
 
-Questa comporta che \textbf{la soglia $T$ non può esser arbitrariamente abbassata}, altrimenti 
+\noindent Questa comporta che \textbf{la soglia $T$ non può esser arbitrariamente abbassata}, altrimenti 
 nessuno sarebbe identificato.
 
-Se si riscontrasse una \textbf{distanza nulla} fra $X_Q$ e $X_I$ (quindi $S(X_Q, X_I) = max$), probabilmente 
+\noindent Se si riscontrasse una \textbf{distanza nulla} fra $X_Q$ e $X_I$ (quindi $S(X_Q, X_I) = max$), probabilmente 
 saremmo di fronte ad un \textbf{replay attack}: una copia illecita di un template memorizzato che viene 
 riproposto per frodare un sistema.
 
@@ -102,7 +102,7 @@ riproposto per frodare un sistema.
 Si parla di \textbf{\textcolor{green}{genuine score}} quando si confrontano le distanze tra i template
 dello stesso individuo.
 
-Si  parla di \textbf{\textcolor{red}{impostor score}} quando si confrontano le distanze tra i template 
+\noindent Si  parla di \textbf{\textcolor{red}{impostor score}} quando si confrontano le distanze tra i template 
 di indivdui diversi.
 
 \newpage
@@ -146,7 +146,7 @@ degli impostori e quello dei genuini. Notiamo che:
     \label{fig:rate}
 \end{figure}
 
-Il funzionamento di un sistema biometrico dal punto di vista degli errori commessi 
+\noindent Il funzionamento di un sistema biometrico dal punto di vista degli errori commessi 
 è descritto dai tassi \textit{FMR(T)} e \textit{FNMR(T)} per tutti i valori della soglia.
 
 \section{Decision Error Tradeoff (DET) e Receiver Operating Characteristic (ROC)}
@@ -164,7 +164,7 @@ Regolando la soglia T possiamo regolare il livello di sicurezza.
 L'EER è il tasso di errore corrispondente all'unico punto nel
 quale si ha FNMR = FMR.
 
-Si tratta dell'unico numero singolo che può riassumere il funzionamento del sistema.
+\noindent Si tratta dell'unico numero singolo che può riassumere il funzionamento del sistema.
 
 \subsubsection{ROC = 1 - DET}
 
@@ -194,11 +194,11 @@ Chiariamo il concetto di \textbf{Prova/Esperimento di Bernoulli:}
     \item i risultati delle prove sono \textbf{indipendenti}
 \end{enumerate}
 
-Date due impronte il SB in autenticazione mostra un tasso di errori stimabile e fissato \textit{\textbf{p}}.
+\noindent Date due impronte il SB in autenticazione mostra un tasso di errori stimabile e fissato \textit{\textbf{p}}.
 
-L'evento che il SB sbagli una autenticazione è un \textbf{esperimento/prova di Bernoulli}.
+\noindent L'evento che il SB sbagli una autenticazione è un \textbf{esperimento/prova di Bernoulli}.
 
-Un SB usato in identificazione (1:N) si può modellizzare come un N prove di Bernoulli, 
+\noindent Un SB usato in identificazione (1:N) si può modellizzare come un N prove di Bernoulli, 
 ovvero un \textbf{processo di Bernoulli}.
 
 \subsection{Regola dei 3}
@@ -206,7 +206,7 @@ ovvero un \textbf{processo di Bernoulli}.
 \textit{"qual è il tasso di errore più basso p che può essere stimato con un esperimento
 di comparazione di N campioni indipendenti?"}
 
-Se abbiamo un sistema che commette 0 errori su N prove non dobbiamo pensare di
+\noindent Se abbiamo un sistema che commette 0 errori su N prove non dobbiamo pensare di
 avere un sistema con $p=0$, ma con il 95\% di confidenza abbiamo un sistema
 che ha $p \approx 3/N$.
 
@@ -218,9 +218,10 @@ il sistema ha un tasso di errore stimato del $p \approx 3/N = 3/100 = 1\%$
 \subsection{Regola dei 30}
 
 La regola dei 30 è utilizzata per determinare la larghezza del campione biometrico in questo modo:
-
-per essere sicuro con intervallo di confidenza del 90\% che il tasso di errore \textbf{vero}
-sia tra il $\pm 30 \%$ del tasso di errore \textbf{osservato}, ci devono essere almeno 30 errori.
+\begin{itemize}
+    \item per essere sicuro con intervallo di confidenza del 90\% che il tasso di errore \textbf{vero}
+    sia tra il $\pm 30 \%$ del tasso di errore \textbf{osservato}, ci devono essere almeno 30 errori.    
+\end{itemize}
 
 \subsubsection{Esempio}
 Se abbiamo 30 FNM in 3000 comparazioni, possiamo dire (con intervallo di 
