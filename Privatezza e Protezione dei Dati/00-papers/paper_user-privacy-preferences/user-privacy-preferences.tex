@@ -351,4 +351,67 @@ Il portfolio viene rappresentato come un grafo bipartito $G(V_C \cup V_A , E_{CA
 \end{figure}
 
 Il grafo ha a sinistra vertici rappresentanti le credenziali, a destra attributi, mentre gli archi associano gli attributi alle credenziali che li contengono.
-Viene inoltre specificat atomicità delle credenziali con il simbolo nero accanto al vertice credenziale.
+Viene inoltre specificata l'atomicità delle credenziali con il simbolo nero accanto al vertice credenziale.
+
+\subsubsection{Sensitivity Labels}
+Utente specifica preferenze a granularità fine andando ad applicare una \textit{sensitivity label} ad ogni credenziale e attributo.
+
+Il modello inoltre permette di definire:
+\begin{itemize}
+    \item Viste sensibili: rilascio combinato porta più informazione della composizione, quindi il rilascio combinato è modellato e porta una label di sensibilità positiva (addizionale).
+    \item Dipendenze: rilascio combinato porta meno informazione della composizione, il rilascio combinato ha label negativa.
+    \item Viste proibite: subset di componenti del portfolio che non possono essere rilasciati insieme (proibito).
+    \item Limiti al rilascio (Disclosure Limitations): in un subset posso rilasciare al massimo n elementi insieme. 
+\end{itemize} 
+
+
+La label corrispondente ad un rilascio risulta corrispondente all'applicazione di una composizione ( $\bigoplus$ ) sulle label considerate.
+
+
+
+\subsection{Disclosure Valide e Disclosure Minime}
+Non tutti i subset del portfolio rappresentano rilasci validi per ottenere un servizio.
+
+Tre condizioni regolano un corretto rilascio:
+\begin{itemize}
+    \item Certificabilità: ogni attributo è associato ad una credenziale di cui, rilasciando l'attributo, rilascio l'esistenza.
+    \item Atomicità: ogni attributo in credenziale atomica comporta rilascio di tutti gli attributi nell'associazione.
+    \item Esposizione dell'associazione: se tutti gli attributi legati ad una associazione sono rilasciati, conto anche l'associazione nel calcolo $\bigoplus$.
+\end{itemize}
+
+Data una policy server è necessario determinare una disclosure minima, problema NP-difficile.
+
+Esistono sia una soluzione euristica basata sui grafi sia una soluzione modellata sul problema Max-SAT, utilizzando quindi risolutori per Max-SAT.
+
+
+
+\subsection{Context e History}
+Sono state proposte estensioni per gestire restrizioni basate sia sul contesto che sulla storia dei rilasci.
+
+
+\subsection{Problematiche Aperte}
+\begin{itemize}
+    \item Label potrebbero non essere facili da esprimere per gli utenti, per cui sarebbe meglio definire ordinamento parziale.
+\end{itemize}
+
+
+
+
+
+
+
+
+\section{Disclosure a Grana Fine di Policy di Accesso Sensibili}
+
+\textcolor{cyan}{NON VISTO A LEZIONE - QUI OMESSO}
+
+
+
+\section{Problematiche Aperte Riguardo La Specifica di Preferenze Utente}
+\begin{itemize}
+    \item Ereditarietà Preferenze: associare preferenza al tipo di credenziale e non alle credenziali specifiche.
+    \item Prova di Possesso: tecnologia permette di mostrare prova di avere credenziale senza rilasciare la credenziale stessa.
+    \item Conoscenza Condivisa: gestione delle credenziali secondo un modello che non garantisce che le tipologie di credenziali siano conosciute da entrambe le parti.
+    \item Integrazione: soluzioni prendono una parte, serve soluzione che protegga server e client contemporaneamente.
+    \item Definire un modello che combini i vantaggi dei modelli proposti senza portare gli svantaggi correlati nelle solucioni attuali.
+\end{itemize}
