@@ -1,0 +1,46 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Riconoscimento biometrico e tecniche tradizionali}{2}{chapter.1}%
+\contentsline {subsubsection}{Nuovo modo di identificare e autenticare}{2}{section*.2}%
+\contentsline {subsubsection}{Definizione di biometria}{2}{section*.3}%
+\contentsline {section}{\numberline {1.1}Riconoscimento}{2}{section.1.1}%
+\contentsline {subsubsection}{Autenticazione}{2}{section*.4}%
+\contentsline {subsubsection}{Identificazione}{3}{section*.5}%
+\contentsline {subsubsection}{Autenticazione/Identificazione Positiva e Negativa}{3}{section*.6}%
+\contentsline {section}{\numberline {1.2}Metodi classici di autenticazione}{3}{section.1.2}%
+\contentsline {subsubsection}{Metodi classici: problemi}{4}{section*.7}%
+\contentsline {section}{\numberline {1.3}Metodi biometrici}{4}{section.1.3}%
+\contentsline {subsubsection}{\textcolor {darkgreen}{Alcuni vantaggi}}{5}{section*.8}%
+\contentsline {subsubsection}{\textcolor {red}{Alcuni svantaggi}}{5}{section*.9}%
+\contentsline {subsubsection}{Biometrics and Biometry}{6}{section*.10}%
+\contentsline {subsubsection}{Le 7 proprietà del tratto biometrico}{6}{section*.11}%
+\contentsline {chapter}{\numberline {2}Aspetto e funzionamento dei sistemi biometrici}{7}{chapter.2}%
+\contentsline {subsubsection}{Enrollment}{7}{section*.12}%
+\contentsline {subsubsection}{Identificazione/Verifica}{7}{section*.13}%
+\contentsline {chapter}{\numberline {3}Tratti biometrici: caratteristiche}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Impronta digitale}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Volto}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Mano}{11}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Iride}{12}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Firma}{13}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Voce}{13}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Sistemi multimodali}{13}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Comparazione dei sistemi biometrici}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Autenticazione/Identificazione}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Variazioni del tratto}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Velocità del sistema}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Interoperabilità}{16}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Aspetti di privacy e legislativi}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Percezione degli utenti}{17}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Discussione sui \textcolor {darkgreen}{vantaggi}}{17}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Discussione sugli \textcolor {red}{svantaggi}}{18}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}L'anello debole della catena}{18}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Sample o Template?}{18}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Sample}{18}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Template}{19}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Il problema della proscrizione}{19}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Privacy e variazioni del tratto}{19}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Decalogo del garante sulla biometria}{20}{section.5.5}%
+\contentsline {section}{\numberline {5.6}GDPR}{21}{section.5.6}%
+\contentsline {subsubsection}{Pesudonomizzazione}{21}{section*.14}%
+\contentsline {subsubsection}{Resilienza}{21}{section*.15}%

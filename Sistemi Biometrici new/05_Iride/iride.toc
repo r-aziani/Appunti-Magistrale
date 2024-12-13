@@ -1,0 +1,11 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Caratteristiche dell'iride e creazione dell'Iriscode}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Vantaggi e svantaggi}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Struttura dell'iride}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Unicità dell'iride}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Rappresentazione delle iridi}{4}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Calcolo dei centri e raggi di iride e pupilla}{4}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Rimozione di palpebre e ciglia}{4}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Linearizzaione dell'iride}{4}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Proprietà dell'iris code}{6}{section.1.5}%
