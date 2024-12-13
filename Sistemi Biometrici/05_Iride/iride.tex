@@ -159,12 +159,164 @@ direttamente nell'immagine in ingresso ma convertita in un rettangolo.
     $\rightarrow$ l'iriscode è un codice a \textbf{massima entropia}
 \end{itemize}
 
+\chapter{Algoritmi di enhancement e prefiltraggio}
+
+\section{Controllo qualità del sample}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/prefiltraggio.png}
+\end{figure}
+
+
+\subsection{Focus assessement}
+La probabilità di avere una iride già a fuoco è molto bassa, perché:
+\begin{itemize}
+    \item ingrandimento del sistema ottico 
+    \item l'occhio si muove rapidamente (micromovimenti non controllabili)
+    \item illuminazione limitata
+\end{itemize}
+
+\noindent Per questo il fuoco dell'iride viene controllato con dei filtri
+software.\\
+
+
+\noindent L'effetto di sfocatura dovuto ad un sistema ottico può essere parzialmente riconvertito
+usando un \textbf{filtro di deblur}, che si comporta al "contrario" della parte 
+che produce la sfocatura:
+\begin{itemize}
+    \item tende ad aumentare le frequenze alte dell'immagine che erano state attenuate dal blur 
+    \item può essere seguito a livello di frame (le prestazioni lo consentono)
+\end{itemize}
+
+\subsection{Acquisizioni fuori fuoco}
+Se l'immagine è troppo mossa occorre scartarla, in quanto l'iriscode risultante 
+sarebbe composto solo da bit casuali dipendenti dal rumore 
+
+$\rightarrow$ se fosse eseguito un enroll con un template simile si avrebbe sicuramente un false non-match
+
+\noindent Il controllo equivale a verificare se è presente una sufficiente quantità di
+"dettagli fini" maggiore di una determinata soglia.
+
+\section{Contrast Adjustment}
+Non si usano particolari algoritmi di prefiltraggio nel caso dell'iride;
+in alcuni casi si applica un \textbf{constrast stretching} per migliorare il contrasto 
+e quindi la leggibilità dell'immagine.
+
+\newpage
+\section{Modulo Estrazione delle Feature}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/estrazione-features.png}
+\end{figure}
+
+\subsection{Come trovare l'iride}
+Si cercano nell'immagine i centri di contorni di variazioni di grigio di forma circolare.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/ricerca-iride.png}
+\end{figure}
+
+\subsubsection{Estrazione delle palpebre}
+\noindent Modificando gli operatori della formula è possibile trovare le palpebre, 
+immaginandole come parte di una parabola.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/estrazione-palpebre.png}
+\end{figure}
 
 
 
+\subsubsection{Estrazione delle ciglia}
+Le ciglia vengono individuate sfruttando la conoscenza che:
+\begin{itemize}
+    \item devono partire dalla posizione individuata delle palpebre 
+    \item risultano sempre più scure dell'iride 
+    \item la loro larghezza è facilmente stimabile
+\end{itemize}
 
+\noindent È molto importante \textbf{individuare ogni parte dell'immagine che 
+non sia iride}, per \textbf{non inserire in enroll una informazione errata}.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.3\linewidth]{images/estrazione-ciglia.png}
+\end{figure}
 
+\chapter{Algoritmi di matching e prestazioni}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/intro-chap3.png}
+\end{figure}
+
+\section{Distribuzione dei bit nell'iriscode}
+La probabilità che un bit sia 1 oppure 0 in un iriscode è 
+intorno al 50\%, rendendolo un codice a \textbf{massima entropia}.
+
+\noindent Sono presenti tuttavia delle correlazioni fra i bit all'interno 
+dell'iriscode:
+\begin{itemize}
+    \item la struttura è auto-predittiva; alcuni gruppi di bit portano ad incontrare nell'iriscode 
+    con maggiore probabilità altri gruppi di bit 
+    \item viene limitato il grado di libertà di un iriscode, non è "del tutto casuale"
+\end{itemize}
+
+\section{Alcuni fattori che aumentano la variabilità intraclasse}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/variabilita-intraclasse.png}
+\end{figure}
+
+\section{Algoritmi di matching}
+La comparazione viene effettuata su iriscode di 256 byte, attraverso 
+il calcolo della \textbf{distanza di Hamming}, che conta i bit 
+in disaccordo fra le due stringhe.
+
+\noindent In teoria, due iriscode calcolati dall'iride della stessa persona
+dovrebbero avere la distanza di Hamming = 0:
+\begin{itemize}
+    \item in realtà, fra due acquisizioni eseguite perfettamente a pochi 
+    istanti una dall'altra si possono osservare delle differenze
+
+    $\rightarrow$ vengono fatte 3 comparazioni e si sceglie quella con valore minimo (della distanza)
+    \item nella seconda e terza comparazione, i bit di uno dei due template vengono shiftati rispettivamente a sinistra e poi a destra
+\end{itemize}
+
+\section{Maschere}
+
+\subsection{Creazione delle maschere}
+Se vi sono delle occlusione dell'iride (palpebre, riflessi, ciglia) occorre 
+preparare delle maschere di oscuramento delle zone dove non vi è 
+informazione utile.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/creazione-maschere.png}
+\end{figure}
+
+\subsection{Uso delle maschere}
+
+Si va a togliere dalla distanza di Hamming le zone che non 
+devono essere cosiderate.
+
+\section{Velocità del matching}
+L'esecuzione degli AND e XOR può avvenire a blocchi di bit pari 
+alla lunghezza di parola del processore, rendendo il processo 
+di matching veloce.
+
+\newpage
+\section{Distribuzione del match score}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/distr-match-score.png}
+\end{figure}
+
+\section{Svantaggi della tecnica}
 
 
 

@@ -1,9 +1,9 @@
-PWD /home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici new/05_Iride
+PWD /home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/05_Iride
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici new/05_Iride/iride.tex
+INPUT /home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/05_Iride/iride.tex
 OUTPUT iride.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -281,6 +281,51 @@ INPUT ./images/linear-2.png
 INPUT ./images/linear-2.png
 INPUT ./images/linear-2.png
 INPUT ./images/linear-2.png
+INPUT ./images/prefiltraggio.png
+INPUT ./images/prefiltraggio.png
+INPUT ./images/prefiltraggio.png
+INPUT ./images/prefiltraggio.png
+INPUT ./images/prefiltraggio.png
+INPUT ./images/estrazione-features.png
+INPUT ./images/estrazione-features.png
+INPUT ./images/estrazione-features.png
+INPUT ./images/estrazione-features.png
+INPUT ./images/estrazione-features.png
+INPUT ./images/ricerca-iride.png
+INPUT ./images/ricerca-iride.png
+INPUT ./images/ricerca-iride.png
+INPUT ./images/ricerca-iride.png
+INPUT ./images/ricerca-iride.png
+INPUT ./images/estrazione-palpebre.png
+INPUT ./images/estrazione-palpebre.png
+INPUT ./images/estrazione-palpebre.png
+INPUT ./images/estrazione-palpebre.png
+INPUT ./images/estrazione-palpebre.png
+INPUT ./images/estrazione-ciglia.png
+INPUT ./images/estrazione-ciglia.png
+INPUT ./images/estrazione-ciglia.png
+INPUT ./images/estrazione-ciglia.png
+INPUT ./images/estrazione-ciglia.png
+INPUT ./images/intro-chap3.png
+INPUT ./images/intro-chap3.png
+INPUT ./images/intro-chap3.png
+INPUT ./images/intro-chap3.png
+INPUT ./images/intro-chap3.png
+INPUT ./images/variabilita-intraclasse.png
+INPUT ./images/variabilita-intraclasse.png
+INPUT ./images/variabilita-intraclasse.png
+INPUT ./images/variabilita-intraclasse.png
+INPUT ./images/variabilita-intraclasse.png
+INPUT ./images/creazione-maschere.png
+INPUT ./images/creazione-maschere.png
+INPUT ./images/creazione-maschere.png
+INPUT ./images/creazione-maschere.png
+INPUT ./images/creazione-maschere.png
+INPUT ./images/distr-match-score.png
+INPUT ./images/distr-match-score.png
+INPUT ./images/distr-match-score.png
+INPUT ./images/distr-match-score.png
+INPUT ./images/distr-match-score.png
 INPUT iride.aux
 INPUT ./iride.out
 INPUT ./iride.out
