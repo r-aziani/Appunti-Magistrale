@@ -1,30 +1,41 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Caratteristiche dell'iride e creazione dell'Iriscode}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Vantaggi e svantaggi}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Struttura dell'iride}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Unicità dell'iride}{3}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Rappresentazione delle iridi}{4}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Calcolo dei centri e raggi di iride e pupilla}{4}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Rimozione di palpebre e ciglia}{4}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Linearizzaione dell'iride}{4}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}Proprietà dell'iris code}{6}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Algoritmi di enhancement e prefiltraggio}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Controllo qualità del sample}{7}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Focus assessement}{7}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Acquisizioni fuori fuoco}{8}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Contrast Adjustment}{8}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Modulo Estrazione delle Feature}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Come trovare l'iride}{9}{subsection.2.3.1}%
-\contentsline {subsubsection}{Estrazione delle palpebre}{9}{section*.2}%
-\contentsline {subsubsection}{Estrazione delle ciglia}{10}{section*.3}%
-\contentsline {chapter}{\numberline {3}Algoritmi di matching e prestazioni}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Distribuzione dei bit nell'iriscode}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Alcuni fattori che aumentano la variabilità intraclasse}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Algoritmi di matching}{12}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Maschere}{12}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Creazione delle maschere}{12}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Uso delle maschere}{13}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Velocità del matching}{13}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Distribuzione del match score}{14}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Svantaggi della tecnica}{14}{section.3.7}%
+\contentsline {chapter}{\numberline {1}Caratteristiche dell'iride e creazione dell'Iriscode}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Vantaggi e svantaggi}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Struttura dell'iride}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Unicità dell'iride}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Rappresentazione delle iridi}{5}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Calcolo dei centri e raggi di iride e pupilla}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Rimozione di palpebre e ciglia}{5}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Linearizzaione dell'iride}{5}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Proprietà dell'iris code}{7}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Algoritmi di enhancement e prefiltraggio}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Controllo qualità del sample}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Focus assessement}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Acquisizioni fuori fuoco}{9}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Contrast Adjustment}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Modulo Estrazione delle Feature}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Come trovare l'iride}{10}{subsection.2.3.1}%
+\contentsline {subsubsection}{Estrazione delle palpebre}{10}{section*.2}%
+\contentsline {subsubsection}{Estrazione delle ciglia}{11}{section*.3}%
+\contentsline {chapter}{\numberline {3}Algoritmi di matching e prestazioni}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Distribuzione dei bit nell'iriscode}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Alcuni fattori che aumentano la variabilità intraclasse}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Algoritmi di matching}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Maschere}{13}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Creazione delle maschere}{13}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Uso delle maschere}{14}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Velocità del matching}{14}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Distribuzione del match score}{15}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Svantaggi della tecnica}{16}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}FTA e FTE iride}{16}{subsection.3.7.1}%
+\contentsline {chapter}{\numberline {4}Spoofing e Anti-Spoofing}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Watch List}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Problemi di privacy}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Frodi attuabili sul sistema}{17}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Attacchi al sensore}{18}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Possibili controlli}{18}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Tempi di reazione della pupilla}{18}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Spettrometria e termografia dell'occhio}{19}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Altre contromisure: permutazioni}{19}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Generazione sintetica di iridi}{19}{section.4.6}%

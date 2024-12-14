@@ -316,7 +316,134 @@ di matching veloce.
     \includegraphics[width=1\linewidth]{images/distr-match-score.png}
 \end{figure}
 
+\newpage
 \section{Svantaggi della tecnica}
+\begin{itemize}
+    \item L'utente deve essere collaborarivo e stare esattamente ad una 
+    distanza dal sensore o passare da un tornello 
+    \item I costi del sensore e del sistema sono alti 
+    \item Le immagini possono essere di bassa qualità e provocare errori di \textbf{Failure To Enroll (FTE)}
+\end{itemize}
+
+\subsection{FTA e FTE iride}
+Non è banale indicare delle cifre esatte per il \textbf{Failure To Acquire (FTA)}
+e il \textbf{Failure To Enroll (FTE)} per l'iride, dato che dipende da molti 
+fattori, come ad esempio:
+\begin{itemize}
+    \item qualità dell'immagine 
+    \item cooperazione dell'utente e protocollo di acquisizione 
+    \item condizioni ambientali 
+    \item caratteristiche fisiologiche dell'occhio 
+\end{itemize}
+
+\chapter{Spoofing e Anti-Spoofing}
+
+\section{Watch List}
+\begin{itemize}
+    \item L'iride si presta meglio ad applicazioni con livelli di sicurezza e dimensioni elevate 
+    \item Il bassissimo tasso di FMR (\textit{dire che tu sei un altro}) dei sistemi basati sull'iride 
+    rende la tecnica \textbf{perfetta per la scansione di enormi DB anche a livello nazionale}
+    \item L'iride attualmente è l'unico sistema che offre la scansione realtime di una singola iride con un DB di 
+    milioni di iridi
+\end{itemize}
+
+\section{Problemi di privacy}
+L'exploit di Dougman (riconoscimento con iride di una foto ad alta risoluzione 
+nel visibile a 18 anni di distanza) mostra la possibilità del pericolo di 
+screening di massa dagli archivi di foto;
+i fattori chiave sono:
+\begin{itemize}
+    \item miglioramente delle tecniche di segmentazione ed estrazione iriscode 
+    nel visibile 
+    \item sempre maggiore risoluzione nelle foto 
+    \item FMR molto bassi 
+\end{itemize}
+
+\noindent $\rightarrow$ \textbf{rappresenta un enorme problema di privacy nel futuro}
+
+\section{Frodi attuabili sul sistema}
+Esistono molti (non banali) modi di frodare un sistema biometrico:
+\begin{itemize}
+    \item attaccare i canali di comunicazione del sistema (replay attacks), specialmente 
+    il canale di comunicazione dal sensore al sistema 
+    \item attaccare dei moduli specifici (sostituire il modulo SW di estrazione di caratteristica o modulo di matching con un Cavallo di Troia)
+    \item attaccare il DB con tutti i dati di enrollment 
+    \item ingannare il sensore, di solito presentando una iride finta
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/frodi.png}
+\end{figure}
+
+\subsection{Attacchi al sensore}
+\begin{itemize}
+    \item Un attacco piuttosto semplice può consistere nel proporre una fotografia;
+    alcuni sistemi che non hanno test di liveness possono essere ingannati
+    \item Una iride falsificata mediante una lente a contatto stampata presenta molte 
+    delle caratteristiche di liveness, tra cui:
+    \begin{itemize}
+        \item spostamenti
+        \item pupilla di dimensioni variabili 
+        \item materiale biologico 
+    \end{itemize}
+\end{itemize}
+
+\section{Possibili controlli}
+
+\subsection{Tempi di reazione della pupilla}
+\begin{itemize}
+    \item La pupilla reagisce alle variazioni di luci ambientali, un occhio finto no 
+    \item La velocità di contrazione e dilatazione sono diverse ed hanno un andamento prefissato (l'occhio 
+    è in grado di proteggersi chiudendosi più velocemente, rispetto a quanto impiega per aprirsi)
+\end{itemize}
+
+\subsection{Spettrometria e termografia dell'occhio}
+\begin{itemize}
+    \item Usando illuminatori a frequenze ottiche diverse è possibile avere in tempo reale una spettrografia dell'iride 
+    \item Attraverso altri strumenti che analizzano lo spettrogramma si stima il materiale con cui è composta 
+    
+    $\rightarrow$ permette di controllare se è di tipo organico oppure è finta
+    \item Anche con una immagine termografica si può controllare se abbiamo di fronte 
+    un tessuto a temperatura corretta
+\end{itemize}
+
+\section{Altre contromisure: permutazioni}
+\textit{"se viene rubato il mio iriscode, non posso cambiare il mio occhio!"}
+
+\noindent Si usano $256!$ possibili schemi di permutazione (sulle iridi da
+comparare) facendo diventare il vecchio iriscode inservibile.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.3\linewidth]{images/permutazioni.png}
+\end{figure}
+
+\noindent Lo XOR non risente delle permutazioni:
+\begin{itemize}
+    \item $XOR(A,B) = XOR( Perm(A), Perm(B))$
+\end{itemize}
+
+\section{Generazione sintetica di iridi}
+\begin{itemize}
+    \item Una tecnica usa algoritmi iterativi per la generazione sintetica di pattern:
+    \begin{itemize}
+        \item si parte da piccole porzioni di immagine reale (primitive)
+        \item si crea una matrice casuale 
+        \item le primitive vengono mischiate casualmente in modo iterativo
+    \end{itemize}
+    \item Un'altra tipologia sono le tecniche a multistrato che imitano la vera fisologia dell'iride:
+    \begin{itemize}
+        \item si prepara un modelo 3D dell'iride 
+        \item si preparano gli strati con delle texture orientate in modo pseudo-casuale 
+        \item si sovrappongono gli strati tenendo conto delle trasparenze 
+        \item si adatta l'immagine degli strati al modello 3D, calcolando anche le luci ed ombre
+    \end{itemize}
+\end{itemize}
+
+\noindent Entrambi gli approcci sono oggi possibili anche con reti neurali.
+
+
 
 
 
