@@ -1,0 +1,44 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}\textcolor {darkgreen}{Vantaggi}}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}\textcolor {red}{Svantaggi}}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Non solo identificazione/verifica}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Principali fasi}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Intraclasse e interclasse}{4}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Variabilità intraclasse}{4}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Similitudine interclasse}{5}{subsection.1.5.2}%
+\contentsline {subsubsection}{Contributo della genetica}{5}{section*.2}%
+\contentsline {section}{\numberline {1.6}Standard}{5}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Standard per l'acquisizione}{5}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Standard per il template}{5}{subsection.1.6.2}%
+\contentsline {section}{\numberline {1.7}Trend di ricerca}{6}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Algoritmi di prefiltraggio ed estrazione di caratteristica}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Face Detection}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Color based}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Haar feature}{9}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Face tracking}{9}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Estrazione di caratteristica e matching}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Rappresentazione dei volti}{10}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Analisi lineare di un sottospazio delle facce}{10}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Analisi lineare di un sottospazio mediante PCA}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Vantaggi e Svantaggi}{11}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Creazione DB e distanze tra utenti diversi}{12}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Arrivo di una faccia nuova - Spazio PCA}{12}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Spazio delle facce}{14}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Significato delle autofacce}{15}{subsection.3.2.5}%
+\contentsline {subsubsection}{Considerazioni sulle autofacce}{15}{section*.3}%
+\contentsline {section}{\numberline {3.3}Altri metodi di estrazione delle feature e matching}{16}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Metodi di analisi locale}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Metodi \textit {model-based}}{16}{subsection.3.3.2}%
+\contentsline {subsubsection}{\textit {Graph Matching}}{17}{section*.4}%
+\contentsline {chapter}{\numberline {4}Spoofing e Anti-Spoofing}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Limiti oggettivi e tipi di attacco}{18}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Attacco Hill Climbing}{18}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Metodi di controllo}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Controllo della sincronia parlato - movimenti delle labbra}{20}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Facial Fingerprinting}{20}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Controllo istogrammi del colore}{20}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Controllo di pattern}{21}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Infrared Anti-Spoofing}{21}{subsection.4.3.5}%
+\contentsline {subsubsection}{Analisi 3D}{21}{section*.5}%
