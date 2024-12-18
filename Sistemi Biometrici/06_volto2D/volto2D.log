@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  16 DEC 2024 23:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  18 DEC 2024 13:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -513,7 +513,7 @@ Capitolo 1.
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] [5] [6]
 Capitolo 2.
-<images/face-detection.png, id=243, 536.0025pt x 321.2pt>
+<images/face-detection.png, id=283, 536.0025pt x 321.2pt>
 File: images/face-detection.png Graphic file (type png)
 <use images/face-detection.png>
 Package pdftex.def Info: images/face-detection.png  used on input line 182.
@@ -521,20 +521,20 @@ Package pdftex.def Info: images/face-detection.png  used on input line 182.
 [7
 
 ]
-<images/fd-color-based.png, id=250, 537.00626pt x 682.55pt>
+<images/fd-color-based.png, id=290, 537.00626pt x 682.55pt>
 File: images/fd-color-based.png Graphic file (type png)
 <use images/fd-color-based.png>
 Package pdftex.def Info: images/fd-color-based.png  used on input line 207.
 (pdftex.def)             Requested size: 200.10063pt x 254.3309pt.
  [8 <./images/face-detection.png> <./images/fd-color-based.png>]
-<images/fd-color-based2.png, id=261, 728.7225pt x 586.19pt>
+<images/fd-color-based2.png, id=301, 728.7225pt x 586.19pt>
 File: images/fd-color-based2.png Graphic file (type png)
 <use images/fd-color-based2.png>
 Package pdftex.def Info: images/fd-color-based2.png  used on input line 216.
 (pdftex.def)             Requested size: 241.49895pt x 194.25725pt.
  [9 <./images/fd-color-based2.png>]
 Capitolo 3.
-<images/spazio-facce.png, id=267, 921.4425pt x 454.69875pt>
+<images/spazio-facce.png, id=307, 921.4425pt x 454.69875pt>
 File: images/spazio-facce.png Graphic file (type png)
 <use images/spazio-facce.png>
 Package pdftex.def Info: images/spazio-facce.png  used on input line 251.
@@ -542,58 +542,58 @@ Package pdftex.def Info: images/spazio-facce.png  used on input line 251.
 [10
 
  <./images/spazio-facce.png>]
-<images/pca.png, id=275, 719.68875pt x 478.78876pt>
+<images/pca.png, id=316, 719.68875pt x 478.78876pt>
 File: images/pca.png Graphic file (type png)
 <use images/pca.png>
 Package pdftex.def Info: images/pca.png  used on input line 274.
 (pdftex.def)             Requested size: 241.49895pt x 160.66005pt.
  [11 <./images/pca.png>]
-<images/distance1.png, id=281, 1087.06125pt x 665.48625pt>
+<images/distance1.png, id=322, 1087.06125pt x 665.48625pt>
 File: images/distance1.png Graphic file (type png)
 <use images/distance1.png>
 Package pdftex.def Info: images/distance1.png  used on input line 304.
 (pdftex.def)             Requested size: 345.0pt x 211.20322pt.
-<images/distance2.png, id=282, 1055.945pt x 720.6925pt>
+<images/distance2.png, id=323, 1055.945pt x 720.6925pt>
 File: images/distance2.png Graphic file (type png)
 <use images/distance2.png>
 Package pdftex.def Info: images/distance2.png  used on input line 310.
 (pdftex.def)             Requested size: 345.0pt x 235.46494pt.
-<images/imm-new.png, id=283, 1152.305pt x 856.19875pt>
+<images/imm-new.png, id=324, 1152.305pt x 856.19875pt>
 File: images/imm-new.png Graphic file (type png)
 <use images/imm-new.png>
 Package pdftex.def Info: images/imm-new.png  used on input line 315.
 (pdftex.def)             Requested size: 345.0pt x 256.33902pt.
  [12 <./images/distance1.png> <./images/distance2.png>]
-<images/impostore.png, id=291, 943.525pt x 807.015pt>
+<images/impostore.png, id=332, 943.525pt x 807.015pt>
 File: images/impostore.png Graphic file (type png)
 <use images/impostore.png>
 Package pdftex.def Info: images/impostore.png  used on input line 320.
 (pdftex.def)             Requested size: 310.4979pt x 265.57693pt.
-<images/imm-genuino.png, id=292, 918.43124pt x 736.7525pt>
+<images/imm-genuino.png, id=333, 918.43124pt x 736.7525pt>
 File: images/imm-genuino.png Graphic file (type png)
 <use images/imm-genuino.png>
 Package pdftex.def Info: images/imm-genuino.png  used on input line 325.
 (pdftex.def)             Requested size: 310.4979pt x 249.07605pt.
  [13 <./images/imm-new.png> <./images/impostore.png>] [14 <./images/imm-genuino.png>] [15]
-<images/analisi-locale.png, id=312, 364.36125pt x 367.3725pt>
+<images/analisi-locale.png, id=352, 364.36125pt x 367.3725pt>
 File: images/analisi-locale.png Graphic file (type png)
 <use images/analisi-locale.png>
 Package pdftex.def Info: images/analisi-locale.png  used on input line 385.
 (pdftex.def)             Requested size: 137.9979pt x 139.13773pt.
-<images/model-based.png, id=313, 417.56pt x 334.24875pt>
+<images/model-based.png, id=353, 417.56pt x 334.24875pt>
 File: images/model-based.png Graphic file (type png)
 <use images/model-based.png>
 Package pdftex.def Info: images/model-based.png  used on input line 395.
 (pdftex.def)             Requested size: 172.5pt x 138.08331pt.
  [16 <./images/analisi-locale.png> <./images/model-based.png>]
-<images/graph.png, id=320, 544.0325pt x 361.35pt>
+<images/graph.png, id=360, 544.0325pt x 361.35pt>
 File: images/graph.png Graphic file (type png)
 <use images/graph.png>
 Package pdftex.def Info: images/graph.png  used on input line 409.
 (pdftex.def)             Requested size: 276.00105pt x 183.33218pt.
  [17 <./images/graph.png>]
 Capitolo 4.
-<images/hill-climbing.png, id=327, 515.9275pt x 329.23pt>
+<images/hill-climbing.png, id=367, 515.9275pt x 329.23pt>
 File: images/hill-climbing.png Graphic file (type png)
 <use images/hill-climbing.png>
 Package pdftex.def Info: images/hill-climbing.png  used on input line 455.
@@ -601,49 +601,75 @@ Package pdftex.def Info: images/hill-climbing.png  used on input line 455.
 [18
 
 ]
-<images/confidence.png, id=336, 644.4075pt x 354.32375pt>
+<images/confidence.png, id=376, 644.4075pt x 354.32375pt>
 File: images/confidence.png Graphic file (type png)
 <use images/confidence.png>
 Package pdftex.def Info: images/confidence.png  used on input line 463.
 (pdftex.def)             Requested size: 276.00105pt x 151.76152pt.
  [19 <./images/hill-climbing.png> <./images/confidence.png>]
-<images/isto.png, id=343, 714.67pt x 568.1225pt>
+<images/isto.png, id=383, 714.67pt x 568.1225pt>
 File: images/isto.png Graphic file (type png)
 <use images/isto.png>
 Package pdftex.def Info: images/isto.png  used on input line 495.
 (pdftex.def)             Requested size: 276.00105pt x 219.40833pt.
  [20 <./images/isto.png>]
-<images/pattern.png, id=349, 429.605pt x 391.4625pt>
+<images/pattern.png, id=389, 429.605pt x 391.4625pt>
 File: images/pattern.png Graphic file (type png)
 <use images/pattern.png>
 Package pdftex.def Info: images/pattern.png  used on input line 505.
 (pdftex.def)             Requested size: 207.0021pt x 188.62262pt.
-<images/infrared.png, id=350, 1040.88875pt x 241.90375pt>
+<images/infrared.png, id=390, 1040.88875pt x 241.90375pt>
 File: images/infrared.png Graphic file (type png)
 <use images/infrared.png>
 Package pdftex.def Info: images/infrared.png  used on input line 517.
 (pdftex.def)             Requested size: 345.0pt x 80.17914pt.
- [21 <./images/pattern.png> <./images/infrared.png>] (./volto2D.aux)
+ [21 <./images/pattern.png> <./images/infrared.png>]
+Capitolo 5.
+<images/laser3D.png, id=398, 1138.2525pt x 321.2pt>
+File: images/laser3D.png Graphic file (type png)
+<use images/laser3D.png>
+Package pdftex.def Info: images/laser3D.png  used on input line 541.
+(pdftex.def)             Requested size: 345.0pt x 97.35567pt.
+[22
+
+ <./images/laser3D.png>]
+<images/luce-strutturata.png, id=404, 767.86874pt x 300.12125pt>
+File: images/luce-strutturata.png Graphic file (type png)
+<use images/luce-strutturata.png>
+Package pdftex.def Info: images/luce-strutturata.png  used on input line 557.
+(pdftex.def)             Requested size: 231.14937pt x 90.34389pt.
+<images/2,5d.png, id=405, 786.94pt x 790.955pt>
+File: images/2,5d.png Graphic file (type png)
+<use images/2,5d.png>
+Package pdftex.def Info: images/2,5d.png  used on input line 580.
+(pdftex.def)             Requested size: 207.0021pt x 208.05725pt.
+ [23 <./images/luce-strutturata.png> <./images/2,5d.png>]
+<images/matching3D.png, id=412, 1171.37625pt x 556.0775pt>
+File: images/matching3D.png Graphic file (type png)
+<use images/matching3D.png>
+Package pdftex.def Info: images/matching3D.png  used on input line 614.
+(pdftex.def)             Requested size: 345.0pt x 163.7784pt.
+ [24 <./images/matching3D.png>] [25] (./volto2D.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `volto2D.out' has not changed.
-(rerunfilecheck)             Checksum: 88FFE78423E78DBA7D30B96FEC8CB30D;7349.
+(rerunfilecheck)             Checksum: 126680A3849E8447360A2B05AFE88052;9000.
  ) 
 Here is how much of TeX's memory you used:
- 20879 strings out of 474222
- 388993 string characters out of 5748733
+ 20927 strings out of 474222
+ 389998 string characters out of 5748733
  1935975 words of memory out of 5000000
- 42729 multiletter control sequences out of 15000+600000
+ 42765 multiletter control sequences out of 15000+600000
  566063 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,6n,93p,491b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on volto2D.pdf (22 pages, 3754984 bytes).
+Output written on volto2D.pdf (26 pages, 5738732 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
- 407 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 494 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 

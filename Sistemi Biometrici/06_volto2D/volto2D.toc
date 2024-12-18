@@ -42,3 +42,11 @@
 \contentsline {subsection}{\numberline {4.3.4}Controllo di pattern}{21}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Infrared Anti-Spoofing}{21}{subsection.4.3.5}%
 \contentsline {subsubsection}{Analisi 3D}{21}{section*.5}%
+\contentsline {chapter}{\numberline {5}Sistemi basati sul volto 3D}{22}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Sensori e caratteristiche}{22}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Acquisizione mediante scanner laser}{22}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Acquisizione mediante luce strutturata}{22}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Acquisizione mediante diverse viste}{23}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Vantaggi e svantaggi dei sistemi 3D}{24}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Algoritmi di matching}{24}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Prestazioni}{25}{section.5.4}%

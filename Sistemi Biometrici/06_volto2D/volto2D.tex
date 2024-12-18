@@ -521,6 +521,123 @@ con camera IR.
 I dispositivi in grado di scansionare il volume degli oggetti 
 possono migliorare le capacità anti-spoofing.
 
+\chapter{Sistemi basati sul volto 3D}
+
+\section{Sensori e caratteristiche}
+
+Attualmente i sistemi biometrici basati sul volto 3D sono in grado di gestire
+correttamente acquisizioni frontali con espressione neutra.
+
+\subsection{Acquisizione mediante scanner laser}
+
+\begin{itemize}
+    \item Una lama di luce laser scandisce il volto del soggetto durante una ripresa video
+    \item Attraverso la geometria spaziale (nota) del sistema si 
+    ricostruisce la superificie tramite ogni frame del filmato
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/laser3D.png}
+\end{figure}
+
+
+\subsection{Acquisizione mediante luce strutturata}
+\begin{itemize}
+    \item Si illumina il volto da riprendere con un proiettore in 
+    grado di produrre un fascio di luce strutturata
+    \item Si riprende con una o due telecamere
+    \item Si proiettano in successione tanti pattern binari, con bande sempre più fini
+    \item Il sistema ricostruisce la tridimensionalità usando la deformazione 
+    delle bande nell'immagine
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.67\linewidth]{images/luce-strutturata.png}
+\end{figure}
+
+\begin{itemize}
+    \item Per aumentare la superficie 3D acquisita si possono usare due tecniche:
+    \begin{itemize}
+        \item due telecamere 
+        \item due acquisizioni indipendenti
+    \end{itemize}
+    \item Le due superifici 3D che si ottengono poi vanno unite in una sola
+\end{itemize}
+
+\subsection{Acquisizione mediante diverse viste}
+\begin{itemize}
+    \item I sistemi chiamati \textbf{2,5D} riescono a riprodurre la 
+    superificie 3D del volto da tante immagini prese da angoli diversi 
+    usando una normale telecamera 
+    \item Successivamente, si riesce a costruire un vero e proprio modello 3D 
+    del volto a partire dalle immagini 2,5D
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/2,5d.png}
+\end{figure}
+
+\section{Vantaggi e svantaggi dei sistemi 3D}
+\begin{itemize}
+    \item \textcolor{darkgreen}{\textbf{Vantaggi}}
+    \begin{itemize}
+        \item invarianza alla luce ambiente (usando IR)
+        \item maggiormente tolleranti rispetto a sfondo, accessori, \dots
+        \item invarianti rispetto a piccoli spostamenti angolari del volto 
+        \item la precisione di alcuni sistemi permette di distinguire gemelli omozigoti 
+        \item prestazioni, sia in termini di tempo che di precisione
+    \end{itemize}
+    \item \textcolor{red}{\textbf{Svantaggi}}
+    \begin{itemize}
+        \item costo dei sensori e del sistema 
+        \item il soggetto deve essere collaborativo
+    \end{itemize}
+\end{itemize}
+
+\section{Algoritmi di matching}
+Il confronto fra due volti 3D segue i seguenti passi:
+\begin{itemize}
+    \item Se il volto 3D non è direttamente acquisito dal sensore, tramite acquisizioni 
+    multiple si passa ai modelli 3D da confrontare (tipicamente uno dei due volti è già stato memorizzato)
+    \item I volti vengono sovrapposti fino a trovare la migliore sovrapposizione 
+    \item Si valuta il grado di sovrapposizione con una soglia 
+\end{itemize}
+
+\noindent Il match prevede l'individuamento di 3 punti di riferimento per 
+facilitare la sovrapposizione delle immagini.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/matching3D.png}
+\end{figure}
+
+\section{Prestazioni}
+Ci sono notevoli miglioramenti nel \textit{face recognition}, con 
+diversi algoritmi che in degli esperimenti sono stati in grado di 
+battere degli esseri umani.
+
+\noindent In particolare, ci sono miglioramenti in:
+\begin{itemize}
+    \item accuratezza
+    \item usabilità
+    \item numero e tipi di dispositivi in cui poterlo usare 
+\end{itemize}
+
+\noindent Queste ragioni sono causa di una crescente diffusione 
+preoccupazione sulla privacy degli utenti.
+
+
+
+
+
+
+
+
+
+
 
 
 
