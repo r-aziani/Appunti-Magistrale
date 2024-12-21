@@ -1,0 +1,17 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Biometria della digitazione della tastiera e schermi}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}\textit {Keystroke dynamics}}{2}{section.1.1}%
+\contentsline {subsubsection}{Autenticazione a due fattori}{2}{section*.2}%
+\contentsline {subsection}{\numberline {1.1.1}Estrazione delle feature}{2}{subsection.1.1.1}%
+\contentsline {subsubsection}{Feature locali}{2}{section*.3}%
+\contentsline {subsubsection}{Feature globali}{3}{section*.4}%
+\contentsline {section}{\numberline {1.2}Swapping su schermo}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Comportamento dell'utente sul terminale}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Vantaggi e Svantaggi}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Attacco su canale SSH}{5}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Contromisure}{5}{subsection.1.5.1}%
+\contentsline {chapter}{\numberline {2}Impronta}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Biometria \textit {less-constrained} e \textit {unconstrained}}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Vantaggi e Svantaggi}{7}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Palmo}{8}{chapter.3}%
