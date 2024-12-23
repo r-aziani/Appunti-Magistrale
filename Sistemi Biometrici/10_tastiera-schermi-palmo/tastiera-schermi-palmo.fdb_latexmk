@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1734792505.5301 "/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/10_tastiera-schermi-palmo/tastiera-schermi-palmo.tex" "tastiera-schermi-palmo.pdf" "tastiera-schermi-palmo" 1734792506.48248 0
+["pdflatex"] 1734965093.65257 "/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/10_tastiera-schermi-palmo/tastiera-schermi-palmo.tex" "tastiera-schermi-palmo.pdf" "tastiera-schermi-palmo" 1734965095.47741 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/10_tastiera-schermi-palmo/tastiera-schermi-palmo.tex" 1734792504.39123 6499 d5cfa786179d56777555e42feacfcdfd ""
+  "/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/10_tastiera-schermi-palmo/tastiera-schermi-palmo.tex" 1734965093.31001 10615 17376af2af53cb02c6596f62b6a045b7 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -151,12 +151,19 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1728322823.34097 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1728323065 8214324 2349c6972aa9b130e072b9fdd090f5e2 ""
+  "images/2d-palm-touch.png" 1734962281.7026 56157 7e032e0fb5030d8ed832439f5ccaeeb7 ""
+  "images/3d-palm.png" 1734964888.50256 79842 525e93708a14456688c111038c6cb0f3 ""
+  "images/finger.png" 1734960362.71083 37327 5b94f6b202b9216b2656983198f724da ""
+  "images/palm-feature.png" 1734962085.05358 73658 4c98f80e6975e205d34628ebcaf2d979 ""
+  "images/palm-touchless-2d.png" 1734962792.11791 161441 966fd40ba093f2c78d85b40013f852c7 ""
+  "images/palmo.png" 1734960609.92334 93242 427ac494c07a3d239f2e337f6d1aab48 ""
   "images/schermo.png" 1734787569.12468 377343 eae616c247d2265022e8d994c04cec96 ""
   "images/tastiera-locali.png" 1734788984.7204 158585 a995eeb9e96e19be05446d8ef7e6b3d7 ""
-  "tastiera-schermi-palmo.aux" 1734792506.40832 2349 129cf5022f00a6064bcaf90994c448f0 "pdflatex"
-  "tastiera-schermi-palmo.out" 1734792506.40932 2104 ed1bd54e07156aa99394aec45466988c "pdflatex"
-  "tastiera-schermi-palmo.tex" 1734792504.39123 6499 d5cfa786179d56777555e42feacfcdfd ""
-  "tastiera-schermi-palmo.toc" 1734792506.40932 1299 264db6dbcd5bcc2efc96edcf910702ac "pdflatex"
+  "images/vein.png" 1734963579.14412 118898 c3b52a15cbbaba3046d9113dde3e512c ""
+  "tastiera-schermi-palmo.aux" 1734965095.36047 3332 7c216f3ff276cd76a2a6c8c5b9f9ace5 "pdflatex"
+  "tastiera-schermi-palmo.out" 1734965095.36247 3096 56a58c4fd3dea5bd7aa243edc35a4268 "pdflatex"
+  "tastiera-schermi-palmo.tex" 1734965093.31001 10615 17376af2af53cb02c6596f62b6a045b7 ""
+  "tastiera-schermi-palmo.toc" 1734965095.36247 1953 d7278a7b03c7bcec20962f6efe60732d "pdflatex"
   (generated)
   "tastiera-schermi-palmo.aux"
   "tastiera-schermi-palmo.log"

@@ -183,12 +183,152 @@ L'idea è di offuscare i dati che passano attraverso il canale SSH:
     \end{itemize}
 \end{itemize}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/finger.png}
+\end{figure}
+
 \chapter{Palmo}
 
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/palmo.png}
+\end{figure}
+
+\noindent L'area di lavoro tipicamente va dal polso 
+alla base/punta delle dita.
+
+\newpage
+\section{Feature e matching}
+
+Tra le feature estratte troviamo:
+\begin{itemize}
+    \item Point based
+    \begin{itemize}
+        \item delta points 
+        \item se visibili, feature ereditate dalle impronte digitali 
+    \end{itemize}
+    \item Ridge based
+    \begin{itemize}
+        \item ridge principali 
+    \end{itemize}
+    \item Subspace-based (globali)
+    \begin{itemize}
+        \item basate su PCA 
+    \end{itemize}
+    \item Statistical 
+    \item Coding-based
+\end{itemize}
+
+\noindent I moduli di matching sono ad-hoc in base al modulo di estrazione 
+delle feature utilizzato, da una semplice metrica euclidea, fino a funzioni
+complesse e \textit{deep}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/palm-feature.png}
+\end{figure}
+
+\newpage
+\section{2D palmprint touch}
+\begin{itemize}
+    \item approccio simile alle impronte 
+    \item spesso gli scanner sono multifunzionali e possono acquisire anche impronte a contatto 
+    \item si lasciano le tracce delle impronte sullo scanner
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/2d-palm-touch.png}
+\end{figure}
+
+\section{2D palmprint touchless}
+
+\begin{itemize}
+    \item tendono ad avere minore o uguale accuratezza rispetto ai sistemi a contatto 
+    \item i template estratti non sono comptabili con le tecnologie a contatto 
+    \item maggiore usabilità 
+    \item \textbf{non lascia traccia di impronte}
+    \item tecnologie IR per vene e 
+\end{itemize}
+
+\subsubsection{\textcolor{darkgreen}{Vantaggi}}
+
+\begin{itemize}
+    \item less-constrained
+    \item risoluzioni basse 
+    \item maggiore accettabilità da parte dell'utente
+    \item nessuna traccia sul dispositivo 
+    \item robusto a dispersione e sporco 
+    \item multibiometrico (combinazione con impronta, forma dita, forma mano, \dots)
+\end{itemize}
+
+\subsubsection{\textcolor{red}{Svantaggi}}
+
+\begin{itemize}
+    \item funzionalità ad alta precisione non sempre utilizzabili (minuzie II livello)
+    \item basso contrasto e sfondi complessi; può diventare un problema in ambiente non controllato
+    \item sensibile all'illuminazione 
+    \item sensibile alla posizione, rischia di rendere l'immagine non a fuoco 
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/palm-touchless-2d.png}
+\end{figure}
 
 
+\section{2D touchless vein palmprint (IR)} 
 
+Categoria particolare dove non si guardano le classiche feature di livello
+1 e 2 della epidermide, ma la distribuzione delle vene visibili in infrarosso.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\linewidth]{images/vein.png}
+\end{figure}
+
+\newpage
+\section{Acquisizione del palmo 3D}
+
+\begin{itemize}
+    \item \textcolor{darkgreen}{\textbf{Vantaggi}}
+    \begin{itemize}
+        \item robusto per illuminazione, occlusioni, rumore 
+        \item resistente ad attacchi di spoofing
+        \item invariante a posizione e distanza
+        \item può utilizzare anche informazioni 2D
+    \end{itemize}
+    \item \textcolor{red}{\textbf{Svantaggi}}
+    \begin{itemize}
+        \item dispositivo complesso 
+        \item può essere costoso
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/3d-palm.png}
+\end{figure}
+
+\subsection{Sensori}
+
+\noindent I sensori utilizzano:
+\begin{itemize}
+    \item \textbf{touch-based}
+    \begin{itemize}
+        \item luce strutturata
+    \end{itemize}
+    \item \textbf{touchless}
+    \begin{itemize}
+        \item laser
+        \item multi-view
+        
+        $\rightarrow$  Per ottenere i dati 3D si può usare sia una telecamera che fa più acquisizioni nel tempo, 
+        sia 2 telecamere che fanno una acquisizione mulipla
+    \end{itemize}
+\end{itemize}
 
 
 

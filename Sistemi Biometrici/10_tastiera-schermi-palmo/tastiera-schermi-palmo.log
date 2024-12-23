@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  21 DEC 2024 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  23 DEC 2024 15:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -512,12 +512,12 @@ Capitolo 1.
 [2
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<images/tastiera-locali.png, id=90, 592.2125pt x 281.05pt>
+<images/tastiera-locali.png, id=120, 592.2125pt x 281.05pt>
 File: images/tastiera-locali.png Graphic file (type png)
 <use images/tastiera-locali.png>
 Package pdftex.def Info: images/tastiera-locali.png  used on input line 65.
 (pdftex.def)             Requested size: 276.00105pt x 130.98708pt.
-<images/schermo.png, id=92, 1303.87125pt x 548.0475pt>
+<images/schermo.png, id=122, 1303.87125pt x 548.0475pt>
 File: images/schermo.png Graphic file (type png)
 <use images/schermo.png>
 Package pdftex.def Info: images/schermo.png  used on input line 84.
@@ -526,31 +526,71 @@ Package pdftex.def Info: images/schermo.png  used on input line 84.
 Capitolo 2.
 [6
 
-] [7]
+]
+<images/finger.png, id=144, 298.11375pt x 259.97125pt>
+File: images/finger.png Graphic file (type png)
+<use images/finger.png>
+Package pdftex.def Info: images/finger.png  used on input line 188.
+(pdftex.def)             Requested size: 207.0021pt x 180.51883pt.
+ [7 <./images/finger.png>]
 Capitolo 3.
+<images/palmo.png, id=150, 567.11874pt x 392.46625pt>
+File: images/palmo.png Graphic file (type png)
+<use images/palmo.png>
+Package pdftex.def Info: images/palmo.png  used on input line 196.
+(pdftex.def)             Requested size: 345.0pt x 238.75728pt.
 [8
 
-] (./tastiera-schermi-palmo.aux)
+ <./images/palmo.png>]
+<images/palm-feature.png, id=156, 335.2525pt x 250.9375pt>
+File: images/palm-feature.png Graphic file (type png)
+<use images/palm-feature.png>
+Package pdftex.def Info: images/palm-feature.png  used on input line 230.
+(pdftex.def)             Requested size: 276.00105pt x 206.58565pt.
+ [9 <./images/palm-feature.png>]
+<images/2d-palm-touch.png, id=163, 249.93375pt x 222.8325pt>
+File: images/2d-palm-touch.png Graphic file (type png)
+<use images/2d-palm-touch.png>
+Package pdftex.def Info: images/2d-palm-touch.png  used on input line 243.
+(pdftex.def)             Requested size: 172.5pt x 153.79878pt.
+ [10 <./images/2d-palm-touch.png>]
+<images/palm-touchless-2d.png, id=170, 490.83376pt x 309.155pt>
+File: images/palm-touchless-2d.png Graphic file (type png)
+<use images/palm-touchless-2d.png>
+Package pdftex.def Info: images/palm-touchless-2d.png  used on input line 278.
+(pdftex.def)             Requested size: 241.49895pt x 152.10995pt.
+<images/vein.png, id=171, 950.55125pt x 401.5pt>
+File: images/vein.png Graphic file (type png)
+<use images/vein.png>
+Package pdftex.def Info: images/vein.png  used on input line 289.
+(pdftex.def)             Requested size: 345.0pt x 145.72227pt.
+ [11 <./images/palm-touchless-2d.png> <./images/vein.png>]
+<images/3d-palm.png, id=179, 283.0575pt x 156.585pt>
+File: images/3d-palm.png Graphic file (type png)
+<use images/3d-palm.png>
+Package pdftex.def Info: images/3d-palm.png  used on input line 312.
+(pdftex.def)             Requested size: 276.00105pt x 152.69484pt.
+ [12 <./images/3d-palm.png>] (./tastiera-schermi-palmo.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `tastiera-schermi-palmo.out' has not changed.
-(rerunfilecheck)             Checksum: ED1BD54E07156AA99394AEC45466988C;2104.
+(rerunfilecheck)             Checksum: 56A58C4FD3DEA5BD7AA243EDC35A4268;3096.
  ) 
 Here is how much of TeX's memory you used:
- 20683 strings out of 474222
- 385272 string characters out of 5748733
- 1929975 words of memory out of 5000000
- 42588 multiletter control sequences out of 15000+600000
+ 20750 strings out of 474222
+ 386796 string characters out of 5748733
+ 1930975 words of memory out of 5000000
+ 42643 multiletter control sequences out of 15000+600000
  566063 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,508b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,6n,93p,508b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on tastiera-schermi-palmo.pdf (9 pages, 724232 bytes).
+Output written on tastiera-schermi-palmo.pdf (13 pages, 1436589 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -15,3 +15,11 @@
 \contentsline {section}{\numberline {2.1}Biometria \textit {less-constrained} e \textit {unconstrained}}{6}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Vantaggi e Svantaggi}{7}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Palmo}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Feature e matching}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}2D palmprint touch}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}2D palmprint touchless}{10}{section.3.3}%
+\contentsline {subsubsection}{\textcolor {darkgreen}{Vantaggi}}{10}{section*.5}%
+\contentsline {subsubsection}{\textcolor {red}{Svantaggi}}{11}{section*.6}%
+\contentsline {section}{\numberline {3.4}2D touchless vein palmprint (IR)}{11}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Acquisizione del palmo 3D}{12}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Sensori}{12}{subsection.3.5.1}%
