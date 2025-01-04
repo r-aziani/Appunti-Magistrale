@@ -1,0 +1,20 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Sistemi Multimodali}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Svantaggi dei sistemi monomodali}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Vantaggi e Svantaggi sei sistemi multimodali}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Cosa si può unire?}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Quali tratti unire?}{3}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Applicazioni target}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Terminologia usata in letteratura}{3}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Tecniche di datafusion biometrica}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Normalizzazione degli score}{4}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Tecniche avanzate di datafusion}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Sistemi multimodali gerarchici}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Fusione a livello di feature}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Parametrizzazione specifica per \\ il singolo utente}{7}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Integrazione della soft biometrics}{7}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Esempi di sistemi multimodali}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sistemi multimodali per il volto}{8}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Sistema BioID (parlato + volto)}{8}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Sistema iride + retina}{9}{section.4.3}%
