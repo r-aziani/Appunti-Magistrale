@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1734102016.48533 "/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici new/02_Elementi Caratteristici/elemen_charact.tex" "elemen_charact.pdf" "elemen_charact" 1734102018.18337 0
+["pdflatex"] 1736086695.57118 "/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/02_Elementi Caratteristici/elemen_charact.tex" "elemen_charact.pdf" "elemen_charact" 1736086699.4855 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici new/02_Elementi Caratteristici/elemen_charact.tex" 1734102016.24507 21713 571be5881f790ddf1b90e233405e951d ""
+  "/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/02_Elementi Caratteristici/elemen_charact.tex" 1736086691.17631 21714 54a004334d06af42c058175a6886561b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -154,10 +154,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1728322823.34097 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1728323065 8214324 2349c6972aa9b130e072b9fdd090f5e2 ""
-  "elemen_charact.aux" 1734102018.08203 10590 6a8a5a00222727019e7fa2fe4a43ad2a "pdflatex"
-  "elemen_charact.out" 1734102018.08303 7740 e85a984904103909010b5b39bf74d42f "pdflatex"
-  "elemen_charact.tex" 1734102016.24507 21713 571be5881f790ddf1b90e233405e951d ""
-  "elemen_charact.toc" 1734102018.08403 4733 159a79754c54ab489634c02102454a6d "pdflatex"
+  "elemen_charact.aux" 1736086699.26127 10591 289e3bfa6a6faa04023941b5cc79d224 "pdflatex"
+  "elemen_charact.out" 1736086699.26526 7732 1572421ae1f993171c9de6e5aba9a6f4 "pdflatex"
+  "elemen_charact.tex" 1736086691.17631 21714 54a004334d06af42c058175a6886561b ""
+  "elemen_charact.toc" 1736086699.26626 4734 a01f6f02cf195937891d4080adcf7168 "pdflatex"
   "images/binning.png" 1728998623.09961 240377 1c6483134d45df132e0f7690399dda42 ""
   "images/det-roc.png" 1728998623.10861 130529 7310dd5ba6fa6cc009422bc98961189b ""
   "images/det.png" 1728998623.10861 74787 3d27fe2fe1d401c80fca33d8050a28fb ""

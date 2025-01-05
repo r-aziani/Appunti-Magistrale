@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  13 DEC 2024 16:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  5 JAN 2025 15:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici new/02_Elementi Caratteristici/elemen_charact.tex"
-(/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici new/02_Elementi Caratteristici/elemen_charact.tex
+**"/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/02_Elementi Caratteristici/elemen_charact.tex"
+(/home/azi/Desktop/Appunti-Magistrale/Sistemi Biometrici/02_Elementi Caratteristici/elemen_charact.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -580,12 +580,16 @@ File: images/matching.png Graphic file (type png)
 Package pdftex.def Info: images/matching.png  used on input line 247.
 (pdftex.def)             Requested size: 345.0pt x 142.43698pt.
  [12 <./images/estrazione.png> <./images/matching.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 266.
+
 <images/indexing.png, id=295, 533.995pt x 252.945pt>
 File: images/indexing.png Graphic file (type png)
 <use images/indexing.png>
 Package pdftex.def Info: images/indexing.png  used on input line 277.
 (pdftex.def)             Requested size: 258.75pt x 122.5701pt.
- [13 <./images/indexing.png>]
+[13 <./images/indexing.png>]
 <images/binning.png, id=303, 1117.17375pt x 579.16376pt>
 File: images/binning.png Graphic file (type png)
 <use images/binning.png>
@@ -651,18 +655,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `elemen_charact.out' has not changed.
-(rerunfilecheck)             Checksum: E85A984904103909010B5B39BF74D42F;7740.
+(rerunfilecheck)             Checksum: 1572421AE1F993171C9DE6E5ABA9A6F4;7732.
  ) 
 Here is how much of TeX's memory you used:
- 20881 strings out of 474222
- 389929 string characters out of 5748733
+ 20882 strings out of 474222
+ 389922 string characters out of 5748733
  1935975 words of memory out of 5000000
- 42715 multiletter control sequences out of 15000+600000
+ 42716 multiletter control sequences out of 15000+600000
  565704 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,93p,586b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,7n,93p,582b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on elemen_charact.pdf (23 pages, 1860247 bytes).
+Output written on elemen_charact.pdf (23 pages, 1860206 bytes).
 PDF statistics:
  453 PDF objects out of 1000 (max. 8388607)
  362 compressed objects within 4 object streams
