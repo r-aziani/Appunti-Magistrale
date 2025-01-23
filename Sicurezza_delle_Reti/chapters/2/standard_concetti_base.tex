@@ -108,9 +108,34 @@ $\rightarrow$ è necessario \textbf{ridurre al minimo} la superificie di attacco
     \textit{social engeneering}, errore umano o intrusi
 \end{itemize}
 
+\section{Albero di attacco}
+Un albero di attacco è un modo ti \textbf{rappresentare le possibilità di attacco}, e quindi
+di progettare le \textbf{contromisure}.
 
+\section{Tipi di attacco}
+\begin{itemize}
+    \item \textbf{Passivi:} non alterano le informazioni in transito; lo scopo è ottenere 
+    informazioni sui messaggi trasmessi
+    \item \textbf{Attivi:} modificano il flusso delle informazioni 
+    \begin{itemize}
+        \item \textit{Attacco di replay:} l'attaccante osserva le informazioni e le riutilizza 
+        in un secondo momento per creare una nuova sessione di comunicazione
 
+        $\rightarrow$ ci si tutela con \textit{numeri casuali} e \textit{timestamp} per, rispettivamente,
+        controllare che i messaggi non siano già stati scambiati o che siano ancora validi
+        \item \textit{DoS e DDoS}
+        \item \dots
+    \end{itemize}
+\end{itemize}
 
+\section{Implementazione della sicurezza}
+Quattro linee d'azione complementari:
+\begin{itemize}
+    \item \textbf{Prevenzione}
+    \item \textbf{Rilevamento}
+    \item \textbf{Risposta} in modo da fermare un attacco e prevenire ulteriori danni
+    \item \textbf{Ripristino} con sistemi di backup in caso l'integrità dei dati sia compromessa
+\end{itemize}
 
 
 
