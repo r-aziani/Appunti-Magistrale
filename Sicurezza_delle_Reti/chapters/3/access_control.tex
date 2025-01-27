@@ -193,4 +193,92 @@ permette ai programmi non privilegiati di accedere a risorse generalmente non ac
 può apportare una modifica a quel file 
 
 \noindent Il \textit{\textbf{superuser}} è esente dalle consuete restrizioni di controllo degli accessi, ha 
-accesso a tutto il sistema. 
+accesso a tutto il sistema.
+
+
+\section{Windows security architecture}
+L'architettura di sicurezza di Windows è basata su più entità:
+\begin{itemize}
+    \item \textbf{\textit{Security Reference Model (SRM):}} componente che in modalità kernel esegue 
+    controlli delle autorizzazioni e manipola i privilegi degli utenti
+    \item \textbf{\textit{Local Security Authority (LSA):}} risiede in un processo utente, è responsabile 
+    dell'applicazione della politica di sicurezza locale, tra cui:
+    \begin{itemize}
+        \item criteri per le password, come complessità e tempi di scadenza 
+        \item politica di controllo $\rightarrow$ specifica quali operazioni su quali oggetti vadano controllate 
+        \item impostazioni dei privilegi
+    \end{itemize}
+    \item \textbf{\textit{Security Account Manager (SAM):}} è un database che archivia i dati degli account e le 
+    informazioni di sicurezza su entità locali e gruppi
+    \item \textbf{\textit{Active Directory (AD):}} implementa il protocollo LDAP (\textit{Lightweight Directory Access Protocol})
+\end{itemize}
+
+\subsection{Windows security model}
+Windows ha un complesso sistema di controllo dell'accesso; ogni oggetto ha ACL per permettere autorizzazioni 
+granulari ad utenti e/o gruppi di utenti.
+
+\subsection{Security descriptor}
+Ogni oggetto ha un \textit{security descriptor} che contiene:
+\begin{itemize}
+    \item \textbf{\textit{security identifier} (SID)} per il possessore e il gruppo primario dell'oggetto (SID è 
+    associato univocamente ad ogni utente) 
+    \item \textbf{\textit{discretionary ACL} (DACL):} diritti di accesso per gli utenti e i gruppi
+    \item \textbf{\textit{system ACL} (SACL):} tipi di accesso che generano log
+\end{itemize}
+
+\noindent Ad ogni processo viene inoltre associato un insieme di \textbf{token}, che prende il nome di 
+\textbf{\textit{security context}}. Nel momento in cui un processo vuole accedere ad un oggetto, presenta 
+il suo insieme di token e il sistema controlla se il security context abbia o meno accesso a tale risorsa 
+in base al \textit{security descriptor} dell'oggetto.
+
+\newpage
+\section{Set-UID}
+In Linux, ad ogni utente viene assegnato un ID univoco, memorizzato in \\ \texttt{/etc/password}
+
+\noindent Tramite i gruppi si rappresentano i gruppi di utenti che hanno le stesse autorizzazioni.
+
+\noindent Le autorizzazioni su file vengono espresse nel seguente modo:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapters/3/images/linux-accesso-file.png}
+\end{figure}
+
+\noindent Per \textbf{set-UID} si intende \textbf{consentire all'utente di eseguire un programma 
+con i privilegi del proprietario del programma}. Quando viene eseguito un normale programma, 
+$RUID = EUID$, con entrambi che equivalgono all'id dell'utente che esegue il programma.
+
+\noindent Quando viene eseguito un set-uid, RUID è uguale all'id dell'utente, ma EUID è 
+uguale all'id del proprietario del programma
+
+$\rightarrow$ se il programma è di proprietà di \textit{root}, viene eseguito con i 
+\textit{privilegi di root}
+
+\subsection{Superificie di attacco dei programmi Set-UID}
+\begin{itemize}
+    \item \textbf{Attacchi tramite input utente:} potrebbe essere inserito del codice malevolo, ad esempio
+    tramite:
+    \begin{itemize}
+        \item buffer overflow
+        \item inserimento di stringhe formattate appositamente 
+        \item comando \texttt{chsh} $\rightarrow$ permette di cambiare sheòò tra quelli presenti 
+        in \texttt{/etc/password}
+    \end{itemize}
+
+    $\rightarrow$ problema: è impossibile disinfettare gli input dell'utente
+    \item \textbf{Attacchi tramite input di sistema:} cambiare i riferimenti simbolici a file 
+    privilegiati
+    \item \textbf{Attacchi tramite variabili d'ambiente:} le variabili d'ambiente possono 
+    essere impostate prima dell'esecuzione di un programma e influenzarne il comportamento
+    \item \textbf{Perdita di capacità:} i programmi privilegiati potrebbero declassarsi 
+    durante l'esecuzione
+    \item \textbf{Invocazione di programmi:} invocazione di comandi esterni dall'interno di un 
+    programma
+    \begin{itemize}
+        \item agli utenti viene chiesto di fornire dati in input al comando; se non vengono fatti 
+        gli opportuni controlli, i dati di input dell'utente potrebbero essere trasformati nel 
+        nome di un comando
+    \end{itemize}
+    \item \textbf{Attacchi tramite dynamic linker:} se il programma prevede linking dinamico di 
+    librerie, anche il contenuto diventa rilevante; se manomesse, potrebbero portare a comportamenti 
+    anomali del codice
+\end{itemize}
