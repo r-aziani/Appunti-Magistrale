@@ -1,34 +1,38 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Terminologia}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Sicurezza}{3}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Standard e Concetti base}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Standard}{4}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Reference Monitor Model - RMM}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Definizioni}{5}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Sfide della sicurezza informatica}{5}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Principi fondamentali di progettazione della sicurezza}{6}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Superificie di attacco}{6}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Categorie di attacco}{7}{subsection.2.6.1}%
-\contentsline {section}{\numberline {2.7}Albero di attacco}{7}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Tipi di attacco}{7}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Implementazione della sicurezza}{7}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Controllo degli accessi}{8}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Requisiti di sicurezza}{9}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Requisiti di sicurezza di base}{9}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Requisiti di sicurezza derivati}{9}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Elementi di Access Control}{9}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Politiche di controllo degli accessi}{10}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}DAC}{10}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}MAC}{11}{subsection.3.3.2}%
-\contentsline {subsubsection}{Vantaggi e svantaggi}{11}{section*.2}%
-\contentsline {subsection}{\numberline {3.3.3}RBAC}{12}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Unix security model}{13}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Processi in Linux}{13}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Unix file access control}{13}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Windows security architecture}{14}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Windows security model}{14}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Security descriptor}{14}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Set-UID}{15}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Superificie di attacco dei programmi Set-UID}{15}{subsection.3.6.1}%
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Terminologia}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Sicurezza}{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Standard e Concetti base}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Standard}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Reference Monitor Model - RMM}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Definizioni}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Sfide della sicurezza informatica}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Principi fondamentali di progettazione della sicurezza}{7}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Superificie di attacco}{7}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Categorie di attacco}{8}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Albero di attacco}{8}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Tipi di attacco}{8}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Implementazione della sicurezza}{8}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Controllo degli accessi}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Requisiti di sicurezza}{10}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Requisiti di sicurezza di base}{10}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Requisiti di sicurezza derivati}{10}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Elementi di Access Control}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Politiche di controllo degli accessi}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}DAC}{11}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}MAC}{12}{subsection.3.3.2}%
+\contentsline {subsubsection}{Vantaggi e svantaggi}{12}{section*.2}%
+\contentsline {subsection}{\numberline {3.3.3}RBAC}{13}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Unix security model}{14}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Processi in Linux}{14}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Unix file access control}{14}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Windows security architecture}{15}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Windows security model}{15}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Security descriptor}{15}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Set-UID}{16}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Superificie di attacco dei programmi Set-UID}{16}{subsection.3.6.1}%
+\contentsline {chapter}{\numberline {4}Politiche di sicurezza}{18}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definizioni}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Malware}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Classificazione}{19}{subsection.4.2.1}%
