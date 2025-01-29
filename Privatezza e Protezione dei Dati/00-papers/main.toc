@@ -79,3 +79,9 @@
 \contentsline {subsection}{\numberline {4.6.4}Problematiche Aperte}{45}{subsection.4.6.4}%
 \contentsline {section}{\numberline {4.7}Disclosure a Grana Fine di Policy di Accesso Sensibili}{45}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Problematiche Aperte Riguardo La Specifica di Preferenze Utente}{45}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Accesso selettivo e privato ai Data center Outsourced}{46}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduzione}{46}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Access Control Enforcement}{47}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Selective Encryption}{48}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}BEL e SEL}{50}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Scrivere privilegi}{53}{subsection.5.3.1}%
