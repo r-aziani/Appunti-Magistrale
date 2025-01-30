@@ -1,0 +1,121 @@
+\chapter{Autenticazione}
+Processo per determinare se un utente, un'applicazione o un processo che agisce per conto di un utente 
+\textbf{è effettivamente chi o cosa dichiara di essere}; si fa un confronto tra le credenziali 
+inserite e quelle memorizzate nel sistema.
+
+\section{Principi di autenticazione}
+\begin{itemize}
+    \item \textbf{Identità digitale:} è la rappresentazione unica di un soggetto, consiste in 
+    un attributo o un insieme di attributi che descrivono univocamente un soggetto 
+    \item \textbf{Prova dell'identità:} stabilisce che un soggetto è chi afferma di essere ad un determinato 
+    livello di certezza
+    \item \textbf{Autenticazione digitale:} il processo di determinazione della validità di uno o più 
+    autenticatori utilizzati per rivendicare un'identità digitale 
+\end{itemize}
+
+\section{Requisiti di sicurezza}
+\begin{itemize}
+    \item \textbf{Di base:} 
+    \begin{itemize}
+        \item \textbf{identificare} gli utenti del sistema informativo e i processi che agiscono per loro conto 
+        \item autenticare (o \textbf{verificare}) le identità di tali utenti 
+    \end{itemize} 
+    \item \textbf{Derivati:}
+    \begin{itemize}
+        \item utilizzare l'\textbf{autenticazione a più fattori}
+        \item impiegare meccanismi resistenti ad \textbf{attacchi di replay}
+        \item impedire il riutilizzo degli \textit{id} per un certo intervallo di tempo 
+        \item disabilitare gli \textit{id} dopo un periodo di inattività
+        \item applicare una \textbf{complessità minima} della password
+        \item proibire il \textbf{riutilizzo} delle password 
+        \item memorizzare e trasmettere solo password \textbf{criptate}
+        \item \textbf{oscurare il feedback} delle informazioni di autenticazione
+    \end{itemize}
+\end{itemize}
+
+\section{Metodi di autenticazione}
+\begin{itemize}
+    \item \textbf{qualcosa che uno sa:} password, \dots
+    \item \textbf{qualcosa che uno ha:} token $\rightarrow$ smartcard, chiave fisica, \dots
+    \item \textbf{qualcosa che l'individuo è:} tratto biometrico
+    \item \textbf{qualcosa che l'individuo fa:} biometria dinamica
+\end{itemize}
+
+\section{Password}
+Lo schema standard \textit{id-password} è soggetto a diverse vulnerabilità:
+\begin{itemize}
+    \item canale tra client e server 
+    \item compromissione del client 
+    \item compromissione del server 
+    \item social engeneering 
+    \item password deboli 
+\end{itemize}
+
+\noindent Esistono diversi tipi di attacco alle password:
+\begin{itemize}
+    \item attacchi a \textbf{dizionario} 
+    \item \textbf{forza bruta}
+    \item uso della \textbf{stessa password} per più servizi
+\end{itemize}
+
+\subsection{Memorizzazione delle password}
+Nello vecchio sistema UNIX veniva memorizzato nel file \texttt{/etc/passwd} l'hash delle password 
+insieme al suo id.
+
+\noindent Oggi, la password viene salvata come \textbf{hash} nel file \textbf{\texttt{/etc/shadow}},
+che è \textbf{leggibile solo da \textit{root}}.
+
+\noindent Per proteggersi da attacchi di forza bruta, è possibile usare un \textbf{salt}: invece che memorizzare 
+l'hash della password, ad esso viene concatenato all'inizio e/o alla fine un \textit{numero casuale} di 
+lunghezza arbitraria; vengono usati salt fino a 48 bit.
+
+\subsection{Cracking delle password}
+\begin{itemize}
+    \item attacchi di dizionario 
+    \item tabelle \textit{rainbow}: contengono hash precalcolati di diversi dizionari, con già inseriti 
+    dei salt 
+\end{itemize}
+
+\noindent La maggioranza degli attacchi \textbf{sfrutta password deboli}; la soluzione è costringere 
+gli utenti ad usare \textbf{password complesse}.
+
+\subsection{Utilizzo delle password su canali non sicuri}
+Esistono tre approcci:
+\begin{itemize}
+    \item \textbf{One-time-password}
+    \item \textbf{Challenge response:} chi si autentica dimostra di conoscere un segreto (challenge); 
+    di norma vengono usati anche timestamp per evitare attacchi di replay
+    \item \textbf{Zero knowledge proof:} chi si autentica fornisce una prova di conoscere la password 
+    senza fornirla esplicitamente 
+\end{itemize}
+
+\section{Altri metodi di autenticazione}
+\begin{itemize}
+    \item \textbf{Smart token:} dispositivi dotati di \textbf{capacità computazionale}, possono fare diversi tipi di controlli 
+    \item \textbf{Smart card:} forniscono informazioni una volta inserite nel sensore, non hanno sistemi di calcolo 
+    \item \textbf{Autenticazione biometrica}
+    \item \textbf{Autenticazione reciproca:} permettono ad entrambe le parti di accertarsi reciprocamente della propria identità
+\end{itemize}
+
+
+\section{Problemi di sicurezza dell'autenticazione}
+\begin{itemize}
+    \item \textbf{Intercettazione}, ad esempio con un attacco che implica la vicinanza fisica di utente ed attaccante
+    \item \textbf{Attacchi host:} diretti al file dell'utente in cui sono contenute le password/token/\dots
+    \item \textbf{Replay:} l'avversario ripete una risposta dell'utente acquisita in precedenza, senza che il server 
+    sia in grado di distinguerla; si può contrastare con tre approcci:
+    \begin{itemize}
+        \item allegare un \textbf{numero di sequenza} a ciascun messaggio
+        \item \textbf{timestamp} per verificare la validità
+        \item \textbf{challenge-response:} quando una parte invia un messaggio, deve contenere il
+        \textit{nonce} del messaggio precedente
+    \end{itemize}
+    \item \textbf{Attacchi client:} l'avversario cerca di autenticarsi senza accedere all'host remoto 
+    \item \textbf{DoS:} tenta di disabilitare un servizio 
+\end{itemize}
+
+
+
+
+
+
