@@ -238,6 +238,9 @@ INPUT chapters/5/malware.aux
 INPUT ./chapters/6/auth.aux
 INPUT ./chapters/6/auth.aux
 INPUT chapters/6/auth.aux
+INPUT ./chapters/7/iso-osi.aux
+INPUT ./chapters/7/iso-osi.aux
+INPUT chapters/7/iso-osi.aux
 OUTPUT ssr.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -374,6 +377,17 @@ OUTPUT chapters/6/auth.aux
 INPUT ./chapters/6/auth.tex
 INPUT ./chapters/6/auth.tex
 INPUT chapters/6/auth.tex
+INPUT ./chapters/7/iso-osi.tex
+INPUT ./chapters/7/iso-osi.tex
+OUTPUT chapters/7/iso-osi.aux
+INPUT ./chapters/7/iso-osi.tex
+INPUT ./chapters/7/iso-osi.tex
+INPUT chapters/7/iso-osi.tex
+INPUT ./chapters/7/images/osi-stack.png
+INPUT ./chapters/7/images/osi-stack.png
+INPUT ./chapters/7/images/osi-stack.png
+INPUT ./chapters/7/images/osi-stack.png
+INPUT ./chapters/7/images/osi-stack.png
 INPUT ssr.aux
 INPUT ./chapters/1/intro.aux
 INPUT ./chapters/1/intro.aux
@@ -393,6 +407,9 @@ INPUT chapters/5/malware.aux
 INPUT ./chapters/6/auth.aux
 INPUT ./chapters/6/auth.aux
 INPUT chapters/6/auth.aux
+INPUT ./chapters/7/iso-osi.aux
+INPUT ./chapters/7/iso-osi.aux
+INPUT chapters/7/iso-osi.aux
 INPUT ./ssr.out
 INPUT ./ssr.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

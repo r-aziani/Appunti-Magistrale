@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  30 JAN 2025 19:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  31 JAN 2025 14:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -460,7 +460,7 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count317
 \l__pdf_internal_box=\box66
-) (./ssr.aux (./chapters/1/intro.aux) (./chapters/2/standard_concetti_base.aux) (./chapters/3/access_control.aux) (./chapters/4/policy.aux) (./chapters/5/malware.aux) (./chapters/6/auth.aux))
+) (./ssr.aux (./chapters/1/intro.aux) (./chapters/2/standard_concetti_base.aux) (./chapters/3/access_control.aux) (./chapters/4/policy.aux) (./chapters/5/malware.aux) (./chapters/6/auth.aux) (./chapters/7/iso-osi.aux))
 \openout1 = `ssr.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -546,7 +546,7 @@ Capitolo 1.
 
  (./chapters/2/standard_concetti_base.tex
 Capitolo 2.
-<chapters/2/images/rmm.png, id=336, 329.23pt x 166.6225pt>
+<chapters/2/images/rmm.png, id=402, 329.23pt x 166.6225pt>
 File: chapters/2/images/rmm.png Graphic file (type png)
 <use chapters/2/images/rmm.png>
 Package pdftex.def Info: chapters/2/images/rmm.png  used on input line 22.
@@ -561,7 +561,7 @@ Package pdftex.def Info: chapters/2/images/rmm.png  used on input line 22.
 
  (./chapters/3/access_control.tex
 Capitolo 3.
-<chapters/3/images/ac.png, id=357, 540.0175pt x 359.3425pt>
+<chapters/3/images/ac.png, id=422, 540.0175pt x 359.3425pt>
 File: chapters/3/images/ac.png Graphic file (type png)
 <use chapters/3/images/ac.png>
 Package pdftex.def Info: chapters/3/images/ac.png  used on input line 20.
@@ -572,30 +572,30 @@ Package pdftex.def Info: chapters/3/images/ac.png  used on input line 20.
 
 
  <./chapters/3/images/ac.png>] [10]
-<chapters/3/images/dac-matrix.png, id=367, 228.855pt x 145.54375pt>
+<chapters/3/images/dac-matrix.png, id=432, 228.855pt x 145.54375pt>
 File: chapters/3/images/dac-matrix.png Graphic file (type png)
 <use chapters/3/images/dac-matrix.png>
 Package pdftex.def Info: chapters/3/images/dac-matrix.png  used on input line 84.
 (pdftex.def)             Requested size: 276.00105pt x 175.53326pt.
-<chapters/3/images/dac-list.png, id=368, 632.3625pt x 391.4625pt>
+<chapters/3/images/dac-list.png, id=433, 632.3625pt x 391.4625pt>
 File: chapters/3/images/dac-list.png Graphic file (type png)
 <use chapters/3/images/dac-list.png>
 Package pdftex.def Info: chapters/3/images/dac-list.png  used on input line 94.
 (pdftex.def)             Requested size: 345.0pt x 213.5728pt.
  [11 <./chapters/3/images/dac-matrix.png>] [12 <./chapters/3/images/dac-list.png>]
-<chapters/3/images/rbac.png, id=381, 247.92625pt x 270.00874pt>
+<chapters/3/images/rbac.png, id=446, 247.92625pt x 270.00874pt>
 File: chapters/3/images/rbac.png Graphic file (type png)
 <use chapters/3/images/rbac.png>
 Package pdftex.def Info: chapters/3/images/rbac.png  used on input line 149.
 (pdftex.def)             Requested size: 241.49895pt x 263.01231pt.
  [13 <./chapters/3/images/rbac.png>]
-<chapters/3/images/unix-permessi.png, id=387, 406.51875pt x 188.705pt>
+<chapters/3/images/unix-permessi.png, id=452, 406.51875pt x 188.705pt>
 File: chapters/3/images/unix-permessi.png Graphic file (type png)
 <use chapters/3/images/unix-permessi.png>
 Package pdftex.def Info: chapters/3/images/unix-permessi.png  used on input line 170.
 (pdftex.def)             Requested size: 241.49895pt x 112.10378pt.
  [14 <./chapters/3/images/unix-permessi.png>] [15]
-<chapters/3/images/linux-accesso-file.png, id=397, 823.075pt x 251.94125pt>
+<chapters/3/images/linux-accesso-file.png, id=462, 823.075pt x 251.94125pt>
 File: chapters/3/images/linux-accesso-file.png Graphic file (type png)
 <use chapters/3/images/linux-accesso-file.png>
 Package pdftex.def Info: chapters/3/images/linux-accesso-file.png  used on input line 243.
@@ -615,12 +615,12 @@ Capitolo 4.
 
  (./chapters/5/malware.tex
 Capitolo 5.
-<chapters/5/images/classification1.png, id=418, 924.45375pt x 362.35374pt>
+<chapters/5/images/classification1.png, id=484, 924.45375pt x 362.35374pt>
 File: chapters/5/images/classification1.png Graphic file (type png)
 <use chapters/5/images/classification1.png>
 Package pdftex.def Info: chapters/5/images/classification1.png  used on input line 18.
 (pdftex.def)             Requested size: 345.0pt x 135.22989pt.
-<chapters/5/images/classification2.png, id=419, 943.525pt x 381.425pt>
+<chapters/5/images/classification2.png, id=485, 943.525pt x 381.425pt>
 File: chapters/5/images/classification2.png Graphic file (type png)
 <use chapters/5/images/classification2.png>
 Package pdftex.def Info: chapters/5/images/classification2.png  used on input line 23.
@@ -631,7 +631,7 @@ Package pdftex.def Info: chapters/5/images/classification2.png  used on input li
 
 
  <./chapters/5/images/classification1.png>]
-<chapters/5/images/classification3.png, id=425, 687.56876pt x 409.53pt>
+<chapters/5/images/classification3.png, id=491, 687.56876pt x 409.53pt>
 File: chapters/5/images/classification3.png Graphic file (type png)
 <use chapters/5/images/classification3.png>
 Package pdftex.def Info: chapters/5/images/classification3.png  used on input line 28.
@@ -649,27 +649,47 @@ Capitolo 6.
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 65.
- [27] [28]) [29] (./ssr.aux (./chapters/1/intro.aux) (./chapters/2/standard_concetti_base.aux) (./chapters/3/access_control.aux) (./chapters/4/policy.aux) (./chapters/5/malware.aux) (./chapters/6/auth.aux))
+ [27] [28]) [29]
+\openout2 = `chapters/7/iso-osi.aux'.
+
+ (./chapters/7/iso-osi.tex
+Capitolo 7.
+<chapters/7/images/osi-stack.png, id=535, 649.42625pt x 324.21124pt>
+File: chapters/7/images/osi-stack.png Graphic file (type png)
+<use chapters/7/images/osi-stack.png>
+Package pdftex.def Info: chapters/7/images/osi-stack.png  used on input line 26.
+(pdftex.def)             Requested size: 345.0pt x 172.2368pt.
+[30
+
+
+
+
+] [31
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.63         \item N
+                    eighbour Discovery Protocol (NDP) per IPv6 <./chapters/7/images/osi-stack.png>] [32] [33]) [34] (./ssr.aux (./chapters/1/intro.aux) (./chapters/2/standard_concetti_base.aux) (./chapters/3/access_control.aux) (./chapters/4/policy.aux) (./chapters/5/malware.aux) (./chapters/6/auth.aux) (./chapters/7/iso-osi.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `ssr.out' has not changed.
-(rerunfilecheck)             Checksum: B26CB1C81BAA0FF773BAB68AD529D498;9663.
+(rerunfilecheck)             Checksum: 92CFCF06AD3C3E21AF48A16EEE8E7C09;11847.
  ) 
 Here is how much of TeX's memory you used:
- 21283 strings out of 474222
- 398174 string characters out of 5748733
- 1935975 words of memory out of 5000000
- 43056 multiletter control sequences out of 15000+600000
+ 21352 strings out of 474222
+ 399682 string characters out of 5748733
+ 1939975 words of memory out of 5000000
+ 43096 multiletter control sequences out of 15000+600000
  566185 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,463b,637s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on ssr.pdf (30 pages, 604457 bytes).
+Output written on ssr.pdf (35 pages, 633535 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 458 compressed objects within 5 object streams
- 96 named destinations out of 1000 (max. 500000)
- 543 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 630 PDF objects out of 1000 (max. 8388607)
+ 547 compressed objects within 6 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 652 words of extra memory for PDF output out of 10000 (max. 10000000)
 
