@@ -1,78 +1,87 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Terminologia}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Sicurezza}{4}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Standard e Concetti base}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Standard}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Reference Monitor Model - RMM}{5}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Definizioni}{6}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Sfide della sicurezza informatica}{6}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Principi fondamentali di progettazione della sicurezza}{7}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Superificie di attacco}{7}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Categorie di attacco}{8}{subsection.2.6.1}%
-\contentsline {section}{\numberline {2.7}Albero di attacco}{8}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Tipi di attacco}{8}{section.2.8}%
-\contentsline {section}{\numberline {2.9}Implementazione della sicurezza}{8}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Controllo degli accessi}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Requisiti di sicurezza}{10}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Requisiti di sicurezza di base}{10}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Requisiti di sicurezza derivati}{10}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Elementi di Access Control}{10}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Politiche di controllo degli accessi}{11}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}DAC}{11}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}MAC}{12}{subsection.3.3.2}%
-\contentsline {subsubsection}{Vantaggi e svantaggi}{12}{section*.2}%
-\contentsline {subsection}{\numberline {3.3.3}RBAC}{13}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Unix security model}{14}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Processi in Linux}{14}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Unix file access control}{14}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Windows security architecture}{15}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Windows security model}{15}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Security descriptor}{15}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Set-UID}{16}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Superificie di attacco dei programmi Set-UID}{16}{subsection.3.6.1}%
-\contentsline {chapter}{\numberline {4}Politiche di sicurezza}{18}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Definizioni}{19}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Malware}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Trojan}{21}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Virus}{21}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Vettori di infezione}{22}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Classificazione dei virus}{22}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Worm}{23}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Drive-by-download}{23}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Clickjacking}{23}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Zombie e botnet}{23}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Rootkit}{23}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Scareware}{23}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Ransomware}{24}{section.5.9}%
-\contentsline {section}{\numberline {5.10}Vulnerabilità zero-day}{24}{section.5.10}%
-\contentsline {section}{\numberline {5.11}Spear phishing}{24}{section.5.11}%
-\contentsline {section}{\numberline {5.12}Spyware}{24}{section.5.12}%
-\contentsline {section}{\numberline {5.13}APT - Advanced Persistent Threats}{24}{section.5.13}%
-\contentsline {section}{\numberline {5.14}Approcci alle contromisure per i malware}{25}{section.5.14}%
-\contentsline {chapter}{\numberline {6}Autenticazione}{26}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Principi di autenticazione}{26}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Requisiti di sicurezza}{26}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Metodi di autenticazione}{27}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Password}{27}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Memorizzazione delle password}{27}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Cracking delle password}{28}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Utilizzo delle password su canali non sicuri}{28}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Altri metodi di autenticazione}{28}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Problemi di sicurezza dell'autenticazione}{28}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Modello ISO-OSI}{30}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Protocolli}{30}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Layering}{30}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Principio end-to-end}{31}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Tipi di indirizzi in Internet}{31}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Routing e traduzione degli indirizzi}{32}{subsection.7.4.1}%
-\contentsline {section}{\numberline {7.5}Interfaccia di rete}{32}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Netmask}{32}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Tipi di minacce nella rete}{32}{section.7.7}%
-\contentsline {section}{\numberline {7.8}ARP (Address Resolution Protocol)}{33}{section.7.8}%
-\contentsline {subsection}{\numberline {7.8.1}ARP spoofing - Cache poisoning}{33}{subsection.7.8.1}%
-\contentsline {section}{\numberline {7.9}MAC address e spoofing}{33}{section.7.9}%
-\contentsline {section}{\numberline {7.10}MAC address flooding}{34}{section.7.10}%
-\contentsline {subsubsection}{Switch}{34}{section*.3}%
-\contentsline {subsubsection}{Attacco}{34}{section*.4}%
+\contentsline {chapter}{\numberline {1}Introduzione}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Terminologia}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Sicurezza}{5}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Standard e Concetti base}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Standard}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Reference Monitor Model - RMM}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Definizioni}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Sfide della sicurezza informatica}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Principi fondamentali di progettazione della sicurezza}{8}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Superificie di attacco}{8}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Categorie di attacco}{9}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Albero di attacco}{9}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Tipi di attacco}{9}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Implementazione della sicurezza}{9}{section.2.9}%
+\contentsline {chapter}{\numberline {3}Controllo degli accessi}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Requisiti di sicurezza}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Requisiti di sicurezza di base}{11}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Requisiti di sicurezza derivati}{11}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Elementi di Access Control}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Politiche di controllo degli accessi}{12}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}DAC}{12}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}MAC}{13}{subsection.3.3.2}%
+\contentsline {subsubsection}{Vantaggi e svantaggi}{13}{section*.2}%
+\contentsline {subsection}{\numberline {3.3.3}RBAC}{14}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Unix security model}{15}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Processi in Linux}{15}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Unix file access control}{15}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}Windows security architecture}{16}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Windows security model}{16}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Security descriptor}{16}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Set-UID}{17}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Superificie di attacco dei programmi Set-UID}{17}{subsection.3.6.1}%
+\contentsline {chapter}{\numberline {4}Politiche di sicurezza}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definizioni}{20}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Malware}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Trojan}{22}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Virus}{22}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Vettori di infezione}{23}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Classificazione dei virus}{23}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Worm}{24}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Drive-by-download}{24}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Clickjacking}{24}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Zombie e botnet}{24}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Rootkit}{24}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Scareware}{24}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Ransomware}{25}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Vulnerabilità zero-day}{25}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Spear phishing}{25}{section.5.11}%
+\contentsline {section}{\numberline {5.12}Spyware}{25}{section.5.12}%
+\contentsline {section}{\numberline {5.13}APT - Advanced Persistent Threats}{25}{section.5.13}%
+\contentsline {section}{\numberline {5.14}Approcci alle contromisure per i malware}{26}{section.5.14}%
+\contentsline {chapter}{\numberline {6}Autenticazione}{27}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Principi di autenticazione}{27}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Requisiti di sicurezza}{27}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Metodi di autenticazione}{28}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Password}{28}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Memorizzazione delle password}{28}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Cracking delle password}{29}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Utilizzo delle password su canali non sicuri}{29}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Altri metodi di autenticazione}{29}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Problemi di sicurezza dell'autenticazione}{29}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Modello ISO-OSI}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Protocolli}{31}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Layering}{31}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Principio end-to-end}{32}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Tipi di indirizzi in Internet}{32}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Routing e traduzione degli indirizzi}{33}{subsection.7.4.1}%
+\contentsline {section}{\numberline {7.5}Interfaccia di rete}{33}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Netmask}{33}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Tipi di minacce nella rete}{33}{section.7.7}%
+\contentsline {section}{\numberline {7.8}ARP (Address Resolution Protocol)}{34}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}ARP spoofing - Cache poisoning}{34}{subsection.7.8.1}%
+\contentsline {section}{\numberline {7.9}MAC address e spoofing}{34}{section.7.9}%
+\contentsline {section}{\numberline {7.10}MAC address flooding}{35}{section.7.10}%
+\contentsline {subsubsection}{Switch}{35}{section*.3}%
+\contentsline {subsubsection}{Attacco}{35}{section*.4}%
+\contentsline {chapter}{\numberline {8}Attacchi TCP/IP}{36}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Livello di trasporto}{36}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Porte}{36}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}TCP (Transmission Control Protocol)}{37}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Flag TCP}{37}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}TCP handshake}{37}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Problemi intrinsechi}{38}{subsection.8.2.3}%
+\contentsline {section}{\numberline {8.3}Spoofing}{38}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}TCP spoofing}{38}{subsection.8.3.1}%
