@@ -79,3 +79,157 @@ di sequenza prevedibili
     \item altrimenti, dato che la maggior parte dei sistemi accetta grandi finestre di numeri di sequenza per gestire 
     le perdite di pacchetti, invia un flusso di pacchetti con probabili numeri di sequenza
 \end{itemize}
+
+\subsection{IP spoofing}
+Le autenticazioni locali su indirizzi IP sono insicure, specialmente 
+all'interno di rete locali; l'header IP è falsificabile senza particolari 
+difficoltà.
+\begin{itemize}
+    \item \textbf{Blind spoofing}
+    
+    \noindent Attacca da qualsiasi fonte; cerca di impersonare un host qualunque
+    di internet, non facente parte della sottorete in cui si trova.
+    
+    \noindent \textit{Blind} perché l'attaccante non ha nessuna possibilità di vedere i 
+    pacchetti mandati in risposta ai pacchetti \textit{"spoofati"} che ha spedito;
+    questi ultimi saranno infatti spediti al vero host che l'attaccante sta impersonando, 
+    impedendogli quindi di venire a conoscenza di \textit{ack number} e \textit{sequence number}
+    corretti per continuare la connessione.
+
+    \item \textbf{Non-blind spoofing}
+    
+    \noindent L'attaccante si trova nella stessa rete della vittima, quindi sarà in grado 
+    di intercettare i pacchetti in risposta a quelli fraudolenti che ha inviato (tramite sniffer), e quindi 
+    di ottenere il sequence number corretto.
+\end{itemize}
+
+\noindent I passaggi di IP spoofing sono:
+\begin{enumerate}
+    \item viene \textbf{scelta una vittima} e cercato un host considerato come fidato dalla vittima 
+    \item si \textbf{disabilita l'host fidato} (ad esempio tramite SYN flooding)
+    \item a questo punto si \textbf{contatta la vittima} e si ottiene un numero di sequenza valido, per provare 
+    a predire il prossimo numero di sequenza 
+    \item l'attaccante manda un pacchetto SYN utilizzando come IP mittente quello della macchina fidata. Anche se 
+    l'hacker non riceve il SYN/ACK, può sempre rispondere in modo che la vittima pensi di aver stabilito correttamente la 
+    connessione 
+\end{enumerate}
+
+\noindent La disabilitazione dell'host fidato è parte fondamentale, in quanto alla ricezione 
+del pacchetto SYN/ACK potrebbe interrompere la connessione tramite un pacchetto RST.
+
+
+\section{TCP session hijacking}
+
+L'obiettivo è aprire una connessione con il server \textbf{impersonando la vittima}; 
+
+\begin{itemize}
+    \item L'attaccante apre una connessione autentica con il suo bersaglio (B), ricevendo un numero di sequenza 
+    \item L'attaccante (C) si spaccia per il client (A)
+    \begin{itemize}
+        \item invia un pacchetto con l'indirizzo del client (A) nel campo dell'indirizzo sorgente
+        e un numero di sequenza coerente con ciò che B si aspetta
+    \end{itemize}
+    \item Se l'attaccante indovina il numero di sequenza, il server presume di avere una connessione con A 
+    \begin{itemize}
+        \item L'attaccante non può vedere l'output di questa sessione, ma potrebbe eseguire comandi con i privilegi 
+        di A sul server
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapters/8/images/tcp-hijack.png}
+\end{figure}
+
+
+\section{ACK storm}
+Gli attacchi ACK storm si basano sul fatto che, quando si riceve un pacchetto con ACK più 
+grande di quello inviato dal client ricevente, il client deve inviare l'ultimo pacchetto 
+inviato all'altro lato e scartare il pacchetto ricevuto.
+
+\noindent L'attacco prevede di:
+\begin{itemize}
+    \item prelevare un pacchetto da una connessione TCP tra un client e un server 
+    \item generare due pacchetti, ciascuno inviato a una parte con l'indirizzo IP dell'altra
+    \item inviare i pacchetti contemporaneamente
+\end{itemize}
+
+$\rightarrow$ la connessione entra in un ciclo infinito di ACK.
+
+\noindent Come contromisura a questo attacco, si è modificato il protocollo facendo in modo che 
+il pacchetto viene scartato senza dover rimandare la risposta.
+
+\section{Attacco DoS}
+Lo scopo è quello di impedire alla vittima di rispondere alle richieste; esistono 
+due tipi di DoS:
+\begin{itemize}
+    \item \textbf{DoS bug:} sfrutta difetti di progettazione della vittima 
+    \item \textbf{DoS flood:} vengono sfruttate delle bot-net per inondare di richieste la vittima
+    \begin{itemize}
+        \item un modo è quello di usare \textbf{ACK reflection attack:}
+        
+        \noindent L'attaccante invia del traffico con l'indirizzo IP della vittima ad un server intermedio (detto \textit{reflector}),
+        che si occuperà di mandare le risposte alla vittima 
+
+        $\rightarrow$ si può mandare una serie di SYN al reflector che inonderà la vittima di 
+        SYN/ACK; la vittima vedrà l'IP del reflector e non quello dell'attaccante
+    \end{itemize}
+\end{itemize}
+
+\subsection{SYN flood}
+Prevede che l'attaccante \textbf{continui ad inviare richieste SYN al server} senza poi 
+rispondere ai SYN/ACK ricevuti in risposta; in questo modo, il server dovrà dedicare risorse per rispondere 
+ed attendere inutilmente che le connessione TCP aperte terminino l'handshake. L'idea è quella
+di impedire al server di poter rispondere ad ulteriori richieste di connessione legittime.
+
+\subsection{Contromisure ad attacco DoS}
+Ci sono quattro approcci principali:
+\begin{itemize}
+    \item \textbf{aumentare le dimensioni del \textit{backlog}} (coda in cui il server memorizza le connessioni 
+    iniziate che non hanno ancora terminato l'handshake)
+    \item ridurre il \textbf{SYN-Received timer}, ovvero il tempo per cui una connesisone rimane nel backlog prima 
+    che venga scartata 
+    \item \textbf{SYN cookies:} il server inserisce le informazioni che di norma si salverebbero nel backlog 
+    all'interno di un cookie che viene inserito nella risposta SYN/ACK inviata al client. Solo nel 
+    momento in cui in server riceve risposta allora aprirà la connessione e le dedicherà risorse.
+
+    \noindent Il cookie deve essere firmato e non modificabile; viene calcolato nel seguente modo 
+    \begin{itemize}
+        \item i primi \textbf{5 bit} sono dati da $t mod 32$, con $t$ \textbf{timestamp}
+        \item i seguenti \textbf{3 bit} sono la codifica del numero di entry che il server avrebbe salvato nel backlog 
+        \item gli ultimi \textbf{24 bit} sono il risultato di una funzione di hash, che prende in input:
+        \begin{itemize}
+            \item input IP server
+            \item IP client
+            \item porta del server
+            \item porta client
+            \item timestamp
+        \end{itemize}
+    \end{itemize}
+
+    \noindent Nel momento in cui il client manda l'ACK in risposta con allegato il cookie, la \textbf{verifica}
+        ha i seguenti passi:
+        \begin{enumerate}
+            \item viene verificato il timestamp per vedere se il pacchetto sia ancora valido 
+            \item vien ricomputata la funzione di hash per vedere se il SYN sia ancora valido 
+            \item vengono decodificati i 3 bit corrispondenti alla entry della coda di backlog
+        \end{enumerate}
+    \item \textbf{cancellazione di una entry a caso} per far posto a una nuova 
+    \item uso di un \textbf{prolexic proxy:} si mette un proxy tra server e client; sarà il proxy a gestire 
+    l'handshake, ed inoltrerà al server solo le richieste SYN di cui si riceve anche un ACK
+\end{itemize}
+
+\section{UDP (User Datagram Protocol)}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -412,6 +412,11 @@ INPUT ./chapters/8/images/tcp-handshake.png
 INPUT ./chapters/8/images/tcp-handshake.png
 INPUT ./chapters/8/images/tcp-handshake.png
 INPUT ./chapters/8/images/tcp-handshake.png
+INPUT ./chapters/8/images/tcp-hijack.png
+INPUT ./chapters/8/images/tcp-hijack.png
+INPUT ./chapters/8/images/tcp-hijack.png
+INPUT ./chapters/8/images/tcp-hijack.png
+INPUT ./chapters/8/images/tcp-hijack.png
 INPUT ssr.aux
 INPUT ./chapters/1/intro.aux
 INPUT ./chapters/1/intro.aux
