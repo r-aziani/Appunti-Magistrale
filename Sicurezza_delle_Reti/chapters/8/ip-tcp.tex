@@ -220,16 +220,111 @@ Ci sono quattro approcci principali:
 \end{itemize}
 
 \section{UDP (User Datagram Protocol)}
+UDP è un protocollo di trasporto minimale che si limita ad inviare le informazioni sulla 
+rete senza preoccuparsi che queste arrivino effettivamente a destinazione; non c'è nessun 
+controllo del flusso e nessun riconoscimento.
+
+\noindent Viene usato ad esempio per applicazioni di streaming.
+
+\subsection{DDoS - NTP amplification}
+Il protocollo NTP è usato per sincronizzare i \textit{clock} tra macchine diverse tramite UDP.
+
+\noindent L'attacco consiste nello sfruttare il comando \texttt{monlist}, abilitato di default 
+nelle vecchie versioni del protocollo, che permette di ottenere gli ultimi 600 IP che hanno fatto 
+domanda al server NTP; successivamente si inonda di traffico UDP la vittima facendo IP spoofing.
+
+\noindent \textit{Passaggi:}
+\begin{itemize}
+    \item L'attaccante usa una botnet per inviare pacchetti UDP con IP mittente della vittima 
+    al server NTP, con i quali richiede l'esecuzione del comando \texttt{monlist}
+    \item ogni pacchetto effettua una richiesta al server NTP che risponde all'IP della vittima 
+    \item la rete della vittima viene inondata di traffico, circa 20 volte superiore a quello 
+    delle richieste inviate dall'attaccante (la richiesta del comando \texttt{monlist} è circa 200 
+    volte più piccola dell'output del comando stesso)
+\end{itemize}
+
+\noindent L'attacco viene definito di \textit{amplificazione} perché da una banda piuttosto piccola 
+è possibile ricavare grosse quantità di dati con cui effettuare un DDoS tramite la \textit{reflection}
+del server NTP.
+
+\newpage
+\section{ICMP (Internet Control Message Protocol)}
+È un protocollo che permette la comunicazione tra host e router, per scambiare informazioni 
+relative allo stato della rete (host irraggiungibili, echo delle richieste/risposte \dots).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{chapters/8/images/icmp.png}
+\end{figure}
 
 
+\subsection{Attacco \textit{smurf} DDoS}
 
+L'attacco prevede l'utilizzo di una \textbf{richiesta ICMP echo} (ping) e l'\textbf{IP spoofing}
+per inviare alla vittima una quantità di dati di risposte echo che rendono inservibili 
+altre richieste.
 
+\noindent \textit{Passaggi:}
+\begin{itemize}
+    \item l'attaccante usa come mittente in una richiesta ICMP echo l'IP della vittima all'indirizzo
+    di broadcast della rete 
 
+    $\rightarrow$ la richiesta viene inoltrata a tutti gli host della rete 
 
+    \item tutti gli host rispondono all'IP della vittima, causando il DDoS
+\end{itemize}
 
+\noindent La \textbf{contromisura} può essere scartare tutti i pacchetti che hanno come 
+destinazione l'indirizzo di broadcast.
 
+\newpage
+\section{IP}
+I datagrammi IP sono composti da diverse sezioni:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapters/8/images/ip.png}
+\end{figure}
 
+\noindent Durante il trasporto dei datagrammi IP è possibile che sia richiesta la loro frammentazione, 
+per poi ricomporli lato ricevente.
 
+\subsection{Teardrop attack}
 
+In questo attacco, l'attaccante invia una serie di pacchetti che \textbf{vengono 
+frammentati, ma non possono essere ricostruiti:} si inviano frame che dicono di avere 
+posizioni di partenza e lunghezze in byte che si sovrappongono tra loro; come ad esempio:
+\begin{itemize}
+    \item \textit{posizione 0 e lunghezza 60 btye}
+    \item \textit{posizione 30 e lunghezza 90 btye}
+    \item \textit{posizione 40 e lunghezza 120 btye}
+\end{itemize}
+
+\noindent In questo caso viene sollevato un errore che manda in crash il sistema opeativo 
+del server (DoS).
+
+\noindent La \textbf{contromisura} consiste nello scartare tutti i frame che si riferiscono 
+a pacchetti IP che risultano malformati.
+
+\newpage
+\subsection{Ping of Death}
+Quando si usa il comando \textit{ping} di ICMP, bisogna rispettare una dimensione massima 
+di $2^16$, ovvero la dimensione massima di un pacchetto.
+
+\noindent L'attaccante può mandare un insieme di frame riferiti ad un pacchetto IP, la 
+cui ricomposizione supera il limite imposto; in questo caso si verificherà un buffer overflow
+che manderà in crash il sistema operativo.
+
+\noindent Come nel caso precedente, la \textbf{contromisura} consiste nel controllare 
+i frame e scartare quelli non validi.
+
+\section{DNS amplification DDoS}
+L'attacco consiste nell'\textbf{inviare una query DNS con IP mittente spoofato}, in 
+modo che il DNS resolver risponda alla vittima. Il DoS è dato dal fatto che è possibile 
+ricavare una query DNS che generi una risposta fino a 50 volte maggiore
+
+$\rightarrow$ la vittima non è in grado di gestire il traffico della risposta (DoS)
+
+\noindent Come in tutti gli attacchi di \textit{amplificazione}, la banda richiesta 
+dall'attaccante è molto inferiore a quella con cui viene travolta la vittima.
 
 
