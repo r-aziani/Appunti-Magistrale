@@ -127,3 +127,17 @@
 \contentsline {subsection}{\numberline {10.4.2}Man In The Middle TLS \textit {downgrade}}{59}{subsection.10.4.2}%
 \contentsline {section}{\numberline {10.5}HTTPS}{59}{section.10.5}%
 \contentsline {section}{\numberline {10.6}Certificati}{59}{section.10.6}%
+\contentsline {chapter}{\numberline {11}Firewall}{60}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Introduzione ai firewall}{60}{section.11.1}%
+\contentsline {subsubsection}{Qualche nozione \dots }{60}{section*.11}%
+\contentsline {subsection}{\numberline {11.1.1}Considerazioni architetturali}{62}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}Protezione di rete}{62}{subsection.11.1.2}%
+\contentsline {section}{\numberline {11.2}Packet Filtering}{63}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Static Stateless Packet Filtering (SPF)}{63}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Applicazioni di SPF}{63}{subsection.11.2.2}%
+\contentsline {subsubsection}{Connessioni TCP}{64}{section*.12}%
+\contentsline {subsection}{\numberline {11.2.3}Efficacia}{64}{subsection.11.2.3}%
+\contentsline {subsection}{\numberline {11.2.4}Stateful Filtering}{64}{subsection.11.2.4}%
+\contentsline {subsubsection}{Protocol inspection}{64}{section*.13}%
+\contentsline {subsection}{\numberline {11.2.5}Considerazioni sul packet filtering}{65}{subsection.11.2.5}%
+\contentsline {section}{\numberline {11.3}Access Control List}{65}{section.11.3}%
