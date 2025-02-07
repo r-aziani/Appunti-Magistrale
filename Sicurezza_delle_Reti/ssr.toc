@@ -141,3 +141,12 @@
 \contentsline {subsubsection}{Protocol inspection}{64}{section*.13}%
 \contentsline {subsection}{\numberline {11.2.5}Considerazioni sul packet filtering}{65}{subsection.11.2.5}%
 \contentsline {section}{\numberline {11.3}Access Control List}{65}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Standard ACL}{65}{subsection.11.3.1}%
+\contentsline {subsubsection}{Esempi}{66}{section*.14}%
+\contentsline {subsection}{\numberline {11.3.2}Extended ACL}{66}{subsection.11.3.2}%
+\contentsline {subsubsection}{Esempi}{67}{section*.15}%
+\contentsline {subsection}{\numberline {11.3.3}ACL e interfacce}{67}{subsection.11.3.3}%
+\contentsline {section}{\numberline {11.4}ACL e protocolli applicativi}{68}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Esempio}{68}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Formalismo}{68}{subsection.11.4.2}%
+\contentsline {subsection}{\numberline {11.4.3}Esempio con Telnet}{69}{subsection.11.4.3}%

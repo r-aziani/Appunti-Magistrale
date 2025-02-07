@@ -189,12 +189,195 @@ il contenuto dei pacchetti}, per cui non può bloccare virus; inoltre, ha proble
 con i protocolli che allocano le porte in maniera dinamica come FTP.
 
 \section{Access Control List}
+Le ACL definiscono regole per il filtraggio statico dei pacchetti in transito. La semantica 
+è ACCEPT/DENY, ed utilizzano un criterio \textit{top-down} di filtraggio:
+\begin{itemize}
+    \item la prima regola che viene verificata produce la decisione sul pacchetto
+    \item il test del pacchetto continua fino a che una regola corrisponde alle caratteristiche 
+    del pacchetto oppure fino a che la lista di regole termina 
+    \item di norma esiste una regola di default
+    \begin{itemize}
+        \item Default Permit 
+        \item Default Deny 
+    \end{itemize}
+\end{itemize}
+
+\noindent Le ACL lavorano al livello \textit{network} della pila ISO/OSI.
+
+\subsection{Standard ACL}
+Le \textit{standard ACL} sono numerate tra 0 e 99, filtrano \textbf{solo} gli 
+indirizzi \textbf{IP sorgente}.
+
+\begin{center}
+    \texttt{Access-list numero azione sorgente [wild card] | any}
+\end{center}
+
+\begin{itemize}
+    \item Numero: da 0 a 99 
+    \item Azione: \textit{permit} o \textit{deny}
+    \item Sorgente: indirizzo IP sorgente 
+    \item Wild card: determina la parte dell'indirizzo IP da verificare e quella di ignorare;
+    è simile alla netmask, ma ha una semantica dei valori invertita:
+    \begin{itemize}
+        \item valore binario 1: bit dell'indirizzo IP non deve essere verificato
+        \item valore binario 0: bit dell'indirizzo IP deve essere verificato 
+    \end{itemize}
+    \item Any: qualunque valore
+\end{itemize}
+
+\subsubsection{Esempi}
+\begin{itemize}
+    \item \texttt{Access-list 17 permit host 192.168.1.100}
+    \begin{itemize}
+        \item la keyword \texttt{host} si usa quando si indica un indirizzo IP unico; analogo 
+        ad usare wildcard 0.0.0.0
+    \end{itemize}
+    \item \texttt{Access-list 17 deny 192.168.1.0 0.0.0.255}
+    \item \texttt{Access-list 17 permit any}
+    \begin{itemize}
+        \item la regola di default viene fatta usando \texttt{permit any} oppure \texttt{deny any}
+    \end{itemize}
+\end{itemize}
+
+\noindent Le ACL possono essere categorizzate in due:
+\begin{itemize}
+    \item \textbf{Ingress firewall:} controllo sui collegamenti \textit{incoming}, tipicamente verso 
+    servizi offerti all'esterno
+    \item \textbf{Egress firewall:} controllo sui collegamenti \textit{outgoing}; controllo sull'attività del personale
+\end{itemize}
+
+\noindent Questa distinzione è facile per i servizi orientati al canale (TCP), più difficile 
+per quelli basati su datagrammi (UDP, ICMP).
+
+\noindent Secondo lo standard RFC 2827, ogni pacchetto che abbandona la rete dovrebbe avere come IP sorgente 
+un indirizzo della rete locale, mentre ogni pacchetto in entrata non dovrebbe mai avere come sorgente 
+un IP nella rete locale; un esempio di ACL egress può essere:
+
+\begin{lstlisting}
+    Access-list 14 permit <rete interna> <wiild card>
+    Access-list 14 deny any
+\end{lstlisting}
+
+\subsection{Extended ACL}
+\begin{center}
+    \texttt{Access-list numero azione tipo sorgente [wild card] opzioni
+    destinazione [wild card] [log]}
+\end{center}
+
+\begin{itemize}
+    \item Numero: da 100 a 199 
+    \item Azione: Permit/Deny
+    \item Tipo: IP, UDP o TCP 
+    \item Sorgente: indirizzo IP sorgente 
+    \item Opzioni: porte TCP/UDP, Tipo/Codice ICMP, operatori speciali:
+    \begin{itemize}
+        \item eq: \textit{equal} 
+        \item neq: \textit{not equal}
+        \item gt: \textit{greater than} 
+        \item lt: \textit{less than}
+    \end{itemize}
+    \item Log: scrive un messaggio in un log per ogni pacchetto verificato da una regola
+\end{itemize}
+
+\subsubsection{Esempi}
+\begin{itemize}
+    \item \texttt{Access-list 101 permit tcp 192.168.2.0 0.0.0.255 any eq 23}
+    \item \texttt{Access-list 101 permit tcp 192.168.2.0 0.0.0.255 any eq ftp}
+\end{itemize}
+
+\noindent Come si può vedere, gli operatori logici possono essere usati sia con numeri di 
+porta che con keyword. 
+
+\noindent È possibile usare \texttt{eq established} per accettare unicamente delle 
+connessioni TCP già stabilite.
+
+\subsection{ACL e interfacce}
+Una volta definita una ACL, è necessario \textbf{associarla ad un'interfaccia}
+del dispositivo di rete:
+
+\begin{center}
+    \texttt{ip access-group accessListNumber \{in|out\}}
+\end{center}
+
+\begin{itemize}
+    \item accessListNumber: indica il numero dell'ACL che deve essere legata all'interfaccia 
+    \item in|out: specifica se l'ACL vada applicata al traffico in entrata o in uscita
+\end{itemize}
+
+\newpage
+\section{ACL e protocolli applicativi}
+
+\subsection{Esempio}
+Si vuole negare all'host B l'accesso al Server FTP e allo stesso tempo negare all'host C 
+qualsiasi accesso alla rete 172.16.3.0
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/11/images/esempio.png}
+\end{figure}
+
+\begin{lstlisting}
+    access-list 1 deny host 172.16.4.12 
+    access-list 1 permit any
+    interface ethernet 1 (E1)
+    ip access-group 1
+
+    access-list 101 deny tcp host 172.16.4.1 172.16.3.0 0.0.0.255 eq ftp 
+    access-list 101 permit ip 172.16.4.0 0.0.0.255 any 
+    interface ethernet 0 (E0)
+    ip access-group 101
+\end{lstlisting}
+
+\subsection{Formalismo}
+Una ACL Static Packet Filter è definita da una tabella come la seguente:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/11/images/tabella.png}
+\end{figure}
+
+\noindent È molto diffuso l'uso di variabili alle quali assegnare dei parametri, tipicamente indirizzi IP e sottoreti. L'utilizzo delle variabili 
+al posto dei valori permette di:
+\begin{itemize}
+    \item separare la definizione dei valori dalle definizione della politica del firewall
+    \item si possono modificare i valori senza modificare la politica stessa
+\end{itemize}
+
+\subsection{Esempio con Telnet}
+Vogliamo autorizzare solo connessioni Telnet dall'interno della rete aziendale verso 
+l'esterno (assegnato alla porta 23).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/11/images/telnet1.png}
+\end{figure}
+
+\noindent Filtrare il traffico solo sulle porte sorgente e destianzione può 
+portare ad una politica troppo permissiva. Ad esempio, la regola 
+
+\begin{center}
+    \texttt{IN any Internal TCP 23 >1023 Permit} 
+\end{center}
+
+\noindent permette connessioni generate da qualunque host esterno e dirette a qualunque host interno 
+aventi porta sorgente 23/TCP e porta destinataria >1023
+
+\noindent Sappiamo che i pacchetti provenienti dall'esterno della rete sono solo
+le risposte del server. Possiamo limitare la politica ai soli server utilizzati:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/11/images/telnet2.png}
+\end{figure}
+
+\noindent Usiamo ACK:
+\begin{itemize}
+    \item 1/0 quando IP sorgente stabilisce la connessione verso IP destinatario 
+    \item 1 quanod IP sorgente risponde all'IP destinatario
+\end{itemize}
 
 
-
-
-
-
-
+\noindent In generale, \textbf{la politica di un firewall deve essere la più stringente 
+possibile; è un errore definire una politica più \textit{lasca} dello stretto necessario}.
 
 
