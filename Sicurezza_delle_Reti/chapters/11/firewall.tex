@@ -249,15 +249,6 @@ indirizzi \textbf{IP sorgente}.
 \noindent Questa distinzione è facile per i servizi orientati al canale (TCP), più difficile 
 per quelli basati su datagrammi (UDP, ICMP).
 
-\noindent Secondo lo standard RFC 2827, ogni pacchetto che abbandona la rete dovrebbe avere come IP sorgente 
-un indirizzo della rete locale, mentre ogni pacchetto in entrata non dovrebbe mai avere come sorgente 
-un IP nella rete locale; un esempio di ACL egress può essere:
-
-\begin{lstlisting}
-    Access-list 14 permit <rete interna> <wiild card>
-    Access-list 14 deny any
-\end{lstlisting}
-
 \subsection{Extended ACL}
 \begin{center}
     \texttt{Access-list numero azione tipo sorgente [wild card] opzioni
@@ -304,7 +295,6 @@ del dispositivo di rete:
     \item in|out: specifica se l'ACL vada applicata al traffico in entrata o in uscita
 \end{itemize}
 
-\newpage
 \section{ACL e protocolli applicativi}
 
 \subsection{Esempio}
@@ -321,7 +311,6 @@ qualsiasi accesso alla rete 172.16.3.0
     access-list 1 permit any
     interface ethernet 1 (E1)
     ip access-group 1
-
     access-list 101 deny tcp host 172.16.4.1 172.16.3.0 0.0.0.255 eq ftp 
     access-list 101 permit ip 172.16.4.0 0.0.0.255 any 
     interface ethernet 0 (E0)
@@ -344,8 +333,8 @@ al posto dei valori permette di:
 \end{itemize}
 
 \subsection{Esempio con Telnet}
-Vogliamo autorizzare solo connessioni Telnet dall'interno della rete aziendale verso 
-l'esterno (assegnato alla porta 23).
+Vogliamo autorizzare solo connessioni Telnet (assegnato alla porta 23) dall'interno della rete aziendale verso 
+l'esterno.
 
 \begin{figure}[H]
     \centering
@@ -360,9 +349,9 @@ portare ad una politica troppo permissiva. Ad esempio, la regola
 \end{center}
 
 \noindent permette connessioni generate da qualunque host esterno e dirette a qualunque host interno 
-aventi porta sorgente 23/TCP e porta destinataria >1023
+aventi porta sorgente 23/TCP e porta destinataria $>1023$
 
-\noindent Sappiamo che i pacchetti provenienti dall'esterno della rete sono solo
+\newpage Sappiamo che i pacchetti provenienti dall'esterno della rete sono solo
 le risposte del server. Possiamo limitare la politica ai soli server utilizzati:
 
 \begin{figure}[H]
