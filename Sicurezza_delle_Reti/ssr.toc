@@ -150,3 +150,23 @@
 \contentsline {subsection}{\numberline {11.4.1}Esempio}{67}{subsection.11.4.1}%
 \contentsline {subsection}{\numberline {11.4.2}Formalismo}{68}{subsection.11.4.2}%
 \contentsline {subsection}{\numberline {11.4.3}Esempio con Telnet}{68}{subsection.11.4.3}%
+\contentsline {chapter}{\numberline {12}Firewall Avanzati}{70}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Packet Filtering Avanzati}{70}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}SMTP (Simple Mail Transfer Protocol)}{70}{subsection.12.1.1}%
+\contentsline {subsubsection}{I comandi}{70}{section*.16}%
+\contentsline {subsubsection}{Le fasi}{71}{section*.17}%
+\contentsline {subsubsection}{I codici di risposta}{72}{section*.18}%
+\contentsline {subsubsection}{Protezione}{72}{section*.19}%
+\contentsline {subsubsection}{Packet Filtering}{72}{section*.20}%
+\contentsline {subsection}{\numberline {12.1.2}FTP (File Transfer Protocol)}{73}{subsection.12.1.2}%
+\contentsline {subsubsection}{Le fasi}{73}{section*.21}%
+\contentsline {subsubsection}{Connessioni FTP}{73}{section*.22}%
+\contentsline {subsubsection}{Soluzione}{74}{section*.23}%
+\contentsline {subsection}{\numberline {12.1.3}Attacco RPC}{74}{subsection.12.1.3}%
+\contentsline {section}{\numberline {12.2}New Generation Packet Filtering}{75}{section.12.2}%
+\contentsline {subsubsection}{Dynamic Packet Filter}{75}{section*.24}%
+\contentsline {subsubsection}{Stateful Packet Filter}{75}{section*.25}%
+\contentsline {subsection}{\numberline {12.2.1}Vantaggi e Svantaggi del Dynamic Packet Filter}{75}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Connessioni TCP - stateful firewall}{75}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}UDP - stateful firewall}{76}{subsection.12.2.3}%
+\contentsline {subsection}{\numberline {12.2.4}Deep Packet Inspection}{76}{subsection.12.2.4}%
