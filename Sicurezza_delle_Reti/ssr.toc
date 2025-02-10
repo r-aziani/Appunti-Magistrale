@@ -170,3 +170,22 @@
 \contentsline {subsection}{\numberline {12.2.2}Connessioni TCP - stateful firewall}{75}{subsection.12.2.2}%
 \contentsline {subsection}{\numberline {12.2.3}UDP - stateful firewall}{76}{subsection.12.2.3}%
 \contentsline {subsection}{\numberline {12.2.4}Deep Packet Inspection}{76}{subsection.12.2.4}%
+\contentsline {section}{\numberline {12.3}Proxy}{76}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Reverse proxy}{77}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Proxy firewall: application-level gateway}{77}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}Proxy firewall: circuit-level gateway}{78}{subsection.12.3.3}%
+\contentsline {subsection}{\numberline {12.3.4}Bastion host}{78}{subsection.12.3.4}%
+\contentsline {subsection}{\numberline {12.3.5}Proxy firewall: conclusioni}{78}{subsection.12.3.5}%
+\contentsline {section}{\numberline {12.4}Architetture e scenari}{79}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}Screened host firewall}{79}{subsection.12.4.1}%
+\contentsline {subsubsection}{Single-homed}{79}{section*.26}%
+\contentsline {subsubsection}{Dual-homed}{79}{section*.27}%
+\contentsline {subsection}{\numberline {12.4.2}Screened subnet firewall}{80}{subsection.12.4.2}%
+\contentsline {subsection}{\numberline {12.4.3}FTP bounce attack}{80}{subsection.12.4.3}%
+\contentsline {subsubsection}{Attacco}{80}{section*.28}%
+\contentsline {subsection}{\numberline {12.4.4}\textit {Best practices}}{81}{subsection.12.4.4}%
+\contentsline {section}{\numberline {12.5}Netfilter e IPTables}{81}{section.12.5}%
+\contentsline {subsubsection}{Funzionamento}{81}{section*.29}%
+\contentsline {subsubsection}{Tabelle}{82}{section*.30}%
+\contentsline {subsubsection}{Targets}{83}{section*.31}%
+\contentsline {subsection}{\numberline {12.5.1}IPTables}{83}{subsection.12.5.1}%

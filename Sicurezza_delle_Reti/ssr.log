@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  8 FEB 2025 15:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  10 FEB 2025 15:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,7 +569,7 @@ Capitolo 1.
 
  (./chapters/2/standard_concetti_base.tex
 Capitolo 2.
-<chapters/2/images/rmm.png, id=778, 329.23pt x 166.6225pt>
+<chapters/2/images/rmm.png, id=844, 329.23pt x 166.6225pt>
 File: chapters/2/images/rmm.png Graphic file (type png)
 <use chapters/2/images/rmm.png>
 Package pdftex.def Info: chapters/2/images/rmm.png  used on input line 22.
@@ -584,7 +584,7 @@ Package pdftex.def Info: chapters/2/images/rmm.png  used on input line 22.
 
  (./chapters/3/access_control.tex
 Capitolo 3.
-<chapters/3/images/ac.png, id=797, 540.0175pt x 359.3425pt>
+<chapters/3/images/ac.png, id=863, 540.0175pt x 359.3425pt>
 File: chapters/3/images/ac.png Graphic file (type png)
 <use chapters/3/images/ac.png>
 Package pdftex.def Info: chapters/3/images/ac.png  used on input line 20.
@@ -595,30 +595,30 @@ Package pdftex.def Info: chapters/3/images/ac.png  used on input line 20.
 
 
  <./chapters/3/images/ac.png>] [12]
-<chapters/3/images/dac-matrix.png, id=808, 228.855pt x 145.54375pt>
+<chapters/3/images/dac-matrix.png, id=874, 228.855pt x 145.54375pt>
 File: chapters/3/images/dac-matrix.png Graphic file (type png)
 <use chapters/3/images/dac-matrix.png>
 Package pdftex.def Info: chapters/3/images/dac-matrix.png  used on input line 84.
 (pdftex.def)             Requested size: 276.00105pt x 175.53326pt.
-<chapters/3/images/dac-list.png, id=809, 632.3625pt x 391.4625pt>
+<chapters/3/images/dac-list.png, id=875, 632.3625pt x 391.4625pt>
 File: chapters/3/images/dac-list.png Graphic file (type png)
 <use chapters/3/images/dac-list.png>
 Package pdftex.def Info: chapters/3/images/dac-list.png  used on input line 94.
 (pdftex.def)             Requested size: 345.0pt x 213.5728pt.
  [13 <./chapters/3/images/dac-matrix.png>] [14 <./chapters/3/images/dac-list.png>]
-<chapters/3/images/rbac.png, id=822, 247.92625pt x 270.00874pt>
+<chapters/3/images/rbac.png, id=887, 247.92625pt x 270.00874pt>
 File: chapters/3/images/rbac.png Graphic file (type png)
 <use chapters/3/images/rbac.png>
 Package pdftex.def Info: chapters/3/images/rbac.png  used on input line 149.
 (pdftex.def)             Requested size: 241.49895pt x 263.01231pt.
  [15 <./chapters/3/images/rbac.png>]
-<chapters/3/images/unix-permessi.png, id=828, 406.51875pt x 188.705pt>
+<chapters/3/images/unix-permessi.png, id=893, 406.51875pt x 188.705pt>
 File: chapters/3/images/unix-permessi.png Graphic file (type png)
 <use chapters/3/images/unix-permessi.png>
 Package pdftex.def Info: chapters/3/images/unix-permessi.png  used on input line 170.
 (pdftex.def)             Requested size: 241.49895pt x 112.10378pt.
  [16 <./chapters/3/images/unix-permessi.png>] [17]
-<chapters/3/images/linux-accesso-file.png, id=838, 823.075pt x 251.94125pt>
+<chapters/3/images/linux-accesso-file.png, id=903, 823.075pt x 251.94125pt>
 File: chapters/3/images/linux-accesso-file.png Graphic file (type png)
 <use chapters/3/images/linux-accesso-file.png>
 Package pdftex.def Info: chapters/3/images/linux-accesso-file.png  used on input line 243.
@@ -638,12 +638,12 @@ Capitolo 4.
 
  (./chapters/5/malware.tex
 Capitolo 5.
-<chapters/5/images/classification1.png, id=859, 924.45375pt x 362.35374pt>
+<chapters/5/images/classification1.png, id=924, 924.45375pt x 362.35374pt>
 File: chapters/5/images/classification1.png Graphic file (type png)
 <use chapters/5/images/classification1.png>
 Package pdftex.def Info: chapters/5/images/classification1.png  used on input line 18.
 (pdftex.def)             Requested size: 345.0pt x 135.22989pt.
-<chapters/5/images/classification2.png, id=860, 943.525pt x 381.425pt>
+<chapters/5/images/classification2.png, id=925, 943.525pt x 381.425pt>
 File: chapters/5/images/classification2.png Graphic file (type png)
 <use chapters/5/images/classification2.png>
 Package pdftex.def Info: chapters/5/images/classification2.png  used on input line 23.
@@ -654,7 +654,7 @@ Package pdftex.def Info: chapters/5/images/classification2.png  used on input li
 
 
  <./chapters/5/images/classification1.png>]
-<chapters/5/images/classification3.png, id=866, 687.56876pt x 409.53pt>
+<chapters/5/images/classification3.png, id=931, 687.56876pt x 409.53pt>
 File: chapters/5/images/classification3.png Graphic file (type png)
 <use chapters/5/images/classification3.png>
 Package pdftex.def Info: chapters/5/images/classification3.png  used on input line 28.
@@ -677,7 +677,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 
  (./chapters/7/iso-osi.tex
 Capitolo 7.
-<chapters/7/images/osi-stack.png, id=912, 649.42625pt x 324.21124pt>
+<chapters/7/images/osi-stack.png, id=977, 649.42625pt x 324.21124pt>
 File: chapters/7/images/osi-stack.png Graphic file (type png)
 <use chapters/7/images/osi-stack.png>
 Package pdftex.def Info: chapters/7/images/osi-stack.png  used on input line 26.
@@ -697,7 +697,7 @@ l.63         \item N
 
  (./chapters/8/ip-tcp.tex
 Capitolo 8.
-<chapters/8/images/trasporto.png, id=938, 400.49625pt x 262.9825pt>
+<chapters/8/images/trasporto.png, id=1003, 400.49625pt x 262.9825pt>
 File: chapters/8/images/trasporto.png Graphic file (type png)
 <use chapters/8/images/trasporto.png>
 Package pdftex.def Info: chapters/8/images/trasporto.png  used on input line 10.
@@ -708,30 +708,30 @@ Package pdftex.def Info: chapters/8/images/trasporto.png  used on input line 10.
 
 
  <./chapters/8/images/trasporto.png>]
-<chapters/8/images/tcp.png, id=944, 820.06375pt x 221.82875pt>
+<chapters/8/images/tcp.png, id=1009, 820.06375pt x 221.82875pt>
 File: chapters/8/images/tcp.png Graphic file (type png)
 <use chapters/8/images/tcp.png>
 Package pdftex.def Info: chapters/8/images/tcp.png  used on input line 29.
 (pdftex.def)             Requested size: 345.0pt x 93.3265pt.
-<chapters/8/images/tcp-handshake.png, id=945, 588.1975pt x 191.71625pt>
+<chapters/8/images/tcp-handshake.png, id=1010, 588.1975pt x 191.71625pt>
 File: chapters/8/images/tcp-handshake.png Graphic file (type png)
 <use chapters/8/images/tcp-handshake.png>
 Package pdftex.def Info: chapters/8/images/tcp-handshake.png  used on input line 52.
 (pdftex.def)             Requested size: 276.00105pt x 89.96037pt.
  [38 <./chapters/8/images/tcp.png>] [39 <./chapters/8/images/tcp-handshake.png>]
-<chapters/8/images/tcp-hijack.png, id=956, 365.365pt x 158.5925pt>
+<chapters/8/images/tcp-hijack.png, id=1021, 365.365pt x 158.5925pt>
 File: chapters/8/images/tcp-hijack.png Graphic file (type png)
 <use chapters/8/images/tcp-hijack.png>
 Package pdftex.def Info: chapters/8/images/tcp-hijack.png  used on input line 141.
 (pdftex.def)             Requested size: 276.00105pt x 119.80797pt.
  [40] [41 <./chapters/8/images/tcp-hijack.png>] [42] [43]
-<chapters/8/images/icmp.png, id=982, 348.30125pt x 340.27126pt>
+<chapters/8/images/icmp.png, id=1048, 348.30125pt x 340.27126pt>
 File: chapters/8/images/icmp.png Graphic file (type png)
 <use chapters/8/images/icmp.png>
 Package pdftex.def Info: chapters/8/images/icmp.png  used on input line 257.
 (pdftex.def)             Requested size: 207.0021pt x 202.22766pt.
  [44 <./chapters/8/images/icmp.png>]
-<chapters/8/images/ip.png, id=988, 427.5975pt x 315.1775pt>
+<chapters/8/images/ip.png, id=1054, 427.5975pt x 315.1775pt>
 File: chapters/8/images/ip.png Graphic file (type png)
 <use chapters/8/images/ip.png>
 Package pdftex.def Info: chapters/8/images/ip.png  used on input line 285.
@@ -741,7 +741,7 @@ Package pdftex.def Info: chapters/8/images/ip.png  used on input line 285.
 
  (./chapters/9/scanning.tex
 Capitolo 9.
-<chapters/9/images/intro.png, id=999, 588.1975pt x 162.6075pt>
+<chapters/9/images/intro.png, id=1065, 588.1975pt x 162.6075pt>
 File: chapters/9/images/intro.png Graphic file (type png)
 <use chapters/9/images/intro.png>
 Package pdftex.def Info: chapters/9/images/intro.png  used on input line 13.
@@ -752,12 +752,12 @@ Package pdftex.def Info: chapters/9/images/intro.png  used on input line 13.
 
 
  <./chapters/9/images/intro.png>]
-<chapters/9/images/tipi-scansioni.png, id=1005, 565.11125pt x 199.74625pt>
+<chapters/9/images/tipi-scansioni.png, id=1071, 565.11125pt x 199.74625pt>
 File: chapters/9/images/tipi-scansioni.png Graphic file (type png)
 <use chapters/9/images/tipi-scansioni.png>
 Package pdftex.def Info: chapters/9/images/tipi-scansioni.png  used on input line 44.
 (pdftex.def)             Requested size: 310.4979pt x 109.75105pt.
-<chapters/9/images/attivo-passivo.png, id=1006, 842.14626pt x 316.18124pt>
+<chapters/9/images/attivo-passivo.png, id=1072, 842.14626pt x 316.18124pt>
 File: chapters/9/images/attivo-passivo.png Graphic file (type png)
 <use chapters/9/images/attivo-passivo.png>
 Package pdftex.def Info: chapters/9/images/attivo-passivo.png  used on input line 67.
@@ -767,7 +767,7 @@ Package pdftex.def Info: chapters/9/images/attivo-passivo.png  used on input lin
 
  (./chapters/10/ssl.tex
 Capitolo 10.
-<chapters/10/images/intro.png, id=1033, 214.8025pt x 181.67876pt>
+<chapters/10/images/intro.png, id=1098, 214.8025pt x 181.67876pt>
 File: chapters/10/images/intro.png Graphic file (type png)
 <use chapters/10/images/intro.png>
 Package pdftex.def Info: chapters/10/images/intro.png  used on input line 10.
@@ -778,24 +778,24 @@ Package pdftex.def Info: chapters/10/images/intro.png  used on input line 10.
 
 
  <./chapters/10/images/intro.png>]
-<chapters/10/images/tls-basics.png, id=1039, 576.1525pt x 269.005pt>
+<chapters/10/images/tls-basics.png, id=1104, 576.1525pt x 269.005pt>
 File: chapters/10/images/tls-basics.png Graphic file (type png)
 <use chapters/10/images/tls-basics.png>
 Package pdftex.def Info: chapters/10/images/tls-basics.png  used on input line 36.
 (pdftex.def)             Requested size: 345.0pt x 161.08408pt.
  [54 <./chapters/10/images/tls-basics.png>]
-<chapters/10/images/hs1.png, id=1047, 568.1225pt x 345.29pt>
+<chapters/10/images/hs1.png, id=1112, 568.1225pt x 345.29pt>
 File: chapters/10/images/hs1.png Graphic file (type png)
 <use chapters/10/images/hs1.png>
 Package pdftex.def Info: chapters/10/images/hs1.png  used on input line 96.
 (pdftex.def)             Requested size: 345.0pt x 209.68875pt.
-<chapters/10/images/hs2.png, id=1048, 718.685pt x 378.41376pt>
+<chapters/10/images/hs2.png, id=1113, 718.685pt x 378.41376pt>
 File: chapters/10/images/hs2.png Graphic file (type png)
 <use chapters/10/images/hs2.png>
 Package pdftex.def Info: chapters/10/images/hs2.png  used on input line 100.
 (pdftex.def)             Requested size: 345.0pt x 181.65962pt.
  [55 <./chapters/10/images/hs1.png>] [56 <./chapters/10/images/hs2.png>]
-<chapters/10/images/tls-record.png, id=1065, 876.27374pt x 178.6675pt>
+<chapters/10/images/tls-record.png, id=1130, 876.27374pt x 178.6675pt>
 File: chapters/10/images/tls-record.png Graphic file (type png)
 <use chapters/10/images/tls-record.png>
 Package pdftex.def Info: chapters/10/images/tls-record.png  used on input line 144.
@@ -805,7 +805,7 @@ Package pdftex.def Info: chapters/10/images/tls-record.png  used on input line 1
 
  (./chapters/11/firewall.tex
 Capitolo 11.
-<chapters/11/images/controlli.png, id=1081, 730.73pt x 450.68375pt>
+<chapters/11/images/controlli.png, id=1147, 730.73pt x 450.68375pt>
 File: chapters/11/images/controlli.png Graphic file (type png)
 <use chapters/11/images/controlli.png>
 Package pdftex.def Info: chapters/11/images/controlli.png  used on input line 40.
@@ -816,24 +816,24 @@ Package pdftex.def Info: chapters/11/images/controlli.png  used on input line 40
 
 
 ]
-<chapters/11/images/personal-fw.png, id=1089, 548.0475pt x 240.9pt>
+<chapters/11/images/personal-fw.png, id=1155, 548.0475pt x 240.9pt>
 File: chapters/11/images/personal-fw.png Graphic file (type png)
 <use chapters/11/images/personal-fw.png>
 Package pdftex.def Info: chapters/11/images/personal-fw.png  used on input line 49.
 (pdftex.def)             Requested size: 207.0021pt x 90.99156pt.
-<chapters/11/images/fw.png, id=1090, 617.30624pt x 320.19624pt>
+<chapters/11/images/fw.png, id=1156, 617.30624pt x 320.19624pt>
 File: chapters/11/images/fw.png Graphic file (type png)
 <use chapters/11/images/fw.png>
 Package pdftex.def Info: chapters/11/images/fw.png  used on input line 57.
 (pdftex.def)             Requested size: 207.0021pt x 107.37022pt.
  [61 <./chapters/11/images/controlli.png> <./chapters/11/images/personal-fw.png> <./chapters/11/images/fw.png>]
-<chapters/11/images/zone.png, id=1100, 889.3225pt x 549.05125pt>
+<chapters/11/images/zone.png, id=1166, 889.3225pt x 549.05125pt>
 File: chapters/11/images/zone.png Graphic file (type png)
 <use chapters/11/images/zone.png>
 Package pdftex.def Info: chapters/11/images/zone.png  used on input line 78.
 (pdftex.def)             Requested size: 345.0pt x 212.99811pt.
  [62 <./chapters/11/images/zone.png>]
-<chapters/11/images/spt-tcp.png, id=1106, 775.89874pt x 180.675pt>
+<chapters/11/images/spt-tcp.png, id=1172, 775.89874pt x 180.675pt>
 File: chapters/11/images/spt-tcp.png Graphic file (type png)
 <use chapters/11/images/spt-tcp.png>
 Package pdftex.def Info: chapters/11/images/spt-tcp.png  used on input line 150.
@@ -847,24 +847,24 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 290.
 
-<chapters/11/images/esempio.png, id=1129, 753.81625pt x 316.18124pt>
+<chapters/11/images/esempio.png, id=1194, 753.81625pt x 316.18124pt>
 File: chapters/11/images/esempio.png Graphic file (type png)
 <use chapters/11/images/esempio.png>
 Package pdftex.def Info: chapters/11/images/esempio.png  used on input line 306.
 (pdftex.def)             Requested size: 345.0pt x 144.70697pt.
 [67 <./chapters/11/images/esempio.png>]
-<chapters/11/images/tabella.png, id=1142, 945.5325pt x 190.7125pt>
+<chapters/11/images/tabella.png, id=1207, 945.5325pt x 190.7125pt>
 File: chapters/11/images/tabella.png Graphic file (type png)
 <use chapters/11/images/tabella.png>
 Package pdftex.def Info: chapters/11/images/tabella.png  used on input line 325.
 (pdftex.def)             Requested size: 345.0pt x 69.58765pt.
-<chapters/11/images/telnet1.png, id=1143, 950.55125pt x 241.90375pt>
+<chapters/11/images/telnet1.png, id=1208, 950.55125pt x 241.90375pt>
 File: chapters/11/images/telnet1.png Graphic file (type png)
 <use chapters/11/images/telnet1.png>
 Package pdftex.def Info: chapters/11/images/telnet1.png  used on input line 341.
 (pdftex.def)             Requested size: 345.0pt x 87.79767pt.
  [68 <./chapters/11/images/tabella.png> <./chapters/11/images/telnet1.png>]
-<chapters/11/images/telnet2.png, id=1154, 986.68625pt x 205.76875pt>
+<chapters/11/images/telnet2.png, id=1219, 986.68625pt x 205.76875pt>
 File: chapters/11/images/telnet2.png Graphic file (type png)
 <use chapters/11/images/telnet2.png>
 Package pdftex.def Info: chapters/11/images/telnet2.png  used on input line 359.
@@ -880,23 +880,57 @@ Capitolo 12.
 
 
 ] [71]
-<chapters/12/images/smtp.png, id=1176, 1023.825pt x 271.0125pt>
+<chapters/12/images/smtp.png, id=1241, 1023.825pt x 271.0125pt>
 File: chapters/12/images/smtp.png Graphic file (type png)
 <use chapters/12/images/smtp.png>
 Package pdftex.def Info: chapters/12/images/smtp.png  used on input line 103.
 (pdftex.def)             Requested size: 345.0pt x 91.32423pt.
  [72] [73 <./chapters/12/images/smtp.png>]
-<chapters/12/images/ftp1.png, id=1196, 1020.81375pt x 274.02374pt>
+<chapters/12/images/ftp1.png, id=1262, 1020.81375pt x 274.02374pt>
 File: chapters/12/images/ftp1.png Graphic file (type png)
 <use chapters/12/images/ftp1.png>
 Package pdftex.def Info: chapters/12/images/ftp1.png  used on input line 158.
 (pdftex.def)             Requested size: 345.0pt x 92.61073pt.
-<chapters/12/images/ftp2.png, id=1197, 1026.83624pt x 277.035pt>
+<chapters/12/images/ftp2.png, id=1263, 1026.83624pt x 277.035pt>
 File: chapters/12/images/ftp2.png Graphic file (type png)
 <use chapters/12/images/ftp2.png>
 Package pdftex.def Info: chapters/12/images/ftp2.png  used on input line 174.
 (pdftex.def)             Requested size: 345.0pt x 93.07889pt.
- [74 <./chapters/12/images/ftp1.png> <./chapters/12/images/ftp2.png>] [75]) [76] (./ssr.aux (./chapters/1/intro.aux) (./chapters/2/standard_concetti_base.aux) (./chapters/3/access_control.aux) (./chapters/4/policy.aux) (./chapters/5/malware.aux) (./chapters/6/auth.aux) (./chapters/7/iso-osi.aux) (./chapters/8/ip-tcp.aux) (./chapters/9/scanning.aux) (./chapters/10/ssl.aux) (./chapters/11/firewall.aux) (./chapters/12/fw_avanzati.aux))
+ [74 <./chapters/12/images/ftp1.png> <./chapters/12/images/ftp2.png>] [75]
+<chapters/12/images/proxy.png, id=1277, 767.86874pt x 530.98375pt>
+File: chapters/12/images/proxy.png Graphic file (type png)
+<use chapters/12/images/proxy.png>
+Package pdftex.def Info: chapters/12/images/proxy.png  used on input line 267.
+(pdftex.def)             Requested size: 276.00105pt x 190.85422pt.
+<chapters/12/images/reverse-proxy.png, id=1278, 1316.92pt x 611.28375pt>
+File: chapters/12/images/reverse-proxy.png Graphic file (type png)
+<use chapters/12/images/reverse-proxy.png>
+Package pdftex.def Info: chapters/12/images/reverse-proxy.png  used on input line 277.
+(pdftex.def)             Requested size: 310.4979pt x 144.11807pt.
+ [76 <./chapters/12/images/proxy.png>] [77 <./chapters/12/images/reverse-proxy.png>]
+<chapters/12/images/single-homed.png, id=1289, 999.735pt x 383.4325pt>
+File: chapters/12/images/single-homed.png Graphic file (type png)
+<use chapters/12/images/single-homed.png>
+Package pdftex.def Info: chapters/12/images/single-homed.png  used on input line 369.
+(pdftex.def)             Requested size: 345.0pt x 132.31946pt.
+ [78]
+<chapters/12/images/dual-homed.png, id=1298, 999.735pt x 383.4325pt>
+File: chapters/12/images/dual-homed.png Graphic file (type png)
+<use chapters/12/images/dual-homed.png>
+Package pdftex.def Info: chapters/12/images/dual-homed.png  used on input line 387.
+(pdftex.def)             Requested size: 345.0pt x 132.31946pt.
+<chapters/12/images/subnet-firewall.png, id=1299, 1046.91125pt x 435.6275pt>
+File: chapters/12/images/subnet-firewall.png Graphic file (type png)
+<use chapters/12/images/subnet-firewall.png>
+Package pdftex.def Info: chapters/12/images/subnet-firewall.png  used on input line 397.
+(pdftex.def)             Requested size: 345.0pt x 143.55145pt.
+ [79 <./chapters/12/images/single-homed.png> <./chapters/12/images/dual-homed.png>]
+<chapters/12/images/ftp-bounce.png, id=1308, 880.28876pt x 235.88126pt>
+File: chapters/12/images/ftp-bounce.png Graphic file (type png)
+<use chapters/12/images/ftp-bounce.png>
+Package pdftex.def Info: chapters/12/images/ftp-bounce.png  used on input line 429.
+(pdftex.def)             Requested size: 345.0pt x 92.44322pt.
+ [80 <./chapters/12/images/subnet-firewall.png> <./chapters/12/images/ftp-bounce.png>] [81] [82]) [83] (./ssr.aux (./chapters/1/intro.aux) (./chapters/2/standard_concetti_base.aux) (./chapters/3/access_control.aux) (./chapters/4/policy.aux) (./chapters/5/malware.aux) (./chapters/6/auth.aux) (./chapters/7/iso-osi.aux) (./chapters/8/ip-tcp.aux) (./chapters/9/scanning.aux) (./chapters/10/ssl.aux) (./chapters/11/firewall.aux) (./chapters/12/fw_avanzati.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -906,21 +940,21 @@ L3 programming layer <2024-01-22>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `ssr.out' has not changed.
-(rerunfilecheck)             Checksum: F266905917DED6B06E0F9B58A89DAD15;23684.
+(rerunfilecheck)             Checksum: 1FBE60E20901522691931C7794F030AF;25881.
  ) 
 Here is how much of TeX's memory you used:
- 23532 strings out of 474222
- 435283 string characters out of 5748733
+ 23618 strings out of 474222
+ 437580 string characters out of 5748733
  1954975 words of memory out of 5000000
- 45056 multiletter control sequences out of 15000+600000
+ 45111 multiletter control sequences out of 15000+600000
  567202 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,463b,1922s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on ssr.pdf (77 pages, 1499960 bytes).
+Output written on ssr.pdf (84 pages, 1834279 bytes).
 PDF statistics:
- 1330 PDF objects out of 1440 (max. 8388607)
- 1143 compressed objects within 12 object streams
- 287 named destinations out of 1000 (max. 500000)
- 1366 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1454 PDF objects out of 1728 (max. 8388607)
+ 1247 compressed objects within 13 object streams
+ 318 named destinations out of 1000 (max. 500000)
+ 1500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

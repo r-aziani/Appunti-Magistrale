@@ -257,4 +257,284 @@ esempio, le richieste che rispettano il protocollo ma sono tipicamente usate per
 \end{itemize}
 
 
+\section{Proxy}
+Una tecnica di proxy serve per introdurre un componente che media le comunicazioni 
+tra altri due componenti; \textbf{disaccoppia la comunicazione tra due componenti 
+rendendola indiretta}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapters/12/images/proxy.png}
+\end{figure}
+
+\subsection{Reverse proxy}
+Garantiscono l'accesso da utenti esterni a risorse interne; ad esempio, 
+un server HTTP che fa solo da front-end e poi passa le richieste 
+al vero server.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapters/12/images/reverse-proxy.png}
+\end{figure}
+
+\subsection{Proxy firewall: application-level gateway}
+È composto da una serie di proxy che esaminano il contenuto dei pacchetti 
+a livello applicativo.
+\begin{itemize}
+    \item Implementa funzioni di autenticazione 
+    \item Può mascherare/rinumerare gli indirizzi IP interni 
+    \item Si richiede uno specifico proxy per ogni applicazione
+\end{itemize}
+
+\noindent $\rightarrow$ ne segue che:
+\begin{itemize}
+    \item \textbf{\textcolor{darkgreen}{Vantaggi:}}
+    \begin{itemize}
+        \item non permette connessioni dirette tra esterno ed interno 
+        \item supporta autenticazione
+        \item analizza i comandi a livello applicativo 
+        \item mantiene un log del traffico 
+        \item analisi migliore del traffico applicativo rispetto a firewall stateful 
+    \end{itemize}
+    \item \textcolor{red}{\textbf{Svantaggi:}}
+    \begin{itemize}
+        \item introduce latenza, peggiora le performance
+        \item limitazioni in termini di supporto
+        \item vulnerabilità del firewall maggiormente esposte
+    \end{itemize}
+\end{itemize}
+
+\subsection{Proxy firewall: circuit-level gateway}
+È un proxy \textit{"application-aware"}; crea un circuito tra client e server 
+a livello di trasporto:
+\begin{itemize}
+    \item non ha nessuna comprensione dei dati in transito 
+    \item guarda gli header
+\end{itemize}
+
+\noindent Le fasi sono:
+\begin{enumerate}
+    \item il client crea una connessione TCP verso il circuit-level gateway e chiede 
+    di stabilirne un'altra verso il verso server target 
+    \item il gateway può controllare l'IP e autorizzare il client 
+    \item il gateway contatta il server target e rigira il traffico e le richieste del client
+\end{enumerate}
+
+\noindent $\rightarrow$ ne segue che:
+\begin{itemize}
+    \item \textcolor{darkgreen}{\textbf{Vantaggi:}}
+    \begin{itemize}
+        \item rompe il modello client/server per la durata della connessione 
+        \begin{itemize}
+            \item server più protetti 
+            \item isola da attacchi che riguardano handshake TCP 
+            \item isola da attacchi che riguardano frammentazione IP 
+            \item può autenticare il client 
+        \end{itemize}
+    \end{itemize}
+    \item \textcolor{red}{\textbf{Svantaggi:}}
+    \begin{itemize}
+        \item molte limitazioni proprie del packet filter rimangono
+    \end{itemize}
+\end{itemize}
+
+\subsection{Bastion host}
+Il bastion host è un host critico per la sicurezza e costituisce la piattaforma per i gateway 
+a livello di applicazione e circuito; si pone dunque tra la connessione pubblica 
+e quella privata.
+
+\noindent Le caratteristiche che dovrebbe avere sono:
+\begin{itemize}
+    \item un sistema operativo sicuro 
+    \item avere solo i servizi proxy strettamente necessari 
+    \item servizi di autenticazione 
+    \item sistemi di logging e auditing
+\end{itemize}
+
+\subsection{Proxy firewall: conclusioni}
+\begin{itemize}
+    \item può essere utilizzato per analizzare i dati delle applicazioni perché
+    opera a livello applicativo 
+    \item performance potenzialmente molto critiche 
+    \item analisi migliore del traffico applicativo rispetto ad uno stateful firewall
+\end{itemize}
+
+\section{Architetture e scenari}
+\subsection{Screened host firewall}
+
+\subsubsection{Single-homed}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/12/images/single-homed.png}
+\end{figure}
+
+\begin{itemize}
+    \item il packet filter fa passare i pacchetti provenienti dall'esterno e 
+    diretti al bastion host (agisce da proxy)
+    \item il packet filter può far passare i pacchetti provenienti dall'esterno e 
+    diretti ad un server che non ha un livello di sicurezza elevato (es. server web)
+    \item il packet filter fa passare i pacchetti provenienti dal bastion host e diretti verso l'esterno
+    
+    \item $\rightarrow$ il traffico viene analizzato due volte; se il packet filter viene compromesso 
+    il bastion host sarebbe a difesa
+\end{itemize}
+
+\subsubsection{Dual-homed}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/12/images/dual-homed.png}
+\end{figure}
+
+\noindent Previene i problemi causati dalla compromissione del packet filter 
+perché un pacchetto deve "fisicamente" attraversare il bastion host
+
+\subsection{Screened subnet firewall}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/12/images/subnet-firewall.png}
+\end{figure}
+
+È l'architettura più sicura tra quelle mostrate; la DMZ è accessibile 
+sia dalla rete interna che esterna, ma il traffico deve obbligatoriamente 
+passare per i packet filter.
+
+\subsection{FTP bounce attack}
+Il comando \texttt{PORT} di FTP ha la seguente sintassi:
+\begin{center}
+    \texttt{PORT h1, h2, h3, h4, p1, p2} dove:
+    \begin{itemize}
+        \item \texttt{h1, h2, h3, h4} rapprsentano gli ottetti dell'IP del server FTP 
+        \item $(256 \cdot p1 + p2)$ restituisce la porta sulla quale il client riceverà al connessione dal server
+    \end{itemize}
+\end{center}
+
+\noindent Ad esempio, \texttt{PORT 159, 149, 10, 5, 4 ,1}
+
+$\rightarrow$ IP: 159.149.10.5
+
+$\rightarrow$ Porta: 1025
+
+\subsubsection{Attacco}
+\noindent Lo scenario dell'attacco è il seguente:
+\begin{itemize}
+    \item sono ammesse connessioni dall'esterno verso l'FTP server 
+    \item il Telnet server è accessibile solo dall'interno
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/12/images/ftp-bounce.png}
+\end{figure}
+
+
+\begin{enumerate}
+    \item l'attaccante si connette all'FTP server, mandando il comando:
+    \begin{center}
+        \texttt{PORT 159, 149, 10, 8, 0, 23}
+    \end{center}
+    con il quale si impone all'FTP server che il successivo trasferimento di file dovrà
+    essere fatto verso il Telnet server (porta TCP)
+    \item invia il comando \texttt{RETR}; questo causa l'apertura di una connessione 
+    da FTP server a Telnet server 
+\end{enumerate}
+
+$\rightarrow$ la protezione perimetrale è stata \textit{bypassata}, è possibile 
+far eseguire comandi
+
+\noindent Questo attacco è risolvibile con uno \textit{stateful firewall}, o con 
+un FTP proxy che potrebbe riconoscere l'uso improprio del protocollo (in realtà è stato 
+risolto con un aggiornamento a FTP).
+
+\subsection{\textit{Best practices}}
+\begin{itemize}
+    \item usare un proxy per rompere fisicamente il percorso di rete 
+    \item usare uno stateful packet filter, più resistente di uno stateless 
+    \item disabilitare tutte le porte non strettamente necessarie (default deny)
+    \item rendere sicuro il sistema operativo usato 
+\end{itemize}
+
+\section{Netfilter e IPTables}
+Netfilter è il componente del kernel Linux che permette l'intercettazione e 
+la manipolazione dei pacchetti. Implementa funzionalità avanzate come filtraggio 
+stateful del traffico di rete.
+
+\subsubsection{Funzionamento}
+
+\noindent Il funzionamento di Netfilter è incentrato sull'utilizzo di tabelle, 
+implementate a livello kernel. Ogni tabella contiene delle \textit{chain}, che 
+sono delle ACL e contengono a loro volta delle \textit{rules}; ogni regola è divisa in 
+due parti:
+\begin{itemize}
+    \item Filtro: proprietà che un pacchetto deve avere affinché la regola sia valida
+    \item Target: azione da compiere nel caso il pacchetto corrisponda alle proprietà impostate 
+    nel filtro
+\end{itemize}
+
+\subsubsection{Tabelle}
+
+\noindent Netfilter ha quattro tipi di tabelle:
+\begin{itemize}
+    \item \textbf{filter:} tabella delle regole di filtraggio dei pacchetti; permette di scegliere 
+    quali bloccare e quali far passare. Ha tre chain di base:
+    \begin{itemize}
+        \item \textit{Input:} tutti i pacchetti in arrivo destinati al sistema passano per questa catena 
+        \item \textit{Forward:} tutti i pacchetti in arrivo (non generati dal sistema stesso) destinati ad un altro sistema passano per questa catena (es. un router)
+        \item \textit{Output:} tutti i pacchetti generati dal sistema passano per questa catena
+    \end{itemize}
+    \item \textbf{nat:} tabella delle regole di traduzione degli indirizzi; per protocolli orientati alla sessione, solo 
+    il primo pacchetto passa per questa tabella, gli altri appartenenti alla stessa sessione seguiranno la stessa decisione.
+    
+    \noindent Ha tre chain di base:
+    \begin{itemize}
+        \item \textit{Prerouting:} passano i pacchetti in entrata, prima che venga presa la 
+        decisione di instradamento 
+        \item \textit{Postrouting:} passano i pacchetti in uscita, dopo che è stata fatta la decisione 
+        di instradamento
+        \item \textit{Output:} permette la conversione degli indirizzi pubblici dei pacchetti in entrata sulla rete locale ai rispettivi indirizzi privati (DNAT) 
+    \end{itemize}
+    \item \textbf{mangle:} permette di fare modifiche alle opzioni dei pacchetti e di applicare politiche avanzate. Ha le seguenti chain:
+    \begin{itemize}
+        \item \textit{Prerouting:} esamina tutti i pacchetti in entrata nel sistema, prima che venga consultata la tabella di routing 
+        \item \textit{Input:} esamina tutti i pacchetti in entrata nel sistema destinati al sistema stesso 
+        \item \textit{Forward:} esamina tutti i pacchetti in entrata ma destinati ad un altro sistema
+        \item \textit{Output:} esamina tutti i pacchetti generati dal sistema 
+        \item \textit{Postrouting:} esamina tutti i pacchetti, dopo che è stata fatta la decisione di routing e prima di inoltrare effettivamente il pacchetto al sistema destinatario
+    \end{itemize}
+    \textbf{raw:} permette di evitare il tracciamento della connessione, nel caso in cui 
+    si voglia avere un filtraggio stateless. Ha due chain:
+    \begin{itemize}
+        \item \textit{Prerouting:} provenienti da qualsiasi interfaccia di rete 
+        \item \textit{Output:} generato dal processo locale
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Targets}
+I targets sono le azioni da compiere su un pacchetto. Possono essere:
+\begin{itemize}
+    \item Una chain - per far gestire il pacchetto ad una catena specifica definita manualmente
+    \item Uno dei target predefiniti:
+    \begin{itemize}
+        \item ACCEPT 
+        \item DROP, REJECT 
+        \item QUEUE 
+        \item LOG 
+        \item \dots
+    \end{itemize}
+    \item Un obiettivo definito da un'estensione
+\end{itemize}
+
+
+\subsection{IPTables}
+IPTables è un tool per configurare Netfilter.
+
+\medskip
+
+\noindent \textit{si consiglia di guardare le slide per i 
+comandi e gli esericizi riguardanti IPTables (M1\_UD2\_L5 / M1\_UD2\_L6)}
+
+
+
 
