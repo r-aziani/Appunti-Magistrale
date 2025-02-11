@@ -264,6 +264,9 @@ INPUT chapters/11/firewall.aux
 INPUT ./chapters/12/fw_avanzati.aux
 INPUT ./chapters/12/fw_avanzati.aux
 INPUT chapters/12/fw_avanzati.aux
+INPUT ./chapters/13/ids-ips.aux
+INPUT ./chapters/13/ids-ips.aux
+INPUT chapters/13/ids-ips.aux
 OUTPUT ssr.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -604,6 +607,12 @@ INPUT ./chapters/12/images/ftp-bounce.png
 INPUT ./chapters/12/images/ftp-bounce.png
 INPUT ./chapters/12/images/ftp-bounce.png
 INPUT ./chapters/12/images/ftp-bounce.png
+INPUT ./chapters/13/ids-ips.tex
+INPUT ./chapters/13/ids-ips.tex
+OUTPUT chapters/13/ids-ips.aux
+INPUT ./chapters/13/ids-ips.tex
+INPUT ./chapters/13/ids-ips.tex
+INPUT chapters/13/ids-ips.tex
 INPUT ssr.aux
 INPUT ./chapters/1/intro.aux
 INPUT ./chapters/1/intro.aux
@@ -641,6 +650,9 @@ INPUT chapters/11/firewall.aux
 INPUT ./chapters/12/fw_avanzati.aux
 INPUT ./chapters/12/fw_avanzati.aux
 INPUT chapters/12/fw_avanzati.aux
+INPUT ./chapters/13/ids-ips.aux
+INPUT ./chapters/13/ids-ips.aux
+INPUT chapters/13/ids-ips.aux
 INPUT ./ssr.out
 INPUT ./ssr.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
