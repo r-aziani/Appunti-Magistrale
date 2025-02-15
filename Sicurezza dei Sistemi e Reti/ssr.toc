@@ -189,8 +189,12 @@
 \contentsline {subsubsection}{Tabelle}{83}{section*.30}%
 \contentsline {subsubsection}{Targets}{84}{section*.31}%
 \contentsline {subsection}{\numberline {12.5.1}IPTables}{84}{subsection.12.5.1}%
-\contentsline {chapter}{\numberline {13}IDS (Intrusion Detection System)}{85}{chapter.13}%
+\contentsline {chapter}{\numberline {13}IDS e IPS}{85}{chapter.13}%
+\contentsline {section}{\numberline {13.1}IDS (Intrusion Detection System)}{85}{section.13.1}%
 \contentsline {subsubsection}{Caratteristiche funzionali}{85}{section*.32}%
-\contentsline {section}{\numberline {13.1}Caratteristiche topologiche}{86}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Caratteristiche topologiche}{86}{subsection.13.1.1}%
 \contentsline {subsubsection}{Componenti di un NIDS}{86}{section*.33}%
-\contentsline {section}{\numberline {13.2}Valutare un IDS}{86}{section.13.2}%
+\contentsline {subsection}{\numberline {13.1.2}Valutare un IDS}{86}{subsection.13.1.2}%
+\contentsline {section}{\numberline {13.2}IPS (Intrusion Prevention System)}{86}{section.13.2}%
+\contentsline {subsubsection}{Honey Pot}{86}{section*.34}%
+\contentsline {section}{\numberline {13.3}Snort}{87}{section.13.3}%

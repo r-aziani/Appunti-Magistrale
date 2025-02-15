@@ -1,0 +1,124 @@
+\chapter{IDS e IPS}
+
+\section{IDS (Intrusion Detection System)}
+
+Dato che i firewall non possono proteggere da tutte le minacce e un \textit{instrusione}
+non è un evento impossibile, è fondamentale e rilevarla e porre rimedio; viene 
+fatto tramite gli \textbf{Intrusione Detection Systems}:
+\begin{itemize}
+    \item \textbf{sistema per identificare individui/servizi che usano un computer o una 
+    rete senza autorizzazione}; il controllo è esteso anche ad utenti autorizzati, ma 
+    che \textbf{non rispettano i loro privilegi}
+    \item viene fatto monitorando il traffico di rete; può collaborare con il firewall
+    \item è utile anche per fornire informazioni utili su intrusioni avvenute, fare diagnosi e correggere debolezze
+\end{itemize} 
+
+\noindent È importante ricordare che gl'IDS \textbf{non è un sistema di protezione 
+ma di rilevazione} delle intrusioni o di attacchi provenienti dall'esterno.
+
+\subsubsection{Caratteristiche funzionali}
+\begin{itemize}
+    \item \textbf{IDS passivi:}
+    \begin{itemize}
+        \item checksum crittografici 
+        \item riconoscimento di pattern 
+    \end{itemize}
+    \item \textbf{IDS attivi:}
+    \begin{itemize}
+        \item \textit{learning} $\rightarrow$ analisi statistica del sistema 
+        \item \textit{monitoring} $\rightarrow$ analisi attiva del traffico di dati, azionim \dots
+        \item \textit{reaction} $\rightarrow$ confronto con parametri statistici (reazione scatta al superamento di una soglia)
+    \end{itemize}
+\end{itemize}
+
+\subsection{Caratteristiche topologiche}
+
+\begin{itemize}
+    \item \textbf{HIDS (host-based IDS):}
+    \begin{itemize}
+        \item analisi dei log 
+        \item attivazione di strumenti di monitoraggio interni al S.O.
+    \end{itemize}
+    \item \textbf{NIDS (network-based IDS):}
+    \begin{itemize}
+        \item attivazione di strumenti di monitoraggio del traffico di rete 
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Componenti di un NIDS}
+\begin{itemize}
+    \item \textbf{Sensor:} controlla il traffico e log per individuare pattern sospetti; attiva i 
+    security event quando necessario
+    \item \textbf{Director:} coordina i sensor 
+    \item \textbf{IDS message system:} consente la comunicazione sicura tra i componenti dell'IDS
+\end{itemize}
+
+
+
+\subsection{Valutare un IDS}
+Per valutare l'efficienza di un IDS occorre conoscere due parametri:
+\begin{itemize}
+    \item \textbf{Accuratezza:} $allarmi Corretti / allarmi Totali$
+    \item \textbf{Completezza:} $allarmi Corretti / intrusioni Totali$
+\end{itemize}
+
+\noindent Occore sempre bilanciare i \textit{falsi negativi}
+e i \textit{falsi positivi}, dato che questi parametri sono correlati inversamente.
+
+\section{IPS (Intrusion Prevention System)}
+
+La prevenzione è intesa come \textit{velocizzazione dei tempi di risposta} 
+una volta che si individua un attacco; il problema relativo a questa tecnologia 
+è il rischio di prendere decisioni sbagliate in automatico o il bloccaggio di 
+traffico innocuo.
+
+\subsubsection{Honey Pot}
+
+Viene realizzata una rete \textbf{\textit{finta}} per \textbf{attirare gli attacchi}:
+quando un attaccante vuole entrare solitamente usa falle note, l'idea è di realizzare 
+una rete ad hoc per osservare come gli attacchi vengono effettuati; si realizza una 
+DMZ proprio a questo scopo.
+\noindent Di norma si mettono moltissimi sensori IDS per misurare tutto 
+quello che avviene.
+
+\section{Snort}
+Snort è un IDS \textit{open source} molto noto e testato; è in grado di funzionare 
+sia in \textbf{modalità sniffer} (osserva il traffico e logga) sia in 
+\textbf{modalità IDS} (in questo caso viene regolato con dei file \textit{.rules}).
+
+\noindent Gli alert che vengono sollevati possono essere stampati come \textit{tcpdump}
+per salvare spazio e velocizzare la scrittura; $\rightarrow$ Snort è in grado di 
+leggere \textit{tcpdump} per fare analisi post-attacco.
+
+\noindent Sono previste quattro \textit{modalità di utilizzo}:
+\begin{itemize}
+    \item \textbf{Sniffer mode:} legge i pacchetti dalla rete e li visualizza come un flusso continuo 
+    \item \textbf{Packet logger mode:} logga i pacchetti salvandoli sul disco 
+    \item \textbf{Network instrusion detection system mode:} funziona da NIDS; utilizza regole 
+    \textit{snort-based} per individuare pattern di traffico sospetti 
+    \item \textbf{Inline mode:} funziona di IPS; riceve i pacchetti direttamente da iptable e collabora per 
+    bloccare il traffico sospetto.
+
+    \noindent I sensori di Snort sono integrati nel firewall per fare controlli su iptables (nulla vieta di mettere questo 
+    sistema sugli host ma è sconsigliato, richiede hw performante, poco conveniente).
+    \noindent Quando è in \textit{inline mode} Snort effettua tre azioni:
+    \begin{itemize}
+        \item \textit{drop:} ordina a iptables di eliminare pacchetti sospetti 
+        \item \textit{reject:} oltre a quanto previsto da \textit{drop}, fa inviare un \textit{tcp\_reset} per terminare la connessione 
+        \item \textit{sdrop:} fa eliminare il pacchetto senza loggare
+    \end{itemize}
+
+    \noindent Alle volte è meglio usare un \textit{drop} rispetto a un \textit{tcp\_reset} per non dare nessuno strumento di analisi 
+    all'attaccante, in modo che non possa trarre alcuna informazione sul sistema.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+

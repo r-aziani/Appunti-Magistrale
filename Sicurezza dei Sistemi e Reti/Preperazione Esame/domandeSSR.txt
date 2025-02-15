@@ -1,0 +1,146 @@
+***************
+*** Set-UID ***
+***************
+a) Si definisca il funzionamento e possibili implicazioni per la sicurezza
+b) [codice]
+---
+a) Ogni processo Unix è associato a RUID e EUID. Spiegare la differenza e l'uso del bit setuid
+c) [codice]
+--- 
+a) Spiegare la logica ed importanza del setuid
+b) Perché i programmi setuid sono pericolosi
+c) Come esempio si consideri /usr/bin/passwd : spiegare se tale comando ha il setuid settato e perché
+---
+b) Quale tra RUID e EUID viene utilizzato dal sistema operativo per determinare se un processo ha il diritto di accedere a una risorsa o meno?
+c) Nella maggior parte delle versioni Unix, la famiglia di funzioni setuid consente di impostare l'EUID di un processo sul suo RUID. Riesci a pensare a un motivo per farlo in un processo in esecuzione come root (EUID=0) ?
+
+
+**********************
+*** Autenticazione ***
+**********************
+a) Discutere le problematiche di autenticazione su Web e in dettaglio uno schema challenge-response
+
+
+***************
+*** Malware ***
+***************
+a) Elencare le differenze tra un virus e un worm, facendo riferimento ad esempi di malware noti in letteratura
+b) Elencare le differenze tra un virus polimorfico e un virus metamorfico 
+c) Discutere se le seguenti tecniche sono meccanismi di rilevamento utili rispettivamente per i virus polimorfici e metamorfici:
+	i) Static pattern matching
+	ii) Pattern matching during emulation
+	iii) Suspicious behaviour detection
+
+
+***************
+*** Attacks ***
+***************
+a) Descrivere le problematiche di sicurezza del protocollo SSL
+---
+a) Descrivere l'attacco Shellshock: in particolare fare un esempio di funzione shell e della vulnerabilità presente nelle vecchie funzioni bash
+---
+a) Discutere le problematiche di sicurezza del protocollo ARP e discutere ARP poisoning attack
+---
+a) Descrivere in cosa consiste IP spoofing, e in dettaglio attacchi che fanno uso di tale tecnica
+---
+a) Descrivere quali sono i risultati possibili per la scansione di una porta
+---
+a) Descrivere in dettaglio l'attacco basato su MAC flooding, conseguenze ed eventuali contromisure
+
+
+*******************
+*** TCP attacks ***
+*******************
+a) Descrivere in dettaglio in cosa consiste il ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure
+---
+a) Elencare e descrivere alcuni attacchi a TCP 
+b) Descrivere in dettaglio in cosa consiste il TCP reset attack, facendo un esempio nel caso l'attaccante abbia intercettato l'ultimo pacchetto tra client e server qui raffigurato
+---
+a) Si descriva in dettaglio il funzionamento di un attacco SYN flood 
+b) Si descrivano alcune contromisure 
+c) Si descriva l'utilizzo dei Syn Cookie
+---
+a) Descrivere i possibili approcci alla scansione
+b) Descrivere FTP bounce scan
+---
+a) Descrivere almeno due tecniche di scansione con TCP
+b) Descrivere con un esempio FTP bounce scan
+
+
+****************
+*** Scanning ***
+****************
+a) Descrivere la differenza tra le tecniche scan stealth e non stealth
+b) Descrivere in dettaglio IDLE scan illustrando le risposte in caso di porta chiusa, aperta o filtrata sulla porta 23 della vittima sapendo che l'ultima risposta ottenuta dallo zombie ha id=42380
+---
+a) Descrivere sinteticamente i metodi di scansione stealth
+---
+a) Descrivere in dettaglio la tecnica IDLE scan illustrando con un esempio le risposte in caso di porta chiusa, aperta o filtrata
+
+
+************************
+*** Network Scanning ***
+************************
+a) Riconoscere e commentare il tipo di scan evidenziato in figura e aggiungere il caso mancante (porta aperta/chiusa)
+---
+a) Descrivere in dettaglio in cosa consiste il TCP hijacking attack, facendo un esempio nel caso l'attaccante abbia intercettato l'ultimo pacchetto tra client e server qui raffigurato.
+	i) definire in dettaglio il pacchetto da spedire per portare a termine l'attacco 
+	ii) Nel caso si voglia far eseguire un comando al server come si può procedere?
+---
+a) Si descriva il funzionamento dell'IDLE SCAN e si faccia un esempio pratico indicando numericamente gli ID e i messaggi di risposta ricevuti nei diversi casi di porte testate (chiusa, aperta o filtrata)
+---
+a) Descrivere quali sono le condizioni rilevabili da una porta come risultato di uno scanning e cosa indicano ad un potenziale avversario 
+b) Per ciascuno stato fare un esempio di un tipo di scan che produca quel tipo di stato 
+---
+a) Discutere obiettivi e natura degli approcci al port scanning
+b) Quali sono i risultati possibili per la scansione di una porta 
+c) Descrivere in dettaglio un approccio allo scan 
+
+
+******************************
+*** Politiche di sicurezza ***
+******************************
+a) definire l'utilizzo delle politiche di sicurezza basate su MAC e DAC
+b) Fare cenni sull'utilizzo di tali politiche nei S.O. moderni
+---
+a) Definire l'uso delle politiche basate su ruoli 
+b) Fare cenni sull'utilizzo di tali politiche nei S.O. moderni
+---
+a) Dare una definizione di politica di sicurezza 
+b) (?) Definire le caratteristiche fondamentali e i modelli per definire politiche di integrità dei dati
+
+
+***********************
+*** Firewall e NIDS ***
+***********************
+a) Descrivere i principi inderogabili dei firewall 
+b) Come funziona una honey pot? A cosa serve e come la potrei realizare?
+---
+a) Descrivere come funziona iptables in dettaglio 
+b) Come realizzare un IPS? Fare un esempio indicando delle tecnologie utilizzabili
+---
+a) In relazione all'attacco (ormai obsoleto) FTP Bounce Attack, dire di cosa si tratta e quale tipologia di firewall potrebbe bloccarlo e come 
+b) Cosa è Snort e cosa permette di realizzare? Fare degli esempi di cosa si può ottenere
+---
+a) Cosa è e come funziona un Proxy firewall 
+b) Differenza tra IDS e IPS
+---
+a) Come cooperano firewall e IPS
+b) Assumendo un firewall posizionato su un router, devono essere filtrati i traffici in ingresso al firewall stesso o solo quelli che devono essere "forwarded"? Spiegare le motivazioni constestualizzando lo scenario 
+---
+a) Differenze tra Static stateless firewall e Dynamic stateful firewall 
+b) Cosa si intende per IPS e come interagisce con un firewall? Fare esempi
+---
+a) Differenza tra Circuit-level gateway e Application-level gateway
+b) Come funziona un proxy firewall? Presentare la configurazione 
+reverse proxy
+---
+b) Cosa si intende per deep packet inspection? Come si applicano a scenari di encrypthed threats?
+---
+b) Cosa si intende per IDS? Dove andrebbe posizionato in una rete che abbia due accessi ad internet?
+---
+b) Come funzionano gli IPS in relazione alla possibilità di prevenire una intrusione?
+---
+a) Quali sistemi firewall riescono a controllare il traffico applicativo? Come funzionano?
+---
+a) Descrivi tutti i tipi di firewall che conosci associando i diversi livelli ISO/OSI che sono in grado di analizzare
