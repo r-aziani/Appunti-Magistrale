@@ -1,0 +1,87 @@
+\documentclass{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[italian]{babel}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+
+
+\title{Affidabilità dei sistemi}
+\date{Annalisa Pasquali}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+
+\chapter{L'affidabilità come requisito della qualità}
+
+\section{Introduzione}
+Affinché si possa esprimere un giudizio sul livello qualitativo del
+prodotto così ottenuto può essere utile richiamare la definizione
+del termine Qualità fornita dalla norma UNI EN ISO 9000 che, a
+tale proposito, recita: “Qualità è il grado in cui un insieme di
+caratteristiche intrinseche soddisfa i requisiti”.
+
+\noindent \textbf{Dependability:} La norma CEI 56-50 introduce il concetto di fidatezza (dependability), intesa
+come \textbf{l’insieme delle proprietà che descrivono la disponibilità e i
+fattori che la condizionano cioè affidabilità, manutenibilità e
+logistica della manutenzione}.
+
+\section{Requisiti RAMS}
+Intesi come
+\begin{itemize}
+    \item \textbf{Reliability} (Affidabilità): L’affidabilità è definita, in termini
+    qualitativi, come “l’attitudine dell’elemento a svolgere la funzione
+    richiesta in condizioni date per un dato intervallo di tempo.    
+    \item \textbf{Availability} (Disponibilità):attitudine dell’entità ad essere in grado
+    di svolgere la funzione richiesta in determinate condizioni a un dato
+    istante, o durante un dato intervallo di tempo, supponendo che
+    siano assicurati i mezzi esterni eventualmente necessari
+    \item \textbf{Maintainability} (1- Manuteniblità e 2-supporto logico alla manutezione): 1-attitudine dell’entità in
+    assegnate condizioni di utilizzazione a essere mantenuta o
+    riportata in una stato nel quale essa può svolgere la funzione
+    richiesta, quando la manutenzione è eseguita nelle condizioni
+    date, con procedure e mezzi prescritti. 
+    2- attitudine di una organizzazione della
+    manutenzione, in date condizioni, a offrire dietro richiesta le
+    risorse necessarie alla manutenzione dell’entità, conformemente
+    ad una data politica di manutenzione.
+    \item \textbf{Safety}(Sicurezza): assenza di rischi inaccettabili e determinabile
+    attraverso livelli di integrità alla sicurezza SIL (Safety Integrity
+    Level).
+    \item + Security(Protezione): nei confronti della prevenzione di accessi non
+    autorizzati e/o manipolazioni di informazioni private.
+\end{itemize}
+
+\subsection{Affidabilità VS Disponiblità}
+Distinzione tra affidabilità e disponibilità, sono correlate ma diverse:
+\begin{itemize}
+    \item \textbf{Affidabilità:} è la capacità di un sistema o componente di funzionare correttamente per un certo periodo senza guasti. Viene espressa come la probabilità che il sistema esegua la sua funzione entro il tempo utile. Un esempio è un aereo che deve completare il volo senza guasti critici.
+    \item \textbf{Disponiblità:} è il grado di funzionamento e accessibilità del sistema quando necessario. È influenzata sia dall'affidabilità sia dal tempo di ripristino in caso di guasto. Per sistemi a lungo funzionamento continuo (come i servizi cloud), la disponibilità è cruciale, poiché i guasti sono inevitabili, e la rapidità di ripristino diventa determinante per minimizzare i tempi di inattività. 
+\end{itemize}
+La disponibilità è quindi una funzione che tiene conto sia dell’affidabilità
+del sistema sia degli aspetti manutentivi.
+I problemi di affidabilità possono allora essere trattati come casi
+particolari di quelli di disponibilità per i quali il passaggio allo stato di
+guasto non consente il ritorno allo stato di funzionamento.
+
+\noindent Quando è più importante l’affidabilità e quando lo è la disponibilità.
+
+- È più importante l’Affidabilità:
+Quando è prevalente il costo del guasto (per esempio perché è necessaria
+una sostituzione di componenti, una riparazione dei danni provocati, etc…)
+è più significativa l'affidabilità.
+
+- È più importante la Disponibilità:
+Quando è prevalente il costo connesso con il guasto (per esempio per la
+mancata produzione che ne scaturisce, oppure per il mancato servizio,
+etc...) allora è più significativa la disponibilità.
+
+\end{document}

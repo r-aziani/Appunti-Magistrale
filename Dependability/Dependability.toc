@@ -1,0 +1,6 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}L'affidabilità come requisito della qualità}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduzione}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Requisiti RAMS}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Affidabilità VS Disponiblità}{3}{subsection.1.2.1}%
