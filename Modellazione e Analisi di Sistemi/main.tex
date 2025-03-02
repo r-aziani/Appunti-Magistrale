@@ -1,0 +1,37 @@
+\documentclass{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[italian]{babel}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{soul}
+\usepackage{listings} % Per evidenziare il codice
+
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9} % Definizione colore sfondo
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+
+\lstset{
+    backgroundcolor=\color{lightgray}, % Sfondo grigio
+    basicstyle=\ttfamily, % Font monospaziato
+    % frame=single, % Bordo attorno al codice
+    tabsize=4, % Dimensione tabulazione
+    breaklines=true, % Permette di andare a capo automaticamente
+    numbers = left,
+    numberstyle=\small\color{gray}
+}
+
+\title{\huge\textbf{{Modellazione e Analisi di Sistemi}}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\include{chapters/1-asm/asm}
+
+\end{document}

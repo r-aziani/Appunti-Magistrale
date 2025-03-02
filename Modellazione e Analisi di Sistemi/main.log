@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  28 FEB 2025 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  2 MAR 2025 23:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/chapters/1/ac.tex"
-(/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/chapters/1/ac.tex
+**"/home/azi/Desktop/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex"
+(/home/azi/Desktop/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -482,8 +482,8 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box68
-) (./ac.aux)
-\openout1 = `ac.aux'.
+) (./main.aux (./chapters/1-asm/asm.aux))
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
@@ -534,9 +534,9 @@ italian.ldf    See the documentation concerning the babel-italian typesetting
 italian.ldf    on input line 28.
 
 Package hyperref Info: Link coloring OFF on input line 28.
-(./ac.out) (./ac.out)
+(./main.out) (./main.out)
 \@outlinefile=\write4
-\openout4 = `ac.out'.
+\openout4 = `main.out'.
 
 \c@lstlisting=\count332
 
@@ -545,9 +545,9 @@ LaTeX Warning: No \author given.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./ac.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
 \tf@toc=\write5
-\openout5 = `ac.toc'.
+\openout5 = `main.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -557,98 +557,50 @@ l.33 \newpage
               [1
 
 ]
+\openout2 = `chapters/1-asm/asm.aux'.
+
+ (./chapters/1-asm/asm.tex
 Capitolo 1.
+<chapters/1-asm/images/stati.png, id=64, 911.405pt x 172.645pt>
+File: chapters/1-asm/images/stati.png Graphic file (type png)
+<use chapters/1-asm/images/stati.png>
+Package pdftex.def Info: chapters/1-asm/images/stati.png  used on input line 19.
+(pdftex.def)             Requested size: 276.00105pt x 52.28123pt.
 [2
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3]
-Capitolo 2.
-<images/dac1.png, id=96, 454.69875pt x 233.87375pt>
-File: images/dac1.png Graphic file (type png)
-<use images/dac1.png>
-Package pdftex.def Info: images/dac1.png  used on input line 137.
-(pdftex.def)             Requested size: 207.0021pt x 106.47337pt.
-[4
 
-]
-<images/dac-comm.png, id=104, 302.12875pt x 251.94125pt>
-File: images/dac-comm.png Graphic file (type png)
-<use images/dac-comm.png>
-Package pdftex.def Info: images/dac-comm.png  used on input line 152.
-(pdftex.def)             Requested size: 155.24895pt x 129.46094pt.
-<images/dac2.png, id=105, 584.1825pt x 297.11pt>
-File: images/dac2.png Graphic file (type png)
-<use images/dac2.png>
-Package pdftex.def Info: images/dac2.png  used on input line 159.
-(pdftex.def)             Requested size: 224.2479pt x 114.04994pt.
- [5 <./images/dac1.png> <./images/dac-comm.png> <./images/dac2.png>]
-<images/transfer1.png, id=114, 533.995pt x 91.34125pt>
-File: images/transfer1.png Graphic file (type png)
-<use images/transfer1.png>
-Package pdftex.def Info: images/transfer1.png  used on input line 169.
-(pdftex.def)             Requested size: 207.0021pt x 35.4083pt.
-<images/transfer2.png, id=115, 542.025pt x 116.435pt>
-File: images/transfer2.png Graphic file (type png)
-<use images/transfer2.png>
-Package pdftex.def Info: images/transfer2.png  used on input line 174.
-(pdftex.def)             Requested size: 207.0021pt x 44.46605pt.
-<images/auth-table.png, id=116, 378.41376pt x 324.21124pt>
-File: images/auth-table.png Graphic file (type png)
-<use images/auth-table.png>
-Package pdftex.def Info: images/auth-table.png  used on input line 188.
-(pdftex.def)             Requested size: 172.5pt x 147.79338pt.
- [6 <./images/transfer1.png> <./images/transfer2.png> <./images/auth-table.png>]
-<images/acl.png, id=125, 269.005pt x 429.605pt>
-File: images/acl.png Graphic file (type png)
-<use images/acl.png>
-Package pdftex.def Info: images/acl.png  used on input line 195.
-(pdftex.def)             Requested size: 137.9979pt x 220.38702pt.
-<images/capability.png, id=126, 376.40625pt x 342.27875pt>
-File: images/capability.png Graphic file (type png)
-<use images/capability.png>
-Package pdftex.def Info: images/capability.png  used on input line 201.
-(pdftex.def)             Requested size: 172.5pt x 156.86517pt.
- [7 <./images/acl.png> <./images/capability.png>]
-<images/trojan.png, id=134, 732.7375pt x 472.76625pt>
-File: images/trojan.png Graphic file (type png)
-<use images/trojan.png>
-Package pdftex.def Info: images/trojan.png  used on input line 219.
-(pdftex.def)             Requested size: 276.00105pt x 178.08043pt.
- [8 <./images/trojan.png>]
-Capitolo 3.
-[9
-
-]
-<images/props.png, id=144, 707.64375pt x 434.62375pt>
-File: images/props.png Graphic file (type png)
-<use images/props.png>
-Package pdftex.def Info: images/props.png  used on input line 275.
-(pdftex.def)             Requested size: 276.00105pt x 169.51584pt.
-<images/reticolo.png, id=145, 860.21375pt x 499.8675pt>
-File: images/reticolo.png Graphic file (type png)
-<use images/reticolo.png>
-Package pdftex.def Info: images/reticolo.png  used on input line 281.
-(pdftex.def)             Requested size: 276.00105pt x 160.38037pt.
- [10 <./images/props.png> <./images/reticolo.png>] [11] (./ac.aux)
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./chapters/1-asm/images/stati.png>]
+<chapters/1-asm/images/fsm-asm2.png, id=75, 1106.1325pt x 645.41125pt>
+File: chapters/1-asm/images/fsm-asm2.png Graphic file (type png)
+<use chapters/1-asm/images/fsm-asm2.png>
+Package pdftex.def Info: chapters/1-asm/images/fsm-asm2.png  used on input line 48.
+(pdftex.def)             Requested size: 317.39937pt x 185.19484pt.
+<chapters/1-asm/images/comp-asm.png, id=76, 1110.1475pt x 599.23875pt>
+File: chapters/1-asm/images/comp-asm.png Graphic file (type png)
+<use chapters/1-asm/images/comp-asm.png>
+Package pdftex.def Info: chapters/1-asm/images/comp-asm.png  used on input line 55.
+(pdftex.def)             Requested size: 317.39937pt x 171.3243pt.
+ [3 <./chapters/1-asm/images/fsm-asm2.png> <./chapters/1-asm/images/comp-asm.png>] [4]) [5] (./main.aux (./chapters/1-asm/asm.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `ac.out' has not changed.
-(rerunfilecheck)             Checksum: 362B323F414007CFAF675766ED00C4A6;2417.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E60A263723BD9D6F50B097403AC9717B;1125.
  ) 
 Here is how much of TeX's memory you used:
- 22365 strings out of 474222
- 409999 string characters out of 5748733
- 1929975 words of memory out of 5000000
- 44245 multiletter control sequences out of 15000+600000
- 566185 words of font info for 64 fonts, out of 8000000 for 9000
+ 22324 strings out of 474222
+ 409815 string characters out of 5748733
+ 1931975 words of memory out of 5000000
+ 44202 multiletter control sequences out of 15000+600000
+ 565826 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,93p,470b,526s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on ac.pdf (12 pages, 420628 bytes).
+ 84i,6n,93p,479b,509s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (6 pages, 324786 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
