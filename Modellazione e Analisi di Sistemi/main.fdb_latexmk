@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1740955313.33678 "/home/azi/Desktop/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex" "main.pdf" "main" 1740955315.60077 0
+["pdflatex"] 1741097712.44219 "/home/azi/Desktop/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex" "main.pdf" "main" 1741097715.12934 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/azi/Desktop/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex" 1740950407.30566 876 7b74b4be2bf6ee14e6fceb5208474e89 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -159,15 +159,21 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1728322823.34097 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1728323065 8214324 2349c6972aa9b130e072b9fdd090f5e2 ""
-  "chapters/1-asm/asm.aux" 1740955315.44183 2279 c12d8df8bbd1a0a65a9f80369752b826 "pdflatex"
-  "chapters/1-asm/asm.tex" 1740955312.95038 5363 f236e0bc3545b2e902cb850057f71b98 ""
+  "chapters/1-asm/asm.aux" 1741097714.93505 3662 9a27040c36ae4c352aaf5e27532ff0fe "pdflatex"
+  "chapters/1-asm/asm.tex" 1741097712.01213 10731 747584ec601223f91f71fa2c57872fab ""
+  "chapters/1-asm/images/call-rule.png" 1741097675.31065 74954 9025dc6a1f22ec53a9587a6caf4ecff3 ""
+  "chapters/1-asm/images/classificazione-funzioni.png" 1741095880.01455 29840 cd6a703a285e89d76e42847af155abae ""
   "chapters/1-asm/images/comp-asm.png" 1740950989.45752 122308 c434e87cdedcd3f5be373421fbbf5716 ""
+  "chapters/1-asm/images/ex1.png" 1741094484.4362 27403 300e47ad71fe121e92f6cf61e0ed7705 ""
   "chapters/1-asm/images/fsm-asm2.png" 1740952303.15818 129809 c17f8b9d08a962c599b2bf1770eb8776 ""
+  "chapters/1-asm/images/let.png" 1741095538.06157 32947 d197ef5626b6325161e77c065cc19759 ""
+  "chapters/1-asm/images/par.png" 1741095737.93926 36748 f2efc742281c4eb2f20579297cf985ac ""
+  "chapters/1-asm/images/skip.png" 1741095515.50292 15651 a2c5f85da8be9518f14516b785ccecb1 ""
   "chapters/1-asm/images/stati.png" 1740950435.80944 25791 83fecc6eb26595277b71bf169f725969 ""
-  "main.aux" 1740955315.44283 296 dd5c2ffb0a528bded344e2ed5bf55381 "pdflatex"
-  "main.out" 1740955315.44482 1125 e60a263723bd9d6f50b097403ac9717b "pdflatex"
+  "main.aux" 1741097714.93505 297 46661c4f871901583869bfe5438e68c0 "pdflatex"
+  "main.out" 1741097714.93905 2682 d97e3c64d75ae8571a38828dc521a03b "pdflatex"
   "main.tex" 1740950407.30566 876 7b74b4be2bf6ee14e6fceb5208474e89 ""
-  "main.toc" 1740955315.44582 1009 0823dcd28fce2b3b0dc9801105b955c7 "pdflatex"
+  "main.toc" 1741097714.93905 1939 12cf9f44eee9a549c9d1d034d944088a "pdflatex"
   (generated)
   "chapters/1-asm/asm.aux"
   "main.aux"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  2 MAR 2025 23:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  4 MAR 2025 15:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -561,7 +561,7 @@ l.33 \newpage
 
  (./chapters/1-asm/asm.tex
 Capitolo 1.
-<chapters/1-asm/images/stati.png, id=64, 911.405pt x 172.645pt>
+<chapters/1-asm/images/stati.png, id=109, 911.405pt x 172.645pt>
 File: chapters/1-asm/images/stati.png Graphic file (type png)
 <use chapters/1-asm/images/stati.png>
 Package pdftex.def Info: chapters/1-asm/images/stati.png  used on input line 19.
@@ -570,37 +570,71 @@ Package pdftex.def Info: chapters/1-asm/images/stati.png  used on input line 19.
 
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./chapters/1-asm/images/stati.png>]
-<chapters/1-asm/images/fsm-asm2.png, id=75, 1106.1325pt x 645.41125pt>
+<chapters/1-asm/images/fsm-asm2.png, id=120, 1106.1325pt x 645.41125pt>
 File: chapters/1-asm/images/fsm-asm2.png Graphic file (type png)
 <use chapters/1-asm/images/fsm-asm2.png>
 Package pdftex.def Info: chapters/1-asm/images/fsm-asm2.png  used on input line 48.
 (pdftex.def)             Requested size: 317.39937pt x 185.19484pt.
-<chapters/1-asm/images/comp-asm.png, id=76, 1110.1475pt x 599.23875pt>
+<chapters/1-asm/images/comp-asm.png, id=121, 1110.1475pt x 599.23875pt>
 File: chapters/1-asm/images/comp-asm.png Graphic file (type png)
 <use chapters/1-asm/images/comp-asm.png>
 Package pdftex.def Info: chapters/1-asm/images/comp-asm.png  used on input line 55.
 (pdftex.def)             Requested size: 317.39937pt x 171.3243pt.
- [3 <./chapters/1-asm/images/fsm-asm2.png> <./chapters/1-asm/images/comp-asm.png>] [4]) [5] (./main.aux (./chapters/1-asm/asm.aux))
+ [3 <./chapters/1-asm/images/fsm-asm2.png> <./chapters/1-asm/images/comp-asm.png>] [4] [5]
+<chapters/1-asm/images/ex1.png, id=146, 795.97375pt x 206.7725pt>
+File: chapters/1-asm/images/ex1.png Graphic file (type png)
+<use chapters/1-asm/images/ex1.png>
+Package pdftex.def Info: chapters/1-asm/images/ex1.png  used on input line 207.
+(pdftex.def)             Requested size: 276.00105pt x 71.69626pt.
+ [6 <./chapters/1-asm/images/ex1.png>]
+<chapters/1-asm/images/classificazione-funzioni.png, id=155, 430.60875pt x 301.125pt>
+File: chapters/1-asm/images/classificazione-funzioni.png Graphic file (type png)
+<use chapters/1-asm/images/classificazione-funzioni.png>
+Package pdftex.def Info: chapters/1-asm/images/classificazione-funzioni.png  used on input line 231.
+(pdftex.def)             Requested size: 241.49895pt x 168.88155pt.
+<chapters/1-asm/images/skip.png, id=156, 345.29pt x 184.69pt>
+File: chapters/1-asm/images/skip.png Graphic file (type png)
+<use chapters/1-asm/images/skip.png>
+Package pdftex.def Info: chapters/1-asm/images/skip.png  used on input line 236.
+(pdftex.def)             Requested size: 137.9979pt x 73.81268pt.
+ [7 <./chapters/1-asm/images/classificazione-funzioni.png> <./chapters/1-asm/images/skip.png>]
+<chapters/1-asm/images/let.png, id=164, 715.67375pt x 186.6975pt>
+File: chapters/1-asm/images/let.png Graphic file (type png)
+<use chapters/1-asm/images/let.png>
+Package pdftex.def Info: chapters/1-asm/images/let.png  used on input line 244.
+(pdftex.def)             Requested size: 276.00105pt x 71.99982pt.
+<chapters/1-asm/images/par.png, id=165, 794.97pt x 170.6375pt>
+File: chapters/1-asm/images/par.png Graphic file (type png)
+<use chapters/1-asm/images/par.png>
+Package pdftex.def Info: chapters/1-asm/images/par.png  used on input line 250.
+(pdftex.def)             Requested size: 276.00105pt x 59.24232pt.
+ [8 <./chapters/1-asm/images/let.png> <./chapters/1-asm/images/par.png>]
+<chapters/1-asm/images/call-rule.png, id=172, 817.0525pt x 411.5375pt>
+File: chapters/1-asm/images/call-rule.png Graphic file (type png)
+<use chapters/1-asm/images/call-rule.png>
+Package pdftex.def Info: chapters/1-asm/images/call-rule.png  used on input line 299.
+(pdftex.def)             Requested size: 276.00105pt x 139.01665pt.
+) [9 <./chapters/1-asm/images/call-rule.png>] (./main.aux (./chapters/1-asm/asm.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E60A263723BD9D6F50B097403AC9717B;1125.
+(rerunfilecheck)             Checksum: D97E3C64D75AE8571A38828DC521A03B;2682.
  ) 
 Here is how much of TeX's memory you used:
- 22324 strings out of 474222
- 409815 string characters out of 5748733
+ 22391 strings out of 474222
+ 411845 string characters out of 5748733
  1931975 words of memory out of 5000000
- 44202 multiletter control sequences out of 15000+600000
+ 44254 multiletter control sequences out of 15000+600000
  565826 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,479b,509s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,6n,93p,479b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (6 pages, 324786 bytes).
+Output written on main.pdf (10 pages, 492858 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 
