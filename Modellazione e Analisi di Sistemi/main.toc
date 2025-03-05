@@ -17,10 +17,11 @@
 \contentsline {subsection}{\numberline {1.2.1}Update rule}{6}{subsection.1.2.1}%
 \contentsline {subsubsection}{Locazione ASM}{6}{section*.6}%
 \contentsline {subsubsection}{Aggiornamento di locazione}{6}{section*.7}%
-\contentsline {subsection}{\numberline {1.2.2}Costruttore if-then-else}{6}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Costruttore if-then-else}{7}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}Classificazione delle funzioni}{7}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Costruttore skip}{7}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.4}Costruttore skip}{8}{subsection.1.2.4}%
 \contentsline {subsection}{\numberline {1.2.5}Costruttore let}{8}{subsection.1.2.5}%
 \contentsline {subsection}{\numberline {1.2.6}Costruttore "par" per block rule}{8}{subsection.1.2.6}%
-\contentsline {section}{\numberline {1.3}Aggiornamenti consistenti}{8}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Rule construnctor}{9}{section.1.4}%
+\contentsline {subsection}{\numberline {1.2.7}Tutti i costruttori di regole}{9}{subsection.1.2.7}%
+\contentsline {section}{\numberline {1.3}Aggiornamenti consistenti}{9}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Rule construnctor}{10}{section.1.4}%

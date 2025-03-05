@@ -159,9 +159,11 @@ nello stato}; il suo valore è l'\textit{interpretazione del termine} in $A$.
 (o solo di alcune) funzioni della segnatura della macchina. Il modo in cui la macchina 
 aggiorna il proprio stato è descritto da \textbf{regole di transizione}; l'insieme 
 delle regole di transizione definiscono la sintassi di un \textit{programma ASM}.
+e ne determinano la computazione.
 
-\noindent Le regole sono \textit{espressioni sintattiche generate su $\Sigma$} attraverso 
-l'uso di \textbf{costruttori di regole} 
+\noindent \underline{\textbf{DEF:}} Sia $\Sigma$ un vocabolario; le regole 
+di transizione di una ASM sono \textit{espressioni sintattiche su $\Sigma$ generate} attraverso 
+l'uso di \textbf{costruttori di regole}.
 
 \subsection{Update rule}
 
@@ -173,7 +175,7 @@ $f(t_1, \dots, t_n) := s$, dove:
 
 \noindent Significa che nello stato successivo, il valore di $f$ per gli 
 argomenti $(t_1, \dots, t_n)$ è aggiornato ad $s$. Nel caso di una funzione 0-aria, 
-cioè una variabile $x$, l'aggiornamento ha la forma $x := s$
+cioè una variabile $x$, l'aggiornamento ha la forma $x := s$.
 
 
 \subsubsection{Locazione ASM}
@@ -191,12 +193,14 @@ della funzione nello stato. Una funzione può essere:
 \subsubsection{Aggiornamento di locazione}
 
 Le transizioni di stato delle ASM, tramite update rule, causano \textbf{aggiornamenti}
-dei valori contenuti nelle locazioni.
+dei valori contenuti nelle locazioni; significa che cambia l'interpretazione 
+della funzione dinamica rispetto ai valori.
 
 \noindent Se $loc = (f,(v_1, \dots, v_n))$ e $loc = a$, l'aggiornamento di $loc$ ha la forma:
 
 $f(v_1, \dots, v_2) := newval$
 
+\newpage
 \subsection{Costruttore if-then-else}
 
 \texttt{if $\phi$ then R else S}, ovvero: \textit{se $\phi$ è vera, allora esegui $R$, altrimenti
@@ -236,7 +240,6 @@ esegui $S$}.
     \includegraphics[width=0.4\linewidth]{chapters/1-asm/images/skip.png}
 \end{figure}
 
-\newpage
 \subsection{Costruttore let}
 Serve per abbreviare ad esempio un termine molto complesso o lungo. 
 
@@ -249,6 +252,14 @@ Serve per abbreviare ad esempio un termine molto complesso o lungo.
 \begin{figure}[H]
     \includegraphics[width=0.8\linewidth]{chapters/1-asm/images/par.png}
 \end{figure}
+
+\subsection{Tutti i costruttori di regole}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{chapters/1-asm/images/costruttori.png}
+\end{figure}
+
 
 \section{Aggiornamenti consistenti}
 A causa del parallelismo, una regola di transizione può richiedere 
