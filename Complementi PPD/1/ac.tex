@@ -312,6 +312,371 @@ $\Rightarrow$ \textbf{NO WRITE DOWN}
 \noindent \textit{Se sono Secret, e scrivo un file secret in uno Top-Secret, non è mica un problema 
 per la confidenzialità. Potrebbe esserlo se scrivo secret in un file Unclassified (potrebbe causare problemi a livelli di integrità, ma ci stiamo occupando solo di confidenzialità).}
 
+\subsection{Proprietà di sicurezza}
+Un sistema viene formalizzato come \textit{stato}
+e \textit{transizioni di stato}. 
+
+\noindent Uno stato $v \in V$ è una tripla $(b, M, \lambda)$, dove:
+\begin{itemize}
+    \item $b$ è l'insieme di triple $(S \times O \times A)$, ovvero l'insieme degli accessi (\textit{soggetto, oggetto, accesso})
+    \item $M$ è la matrice di accesso (per rappresentare una politica discrezionale)
+    \item $\lambda$ è una funzione che ritorna la classe di sicurezza associata a soggetti e oggetti
+\end{itemize}
+
+\noindent Da questa definizione segue che uno stato $(b, M, \lambda)$ è sicuro se rispetta:
+\begin{itemize}
+    \item \textbf{Simple security:} $\forall (s,o,a) \in b, a = read \Rightarrow \lambda(s) \geq \lambda(o)$
+    
+    \textit{se la tripla appartiene a b, è perché vale la simple property (classe del soggetto domina quella dell'oggetto)}
+    \item \textbf{* property:} $\forall (s,o,a) \in b, a = write \Rightarrow \lambda(o) \geq \lambda(s)$
+    
+    \textit{se la tripla appartiene a b, è perché vale la * property (classe del oggetto domina quella del soggetto)}
+\end{itemize}
+
+\noindent Dato che un sistema può variare nel tempo, occorre formalizzare anche questo aspetto.
+Viene definita una \textbf{funzione di transizione di stato} $T: V \times R \rightarrow V$, che 
+trasforma lo stato in un altro che soddisfa le due proprietà.
+
+\subsubsection{Sistema sicuro}
+
+Un sistema $(v_0, R, T)$ è sicuro se ogni stato raggiungibile da $v_0$ con una sequenza finita di 
+passi da $R$ è sicuro. Formalmente, un sistema è sicuro se:
+\begin{itemize}
+    \item $v_0$ è sicuro 
+    \item $T$ è tale che $\forall v$ raggiungibile da $v_0$ eseguendo una o più richieste 
+    da $R$, allora deve valere che:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/blp-ss.png}
+    \end{figure}
+\end{itemize}
+
+\subsection{\textit{BLP + tranquility}}
+
+L'idea è di controllare ciò che fa $T$, dato che potrebbe dar vita 
+a problemi di sicurezza.
+
+\noindent Viene introdotta la \textit{\textbf{tranquility property}}, secondo cui 
+il livello di sicurezza associato a soggetti e oggetti non può cambiare.
+
+\noindent Tuttavia, questa restrizione è troppo forte da poter applicare in casi reali;
+vengono così introdotti alcuni casi in cui viene \textit{attenuata}:
+\begin{itemize}
+    \item non tutti i cambi di livello rilasciano informazioni (cambiare verso l'alto può essere ok)
+    \item soggetti fidati possono fare downgrade
+\end{itemize}
+
+
+\subsubsection{Altre eccezioni}
+\noindent Altre eccezzioni non catturate dal modello, che richiedono di attenuare 
+le restrizioni:
+\begin{itemize}
+    \item \textbf{Data association:} un set di valori associati potrebbe essere classificato 
+    \textit{più alto} rispetto ai valori presi singolarmente 
+    \item \textbf{Aggregation:} l'aggregazione di tutte le istanze diventa sensibili (ad esempio,
+    la posizione di navi da guerra)
+    \item \textbf{Sanitizzazione e downgrading:} dopo un certo tempo alcuni dati potrebbero 
+    subire un downgrade
+\end{itemize}
+
+
+\subsection{Coesistenza di DAC e MAC}
+Il modello BLP permette la coesistenza di DAC e MAC: oltre alle classi e 
+alla relazione di dominanza, viene controllata anche la matrice di accesso.
+\begin{center}
+    DAC property: $b \subseteq \{(s,o,a) | a \in M[s,o]\}$
+\end{center}
+
+\noindent Se sono applicati sia DAC che MAC, solo gli accessi che li soddisfano entrambi 
+sono garantiti.
+
+\subsection{Limitazioni delle politiche mandatorie}
+Le politiche mandatorie sono vulnerabili ai \textbf{canali nascosti}; sono 
+canali normalmente non usati per la comunicazione, ma che possono essere usati per 
+comunicare in modo illegittimo delle informazioni.
+
+\noindent \textbf{Ogni risorsa del sistema condivisa tra processi di livelli diversi 
+può essere usata per creare un canale nascosto}. I canali nascosto possono essere di tipo:
+\begin{itemize}
+    \item \textbf{Storage:} ad esempio un soggetto top-secret crea un file se vuole comunicare 
+    qualcosa, altrimenti no; un soggetto secret prova a scrivere tale file: dall'esistenza o meno 
+    deduce l'informazione 
+    \item \textbf{Timing:} viene sfruttata la diversa reazione che il sistema può avere in 
+    termini di tempo di risposta. 
+    
+    \noindent Ad esempio, blocco una stampante così che l'utente al livello più basso,
+    vedendo il tempo di risposta diverso, capisce che l'altro utente vuole comunicare qualcosa
+\end{itemize}
+
+\section{Politche mandatorie per l'integrità}
+L'altra proprietà da proteggere (oltre alla confidenzialità) è l'integrità. In 
+maniera simile a quanto visto precedentemente, vengono definite:
+\begin{itemize}
+    \item \textbf{Classi di integrità:}
+    di integrità:
+    \begin{itemize}
+        \item associate agli \textit{utenti} riflettono la fiducia che non modifichi
+        informazioni in modo improprio (prima era che non vada a diffondere informazioni sensibili)
+        \item associate agli \textit{oggetti} riflettono il grado di fiducia che ho dell'informazione 
+        contenuta nell'oggetto e il danno potenziale che modifiche a tale oggetto potrebbero causare
+    \end{itemize}
+    \item \textbf{Categorie:} defininoscono l'area di competenza di soggetti e oggetti 
+\end{itemize}
+
+\section{Modello Biba}
+È simmetrico a BLP:
+\begin{itemize}
+    \item in BLP, non posso leggere verso l'alto e non posso scrivere verso il basso 
+    perché non mi fido dei processi (\textit{chi mi dice che un processo non legge informazioni 
+    TS e le scrive in oggetti S?})
+    \item in Biba, i soggetti non possono scrivere a livelli più alti, altrimenti comprometterebbero 
+    l'integrità; non posso leggere a livello più basso perché potrei avere informazioni non affidabili
+\end{itemize}
+
+$\rightarrow$ vengono fatti ragionamenti opposti perché si hanno obiettivi diversi da raggiungere
+
+\noindent La politica di integrità prevede:
+\begin{itemize}
+    \item \textbf{Simple property:} un soggetto $s$ può leggere un oggetto $o$ solo 
+    se $\lambda(o) \geq \lambda(s)$
+    \item \textbf{*-property:} un soggetto $s$ può scrivere un oggetto $o$ solo se $\lambda(s) \geq \lambda(o)$
+    
+    \textit{NB: viene segnalato al sistema ma non bloccato}
+\end{itemize}
+
+$\Rightarrow$ \textbf{NO READ DOWN}
+
+$\Rightarrow$ \textbf{NO WRITE UP}
+
+\subsection{Politiche alternative}
+Due varianti per rilassare le restrizioni:
+\begin{itemize}
+    \item \textbf{\textit{Rilassare l'operazione lettura:}}
+    
+    \noindent Un soggetto $s$ può leggere quasiasi oggetto $o$. Dopo l'accesso, 
+    $\lambda(s):= glb(\lambda(s), \lambda(o))$.
+    \begin{itemize}
+        \item \textit{se leggo un informazione a livello più basso, anche le mie azioni 
+        si basano su informazioni meno affidabili; per questo viene abbassato il livello di integrità
+        al soggetto (nel caso in cui $\lambda(o) < \lambda(s)$)}
+        \item \textit{Drawback:} l'ordine delle operazioni influenza i privilegi del soggetto
+    \end{itemize}
+    \item \textbf{\textit{Rilassare l'operazione di scrittura:}}
+
+    \noindent Un soggetto $s$ può scrivere qualsiasi oggetto $o$. Dopo l'accesso, 
+    $\lambda(o):= glb(\lambda(s), \lambda(o))$
+    \begin{itemize}
+        \item \textit{posso cambiare informazioni affidabili con altre meno affidabili; per questo 
+        devo cambiare la classe di integrità dell'oggetto}
+        \item \textit{Drawback:} non blocca questo tipo di scritture ma si limita a segnararle
+    \end{itemize}
+\end{itemize}
+
+\subsection{Limitazioni di Biba}
+Il vero problema di Biba è che guarda solo un aspetto limitato dell'integrità 
+delle informazioni; non basta per proteggere l'integrità.
+
+\newpage
+\section{Applicazione di BLP nelle basi di dati}
+
+È prima di tutto necessario decidere il livello di granularità a cui associare 
+le classi di sicurezza per applicare la politica mandatoria:
+\begin{itemize}
+    \item relazione 
+    \item attributo 
+    \item tupla 
+    \item elemento
+\end{itemize}
+
+\subsection{Modello relazionale classico}
+Ogni relazione è caratterizzata da:
+\begin{itemize}
+    \item \textbf{Schema} della relazione $R(A_1, \dots, A_n)$, indipendente dallo stato 
+    \item \textbf{Istanza} della relazione, dipendente dallo stato, composta 
+    \\ da tuple $(a_1, \dots, a_n)$
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/classic.png}
+\end{figure}
+
+\noindent Gli \textbf{attributi chiave} identificano univocamente le tuple:
+\begin{itemize}
+    \item due tuple non possono avere la stessa chiave 
+    \item le chiavi non possono avere valore \texttt{null}
+\end{itemize}
+
+\subsection{Multilevel DBMSs}
+Ogni relazione è caratterizzata da:
+\begin{itemize}
+    \item \textbf{Schema} delle relazione $R(A_1,C_1,\dots,A_n,C_n)$, indipendente
+    dallo stato 
+    \begin{itemize}
+        \item $C_i$, con $i = 1, \dots, n$, è il range delle classificazioni di sicurezza
+    \end{itemize}
+
+    $\rightarrow$ vengono aggiunti altri $n$ attributi per tenere traccia delle classificazioni
+    \item \textbf{Set di instanze} della relazione $R_c$, dipendente dallo stato; una istanza 
+    per ogni classe $c$. Ciascuna istanza è composta da tuple $(a_1,c_1,\dots,a_n,c_n)$
+
+    \noindent L'istanza a livello $c$ contiene solo gli elementi la cui classificazione è 
+    dominata da $c$
+\end{itemize}
+
+\subsubsection{Controllo degli accessi}
+Il controllo degli accessi viene fatto applicando il modello BLP:
+\begin{itemize}
+    \item \textit{no read up}
+    \item \textit{no write down further restricted} 
+    
+    $\rightarrow$ ogni soggetto può scrivere solo al \textbf{suo} livello
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/multi-dbms.png}
+\end{figure}
+
+\subsubsection{Modello relazionale multilivello}
+Per ogni tupla in una relazione multilivello:
+\begin{itemize}
+    \item gli attributi chiave devono avere la \textbf{stessa classe}, altrimenti 
+    potrebbero avere valore nullo (riesco ad inferire qualcosa)
+    \item gli \textbf{attributi non chiave devono dominare gli attributi chiave}, 
+    altrimenti potrei vedere un attributo senza l'identificatore
+\end{itemize}
+
+\section{Polinstanziazione}
+La polinstanziazione consiste nella \textbf{presenza di oggetti con lo stesso nome 
+ma classifiazione diversa}; ovvero, tuple diverse con la stessa chiave ma:
+\begin{itemize}
+    \item diversa classificazione per la chiave (\textit{polyinstantiated tuples})
+    \item valori e classificazione diversi per uno o più attributi (\textit{polyinstantiated elements})
+\end{itemize}
+
+\noindent Il sistema si occuperà di fare il \textit{merge} tra le varie tuple con classificazione 
+diversa, restituendo sempre una sola tupla.
+
+
+\subsection{Polinstanziazione invisibile}
+Un soggetto a \textit{livello basso} inserisce dati in un campo che contiene già valori 
+a livello più alto; il soggetto non vede i dati già esistenti.
+
+
+\subsubsection{Esempio - Tuple polinstanziate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/poly1.png}
+\end{figure}
+
+\begin{itemize}
+    \item Un utente U vuole inserire una tupla per Ann, dato che quella già esistente non la vede 
+    \item L'inserimento di questa tupla viene permesso, dunque mi ritrovo con due tuple con lo \textbf{stesso 
+    valore per l'attributo chiave} (Ann), ma con \textbf{classificazione diversa}
+    \begin{itemize}
+        \item non può essere impedito, perché altrimenti inferisci che Ann c'è ma non la vedi (\textbf{\textit{information leakage}})
+        \item non può essere modificata la tupla già esistente (\textit{\textbf{loss of integrity}})
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Esempio - Elementi polinstanziati}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/poly2.png}
+\end{figure}
+
+\begin{itemize}
+    \item Un utente U vuole fare update del salario di Sam (dato che non lo può vedere)
+    \item Viene fatta un'altra tupla, dunque mi ritrovo con due tuple con \textbf{gli stessi valori per 
+    l'attributo chiave, ma valori diversi per attributi non chiave}
+    \begin{itemize}
+        \item l'operazione non può essere impedita (\textit{\textbf{information leakage}})
+        \item viene creata un'altra tupla perché la modifica viene fatta con una classe minore, 
+        quindi la nuova informazione è meno affidabile di quello che ho già (\textit{\textbf{loss of integrity}})
+    \end{itemize}
+    
+\end{itemize}
+
+\subsection{Polinstanziazione visibile}
+Un soggetto ad \textit{livello alto} inserisce dati in un campo che contiene già valori 
+a livello più basso; il soggetto vede i dati già esistenti.
+
+\subsubsection{Esempio - Tuple polinstanziate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/poly3.png}
+\end{figure}
+
+\begin{itemize}
+    \item Un utente S vuole modificare una tupla U 
+    \item Viene creata una nuova tupla, così che la tupla U non viene toccata (senza 
+    quindi creare un canale di inferenza) e salvando la nuova informazione
+    \begin{itemize}
+        \item L'operazione non può essere impedita, dato l'informazione S è più affidabile di quella U (\textit{\textbf{denial of service}})
+        \item La tupla esistente non può essere direttamente modificata, altrimenti gli utenti U smetterebbero di 
+        vederla e potrebbero inferire informazioni (dato che nell'update si andrebbe a cambiare anche la classe 
+        di classifiazione d a U a S) (\textit{\textbf{information leakage}})
+    \end{itemize}
+\end{itemize}
+
+
+\subsubsection{Esempio - Elementi polinstanziati}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/poly4.png}
+\end{figure}
+
+\begin{itemize}
+    \item Un utente S vuole modificare il salario di Sam che è U 
+    \item Viene fatta una nuova tupla, dove cambia il \textbf{valore e la classe di classificazione}, da 
+    U a S 
+    \begin{itemize}
+        \item come prima, non posso bloccare la richiesta (\textit{\textbf{denial of service}})
+        \item come prima, non posso modificare direttamente la tupla esistente (\textit{\textbf{information leakage}})
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Esempio di domanda all'esame}
+\textcolor{red}{Parlami della polinstanziazione.} 
+
+\noindent La polinstanziazione può essere a livello di tupla o di elemento, ed ognuna di queste 
+può essere visibile o non visibile\dots
+
+\subsection{Considerazioni}
+La polinstanziazione viene fatta perché è l'unico modo per fare ciò che viene richiesto 
+senza creare inferenza. 
+
+\noindent Tuttavia, è necessario usarla perché si è cercato di applicare la politica ad un 
+livello di granularità molto fine (elemento):
+\begin{itemize}
+    \item ho il vantaggio di avere più controllo 
+    \item ho lo svantaggio di dover ricorrere alla polinstanziazione
+\end{itemize}
+
+\noindent Tuttavia, gli svantaggi pesano più degli svantaggi, per cui tipicamente viene applicata a 
+livello di tupla e non di elemento.
+
+\subsubsection{Uso di \texttt{restricted}}
+
+\noindent Un'alternativa è quella di usare \texttt{restricted} al posto di \texttt{null} quando 
+un utente non può vedere un valore; altrimenti solo con \texttt{null} non capisco se è perché non esiste 
+o perché non lo posso vedere.
+
+\subsubsection{Cover story}
+L'aspetto positivo della polinstanziazione sono le cover story, ovvero \textit{qualcosa che ti faccio 
+vedere come vero per coprire la verità}.
+
+
+
+
+
+
+
+
 
 
 
