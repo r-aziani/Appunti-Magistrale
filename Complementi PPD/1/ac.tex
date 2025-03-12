@@ -670,6 +670,301 @@ o perché non lo posso vedere.
 L'aspetto positivo della polinstanziazione sono le cover story, ovvero \textit{qualcosa che ti faccio 
 vedere come vero per coprire la verità}.
 
+\subsection{Multilevel DBMS - Architetture}
+Possiamo aver due scenari a seconda del livello di fiducia:
+\begin{itemize}
+    \item \textbf{\textit{Mi fido di chi gestisce le informazioni:}} vengono memorizzate 
+    tutto nello stesso database, perché mi fido che i livelli di sicurezza e 
+    la politica mandatoria vengano rispettati
+    \item \textbf{\textit{Non mi fido di chi gestisce le informazioni:}} uso diversi database
+    ciascuno dei quali si occupa di gestire un determinato livello di sicurezza, per evitare di 
+    mischiare informazioni di livelli diversi; ci deve comunque essere fiducia a livello operativo,
+    che si occuperà di gestire le richieste
+\end{itemize}
+
+
+
+
+\chapter{RBAC policies}
+Le politiche basate su ruolo sono innovative rispetto a quelle tradizionali come DAC e MAC.
+
+\noindent Si passa dall'avere una tripla $(s,o,a)$ in cui si ha un singolo soggetto ad avere un gruppo 
+di soggetti; viene così introdotto il concetto di \textbf{ruolo}, ovvero un insieme di privilegi.
+\begin{itemize}
+    \item attivando un ruolo $r$, ad un utente sono concessi tutti gli accessi che sono concessi a $r$
+    \item l'idea è di avere delle autorizzazioni non sulla base della propria identità, ma sulla base 
+    del ruolo che si ricopre
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/rbac.png}
+\end{figure}
+
+\noindent Il modello è caratterizzato da tre entità:
+\begin{itemize}
+    \item utenti, ovvero le persone fisiche che possono attivare un ruolo 
+    \item ruoli, ovvero un insieme di privilegi
+    \item oggetti, ovvero le risorse a cui è possibile accedere
+\end{itemize}
+
+\noindent \underline{Nota bene:}
+\begin{itemize}
+    \item \textit{gruppo} $\rightarrow$ insieme di \textit{utenti}
+    \item \textit{ruolo} $\rightarrow$ insieme di \textit{privilegi}
+\end{itemize}
+
+\section{Gerarchia di specializzazione dei ruoli}
+
+È possibile definire una gerarchia di specializzazione sui ruoli.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/ger-ruoli.png}
+\end{figure}
+
+\noindent Questa induce una propagazione di autorizzazioni:
+\begin{itemize}
+    \item se ad un ruolo $r$ viene dato un privilegio, automaticamente 
+    viene dato anche a tutte le specializzazioni di $r$
+    \item se un utente $u$ è autorizzato ad attivare un ruolo $r$, automaticamente
+    è autorizzato ad attivare anche tutti i ruoli che sono una generalizzazione di $r$
+\end{itemize}
+
+\section{Vantaggi}
+\begin{itemize}
+    \item La \textbf{specifica delle autorizzazioni è semplificata}
+    \item La gerarchia di ruoli fa in modo di avere delle \textbf{autorizzazioni implicite} 
+    \item È possibile specificare \textbf{restrizioni sui ruoli} che un utente può attivare, come 
+    cardinalità o mutua esclusione 
+    \item Si definisce un ruolo per ogni \textit{attività nell'organizzazione}, in modo 
+    che ciascun utente abbia il \textbf{privilegio minimo}, ovvero solo i privilegi strettamente 
+    necessari 
+    \item Permette la \textbf{separazione dei compiti}
+\end{itemize}
+
+\section{Altri modelli basati su ruoli}
+Ci sono altri aspetti con l'obiettivo di estendere ancora di più 
+il potere esprissivo di questo modello:
+\begin{itemize}
+    \item vincoli sulla propagazione dei ruoli 
+    \item fare riferimento anche all'identità del soggetto; si mischia il concetto di ruolo 
+    con quello di identità 
+
+    \noindent \textit{La mia segretaria può leggere i miei file}
+    \item separazione dei compiti dinamica
+\end{itemize}
+
+\chapter{Politche amministrative}
+È necessario avere una politica amministrativa che stabilisca chi può definire e gestire 
+le autorizzazioni del sistema; ci sono due scenari:
+\begin{itemize}
+    \item \textbf{Centralizzata:} ho un unico soggetto che definisce le autorizzazioni; tipico 
+    delle politiche mandatorie 
+    \item \textbf{Ownership:} chi crea le risorse nel sistema ne diventa proprietario, e può definire 
+    su esse le autorizzazioni; a differenza del caso precedente l'amminstrazione è \textit{distribuita}.
+\end{itemize}
+
+\section{Amministrazione decentralizzata}
+L'amministrazione decentralizzata deve rispondere in modo non ambiguo ad una serie 
+di domande:
+\begin{itemize}
+    \item Si possono delegare autorizzazioni? In modo libero o con restrizioni? 
+    \item Chi può revocare autorizzazioni? 
+    \item Cosa succede alle autorizzazioni concesse da un utente a cui ho rimosso 
+    l'autorizzazione di delegare autorizzazioni?
+\end{itemize}
+
+\noindent In base a come si risponde a queste domande si otterranno delle politiche diverse; 
+da una parte sono potenti, dall'altro lato è difficile gestire tutti questi aspetti.
+
+\section{Esempio con SQL}
+In SQL è possibile creare politiche decentralizzate basate sul concetto di \textit{ownership}:
+\begin{itemize}
+    \item è possibile concedere la possibilità di delegare una autorizzazione con \texttt{grant-option}
+    \item si crea in questo modo una \textit{catena di autorizzazioni}
+    \item le autorizzazioni possono essere revocate solo da chi le ha concesse 
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/grant.opt.png}
+\end{figure}
+
+\subsection{Revoca delle amministrazioni}
+\textit{Se revoco il privilegio a qualcuno che a sua volta lo ha dato a qualcun'altro, 
+quello concesso da questo utente deve essere tolto a sua volta o deve rimanere?}
+
+\noindent Ci sono due modi diversi di operare:
+\begin{itemize}
+    \item \textbf{with cascade:} la revoca è ricorsiva; bisogna fare attenzioni ai cicli, devo sempre 
+    avere un grafo connesso
+    \item \textbf{without cascade:} significa che se voglio togliere un privilegio senza il 
+    quale un altro privilegio non potrebbe esistere, allora non è possibile fare l'operazione di 
+    revoca (prima dovrebbe essere revocato l'altro privilegio)
+\end{itemize}
+
+\subsubsection{Esempio}
+Ogni arco rappresenta una autorizzazione alla stessa risorsa con la stessa modalità 
+di accesso.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/revoke-rec.png}
+\end{figure}
+
+\newpage
+\subsubsection{Esempio con tempo}
+Originariamente su SQL la revoca era basata sul concetto di tempo (ora 
+non più).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/rev-time.png}
+\end{figure}
+
+\noindent In questo caso, Bob può dare l'autorizzazione a Frank perché
+l'istante 70 viene dopo l'istante 40 (quello della revoca).
+
+\subsection{Possibile estensione}
+Non è detto che si voglia sempre avere una revoca ricorsiva; una possibile alternativa 
+prevede di specificare chi fa la revoca come colui che dà l'autorizzazione (che viene tolta).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/rev-alt.png}
+\end{figure}
+
+\chapter{Chinese Wall}
+È il primo modello che ha introdotto il concetto di \textbf{separazione dei beni} per proteggere 
+la segretezza; 
+l'obiettivo è prevenire flussi di informazione tra entità che sono in conflitto di interesse.
+
+\noindent Gli oggetti sono organizzati gerarchicamente in tre livelli:
+\begin{itemize}
+    \item \textbf{oggetti base} che contengono informazioni da proteggere 
+    \item \textbf{company dataset}, ciascuna con i suoi oggetti base 
+    \item \textbf{classi di conflitto di interesse}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/cw.png}
+\end{figure}
+
+\section{Proprietà}
+
+\subsection{Simple security rule}
+Un soggetto $s$ può \textbf{accedere} ad un oggetto $o$ solo se:
+\begin{itemize}
+    \item $o$ è nello stesso company dataset degli altri oggetti a cui $s$ ha già acceduto 
+    \item $o$ appartiene ad una classe di conflitto di interesse diversa da quelle a cui $s$ ha già acceduto
+\end{itemize}
+
+
+\subsection{*-property}
+Un soggetto $s$ può \textbf{scrivere} un oggetto $o$ solo se:
+\begin{itemize}
+    \item l'accesso è consenito dalla simple security rule, e 
+    \item nessun oggetto può essere letto da $s$ (secondo le autorizzazioni) che:
+    \begin{itemize}
+        \item è in un company dataset diverso da quello di $o$, e 
+        \item contiene informazioni \textit{non sanitizzate}
+    \end{itemize}
+\end{itemize}
+
+\noindent Questa proprietà previene la collusione tra utenti.
+
+\subsection{Considerazioni}
+Nella pratica non è usato, si potrebbe addirittura arrivare al punto in cui il sistema diventa 
+inutilizzabile; inoltre, bisogna mantenere uno storico degli accessi.
+
+\noindent Tuttavia, è importante per l'introduzione del concetto di separazione dinamica dei compiti.
+
+\section{Separazione dei compiti}
+Il principio è quello di dividere le autorizzazioni in modo che nessun utente abbia \textbf{troppo potere} 
+in modo da poter abusare del sistema. Può essere fatta in due modi:
+\begin{itemize}
+    \item \textbf{Statica:} vengono definite in modo esplicito tutte le autorizzazioni 
+    \item \textbf{Dinamico:} di base tutti possono fare tutto, ma per determinate operazioni 
+    viene richiesto che almeno $X$ utenti siano coinvolti
+\end{itemize}
+
+
+\chapter{Espansione delle autorizzazioni nelle politiche discrezionali}
+
+Alcune possibili espansioni possono essere:
+\begin{itemize}
+    \item non definire le politiche sui singoli soggetti, ma usare \textbf{gruppi di utenti}: tutti 
+    i soggetti che appartengono ad un gruppo hanno il privilegio. Le autorizzazioni sono definite a livello 
+    di gruppo, non più sull'identità del soggetto.
+
+    \noindent Il concetto di gruppo può essere esteso anche ad oggetti e modalità di accesso.
+    \item Si introducono delle \textbf{condizioni} da soddisfare affinché l'autorizzazione sia valida; ad esempio:
+    \begin{itemize}
+        \item posso accedere solo dalla rete interna 
+        \item posso accedere solo dalle 8 alle 20
+        \item \dots
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Autorizzazioni negative}
+
+\noindent L'utilità di questa astrazione è limitata se non è possibile esprimere 
+delle \textbf{eccezioni}. Per questo motivo si possono esprimere anche \textbf{autorizzazioni 
+negative}. Ad esempio:
+\begin{itemize}
+    \item \texttt{(Employees, read, file, +)}
+    \item \texttt{(Sam, read, file, -)}
+\end{itemize}
+
+\noindent Questo può indurre ad avere \textbf{inconsistenza} nella politica di autorizzazione. Come
+dovrebbe gestirla il sistema?
+
+\section{Permessi e negazioni}
+\begin{itemize}
+    \item \textbf{Politica aperta:} tutti possono fare tutto, a meno che sia vietato in maniera esplicita 
+    \item \textbf{Politica chiusa:} nessuno può fare niente, a meno che ci sia una autorizzazione esplicita che lo permetta
+\end{itemize}
+
+\noindent Nella pratica si usanno approcci ibridi, ad esempio una autorizzazione 
+positiva a livello di gruppo ma negativa a livello di utente. 
+
+\noindent Questo porta con sé due possibili conseguenze:
+\begin{itemize}
+    \item \textbf{inconsistenza:} per un accesso c'è si + che - 
+    \item \textbf{incompletezza:} per un accesso non c'è né + né -
+    \begin{itemize}
+        \item esigere che per ogni possibile sia specificato qualcosa è \textit{too heavy}; si 
+        può risolvere usando una politica di \textbf{default}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Politiche per la risoluzione dei conflitti}
+Alcune possibile politiche possono essere:
+\begin{itemize}
+    \item \textbf{denials-take-precedence} (vince la negativa)
+    \item \textbf{most-specific-takes-precedence} (vince la più specifica)
+    \item \textbf{most-specific-along-path-takes-precedence} (tutti i percorsi che vanno verso 
+    la radice vanno considerati separatamente)
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/conflict.png}
+\end{figure}
+
+\noindent È possibile definire due classi di autorizzazioni per aiutare 
+la risoluzione dei conflitti (ad esempio nel caso una sia più specifica 
+rispetto al soggetto e una rispetto all'oggetto):
+\begin{itemize}
+    \item \textbf{strong}
+    \item \textbf{weak}
+\end{itemize}
+
+
+
+
 
 
 

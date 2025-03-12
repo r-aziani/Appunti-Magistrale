@@ -253,6 +253,28 @@ Serve per abbreviare ad esempio un termine molto complesso o lungo.
     \includegraphics[width=0.8\linewidth]{chapters/1-asm/images/par.png}
 \end{figure}
 
+\subsection{Costruttore seq}
+
+\begin{figure}[H]
+    \includegraphics[width=0.8\linewidth]{chapters/1-asm/images/seq.png}
+\end{figure}
+
+\subsection{Costruttore forall}
+
+\begin{figure}[H]
+    \includegraphics[width=0.8\linewidth]{chapters/1-asm/images/forall.png}
+\end{figure}
+
+
+\subsection{Costruttore chooose}
+\begin{figure}[H]
+    \includegraphics[width=0.8\linewidth]{chapters/1-asm/images/seq.png}
+\end{figure}
+
+\noindent Non deterministico perché scelgo una $x$ a caso tra quelle 
+che soddisfano la condizione.
+
+
 \subsection{Tutti i costruttori di regole}
 
 \begin{figure}[H]
@@ -304,13 +326,45 @@ due valori diversi nella stessa locazione).
 \end{itemize}
 
 
-\section{Rule construnctor}
+\section{Rule constructor}
 
 \begin{figure}[H]
     \includegraphics[width=0.8\linewidth]{chapters/1-asm/images/call-rule.png}
 \end{figure}
 
+\section{Riassumendo\dots}
+Una ASM è una terna $(\Sigma, A, R)$, con:
+\begin{itemize}
+    \item un vocabolario $\Sigma$
+    \item uno stato iniziale $A$ per $\Sigma$
+    \item un insieme $R$ di nomi di regole, con:
+    \begin{itemize}
+        \item un nome di regola di arietà zero, il \textit{main} (l'\textit{entry point}
+        per l'esecuzione della macchina)
+        \item una definizione di regola per ogni nome di regola
+    \end{itemize}
+\end{itemize}
 
+\noindent La semantica delle regole di transizione è data dall'insieme degli 
+aggiornamenti.
+
+
+\newpage
+\section{Esecuzione}
+La \textbf{run} (o \textbf{esecuzione}) di una ASM è definita come:
+
+\noindent Una sequenza (finita o infinita) $S_0, S_1, \dots, S_n$ di stati di $M$, dove 
+$S_0$ è lo stato iniziale e ciascun stato $S_{n+1}$ è ottenuto dallo stato precedente 
+$S_n$ eseguendo \underline{simultaneamente} tutte le regole di transizione che 
+sono eseguibili in $S_n$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapters/1-asm/images/esecuzione.png}
+\end{figure}
+
+
+\section{La riserva di una ASM}
 
 
 
