@@ -958,11 +958,17 @@ Alcune possibile politiche possono essere:
 la risoluzione dei conflitti (ad esempio nel caso una sia più specifica 
 rispetto al soggetto e una rispetto all'oggetto):
 \begin{itemize}
-    \item \textbf{strong}
-    \item \textbf{weak}
+    \item \textbf{strong}: le autorizzazioni forti non possono essere sovrascritte
+    \item \textbf{weak}: le autorizzazioni deboli possono essere annullate
 \end{itemize}
 
-
+\noindent \textbf{Altre politiche di risoluzione dei conflitti:}
+\begin{itemize}
+    \item Priorità esplicità: le autorizzazioni a priorità esplicita hanno priorità esplicite associate (difficile da gestire)
+    \item La forza posizionale delle autorizzazioni dipende dall'ordine nell'elenco delle autorizzazioni 
+    \item La forza delle autorizzazioni dipendente dal concedente dipende da chi le ha concesse 
+    \item La forza delle autorizzazioni dipendente dal tempo dipende dal momento in cui sono state concesse (esempio: vincono più recenti) 
+\end{itemize}
 
 
 
