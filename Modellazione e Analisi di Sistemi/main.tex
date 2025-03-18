@@ -34,4 +34,47 @@
 
 \include{chapters/1-asm/asm}
 
+
+\chapter{Prime tecniche di analisi}
+\section{Analisi di un modello}
+Per l'analisi di un modello si usano due approcci:
+\begin{itemize}
+    \item \textbf{Validazione:} necessaria per controllare che il
+    sistema soddisfi i requisiti richiesti
+    \item \textbf{Verifica:} necessaria per garantire proprietà
+    (safety, leaveness, assenza deadlock,
+    reachability, ecc.)
+\end{itemize}
+La validazione dovrebbe precedere la verifica per individuare errori il prima possibile
+e evitare di provare proprietà corrette su specifiche incorrette.
+
+\noindent Sono possibili due prime forme di analisi
+sul ground model:
+\begin{itemize}
+    \item Garanzia degli invarianti
+    \item Validazione tramite scenari
+\end{itemize}
+
+\subsection{Garanzia degli invarianti}
+In un modello ASM gli \textit{invarianti} sono usati per esprimere \textbf{vincoli} su funzioni e/o regole
+che devono essere garantiti in ogni stato. 
+
+\noindent In programmi AsmetaL usare gli invarianti è utile per scoprire errori di modellazione
+In generale, l'assenza di violazione di invarianti non può essere considerata una prova della correttezza del modello, mentre la violazione di
+assiomi, è prova della incorrettezza del modello
+
+\noindent Dochiarazione degli invarianti:
+\begin{itemize}
+    \item Gli invarianti vanno dichiarati subito prima della main rule
+    \item Ogni invariante è dichiarato mediante la keyword \textit{invariant} che precede il nome attribuito all'assioma
+    \item Le funzioni e regole su cui è espresso il vincolo vanno listate dopo la keyword \textit{over}
+\end{itemize}
+
+\begin{figure}[H]
+    \includegraphics[width=0.8\linewidth]{chapters/1-asm/images/axiomex.png}
+\end{figure}
+
+
+
+
 \end{document}
