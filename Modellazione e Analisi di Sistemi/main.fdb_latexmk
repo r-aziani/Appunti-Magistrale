@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1742303308.91386 "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex" "main.pdf" "main" 1742303311.3 0
-  "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex" 1742303305 2642 846dc3bb8cc391be87fb2c806217dc9a ""
+["pdflatex"] 1742305780.94832 "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex" "main.pdf" "main" 1742305783.92552 0
+  "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Modellazione e Analisi di Sistemi/main.tex" 1742305779 5281 d52206f3089ad138bd1a33dcddde9647 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1731680233 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1731681227 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1731680834 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -159,8 +159,10 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1731686946 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1731686682 3342992 0cf1a2dc9c7be7e0df8677991548346b ""
   "c:/texlive/2024/texmf.cnf" 1731686515 713 e69b156964470283e0530f5060668171 ""
-  "chapters/1-asm/asm.aux" 1742303310 4546 eda4f73d3eff6839fc4b8f7a514005c9 "pdflatex"
+  "chapters/1-asm/asm.aux" 1742305783 4546 eda4f73d3eff6839fc4b8f7a514005c9 "pdflatex"
   "chapters/1-asm/asm.tex" 1742235655 13096 69a85b62fe3784796204ad4378d7f67b ""
+  "chapters/1-asm/images/Avalla.png" 1742305512 176235 b49ef65adff6697c3afe4d26754c881e ""
+  "chapters/1-asm/images/attoreASM.png" 1742304903 62308 dbbf0a582590f5e4400b6921a4b0215f ""
   "chapters/1-asm/images/axiomex.png" 1742303225 168702 32fadf3205557655b4d61ca134114fb0 ""
   "chapters/1-asm/images/call-rule.png" 1742235655 74954 15b4b868d9950d5326d7e9252f170118 ""
   "chapters/1-asm/images/classificazione-funzioni.png" 1742235655 29840 a740e19466ad2fca4e4333098cb234e9 ""
@@ -173,12 +175,13 @@
   "chapters/1-asm/images/let.png" 1742235655 32947 7b68c0119523e4540ff5ce1b05985417 ""
   "chapters/1-asm/images/par.png" 1742235655 36748 fe5449701d59766db357d4252faddbd4 ""
   "chapters/1-asm/images/seq.png" 1742235655 77050 3cbf29f5f549cf6e28e59e36d43f25a2 ""
+  "chapters/1-asm/images/sintassiAvalla.png" 1742305592 169014 3f94ff2a7e50ae13e440c06cfe007eb6 ""
   "chapters/1-asm/images/skip.png" 1742235655 15651 c59d321ab8939c23fdfae63ad625933e ""
   "chapters/1-asm/images/stati.png" 1742235655 25791 b70dbd6920a06daa51de754717e40ebd ""
-  "main.aux" 1742303311 794 7fe0b3a55771177c68c75986af27a38f "pdflatex"
-  "main.out" 1742303311 4287 c8a79af3762282723c597229365e8de2 "pdflatex"
-  "main.tex" 1742303305 2642 846dc3bb8cc391be87fb2c806217dc9a ""
-  "main.toc" 1742303311 2795 3c14eb44ff48dd74d98b0596ec358354 "pdflatex"
+  "main.aux" 1742305783 1509 384bc20a79cd121424376f0f7a94ad89 "pdflatex"
+  "main.out" 1742305783 4490 94cec0128b170a93c38c85749b58e002 "pdflatex"
+  "main.tex" 1742305779 5281 d52206f3089ad138bd1a33dcddde9647 ""
+  "main.toc" 1742305783 3264 04b2ca9b03c83a1854bf7bcd2e073276 "pdflatex"
   (generated)
   "chapters/1-asm/asm.aux"
   "main.aux"
