@@ -1,0 +1,10 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Integrità della computazione}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Esempi}{2}{section.1.1}%
+\contentsline {subsubsection}{Esempio di una query}{2}{section*.2}%
+\contentsline {subsubsection}{Esempio di query: iniezione}{3}{section*.3}%
+\contentsline {subsubsection}{Esempio di query: drop}{3}{section*.4}%
+\contentsline {subsubsection}{Esempio di query: omissione}{4}{section*.5}%
+\contentsline {section}{\numberline {1.2}Integrità di storage e computazione}{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Approcci deterministici}{6}{chapter.2}%
