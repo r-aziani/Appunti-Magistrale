@@ -130,9 +130,66 @@ query è integro.
     \includegraphics[width=0.8\linewidth]{images/det-idea.png}
 \end{figure}
 
+\section{Approccio basato su firma}
+
+Questa tecnica si preoccupa di verificare l'integrità solo per una tipologia
+particolare di query, ovvero quelle che coinvolgono un solo attributo 
+della relazione; ad esempio $x=5, 4<x<5,\dots$ l'idea è:
+\begin{itemize}
+    \item ordinare le tuple rispetto al valore dell'attribuo preso in considerazione 
+    \item applicare una firma alle tuple, non singolarmente ma in coppie tra loro consecutive 
+    
+    $(t_1,s_1),(t_2,s_2)\dots(t_n,s_n), con s_i = \epsilon(t_i | t_{i+1})$ 
+    \item oltre ai dati, vengono date al provider anche le firme
+\end{itemize}
+
+\noindent A questo punto quando un client vuole eseguire una computazione, ad esempio 
+$a<x<b$:
+\begin{itemize}
+    \item vengono restituite le tuple (e le firme associate) $[a-1,b+1] \rightarrow$ voglio anche la tupla 
+    immediatamente precedente ed immediatamente successiva 
+    \item le \textit{cose aggiunte} al risultato vero e proprio per verificare l'integrità sono: 
+    \begin{itemize}
+        \item tuple precedente e successiva 
+        \item firme associate alle tuple 
+    \end{itemize}
+\end{itemize} 
+
+\noindent $\Rightarrow$ l'idea è che il client tramite le firme può verificare se il risultato è integro.
+
+\noindent Questo metodo non è molto utilizzato perché:
+\begin{itemize}
+    \item limitazione sulle query
+    \item costosa sia in termini di computazione delle firme, sia nei termini di informazioni 
+    aggiuntive che ti devo dare (lineare rispetto al risultato)
+\end{itemize}
 
 
+\section{Merkle hash tree}
+Questa tecnica può essere utilizzata per risolvere lo stesso tipo di query viste 
+nella sezione precedente, ma in maniera più efficiente. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/merkle-hashtree.png}
+\end{figure}
+
+L'idea è:
+\begin{itemize}
+    \item ordinare i valori dell'attributo preso in considerazione
+    \item si applica una funzione di hash alle tuple (foglie dell'albero)
+    \begin{itemize}
+        \item nel livello delle foglie ci sono $2^L$ elementi
+        \item i nodi intermedi vengono calcolati applicando la stessa funzione di hash 
+        alla concatenazione degli hash dei figli 
+
+        \noindent $\rightarrow$ l'idea è che l'hash di un nodo dipende dall'hash dei figli
+        \item se l'albero non è completo, tipicamente si aggiungono delle tuple \textit{null} per renderlo completo 
+    \end{itemize}
+\end{itemize}
+
+$\Rightarrow$ la quantità di informazioni aggiuntive non è più lineare rispetto al risultato 
+ma è \textbf{logaritmica}.
 
 
 

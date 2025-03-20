@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1742307598.62718 "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/2/query.tex" "query.pdf" "query" 1742307601.4554 0
+["pdflatex"] 1742491830.05207 "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/2/query.tex" "query.pdf" "query" 1742491832.85085 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/2/query.tex" 1742307598.1953 4643 231ff59d4f2ba0b7e571b68782ae2423 ""
+  "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/2/query.tex" 1742491826.42454 7195 350fcd71a2d41ff2bf45c9a90a93360d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -23,8 +23,12 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -159,10 +163,11 @@
   "images/ex2.png" 1742306233.93293 182248 944e6b2b8d0e930f9fdcc35c5c02edaf ""
   "images/ex3.png" 1742306292.48069 176666 57ff2a0889bdecb94564d3479adc0c3f ""
   "images/ex4.png" 1742306341.02475 165167 dc91bf0ee18e7c406b8017ae528c9bc8 ""
-  "query.aux" 1742307601.3054 1358 f692f69819b6bbb30218dce883fa5f2a "pdflatex"
-  "query.out" 1742307601.3074 681 c955bbb1bc67cee41a636115a84ba76f "pdflatex"
-  "query.tex" 1742307598.1953 4643 231ff59d4f2ba0b7e571b68782ae2423 ""
-  "query.toc" 1742307601.3074 674 4878b496fedec69bb171cbfabcb14d5b "pdflatex"
+  "images/merkle-hashtree.png" 1742465474.19172 161188 c64b03380eb6c89d489fb13d408adbf0 ""
+  "query.aux" 1742491832.65064 1601 126b4d39e33566cee95119050a3d34ad "pdflatex"
+  "query.out" 1742491832.65264 1009 b71ceac9154f97218c97d79ac1966de2 "pdflatex"
+  "query.tex" 1742491826.42454 7195 350fcd71a2d41ff2bf45c9a90a93360d ""
+  "query.toc" 1742491832.65264 835 d35a137179b95d704857dd35b17b87ee "pdflatex"
   (generated)
   "query.aux"
   "query.log"

@@ -8,3 +8,5 @@
 \contentsline {subsubsection}{Esempio di query: omissione}{4}{section*.5}%
 \contentsline {section}{\numberline {1.2}Integrità di storage e computazione}{4}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Approcci deterministici}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Approccio basato su firma}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Merkle hash tree}{7}{section.2.2}%
