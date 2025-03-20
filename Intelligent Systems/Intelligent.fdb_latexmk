@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1742238603.45881 "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Intelligent Systems/Intelligent.tex" "Intelligent.pdf" "Intelligent" 1742238605.23213 0
-  "Intelligent.aux" 1742238605 1133 086103e40fe21eb919a2a5ee6d91af66 "pdflatex"
-  "Intelligent.out" 1742238605 1184 2faec52d1340149b4d2e2df09c994135 "pdflatex"
-  "Intelligent.tex" 1742238601 4055 5a5b64854955f7495db9e95f854a49ff ""
-  "Intelligent.toc" 1742238605 534 d7c42dcd94b6279fba30466caaad59eb "pdflatex"
-  "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Intelligent Systems/Intelligent.tex" 1742238601 4055 5a5b64854955f7495db9e95f854a49ff ""
+["pdflatex"] 1742464854.20261 "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Intelligent Systems/Intelligent.tex" "Intelligent.pdf" "Intelligent" 1742464858.34227 0
+  "Intelligent.aux" 1742464857 4056 4f95bd84280b9d363d28f51c77241322 "pdflatex"
+  "Intelligent.out" 1742464857 4991 c357bc755c1c1d7d019837c768b91738 "pdflatex"
+  "Intelligent.tex" 1742464847 11631 caa5282c590a1f5d7d112c960bc24de7 ""
+  "Intelligent.toc" 1742464857 2262 19339b08587d40858d3d280c0470f008 "pdflatex"
+  "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Intelligent Systems/Intelligent.tex" 1742464847 11631 caa5282c590a1f5d7d112c960bc24de7 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1731680233 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1731681227 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1731680834 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -160,7 +160,15 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1731686946 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1731686682 3342992 0cf1a2dc9c7be7e0df8677991548346b ""
   "c:/texlive/2024/texmf.cnf" 1731686515 713 e69b156964470283e0530f5060668171 ""
+  "images/Data.png" 1742461411 336444 ae545a99d1ec6b3fbf8a2ba3d59f7087 ""
+  "images/data ghatering.png" 1742461679 150855 d1034cf4cec34bf385fd3f2b8bc1735c ""
+  "images/data missing.png" 1742464243 332369 c8fd8e56b2c8c4f357a45f13a070ea6a ""
+  "images/data wrangling.png" 1742463391 192888 0df180a821e57cd51b865d0d97938681 ""
+  "images/example 1.png" 1742461998 52858 fa78885b298178485aeb123bc0b619f2 ""
   "images/piramide.png" 1742238304 161401 aa183716fa13e12019ed3c7ca8913c29 ""
+  "images/step2.png" 1742463097 148125 fa836feda8ad975df2bb3197b6200b65 ""
+  "images/sync.png" 1742462983 305998 dfb48326a3e80d547a654139d40fb8ec ""
+  "images/unstructured data.png" 1742464830 143160 23b22586758f1421d98780de6b6271b3 ""
   (generated)
   "Intelligent.aux"
   "Intelligent.log"

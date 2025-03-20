@@ -5,3 +5,21 @@
 \contentsline {chapter}{\numberline {2}Legislation, Artificial and human learning, Gestalt, applications and opinions about AI}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Laws about AI in Europe}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Four risk levels}{4}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {3}lez 3}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}lez 4}{6}{chapter.4}%
+\contentsline {chapter}{\numberline {5}lez 5}{7}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Intelligent transportations and Vehicle to everything protocol Examples of IoT, IoT security Artificial Intelligence of Things (AIoT), HW/SW environments for IoT/AIoT}{8}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Data Gathering, Data Preprocessing, Data Harmonization for intelligent system learning}{9}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Value of Data Analytic}{9}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Data gathering - Step 1}{10}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}IoT started to generate data…}{10}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Data heterogeneity and synchronization}{11}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Data Synchronization}{11}{subsection.7.2.3}%
+\contentsline {subsubsection}{Network Time Synchronization}{11}{section*.2}%
+\contentsline {subsubsection}{Solutions}{11}{section*.3}%
+\contentsline {section}{\numberline {7.3}Data Preparation - Step 2}{12}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Data wrangling}{13}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Missing Data}{14}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Structured and unstructured Data }{15}{subsection.7.3.3}%
+\contentsline {subsubsection}{Neural networks and unstructured data}{15}{section*.4}%
+\contentsline {chapter}{\numberline {8}Managing a small dataset in Python Degrees of freedom/parameters Data Leakage}{16}{chapter.8}%
