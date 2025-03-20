@@ -236,7 +236,154 @@ All these data must be \textbf{cleaned up and organized } before data analytics/
 
 
 \chapter{Managing a small dataset in Python Degrees of freedom/parameters Data Leakage}
-Sta lez probabilmente fa lab però non ci dovrebbe essere lab preciso all'esame 
-Lo fa sul link delle slide
+Lab in Pythone, c'è codice all'esame ma non che dobbiamo fare noi da zero( però possibili domande sul codice)
+
+
+\section{Degrees of freedom /parameters of the models - Step 1 and 3}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/step 1 and 3.png}
+\end{figure}
+
+\subsection{How much data? Degree of freedom/parameters}
+\noindent In physics, the degree of freedom of a mechanical system is the number of independent parameters that define its configuration.
+
+\noindent Note: DoF is not exactly equivalent Par for complex systems, but they are strongly related.
+
+\subsection{Similitude 1}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/similitude 1.png}
+\end{figure}
+
+\subsection{Similitude 2}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/similitude 2.png}
+\end{figure}
+
+\subsection{Number of Parameters of NNs}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/nns.png}
+\end{figure}
+
+\subsection{a 1D linear model}
+\noindent We have the weight (w1) and the bias (beta)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/d1.png}
+\end{figure}
+
+\subsection{a 2D linear model}
+Now we have 3 parameters to fix
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/2d.png}
+\end{figure}
+
+\subsection{a 3D linear model}
+Increasing the number of inputs I increas the number of parameters to fix
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/3d.png}
+\end{figure}
+
+\subsection{DoF in general}
+\noindent The degrees of freedom for a given problem are the number of independent problem variables which must be specified to uniquely determine a solution.
+
+\begin{itemize}
+    \item degrees of freedom = variables - equations
+    \item database are vectors so number of data = number of vectors in our database
+\end{itemize}
+
+\subsection{In brief...}
+\begin{itemize}
+    \item The number of Par of the model (e.g., neural network) must be carfully tuned according to
+    \begin{itemize}
+        \item the size of the datasets (Number of vectors, Number of inputs)
+        \item its complexity 
+    \end{itemize}
+\end{itemize}
+
+\noindent \textbf{\textit{«Go deep» only if it is really necessary }}
+
+
+\section{Data leakage - Step 2}
+\noindent Data Leakage is responsible for the cause of invalid Machine Learning/Deep Learning model due to the over optimization of the applied model.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/step2.png}
+\end{figure}
+
+\noindent Two main topics:
+\begin{itemize}
+    \item \textbf{Missing relevant features: }For example, when we want to use a particular feature for performing Predictive Analysis, but that specific feature is 
+    not present at the time of training of dataset (Example: you want to add to your dataset the concentration of OrmonX to predict CancerZ but OrmonX is not (almost) present in the trainig dataset.)
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/cani e gatti.png}
+    \end{figure}
+    \item \textbf{Adding something more..:}When information from outside the “expected” training information in the dataset is used to create the model. This additional information can allow the model to learn or know something that it otherwise would not know and in turn invalidate the estimated performance of the model being constructed.
+    This additional learning of information by the applied model will disapprove the computed estimated generalization performance of the model, your performance estimation of the model once it will be deployed tends to be too much optimistic.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/leucemia.png}
+\end{figure}
+
+\subsection{Data Leakage can happen}
+\begin{itemize}
+    \item The Leakage of data from test dataset to training dataset
+    \item Leakage of future data into the past data
+    \item  Usage of data outside the scope of the applied algorithm
+\end{itemize}
+
+
+\noindent In brief, we have two primary sources of data leakage in Machine Learning algorithms:
+\begin{itemize}
+    \item \textbf{Feature attributes (variables are saying too much…) }
+    \item \textbf{Training data set (chunk of data used in the wrong phase) }
+\end{itemize}
+
+\subsection{Time series: a special case for Regression and Classification}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/time series.png}
+\end{figure}
+
+\noindent \textbf{Problem:} in both cases, the model can be effective is the past data is consistent 
+\begin{itemize}
+    \item \textit{training} (input to the learning method)
+    \item \textit{inference}(input to the model)
+\end{itemize}
+
+\noindent Data Leakage is observed in time-related complex datasets such as: 
+dividing time series the dataset can be an error-prone problem
+
+\subsection{Checking the presence of Data Leakage}
+Data Leakage is observed in timerelated complex datasets such as: 
+\begin{itemize}
+    \item Storage of analog observations in the form of audios and images in separate files having a defined size and timestamp
+    \item Implementation of sampling in a graphical problem is a complex task
+\end{itemize}
+
+
+\subsubsection{The cropping problem}
+\noindent The \textbf{cropping problem} is a form of data leakage that affects multiple types of datasets and applications. It occurs when a model learns patterns from cropped or contextually biased data, leading to misleadingly high performance but poor generalization.
+
+\noindent Is a form of data leakage where you cat to much or not enought information.
+
+\begin{itemize}
+    \item \textbf{Images:} A model trained to classify objects may unintentionally rely on cropped edges or artifacts from image preprocessing rather than actual object features.
+    \item \textbf{Audio: } A speech recognition model may learn background noise patterns from cropped samples instead of focusing on spoken words.
+    \item \textbf{Structured Data:} In medical diagnosis, if training data is cropped to contain only extreme cases, the model might fail on intermediate cases.
+    \item \textbf{Unstructured Data (Text):}  A sentiment analysis model trained on social media posts might learn to rely on specific truncated phrases instead of full context.
+\end{itemize}
+
+
+
 
 \end{document}

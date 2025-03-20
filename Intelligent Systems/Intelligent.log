@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  20 MAR 2025 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  20 MAR 2025 12:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,153 +549,229 @@ LaTeX Warning: No \author given.
 
 [1
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Intelligent.toc)
-\tf@toc=\write5
-\openout5 = `Intelligent.toc'.
-
-
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Intelligent.toc
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 \newpage
-              [1
+l.30 ...f Parameters of NNs}{19}{subsection.8.1.4}
+                                                  % [1
 
-]
+])
+\tf@toc=\write5
+\openout5 = `Intelligent.toc'.
+
+
+
+[2]
 Capitolo 1.
 
 
-[2
+[3
 
 ]
 Capitolo 2.
-<images/piramide.png, id=130, 268.50313pt x 163.10938pt>
+<images/piramide.png, id=205, 268.50313pt x 163.10938pt>
 File: images/piramide.png Graphic file (type png)
 <use images/piramide.png>
 Package pdftex.def Info: images/piramide.png  used on input line 66.
 (pdftex.def)             Requested size: 207.0021pt x 125.7489pt.
 
 
-[3
+[4
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-[4 <./images/piramide.png>]
+[5 <./images/piramide.png>]
 Capitolo 3.
-
-
-[5
-
-]
-Capitolo 4.
 
 
 [6
 
 ]
-Capitolo 5.
+Capitolo 4.
 
 
 [7
 
 ]
-Capitolo 6.
+Capitolo 5.
 
 
 [8
 
 ]
+Capitolo 6.
+
+
+[9
+
+]
 Capitolo 7.
-<images/Data.png, id=161, 462.72874pt x 286.57062pt>
+<images/Data.png, id=235, 462.72874pt x 286.57062pt>
 File: images/Data.png Graphic file (type png)
 <use images/Data.png>
 Package pdftex.def Info: images/Data.png  used on input line 98.
 (pdftex.def)             Requested size: 276.00105pt x 170.92923pt.
 
 
-[9
+[10
 
  <./images/Data.png>]
-<images/data ghatering.png, id=167, 378.41376pt x 215.80624pt>
+<images/data ghatering.png, id=241, 378.41376pt x 215.80624pt>
 File: images/data ghatering.png Graphic file (type png)
 <use images/data ghatering.png>
 Package pdftex.def Info: images/data ghatering.png  used on input line 112.
 (pdftex.def)             Requested size: 276.00105pt x 157.40222pt.
-<images/example 1.png, id=168, 463.7325pt x 136.00812pt>
+<images/example 1.png, id=242, 463.7325pt x 136.00812pt>
 File: images/example 1.png Graphic file (type png)
 <use images/example 1.png>
 Package pdftex.def Info: images/example 1.png  used on input line 130.
 (pdftex.def)             Requested size: 276.00105pt x 80.94969pt.
 
 
-[10 <./images/data ghatering.png> <./images/example 1.png>]
-<images/sync.png, id=175, 526.96875pt x 376.90813pt>
+[11 <./images/data ghatering.png> <./images/example 1.png>]
+<images/sync.png, id=249, 526.96875pt x 376.90813pt>
 File: images/sync.png Graphic file (type png)
 <use images/sync.png>
 Package pdftex.def Info: images/sync.png  used on input line 159.
 (pdftex.def)             Requested size: 276.00105pt x 197.41388pt.
 
 
-[11]
-<images/step2.png, id=182, 353.82187pt x 223.33438pt>
+[12]
+<images/step2.png, id=257, 353.82187pt x 223.33438pt>
 File: images/step2.png Graphic file (type png)
 <use images/step2.png>
 Package pdftex.def Info: images/step2.png  used on input line 166.
 (pdftex.def)             Requested size: 276.00105pt x 174.21715pt.
 
 
-[12 <./images/sync.png> <./images/step2.png>]
-<images/data wrangling.png, id=190, 236.38312pt x 239.39438pt>
+[13 <./images/sync.png> <./images/step2.png>]
+<images/data wrangling.png, id=264, 236.38312pt x 239.39438pt>
 File: images/data wrangling.png Graphic file (type png)
 <use images/data wrangling.png>
 Package pdftex.def Info: images/data wrangling.png  used on input line 187.
 (pdftex.def)             Requested size: 207.0021pt x 209.6449pt.
 
 
-[13 <./images/data wrangling.png>]
-<images/data missing.png, id=196, 514.92375pt x 190.21063pt>
+[14 <./images/data wrangling.png>]
+<images/data missing.png, id=270, 514.92375pt x 190.21063pt>
 File: images/data missing.png Graphic file (type png)
 <use images/data missing.png>
 Package pdftex.def Info: images/data missing.png  used on input line 220.
 (pdftex.def)             Requested size: 276.00105pt x 101.95468pt.
 
 
-[14 <./images/data missing.png>]
-<images/unstructured data.png, id=202, 481.8pt x 296.60812pt>
+[15 <./images/data missing.png>]
+<images/unstructured data.png, id=276, 481.8pt x 296.60812pt>
 File: images/unstructured data.png Graphic file (type png)
 <use images/unstructured data.png>
 Package pdftex.def Info: images/unstructured data.png  used on input line 233.
 (pdftex.def)             Requested size: 276.00105pt x 169.91924pt.
 
 
-[15 <./images/unstructured data.png>]
+[16 <./images/unstructured data.png>]
 Capitolo 8.
+<images/step 1 and 3.png, id=283, 356.83313pt x 203.76125pt>
+File: images/step 1 and 3.png Graphic file (type png)
+<use images/step 1 and 3.png>
+Package pdftex.def Info: images/step 1 and 3.png  used on input line 247.
+(pdftex.def)             Requested size: 276.00105pt x 157.61174pt.
 
 
-[16
+[17
 
-] (./Intelligent.aux)
+ <./images/step 1 and 3.png>]
+<images/similitude 1.png, id=289, 482.30188pt x 300.12125pt>
+File: images/similitude 1.png Graphic file (type png)
+<use images/similitude 1.png>
+Package pdftex.def Info: images/similitude 1.png  used on input line 258.
+(pdftex.def)             Requested size: 276.00105pt x 171.75322pt.
+<images/similitude 2.png, id=290, 500.36937pt x 276.03125pt>
+File: images/similitude 2.png Graphic file (type png)
+<use images/similitude 2.png>
+Package pdftex.def Info: images/similitude 2.png  used on input line 264.
+(pdftex.def)             Requested size: 276.00105pt x 152.2641pt.
+<images/nns.png, id=291, 479.29062pt x 282.05376pt>
+File: images/nns.png Graphic file (type png)
+<use images/nns.png>
+Package pdftex.def Info: images/nns.png  used on input line 270.
+(pdftex.def)             Requested size: 276.00105pt x 162.42065pt.
+
+
+[18 <./images/similitude 1.png> <./images/similitude 2.png>]
+<images/d1.png, id=299, 462.22687pt x 206.7725pt>
+File: images/d1.png Graphic file (type png)
+<use images/d1.png>
+Package pdftex.def Info: images/d1.png  used on input line 277.
+(pdftex.def)             Requested size: 276.00105pt x 123.46498pt.
+<images/2d.png, id=300, 446.16687pt x 248.42813pt>
+File: images/2d.png Graphic file (type png)
+<use images/2d.png>
+Package pdftex.def Info: images/2d.png  used on input line 284.
+(pdftex.def)             Requested size: 276.00105pt x 153.6789pt.
+
+
+[19 <./images/nns.png> <./images/d1.png>]
+<images/3d.png, id=307, 499.8675pt x 286.57062pt>
+File: images/3d.png Graphic file (type png)
+<use images/3d.png>
+Package pdftex.def Info: images/3d.png  used on input line 291.
+(pdftex.def)             Requested size: 276.00105pt x 158.23524pt.
+
+
+[20 <./images/2d.png> <./images/3d.png>]
+File: images/step2.png Graphic file (type png)
+<use images/step2.png>
+Package pdftex.def Info: images/step2.png  used on input line 318.
+(pdftex.def)             Requested size: 276.00105pt x 174.21715pt.
+<images/cani e gatti.png, id=315, 476.27937pt x 358.84062pt>
+File: images/cani e gatti.png Graphic file (type png)
+<use images/cani e gatti.png>
+Package pdftex.def Info: images/cani e gatti.png  used on input line 327.
+(pdftex.def)             Requested size: 276.00105pt x 207.95796pt.
+
+
+[21]
+<images/leucemia.png, id=321, 498.86375pt x 352.31625pt>
+File: images/leucemia.png Graphic file (type png)
+<use images/leucemia.png>
+Package pdftex.def Info: images/leucemia.png  used on input line 334.
+(pdftex.def)             Requested size: 276.00105pt x 194.92497pt.
+
+
+[22 <./images/cani e gatti.png> <./images/leucemia.png>]
+<images/time series.png, id=328, 476.27937pt x 184.18813pt>
+File: images/time series.png Graphic file (type png)
+<use images/time series.png>
+Package pdftex.def Info: images/time series.png  used on input line 354.
+(pdftex.def)             Requested size: 276.00105pt x 106.74205pt.
+
+
+[23 <./images/time series.png>]
+
+[24] (./Intelligent.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `Intelligent.out' has not changed.
-(rerunfilecheck)             Checksum: C357BC755C1C1D7D019837C768B91738;4991.
+(rerunfilecheck)             Checksum: 9D72E47A7E0A382B7D0087611C7215F6;7862.
  ) 
 Here is how much of TeX's memory you used:
- 22508 strings out of 473362
- 412045 string characters out of 5725050
- 800775 words of memory out of 5000000
- 45227 multiletter control sequences out of 15000+600000
+ 22616 strings out of 473362
+ 414357 string characters out of 5725050
+ 802791 words of memory out of 5000000
+ 45312 multiletter control sequences out of 15000+600000
  566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,1068b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Intelligent.pdf (17 pages, 1852309 bytes).
+ 84i,7n,93p,1068b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Intelligent.pdf (25 pages, 3896842 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
- 218 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 308 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 380 words of extra memory for PDF output out of 10000 (max. 10000000)
 
