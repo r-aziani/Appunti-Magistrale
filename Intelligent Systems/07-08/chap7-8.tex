@@ -4,7 +4,7 @@
 
 \chapter{Data Gathering, Data Preprocessing, Data Harmonization for intelligent system learning}
 
-\section{Value of Data Analytic}
+\subsubsection{Value of Data Analytic}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{07-08/images/Data.png}
@@ -18,7 +18,7 @@ Four possibility increasing the value and the difficulty:
     \item Prespective Analaytics
 \end{itemize}
 
-\section{Data gathering - Step 1}
+\section{Data gathering \textcolor{orange}{[theory]}}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{07-08/images/data ghatering.png}
@@ -44,7 +44,7 @@ Four possibility increasing the value and the difficulty:
 
 \noindent There are pubblic data centers, like Amazon's, Google's and Governative's ones
 
-\subsection{Data heterogeneity and synchronization}
+\section{Data heterogeneity and  \\ synchronization \textcolor{orange}{[theory]}}
 \noindent  Heterogeneity in statistics means that your populations, samples or results are different. It is the opposite of homogeneity which means that the, population/data/results are the same.
 Qua fa un tot di esempi  su come sia importante avere tutti i dati nello stesso formato (esempio di Marte e della NASA e della wind station)
 
@@ -72,7 +72,7 @@ Two problems:
 \end{figure}
 
 
-\section{Data Preparation - Step 2}
+\section{Data Preparation - Step 2 \textcolor{orange}{[theory]}}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{07-08/images/step2.png}
@@ -119,7 +119,7 @@ All these data must be \textbf{cleaned up and organized } before data analytics/
     \item Inconsistent data 
 \end{itemize}
 
-\subsection{Missing Data}
+\section{Missing Data \textcolor{orange}{[theory]}}
 \noindent What do we do when we have missing data? 
 \begin{itemize}
     \item \textbf{Ignoring the missing record:} is the simplest and efficient method for handling the missing data (not the best method when the number of missing values are immense or  when the missing data problem and can solved (debugging/re-designredoing the experiment) and not just ignoring the problem causing the missing data.). 
@@ -132,10 +132,17 @@ All these data must be \textbf{cleaned up and organized } before data analytics/
     \includegraphics[width=0.8\linewidth]{07-08/images/data missing.png}
 \end{figure}
 
-\subsection{Structured and unstructured Data }
-\noindent \textbf{Structured data} usually resides in relational databases, This format is eminently searchable both with human generated queries and via algorithms using type of data and field names, such as alphabetical or numeric, currency or date.
+\section{Structured and unstructured Data \textcolor{orange}{[theory]}}
 
-\noindent \textbf{Unstructured data} is essentially everything else. Unstructured data has internal structure but is not structured via pre-defined data models or schema (ex: sensor data, text files, emails, etc..).
+\begin{itemize}
+    \item \textbf{Structured data} usually resides in relational databases, This format is eminently searchable both with human generated queries and via algorithms using type of data and field names, such as alphabetical or numeric, currency or date.
+    \item \textbf{Unstructured data} is essentially everything else. Unstructured data has internal structure but is not structured via pre-defined data models or schema (ex: sensor data, text files, emails, etc..).
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{07-08/images/struct-vs-unstruct.png}
+\end{figure}
 
 \subsubsection{Neural networks and unstructured data}
 \noindent It is not strictly compulsory to have structured data to use ML 
@@ -148,10 +155,10 @@ All these data must be \textbf{cleaned up and organized } before data analytics/
 
 
 \chapter{Managing a small dataset in Python Degrees of freedom/parameters Data Leakage}
-Lab in Pythone, c'è codice all'esame ma non che dobbiamo fare noi da zero( però possibili domande sul codice)
+Lab in Pythone, c'è codice all'esame ma non che dobbiamo fare noi da zero (però possibili domande sul codice)
 
 
-\section{Degrees of freedom /parameters of the models - Step 1 and 3}
+\section{Degrees of freedom /parameters of the models - Step 1 and 3 \textcolor{orange}{[theory]}}
 
 
 \begin{figure}[H]
@@ -189,6 +196,7 @@ Lab in Pythone, c'è codice all'esame ma non che dobbiamo fare noi da zero( per�
     \includegraphics[width=0.8\linewidth]{07-08/images/d1.png}
 \end{figure}
 
+\newpage
 \subsection{a 2D linear model}
 Now we have 3 parameters to fix
 \begin{figure}[H]
@@ -223,7 +231,7 @@ Increasing the number of inputs I increas the number of parameters to fix
 \noindent \textbf{\textit{«Go deep» only if it is really necessary }}
 
 
-\section{Data leakage - Step 2}
+\section{Data leakage - Step 2 \textcolor{orange}{[theory]}}
 \noindent Data Leakage is responsible for the cause of invalid Machine Learning/Deep Learning model due to the over optimization of the applied model.
 \begin{figure}[H]
     \centering

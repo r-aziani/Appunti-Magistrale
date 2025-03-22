@@ -278,6 +278,7 @@ INPUT Intelligent.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 OUTPUT Intelligent.toc
 INPUT ./01/chap1.tex
 INPUT ./01/chap1.tex
@@ -285,7 +286,6 @@ OUTPUT 01/chap1.aux
 INPUT ./01/chap1.tex
 INPUT ./01/chap1.tex
 INPUT 01/chap1.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -297,6 +297,17 @@ INPUT ./01/images/word-embeddings.png
 INPUT ./01/images/word-embeddings.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT ./01/images/dat-knowledge spectrum.png
+INPUT ./01/images/dat-knowledge spectrum.png
+INPUT ./01/images/dat-knowledge spectrum.png
+INPUT ./01/images/dat-knowledge spectrum.png
+INPUT ./01/images/dat-knowledge spectrum.png
+INPUT ./01/images/use-case.png
+INPUT ./01/images/use-case.png
+INPUT ./01/images/use-case.png
+INPUT ./01/images/use-case.png
+INPUT ./01/images/use-case.png
 INPUT ./02/chap2.tex
 INPUT ./02/chap2.tex
 OUTPUT 02/chap2.aux
@@ -350,6 +361,11 @@ INPUT ./07-08/images/data missing.png
 INPUT ./07-08/images/data missing.png
 INPUT ./07-08/images/data missing.png
 INPUT ./07-08/images/data missing.png
+INPUT ./07-08/images/struct-vs-unstruct.png
+INPUT ./07-08/images/struct-vs-unstruct.png
+INPUT ./07-08/images/struct-vs-unstruct.png
+INPUT ./07-08/images/struct-vs-unstruct.png
+INPUT ./07-08/images/struct-vs-unstruct.png
 INPUT ./07-08/images/unstructured data.png
 INPUT ./07-08/images/unstructured data.png
 INPUT ./07-08/images/unstructured data.png
@@ -424,6 +440,7 @@ INPUT ./Intelligent.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
