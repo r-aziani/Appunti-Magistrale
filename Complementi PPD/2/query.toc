@@ -9,4 +9,18 @@
 \contentsline {section}{\numberline {1.2}Integrità di storage e computazione}{4}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Approcci deterministici}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Approccio basato su firma}{6}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Merkle hash tree}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Merkle hash tree}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Merkle hash tree verification}{8}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Merkle B-tree}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Skip list}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Search operation}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Authenticated skip list}{12}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Approcci probabilistici}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduzione}{13}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Fake tuples}{13}{subsection.3.1.1}%
+\contentsline {subsubsection}{Approccio random}{13}{section*.6}%
+\contentsline {subsubsection}{Approccio determinstico}{14}{section*.7}%
+\contentsline {subsection}{\numberline {3.1.2}Duplicazione di tuple}{15}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Computazione con provider multipli}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Approccio probabilistico per query di join}{15}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}On-the-fly encryption}{16}{subsection.3.3.1}%
