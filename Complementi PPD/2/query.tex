@@ -393,17 +393,18 @@ meno è fidata \dots devo verificare il risultato che viene restituito.
 Questo tipo di query è quello tipicamente più costoso; le tecniche di protezione 
 sono:
 \begin{itemize}
-    \item \textbf{dati criptati}
-    \item \textbf{markers} (tuple fake)
-    \item \textbf{twins} (tuple duplicate)
-    \item \textbf{salts/buckets} per ottenere occorrenze \textit{flattened}
+    \item \textbf{dati criptati}: proteggo i dati criptandoli perché non mi fido dell'entità che esegue la computazione
+    \item \textbf{markers} (tuple fake): prima di consegnarli aggiungo tuple fasulle
+    \item \textbf{twins} (tuple replicate): prima di consegnarli replico alcune tuple
+    \item \textbf{salts/buckets}: voglio evitare che chi prende i miei dati (a cui ho aggiunto le informazioni di controllo)
+    non deve essere in grado di distinguere le informazioni di controllo dai dati veri e propri
 \end{itemize}
 
 
-L'idea è:
+\noindent L'idea è:
 \begin{itemize}
     \item ho due storage server che sono fidati e che hanno in mano i dati veri e propri
-    \item ciascune dei due server mettono dentro \textit{markers} e \textit{twins}
+    \item ciascuno dei due server mette dentro \textit{markers} e \textit{twins}
     \item criptano i dati e li danno a \textit{qualcun'alro (computational cloud)}, che non è più 
     grado di distinguere i dati veri da quelli spuri
     \item viene fatta la operazione di join 
@@ -417,8 +418,245 @@ L'idea è:
 \end{figure}
 
 \subsection{On-the-fly encryption}
-La relazione criptata contiene due campi:
-mmmmh
+Devo criptare separatamente ogni attributo di join per proteggerli (gli altri attributi 
+al computational cloud non interessano\dots anche se li cripto tutti insieme va bene lo stesso).
+
+\noindent Il client genera la chiave di criptazione che viene comunicata agli storage server tramite il 
+computational cloud; gli storage server utilizzano questa chiave per criptare separatamente:
+\begin{itemize}
+    \item attributo di join 
+    \item tutti gli altri attributi 
+\end{itemize}
+
+\noindent Danno queste relazioni criptate al computational cloud che computerà il join 
+(è importante affinché il computational cloud possa eseguire il join che i server usino la stessa chiave).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/otf1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/otf2.png}
+\end{figure}
+
+
+
+\subsection{Markers}
+
+Gli storage server iniettano delle tuple fasulle; dato poi il computational cloud lavora sul criptato, non 
+mi devo neanche preoccupare di generare delle tuple \textit{simili al vero}.
+
+\noindent Tuttavia, per gli attributi di join il valore deve essere generato con attenzione, perché 
+voglio evitare che tuple fasulle si combinino con tuple vere; devo avere la garanzia che 
+quel valore possa essere un valore reale per l'attributo di join.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/marker1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/marker2.png}
+\end{figure}
+
+
+\noindent Ad esempio, per avere certezza che non ci sia mai questa collisione, potrei:
+\begin{itemize}
+    \item combinare i valori veri con un certo $v$
+    \item combinare i valori fasulli con un valore distinto $v'$
+\end{itemize}
+
+\noindent Devo sostanzialmente inventarmi un qualunque meccanismo che mi assicuri che non ci sia collisione.
+
+\subsection{Twins}
+
+Gli storage server (senza coordinarsi, neanche si conoscono \dots) duplicano alcune tuple;
+il problema è: \textit{quali tuple vado a duplicare?}
+
+\noindent Gli storage server devono duplicare le tuple in modo tale che queste tuple si combinino 
+correttamente durante la operazione di join; mi devo trovare queste tuple duplicate nel risultato del join, 
+altrimenti non avrebbe senso.
+
+$\Rightarrow$ \textbf{devono duplicare le tuple con lo stesso attributo di join}
+
+\noindent L'unico modo per avere 
+questa garanzia senza che i server comunichino tra loro, il client comunica quali tuple devono essere 
+duplicate; ad esempio, tutte le tuple che soddisfano una certa condizione che dipende dall'attributo di join).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/twins1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/twins1.png}
+\end{figure}
+
+
+
+\subsection{Salts and buckets}
+
+Cercano di eliminare le \textbf{frequenze riconoscibili} delle combinazioni in 
+join \textit{one-to-many}. 
+
+\noindent Il problema sta nella tabella con molte tuple (\textit{many}):
+\begin{itemize}
+    \item se una tupla ha 1 sola occorrenza, potrei inferire che si tratta di un marker, dato che vengono 
+    generati con valori (per l'attributo di join) sempre diversi per evitare collisioni (non ho la certezza, ma 
+    sospetta che possa essere un marker)
+    \item se ho tuple con lo stesso valore ripetuto per l'attributo di join, allora inferisco che sicuramente non 
+    sono marker; non possono nemmeno essere twins perchè vanno sempre a coppie (multipli di 2); quindi capisco che sono tuple vere
+\end{itemize}
+
+
+\noindent Questi attacchi sfruttano la frequenza con cui appaiono i valori degli attributi di join; 
+per evitarli si cerca di appiattire queste frequenze, ovvero tutti i valori possibili appaiono tutti con la medesima 
+frequenza; viene fatto in due modi:
+\begin{itemize}
+    \item \textbf{Sali:} si combinano i valori dell'attributo di join con un valore casuale
+    \begin{itemize}
+        \item ha lo svantaggio che la tabella \textit{one} aumenta di dimensione per appiattire la frequenza delle occorrenze
+        \item ha il vantaggio che la dimensione del risultato del join rimane invariata
+    \end{itemize}
+    \item \textbf{Bucket:} creo dei gruppi di tuple, dove tutte le tuple appartenenti ad un bucket 
+    hanno lo stesso valore per l'attributo di join
+    \begin{itemize}
+        \item devo aggiungere delle tuple \textit{dummy} nella tabella \textit{many} per ottenere 
+        la dei gruppi con dimensione uniforme 
+        \item i join non saranno $(1:1)$ ma saranno tutti con la stessa frequenza, quindi non posso inferire nulla 
+        \item lo svantaggio è che aumenta la dimensione sia della tabella \textit{many} che del risultato del join 
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/salt1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/salt2.png}
+\end{figure}
+
+\noindent Le tecniche di \textit{salt} e \textit{bucket} possono essere 
+usate sia singolarmente che in combinazione.
+
+
+\subsection{Valutazione delle query}
+
+Il client:
+\begin{itemize}
+    \item parla con colui che esegue la query (computational cloud), non con i server; gli manda 
+    la richiesta di join e quali sono i server da coinvolgere 
+    \item tra le varie informazioni che il client manda al cloud, ci sono:
+    \begin{enumerate}
+        \item Sotto-query che ciascun server deve eseguire sulla sua tabella
+        
+        \texttt{SELECT * FROM L, R}
+        
+        \texttt{WHERE L.Name = R.Name and \hl{L.Stipendio > 1000}}
+
+        \item Chiave di criptazione della query
+        \item Numero di marker da iniettare
+        \item Percentuale di twins 
+        \item Numero di sali da utilizzare
+    \end{enumerate}
+
+    \noindent Tutte queste informazioni protette vengono criptate con la chiave pubblica degli storage server per passarle al cloud (\textit{honest-but-curious}).
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/join-execution.png}
+\end{figure}
+
+\subsection{Markers e twins: garanzia dell'integrità}
+
+I markers e twins offrono una protezione complementare; senza la loro combinazione potrebbero 
+rimanere scoperti alcuni casi estremi:
+\begin{itemize}
+    \item i \textbf{twins sono efficaci il doppio}, ma perdono la loro efficacia quando il computational cloud 
+    omette una grande parte delle tuple (caso estremo: omette tutte le tuple)
+    \begin{itemize}
+        \item \textit{se butto via poco, mi proteggono bene i twins perché dovrei avere la fortuna di buttare via entrambi i twins}
+    \end{itemize}
+    \item i \textbf{markers permettono di rilevare casi estremi}
+\end{itemize}
+
+\section{Semi-join}
+Protegge il join:
+\begin{itemize}
+    \item senza introdurre salts e buckets 
+    \item supporta \textit{one-to-one, one-to-many, many-to-many}
+\end{itemize}
+
+Dato che il problema è la frequenza delle occorrenze dei valori di join, si proietta tutto su 
+di essi: 
+\begin{enumerate}
+    \item \texttt{SELECT Name WHERE I=A}
+    \item \texttt{SELECT DoB WHERE I=A}
+    \item si fa il \textit{merge} dei risultati ottenuti 
+\end{enumerate}
+
+\noindent Proiettando tutto sull'attributo di join, avrò solo una occorrenza 
+dei valori di join; in questo modo sto automaticamente appiattendo le frequenze.
+\begin{itemize}
+    \item Ha il vantaggio di non aumentare la dimensione delle tabelle 
+    \item Ha lo svantaggio che il client deve si prende in carica contattare i server e 
+    di calcolare i risultati; non gli viene dato già pronto
+\end{itemize}
+
+
+
+\section{Computational cloud distribuito}
+Il computational cloud non è un'unica entità, ma in questo scenario è distribuito; ci sono più nodi, 
+ciascuno prende una parte della relazione per computare la sua parte, ed infine il risultato 
+viene messo insieme.
+
+\noindent  il problema è verificare se il risultato ottenuto combinando i risultati parziali 
+va bene o no
+
+$\Rightarrow$ \textbf{ho il problema di come distribuire le informazioni di controllo}
+
+\subsection{MapReduce}
+
+È un framework distribuito con più nodi (\textit{workers}) basato su due funzioni:
+\begin{itemize}
+    \item \textbf{Map:} definita lato client, ha l'obiettivo di trasformare i dati su cui vogliamo eseguire una computazioni in un insieme di coppie 
+    \begin{itemize}
+        \item il primo campo è una chiave 
+        \item il secondo campo è il valore
+    \end{itemize}
+    \item \textbf{Assignement:} una funzione di assegnamento che assegna delle coppie ai workers; le coppie con la stessa 
+    chiave appartengono allo stesso worker
+    \item \textbf{Reduce:} funzione eseguita da ciascun worker che produce il risultato parziale
+\end{itemize}
+
+
+\noindent Ogni worker esegue la sua funzione di reduce; successivamente, il \textit{manager} combina i vari risultati parziali 
+per ottenere il risultato finale.
+
+\subsection{On-the-fly encryption}
+Dato che non ci fidiamo del computational cloud, 
+vengono create delle coppie criptate, dove:
+\begin{itemize}
+    \item la chiave è il valore dell'attributo criptato 
+    \item il valore è il nome della relazione a cui appartiene 
+\end{itemize}
+
+
+\subsection{Markers and MapReduce}
+
+
+
+
+
+
+
 
 
 
