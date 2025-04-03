@@ -1,0 +1,70 @@
+\chapter{Composizione di modelli: ASM multi agenti}
+\noindent Grazie alle regole per la strutturazione, è possibile definire un sistema distribuito
+come una composizione di ASM.
+\begin{itemize}
+    \item Ogni componente del sistema distribuito viene
+    modellato mediante una opportuna ASM
+    \item Risulta un sistema di ASM Distribuite, dette anche \textbf{ASM multi agenti}
+\end{itemize}
+
+\section{ASM multi agenti}
+\noindent Descrivono un modello distribuito della computazione. La computazione distribuita è modellata
+mediante un insieme di Agenti che operano in modo concorrente
+\begin{itemize}
+    \item \textit{Movimenti} concorrenti sincroni/asincroni
+    \item \textit{Stati globali} condivisi tra gli agenti
+\end{itemize}
+
+\noindent Gli agenti ASM:
+\begin{itemize}
+    \item Possono essere creati dinamicamente
+    \item Hanno una visione parziale dello stato globale
+    \item Hanno il proprio programma da eseguire
+\end{itemize}
+
+\noindent Le ASM multi agenti sono classificate in:
+\begin{itemize}
+    \item \textbf{Sincrone:} gli agenti eseguono il loro programma in parallelo, sincronizzati su un implicito clock globale del sistema
+    \item \textbf{Asincrone:} gli agenti eseguono il loro programma in parallelo, ma in modo indipendente tra loro 
+    \begin{itemize}
+        \item Ciascuno ha il \textit{proprio clock} che regola la durata du una mossa
+        \item Ciascuno opera nel \textit{proprio stato locale}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Definizione ASM multiagente:}
+\noindent 
+\begin{center}
+    \textit{Una sync/async ASM è un insieme di coppie (a, ASM(a)) dove
+    \begin{itemize}
+        \item di agenti a $\in$ Agent (il dominio degli agenti)
+        \item e programmi ASM(a) che sono ASM di base
+    \end{itemize}}
+\end{center}
+
+\subsection{Codifica AsmetaL di ASM Multiagenti}
+\begin{center}
+    $[asyncr] asm ASM-name$
+\end{center}
+\noindent a parola chiave asyncr è opzionale(perchè racchiusa nelle parentesi quadre)
+\begin{itemize}
+    \item Se presente, denota una ASM \textit{asincrona} multi-agent
+    \item Se omessa, l’ASM è considerata \textit{sincrona} multi-agent
+\end{itemize}
+
+\begin{itemize}
+    \item Ogni agente ha una \textit{visione parziale} dello stato globale
+    \begin{itemize}
+        \item \textit{View(a, M)} indica la vista dell’agente a dello
+        stato globale di una ASM M
+    \end{itemize}
+    \item Ogni agente può avere una \textit{visione privata} non condivisa con altri agenti
+    \begin{itemize}
+        \item per una $f : A-> B$ globale, la dichiarazione privata di f diventa $ f : Agent$ x $A->B$ 
+        \begin{itemize}
+            \item f(self,x) denota la \textit{verisone privata di f(x)} dell'agente corrente \textit{self}
+        \end{itemize}
+        \item \textit{self} viene interpretata da \textit{a} (agente) come se stesso
+    \end{itemize}
+\end{itemize}
+

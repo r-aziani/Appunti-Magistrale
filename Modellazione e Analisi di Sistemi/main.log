@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  18 MAR 2025 14:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  3 APR 2025 10:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -484,7 +484,7 @@ Package: listings 2024/09/23 1.10c (Carsten Heinz)
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count334
 \l__pdf_internal_box=\box69
-) (./main.aux (./chapters/1-asm/asm.aux))
+) (./main.aux (./chapters/1-asm/asm.aux) (./chapters/3/asm3.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -563,168 +563,183 @@ l.33 \newpage
               [1
 
 ]
+
+[2]
 \openout2 = `chapters/1-asm/asm.aux'.
 
  (./chapters/1-asm/asm.tex
 Capitolo 1.
-<chapters/1-asm/images/stati.png, id=164, 911.405pt x 172.645pt>
+<chapters/1-asm/images/stati.png, id=189, 911.405pt x 172.645pt>
 File: chapters/1-asm/images/stati.png Graphic file (type png)
 <use chapters/1-asm/images/stati.png>
 Package pdftex.def Info: chapters/1-asm/images/stati.png  used on input line 19.
 (pdftex.def)             Requested size: 276.00105pt x 52.28123pt.
 
 
-[2
+[3
 
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./chapters/1-asm/images/stati.png>]
-<chapters/1-asm/images/fsm-asm2.png, id=176, 1106.1325pt x 645.41125pt>
+<chapters/1-asm/images/fsm-asm2.png, id=200, 1106.1325pt x 645.41125pt>
 File: chapters/1-asm/images/fsm-asm2.png Graphic file (type png)
 <use chapters/1-asm/images/fsm-asm2.png>
 Package pdftex.def Info: chapters/1-asm/images/fsm-asm2.png  used on input line 48.
 (pdftex.def)             Requested size: 317.39937pt x 185.19484pt.
-<chapters/1-asm/images/comp-asm.png, id=177, 1110.1475pt x 599.23875pt>
+<chapters/1-asm/images/comp-asm.png, id=201, 1110.1475pt x 599.23875pt>
 File: chapters/1-asm/images/comp-asm.png Graphic file (type png)
 <use chapters/1-asm/images/comp-asm.png>
 Package pdftex.def Info: chapters/1-asm/images/comp-asm.png  used on input line 55.
 (pdftex.def)             Requested size: 317.39937pt x 171.3243pt.
 
 
-[3 <./chapters/1-asm/images/fsm-asm2.png> <./chapters/1-asm/images/comp-asm.png>]
-
-[4]
+[4 <./chapters/1-asm/images/fsm-asm2.png> <./chapters/1-asm/images/comp-asm.png>]
 
 [5]
 
 [6]
-<chapters/1-asm/images/ex1.png, id=209, 795.97375pt x 206.7725pt>
+
+[7]
+<chapters/1-asm/images/ex1.png, id=233, 795.97375pt x 206.7725pt>
 File: chapters/1-asm/images/ex1.png Graphic file (type png)
 <use chapters/1-asm/images/ex1.png>
 Package pdftex.def Info: chapters/1-asm/images/ex1.png  used on input line 211.
 (pdftex.def)             Requested size: 276.00105pt x 71.69626pt.
-<chapters/1-asm/images/classificazione-funzioni.png, id=210, 430.60875pt x 301.125pt>
+<chapters/1-asm/images/classificazione-funzioni.png, id=234, 430.60875pt x 301.125pt>
 File: chapters/1-asm/images/classificazione-funzioni.png Graphic file (type png)
 <use chapters/1-asm/images/classificazione-funzioni.png>
 Package pdftex.def Info: chapters/1-asm/images/classificazione-funzioni.png  used on input line 235.
 (pdftex.def)             Requested size: 241.49895pt x 168.88155pt.
-<chapters/1-asm/images/skip.png, id=211, 345.29pt x 184.69pt>
+<chapters/1-asm/images/skip.png, id=235, 345.29pt x 184.69pt>
 File: chapters/1-asm/images/skip.png Graphic file (type png)
 <use chapters/1-asm/images/skip.png>
 Package pdftex.def Info: chapters/1-asm/images/skip.png  used on input line 240.
 (pdftex.def)             Requested size: 137.9979pt x 73.81268pt.
 
 
-[7 <./chapters/1-asm/images/ex1.png> <./chapters/1-asm/images/classificazione-funzioni.png>]
-<chapters/1-asm/images/let.png, id=218, 715.67375pt x 186.6975pt>
+[8 <./chapters/1-asm/images/ex1.png> <./chapters/1-asm/images/classificazione-funzioni.png>]
+<chapters/1-asm/images/let.png, id=242, 715.67375pt x 186.6975pt>
 File: chapters/1-asm/images/let.png Graphic file (type png)
 <use chapters/1-asm/images/let.png>
 Package pdftex.def Info: chapters/1-asm/images/let.png  used on input line 247.
 (pdftex.def)             Requested size: 276.00105pt x 71.99982pt.
-<chapters/1-asm/images/par.png, id=219, 794.97pt x 170.6375pt>
+<chapters/1-asm/images/par.png, id=243, 794.97pt x 170.6375pt>
 File: chapters/1-asm/images/par.png Graphic file (type png)
 <use chapters/1-asm/images/par.png>
 Package pdftex.def Info: chapters/1-asm/images/par.png  used on input line 253.
 (pdftex.def)             Requested size: 276.00105pt x 59.24232pt.
-<chapters/1-asm/images/seq.png, id=220, 765.86125pt x 412.54124pt>
+<chapters/1-asm/images/seq.png, id=244, 765.86125pt x 412.54124pt>
 File: chapters/1-asm/images/seq.png Graphic file (type png)
 <use chapters/1-asm/images/seq.png>
 Package pdftex.def Info: chapters/1-asm/images/seq.png  used on input line 259.
 (pdftex.def)             Requested size: 276.00105pt x 148.6721pt.
-<chapters/1-asm/images/forall.png, id=221, 786.94pt x 222.8325pt>
+<chapters/1-asm/images/forall.png, id=245, 786.94pt x 222.8325pt>
 File: chapters/1-asm/images/forall.png Graphic file (type png)
 <use chapters/1-asm/images/forall.png>
 Package pdftex.def Info: chapters/1-asm/images/forall.png  used on input line 265.
 (pdftex.def)             Requested size: 276.00105pt x 78.15234pt.
 
 
-[8 <./chapters/1-asm/images/skip.png> <./chapters/1-asm/images/let.png> <./chapters/1-asm/images/par.png> <./chapters/1-asm/images/seq.png>]
-File: chapters/1-asm/images/seq.png Graphic file (type png)
-<use chapters/1-asm/images/seq.png>
-Package pdftex.def Info: chapters/1-asm/images/seq.png  used on input line 271.
-(pdftex.def)             Requested size: 276.00105pt x 148.6721pt.
-<chapters/1-asm/images/costruttori.png, id=230, 811.03pt x 470.75874pt>
+[9 <./chapters/1-asm/images/skip.png> <./chapters/1-asm/images/let.png> <./chapters/1-asm/images/par.png> <./chapters/1-asm/images/seq.png>]
+<chapters/1-asm/images/choose.png, id=254, 791.95876pt x 183.68625pt>
+File: chapters/1-asm/images/choose.png Graphic file (type png)
+<use chapters/1-asm/images/choose.png>
+Package pdftex.def Info: chapters/1-asm/images/choose.png  used on input line 271.
+(pdftex.def)             Requested size: 276.00105pt x 64.01646pt.
+<chapters/1-asm/images/costruttori.png, id=255, 811.03pt x 470.75874pt>
 File: chapters/1-asm/images/costruttori.png Graphic file (type png)
 <use chapters/1-asm/images/costruttori.png>
 Package pdftex.def Info: chapters/1-asm/images/costruttori.png  used on input line 282.
 (pdftex.def)             Requested size: 345.0pt x 200.26018pt.
 
 
-[9 <./chapters/1-asm/images/forall.png>]
-
-[10 <./chapters/1-asm/images/costruttori.png>]
-<chapters/1-asm/images/call-rule.png, id=241, 817.0525pt x 411.5375pt>
+[10 <./chapters/1-asm/images/forall.png> <./chapters/1-asm/images/choose.png> <./chapters/1-asm/images/costruttori.png>]
+<chapters/1-asm/images/call-rule.png, id=263, 817.0525pt x 411.5375pt>
 File: chapters/1-asm/images/call-rule.png Graphic file (type png)
 <use chapters/1-asm/images/call-rule.png>
 Package pdftex.def Info: chapters/1-asm/images/call-rule.png  used on input line 332.
 (pdftex.def)             Requested size: 276.00105pt x 139.01665pt.
 
 
-[11 <./chapters/1-asm/images/call-rule.png>]
-<chapters/1-asm/images/esecuzione.png, id=247, 644.4075pt x 246.9225pt>
+[11]
+
+[12 <./chapters/1-asm/images/call-rule.png>]
+<chapters/1-asm/images/esecuzione.png, id=274, 644.4075pt x 246.9225pt>
 File: chapters/1-asm/images/esecuzione.png Graphic file (type png)
 <use chapters/1-asm/images/esecuzione.png>
 Package pdftex.def Info: chapters/1-asm/images/esecuzione.png  used on input line 363.
 (pdftex.def)             Requested size: 276.00105pt x 105.76015pt.
 )
 
-[12 <./chapters/1-asm/images/esecuzione.png>]
+[13 <./chapters/1-asm/images/esecuzione.png>]
 Capitolo 2.
-<chapters/1-asm/images/axiomex.png, id=254, 644.4075pt x 354.32375pt>
+<chapters/1-asm/images/axiomex.png, id=280, 644.4075pt x 354.32375pt>
 File: chapters/1-asm/images/axiomex.png Graphic file (type png)
 <use chapters/1-asm/images/axiomex.png>
 Package pdftex.def Info: chapters/1-asm/images/axiomex.png  used on input line 74.
 (pdftex.def)             Requested size: 276.00105pt x 151.76152pt.
 
 
-[13
+[14
 
 
 
 ]
-<chapters/1-asm/images/attoreASM.png, id=259, 367.87437pt x 319.1925pt>
+<chapters/1-asm/images/attoreASM.png, id=285, 367.87437pt x 319.1925pt>
 File: chapters/1-asm/images/attoreASM.png Graphic file (type png)
 <use chapters/1-asm/images/attoreASM.png>
 Package pdftex.def Info: chapters/1-asm/images/attoreASM.png  used on input line 96.
 (pdftex.def)             Requested size: 172.5pt x 149.67468pt.
 
 
-[14 <./chapters/1-asm/images/axiomex.png>]
-<chapters/1-asm/images/Avalla.png, id=266, 507.8975pt x 325.71687pt>
+[15 <./chapters/1-asm/images/axiomex.png>]
+<chapters/1-asm/images/Avalla.png, id=292, 507.8975pt x 325.71687pt>
 File: chapters/1-asm/images/Avalla.png Graphic file (type png)
 <use chapters/1-asm/images/Avalla.png>
 Package pdftex.def Info: chapters/1-asm/images/Avalla.png  used on input line 132.
 (pdftex.def)             Requested size: 276.00105pt x 177.0077pt.
 
 
-[15 <./chapters/1-asm/images/attoreASM.png>]
-<chapters/1-asm/images/sintassiAvalla.png, id=274, 525.965pt x 310.66063pt>
+[16 <./chapters/1-asm/images/attoreASM.png>]
+<chapters/1-asm/images/sintassiAvalla.png, id=300, 525.965pt x 310.66063pt>
 File: chapters/1-asm/images/sintassiAvalla.png Graphic file (type png)
 <use chapters/1-asm/images/sintassiAvalla.png>
 Package pdftex.def Info: chapters/1-asm/images/sintassiAvalla.png  used on input line 137.
 (pdftex.def)             Requested size: 276.00105pt x 163.02342pt.
 
 
-[16 <./chapters/1-asm/images/Avalla.png> <./chapters/1-asm/images/sintassiAvalla.png>] (./main.aux (./chapters/1-asm/asm.aux))
+[17 <./chapters/1-asm/images/Avalla.png> <./chapters/1-asm/images/sintassiAvalla.png>]
+\openout2 = `chapters/3/asm3.aux'.
+
+ (./chapters/3/asm3.tex
+Capitolo 3.
+
+
+[18
+
+
+])
+
+[19] (./main.aux (./chapters/1-asm/asm.aux) (./chapters/3/asm3.aux))
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 94CEC0128B170A93C38C85749B58E002;4490.
+(rerunfilecheck)             Checksum: 0A0C1558C103FADBF512874768010F1B;5352.
  ) 
 Here is how much of TeX's memory you used:
- 22628 strings out of 473362
- 416444 string characters out of 5725050
- 804105 words of memory out of 5000000
- 45319 multiletter control sequences out of 15000+600000
+ 22672 strings out of 473362
+ 417596 string characters out of 5725050
+ 805506 words of memory out of 5000000
+ 45348 multiletter control sequences out of 15000+600000
  565826 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,503b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,6n,93p,503b,586s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (17 pages, 1173412 bytes).
+Output written on main.pdf (20 pages, 1203777 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 330 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 380 PDF objects out of 1000 (max. 8388607)
+ 299 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 367 words of extra memory for PDF output out of 10000 (max. 10000000)
 
