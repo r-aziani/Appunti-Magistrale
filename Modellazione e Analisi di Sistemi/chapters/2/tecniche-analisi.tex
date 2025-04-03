@@ -1,4 +1,5 @@
 \chapter{Prime tecniche di analisi}
+
 \section{Analisi di un modello}
 Per l'analisi di un modello si usano due approcci:
 \begin{itemize}
@@ -18,23 +19,30 @@ sul ground model:
     \item Validazione tramite scenari
 \end{itemize}
 
-\subsection{Garanzia degli invarianti}
-In un modello ASM gli \textit{invarianti} sono usati per esprimere \textbf{vincoli} su funzioni e/o regole
-che devono essere garantiti in ogni stato. 
-
-\noindent In programmi AsmetaL usare gli invarianti è utile per scoprire errori di modellazione
-In generale, l'assenza di violazione di invarianti non può essere considerata una prova della correttezza del modello, mentre la violazione di
-assiomi, è prova della incorrettezza del modello
-
-\noindent Dochiarazione degli invarianti:
+\subsection{Uso degli invarianti}
 \begin{itemize}
-    \item Gli invarianti vanno dichiarati subito prima della main rule
-    \item Ogni invariante è dichiarato mediante la keyword \textit{invariant} che precede il nome attribuito all'assioma
-    \item Le funzioni e regole su cui è espresso il vincolo vanno listate dopo la keyword \textit{over}
+    \item In un modello ASM gli invarianti sono usati per \textbf{esprimere vincoli} su funzioni e/o regole che devono essere garantiti in ogni stato
+    \item In programmi AsmetaL usare gli invarianti è utile per \textbf{scoprire errori di modellazione}
+    \begin{itemize}
+        \item In generale, l'assenza di violazione di invarianti non può essere considerata una prova della correttezza del modello, mentre la violazione di
+        assiomi, è prova della incorrettezza del modello.
+    \end{itemize}
 \end{itemize}
 
+\subsubsection{Dichiarazione di invarianti}
+\noindent Gli invarianti vanno dichiarati subito prima della \textit{main rule}.
+
+\noindent Ogni invariante è dichiarato mediante la keyword \textit{invariant} che precede il nome attribuito all'assioma (invName).
+
+\noindent  Le funzioni e regole su cui è espresso il vincolo vanno listate dopo la keyword \textit{over}.
+
 \begin{figure}[H]
-    \includegraphics[width=0.8\linewidth]{chapters/2/images/axiomex.png}
+    \includegraphics[width=0.8\linewidth]{chapters/2/images/invariant.png}
+\end{figure}
+
+\subsubsection{Esempio}
+\begin{figure}[H]
+    \includegraphics[width=0.8\linewidth]{chapters/2/images/esempioinvariant.png}
 \end{figure}
 
 

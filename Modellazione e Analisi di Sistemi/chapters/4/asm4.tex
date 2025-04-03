@@ -1,0 +1,39 @@
+\chapter{Specifica di protocolli di sicurezza: il protocollo di Needham Schroeder}
+\section{Crittografia: concetti base}
+\begin{itemize}
+    \item \textbf{Algoritmi crittografici:} algoritmi che trasformano un testo (o una info) in un testo cifrato utilizzando chiavi
+    \item \textbf{Protocolli crittografici:} sequenze di scambio di messaggi a cui gli agenti possono applicare
+    algoritmi crittografici
+    \begin{itemize}
+        \item \textbf{a chiave simmetrica:} la stessa K è utilizzata per criptare e decriptare
+        \item \textbf{a chiave pubblica:} K-pub per criptare e K-priv per decriptare
+        \item \textbf{a chiave condivisa:} una K-AB tra 2 agenti fornita da un terzo
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Protocolli per l'autenticazione}
+\noindent Lo scopo è \textbf{l'autenticazione}
+\begin{itemize}
+    \item fornire ad una parte la certezza dell'identità del mittente del messaggio ricevuto 
+    \item eventualmente stabilire una chiave (o altra info) comune 
+\end{itemize}
+
+\noindent \textbf{Segretezza:} in più possono garantire che l'informazione (o parte) scambiata è rimasta segreta
+
+\subsubsection{Assunzioni di base}
+\begin{itemize}
+    \item \textbf{Forza della spia:} la spia (man in the middle) può
+    \begin{itemize}
+        \item intercettare (ed eventualmente analizzare) ogni messaggio che sia stato spedito da un agente
+        \item formare (sintetizzare) nuovi messaggi utilizzando la sua base di conoscenze
+        \item cambiare destinatario di un messaggio
+    \end{itemize}
+    \item \textbf{Forza della crittografia:} 
+    \begin{itemize}
+        \item un messaggio può essere decriptato solo se si ha la chiave giusta
+        \item un agente può generare sempre nonces nuove
+        \item un agente autenticato è non compromesso se la sua chiave privata non è nota alla spia
+    \end{itemize}
+\end{itemize}
+
+\section{Needham-Schroeder a chiavi pubbliche}

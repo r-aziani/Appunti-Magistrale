@@ -68,3 +68,53 @@ mediante un insieme di Agenti che operano in modo concorrente
     \end{itemize}
 \end{itemize}
 
+\subsubsection{Header di ASM multiagente}
+\begin{figure}[H]
+    \includegraphics[width=0.8\linewidth]{chapters/3/immaginette/HeaderMultiA.png}
+\end{figure}
+
+\subsection{Computazione di ASM multiagenti}
+\subsubsection{ASM sincrone: computazione}
+\noindent Tutte le ASM lavorano in parallelo:
+\begin{itemize}
+    \item L'insieme opera negli stati globali, ottenuti dall'unione di tutti gli stati delle ASM componenti
+    \item La sequenza di eventi che determina un'esecuzione è la sequenza degli stati che rappresentano l'esecuzione della sync-ASM
+\end{itemize}
+\noindent una \textbf{multi-agent ASM con agenti sincroni} ha una \textit{quasi-sequential run}
+\begin{itemize}
+    \item una sequenza di stati $S_0$, $S_1$,… $S_n$,… dove ciascun stato $S_i$ è ottenuto dal precedente $S_{i-1}$ eseguendo in parallelo le regole di tutti gli agenti
+\end{itemize}
+
+\subsubsection{ASM asincrone: computazione}
+\noindent Nelle async-ASM, gli agenti possono eseguire con clock diversi ed i loro step
+possono avere durate diverse
+\begin{itemize}
+    \item Non c'è il concetto di controllo globale del sistema
+    \item Possiamo dare delle \textit{proprietà delle run}
+    \item Difficoltà di gestione della consistenza
+\end{itemize}
+
+\noindent Una \textit{multi-agent ASM con agenti asincroni} ha una run parzialmente ordinata, ossia un insieme
+parzialmente ordinato (M,<) di mosse \textit{m} 
+\begin{center}
+    leggi: mossa = applicazioni di regole; m1 $<$ m2 se m1 è eseguita prima di m2
+\end{center} 
+\noindent dei suoi agenti che soddisfano le condizioni:
+\begin{itemize}
+    \item \textbf{storia finita}: ad un certo istante \textit{t}  la sequenza di mosse che
+    ha condotto dallo stato $S_0$ allo stato $S_t$ è finita (ciascuna mossa ha solo un numero finito di
+    predecessori)
+    \begin{itemize}
+        \item per ogni \textit{m} $\in$ \textit{M} l'insieme $\{m' | m' < m\}$ è finito
+    \end{itemize}
+    \item \textbf{ sequenzialità degli agenti}: ogni agente opera in modo sequenziale
+    \begin{itemize}
+        \item l'insieme di mosse $\{m | m \in M $, \textit{a} esegue \textit{m}\} di ogni agent \textit{a} $\in$ Agent è linearmente ordinato per $<$
+    \end{itemize}
+    \item \textbf{ coerenza: ogni stato di M è il risultato delle mosse di agenti}: 
+    \begin{itemize}
+        \item Sia X un segmento iniziale finito (sottinsieme chiuso a sinistra) di (M,$<$)
+        \item Sia $\sigma$(X) lo stato associato ad X: $\sigma$(X) è il risultato di tutte le mosse m in X  
+        \item Ciascun segmento iniziale finito X di (M,<) ha uno stato associato $\sigma$(X) che è il risultato dell'applicazione della mossa \textit{m} nello stato $\sigma$(X $-$ \{\textit{m}\}), per ogni elemento massimale \textit{m} $\in$ X 
+    \end{itemize}
+\end{itemize}
