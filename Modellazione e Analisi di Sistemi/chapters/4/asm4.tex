@@ -37,3 +37,76 @@
 \end{itemize}
 
 \section{Needham-Schroeder a chiavi pubbliche}
+\noindent \textbf{Obiettivo:} stabilire mutua autenticazione tra due agenti A e B (e una nonce segreta comune)
+\subsubsection{Protocollo}
+\begin{enumerate}
+    \item \textbf{A} che vuole iniziare la comunicazione con \textbf{B}, manda una nuova nonce a \textbf{B}:
+    \begin{center}
+        $A->B :$ \{Na, A\}Kb
+    \end{center}
+    \item \textbf{B} legge il messaggio, rimanda la nonce di \textbf{A} più un'altra nuova:
+    \begin{center}
+        $B->A :$ \{Na, Nb\}Ka
+    \end{center}
+    \item \textbf{A} legge il messaggio, riconosce la nonce rispedita da \textbf{B} (solo B può averla letta) e rimanda a \textbf{B}, Nb:
+    \begin{center}
+        $A->B :$ \{Nb\}Kb
+    \end{center}
+    \item \textbf{B} ricevendo indietro la nonce Nb sa che l'autenticazione (handshake) è avvenuta (solo \textbf{A} può averla letta)
+\end{enumerate}
+
+\subsubsection{Vulnerabilità}
+\noindent Il protocollo è suscettibile ad attacchi di tipo \textit{man in the middle}:
+\begin{itemize}
+    \item un impostore Spy riesce ad avere il controllo del traffico (modellato con Alice che inizia una sessione di comunicazione con Spy)
+    \item inoltra i messaggi a Bob convincendolo di essere in comunicazione con Alice ed inganna Alice facendole credere di comunicare con Bob     
+\end{itemize}
+
+\noindent Spy agisce da "uomo nel mezzo" e intercetta tutti i messaggi di Bob, che crede di essere in
+comunicazione sicura con Alice
+
+\noindent L'attacco è stato descritto per la prima volta da Gavin Lowe nel 1995
+
+\subsection{Attacco di Lowe}
+\noindent \textbf{A} inizia una istanza del protocollo con la spia (o con un agente compromesso)
+\begin{center}
+    $A-> Spy :$ \{Na, A\}Ks
+    
+    $Spy->B :$ \{Na, A\}Kb
+    
+    $B->A :$ \{Na, Nb\}Ks
+    
+    $Spy->B :$ \{Nb\}Kb
+\end{center}
+
+\noindent La spia acquisisce una informazione segreta di B: \textbf{Nb è compromessa}
+
+\noindent A sta usando una nonce compromessa
+
+\noindent B ha una nonce Nb compromessa, eppure né A né B sono compromessi
+
+\noindent Per garantire l'autenticazione il protocollo richiederebbe
+\begin{itemize}
+    \item che gli agenti non siano compromessi ma
+    \item anche che non abbiano iniziato comunicazioni
+    con agenti compromessi
+\end{itemize}
+
+\subsubsection{La soluzione di Lowe}
+\begin{enumerate}
+    \item \textbf{A} che vuole iniziare la comunicazione con \textbf{B}, manda una nuova nonce a \textbf{B}:
+    \begin{center}
+        $A->B :$ \{Na, A\}Kb
+    \end{center}
+    \item \textbf{B} legge il messaggio, rimanda la nonce di \textbf{A} più un'altra nuova e \underline{\textbf{la sua identità}}:
+    \begin{center}
+        $B->A :$ \{Na, Nb, B\}Ka
+    \end{center}
+    \item \textbf{A} legge il messaggio, riconosce la nonce rispedita da \textbf{B} (solo B può averla letta) e rimanda a \textbf{B}, Nb:
+    \begin{center}
+        $A->B :$ \{Nb\}Kb
+    \end{center}
+    \item \textbf{B} ricevendo indietro la nonce Nb sa che l'autenticazione è avvenuta (solo \textbf{A} può averla letta)
+\end{enumerate}
+
+\subsubsection{Esercizio NS in ASM}
