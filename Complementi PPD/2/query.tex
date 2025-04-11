@@ -651,16 +651,112 @@ vengono create delle coppie criptate, dove:
 
 \subsection{Markers and MapReduce}
 
+I marker dovrebbero essere \textbf{distribuiti} tra tutti gli $l$ worker per controllarli 
+tutti durante la computazione.
+
+\noindent Si definisce una \textbf{strategia di distribuzione dei marker} $\langle N, N_{min}, N_{max} \rangle$, dove:
+\begin{itemize}
+    \item $N$ è il numero totale di marker 
+    \item $N_{min}$ è il numero minimo di marker per worker
+    \item $N_{max}$ è il numero massimo di marker per worker 
+\end{itemize}
+
+\noindent \textbf{Ogni storage server} genera lo stesso \textbf{set di marker}; l'allocazione 
+dei marker è deterministica.
+
+\noindent I marker generati sono \textbf{corretti} se:
+\begin{itemize}
+    \item per ogni worker $w$: $N_{min} \leq n_w \leq N_{max}$
+    \item il numero totale di marker assegnati è $N$
+\end{itemize}
+
+\subsubsection{Alcuni esempi}
+\begin{itemize}
+    \item \textbf{random} $\langle N, 0, N \rangle$
+    \begin{itemize}
+        \item nessuna condizione sulla distribuzione dei marker 
+    \end{itemize}
+    \item \textbf{at-least-n} $\langle N, n, n + (N-n \cdot l) \rangle$
+    \begin{itemize}
+        \item ciascun worker deve avere almeno $n$ marker (con $n \leq [N/l]$)
+    \end{itemize}
+    \item \textbf{perfect balance} $\langle N, [N/l], [N/l] \rangle$
+    \begin{itemize}
+        \item i marker sono distribuiti con la stessa misura su tutti i worker
+    \end{itemize}
+\end{itemize}
+
+\subsection{Twins e MapReduce}
+
+I twins dovrebbero essere \textbf{distribuiti} sui vari worker.
+
+\noindent Controllare la generazione dei twin come fatto con i marker \textbf{non 
+è possibile}, perché i twins dipendendono dall'attributo di join per ciascun server
+\begin{itemize}
+    \item ciascun server \textbf{duplicare tuple diverse} in base alla sua istanza 
+    \item ciascun server può vedere un \textbf{numero diverso di twin} per un worker 
+    \item i server non possono regolare la distribuzione dei twin 
+\end{itemize}
+
+\noindent $\Rightarrow$ \textbf{two-man-rule:} tupla originale e tupla duplicata devono 
+essere distribuite su worker diversi 
 
 
+\section{Join overall execution}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/overall-exe.png}
+\end{figure}
 
+\begin{enumerate}
+    \item I due storage server, con la loro relazione
+    \item Viene fatta una proiezione sull'attributo di join 
+    \item Vengono aggiunti twin e marker 
+    \item Vengono criptati i dati e dati al coordinatore 
+    \item Il coordinatore fa il mappaggio dei dati criptati sui vari worker 
+    \item I worker fanno l'operazione di join 
+    \item Il risultato viene dato al client, che si occupa di decriptarlo e verificare 
+    se ci sono i vari twin e marker 
+    \item Bisogna ora completare il risultato (ho fatto l'operazione solo sull'attributo di 
+    join, per evitare inferenza nei casi di join (1:N) o (N:N)); il client contatta gli storage 
+    server per avere il risultato finale 
+\end{enumerate}
 
+\noindent Questa strategia (semi-join) mi protegge senza usare sali e bucket, ma ha lo svantaggio di avere 
+più lavoro a carico del client.
 
+\section{Sequenze di join}
+Una query può richiedere la computazione di una sequenza di join che coinvolge più di due 
+tabelle:
+\begin{itemize}
+    \item se l'attributo di join è sempre lo stesso, possiamo utilizzare la stessa strategia senza 
+    problemi, estendola ai $n$ server
+    \item se ci sono più attributi di join, si riscontrano delle difficoltà:
+    \begin{itemize}
+        \item tutti i join devono rimanere (1:1) per evitare inferenza 
+        \item twin e marker devono \textit{sopravvivere} alla sequenza di join 
+    \end{itemize}
+\end{itemize}
 
+\noindent $\Rightarrow$ si fa una valutazione del join in due step:
+\begin{enumerate}
+    \item \textbf{Si calcolano i sub-join} in sequenza, utilizzando il risultato di uno come filtro per il calcolo del successivo 
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{images/step1.png}
+    \end{figure}
 
+    \item \textbf{Completamento del risultato} da parte del client, procedendo a ritroso (parto dall'ultimo risultato 
+    per ricostruire tutte le informazioni, dato che è quello più selettivo)
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{images/step2.png}
+    \end{figure}
 
+\end{enumerate}
 
 
 
