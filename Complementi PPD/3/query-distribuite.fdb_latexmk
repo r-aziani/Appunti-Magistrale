@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1744896186.39769 "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/3/query-distribuite.tex" "query-distribuite.pdf" "query-distribuite" 1744896188.95329 0
+["pdflatex"] 1745876301.83223 "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/3/query-distribuite.tex" "query-distribuite.pdf" "query-distribuite" 1745876304.47774 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/3/query-distribuite.tex" 1744896186.00452 16151 30d0b1b3947a723115b136a2daf8f7e1 ""
+  "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/3/query-distribuite.tex" 1745876301.45813 20187 25789dc6a8fc8f32c86b5c0586afa49f ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -173,12 +173,15 @@
   "images/restrizioni.png" 1744883618.36602 11627 c8d68c723f1b4345abeda2baeb790808 ""
   "images/scenario.png" 1744881709.51105 87458 f684f3054cbac4006293c82a3515f2e8 ""
   "images/semi-join.png" 1744895379.98179 91480 b25fb8835f73424c3ac3635e737b1e7f ""
+  "images/sintassi-semantica.png" 1745852962.82931 41733 fb89f2a7af3730fbc29e00860e5269bb ""
   "images/view-auth.png" 1744373005.02922 113030 eb0dd2affdced2dda817048fc6199f56 ""
+  "images/view-graph.png" 1745863365.59511 27762 671213d160cff0f5dd7e43d636a54810 ""
+  "images/view-graph2.png" 1745876193.9474 55702 95286793e124d7c7a0a9cb90952d2def ""
   "images/vincoli-conn.png" 1744883587.25455 19880 63506b6e96ddb7073694822623c3420f ""
-  "query-distribuite.aux" 1744896188.78034 2582 b5b407bd02bcd4164329afcb668153f9 "pdflatex"
-  "query-distribuite.out" 1744896188.78234 2463 96459b710293878f12451b43c1bc8e17 "pdflatex"
-  "query-distribuite.tex" 1744896186.00452 16151 30d0b1b3947a723115b136a2daf8f7e1 ""
-  "query-distribuite.toc" 1744896188.78234 1487 69339d5976e6f8b44ec496cd55045a30 "pdflatex"
+  "query-distribuite.aux" 1745876304.291 3275 b4d71d317aafa5944400a5ff1074fa82 "pdflatex"
+  "query-distribuite.out" 1745876304.293 3135 2be883a596c449919fa29c46b1e4ae31 "pdflatex"
+  "query-distribuite.tex" 1745876301.45813 20187 25789dc6a8fc8f32c86b5c0586afa49f ""
+  "query-distribuite.toc" 1745876304.294 1896 3a03eb0ea0d5de0535b920ac4f009b89 "pdflatex"
   (generated)
   "query-distribuite.aux"
   "query-distribuite.log"

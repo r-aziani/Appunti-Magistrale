@@ -1,0 +1,47 @@
+\chapter{Crittoanalisi}
+
+Il \textit{principio di Kerchoffs} afferma che \textbf{la sicurezza di un sistema crittografico non deve dipendere dalla segretezza 
+dell'algoritmo crittografico}, ma solo da tenerne celata la chiave. In altre parole, il sistema deve rimanere sicuro anche nell'ipotesi che il 
+nemico conosca l'algoritmo di criptazione.
+
+\noindent Esistono diverse situazioni di attacco, che corrispondono a gradi di sicurezza; più un sistema resiste a livelli di attacco alti, 
+più è robusto:
+\begin{itemize}
+    \item \textit{Known Ciphertext Attack:} l'avversario cononosce solo il cifrato 
+    \item \textit{Known Plaintext Attack:} l'avversario conosce anche il testo in chiaro 
+    \item \textit{Chosen Plaintext Attack:} l'avversario può ottenere la cifratura di un testo in chiaro a sua scelta
+    \item \textit{Chosen Ciphertext Attack:} l'avvversario può ottenere la decifratura di un testo cifrato a sua scelta 
+    \item \textit{Chosen Text Attack:} l'avversario può ottenere la cifratura e la decifratura di coppie di testi chiaro/cifrato
+\end{itemize}
+
+$\Rightarrow$ se un cifrario viene rotto conoscendo solo il testo cifrato, allora è molto debole \dots
+
+\section{Cifrari a shift}
+Dato che prendono una lettera e la spostano di posizione, la struttura sottostante del testo rimane la stessa; in particolare, la frequenza 
+delle lettere cifrate corrisponde alla frequenza delle lettere in chiaro nella lingua in cui è stato scritto il testo. 
+
+\noindent Basta mappare le lettere fino a che viene trovata la chiave; computazionalmente parlando è molto semplice.
+
+\section{Cifrario di Hill}
+
+Nella sua versione standard, il cifrario di Hill è vulnerabile al \textit{\textbf{known plaintext attack}}, poiché completamente lineare: nel 
+caso in cui un attaccante intercetti $n^2$ coppie chiaro-cifrato, può impostare un sistema lineare che può essere risolto. Può capitare che il 
+sistema risulti indeterminato, ma è sufficiente aggiungere qualche altra coppia per renderlo risolvibile.
+
+\noindent Per questa ragione, è richiesto poco tempo per rompere il cifrario.
+
+\section{Cifrario di Vigenerè - Metodo Kasiski}
+
+Il cifrario di Vigenerè resiste all'analisi delle frequenze, dato che una lettera cifrata corrisponde a più simboli in chiaro ed esiste un grande 
+numero di possibli chiavi.
+Un possibile attaco è il \textit{\textbf{known ciphertext attack}}, poiché permette di usare metodi statistici per individuare la lunghezza della 
+chiave, per poi applicare un'analisi delle frequenze in ognuno degli alfabeti cifranti corrispondenti alle lettere della chiave.
+
+\noindent Il metodo di Kasiski, applicabile a Vigenerè e simili, consiste nell'osservare che ci sono frequenze di caratteri identiche, poste 
+ad una certa distanza di loro; questa distanza può corrispondere, con una certa probabilità, alla lunghezza della chiave o ad un suo multiplo.
+
+\noindent Individuando tutte le sequenze ripetute (facile con un testo lungo) è probabile che la chiave sia pari al MCD tra le distanze delle 
+frequenze ottenute, o un suo multiplo.
+
+\noindent A questo punto, si può svolgere un'analisi delle frequenze.
+

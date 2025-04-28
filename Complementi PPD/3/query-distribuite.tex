@@ -327,7 +327,7 @@ il \textbf{profilo di una relazione} è una tripla $[R^\pi, R^{\bowtie}, R^\sigm
 Un soggetto $S$ è autorizzato ad accedere ad una vista $R$ sse:
 
 \noindent \hl{ $\exists [Attributes, Join Path]
-\rightarrow S | R^\pi \cup R^\sigma \subseteq Attributes AND R^{\bowtie} = Join Path$}
+\rightarrow S | R^\pi \cup R^\sigma \subseteq Attributes \wedge  R^{\bowtie} = Join Path$}
 
 \noindent $\Rightarrow$ \textit{Un soggeto è autorizzato ad accedere ad una relazione quando:
 \begin{itemize}
@@ -383,6 +383,79 @@ Data la computazione che voglio eseguire e dato l'insieme di autorizzazioni, l'o
     \item Faccio una visita in pre-order dell'albero e ne scelgo uno; può essere fatta in diversi modi in base a qual è il parametro di voglio ottimizzare
 \end{enumerate}
 
+\section{Sintassi vs Semantica}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/sintassi-semantica.png}
+\end{figure}
+
+Per vedere se il server è abilitato ad accedere al risultato della query, devo vedere qual è il contenuto informativo associato 
+alla query, ovvero il suo profilo.
+
+\noindent Devo vedere se le autorizzazioni del sistema coprono il profilo della query: quello che vediamo è che non c'è una autorizzazione 
+esplicita che permette di effetuare il join e di accedere a quella particolare query; tuttavia, ha più permessi che composti tra loro permettono 
+di accedere al medesimo risultato.
+
+\noindent Se mi va bene avere più autorizzazioni che composte tra loro permettono di accedere allo stesso risultato, è un tipo di approccio \textbf{semantico}.
+
+\noindent Se voglio che ci sia una autorizzazione esplicita fatta in modo preciso è un tipo di approccio \textbf{sintattico}.
+
+
+\chapter{Composizione di autorizzazioni}
+Facciamo diverse assunzioni:
+\begin{itemize}
+    \item lo schema è privo di cicli 
+    \item consideriamo solo join di tipo \textit{naturale}; se c'è un informazione che è presente in più relazioni, allora supponiamo 
+    che usi sempre lo stesso nome (esempio SSN)
+    \item Le composizioni vengono definite sempre per \textit{stesso soggetto}, diventa una semplice coppia $[Attr, Rel]$
+    \item Il profilo della relazione $[R^\pi, R^{\bowtie}, R^\sigma]$ viene semplificato come $[Attr, Rel]$ dove:
+    \begin{itemize}
+        \item $Attr = R^\pi \cup R^\sigma$
+        \item $Rel$ sono le relazioni coinvolte nel join path $R^{\bowtie}$ (mi basta specificare che il join lega due relazioni, senza specificare 
+        su quali il attributo perché abbiamo supposto di avere \textit{join naturali})
+    \end{itemize}
+\end{itemize}
+
+\section{\textit{Schema graph}}
+Conviene rappresentare attraverso un grafo lo schema per capire meglio quando è \textit{safe} comporre delle autorizzazioni.
+
+\noindent Un \textit{grafo di schema} a partire da un set di relazioni è un grafo misto dove:
+\begin{itemize}
+    \item ci sono tanti nodi quanti sono gli \textbf{attributi} delle relazioni
+    \item ci sono degli \textbf{archi orientati} che rappresentano le \textbf{dipendenze funzionali} da una chiave verso tutti gli altri attributi della medesima relazione
+    \item ci sono degli \textbf{archi orientati} che rappresentano i vincoli di \textbf{integrità referenziale}
+    \item ci sono \textbf{archi non orientati} che rappresentano le operazioni di \textbf{join}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/view-graph.png}
+\end{figure}
+
+\section{\textit{Views}}
+
+Permessi e query $[Attr, Rel]$ sono una \textbf{vista} su un set di relazioni $R$ del mio sistema, dove 
+il contenuto informativo di questa vista non cambia se viene estesa andando a chiuderla usando i vincoli di integrità referenziale; si definisce 
+un \textit{insieme di chiusura di relazione} ottenuto seguendo i vincoli di integrità referenziale a partire da una relazione.
+
+\section{\textit{View Graph}}
+Una vista può essere rappresentata graficamente attraverso una colorazione dello \textit{schema graph}; viene colorata la porzione del grafo che corrisponde 
+di una vista $[Attr, Rel]$ nel seguente modo:
+\begin{itemize}
+    \item di nero gli attributi che compaiono esplicitamente in $Attr$
+    \item di nero tutti gli archi che corrispondono al join path definito sull'insieme di chiusura di $Rel$, oppure gli archi che partono 
+    da una chiave e vanno versi attributi neri
+    \item di bianco tutti gli attributi che non sono neri della chiusura di $Rel$ e gli archi che li connettono alla chiave primaria
+    \item \textit{clear} per tutti gli altri attributi e archi (un terzo colore)
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/view-graph2.png}
+\end{figure}
+
+\noindent In figura la vista del risultato è $[(ssn, salary, cost), (Employee, Patient, Treatment)]$
 
 
 

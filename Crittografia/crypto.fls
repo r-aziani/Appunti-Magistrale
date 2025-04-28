@@ -238,6 +238,9 @@ INPUT chapters/chap1/intro.aux
 INPUT ./chapters/chap2/cifrari.aux
 INPUT ./chapters/chap2/cifrari.aux
 INPUT chapters/chap2/cifrari.aux
+INPUT ./chapters/chap3/crittoanalisi.aux
+INPUT ./chapters/chap3/crittoanalisi.aux
+INPUT chapters/chap3/crittoanalisi.aux
 OUTPUT crypto.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -338,6 +341,12 @@ INPUT ./chapters/chap2/images/hill.png
 INPUT ./chapters/chap2/images/hill.png
 INPUT ./chapters/chap2/images/hill.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbxti10.tfm
+INPUT ./chapters/chap3/crittoanalisi.tex
+INPUT ./chapters/chap3/crittoanalisi.tex
+OUTPUT chapters/chap3/crittoanalisi.aux
+INPUT ./chapters/chap3/crittoanalisi.tex
+INPUT ./chapters/chap3/crittoanalisi.tex
+INPUT chapters/chap3/crittoanalisi.tex
 INPUT crypto.aux
 INPUT ./chapters/chap1/intro.aux
 INPUT ./chapters/chap1/intro.aux
@@ -345,6 +354,9 @@ INPUT chapters/chap1/intro.aux
 INPUT ./chapters/chap2/cifrari.aux
 INPUT ./chapters/chap2/cifrari.aux
 INPUT chapters/chap2/cifrari.aux
+INPUT ./chapters/chap3/crittoanalisi.aux
+INPUT ./chapters/chap3/crittoanalisi.aux
+INPUT chapters/chap3/crittoanalisi.aux
 INPUT ./crypto.out
 INPUT ./crypto.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

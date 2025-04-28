@@ -159,3 +159,28 @@ ha il problema di necessitare di una chiave casuale (già di per sé difficile s
 dimensioni.
 
 
+\section{Probabilità}
+
+Possiamo definire un cifrario come:
+\begin{itemize}
+    \item $Gen$ l'algoritmo di generazione dlele chiavi, con $K$ lo spazio delle chiavi 
+    \item $M$ spazio dei messaggi in chiaro 
+    \item $C$ spazio dei messaggi cifrati, dove $Enc_k(m)=c$ è la funzione di cifratura, mentre $Dec_k(c)=m$ è la funzione di decifratura
+\end{itemize}
+
+\noindent Consideriamo ora i messaggi $M$ e i testi cifrati $C$; possiamo definire:
+\begin{itemize}
+    \item $P(M)$ la probabilità di osservare il messaggio $M$ per l'attaccante 
+    \item $P(C)$ la probabilità di osservare il testo cifrato $C$ per l'attaccante 
+\end{itemize}
+
+\noindent Possiamo ora definire uno schema di cifratura composto da $Gen, Enc, Dec$ su uno spazio di messaggi $M$
+come \textbf{perfettamente sicuro} se: \textit{per ogni distribuzione di probabilità su M (per ogni messaggio m) e per ogni 
+distribuzione di probabilità su C (per ogni cifrato c) si ha che:}
+\begin{center}
+    $Prob(M|C) = Prob(M)$
+\end{center}
+
+\noindent \textit{ovvero che l'avversario non ha alcuna informazione sul messaggio in chiaro M osservando il cifrato C.}
+
+\noindent È possibile dimostrare che se lo schema è perfetto, allora $|K| \geq |M|$.
