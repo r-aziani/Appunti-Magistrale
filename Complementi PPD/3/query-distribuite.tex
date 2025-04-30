@@ -458,6 +458,157 @@ di una vista $[Attr, Rel]$ nel seguente modo:
 \noindent In figura la vista del risultato è $[(ssn, salary, cost), (Employee, Patient, Treatment)]$
 
 
+\section{Autorizzare le query}
+Un soggetto vuole eseguire una query; il sistema deve controllare se il soggetto è autorizzato ad accedere al risultato della query; se 
+non può accedervi, la query non viene neanche eseguita.
+
+\noindent Ho da una parte il profilo della query e dall'altra la vista dei permessi; devo prima vedere quando una autorizzazioni si applica alla query (quando 
+riguarda le stesse informazioni che ti sto chiedendo), e vedo se mi danno il permesso di accedere al risultato:
+
+\begin{itemize}
+    \item $p = [Attr_p, Rel_p]$ si \textbf{applica} a $q = [Attr_q, Rel_q]$ sse $Rel^*_p \subseteq Rel^*_q$
+    \item $p = [Attr_p, Rel_p]$ \textbf{autorizza} a $q = [Attr_q, Rel_q]$ sse:
+    \begin{itemize}
+        \item $p$ si applica a $q$
+        \item $G_q$ e $G_p$ hanno gli \textbf{stesso} archi neri di integrità referenziale e join
+        \item tutti i nodi che sono neri $G_q$ lo sono anche in $G_p$
+    \end{itemize}
+
+    $\rightarrow$ devo sostanzialmente vedere che tutto ciò che è nero nella query lo è anche nei miei permessi, sia archi che nodi
+\end{itemize}
+
+\subsection{Esempi}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/perm1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/perm2.png}
+\end{figure}
+
+\noindent $Rel^*_p = \{E, P\}$, mentre $Rel^*_q = \{P\}$. 
+
+\noindent Non posso applicare questo permesso perché c'è il join, mi 
+porta un contenuto informativo maggiore che non c'è nella query. 
+\noindent Il permesso mi dice \textit{tutti i pazienti che sono anche impiegati}; la query mi dice \textit{tutti i pazienti}. Me ne accorgo perché 
+ci sono delle operazioni di join che nella query non ci sono, che mi danno delle informazioni in più (e allo stesso mi toglie).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/perm3.png}
+\end{figure}
+
+\section{Composizione di permessi}
+Questo modello mi permette di applicare un approccio semantico; posso avere più permessi che mi vanno 
+a coprire la query che mi permettono di accedere al risultato.
+
+\noindent Una query può essere eseguita se il soggetto ha i permessi per vedere il contenuto informativo della query; una query dovrebbe essere 
+autorizzata se il soggetto ha i permessi per computare in modo indipendente il risultato.
+
+\noindent Un singolo permesso potrebbe non essere sufficiente, dunque si usa la \textbf{composizione} di permessi. Bisogna fare attenzione
+al rischio di \textit{disclosure indiretta}.
+
+\subsection{Esempi}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/comp1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/comp1.png}
+\end{figure}
+
+\noindent Potremmo fare il ragionamento di \textit{sovrapporre} i permessi: avremmo tutto ciò che ci serve colorato di nero, e potremmo 
+pensare di essere autorizzati ad accedere alla query.
+
+\noindent Tuttavia, questa composizione non può essere fatta perché manca l'associazione tra $SSN$ (un paziente specifico) e $specialty$; anche eseguendo 
+singolarmente le computazioni non rieco a ricostruire il risultato della query.
+
+\section{Composizione sicura}
+Due permessi possono essere composti in maniera \textbf{sicura} sse la loro composizione \textbf{non aggiunge informazione}.
+\begin{itemize}
+    \item $p_i \rightarrow p_j$: $p_j = [Attr_j, Rel_l]$ dipende da $p_i = [Attr_i, Rel_i]$ sse l'intersezione degli insiemi di attributi 
+    $Attr_i$ e $Attr_j$ è un insiemi di attributi tutti neri in $p_j$, e a partire da questi attributi ci deve essere un cammino (in uno dei due grafi)
+    che mi permette di raggiungere tutti gli altri nodi neri attraversando solo archi neri
+
+    $\Rightarrow$ se è verificato posso comporre i permessi
+\end{itemize}
+
+\subsection{Esempi}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/safe1.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/safe2.png}
+\end{figure}
+
+\section{Esecuzione di Access Control}
+Data una query, come faccio a vedere se è può essere autorizzata oppure no? Il processo richiede tre passi:
+\begin{enumerate}
+    \item determino tutti i permessi applicabili alla query 
+    \item determino tutti i permessi che ottengo attraverso il processo di composizione (fino a a quando termina; quando compongo un permesso allo 
+    stesso tempo uno viene tolto dall'insieme, per cui a una certa il processo termina)
+    \item guardo se esiste un permesso (tra quelli esistenti e quelli che ho ottenuto con la composizione) che copre la query che voglio eseguire 
+\end{enumerate}
+
+
+\chapter{Un modello di autorizzazione per query multi-provider}
+
+Normalmente un modello di autorizzazione è binario, nel senso che puoi accedere all'informazione oppure no; la peculiarità del modello 
+che adesso vediamo è che aggiunge un \textit{terzo livello di visibilità}:
+\begin{itemize}
+    \item puoi accedere ai dati
+    \item non puoi accedere ai dati
+    \item puoi accedere ai dati criptati 
+\end{itemize}
+
+\noindent Il vantaggio è che potrebbe essere conveniente in termini economici, usando magari server poco fidati.
+
+\section{Definizione del problema}
+
+\begin{itemize}
+    \item \textbf{INPUT:}
+    \begin{itemize}
+        \item Query 
+        \item Set di cloud providers, ciascuno con le sue informazioni che sono messe a disposizione per poter eseguire le query in modo collaborativo
+        \item Specifica di autorizzazioni 
+    \end{itemize}
+    \item \textbf{OUTPUT:}
+    \begin{itemize}
+        \item Assegnare le operazioni ai soggetti in modo da soddisfare le autorizzazioni (che ciascun soggetto ha definito sui propri dati) e minimizzare i costi
+    \end{itemize}
+\end{itemize}
+
+
+\section{Profilo della relazione}
+È il bagaglio informativo della relazione; deve essere adattato a questo modello ed include tre componenti:
+\begin{itemize}
+    \item $v$: attributi espliciti dello schema della relazione, sia in chiaro che in forma criptata (devo distinguere queste due situazioni)
+    \begin{itemize}
+        \item prima erano $R^\pi$
+    \end{itemize}
+    \item $i$: attributi impliciti (per costruire la relazione ho usato delle condizioni su attributi in chiaro o criptati), sia in chiaro che in forma criptata (devo distinguere queste due situazioni) 
+    \begin{itemize}
+        \item prima erano $R^\sigma$
+    \end{itemize}
+    \item $\simeq$: ho gli attributi coinvolti in operazioni di join (si suppone join naturali, prima erano $R^{\bowtie}$)
+\end{itemize}
+
+
+
+
+
+
+
 
 
 
