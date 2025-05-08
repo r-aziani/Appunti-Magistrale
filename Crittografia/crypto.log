@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  22 APR 2025 15:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  8 MAY 2025 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,7 +491,7 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box68
-) (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap2/cifrari.aux) (./chapters/chap3/crittoanalisi.aux))
+) (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap2/cifrari.aux) (./chapters/chap3/crittoanalisi.aux) (./chapters/chap4/des.aux))
 \openout1 = `crypto.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -585,7 +585,7 @@ Capitolo 1.
 
  (./chapters/chap2/cifrari.tex
 Capitolo 2.
-<chapters/chap2/images/shift.png, id=116, 587.19376pt x 65.24374pt>
+<chapters/chap2/images/shift.png, id=172, 587.19376pt x 65.24374pt>
 File: chapters/chap2/images/shift.png Graphic file (type png)
 <use chapters/chap2/images/shift.png>
 Package pdftex.def Info: chapters/chap2/images/shift.png  used on input line 37.
@@ -596,19 +596,19 @@ Package pdftex.def Info: chapters/chap2/images/shift.png  used on input line 37.
 
 
 ]
-<chapters/chap2/images/disco.png, id=122, 313.17pt x 311.1625pt>
+<chapters/chap2/images/disco.png, id=178, 313.17pt x 311.1625pt>
 File: chapters/chap2/images/disco.png Graphic file (type png)
 <use chapters/chap2/images/disco.png>
 Package pdftex.def Info: chapters/chap2/images/disco.png  used on input line 85.
 (pdftex.def)             Requested size: 137.9979pt x 137.11607pt.
  [5 <./chapters/chap2/images/shift.png>]
-<chapters/chap2/images/porta.png, id=132, 493.845pt x 280.04625pt>
+<chapters/chap2/images/porta.png, id=188, 493.845pt x 280.04625pt>
 File: chapters/chap2/images/porta.png Graphic file (type png)
 <use chapters/chap2/images/porta.png>
 Package pdftex.def Info: chapters/chap2/images/porta.png  used on input line 98.
 (pdftex.def)             Requested size: 276.00105pt x 156.5086pt.
  [6 <./chapters/chap2/images/disco.png> <./chapters/chap2/images/porta.png>]
-<chapters/chap2/images/hill.png, id=140, 533.995pt x 92.345pt>
+<chapters/chap2/images/hill.png, id=196, 533.995pt x 92.345pt>
 File: chapters/chap2/images/hill.png Graphic file (type png)
 <use chapters/chap2/images/hill.png>
 Package pdftex.def Info: chapters/chap2/images/hill.png  used on input line 141.
@@ -623,27 +623,70 @@ Capitolo 3.
 
 
 
-]) [10] (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap2/cifrari.aux) (./chapters/chap3/crittoanalisi.aux))
+]
+<chapters/chap3/images/pic1.png, id=217, 261.97874pt x 63.23625pt>
+File: chapters/chap3/images/pic1.png Graphic file (type png)
+<use chapters/chap3/images/pic1.png>
+Package pdftex.def Info: chapters/chap3/images/pic1.png  used on input line 55.
+(pdftex.def)             Requested size: 137.9979pt x 33.31049pt.
+ [10 <./chapters/chap3/images/pic1.png>]
+<chapters/chap3/images/pic2.png, id=223, 371.3875pt x 261.97874pt>
+File: chapters/chap3/images/pic2.png Graphic file (type png)
+<use chapters/chap3/images/pic2.png>
+Package pdftex.def Info: chapters/chap3/images/pic2.png  used on input line 76.
+(pdftex.def)             Requested size: 172.5pt x 121.68294pt.
+<chapters/chap3/images/pic3.png, id=224, 356.33125pt x 61.22874pt>
+File: chapters/chap3/images/pic3.png Graphic file (type png)
+<use chapters/chap3/images/pic3.png>
+Package pdftex.def Info: chapters/chap3/images/pic3.png  used on input line 87.
+(pdftex.def)             Requested size: 207.0021pt x 35.56874pt.
+) [11 <./chapters/chap3/images/pic2.png> <./chapters/chap3/images/pic3.png>]
+\openout2 = `chapters/chap4/des.aux'.
+
+ (./chapters/chap4/des.tex
+Capitolo 4.
+<chapters/chap4/images/mappatura.png, id=232, 225.84375pt x 155.58125pt>
+File: chapters/chap4/images/mappatura.png Graphic file (type png)
+<use chapters/chap4/images/mappatura.png>
+Package pdftex.def Info: chapters/chap4/images/mappatura.png  used on input line 16.
+(pdftex.def)             Requested size: 103.50105pt x 71.30235pt.
+[12
+
+
+
+
+ <./chapters/chap4/images/mappatura.png>] [13]
+<chapters/chap4/images/feistel.png, id=245, 407.5225pt x 187.70125pt>
+File: chapters/chap4/images/feistel.png Graphic file (type png)
+<use chapters/chap4/images/feistel.png>
+Package pdftex.def Info: chapters/chap4/images/feistel.png  used on input line 78.
+(pdftex.def)             Requested size: 241.49895pt x 111.23253pt.
+<chapters/chap4/images/des.png, id=246, 393.47pt x 295.1025pt>
+File: chapters/chap4/images/des.png Graphic file (type png)
+<use chapters/chap4/images/des.png>
+Package pdftex.def Info: chapters/chap4/images/des.png  used on input line 94.
+(pdftex.def)             Requested size: 241.49895pt x 181.11996pt.
+ [14 <./chapters/chap4/images/feistel.png> <./chapters/chap4/images/des.png>] [15] [16] [17]) [18] (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap2/cifrari.aux) (./chapters/chap3/crittoanalisi.aux) (./chapters/chap4/des.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `crypto.out' has not changed.
-(rerunfilecheck)             Checksum: 54A2925DD2F93858DAB489C460E9A6AB;2365.
+(rerunfilecheck)             Checksum: C99A5698F3CDCD3389CAE65F8CB59A45;4126.
  ) 
 Here is how much of TeX's memory you used:
- 22942 strings out of 474222
- 418428 string characters out of 5748733
- 1932975 words of memory out of 5000000
- 44769 multiletter control sequences out of 15000+600000
+ 23046 strings out of 474222
+ 421378 string characters out of 5748733
+ 1933975 words of memory out of 5000000
+ 44845 multiletter control sequences out of 15000+600000
  568665 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,6n,93p,458b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on crypto.pdf (11 pages, 614016 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on crypto.pdf (19 pages, 852507 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 279 words of extra memory for PDF output out of 10000 (max. 10000000)
 

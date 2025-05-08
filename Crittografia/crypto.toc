@@ -17,3 +17,15 @@
 \contentsline {section}{\numberline {3.1}Cifrari a shift}{9}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Cifrario di Hill}{10}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Cifrario di Vigenerè - Metodo Kasiski}{10}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Indice di coincidenza}{10}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Indice mutuo di coincidenza}{11}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Cifratura Simmetrica - DES}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Cifratura di Feistel}{12}{section.4.1}%
+\contentsline {subsubsection}{Caratteristiche}{13}{section*.3}%
+\contentsline {section}{\numberline {4.2}DES}{14}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Modalità operative}{15}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Sicurezza dei cifrari moderni}{16}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Approccio concreto}{17}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Approccio asintotico}{17}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Crittoanalisi di DES}{17}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Forza bruta}{17}{subsection.4.4.1}%

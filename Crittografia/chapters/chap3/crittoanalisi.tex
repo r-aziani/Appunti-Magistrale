@@ -45,3 +45,59 @@ frequenze ottenute, o un suo multiplo.
 
 \noindent A questo punto, si può svolgere un'analisi delle frequenze.
 
+\subsection{Indice di coincidenza}
+
+L'indice di coincidenza di una stringa $x_1x_2\dots x_n$, rappresentato con la notazione $IC(x_1x_2\dots x_n)$, rappresenta la probabilità 
+che due caratteri presi a caso nella stringa siano uguali. Lo possianmo definire come 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{chapters/chap3/images/pic1}
+\end{figure}
+
+\noindent dove $n_i$ rappresenta il numero di occorenze della $i$-esima lettera dell'alfabeto.
+
+\noindent Con il calcolo dell'indice di coincidenza per una lettera su un testo cifrato, possiamo stabilire con quale lingua abbiamo a che fare (in 
+base agli indici di coincidenza dei vari alfabeti); se vogliamo determinare la lunghezza $t$ della chiave ($t$ rappresenta il periodo
+di ripetizione), possiamo procedere in questo modo:
+\begin{itemize}
+    \item Se $t=1$, significa che si sta usando una sostituzione monoalfabetica; posso dunque calcolare l'indice di coincidenza sul cifrato, e se ottengo 
+    valori distanti da quelli delle varie lingue, posso scartare l'ipotesi di $t=1$
+    \item Proseguo ipotizzando $t=2$; per poter calcolare l'$IC$, divido il mio cifrato in due sottotesti con lo shift pari a 2 $\langle(x_0x_2 \dots), (x_1x_3 \dots)\rangle$
+    \item \dots
+    \item Con $t=n$, si devono calcolare $n$ indici di coincidenza che avranno come caratteri quelli con uno shift pari a $n$
+\end{itemize}
+
+$\Rightarrow$ si prosegue fino a che si trovano tutti gli indici di coincidenza simili ad un indice di 
+una lingua conosciuta
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{chapters/chap3/images/pic2.png}
+\end{figure}
+
+
+\subsection{Indice mutuo di coincidenza}
+
+Per trovare i caratteri della chiave si usa l'indice mutuo di coincidenza (IMC) che ci dice qual è la probabilità di estrarre casualmente 
+da 2 stringhe 2 caratteri uguali. L'espressione che permette di calcolare IMC è 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{chapters/chap3/images/pic3.png}
+\end{figure}
+
+\noindent dove $f_i$ rappresenta il numero di occorrenze del carattere $i$-esimo nella prima stringa, mentre $f_i^{'}$ rappresenta il numero di occorenze del 
+carattere $i$-esimo nella seconda stringa.
+
+
+
+
+
+
+
+
+
+
+
+
