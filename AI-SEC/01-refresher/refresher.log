@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  8 MAY 2025 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  12 MAY 2025 22:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/azi/Desktop/Appunti-Magistrale/Crittografia/crypto.tex
-(/home/azi/Desktop/Appunti-Magistrale/Crittografia/crypto.tex
+**/home/azi/Desktop/Appunti-Magistrale/AI-SEC/01-refresher/refresher.tex
+(/home/azi/Desktop/Appunti-Magistrale/AI-SEC/01-refresher/refresher.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -423,16 +423,7 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks34
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count312
 \float@exts=\toks35
@@ -491,27 +482,27 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box68
-) (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap2/cifrari.aux) (./chapters/chap3/crittoanalisi.aux) (./chapters/chap4/des.aux) (./chapters/chap5/aes.aux))
-\openout1 = `crypto.aux'.
+) (./refresher.aux)
+\openout1 = `refresher.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count326
@@ -531,8 +522,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \it@ocap on input line 29.
-LaTeX Info: Redefining \it@ccap on input line 29.
+LaTeX Info: Redefining \it@ocap on input line 28.
+LaTeX Info: Redefining \it@ccap on input line 28.
 
 
 File italian.ldf warning: 
@@ -540,163 +531,96 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 29.
+italian.ldf    on input line 28.
 
-Package hyperref Info: Link coloring OFF on input line 29.
-(./crypto.out) (./crypto.out)
+Package hyperref Info: Link coloring OFF on input line 28.
+(./refresher.out) (./refresher.out)
 \@outlinefile=\write4
-\openout4 = `crypto.out'.
+\openout4 = `refresher.out'.
 
 \c@lstlisting=\count332
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+
 
 LaTeX Warning: No \author given.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./crypto.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./refresher.toc)
 \tf@toc=\write5
-\openout5 = `crypto.toc'.
+\openout5 = `refresher.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 \newpage
+l.32 \newpage
               [1
 
 ]
-\openout2 = `chapters/chap1/intro.aux'.
-
- (./chapters/chap1/intro.tex
 Capitolo 1.
+<images/isto.png, id=70, 462.72874pt x 371.3875pt>
+File: images/isto.png Graphic file (type png)
+<use images/isto.png>
+Package pdftex.def Info: images/isto.png  used on input line 69.
+(pdftex.def)             Requested size: 172.5pt x 138.44826pt.
 [2
 
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [3]
-\openout2 = `chapters/chap2/cifrari.aux'.
-
- (./chapters/chap2/cifrari.tex
-Capitolo 2.
-<chapters/chap2/images/shift.png, id=177, 587.19376pt x 65.24374pt>
-File: chapters/chap2/images/shift.png Graphic file (type png)
-<use chapters/chap2/images/shift.png>
-Package pdftex.def Info: chapters/chap2/images/shift.png  used on input line 37.
-(pdftex.def)             Requested size: 241.49895pt x 26.83273pt.
-[4
-
-
-
-
-]
-<chapters/chap2/images/disco.png, id=183, 313.17pt x 311.1625pt>
-File: chapters/chap2/images/disco.png Graphic file (type png)
-<use chapters/chap2/images/disco.png>
-Package pdftex.def Info: chapters/chap2/images/disco.png  used on input line 85.
-(pdftex.def)             Requested size: 137.9979pt x 137.11607pt.
- [5 <./chapters/chap2/images/shift.png>]
-<chapters/chap2/images/porta.png, id=193, 493.845pt x 280.04625pt>
-File: chapters/chap2/images/porta.png Graphic file (type png)
-<use chapters/chap2/images/porta.png>
-Package pdftex.def Info: chapters/chap2/images/porta.png  used on input line 98.
-(pdftex.def)             Requested size: 276.00105pt x 156.5086pt.
- [6 <./chapters/chap2/images/disco.png> <./chapters/chap2/images/porta.png>]
-<chapters/chap2/images/hill.png, id=201, 533.995pt x 92.345pt>
-File: chapters/chap2/images/hill.png Graphic file (type png)
-<use chapters/chap2/images/hill.png>
-Package pdftex.def Info: chapters/chap2/images/hill.png  used on input line 141.
-(pdftex.def)             Requested size: 172.5pt x 29.82999pt.
- [7 <./chapters/chap2/images/hill.png>]) [8]
-\openout2 = `chapters/chap3/crittoanalisi.aux'.
-
- (./chapters/chap3/crittoanalisi.tex
-Capitolo 3.
-[9
-
-
-
-
-]
-<chapters/chap3/images/pic1.png, id=222, 261.97874pt x 63.23625pt>
-File: chapters/chap3/images/pic1.png Graphic file (type png)
-<use chapters/chap3/images/pic1.png>
-Package pdftex.def Info: chapters/chap3/images/pic1.png  used on input line 55.
-(pdftex.def)             Requested size: 137.9979pt x 33.31049pt.
- [10 <./chapters/chap3/images/pic1.png>]
-<chapters/chap3/images/pic2.png, id=228, 371.3875pt x 261.97874pt>
-File: chapters/chap3/images/pic2.png Graphic file (type png)
-<use chapters/chap3/images/pic2.png>
-Package pdftex.def Info: chapters/chap3/images/pic2.png  used on input line 76.
-(pdftex.def)             Requested size: 172.5pt x 121.68294pt.
-<chapters/chap3/images/pic3.png, id=229, 356.33125pt x 61.22874pt>
-File: chapters/chap3/images/pic3.png Graphic file (type png)
-<use chapters/chap3/images/pic3.png>
-Package pdftex.def Info: chapters/chap3/images/pic3.png  used on input line 87.
-(pdftex.def)             Requested size: 207.0021pt x 35.56874pt.
-) [11 <./chapters/chap3/images/pic2.png> <./chapters/chap3/images/pic3.png>]
-\openout2 = `chapters/chap4/des.aux'.
-
- (./chapters/chap4/des.tex
-Capitolo 4.
-<chapters/chap4/images/mappatura.png, id=237, 225.84375pt x 155.58125pt>
-File: chapters/chap4/images/mappatura.png Graphic file (type png)
-<use chapters/chap4/images/mappatura.png>
-Package pdftex.def Info: chapters/chap4/images/mappatura.png  used on input line 16.
-(pdftex.def)             Requested size: 103.50105pt x 71.30235pt.
-[12
-
-
-
-
- <./chapters/chap4/images/mappatura.png>] [13]
-<chapters/chap4/images/feistel.png, id=250, 407.5225pt x 187.70125pt>
-File: chapters/chap4/images/feistel.png Graphic file (type png)
-<use chapters/chap4/images/feistel.png>
-Package pdftex.def Info: chapters/chap4/images/feistel.png  used on input line 78.
-(pdftex.def)             Requested size: 241.49895pt x 111.23253pt.
-<chapters/chap4/images/des.png, id=251, 393.47pt x 295.1025pt>
-File: chapters/chap4/images/des.png Graphic file (type png)
-<use chapters/chap4/images/des.png>
-Package pdftex.def Info: chapters/chap4/images/des.png  used on input line 94.
-(pdftex.def)             Requested size: 241.49895pt x 181.11996pt.
- [14 <./chapters/chap4/images/feistel.png> <./chapters/chap4/images/des.png>] [15] [16] [17]) [18]
-\openout2 = `chapters/chap5/aes.aux'.
-
- (./chapters/chap5/aes.tex
-Capitolo 5.
-) [19
-
-
-
-
-] (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap2/cifrari.aux) (./chapters/chap3/crittoanalisi.aux) (./chapters/chap4/des.aux) (./chapters/chap5/aes.aux))
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<images/deviazione-standard.png, id=79, 278.03876pt x 255.95625pt>
+File: images/deviazione-standard.png Graphic file (type png)
+<use images/deviazione-standard.png>
+Package pdftex.def Info: images/deviazione-standard.png  used on input line 83.
+(pdftex.def)             Requested size: 172.5pt x 158.80058pt.
+ [3 <./images/isto.png> <./images/deviazione-standard.png>]
+<images/correlazione.png, id=89, 833.1125pt x 343.2825pt>
+File: images/correlazione.png Graphic file (type png)
+<use images/correlazione.png>
+Package pdftex.def Info: images/correlazione.png  used on input line 114.
+(pdftex.def)             Requested size: 345.0pt x 142.15576pt.
+ [4 <./images/correlazione.png>]
+<images/linear.png, id=98, 255.95625pt x 250.9375pt>
+File: images/linear.png Graphic file (type png)
+<use images/linear.png>
+Package pdftex.def Info: images/linear.png  used on input line 170.
+(pdftex.def)             Requested size: 137.9979pt x 135.2898pt.
+ [5]
+<images/touring-completo.png, id=104, 258.9675pt x 258.9675pt>
+File: images/touring-completo.png Graphic file (type png)
+<use images/touring-completo.png>
+Package pdftex.def Info: images/touring-completo.png  used on input line 178.
+(pdftex.def)             Requested size: 137.9979pt x 138.0029pt.
+<images/ml-life-cycle.png, id=105, 460.72125pt x 427.5975pt>
+File: images/ml-life-cycle.png Graphic file (type png)
+<use images/ml-life-cycle.png>
+Package pdftex.def Info: images/ml-life-cycle.png  used on input line 197.
+(pdftex.def)             Requested size: 207.0021pt x 192.11696pt.
+ [6 <./images/linear.png> <./images/touring-completo.png>]
+<images/intro-ml.png, id=113, 846.16125pt x 273.02pt>
+File: images/intro-ml.png Graphic file (type png)
+<use images/intro-ml.png>
+Package pdftex.def Info: images/intro-ml.png  used on input line 212.
+(pdftex.def)             Requested size: 345.0pt x 111.31403pt.
+ [7 <./images/ml-life-cycle.png> <./images/intro-ml.png>] [8] [9] (./refresher.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `crypto.out' has not changed.
-(rerunfilecheck)             Checksum: B8368C8E7C2F3D9047B99E0DBEA95229;4185.
+Package rerunfilecheck Info: File `refresher.out' has not changed.
+(rerunfilecheck)             Checksum: C997378BF846D2C5CA07469BE4E55BB2;2087.
  ) 
 Here is how much of TeX's memory you used:
- 23075 strings out of 474222
- 422227 string characters out of 5748733
- 1934975 words of memory out of 5000000
- 44864 multiletter control sequences out of 15000+600000
- 568665 words of font info for 76 fonts, out of 8000000 for 9000
+ 22334 strings out of 474222
+ 409690 string characters out of 5748733
+ 1931975 words of memory out of 5000000
+ 44213 multiletter control sequences out of 15000+600000
+ 566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,458b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on crypto.pdf (20 pages, 854606 bytes).
+ 84i,6n,93p,468b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on refresher.pdf (10 pages, 411728 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 128 words of extra memory for PDF output out of 10000 (max. 10000000)
 

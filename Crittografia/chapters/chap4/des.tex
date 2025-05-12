@@ -211,10 +211,17 @@ il costo dell'altro. È possibile creare una tabella di ricerca che tracci le co
 si può calcolare l'intera tabella (aumentando i costi di memoria) o solo alcune voci (aumentando il tempo di calcolo).
 
 \noindent Nel momento in cui si ottiene il cifrato, la decifrazione si limiterà alla sola ricerca della chiave nella tabella; questo processo, che ha 
-tempo di esecuzione costante o al più logaritmico, richiede un tempo di precomputazione e spazio di memoria pari a $2^56$. L'idea per costruire
+tempo di esecuzione costante o al più logaritmico, e spazio di memoria pari a $2^56$. L'idea per costruire
 la tabella è quella di usare una funzione di riduzione che, data una stringa da 64 bit, ne ricava una di 56 bit. 
 
-\noindent $\rightarrow$ data una stringa di 64 bit $x$, posso applicare la funzione di riduzione e usare quei 56 bit come chiave
+\noindent $\rightarrow$ data una stringa di 64 bit $x$, posso applicare la funzione di riduzione e usare quei 56 bit come chiave. Definiamo quindi 
+$y = DES_{1,0}(x)$; riapplicando DES a $y$ con la stessa chiave otteniamo $x_{1,1}$.
+
+\noindent Iterando questo processo arriviamo ad ottenere $x_{1,t}$, dove $t$ è il numero di colonne della tabella di ricerca. È possibile partire 
+da chiavi diverse da quella precedenza, ottenendo così una tabella di $m$ righe (una per ogni chiave) e $t$ colonne.
+
+\noindent Bisogna ricordare che il valore della chiave \textbf{potrebbe non essere esattamente quello} dato che il valore ottenuto è stato preso buttando 
+8 bit dai 64 presi in partenza.
 
 
 \textbf{fanculo è da finire sta parte}

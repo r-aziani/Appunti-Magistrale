@@ -29,3 +29,4 @@
 \contentsline {subsection}{\numberline {4.3.2}Approccio asintotico}{17}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Crittoanalisi di DES}{17}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Forza bruta}{17}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}AES}{19}{chapter.5}%
