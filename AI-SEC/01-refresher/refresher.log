@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  12 MAY 2025 22:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  13 MAY 2025 16:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -558,7 +558,7 @@ l.32 \newpage
 
 ]
 Capitolo 1.
-<images/isto.png, id=70, 462.72874pt x 371.3875pt>
+<images/isto.png, id=145, 462.72874pt x 371.3875pt>
 File: images/isto.png Graphic file (type png)
 <use images/isto.png>
 Package pdftex.def Info: images/isto.png  used on input line 69.
@@ -566,61 +566,118 @@ Package pdftex.def Info: images/isto.png  used on input line 69.
 [2
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<images/deviazione-standard.png, id=79, 278.03876pt x 255.95625pt>
+<images/deviazione-standard.png, id=154, 278.03876pt x 255.95625pt>
 File: images/deviazione-standard.png Graphic file (type png)
 <use images/deviazione-standard.png>
 Package pdftex.def Info: images/deviazione-standard.png  used on input line 83.
 (pdftex.def)             Requested size: 172.5pt x 158.80058pt.
  [3 <./images/isto.png> <./images/deviazione-standard.png>]
-<images/correlazione.png, id=89, 833.1125pt x 343.2825pt>
+<images/correlazione.png, id=164, 833.1125pt x 343.2825pt>
 File: images/correlazione.png Graphic file (type png)
 <use images/correlazione.png>
 Package pdftex.def Info: images/correlazione.png  used on input line 114.
 (pdftex.def)             Requested size: 345.0pt x 142.15576pt.
  [4 <./images/correlazione.png>]
-<images/linear.png, id=98, 255.95625pt x 250.9375pt>
+<images/linear.png, id=174, 255.95625pt x 250.9375pt>
 File: images/linear.png Graphic file (type png)
 <use images/linear.png>
 Package pdftex.def Info: images/linear.png  used on input line 170.
 (pdftex.def)             Requested size: 137.9979pt x 135.2898pt.
  [5]
-<images/touring-completo.png, id=104, 258.9675pt x 258.9675pt>
+<images/touring-completo.png, id=180, 258.9675pt x 258.9675pt>
 File: images/touring-completo.png Graphic file (type png)
 <use images/touring-completo.png>
 Package pdftex.def Info: images/touring-completo.png  used on input line 178.
 (pdftex.def)             Requested size: 137.9979pt x 138.0029pt.
-<images/ml-life-cycle.png, id=105, 460.72125pt x 427.5975pt>
+<images/ml-life-cycle.png, id=181, 460.72125pt x 427.5975pt>
 File: images/ml-life-cycle.png Graphic file (type png)
 <use images/ml-life-cycle.png>
 Package pdftex.def Info: images/ml-life-cycle.png  used on input line 197.
 (pdftex.def)             Requested size: 207.0021pt x 192.11696pt.
  [6 <./images/linear.png> <./images/touring-completo.png>]
-<images/intro-ml.png, id=113, 846.16125pt x 273.02pt>
+<images/intro-ml.png, id=189, 846.16125pt x 273.02pt>
 File: images/intro-ml.png Graphic file (type png)
 <use images/intro-ml.png>
 Package pdftex.def Info: images/intro-ml.png  used on input line 212.
 (pdftex.def)             Requested size: 345.0pt x 111.31403pt.
- [7 <./images/ml-life-cycle.png> <./images/intro-ml.png>] [8] [9] (./refresher.aux)
+ [7 <./images/ml-life-cycle.png> <./images/intro-ml.png>] [8] [9]
+Capitolo 2.
+<images/regressore.png, id=208, 454.69875pt x 420.57124pt>
+File: images/regressore.png Graphic file (type png)
+<use images/regressore.png>
+Package pdftex.def Info: images/regressore.png  used on input line 302.
+(pdftex.def)             Requested size: 207.0021pt x 191.46931pt.
+[10
+
+ <./images/regressore.png>] [11]
+<images/r2.png, id=223, 710.655pt x 120.45pt>
+File: images/r2.png Graphic file (type png)
+<use images/r2.png>
+Package pdftex.def Info: images/r2.png  used on input line 368.
+(pdftex.def)             Requested size: 207.0021pt x 35.08398pt.
+<images/prodotti-incrociati.png, id=224, 411.5375pt x 126.4725pt>
+File: images/prodotti-incrociati.png Graphic file (type png)
+<use images/prodotti-incrociati.png>
+Package pdftex.def Info: images/prodotti-incrociati.png  used on input line 385.
+(pdftex.def)             Requested size: 207.0021pt x 63.61433pt.
+ [12 <./images/r2.png> <./images/prodotti-incrociati.png>]
+<images/decision-tree.png, id=233, 292.09125pt x 287.0725pt>
+File: images/decision-tree.png Graphic file (type png)
+<use images/decision-tree.png>
+Package pdftex.def Info: images/decision-tree.png  used on input line 419.
+(pdftex.def)             Requested size: 207.0021pt x 203.45056pt.
+ [13 <./images/decision-tree.png>]
+<images/split1.png, id=239, 349.305pt x 353.32pt>
+File: images/split1.png Graphic file (type png)
+<use images/split1.png>
+Package pdftex.def Info: images/split1.png  used on input line 429.
+(pdftex.def)             Requested size: 137.9979pt x 139.58412pt.
+<images/split2.png, id=240, 350.30875pt x 345.29pt>
+File: images/split2.png Graphic file (type png)
+<use images/split2.png>
+Package pdftex.def Info: images/split2.png  used on input line 436.
+(pdftex.def)             Requested size: 137.9979pt x 136.02187pt.
+<images/split3.png, id=241, 349.305pt x 348.30125pt>
+File: images/split3.png Graphic file (type png)
+<use images/split3.png>
+Package pdftex.def Info: images/split3.png  used on input line 441.
+(pdftex.def)             Requested size: 137.9979pt x 137.6014pt.
+ [14 <./images/split1.png> <./images/split2.png>]
+<images/nn.png, id=249, 643.40375pt x 242.9075pt>
+File: images/nn.png Graphic file (type png)
+<use images/nn.png>
+Package pdftex.def Info: images/nn.png  used on input line 460.
+(pdftex.def)             Requested size: 276.00105pt x 104.20355pt.
+<images/svm.png, id=250, 462.72874pt x 352.31625pt>
+File: images/svm.png Graphic file (type png)
+<use images/svm.png>
+Package pdftex.def Info: images/svm.png  used on input line 470.
+(pdftex.def)             Requested size: 207.0021pt x 157.61081pt.
+ [15 <./images/split3.png> <./images/nn.png>] [16 <./images/svm.png>]
+Capitolo 3.
+[17
+
+] [18] (./refresher.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `refresher.out' has not changed.
-(rerunfilecheck)             Checksum: C997378BF846D2C5CA07469BE4E55BB2;2087.
+(rerunfilecheck)             Checksum: F467535AD002B97FC5DB3545B9D662B0;4747.
  ) 
 Here is how much of TeX's memory you used:
- 22334 strings out of 474222
- 409690 string characters out of 5748733
- 1931975 words of memory out of 5000000
- 44213 multiletter control sequences out of 15000+600000
+ 22444 strings out of 474222
+ 411877 string characters out of 5748733
+ 1933975 words of memory out of 5000000
+ 44291 multiletter control sequences out of 15000+600000
  566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,468b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on refresher.pdf (10 pages, 411728 bytes).
+ 84i,6n,93p,468b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on refresher.pdf (19 pages, 598445 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 258 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

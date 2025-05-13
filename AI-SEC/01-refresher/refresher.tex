@@ -288,6 +288,273 @@ sui dati di training.
 
 
 
+\chapter{AI-Based Decision Making}
+
+\section{Regressore}
+
+Il regressore è una sorta di \textit{via di mezzo} tra un classificatore e un anomaly detector; utilizza il residuo quadratico 
+per restituire valori continui invece che una singola eticheta (data una $x$ che non ha mai visto prima, mi restituisce la sua $y$).
+
+\noindent Fare la regressione significa trovare la retta (o iperpiano) che minimizzi la somma dei quadrati delle distanze dei punti dalla retta.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/regressore.png}
+\end{figure}
+
+\subsubsection{Qualità del regressore}
+
+Se mi accorgo che il regressore restituisce costantemente valori \textit{troppo più alti (o bassi)}, allora significa che l'intercetta con l'asse $x$
+del regresspre è posizionata troppo in alto (o in basso) rispetto ai punti futuri. Si dice in questo caso che \textit{sto usando un bias}; si può 
+\textit{aggiustare} la retta aggiungendo i nuovi punti o rimuovendo quelli più vecchi.
+
+\subsubsection{Validazione}
+Per evitare overfitting e prendere il miglior regressore possibile, si ha bisogno di due set:
+\begin{itemize}
+    \item \textbf{Training set:} usato per minimizzare l'errore quadratico 
+    \item \textbf{Test set:} verifico che errore ho ottenuto e guardo se c'è un bias
+\end{itemize}
+
+
+\subsubsection{Bias-Varianza trade off}
+L'errore dipende sia dalla varianza che dal bias; si cerca di minimizzare entrambi, ovvero che sbaglio poco (varianza) e quel poco 
+che sbaglio è ben distribuito (bias).
+
+\noindent Purtroppo però quando muovo la retta per minimizzare l'errore, non riesco a minimizzare entrambi: al diminuire di uno cresce l'altro.
+
+\subsection{Regressione Ridge e Lasso}
+
+Sono dei metodi di regressione che introducono dei vincoli sui coefficienti del regressore, portando ad avere un regressore 
+più sofisticato; cercano di trovare un compromesso tra varianza (quanto sbaglia) e bias (in che direzione sbaglia).
+
+\subsubsection{Regressione Ridge}
+Cerca di limitare la dimensione dei coefficienti, definendo un parametro $\lambda$ pari alla somma dei quadrati dei coefficienti.
+
+\noindent L'obiettivo è cercare di impedire ai punti di training di generare un predittore con un bias troppo alto per aver voluto 
+minimizzare l'errore. Inoltre, la tutti i coefficienti devono avere valori diversi da 0, perchè voglio che il regressore prenda in 
+considerazione tutte le variabili.
+
+\noindent Il parametro $\lambda$ viene scelto usando un set di validazione: lo scelgo sui dei dati selezionati di cui mi fido, per poi 
+usarlo su tutto il training set.
+
+\subsubsection{Regressione Lasso}
+È simile alla \textit{ridge regression}, con la differenze che è permesso mettere i valori dei coefficienti pari a 0. La regressione Lasso impone 
+che la somma dei valori assoluti dei coefficienti sia minore di un certo valore, portando alcuni coefficienti ad essere pari a 0.
+
+\noindent Questo può portare ad avere dei modelli più semplici che non includono alcune features.
+
+\subsection{Regressore multivariato}
+
+Si passa ad un modello multivariato; l'output (la $y$) dipende da una combinazione lineare degli input.
+
+\noindent Le condizioni per aver un buon regressore multivariato sono che:
+\begin{itemize}
+    \item gli errori siano indipendenti 
+    \item la distribuzione degli errori è gaussiana 
+    \item la varianza è costante
+\end{itemize}
+
+\noindent Una volta ottenuto un predittore, lo posso usare e sarà molto più rapido di un'inferenza tramite rete neurale.
+
+\subsection{Coefficiente di determinazione multipla}
+
+Rappresenta la spiegabilità del risultato di un regressore, ovvero fornire una descrizione dei fattori che hanno influenzato la decisione.
+
+\noindent Il modo più semplice è fare l'analisi di quali feature hanno influenzato di più la decisione: viene fatto tramite il coefficiente $r^2$
+calcolabile nel seguente modo:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/r2.png}
+\end{figure}
+
+\noindent Questo coefficiente mi dice quanto è collettiva l'influenza delle variabili: magari ce n'è una che conta tantissimo e un'altra che 
+è ininfluente. Mi dice quanto è collettiva la decisione, se dipende da tutte le variabili o se solo da un loro sottoinsieme.
+
+\noindent Esistono test statistici per scartare le variabili che sono poco influenti: se un coefficiente è basso vuol dire che influenza 
+poco, lo potrei scartare per avere un regressore più semplice.
+
+
+\subsection{Interazione tra variabili}
+Avviene quando sospetto che l'influenza di una variabile dipende dal valore delle altre: ad esempio, sospetto che l'influenza su $y$
+di $x_2$ dipenda dal valore di $x_1$. Si può modellare introducendo i 
+\textbf{prodotti incrociati}; è un'interazione tra le variabili di input, si ottiene una combinazione non lineare.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/prodotti-incrociati.png}
+\end{figure}
+
+
+\section{Basic ML models}
+
+L'obiettivo di un modello di machine learning è aprossimare una funzione $f$ che non conosciamo. Ciò che cambia è il dominio e codominio:
+\begin{itemize}
+    \item se il codominio è un set finito di etichette $\Rightarrow$ classificatore 
+    \item se il codominio è un numero reale $\Rightarrow$ regressore 
+    \item se il codominio è un valore $\Rightarrow$ predittore 
+\end{itemize}
+
+
+\subsection{Alberi di decisione}
+
+Gli alberi di decisione sono un modello di regressione o classificazione sotto forma di albero. L'albero viene costruito dividendo il dataset 
+in sottoinsiemi sempre più piccoli, fino ad ottenere un albero composto da:
+\begin{itemize}
+    \item \textbf{nodi decisionali}
+    \begin{itemize}
+        \item hanno due o più rami, ciascuno corrispondente a un valore della feature in esame 
+    \end{itemize}
+    \item \textbf{nodi foglia}
+    \begin{itemize}
+        \item rappresentano l'esito finale della decisione, cioè la predizione di un valore numerico (nel caso di regressore) o della classe (nel caso 
+        di classificatore)
+    \end{itemize}
+\end{itemize}
+
+\noindent Possono gestire sia dati numerici che categorici.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/decision-tree.png}
+\end{figure}
+
+Un modo per costruire l'albero ed ordinare gli attributi è quella di farlo per \textbf{entropia massima}: dovrei cercare di prendere 
+per primo quello con l'entropia più alta. Quando invece faccio la bucketizzazione, dovrei cercare di minimizzare l'entropia.
+
+\subsubsection{Esempio animato}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/split1.png}
+\end{figure}
+
+\noindent Ciasuno dei due insiemi che ho ottenuto sono il più possibile \textit{tutti uguali} $\rightarrow$ ho ridotto l'entropia 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/split2.png}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/split3.png}
+\end{figure}
+
+\noindent Ciascun sottoinsieme ha dati con la stessa etichetta; in questo caso l'albero di decisione fa zero errori sul training set, anche se 
+devo stare attento all'overfitting.
+
+\subsection{Nearest Neighbor Models}
+
+Si può dire che il modello è il training set, dato che non devo addestrare niente ma una nuova etichetta viene stimata a partire dal training 
+set; quando mi arriva un nuovo punto (ad esempio un dipendente con età e anni di servizio), vado a vedere il punto più vicino a lui nello spazio 
+multidimensionale, e uso la sua stessa etichetta.
+
+\noindent Una estensione è quella di usare i $k$ punti più vicini.
+
+\noindent Nell'esempio in figura, il nuovo punto è il quadrato; nel caso a sinistra dirò che è un cerchio, mentre nel caso a destra $(k=3)$ dirò che 
+è una croce.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/nn.png}
+\end{figure}
+
+\subsection{Linear Support Vector Machines}
+È un metodo di classificazione in cui prendo il training set e cerco se trovo un iperpiano (nell'esempio una retta) che 
+divida in due training set. Vengono calcolati i vettori di supporto (distanze delle coppie rosso-verde con distanza minima) e viene calcolato 
+l'iperpiano che li taglia nel modo più ortagonale possibile.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/svm.png}
+\end{figure}
+
+\noindent I punti di training usati per generare il modello sono relativamente rispetto ad altri modelli, come le reti neurali.
+
+\noindent Dato che non è sempre possibile determinare una separazione netta delle feature, è possibile definire nuove variabili in funzione delle 
+altre con funzioni non lineari. Ad esempio, posso usare una funzione non lineare per trasformare le variabili in uno spazio nuovo (ad esempio 
+da due a tre dimensioni), dove è più facile calcolare l'iperpiano di seperazione.
+
+
+
+
+
+\chapter{Gestione dei dati}
+
+\section{Managing Data for AI}
+
+Nel procedimento per passare dai dati grezzi a quelli per il training ci sono tutta una serie di operazioni da fare; assumono particolare importanza quelle di 
+\textit{compliance}, tra cui quella più importante è quella per la privacy. Vengono fatte sia per migliorare la qualità del dato che per introddure 
+rumore per questioni di privacy.
+
+
+\noindent Alcune tra le principali fasi di una \textit{data lake}, ovvero una infrastruttura per la gestione di informazioni da dare in pasto 
+a modelli di ML, sono:
+\begin{itemize}
+    \item \textbf{Acquisizione} dei dati 
+    \item \textbf{Integrazione} dei dati; ad esempio, se mancano dei dati vado a riempire usando dei dati plausibili (posso prendere 
+    un punto vicino per stimare quello che manca), per rendere i miei dati più completi. Viene anche introdotto rumore per questioni 
+    di privacy 
+    \item \textbf{Storaging}
+    \item \textbf{Analytics}
+\end{itemize}
+
+\section{Migliorare la qualità dei dati}
+
+\subsection{Ingegneria delle feature}
+
+I modelli neurali di grandi dimensioni riescono a lavorare sui dati grezzi, mentre i modelli semplici (come quelli visti fino ad 
+adesso) lavorano su feature che hanno subito un \textbf{processo di analisi}: diminuire la covarianza, togliere feature spurie \dots operazioni 
+finalizzati ad ottenere delle features con una \textbf{distribuzione gaussiana}; lavorano su dati con meno dimensioni, le cui dimensioni sono state 
+selezionate a mano.
+
+\noindent Se non faccio un processo di \textit{feature engeneering} il training sarà molto più oneroso, mentre se viene fatta il training 
+sarà molto più efficacie.
+
+\subsubsection{Alcuni metodi di selezione delle features}
+
+\begin{itemize}
+    \item \textbf{Filtraggio:} vengono tolte le features che si possono togliere
+    \item \textbf{Wrapping:} viene usato un modello per generare delle coordinate in più da affiancare a quelle originali; data una feature, il modello 
+    mi dice una pseudofeature che poi verrà data in pasto al modello semplice.
+
+    $\rightarrow$ Più features vengono \textbf{aggregate} in una pseudofeature, in modo che sarà più semplice da addestrare; il modello da addestrare 
+    in questo modo avrà una dimensionalità più bassa del problema
+    \item \textbf{Embedding:} vengono scelte solo alcune feature, scartandone altre sulla base dei valori (ad esempio sulla base di valori statistici 
+    come la covarianza); è una sorta di filtro dinamico
+\end{itemize}
+
+\subsubsection{Filtraggio univariato}
+È un metodo di filtraggio usato per filtrare una caratteristica tra poche; non si presta a dei dati \textit{multidimensionali}.
+
+\noindent Il procedimento è il seguente:
+\begin{itemize}
+    \item calcola la correlazione tra tutte le possibili coppie 
+    \item per tutte le coppie la cui correlazione è alta, scarta una delle due caratteristiche in modo casuale 
+    \item si ripete il procedimento 
+\end{itemize}
+
+\noindent Non è efficiente nel caso feature elevate perchè si devono calcolare tutte le possibili combinazioni.
+
+\subsection{Valori mancanti}
+
+Il modello deve avere colonne con la stessa densità; non ci devono essere colonne troppo vuote o troppo piene rispetto alle altre.
+
+\noindent Nel caso di valori mancanti, si possono modelli come il \textit{k nearest neighbor} per stimarli.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
