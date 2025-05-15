@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  13 MAY 2025 16:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  15 MAY 2025 19:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -545,139 +545,199 @@ LaTeX Warning: No \author given.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./refresher.toc)
-\tf@toc=\write5
-\openout5 = `refresher.toc'.
-
-
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./refresher.toc
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 \newpage
-              [1
+l.63 ...2}Analisi dei trend}{26}{subsection.4.4.2}
+                                                  % [1
 
-]
+])
+\tf@toc=\write5
+\openout5 = `refresher.toc'.
+
+ [2]
 Capitolo 1.
-<images/isto.png, id=145, 462.72874pt x 371.3875pt>
+<images/isto.png, id=190, 462.72874pt x 371.3875pt>
 File: images/isto.png Graphic file (type png)
 <use images/isto.png>
 Package pdftex.def Info: images/isto.png  used on input line 69.
 (pdftex.def)             Requested size: 172.5pt x 138.44826pt.
-[2
+[3
 
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<images/deviazione-standard.png, id=154, 278.03876pt x 255.95625pt>
+<images/deviazione-standard.png, id=199, 278.03876pt x 255.95625pt>
 File: images/deviazione-standard.png Graphic file (type png)
 <use images/deviazione-standard.png>
 Package pdftex.def Info: images/deviazione-standard.png  used on input line 83.
 (pdftex.def)             Requested size: 172.5pt x 158.80058pt.
- [3 <./images/isto.png> <./images/deviazione-standard.png>]
-<images/correlazione.png, id=164, 833.1125pt x 343.2825pt>
+ [4 <./images/isto.png> <./images/deviazione-standard.png>]
+<images/correlazione.png, id=209, 833.1125pt x 343.2825pt>
 File: images/correlazione.png Graphic file (type png)
 <use images/correlazione.png>
 Package pdftex.def Info: images/correlazione.png  used on input line 114.
 (pdftex.def)             Requested size: 345.0pt x 142.15576pt.
- [4 <./images/correlazione.png>]
-<images/linear.png, id=174, 255.95625pt x 250.9375pt>
+ [5 <./images/correlazione.png>]
+<images/linear.png, id=218, 255.95625pt x 250.9375pt>
 File: images/linear.png Graphic file (type png)
 <use images/linear.png>
 Package pdftex.def Info: images/linear.png  used on input line 170.
 (pdftex.def)             Requested size: 137.9979pt x 135.2898pt.
- [5]
-<images/touring-completo.png, id=180, 258.9675pt x 258.9675pt>
+ [6]
+<images/touring-completo.png, id=225, 258.9675pt x 258.9675pt>
 File: images/touring-completo.png Graphic file (type png)
 <use images/touring-completo.png>
 Package pdftex.def Info: images/touring-completo.png  used on input line 178.
 (pdftex.def)             Requested size: 137.9979pt x 138.0029pt.
-<images/ml-life-cycle.png, id=181, 460.72125pt x 427.5975pt>
+<images/ml-life-cycle.png, id=226, 460.72125pt x 427.5975pt>
 File: images/ml-life-cycle.png Graphic file (type png)
 <use images/ml-life-cycle.png>
 Package pdftex.def Info: images/ml-life-cycle.png  used on input line 197.
 (pdftex.def)             Requested size: 207.0021pt x 192.11696pt.
- [6 <./images/linear.png> <./images/touring-completo.png>]
-<images/intro-ml.png, id=189, 846.16125pt x 273.02pt>
+ [7 <./images/linear.png> <./images/touring-completo.png>]
+<images/intro-ml.png, id=233, 846.16125pt x 273.02pt>
 File: images/intro-ml.png Graphic file (type png)
 <use images/intro-ml.png>
 Package pdftex.def Info: images/intro-ml.png  used on input line 212.
 (pdftex.def)             Requested size: 345.0pt x 111.31403pt.
- [7 <./images/ml-life-cycle.png> <./images/intro-ml.png>] [8] [9]
+ [8 <./images/ml-life-cycle.png> <./images/intro-ml.png>] [9] [10]
 Capitolo 2.
-<images/regressore.png, id=208, 454.69875pt x 420.57124pt>
+<images/regressore.png, id=252, 454.69875pt x 420.57124pt>
 File: images/regressore.png Graphic file (type png)
 <use images/regressore.png>
 Package pdftex.def Info: images/regressore.png  used on input line 302.
 (pdftex.def)             Requested size: 207.0021pt x 191.46931pt.
-[10
+[11
 
- <./images/regressore.png>] [11]
-<images/r2.png, id=223, 710.655pt x 120.45pt>
+ <./images/regressore.png>] [12]
+<images/r2.png, id=268, 710.655pt x 120.45pt>
 File: images/r2.png Graphic file (type png)
 <use images/r2.png>
 Package pdftex.def Info: images/r2.png  used on input line 368.
 (pdftex.def)             Requested size: 207.0021pt x 35.08398pt.
-<images/prodotti-incrociati.png, id=224, 411.5375pt x 126.4725pt>
+<images/prodotti-incrociati.png, id=269, 411.5375pt x 126.4725pt>
 File: images/prodotti-incrociati.png Graphic file (type png)
 <use images/prodotti-incrociati.png>
 Package pdftex.def Info: images/prodotti-incrociati.png  used on input line 385.
 (pdftex.def)             Requested size: 207.0021pt x 63.61433pt.
- [12 <./images/r2.png> <./images/prodotti-incrociati.png>]
-<images/decision-tree.png, id=233, 292.09125pt x 287.0725pt>
+ [13 <./images/r2.png> <./images/prodotti-incrociati.png>]
+<images/decision-tree.png, id=277, 292.09125pt x 287.0725pt>
 File: images/decision-tree.png Graphic file (type png)
 <use images/decision-tree.png>
 Package pdftex.def Info: images/decision-tree.png  used on input line 419.
 (pdftex.def)             Requested size: 207.0021pt x 203.45056pt.
- [13 <./images/decision-tree.png>]
-<images/split1.png, id=239, 349.305pt x 353.32pt>
+ [14 <./images/decision-tree.png>]
+<images/split1.png, id=283, 349.305pt x 353.32pt>
 File: images/split1.png Graphic file (type png)
 <use images/split1.png>
 Package pdftex.def Info: images/split1.png  used on input line 429.
 (pdftex.def)             Requested size: 137.9979pt x 139.58412pt.
-<images/split2.png, id=240, 350.30875pt x 345.29pt>
+<images/split2.png, id=284, 350.30875pt x 345.29pt>
 File: images/split2.png Graphic file (type png)
 <use images/split2.png>
 Package pdftex.def Info: images/split2.png  used on input line 436.
 (pdftex.def)             Requested size: 137.9979pt x 136.02187pt.
-<images/split3.png, id=241, 349.305pt x 348.30125pt>
+<images/split3.png, id=285, 349.305pt x 348.30125pt>
 File: images/split3.png Graphic file (type png)
 <use images/split3.png>
 Package pdftex.def Info: images/split3.png  used on input line 441.
 (pdftex.def)             Requested size: 137.9979pt x 137.6014pt.
- [14 <./images/split1.png> <./images/split2.png>]
-<images/nn.png, id=249, 643.40375pt x 242.9075pt>
+ [15 <./images/split1.png> <./images/split2.png>]
+<images/nn.png, id=293, 643.40375pt x 242.9075pt>
 File: images/nn.png Graphic file (type png)
 <use images/nn.png>
 Package pdftex.def Info: images/nn.png  used on input line 460.
 (pdftex.def)             Requested size: 276.00105pt x 104.20355pt.
-<images/svm.png, id=250, 462.72874pt x 352.31625pt>
+<images/svm.png, id=294, 462.72874pt x 352.31625pt>
 File: images/svm.png Graphic file (type png)
 <use images/svm.png>
 Package pdftex.def Info: images/svm.png  used on input line 470.
 (pdftex.def)             Requested size: 207.0021pt x 157.61081pt.
- [15 <./images/split3.png> <./images/nn.png>] [16 <./images/svm.png>]
+ [16 <./images/split3.png> <./images/nn.png>] [17 <./images/svm.png>]
 Capitolo 3.
-[17
+[18
 
-] [18] (./refresher.aux)
+] [19]
+Capitolo 4.
+<images/confusion-matrix.png, id=318, 486.81876pt x 177.66376pt>
+File: images/confusion-matrix.png Graphic file (type png)
+<use images/confusion-matrix.png>
+Package pdftex.def Info: images/confusion-matrix.png  used on input line 568.
+(pdftex.def)             Requested size: 241.49895pt x 88.13495pt.
+[20
+
+ <./images/confusion-matrix.png>]
+<images/precision.png, id=326, 789.95125pt x 152.57pt>
+File: images/precision.png Graphic file (type png)
+<use images/precision.png>
+Package pdftex.def Info: images/precision.png  used on input line 592.
+(pdftex.def)             Requested size: 345.0pt x 66.6328pt.
+<images/recall.png, id=327, 719.68875pt x 202.7575pt>
+File: images/recall.png Graphic file (type png)
+<use images/recall.png>
+Package pdftex.def Info: images/recall.png  used on input line 599.
+(pdftex.def)             Requested size: 310.4979pt x 87.47794pt.
+<images/f-score.png, id=328, 375.4025pt x 86.3225pt>
+File: images/f-score.png Graphic file (type png)
+<use images/f-score.png>
+Package pdftex.def Info: images/f-score.png  used on input line 609.
+(pdftex.def)             Requested size: 137.9979pt x 31.73201pt.
+<images/overfitting.png, id=329, 873.2625pt x 247.92625pt>
+File: images/overfitting.png Graphic file (type png)
+<use images/overfitting.png>
+Package pdftex.def Info: images/overfitting.png  used on input line 620.
+(pdftex.def)             Requested size: 345.0pt x 97.94681pt.
+ [21 <./images/precision.png> <./images/recall.png> <./images/f-score.png>]
+<images/spazio-latente.png, id=340, 502.87875pt x 349.305pt>
+File: images/spazio-latente.png Graphic file (type png)
+<use images/spazio-latente.png>
+Package pdftex.def Info: images/spazio-latente.png  used on input line 651.
+(pdftex.def)             Requested size: 207.0021pt x 143.78627pt.
+ [22 <./images/overfitting.png>]
+<images/convolutional.png, id=346, 235.88126pt x 196.735pt>
+File: images/convolutional.png Graphic file (type png)
+<use images/convolutional.png>
+Package pdftex.def Info: images/convolutional.png  used on input line 686.
+(pdftex.def)             Requested size: 172.5pt x 143.8735pt.
+ [23 <./images/spazio-latente.png>]
+<images/autoencoder.png, id=356, 249.93375pt x 417.56pt>
+File: images/autoencoder.png Graphic file (type png)
+<use images/autoencoder.png>
+Package pdftex.def Info: images/autoencoder.png  used on input line 698.
+(pdftex.def)             Requested size: 172.5pt x 288.19952pt.
+ [24 <./images/convolutional.png> <./images/autoencoder.png>]
+<images/trend.png, id=364, 753.81625pt x 240.9pt>
+File: images/trend.png Graphic file (type png)
+<use images/trend.png>
+Package pdftex.def Info: images/trend.png  used on input line 746.
+(pdftex.def)             Requested size: 241.49895pt x 77.1741pt.
+ [25]
+<images/variazioni-cicliche.png, id=370, 391.4625pt x 294.09875pt>
+File: images/variazioni-cicliche.png Graphic file (type png)
+<use images/variazioni-cicliche.png>
+Package pdftex.def Info: images/variazioni-cicliche.png  used on input line 760.
+(pdftex.def)             Requested size: 207.0021pt x 155.51706pt.
+ [26 <./images/trend.png> <./images/variazioni-cicliche.png>] [27] (./refresher.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `refresher.out' has not changed.
-(rerunfilecheck)             Checksum: F467535AD002B97FC5DB3545B9D662B0;4747.
+(rerunfilecheck)             Checksum: 8671CFA80152AA4E256A342FD63A9290;6051.
  ) 
 Here is how much of TeX's memory you used:
- 22444 strings out of 474222
- 411877 string characters out of 5748733
- 1933975 words of memory out of 5000000
- 44291 multiletter control sequences out of 15000+600000
+ 22560 strings out of 474222
+ 414426 string characters out of 5748733
+ 1936975 words of memory out of 5000000
+ 44371 multiletter control sequences out of 15000+600000
  566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,468b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,6n,93p,468b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on refresher.pdf (19 pages, 598445 bytes).
+Output written on refresher.pdf (28 pages, 1180646 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 458 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 407 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -546,6 +546,247 @@ Il modello deve avere colonne con la stessa densità; non ci devono essere colon
 
 
 
+\chapter{Classificazione e Predizione}
+
+\section{Problemi di classificazione}
+
+i modelli di classificazione generalmente sono modelli neurali, dove l'input è una codifica vettoriale e l'output è la classe 
+a cui l'input appartiene; durante il training i parametri del modello vengono adattati per ottenere un errore accettabile.
+
+\noindent Tuttavia, per valutare un modello non basta considerare solo l'errore, ma bisogna tenere in considerazione altri fattori come:
+\begin{itemize}
+    \item dimensione e complessità del classificatore ottenuto 
+    \item quantità di dati di training 
+\end{itemize}
+
+\subsubsection{Confusion Matrix}
+
+Viene utilizzata per mostrare per ciascuna riga e colonna gli errori nella classificazione:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/confusion-matrix.png}
+\end{figure}
+
+
+\subsubsection{Curve ROC}
+
+Si ottiene riportando falsi positivi e falsi negativi su un piano (quando si tratta di un classificatore binario). Dove è preferibile posizionarsi 
+su questa curva nella fase di training dipende dal contesto e dall'impatto di ciascuno dei due errori (gli errori non hanno tutti lo stesso peso\dots).
+
+\subsubsection{Cross-Validation}
+
+Consiste nel dividere il dataset in un $80\%$ usato per il training, e il restante $20\%$ per fare validation; questo processo viene ripetuto 
+più volte fino al raggiungimento di un'accuratezza uniforme. È un modo per \textit{approssimare} la capacità del modello di generalizzare, anche se 
+bisogna tenere conto che i punti del validation test sono stati punti del training set in una fase precedente.
+
+\noindent Con la metodologia \textit{held-out} si usa un set mai visto prima per fare validation.
+
+
+\subsubsection{Precision e Recall}
+
+\textit{Precision} equivale a dire \textit{"quanti sono classificati correttamente tra tutti quelli classificati come X?"}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/precision.png}
+\end{figure}
+
+\noindent Recall equivale a dire \textit{"tra gli elementi della classe X, quanti sono stati classificati come X?"}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/recall.png}
+\end{figure}
+
+\noindent $\Rightarrow$ la differenza sta nel chiedersi \textit{classificati correttamente rispetto a cosa? a quelli totali o a quelli della classe?}
+
+\noindent Tipicamente, all'aumentare di una diminuisce l'altra; dato che si è interessati nel massimizzare entrambe le metriche, si può usare 
+il parametro \textit{F-score}, che è una sorta di media armonica delle due.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/f-score.png}
+\end{figure}
+
+\subsubsection{Considerazioni sull'addestramento}
+
+Conoscendo il costo dei diversi tipi di errori, potrei cercare di fare in modo di regolare i parametri per minimizzare il costo totale 
+degli errori; bisogna sempre fare attenzione a non andare in overfitting, ovvero quando il modello è troppo adatto al training set e 
+non sarà in grado di generalizzare.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/overfitting.png}
+\end{figure}
+
+
+\section{Deep Classifier Models}
+
+Quando si ha una rete a tanti livelli si ha il problema di dove ripartire l'errore sui vari pesi.
+
+\noindent Un possibile approccio potrebbe essere quello del \textbf{training strato per strato:} vengono \textit{bloccati} tutti gli strati 
+tranne uno (nel senso che non vengono modificati i parametri), per poi pertubrare i pesi dello strato non bloccato nelle varie direzioni, scegliendo 
+quella in cui l'errore diminuisce maggiormente. 
+
+\noindent Questo procedimento viene ripetuto più volte passando strato per strato, fino ad ottenere un modello che ha per parametri i vari pesi 
+che sono stati addestrati separatamente; ovviamente, il procedimento deve essere ripetuto più volte, perchè magari quando modifico i parametri 
+per uno strato sto generando errore \textit{da un'altra parte}.
+
+\noindent Questo metodo funziona discretamente con reti \textit{shallow}, ovvero con pochi strati.
+
+\noindent A metà anni 2000 è stato introdotto una nuova metodologia: consiste nel non fare training di tutti gli strati, ma di 
+fare usare il training set con le label per addestrare solo gli ultimi due strati della rete; gli strati precedenti sono utilizzati per 
+la \textbf{costruzione di uno spazio latente}. In altre parole, il loro scopo è \textbf{trovare un encoding dei punti di input che mantenga la 
+loro correlazione statistica ma su un numero diverso di features}; non mira quindi a prevedere la label.
+
+\noindent Qualunque sia la distribuzione di ingresso (si spera Gaussiana su più variabili), si va a cercare un encoding su meno features tale che 
+sia anch'esso multivariato Gaussiano, e che la divergenza (la distanza tra le due distribuzioni) sia pari a 0: questo è ciò in cui consiste il 
+training di tutti gli strati intermedi. 
+
+\noindent L'idea è che le features che escono (che sono meno) sono quelle su cui poi si addestrano gli ultimi strati.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/spazio-latente.png}
+\end{figure}
+
+\noindent Nella figura lo spazio latente è inflattivo, ovvero escono più features di quelle che sono entrate. Non deve essere per forza così, può 
+essere anche deflattivo a seconda dei casi.
+
+
+\noindent $\Rightarrow$ il deep learning consiste in:
+\begin{enumerate}
+    \item fase di pre-training degli strati iniziali (auto-encorders)
+    \begin{itemize}
+        \item questa fase è non-supervisionata perchè non mi interessa delle etichette di classificazione, mi interessano solo le distribuzioni dei 
+        punti per calcolare la divergenza (sono parametri estraibili dal training set)
+    \end{itemize}
+    \item fase di training supervisionato sugli strati finali; è la classica classificazione con minimizzazione dell'errore 
+\end{enumerate}
+
+\subsubsection{\textit{Unsupervised Pre-Training in a nutshell}}
+
+Supponiamo di avere una rete di un solo strato con $n$ input ed output, e $k$ parametri intermedi con $k<n$
+
+\noindent Viene fatto un training di \textit{riproduzione esatta}, ovvero si addestra lo strato e riprodurre esattamente gli input; una volta 
+addestrato il modello, si rimuove il layer di output.
+
+
+\subsubsection{Layer convoluzionale}
+
+Una rete neurale convoluzionale è una rete neurale con alcuni strati convoluzionali: ciò che fanno è sommare dei gruppi di input per 
+ottenere un layer a covarianza ridotta rispetto al layer originale.
+
+\noindent Gli input sono collegati a dei filtri, e l'output del filtro (che è una sorta di somma pesata) è collegato al layer successivo. Si usano 
+questi raggruppamenti di input come se fossero un encoder, ovvero si usano per ottenre in output un'altra rappresentazione dell'input.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/convolutional.png}
+\end{figure}
+
+\noindent Si usa una rete convoluzionale per eseguire un encoding; tuttavia, un encoding non è necessariamente convoluzionale.
+
+
+\section{Autoencoders}
+
+È un tipo di apprendimento non-supervisionato che trasforma l'\textit{input raw} in \textit{input latente}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/autoencoder.png}
+\end{figure}
+
+
+\noindent Si può che impara delle feature generiche dai dati di input, 
+estraendo delle \textit{macrofeatures}.
+
+\noindent Possiamo fare una distinzione tra due tipi di encoder:
+\begin{itemize}
+    \item \textbf{Deflattivi}, il cui scopo è comprimere l'input
+    \item \textbf{Inflattivi}, il cui scopo è il aggiungere rumore ai dati di input 
+\end{itemize}
+
+
+\subsection{GAN - Generative Adversial Network}
+
+Sono modelli deep in grado di produrre dei sample X simili ai dati di input. 
+
+\noindent Si usa un \textbf{discriminatore} per valutare la qualità del dato generato da una GAN: restituisce 1 se lo considero vero, oppure 
+0 se lo riconosce come dato che è stato generato; avrò ottenuto un buon generatore quando sarà in grado di ingannare il discriminatore.
+
+
+
+\section{Modelli predittivi}
+
+Le serie temporali (dataset in cui una colonna è un timestamp) stanno alla base per poter fare un modello predittivo; consistono in dati 
+misurati ad un tempo specifico, generalmente con intervalli regolari. L'analisi delle serie temporali cerca di \textbf{identificare fattori}
+che sono influenti sui valori della serie.
+
+\noindent Una serie temportale si dice stazionaria se:
+\begin{itemize}
+    \item la covarianza tra due punti è indipendente dal momento in cui sono stati osservati 
+    \item la media è costante nel tempo 
+\end{itemize}
+
+\noindent Le serie stazionarie hanno i migliori predittori lineari, mentre per quelle non stazionarie risulta più complesso e lento implementare 
+un predittore.
+
+\subsection{Trend}
+
+Il trend rappresenta l'andamento generale di una serie temporale su un arco di tempo sufficientemente lungo; è rilevabile con i dati disponibili 
+solo se l'arco di tempo è abbastanza lungo da permetterlo. Una serie temporale può essere suddivisa in quattro componenti.
+
+\subsubsection{Trend secolare}
+Rappresenta l'andamento generale della serie nel lungo periodo; una volta individuato, permette di identificare le altre componenti più facilmente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/trend.png}
+\end{figure}
+
+\subsubsection{Variazione stagionale}
+È un pattern di cambiamenti che avviene ad intervallo di tempo regolari; sono spessi legati alle stagioni o ad eventi e festività, come ad esempio 
+i casi di influenza in inverno.
+
+\subsubsection{Variazioni cicliche}
+Sono dei pattern che si ripetono ma con un intervallo di tempo \textit{più irregolare} rispetto alle variazioni stagionali. Sono più complicati 
+da individuare, ed è difficile prevedere per quanto si potrae il periodo di espansione o contrazione.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/variazioni-cicliche.png}
+\end{figure}
+
+
+\subsubsection{Variazioni irregolari}
+
+Sono delle variazioni casuali nella serie temporale, che non posso essere spiegate con i casi precedenti, come ad esempio dei crolli finanziari 
+o catastrofi naturali.
+
+\subsection{Analisi dei trend}
+
+I trend passati stanno alla base per la predizione futura.
+
+\subsubsection{Semi-averages}
+Bisogna controllare prima che non ci siano outliers nei dati; la procedura è la seguente:
+\begin{enumerate}
+    \item dividere i dati in due intervalli di tempo uguali 
+    \item calcolare la media per ogni intervallo 
+    \item tracciare una retta tra i due punti medi 
+    \item estendere la retta nel futuro per fare previsioni 
+\end{enumerate}
+
+
+\subsubsection{Medie mobili}
+L'idea è che se la medie è calcolata su intervallo di tempo sufficientemente lungo, l'effetto delle variazioni a breve termine sarà ridotto; in 
+altre parole, le variazioni cicliche e stagionali saranno \textit{smussate}, ottenendo un grafico più \textit{morbido} che rappresenta 
+il trend generale. 
+
+\noindent Il grado di smussamento può essere regolato selezionando quali valori includere nella media.
+
 
 
 
