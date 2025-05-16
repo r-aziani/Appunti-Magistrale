@@ -1,0 +1,14 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}GANs}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Un nuovo paradigma: autoencoders}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}GANs}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Il problema delle classi sbilanciate}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Alcune soluzioni all'apprendimento \\ sbilanciato}{4}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Undersampling}{4}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Oversampling - SMOTE}{4}{subsection.1.4.2}%
+\contentsline {subsubsection}{SMOTE}{4}{section*.2}%
+\contentsline {subsection}{\numberline {1.4.3}Cost-Sensitive approach}{5}{subsection.1.4.3}%
+\contentsline {chapter}{\numberline {2}Federated Learning}{6}{chapter.2}%
+\contentsline {subsubsection}{Possibile attacco}{7}{section*.3}%
+\contentsline {subsubsection}{Considerazioni}{7}{section*.4}%
