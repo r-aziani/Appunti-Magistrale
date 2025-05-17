@@ -180,7 +180,43 @@ rispetto al training classico centralizzato dove c'è un controllo dell'accesso.
 \end{itemize}
 
 
+\section{Sicurezza nel Federated Learning}
 
+Quando si vuole fare un modello di minaccia la prima cosa da fare è un modello degli asset: per ogni asset si devono individuare i 
+\textbf{failure mode}, ovvero modalità note con cui un asset può malfunionare.
+
+\noindent Per sapere i failure mode di un modello di intelligenza artificiale, bisogna prendere delle proprietà generali desiderate (anche 
+indipendenti dallo scenario, come 
+ad esempio l'accuratezza); un failure mode è la negazione di una di queste proprietà.
+
+\noindent Un esempio di due proprietà la cui negazione rappresenta un failure mode sono:
+\begin{itemize}
+    \item \textbf{Privacy:} avviene ad esempio quando qualcuno può ricostruire i valori del training set in sede di inferenza; nel caso del federated learning,
+    si potrebbero avere problemi anche in sede di training, se un nodo perifico può dedurre i valori di training degli altri nodi 
+    \item \textbf{Robustezza:} intesa come il numero di errori introdotti per ogni variazione del training set
+\end{itemize}
+
+\noindent Viene definito \textbf{threat} l'azione che porta ad un failure mode.
+
+\noindent Un esempio di threat ad un modello di federated learning sono:
+\begin{itemize}
+    \item \textbf{\textit{Model Poisoning}}, iniettando dei pesi fasulli (vandalismo o trojan horse)
+    \begin{itemize}
+        \item potrei difendermi considerando come \textit{outlier} i valori che sono tre volte la deviazione standard (metodo del \textit{three-sigma}), 
+        e facendo un filtraggio statistico (supponendo che siano una minoranza); ovviamente funziona solo su attacchi che mirano a modificare i valori 
+        del training set per diminuire l'accuratezza complessiva del modello (vandalismo) e non attacchi avversariali, ovvero mirati a modificare un 
+        un punto specifico del training set 
+    \end{itemize}
+    \item \textbf{\textit{Privacy Attack}}, cercando di trarre informazioni sugli altri modelli della rete
+    \begin{itemize}
+        \item potrei far viaggiare i pesi criptati, anche se comporta tutti i costi di avere un sistema di cifratura (criptare, decriptare, 
+        gestione delle chiavi\dots); un'alternativa è quella di usare sistemi crittografici omomorifici, anche se hanno dei \textit{footprint}
+        molto grossi rendendoli difficile da applicare in casi reali
+    \end{itemize}
+\end{itemize}
+
+\noindent Una volta individuati i failure mode e i rispettivi threat, si può passare a fare un'analisi del rischio per cercare di limitare i possibili 
+danni. Nel caso del federated learning abbiamo un rischio dovuto al fatto di avere un sistema distribuito invece che centralizzato.
 
 
 

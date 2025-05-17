@@ -12,3 +12,4 @@
 \contentsline {chapter}{\numberline {2}Federated Learning}{6}{chapter.2}%
 \contentsline {subsubsection}{Possibile attacco}{7}{section*.3}%
 \contentsline {subsubsection}{Considerazioni}{7}{section*.4}%
+\contentsline {section}{\numberline {2.1}Sicurezza nel Federated Learning}{7}{section.2.1}%
