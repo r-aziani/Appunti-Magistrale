@@ -560,6 +560,27 @@ Data una query, come faccio a vedere se è può essere autorizzata oppure no? Il
     \item guardo se esiste un permesso (tra quelli esistenti e quelli che ho ottenuto con la composizione) che copre la query che voglio eseguire 
 \end{enumerate}
 
+\noindent L'efficienza garantita dallo sfruttamento dell'implicazione dei permessi:
+\begin{itemize}
+    \item Se \textit{$p_j$} $\rightarrow$ \textit{$p_i$}, $\forall p_k \in P$:
+    \begin{itemize}
+        \item  $ p_j \rightarrow p_k \Rightarrow ( p_i \otimes p_j) \rightarrow p_k$
+        \item  $ p_k \rightarrow p_j \Rightarrow p_k \rightarrow (p_i \otimes p_j)$
+        
+        
+        $\rightarrow$  aggiungendo $ p_i \otimes p_j, p_j$ può essere rimosso da P
+    \end{itemize}
+    \item Non c'è necessità di computare tutte le $2^n - 1$ composizioni di \textit{n} permessi
+    \item La complessità computazionale rimane polinomiale ossia \textit{O}($n^3$)
+\end{itemize}
+
+\noindent \textbf{Spieghino della prof:} Supponiamo di avere tre permessi, $p_i ,p_j$ e $p_k$ quello che osseravo è che $p_i$ e $p_j$
+sono due autorizzazioni che possono essere composte tra di loro perchè $p_i$ dipende da $p_j$. Se $p_i$ e $p_j$ sono componibili tar di loro
+e se esiste un'altra autorizzazione $p_k$ tale per cui $p_k$ dpende da $p_j$ allora in pratica $p_j$ si può buttar via, tanto $p_k$ dipende dal
+risultato della composizione tra $p_i$ e $p_j$.
+Questo è vero non solo quando $p_k$ dipende da $p_j$ ma anche quando $p_j$ dipende da $p_k$, in ogni caso io $p_j$ posso buttarlo via senza perdere nulla.
+
+\noindent \textbf{N.B. :} La prof ha fatto degli esercizi su sta cosa 
 
 \chapter{Un modello di autorizzazione per query multi-provider}
 
@@ -588,31 +609,94 @@ che adesso vediamo è che aggiunge un \textit{terzo livello di visibilità}:
     \end{itemize}
 \end{itemize}
 
+\noindent L'idea è di dare l'autorizzazione a un soggetto di eseguire delle operazioni no sui dati in chiaro ma sui dati cifrati,
+può essere conveniente quando mi fido di un soggetto ma non troppo.
+
 
 \section{Profilo della relazione}
-È il bagaglio informativo della relazione; deve essere adattato a questo modello ed include tre componenti:
+È il bagaglio informativo della relazione;no solo inteso come attributi della relazione ma anche altre informazioni che non appaiono in modo esplicito, deve essere adattato a questo modello ed include tre componenti:
 \begin{itemize}
     \item $v$: attributi espliciti dello schema della relazione, sia in chiaro che in forma criptata (devo distinguere queste due situazioni)
     \begin{itemize}
         \item prima erano $R^\pi$
     \end{itemize}
-    \item $i$: attributi impliciti (per costruire la relazione ho usato delle condizioni su attributi in chiaro o criptati), sia in chiaro che in forma criptata (devo distinguere queste due situazioni) 
+    \item $i$: attributi impliciti (per costruire la relazione ho usato delle condizioni su attributi in chiaro o criptati), sia in chiaro che in forma criptata (devo distinguere queste due situazioni), le informazioni che io vedo dipendono in qualche modo da questi attributi su cui io ho applicato dterminate condizioni.
+    
+    \begin{itemize}
+        \item \textbf{Selection:} faccio una selezione dove scelgo in base alla peculiarità di un determinato altro attributo, creo un collegamento con l'attributo peculiare anche se non fa parte dello schema
+        \item \textbf{Grouping:} selezione facendo raggruppamento 
+    \end{itemize}
     \begin{itemize}
         \item prima erano $R^\sigma$
     \end{itemize}
     \item $\simeq$: ho gli attributi coinvolti in operazioni di join (si suppone join naturali, prima erano $R^{\bowtie}$)
+    \begin{itemize}
+        \item \textbf{Comparing} attributes: facciamo un confronto ad esempio $S=C$, se io confronto questi attributi e mettiamo caso che per l'utente lattributo $S$ debba essere criptato, essendo un'equivalenza basta poter vedere $C$ per conoscere anche $S$ che però non ho l'autorizzazione per conoscere.
+        
+        \noindent Per ovviare a questo problema se si deve dare questa relazione a un soggetto questo soggetto può ricevere la relazione solo se è abilitato a vedere $S$ e $C$ allo stesso modo.
+    \end{itemize}
+\end{itemize}
+
+\section{profili risultanti dalle operazioni}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/risultatiOperazioni.png}
+\end{figure}
+
+\noindent Tutti gli esempi sono organizzati nello stesso modo: a sx il modo generale a dx un'esempio. 
+\subsection{Proiezione}
+Se io parto da una relazione R che ha questi profilo ed eseguo una proiezione, la relazione risultato ha lo stesso profilo, l'unica cosa che cambia sono gli attributi \textbf{visibili}.  
+\begin{itemize}
+    \item Esempio: nella relazione la proieizione viene fatta su $B$ e su $P$ butto via $D$ e $T$.
+\end{itemize}
+
+\subsection{Selezione - 1}
+Selezione $=$ io vado ad eseguire una condizione su determinati attributi. Viene fatta una distinzione su qual è la forma della condizione:
+se la condizione è $attributo = valore$ mi devo ricordare che è stata eseguita quella condizoone su quell'attributo, quindi quell'attributo deve finire nella componente implicita del profilo della mia relazione.
+\begin{itemize}
+    \item Esempio: Se io faccio "D$=$stroke" allora poi l'attributo D dovrà finire nella componente implicita
+\end{itemize} 
+
+\subsection{Selection - 2}
+In questo caso nella selezione vengono comparati due attributi (e non attributo con valore), ha effetto sul campo delle equivalenze
+\begin{itemize}
+    \item Esempio: SC viene aggiunto al campo equivalenze
+\end{itemize}
+
+\subsection{Prodotto cartesiano}
+Quando viene fatto il prodotto cartesiano tra due relazioni devo unire i profili delle relazioni
+\begin{itemize}
+    \item Esempio: si uniscono tutti i campi delle due relazioni
+\end{itemize}
+
+\subsection{Join}
+Vuol dire ancora una volta che devo fare l'unione dei due profili, è simile al prodotto cartesiano 
+\begin{itemize}
+    \item Esempio: in questo caso mi devo ricordare che oltre a unire i profili ho anche confrontato gli attributi $D$ e $C$ e questo va aggiunto nella componente delle equivalenze 
 \end{itemize}
 
 
+\subsection{Group by}
+Raggruppo le tuple della mia relazione in base a uno o più attributi,e su questi gruppi posso eseguire delle funzioni di aggregazione.
+\begin{itemize}
+    \item Esempio: in questo caso average(AVG) viene applicato alla relazione, io ottengo una nuova relazione che ha come schema l'attributo T e quello che ho come secondo attributo
+    non è proprio l'attributo P, ma è il risultato di una funzione che io ho applicato all'attributo P. 
+    Devo ricordarmi di aggiungere l'attributo T negli attributi impliciti della mia relazione, a livello di equivalenza invece non cambia nulla.
+\end{itemize}
+
+\subsection{Funzioni definite dall'utente}
+Sono delle funziomi che io posso avere all'interno delle query SQL tipo machine learning, io non so di preciso questa funzione.
+\begin{itemize}
+    \item Esempio: cambia lo schema degli attributi visibili, è una funzione UDF che in una coppa $(S,B)$ prende solo l'attributo $S$.
+    Fondamentalmente sparisce l'attributo $B$, nella classe delle equivalenze viene fatta l'unione tra SC già presenti e SB confrontati ora e ottengo SBC.
+\end{itemize}
 
 
+\subsection{Encryption}
+Se io cripto un attributo in una relazione, quell'attributo sarà ancora parte della relazione però criptato.
 
-
-
-
-
-
-
+\subsection{Decryption}
+Se io decripto un attributo, poi lo vedo in chiaro.
 
 
 

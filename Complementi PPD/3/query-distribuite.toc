@@ -1,35 +1,45 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Join sovrani}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Access patterns}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Autorizzazioni basate su viste}{3}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Coalition networks}{4}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Broker join}{5}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Peer-join}{5}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Semi-join}{5}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}Split-join}{5}{subsection.1.4.4}%
-\contentsline {section}{\numberline {1.5}Preferenze in ottimizzazione delle query}{7}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Valutazione di query distribuite sotto requisiti di protezione}{8}{chapter.2}%
-\contentsline {subsubsection}{Scenario di riferimento}{9}{section*.2}%
-\contentsline {section}{\numberline {2.1}Permessi}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Profilo della relazione}{10}{section.2.2}%
-\contentsline {subsubsection}{Esempio}{10}{section*.3}%
-\contentsline {section}{\numberline {2.3}Vista autorizzata}{11}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Rilasci autorizzati}{11}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Algoritmo}{12}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Sintassi vs Semantica}{13}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Composizione di autorizzazioni}{14}{chapter.3}%
-\contentsline {section}{\numberline {3.1}\textit {Schema graph}}{14}{section.3.1}%
-\contentsline {section}{\numberline {3.2}\textit {Views}}{15}{section.3.2}%
-\contentsline {section}{\numberline {3.3}\textit {View Graph}}{15}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Autorizzare le query}{16}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Esempi}{17}{subsection.3.4.1}%
-\contentsline {section}{\numberline {3.5}Composizione di permessi}{18}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Esempi}{19}{subsection.3.5.1}%
-\contentsline {section}{\numberline {3.6}Composizione sicura}{20}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Esempi}{21}{subsection.3.6.1}%
-\contentsline {section}{\numberline {3.7}Esecuzione di Access Control}{22}{section.3.7}%
-\contentsline {chapter}{\numberline {4}Un modello di autorizzazione per query multi-provider}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Definizione del problema}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Profilo della relazione}{24}{section.4.2}%
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Join sovrani}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Access patterns}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Autorizzazioni basate su viste}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Coalition networks}{5}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Broker join}{6}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Peer-join}{6}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Semi-join}{6}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Split-join}{6}{subsection.1.4.4}%
+\contentsline {section}{\numberline {1.5}Preferenze in ottimizzazione delle query}{8}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Valutazione di query distribuite sotto requisiti di protezione}{9}{chapter.2}%
+\contentsline {subsubsection}{Scenario di riferimento}{10}{section*.2}%
+\contentsline {section}{\numberline {2.1}Permessi}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Profilo della relazione}{11}{section.2.2}%
+\contentsline {subsubsection}{Esempio}{11}{section*.3}%
+\contentsline {section}{\numberline {2.3}Vista autorizzata}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Rilasci autorizzati}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Algoritmo}{13}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Sintassi vs Semantica}{14}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Composizione di autorizzazioni}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}\textit {Schema graph}}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}\textit {Views}}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}\textit {View Graph}}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Autorizzare le query}{17}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Esempi}{18}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.5}Composizione di permessi}{19}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Esempi}{20}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Composizione sicura}{21}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Esempi}{22}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}Esecuzione di Access Control}{23}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Un modello di autorizzazione per query multi-provider}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definizione del problema}{25}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Profilo della relazione}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}profili risultanti dalle operazioni}{27}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Proiezione}{27}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Selezione - 1}{27}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Selection - 2}{28}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Prodotto cartesiano}{28}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Join}{28}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Group by}{28}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}Funzioni definite dall'utente}{28}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Encryption}{28}{subsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.3.9}Decryption}{29}{subsection.4.3.9}%
