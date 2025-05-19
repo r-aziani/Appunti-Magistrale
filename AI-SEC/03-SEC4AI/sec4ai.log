@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  19 MAY 2025 17:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  19 MAY 2025 17:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/azi/Desktop/Appunti-Magistrale/AI-SEC/02-AI4SEC/ai4sec.tex
-(/home/azi/Desktop/Appunti-Magistrale/AI-SEC/02-AI4SEC/ai4sec.tex
+**/home/azi/Desktop/Appunti-Magistrale/AI-SEC/03-SEC4AI/sec4ai.tex
+(/home/azi/Desktop/Appunti-Magistrale/AI-SEC/03-SEC4AI/sec4ai.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -482,8 +482,8 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box68
-) (./ai4sec.aux)
-\openout1 = `ai4sec.aux'.
+) (./sec4ai.aux)
+\openout1 = `sec4ai.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
@@ -534,9 +534,9 @@ italian.ldf    See the documentation concerning the babel-italian typesetting
 italian.ldf    on input line 28.
 
 Package hyperref Info: Link coloring OFF on input line 28.
-(./ai4sec.out) (./ai4sec.out)
+(./sec4ai.out) (./sec4ai.out)
 \@outlinefile=\write4
-\openout4 = `ai4sec.out'.
+\openout4 = `sec4ai.out'.
 
 \c@lstlisting=\count332
 
@@ -545,9 +545,9 @@ LaTeX Warning: No \author given.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./ai4sec.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./sec4ai.toc)
 \tf@toc=\write5
-\openout5 = `ai4sec.toc'.
+\openout5 = `sec4ai.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -558,54 +558,65 @@ l.32 \newpage
 
 ]
 Capitolo 1.
+<images/threat-modeling.png, id=30, 974.64125pt x 488.82625pt>
+File: images/threat-modeling.png Graphic file (type png)
+<use images/threat-modeling.png>
+Package pdftex.def Info: images/threat-modeling.png  used on input line 44.
+(pdftex.def)             Requested size: 345.0pt x 173.03105pt.
+<images/ai-assets.png, id=32, 891.33pt x 421.575pt>
+File: images/ai-assets.png Graphic file (type png)
+<use images/ai-assets.png>
+Package pdftex.def Info: images/ai-assets.png  used on input line 50.
+(pdftex.def)             Requested size: 345.0pt x 163.17207pt.
 [2
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<images/seven.png, id=78, 254.9525pt x 131.49126pt>
-File: images/seven.png Graphic file (type png)
-<use images/seven.png>
-Package pdftex.def Info: images/seven.png  used on input line 68.
-(pdftex.def)             Requested size: 137.9979pt x 71.17474pt.
- [3 <./images/seven.png>]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 91.
-
-<images/smote.png, id=85, 192.72pt x 162.6075pt>
-File: images/smote.png Graphic file (type png)
-<use images/smote.png>
-Package pdftex.def Info: images/smote.png  used on input line 125.
-(pdftex.def)             Requested size: 172.5pt x 145.54645pt.
-[4] [5 <./images/smote.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.52 
+      <./images/threat-modeling.png>]
+<images/mapping.png, id=40, 1072.005pt x 373.395pt>
+File: images/mapping.png Graphic file (type png)
+<use images/mapping.png>
+Package pdftex.def Info: images/mapping.png  used on input line 57.
+(pdftex.def)             Requested size: 345.0pt x 120.16684pt.
+ [3{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/ai-assets.png> <./images/mapping.png>]
 Capitolo 2.
-<images/fedrated-learning.png, id=98, 510.90875pt x 376.40625pt>
-File: images/fedrated-learning.png Graphic file (type png)
-<use images/fedrated-learning.png>
-Package pdftex.def Info: images/fedrated-learning.png  used on input line 152.
-(pdftex.def)             Requested size: 276.00105pt x 203.33675pt.
-[6
+<images/poison.png, id=48, 643.40375pt x 354.32375pt>
+File: images/poison.png Graphic file (type png)
+<use images/poison.png>
+Package pdftex.def Info: images/poison.png  used on input line 84.
+(pdftex.def)             Requested size: 241.49895pt x 132.99542pt.
+[4
 
- <./images/fedrated-learning.png>] [7] [8] (./ai4sec.aux)
+ <./images/poison.png>]
+<images/svm.png, id=55, 607.26875pt x 261.97874pt>
+File: images/svm.png Graphic file (type png)
+<use images/svm.png>
+Package pdftex.def Info: images/svm.png  used on input line 111.
+(pdftex.def)             Requested size: 276.00105pt x 119.06859pt.
+ [5 <./images/svm.png>] (./sec4ai.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `ai4sec.out' has not changed.
-(rerunfilecheck)             Checksum: 824C93FA48635CF31162E3253AC2A214;1739.
+Package rerunfilecheck Info: File `sec4ai.out' has not changed.
+(rerunfilecheck)             Checksum: 13A1E9C894D5DABCB717DD582B93B05C;412.
  ) 
 Here is how much of TeX's memory you used:
- 22300 strings out of 474222
- 408646 string characters out of 5748733
- 1933975 words of memory out of 5000000
+ 22288 strings out of 474222
+ 408666 string characters out of 5748733
+ 1929975 words of memory out of 5000000
  44186 multiletter control sequences out of 15000+600000
- 566017 words of font info for 63 fonts, out of 8000000 for 9000
+ 564651 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,462b,592s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on ai4sec.pdf (9 pages, 256600 bytes).
+ 84i,6n,93p,462b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on sec4ai.pdf (6 pages, 611371 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 

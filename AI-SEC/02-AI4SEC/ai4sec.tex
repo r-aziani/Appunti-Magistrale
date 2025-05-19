@@ -207,9 +207,11 @@ ad esempio l'accuratezza); un failure mode è la negazione di una di queste prop
         del training set per diminuire l'accuratezza complessiva del modello (vandalismo) e non attacchi avversariali, ovvero mirati a modificare un 
         un punto specifico del training set 
     \end{itemize}
-    \item \textbf{\textit{Privacy Attack}}, cercando di trarre informazioni sugli altri modelli della rete
+    \item \textbf{\textit{Privacy Attack}}, cercando di trarre informazioni sugli altri modelli della rete; si dividono tra:
     \begin{itemize}
-        \item potrei far viaggiare i pesi criptati, anche se comporta tutti i costi di avere un sistema di cifratura (criptare, decriptare, 
+        \item \textit{\textbf{Reconstruction Attacks:}} mirano a ricostruire il training set originale e i dati degli utenti 
+        \item \textbf{\textit{Membership Attacks:}} mirano a capire se un determinato dato specifico è presente nel training set
+        \item $\Rightarrow$ potrei far viaggiare i pesi criptati, anche se comporta tutti i costi di avere un sistema di cifratura (criptare, decriptare, 
         gestione delle chiavi\dots); un'alternativa è quella di usare sistemi crittografici omomorifici, anche se hanno dei \textit{footprint}
         molto grossi rendendoli difficile da applicare in casi reali
     \end{itemize}
