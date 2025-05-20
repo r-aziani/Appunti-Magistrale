@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  19 MAY 2025 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  20 MAY 2025 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -571,12 +571,12 @@ Capitolo 1.
 [3
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<images/access-pattern.png, id=237, 530.98375pt x 113.42375pt>
+<images/access-pattern.png, id=252, 530.98375pt x 113.42375pt>
 File: images/access-pattern.png Graphic file (type png)
 <use images/access-pattern.png>
 Package pdftex.def Info: images/access-pattern.png  used on input line 81.
 (pdftex.def)             Requested size: 207.0021pt x 44.21777pt.
-<images/view-auth.png, id=239, 811.03pt x 404.51125pt>
+<images/view-auth.png, id=254, 811.03pt x 404.51125pt>
 File: images/view-auth.png Graphic file (type png)
 <use images/view-auth.png>
 Package pdftex.def Info: images/view-auth.png  used on input line 100.
@@ -584,7 +584,7 @@ Package pdftex.def Info: images/view-auth.png  used on input line 100.
 
 
 [4 <./images/access-pattern.png> <./images/view-auth.png>]
-<images/pairwise-auth.png, id=247, 270.00874pt x 191.71625pt>
+<images/pairwise-auth.png, id=262, 270.00874pt x 191.71625pt>
 File: images/pairwise-auth.png Graphic file (type png)
 <use images/pairwise-auth.png>
 Package pdftex.def Info: images/pairwise-auth.png  used on input line 127.
@@ -604,17 +604,17 @@ Capitolo 2.
 [9
 
 ]
-<images/scenario.png, id=274, 737.75626pt x 407.5225pt>
+<images/scenario.png, id=289, 737.75626pt x 407.5225pt>
 File: images/scenario.png Graphic file (type png)
 <use images/scenario.png>
 Package pdftex.def Info: images/scenario.png  used on input line 250.
 (pdftex.def)             Requested size: 345.0pt x 190.57176pt.
-<images/permessi-ex.png, id=275, 769.87625pt x 172.645pt>
+<images/permessi-ex.png, id=290, 769.87625pt x 172.645pt>
 File: images/permessi-ex.png Graphic file (type png)
 <use images/permessi-ex.png>
 Package pdftex.def Info: images/permessi-ex.png  used on input line 261.
 (pdftex.def)             Requested size: 276.00105pt x 61.89397pt.
-<images/vincoli-conn.png, id=276, 756.8275pt x 46.1725pt>
+<images/vincoli-conn.png, id=291, 756.8275pt x 46.1725pt>
 File: images/vincoli-conn.png Graphic file (type png)
 <use images/vincoli-conn.png>
 Package pdftex.def Info: images/vincoli-conn.png  used on input line 270.
@@ -622,22 +622,22 @@ Package pdftex.def Info: images/vincoli-conn.png  used on input line 270.
 
 
 [10 <./images/scenario.png> <./images/permessi-ex.png> <./images/vincoli-conn.png>]
-<images/restrizioni.png, id=285, 455.7025pt x 40.15pt>
+<images/restrizioni.png, id=300, 455.7025pt x 40.15pt>
 File: images/restrizioni.png Graphic file (type png)
 <use images/restrizioni.png>
 Package pdftex.def Info: images/restrizioni.png  used on input line 280.
 (pdftex.def)             Requested size: 172.5pt x 15.19833pt.
-<images/ex1.png, id=286, 416.55624pt x 66.2475pt>
+<images/ex1.png, id=301, 416.55624pt x 66.2475pt>
 File: images/ex1.png Graphic file (type png)
 <use images/ex1.png>
 Package pdftex.def Info: images/ex1.png  used on input line 293.
 (pdftex.def)             Requested size: 172.5pt x 27.43356pt.
-<images/ex2.png, id=287, 765.86125pt x 63.23625pt>
+<images/ex2.png, id=302, 765.86125pt x 63.23625pt>
 File: images/ex2.png Graphic file (type png)
 <use images/ex2.png>
 Package pdftex.def Info: images/ex2.png  used on input line 298.
 (pdftex.def)             Requested size: 310.4979pt x 25.63754pt.
-<images/relation-profile-ex.png, id=288, 664.4825pt x 222.8325pt>
+<images/relation-profile-ex.png, id=303, 664.4825pt x 222.8325pt>
 File: images/relation-profile-ex.png Graphic file (type png)
 <use images/relation-profile-ex.png>
 Package pdftex.def Info: images/relation-profile-ex.png  used on input line 322.
@@ -645,12 +645,12 @@ Package pdftex.def Info: images/relation-profile-ex.png  used on input line 322.
 
 
 [11 <./images/restrizioni.png> <./images/ex1.png> <./images/ex2.png> <./images/relation-profile-ex.png>]
-<images/auth-view-ex.png, id=298, 761.84625pt x 409.53pt>
+<images/auth-view-ex.png, id=313, 761.84625pt x 409.53pt>
 File: images/auth-view-ex.png Graphic file (type png)
 <use images/auth-view-ex.png>
 Package pdftex.def Info: images/auth-view-ex.png  used on input line 343.
 (pdftex.def)             Requested size: 276.00105pt x 148.36177pt.
-<images/regular-join.png, id=299, 832.10875pt x 376.40625pt>
+<images/regular-join.png, id=314, 832.10875pt x 376.40625pt>
 File: images/regular-join.png Graphic file (type png)
 <use images/regular-join.png>
 Package pdftex.def Info: images/regular-join.png  used on input line 361.
@@ -658,12 +658,12 @@ Package pdftex.def Info: images/regular-join.png  used on input line 361.
 
 
 [12 <./images/auth-view-ex.png>]
-<images/semi-join.png, id=306, 873.2625pt x 441.65pt>
+<images/semi-join.png, id=321, 873.2625pt x 441.65pt>
 File: images/semi-join.png Graphic file (type png)
 <use images/semi-join.png>
 Package pdftex.def Info: images/semi-join.png  used on input line 367.
 (pdftex.def)             Requested size: 345.0pt x 174.48015pt.
-<images/sintassi-semantica.png, id=307, 522.95375pt x 218.8175pt>
+<images/sintassi-semantica.png, id=322, 522.95375pt x 218.8175pt>
 File: images/sintassi-semantica.png Graphic file (type png)
 <use images/sintassi-semantica.png>
 Package pdftex.def Info: images/sintassi-semantica.png  used on input line 390.
@@ -679,12 +679,12 @@ Capitolo 3.
 [15
 
 ]
-<images/view-graph.png, id=325, 351.3125pt x 248.93pt>
+<images/view-graph.png, id=341, 351.3125pt x 248.93pt>
 File: images/view-graph.png Graphic file (type png)
 <use images/view-graph.png>
 Package pdftex.def Info: images/view-graph.png  used on input line 433.
 (pdftex.def)             Requested size: 241.49895pt x 171.12375pt.
-<images/view-graph2.png, id=326, 601.24625pt x 398.48875pt>
+<images/view-graph2.png, id=342, 601.24625pt x 398.48875pt>
 File: images/view-graph2.png Graphic file (type png)
 <use images/view-graph2.png>
 Package pdftex.def Info: images/view-graph2.png  used on input line 455.
@@ -696,7 +696,7 @@ Overfull \hbox (19.4816pt too wide) in paragraph at lines 458--459
 \OT1/cmr/m/n/10 In fi-gu-ra la vi-sta del ri-sul-ta-to ^^Re $[(\OML/cmm/m/it/10 ssn; salary; cost\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Employee; Patient; Treatment\OT1/cmr/m/n/10 )]$ 
  []
 
-<images/perm1.png, id=333, 779.91376pt x 404.51125pt>
+<images/perm1.png, id=348, 779.91376pt x 404.51125pt>
 File: images/perm1.png Graphic file (type png)
 <use images/perm1.png>
 Package pdftex.def Info: images/perm1.png  used on input line 484.
@@ -704,12 +704,12 @@ Package pdftex.def Info: images/perm1.png  used on input line 484.
 
 
 [17 <./images/view-graph2.png>]
-<images/perm2.png, id=340, 779.91376pt x 407.5225pt>
+<images/perm2.png, id=355, 779.91376pt x 407.5225pt>
 File: images/perm2.png Graphic file (type png)
 <use images/perm2.png>
 Package pdftex.def Info: images/perm2.png  used on input line 489.
 (pdftex.def)             Requested size: 345.0pt x 180.26807pt.
-<images/perm3.png, id=341, 778.91pt x 405.515pt>
+<images/perm3.png, id=356, 778.91pt x 405.515pt>
 File: images/perm3.png Graphic file (type png)
 <use images/perm3.png>
 Package pdftex.def Info: images/perm3.png  used on input line 501.
@@ -717,7 +717,7 @@ Package pdftex.def Info: images/perm3.png  used on input line 501.
 
 
 [18 <./images/perm1.png> <./images/perm2.png>]
-<images/comp1.png, id=349, 710.655pt x 519.9425pt>
+<images/comp1.png, id=364, 710.655pt x 519.9425pt>
 File: images/comp1.png Graphic file (type png)
 <use images/comp1.png>
 Package pdftex.def Info: images/comp1.png  used on input line 518.
@@ -732,7 +732,7 @@ Package pdftex.def Info: images/comp1.png  used on input line 523.
 
 
 [20 <./images/comp1.png>]
-<images/safe1.png, id=360, 708.6475pt x 516.93124pt>
+<images/safe1.png, id=375, 708.6475pt x 516.93124pt>
 File: images/safe1.png Graphic file (type png)
 <use images/safe1.png>
 Package pdftex.def Info: images/safe1.png  used on input line 546.
@@ -740,7 +740,7 @@ Package pdftex.def Info: images/safe1.png  used on input line 546.
 
 
 [21]
-<images/safe2.png, id=365, 628.3475pt x 517.935pt>
+<images/safe2.png, id=380, 628.3475pt x 517.935pt>
 File: images/safe2.png Graphic file (type png)
 <use images/safe2.png>
 Package pdftex.def Info: images/safe2.png  used on input line 551.
@@ -758,7 +758,7 @@ Capitolo 4.
 [25
 
 ]
-<images/risultatiOperazioni.png, id=388, 373.89688pt x 227.34938pt>
+<images/risultatiOperazioni.png, id=403, 373.89688pt x 227.34938pt>
 File: images/risultatiOperazioni.png Graphic file (type png)
 <use images/risultatiOperazioni.png>
 Package pdftex.def Info: images/risultatiOperazioni.png  used on input line 643.
@@ -770,28 +770,70 @@ Package pdftex.def Info: images/risultatiOperazioni.png  used on input line 643.
 [27 <./images/risultatiOperazioni.png>]
 
 [28]
+<images/visibilità autorizzata.png, id=417, 157.08687pt x 68.255pt>
+File: images/visibilità autorizzata.png Graphic file (type png)
+<use images/visibilità autorizzata.png>
+Package pdftex.def Info: images/visibilità autorizzata.png  used on input line 704.
+(pdftex.def)             Requested size: 345.0pt x 149.92606pt.
 
-[29] (./query-distribuite.aux)
+
+[29 <./images/visibilità autorizzata.png>]
+<images/calcoloassegnazioni.png, id=423, 182.6825pt x 139.01938pt>
+File: images/calcoloassegnazioni.png Graphic file (type png)
+<use images/calcoloassegnazioni.png>
+Package pdftex.def Info: images/calcoloassegnazioni.png  used on input line 741.
+(pdftex.def)             Requested size: 207.0021pt x 157.5334pt.
+
+
+[30 <./images/calcoloassegnazioni.png>]
+<images/cal2.png, id=430, 185.69376pt x 160.09813pt>
+File: images/cal2.png Graphic file (type png)
+<use images/cal2.png>
+Package pdftex.def Info: images/cal2.png  used on input line 760.
+(pdftex.def)             Requested size: 207.0021pt x 178.47319pt.
+<images/minimal.png, id=431, 223.33438pt x 98.3675pt>
+File: images/minimal.png Graphic file (type png)
+<use images/minimal.png>
+Package pdftex.def Info: images/minimal.png  used on input line 771.
+(pdftex.def)             Requested size: 276.00105pt x 121.57515pt.
+
+
+[31 <./images/cal2.png>]
+<images/onthefly.png, id=437, 202.25563pt x 84.81688pt>
+File: images/onthefly.png Graphic file (type png)
+<use images/onthefly.png>
+Package pdftex.def Info: images/onthefly.png  used on input line 780.
+(pdftex.def)             Requested size: 137.9979pt x 57.87141pt.
+<images/min2.png, id=438, 117.94063pt x 95.35625pt>
+File: images/min2.png Graphic file (type png)
+<use images/min2.png>
+Package pdftex.def Info: images/min2.png  used on input line 789.
+(pdftex.def)             Requested size: 137.9979pt x 111.57507pt.
+
+
+[32 <./images/minimal.png> <./images/onthefly.png> <./images/min2.png>]
+
+[33] (./query-distribuite.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `query-distribuite.out' has not changed.
-(rerunfilecheck)             Checksum: 7D928289AA071002E8BDED072EE96343;6195.
+(rerunfilecheck)             Checksum: 3FDC3C27E4507C68739BE614C03C6826;6789.
  ) 
 Here is how much of TeX's memory you used:
- 22676 strings out of 473362
- 415771 string characters out of 5725050
- 804795 words of memory out of 5000000
- 45356 multiletter control sequences out of 15000+600000
+ 22729 strings out of 473362
+ 417085 string characters out of 5725050
+ 804790 words of memory out of 5000000
+ 45402 multiletter control sequences out of 15000+600000
  566544 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,508b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on query-distribuite.pdf (30 pages, 1175017 bytes).
+Output written on query-distribuite.pdf (34 pages, 1332471 bytes).
 PDF statistics:
- 483 PDF objects out of 1000 (max. 8388607)
- 375 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
- 456 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 404 compressed objects within 5 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 510 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -43,3 +43,6 @@
 \contentsline {subsection}{\numberline {4.3.7}Funzioni definite dall'utente}{28}{subsection.4.3.7}%
 \contentsline {subsection}{\numberline {4.3.8}Encryption}{28}{subsection.4.3.8}%
 \contentsline {subsection}{\numberline {4.3.9}Decryption}{29}{subsection.4.3.9}%
+\contentsline {section}{\numberline {4.4}Visibilità autorizzata}{29}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Calcolo delle assegnazioni}{30}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Piano di query minimamente esteso}{32}{section.4.6}%

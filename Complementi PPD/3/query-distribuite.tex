@@ -693,15 +693,104 @@ Sono delle funziomi che io posso avere all'interno delle query SQL tipo machine 
 
 
 \subsection{Encryption}
-Se io cripto un attributo in una relazione, quell'attributo sarà ancora parte della relazione però criptato.
+Se cripto un attributo in una relazione, quell'attributo sarà ancora parte della relazione però criptato.
 
 \subsection{Decryption}
-Se io decripto un attributo, poi lo vedo in chiaro.
+Se decripto un attributo, poi lo vedo in chiaro.
+
+\section{Visibilità autorizzata}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/visibilità autorizzata.png}
+\end{figure}
+
+Introduciamo il concetto con un esempio: Ummaginiamo di avere sempre le nostre due relazinoi Hospital e Insurance. Nella tabella vediamo rappresentate
+le autorizzazioni definite su queste due relazioni per i vari soggetti all'interno del sistema.
+
+\noindent $H$ sta per Hospital ed è il proprietario della relazione Hospital, $I$ sta per Insurance ed il proprietario della relazione insurance,
+poi abbiamo altri soggetti, in questo esempio $U$ è l'utente che richiede la computazione.
+
+\noindent A sx R è la relazione che è il risultato di una query.
+
+\noindent Data questa relazione e questa tabella andiamo a vedere chi è autorizzato ad accedere alla relazione R:
+Intuitivamente un soggetto è autorizzato ad accedere alla relazione R se può accedere in chairo a tutti gli attributi che sono in chairo nella relazione e può accedere agli attributi
+che appaiono in forma criptata o in chairo o in modalità criptata (questo per quanto rguarda gli attributi nei campi $v$ e $i$). Per wuanto riguarda il campo delle equivalenze un soggetto
+deve avere una visibilità uniforme su questi attributi.
+\begin{itemize}
+    \item \textbf{Soggetto H:} il soggetto $H$ ha una visibilità criptata sull'attributo $P$ quindi non può accedere alla relazione 
+    \item \textbf{Soggetto I:} il soggetto $I$ è okay per gli attributi visibili  ma non ha visibilità uniforme sulle equivalenze poichè $S$ è criptato e $C$ in chiaro, quindi non è autorizzato ad accedere 
+    \item \textbf{Soggeto U:} non ha accesso all'attributo $B$, quini non è autorizzato
+    \item \textbf{Soggetto X:} visibilità criptata su $P$ quini no accesso
+    \item \textbf{Soggetto Y:} può accedere.
+    \item \textbf{Soggetto Z:} visibilità criptata su $P$ quini no accesso
+\end{itemize} 
+
+\noindent In conclusione:
+
+\noindent \textit{Un soggetto S è autorizzato ad accedere alla relazione R se:}
+\begin{itemize}
+    \item visibilità del testo in chiaro su attributi in chiaro (visibili o impliciti)
+    \item visibilità in chairo o criptata su attributi criptati (visibili o impliciti)
+    \item visibilità uniforme (in chiaro o criptata) su attributi equivalenti
+\end{itemize}
 
 
+\section{Calcolo delle assegnazioni}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/calcoloassegnazioni.png}
+\end{figure}
 
+Parto da una situazione dove tutto è in chairo e guardo chi può eseguire le varie operazioni di cui la mia query si compone. Partiamo 
+dalle foglie e andiamo verso l'alto, abbiamo sempre le nostre due relazioni Hospital e Insurance, di base queste due relazioni
+possono essere gestite da H per Hospital e I per Insurance.
+\begin{itemize}
+    \item Analizzando la query è visibile come nella relazione Hospital l'attributo $B$ non è mai coinvolto all'interno della computazione,
+quindi viene fatta una \textbf{proiezione}, rappresentata con $\pi$, non le rappresento con un nodo dell'albero poichè rientra tra le cose che può fare
+chi ha in mano la relazione.
+    \item Andiamo sul nodo sopra con l'operazione di \textbf{selezione} su $D$, visto che l'idea è lasciare tutto in chiaro vado a vedere chi è autorizzato a vedere in chiaro la relazione $H$ che contiene
+al suo interno gli attributi $S$ , $D$ e $T$. Guardando la tabella notiamo che solo gli utenti $H$ e $U$ sono autorizzati a vedere questi attributi in chairo.
+    \item Arrivo al nodo di join, l'unico soggetto che può vedere la relazione che da una parte ha gli attributi $SDT$ in chairo e gli attributi $CP$ dell'altra relazione in chairo è solo il soggetto $U$
+    \item Questo ragionamento è valido anche per tutti gli altri nodi, notiamo che però se lasciamo tutto in chairo ogni nodo è caratterizzato da pochi candidati.  
+\end{itemize}
 
+\noindent Faccio l'opposto e parto dall'assunzione che sia \textbf{tutto criptato} (guardare immagine sotto)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/cal2.png}
+\end{figure}
 
+\noindent Supporre di avere tutto criptato aumenta notevollmente il numero di candidati, infatti nella realtà non è detto che sia tutto criptato bensì
+è solo una strategia che applico per trovare i candidati.
+In questa query c'è un assunzione particolare: la $P$ che si trova sotto l'ultimo nodo dell'albero (quello più in alto) indica l'\textbf{operazione di decriptazione},
+viene fatto poichè determinate operazioni vogliono essere eseguite sugli attributi in chairo. Il valore che dipende dall'attributo $P$ deve essere decriptato.
+
+\section{Piano di query minimamente esteso}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/minimal.png}
+\end{figure}
+
+In qualche modo abbiamo applicato un qualche criterio e questi sono i soggetti che abbiamo scelto.
+\begin{itemize}
+    \item Il soggetto $H$ deve compiere l'operazione di selezione su D, e al fine che la possa compiere io devo lasciare tutto così com'è e non criptare nulla.
+    \item Per l'operazione di Join abbiamo scelto il soggetto $X$, però può accedere gli attributi solo in modalità criptata. Quindi quando vado ad eseguire la query devo iniettare delle operazioni di \textbf{criptazione} (tutto questo dipende dal sogetto che scelgo per fare una determinata operazione)
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/onthefly.png}
+\end{figure}
+    \item L'operazione successiva la svolge sempre $X$ che consegna il risultato al soggetto $Y$, l'operazione che $Y$ deve fare va eseguita in chiaro
+    sull'attributo $P$ che però il soggetto $X$ ha criptato, quindi decripta l'attributo $P$ prima di svolgere l'operazione.
+\end{itemize}
+
+\noindent Scherma finale risultante:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{images/min2.png}
+\end{figure}
+
+ \noindent \textbf{Problema della gestione delle chiavi di criptazione:} chiavi che devono essere condivisi tra più soggetti, quelli che eseguiranno 
+l'operazione. 
 
 
 \end{document}
