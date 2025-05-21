@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  20 MAY 2025 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  21 MAY 2025 13:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -570,12 +570,12 @@ Capitolo 1.
 
 ]
 Capitolo 2.
-<images/basicScenario.png, id=44, 230.8625pt x 158.5925pt>
+<images/basicScenario.png, id=100, 230.8625pt x 158.5925pt>
 File: images/basicScenario.png Graphic file (type png)
 <use images/basicScenario.png>
 Package pdftex.def Info: images/basicScenario.png  used on input line 42.
 (pdftex.def)             Requested size: 207.0021pt x 142.20193pt.
-<images/intuition.png, id=46, 317.68687pt x 152.57pt>
+<images/intuition.png, id=102, 317.68687pt x 152.57pt>
 File: images/intuition.png Graphic file (type png)
 <use images/intuition.png>
 Package pdftex.def Info: images/intuition.png  used on input line 66.
@@ -586,27 +586,118 @@ Package pdftex.def Info: images/intuition.png  used on input line 66.
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/basicScenario.png>]
 
-[4 <./images/intuition.png>] (./differentialPrivacy.aux)
+[4 <./images/intuition.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 99.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\epsilon' on input line 99.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 99.
+
+<images/curve.png, id=120, 264.99pt x 218.8175pt>
+File: images/curve.png Graphic file (type png)
+<use images/curve.png>
+Package pdftex.def Info: images/curve.png  used on input line 112.
+(pdftex.def)             Requested size: 137.9979pt x 113.95268pt.
+
+
+[5 <./images/curve.png>]
+<images/pazienti.png, id=127, 242.9075pt x 95.35625pt>
+File: images/pazienti.png Graphic file (type png)
+<use images/pazienti.png>
+Package pdftex.def Info: images/pazienti.png  used on input line 130.
+(pdftex.def)             Requested size: 137.9979pt x 54.17174pt.
+<images/Laplace.png, id=128, 238.39063pt x 108.90688pt>
+File: images/Laplace.png Graphic file (type png)
+<use images/Laplace.png>
+Package pdftex.def Info: images/Laplace.png  used on input line 159.
+(pdftex.def)             Requested size: 137.9979pt x 63.04636pt.
+
+
+[6 <./images/pazienti.png> <./images/Laplace.png>]
+<images/slideextra.png, id=136, 295.60437pt x 182.18062pt>
+File: images/slideextra.png Graphic file (type png)
+<use images/slideextra.png>
+Package pdftex.def Info: images/slideextra.png  used on input line 171.
+(pdftex.def)             Requested size: 207.0021pt x 127.57837pt.
+
+
+[7 <./images/slideextra.png>]
+Capitolo 3.
+<images/postP.png, id=148, 251.94125pt x 164.11313pt>
+File: images/postP.png Graphic file (type png)
+<use images/postP.png>
+Package pdftex.def Info: images/postP.png  used on input line 193.
+(pdftex.def)             Requested size: 137.9979pt x 89.89188pt.
+<images/ParallelC.png, id=149, 286.57062pt x 150.5625pt>
+File: images/ParallelC.png Graphic file (type png)
+<use images/ParallelC.png>
+Package pdftex.def Info: images/ParallelC.png  used on input line 204.
+(pdftex.def)             Requested size: 137.9979pt x 72.5035pt.
+
+
+[8
+
+ <./images/postP.png>]
+<images/sequenziale.png, id=155, 265.49188pt x 146.04562pt>
+File: images/sequenziale.png Graphic file (type png)
+<use images/sequenziale.png>
+Package pdftex.def Info: images/sequenziale.png  used on input line 221.
+(pdftex.def)             Requested size: 137.9979pt x 75.91295pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 229.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\epsilon' on input line 229.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 229.
+
+<images/privacyBudget.png, id=156, 214.30063pt x 185.19188pt>
+File: images/privacyBudget.png Graphic file (type png)
+<use images/privacyBudget.png>
+Package pdftex.def Info: images/privacyBudget.png  used on input line 235.
+(pdftex.def)             Requested size: 137.9979pt x 119.25426pt.
+
+
+[9 <./images/ParallelC.png> <./images/sequenziale.png>]
+
+[10 <./images/privacyBudget.png>]
+Capitolo 4.
+
+
+[11
+
+] (./differentialPrivacy.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `differentialPrivacy.out' has not changed.
-(rerunfilecheck)             Checksum: 49AC8B72631B1D0BD9529326F2493995;683.
+(rerunfilecheck)             Checksum: 592B97D6907D8A88A97C0436BCD985D8;2831.
  ) 
 Here is how much of TeX's memory you used:
- 22414 strings out of 473362
- 410390 string characters out of 5725050
- 797759 words of memory out of 5000000
- 45163 multiletter control sequences out of 15000+600000
- 565005 words of font info for 60 fonts, out of 8000000 for 9000
+ 22510 strings out of 473362
+ 412274 string characters out of 5725050
+ 799763 words of memory out of 5000000
+ 45234 multiletter control sequences out of 15000+600000
+ 566190 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,93p,502b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on differentialPrivacy.pdf (5 pages, 133357 bytes).
+ 84i,7n,93p,502b,518s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on differentialPrivacy.pdf (12 pages, 435511 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 55 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

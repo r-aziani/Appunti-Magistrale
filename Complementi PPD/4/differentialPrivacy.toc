@@ -4,3 +4,14 @@
 \contentsline {chapter}{\numberline {2}Basic Scenario}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}L'intuizione classica per la privacy}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Differential privacy– Intuition}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Definizione formale di Differential Privacy}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Pivacy budget $\epsilon $}{5}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Global sensitivity}{5}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Tecniche di generazione di rumore}{6}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Global picture}{7}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Proprietà di Differential Privacy}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Chiusura del post-processing}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Composizione parallela}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Composizione sequenziale}{9}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Perchè $\epsilon $ è chiamato "Privacy budget"?}{9}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Modelli di Differential Privacy}{11}{chapter.4}%
