@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  21 MAY 2025 18:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  21 MAY 2025 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -569,50 +569,54 @@ Capitolo 1.
 [2
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+[3]
 Capitolo 2.
-
-
-[3
-
-]
-Capitolo 3.
 
 
 [4
 
 ]
-Capitolo 4.
+Capitolo 3.
 
 
 [5
 
 ]
-Capitolo 5.
+Capitolo 4.
 
 
 [6
 
-] (./domande.aux)
+]
+Capitolo 5.
+
+
+[7
+
+]
+
+[8] (./domande.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `domande.out' has not changed.
-(rerunfilecheck)             Checksum: E40648D049ACE8635FD2B0F2EDDB5A0C;847.
+(rerunfilecheck)             Checksum: 61FAA4A68CFFD9BAA0572B745B898F77;1157.
  ) 
 Here is how much of TeX's memory you used:
- 22393 strings out of 473362
- 409553 string characters out of 5725050
- 796684 words of memory out of 5000000
+ 22395 strings out of 473362
+ 409565 string characters out of 5725050
+ 798685 words of memory out of 5000000
  45142 multiletter control sequences out of 15000+600000
  564400 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,496b,473s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on domande.pdf (7 pages, 76665 bytes).
+ 84i,6n,93p,496b,527s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on domande.pdf (9 pages, 103962 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
