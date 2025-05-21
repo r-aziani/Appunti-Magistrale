@@ -237,6 +237,72 @@ $\epsilon$ rappresenta il livello di protezione che voglio mantenere, ogni volta
 
 \chapter{Modelli di Differential Privacy}
 
+\section{Interattivo VS non Interattivo}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\linewidth]{images/Interactive.png}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Interattivo:} valutazione delle query run-time 
+    \item \textbf{Non interattivo:} chi ha in mano i dati decide cosa rilasciare a priori, rilascio di dati pre-computati in macrotabelle 
+\end{itemize}
+
+
+\section{Globale VS Locale}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\linewidth]{images/Gloabl.png}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Globale:} c'è un'entità fidata che esegue la computazione sui dati proteggendo il risultato della computazione con differential privacy
+    \item \textbf{Locale:} non c'è più una parte fidata che riceve i dati degli utenti, c'è qualcuno che colleziona i dati ma non essendo fidato non riceve i dati originale ma dati già sporcat di rumore
+\end{itemize}
+
+\subsection{Definizione formale di Local Differential Privacy}
+\textit{Un algoritmo randomizzato $K$ soddisfa $\epsilon$-local differential privacy
+se e solo se per ogni input $x$,$x'$ e output $o$ di $A$:}
+\begin{center}
+    \textit{$P[K(x) = o]<= e^\epsilon$ $P[K(x') = o]$}
+\end{center}
+
+\noindent Al posto di avere $D$ e $D'$ che sono collezioni di dati, ma sono i dati di un individuo, tutto il resto si applica allo stesso modo della Global.
+
+\chapter{Differential Privacy nel mondo reale}
+\section{Privacy in practice}
+Differential privacy basta sul \textbf{Lancio della moneta} molto usata in Google e Apple.
+
+\noindent si basa sull'idea di lanciare la moneta
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\linewidth]{images/coin.png}
+\end{figure}
+\noindent Questo stesso meccanismo è usato per proteggere la privacy dei miei dati prima che finiscano in mano alla terza parte non fidata,
+viene protetto ogni singolo bit in questo modo. 
+
+\noindent La protezione ottenuta è pari a $\epsilon = ln(3)$
+
+\section{Esempio dei censimenti}
+L'Ufficio del Censimento degli Stati Uniti ha distribuito OnTheMap, un'applicazione basata sul web che mostra dove i lavoratori sono occupati e dove vivono.
+
+\noindent E' basato su un'idea diversa di differential privacy, ovvero:
+\begin{center}
+    \textit{$(\epsilon, \delta)$-differential privacy}
+\end{center}
+
+\begin{itemize}
+    \item $\epsilon$ è il privacy budget
+    \item $\delta$ ci dice quanto il risultato rilasciato è maggiore rispetto all'$\epsilon$ che mi ero prefissato
+\end{itemize}
+
+\chapter{Problemi con differential privacy}
+Ha rivoluzionato molto ma ha anche delle problematiche:
+\begin{itemize}
+    \item Finchè si tratta di conteggi va tutto molto bene, ma con altre computazioni è difficile stabilire la global sensitivity
+    \item A volte viene inserito troppo rumore per proteggere gli outlier 
+    \item Come settare il valore di $\epsilon$, viene suggerita la soluzione che quando il privacy budget è esaurito allora le computazioni verranno eseguire su dati sintetici(difficile)
+\end{itemize}
+
+
 
 
 

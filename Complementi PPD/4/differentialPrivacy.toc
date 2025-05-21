@@ -15,3 +15,10 @@
 \contentsline {section}{\numberline {3.3}Composizione sequenziale}{9}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Perchè $\epsilon $ è chiamato "Privacy budget"?}{9}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Modelli di Differential Privacy}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Interattivo VS non Interattivo}{11}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Globale VS Locale}{11}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Definizione formale di Local Differential Privacy}{12}{subsection.4.2.1}%
+\contentsline {chapter}{\numberline {5}Differential Privacy nel mondo reale}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Privacy in practice}{13}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Esempio dei censimenti}{13}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Problemi con differential privacy}{14}{chapter.6}%
