@@ -299,7 +299,8 @@ I principali vettori di infezione sono:
 \end{itemize}
 
 \subsubsection{Esempio noto in letteratura:}
-
+Un esempio di virus può essere considerato il compression virus, che va a comprimere lo spazio occupato da un programma, per inserire un codice malevolo:
+così facendo la dimensione di un file è la stessa, andando a baypassare i controlli di un antivirus.
 
 \subsection{Worm}
 I worm sono programmi \textit{stand alone} (a differenza dei virus che devono essere attivati 
@@ -314,8 +315,7 @@ da un qualche evento) in grado di replicarsi.
 \end{itemize}
 
 \subsubsection{Esempio noto in litteratura:}
-
-
+Esempio di worm della famiglia Nimda, che prese di mira i sistemi operativi Microsoft Windows.
 
 \subsection{Drive-by-download}
 Sfruttano \textbf{vulnerabilità del browser} per installare codice malevolo ad insaputa dell'utente 
@@ -390,15 +390,58 @@ di sistema:}
     abbia la stessa dimensione di quella originale
 \end{itemize} 
 
+\section{Discutere se le seguenti tecniche sono meccanismi di rilevamento utili rispettivamente per i virus polimorfici e metamorfici:}
+
+\subsection{Static pattern matching}
+\noindent Utile per \textbf{virus polimorfici} poichè cambiano solo la parte cifrata del loro codice a ogni infezione, ma mantengono invariata la struttura del decryptor,
+che può essere riconosciuto con tecniche di pattern matching statico, perché rimane simile o identico tra le varianti.
+
+\noindent Al contrario dei virus metamorfici che modificano completamente il proprio codice a ogni infezione, incluso il decryptor o qualsiasi parte riconoscibile.
+
+\subsection{Pattern matching during emulation}
+\noindent Utile per \textbf{virus metamorfici} poichè nonostante essi cambino completamente aspetto a ogni infezione, 
+durante l'emulazione (cioè durante l'esecuzione simulata del codice in un ambiente controllato), il virus esegue le stesse azioni fondamentali, indipendentemente dalla sua forma.
+
+\noindent La tecnica di pattern matching during emulation permette quindi di osservare il comportamento reale del codice eseguito (come accessi a file di sistema, chiamate di sistema sospette, o autoriproduzione).
+
+\noindent Al contrario, emulare un virus polimorfico è inefficiente, perché richiede tempo e risorse per ottenere un'informazione che è già ricavabile staticamente.
+
+\subsection{Suspicious behaviour detection}
+\noindent Utile per \textbf{virus polimorfici} poichè il loro comportamento rimane molto prevedibile:
+\begin{itemize}
+    \item Decriptano il corpo
+    \item Si copiano in altri file
+    \item Cercano persistenza
+\end{itemize}
+
+\noindent Per quanto riguarda i virus metamorfici possono cercare di mascherare il loro comportamento,
+soprattutto quelli più avanzati possono simulare comportamenti legittimi.
+
+\noindent Questo li rende più difficili da intercettare solo con behaviour detection
+
+
 
 
 \chapter{Autenticazione}
 
+\section{Discutere le problematiche di autenticazione su Web e in dettaglio uno schema challenge-response}
+\noindent L'autenticazione in generale, e in particolare quella web, consiste principalmente in un client che fa una richiesta a un server e un server che fornisce una risposta.
+
+\noindent Per fare in modo però che il server non inivii informazioni a client malevoli, che possono attaccare tramite attacchi di spoofing,
+fingendosi un client legittimo (o anche fingendosi un server legittimo), oppure con replay attack, ciò inivio di pacchetti già inviati da un client legittimo(tramite 
+sniffing sulla rete), vengono introdotte misure di sicurezza più avanzate.
+
+\noindent Client e server condividono informazioni segrete, che possono andare da una password a una chiave di crittografia(secret):
+un client che vuole accedere a un servizio web su un server, deve dimostrare di essere chi dichiara di essere. Il server presenta quindi 
+una stringa (\textbf{challenge}) e il client, tramite il secret, può fornire la prova di identificazione richiesta e riesce ad accedere (\textbf{response}).
+
+\noindent Questo schema fornisce segretezza, tramite uso di password o chiavi, e anche freschezza, nella misura in cui la challenge viene modificata a ogni richiesta, così
+che non si possa sfruttare una risposta già fornita con un replay attack.
 
 
 \chapter{Attacchi TCP}
 
-
+\section{Descrivere in dettaglio in cosa consiste il ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure}
 
 
 

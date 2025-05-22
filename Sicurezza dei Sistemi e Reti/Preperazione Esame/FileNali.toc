@@ -31,13 +31,19 @@
 \contentsline {subsection}{\numberline {3.1.9}Ransomware}{11}{subsection.3.1.9}%
 \contentsline {subsection}{\numberline {3.1.10}Vulnerabilità zero-day}{11}{subsection.3.1.10}%
 \contentsline {subsection}{\numberline {3.1.11}Spear phishing}{11}{subsection.3.1.11}%
-\contentsline {subsection}{\numberline {3.1.12}Spyware}{11}{subsection.3.1.12}%
+\contentsline {subsection}{\numberline {3.1.12}Spyware}{12}{subsection.3.1.12}%
 \contentsline {subsection}{\numberline {3.1.13}APT - Advanced Persistent Threats}{12}{subsection.3.1.13}%
 \contentsline {section}{\numberline {3.2}Differenza tra virus metamorfico e polimorfico}{12}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Classificazione dei virus}{12}{subsection.3.2.1}%
-\contentsline {chapter}{\numberline {4}Autenticazione}{13}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Attacchi TCP}{14}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Attacchi}{15}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Scanning}{16}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Network Scanning}{17}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Firewall e NIDS}{18}{chapter.9}%
+\contentsline {section}{\numberline {3.3}Discutere se le seguenti tecniche sono meccanismi di rilevamento utili rispettivamente per i virus polimorfici e metamorfici:}{13}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Static pattern matching}{13}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Pattern matching during emulation}{13}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Suspicious behaviour detection}{13}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Autenticazione}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Discutere le problematiche di autenticazione su Web e in dettaglio uno schema challenge-response}{14}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Attacchi TCP}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Descrivere in dettaglio in cosa consiste il ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure}{15}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Attacchi}{16}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Scanning}{17}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Network Scanning}{18}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Firewall e NIDS}{19}{chapter.9}%

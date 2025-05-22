@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  22 MAY 2025 15:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  22 MAY 2025 17:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,7 +555,7 @@ LaTeX Warning: No \author given.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 ...numberline {5}Attacchi TCP}{14}{chapter.5}
+l.41 ...behaviour detection}{13}{subsection.3.3.3}
                                                   % [1
 
 ])
@@ -597,40 +597,47 @@ Capitolo 3.
 [11]
 
 [12]
+
+[13]
 Capitolo 4.
 
+Overfull \hbox (14.12961pt too wide) in paragraph at lines 427--427
+\OT1/cmr/bx/n/14.4 ne su Web e in det-ta-glio uno sche-ma challenge-
+ []
 
-[13
-
-]
-Capitolo 5.
 
 
 [14
 
 ]
-Capitolo 6.
+Capitolo 5.
 
 
 [15
 
 ]
-Capitolo 7.
+Capitolo 6.
 
 
 [16
 
 ]
-Capitolo 8.
+Capitolo 7.
 
 
 [17
 
 ]
-Capitolo 9.
+Capitolo 8.
 
 
 [18
+
+]
+Capitolo 9.
+
+
+[19
 
 ] (./FileNali.aux)
  ***********
@@ -638,21 +645,21 @@ LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `FileNali.out' has not changed.
-(rerunfilecheck)             Checksum: 086BFEDE2B3EC41C1EB6F025DED9A923;5571.
+(rerunfilecheck)             Checksum: 00D875FAF90CDB866052E6C95BF9B7C7;8243.
  ) 
 Here is how much of TeX's memory you used:
- 22487 strings out of 473362
- 410907 string characters out of 5725050
- 804742 words of memory out of 5000000
- 45182 multiletter control sequences out of 15000+600000
+ 22501 strings out of 473362
+ 411097 string characters out of 5725050
+ 805751 words of memory out of 5000000
+ 45189 multiletter control sequences out of 15000+600000
  566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,597b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,6n,93p,892b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on FileNali.pdf (19 pages, 146155 bytes).
+Output written on FileNali.pdf (20 pages, 151534 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
