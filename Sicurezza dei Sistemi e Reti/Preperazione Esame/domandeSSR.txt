@@ -1,10 +1,10 @@
 ******************************
 *** Politiche di sicurezza ***
 ******************************
-a) definire l'utilizzo delle politiche di sicurezza basate su MAC e DAC
+a) definire l'utilizzo delle politiche di sicurezza basate su MAC e DAC FATTO
 b) Fare cenni sull'utilizzo di tali politiche nei S.O. moderni
 ---
-a) Definire l'uso delle politiche basate su ruoli 
+a) Definire l'uso delle politiche basate su ruoli FATTO
 b) Fare cenni sull'utilizzo di tali politiche nei S.O. moderni
 ---
 a) Dare una definizione di politica di sicurezza 

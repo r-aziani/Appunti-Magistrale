@@ -1,0 +1,426 @@
+\documentclass{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[italian]{babel}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{soul}
+\usepackage{listings} % Per evidenziare il codice
+
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9} % Definizione colore sfondo
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+
+\lstset{
+    backgroundcolor=\color{lightgray}, % Sfondo grigio
+    basicstyle=\ttfamily, % Font monospaziato
+    % frame=single, % Bordo attorno al codice
+    tabsize=4, % Dimensione tabulazione
+    breaklines=true, % Permette di andare a capo automaticamente
+    numbers = left,
+    numberstyle=\small\color{gray}
+}
+
+\title{\huge\textbf{{Sicurezza dei Sistemi e delle Reti}}}
+\date{File di Nali}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\chapter{Politiche di Sicurezza}
+\section{Definizione Politica di sicurezza}
+
+La \textit{gestione della sicurezza} è un \textit{processo formale} 
+per rispondere alle domande:
+\begin{itemize}
+    \item quali sono i beni da proteggere
+    \item quali sono le possibili minacce
+    \item come si possono contrastare le minacce 
+\end{itemize}
+
+\noindent Questo processo ha natura iterativa, ed è contenuto nella ISO 31000; in 
+questa norma viene descritto un \textit{modello per la gestione della sicurezza 
+delle informazioni} che comprende le seguenti fasi:
+\begin{itemize}
+    \item \textbf{Plan:}
+    \begin{itemize}
+        \item stabilire politiche, processi e procedure di sicurezza
+        \item eseguire la valutazione del rischio 
+        \item sviluppare un piano di trattamento del rischio 
+    \end{itemize}
+    \item \textbf{Do:}
+    \begin{itemize}
+        \item implementare il piano di trattamento del rischio
+    \end{itemize}
+    \item \textbf{Check:}
+    \begin{itemize}
+        \item monitorare e mantenere il piano di trattamento del rischio
+    \end{itemize}
+    \item \textbf{Act:}
+    \begin{itemize}
+        \item mantenere e migliorare la gestione dei rischi 
+        \item risposta ad incidenti, analisi di vulnerabilità e riprendere il ciclo iterativamente
+    \end{itemize}
+\end{itemize}
+
+\subsection{Definizioni}
+\begin{itemize}
+    \item \textbf{Rischio:} esprime la possibilità che un attacco causi danni ad una 
+    organizzazione
+    \item \textbf{Risorsa:} tutto ciò che necessita di essere protetto
+    \begin{itemize}
+        \item \textit{hw}
+        \item \textit{sw}
+        \item \textit{reputazione}
+    \end{itemize}
+    
+    \noindent La valutazione di una risorsa viene fatta in base:
+    \begin{itemize}
+        \item ai costi da sostenere per sostituire la risorsa nel caso non sia più disponibile 
+        \item perdita di incassi in caso di attacco 
+    \end{itemize}
+    \item \textbf{Vulnerabilità:} punti deboli che possono essere sfruttati per causare danni al 
+    sistema; possono essere classificate come:
+    \begin{itemize}
+        \item critico 
+        \item moderato 
+        \item basso
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Domanda MAC, DAC e RBAC}
+\begin{center}
+    \textit{definire l'utilizzo delle politiche di sicurezza basate su MAC, DAC e RBAC}
+\end{center}
+\noindent Gli approcci DAC,MAC e RBAC fanno parte delle politiche di controllo degli accessi e forniscono approcci diversi
+a seconda del contesto di applicazione
+\subsection{DAC (Discretionary Access Control):}
+\noindent Il controllo dell'accesso viene fatto sull' \textbf{identità del soggetto richiedente} e delle \textbf{regole di accesso}.
+Definito \textit{discrezionale} poichè un'entità potrebbe avere i privilegi di accessi che le permettono, a sua volta, di concedere l'accesso ad un'altra entità.
+
+\noindent Si può rappresentare mediante una matrice, dove:
+\begin{itemize}
+    \item le colonne rappresentano i soggetti
+    \item le righe gli oggetti
+    \item ogni cella specifica i diritti di accesso di quel soggetto a quel determinato oggetto
+\end{itemize}
+
+
+\subsection{MAC (Mandatory Access Control):} 
+La politica di controllo degli accesssi MAC, o Mandatory Access Controll si basa sul confronto tra \textbf{etichette di sicurezza} che indicano quanto sono sensibili le risorse
+e \textbf{autorizzazioni di sicurezza} che indicano quali entità del sistema sono idonee ad accedere a quali risorse.
+
+\noindent Questa politica è definita \textit{mandatoria} poichè un'entità che possiede l'accesso a una risorsa non può estendere il permesso di acesso a un'altra entità,
+può farlo solo l'amministratore di sistema.
+
+\noindent I sistemi MAC si dividono in:
+\begin{itemize}
+    \item \textbf{Multilevel security systems:} consiste in una struttura verticale di sistemi di sicurezza, agli utent viene assegnato un livello e possono accedere solo a risorse con un livello uguale o inferiore
+    \item \textbf{Multilateral security systems:} l'accesso viene assegnato in base a segmenti che formano gruppi costituiti da livelli di sicurezza e parole in codice
+    \begin{itemize}
+        \item si ottiene una struttura orizzontale, che contiene livelli di sicurezza verticali aggiuntivi
+    \end{itemize}
+\end{itemize}
+
+\noindent Vantaggi:
+\begin{itemize}
+    \item molto sicuro, a prova di manomissione
+    \item gli utenti non possono fare modifiche
+    \item controllo automatizzato
+    \item i dati non possono essere modificati senza apposita autorizzazione
+\end{itemize}
+
+\noindent Svantaggi:
+\begin{itemize}
+    \item richiede una pianificazione dettagliata e un lavoro amministrativo
+    \item controllo e aggiornamento dei dati di accesso
+    \item manutenzione per aggiunta di nuovi dati o utenti e relative modifiche (elevato carico di lavoro per l'amministratore)
+\end{itemize}
+
+\subsection{RBAC (Role Based Access Control):}
+\noindent Introduce il concetto di \textbf{ruolo}, ovvero una funzione che può essere assiciata a uno o più utenti (gli utenti possono avere più ruoli)
+e una \textbf{sessione}, ovvero una mappatura tra utente e un sottoinsieme di ruoli a cui è assegnato.
+
+\noindent I ruoli di un utente possono fornire o meno accesso a determinate risorse.
+
+\noindent Quattro tipi di entità:
+\begin{itemize}
+    \item \textbf{Utente:} una persona che ha accesso al sistema, ogni individuo ha un ID associato
+    \item \textbf{Ruolo:} funzione lavorativa all'interno dell'organizzazione
+    \item \textbf{Autorizzazione:} approvazione di una modalità di accesso ad uno o più oggetti
+    \item \textbf{Sessione:} mappatura tra utente e un sottoinsieme dei ruoli a cui è assegnato
+\end{itemize}
+
+\section{Fare cenni sull'utilizzo di tali politiche nei Sistemi Operativi moderni}
+\subsection{Unix security model}
+In Linux ci sono tre entità da considerare:
+\begin{itemize}
+    \item \textbf{Soggetto:} può essere un utente o un processo 
+    \item \textbf{Oggetto:} file, cartelle, \dots
+    \item \textbf{Operazioni consentite:} lettura, scrittura, esecuzione 
+\end{itemize}
+
+\noindent In Unix, ogni utente ha associato un id univoco, detto \textbf{UID}; può appartenere a 
+gruppi di utenti, anch'essi identificati da un id univoco detto \textbf{GID}. Tutti gli utenti 
+appartenenti ad un gruppo possono condividere tra loro oggetti.
+
+\noindent Ad ogni file è assegnato un unico utente proprietario e un unico gruppo proprietario. L'autorizzazione 
+viene concessa mediante una ACL che identifica le operazioni che i soggetti possono fare.
+
+\subsubsection{Processi in Linux}
+Ogni processo è isolato dagli altri e non possono accedere alla memoria altrui. Ogni processo viene 
+eseguito con le autorizzazione dell'UID dell'utente che lo sta eseguendo. 
+
+\noindent Nel momento della creazione, ad ogni processo sono assegnati tre ID (inizialmente tutti uguali 
+all'UID):
+\begin{itemize}
+    \item \textbf{Effective UID:} determina le autorizzazioni per il processo 
+    \item \textbf{Real UID:} determina l'utente che ha avviato il processo 
+    \item \textbf{Saved UID:} EUID prima di eventuali modifiche
+\end{itemize}
+
+\noindent L'utente \textit{root} può cambiare EUID/RUID/SUID a valori arbitrari; utenti non privilegiati
+possono cambiare EUID solo a RUID o SUID
+
+\subsubsection{Unix file access control}
+Le modifiche agli ID sono apportate mediante i comandi \textit{setUID} e \textit{setGID}; questa modifica 
+permette ai programmi non privilegiati di accedere a risorse generalmente non accessibili.
+
+\noindent Le directory possono aver impostato uno \textit{\textbf{sticky bit}}: specifica che solo il proprietario di un file nella cartella
+può apportare una modifica a quel file 
+
+\noindent Il \textit{\textbf{superuser}} è esente dalle consuete restrizioni di controllo degli accessi, ha 
+accesso a tutto il sistema.
+
+
+\subsection{Windows security architecture}
+L'architettura di sicurezza di Windows è basata su più entità:
+\begin{itemize}
+    \item \textbf{\textit{Security Reference Model (SRM):}} componente che in modalità kernel esegue 
+    controlli delle autorizzazioni e manipola i privilegi degli utenti
+    \item \textbf{\textit{Local Security Authority (LSA):}} risiede in un processo utente, è responsabile 
+    dell'applicazione della politica di sicurezza locale, tra cui:
+    \begin{itemize}
+        \item criteri per le password, come complessità e tempi di scadenza 
+        \item politica di controllo $\rightarrow$ specifica quali operazioni su quali oggetti vadano controllate 
+        \item impostazioni dei privilegi
+    \end{itemize}
+    \item \textbf{\textit{Security Account Manager (SAM):}} è un database che archivia i dati degli account e le 
+    informazioni di sicurezza su entità locali e gruppi
+    \item \textbf{\textit{Active Directory (AD):}} implementa il protocollo LDAP (\textit{Lightweight Directory Access Protocol})
+\end{itemize}
+
+\subsubsection{Windows security model}
+Windows ha un complesso sistema di controllo dell'accesso; ogni oggetto ha ACL per permettere autorizzazioni 
+granulari ad utenti e/o gruppi di utenti.
+
+\subsubsection{Security descriptor}
+Ogni oggetto ha un \textit{security descriptor} che contiene:
+\begin{itemize}
+    \item \textbf{\textit{security identifier} (SID)} per il possessore e il gruppo primario dell'oggetto (SID è 
+    associato univocamente ad ogni utente) 
+    \item \textbf{\textit{discretionary ACL} (DACL):} diritti di accesso per gli utenti e i gruppi
+    \item \textbf{\textit{system ACL} (SACL):} tipi di accesso che generano log
+\end{itemize}
+
+\noindent Ad ogni processo viene inoltre associato un insieme di \textbf{token}, che prende il nome di 
+\textbf{\textit{security context}}. Nel momento in cui un processo vuole accedere ad un oggetto, presenta 
+il suo insieme di token e il sistema controlla se il security context abbia o meno accesso a tale risorsa 
+in base al \textit{security descriptor} dell'oggetto.
+
+
+
+\chapter{Set-UID}
+
+
+
+
+
+
+\chapter{Malware}
+\noindent Una definizione informale per malware potrebbe essere quella di \textit{programma malevolo},
+solitamente inserito di nascosto in un sistema, che ha lo scopo di compromettere la \textbf{riservatezza}, l'\textbf{integrità} o la \textbf{disponibilità} 
+del sistema stesso.
+
+\noindent I malware sono classificati in base a:
+\begin{itemize}
+    \item \textbf{Propagazione:} software, rete, social engeneering
+    \item \textbf{Azioni sui dati colpiti:} corruzione, furto, crittografia
+    \item \textbf{Attack kit:} strumenti già pronti per attaccare
+    \item \textbf{Attori e/o motivazioni dell'attacco}
+\end{itemize}
+
+\section{Differenza tra due tipologie di malware (virus e worm) + esempio}
+\noindent Sono stati chiesti questi due ma per sicurezza aggiungo anche gli altri
+\subsection{Trojan}
+È un programma che ha un effetto evidente e atteso dall'utente, che ha però anche un 
+effetto \textbf{nascosto} che viola le politiche di sicurezza e che viene condotto senza l'autorizzazione 
+dell'utente
+
+\subsection{Virus}
+È un codice che può replicarsi modificando altri file o programmi per inserire codice in 
+grado di replicarsi a sua volta; questa \textbf{proprietà di replicazione} è ciò distingue 
+i virus dagli altri tipi di malware. Non svolge nessuna azione evidente, ma cerca di rimanere 
+nell'ombra.
+
+\noindent La replica richiede un certo tipo di assistenza da parte dell'utente, come ad esempio
+cliccare su un allegato.
+
+\noindent Un virus è composto da tre parti:
+\begin{itemize}
+    \item \textbf{Meccanismo di infezione}
+    \item \textbf{Trigger:} evento che determina quando il payload viene attivato
+    \item \textbf{Payload:} cosa fa il virus (oltre a diffondersi)
+\end{itemize}
+
+\noindent I virus attraversano quattro fasi:
+\begin{enumerate}
+    \item \textbf{Dormiente:} il virus è inattivo in attesa di essere attivato 
+    \item \textbf{Scatenante:} il virus viene attivato 
+    \item \textbf{Propagazione:} il virus inserisce una copia di sé stesso in certe parti del sistema; ogni programma 
+    infetto conterrà ora un altro virus che entrerà a sua volta in fase di propagazione 
+    \item \textbf{Esecutiva:} la funzione viene eseguita
+\end{enumerate}
+
+\subsubsection{Vettori di infezione}
+I principali vettori di infezione sono:
+\begin{itemize}
+    \item \textbf{Boot sector} di dispositivi esterni; il codice è inserito nel boot sector e viene 
+    eseguito in fase di avvio 
+    \item \textbf{Eseguibili}
+    \item \textbf{File macro:} il virus si attacca ai documenti per propagarsi 
+\end{itemize}
+
+\subsubsection{Esempio noto in letteratura:}
+
+
+\subsection{Worm}
+I worm sono programmi \textit{stand alone} (a differenza dei virus che devono essere attivati 
+da un qualche evento) in grado di replicarsi.
+
+\noindent Le fasi di esecuzione sono:
+\begin{itemize}
+    \item \textbf{Probing:} cerca informazioni sulla macchina 
+    \item \textbf{Expoloitation:} sfrutta le informazioni raccolte per trovare vulnerabilità
+    \item \textbf{Replicazione}
+    \item \textbf{Attacco} (payload)
+\end{itemize}
+
+\subsubsection{Esempio noto in litteratura:}
+
+
+
+\subsection{Drive-by-download}
+Sfruttano \textbf{vulnerabilità del browser} per installare codice malevolo ad insaputa dell'utente 
+nel momento in cui visita la pagina web dell'attaccante. 
+
+\subsection{Clickjacking}
+L'attaccante intercetta un \textit{click} dell'utente per costringerlo a fare delle cose 
+contro la sua volontà.
+
+\subsection{Zombie e botnet}
+Lo \textit{zombie} è una singola macchina, mentre la \textit{botnet} è un insieme di macchine 
+zombie controllate da una singola entità; vengono usate per fare DDoS, phishing, spamming, \dots
+
+\subsection{Rootkit}
+È un insieme di programmi installati su un sistema per mantenere l'accesso ad un sistema, ad 
+esempio, con privilegi di amministratore, nascondendo le prove della sua presenza e aggirando 
+i meccanismi di controllo.
+
+\noindent Permettono di fare attacchi anche con scarse conoscenze tecniche.
+
+\subsection{Scareware}
+Software che hanno lo scopo di diffondere shock, ansia e/o la percezione di una minaccia; sono 
+un attacco di \textit{social engeneering}.
+
+\subsection{Ransomware}
+Software che tiene in ostaggio il sistema per richiedere un riscatto all'utente, spesso tramite
+cifratura.
+
+\subsection{Vulnerabilità zero-day}
+Si intende un'exploit non ancora nota e che non ha quindi una contromisura.
+
+\subsection{Spear phishing}
+Viene \textbf{studiato nel dettaglio il bersaglio}, in modo tale da fare del phishing più mirato 
+ed efficace.
+
+\subsection{Spyware}
+Malware che raccoglie piccole informazioni alla volta sugli utenti a loro insaputa,
+come ad esempio un \textit{keylogger}.
+
+\subsection{APT - Advanced Persistent Threats}
+\begin{itemize}
+    \item \textit{\textbf{Advanced:}} è un'applicazione con un ampia varietà di tecnologie di intrusione e malware
+    \item \textit{\textbf{Persistent:}}
+    attacchi per un periodo di tempo prolungato verso il target
+    \item \textit{\textbf{Target:}} target selezionati in modo accurato
+\end{itemize}
+
+\noindent Le fasi principali di un attacco tramite APT sono:
+\begin{itemize}
+    \item \textbf{Ricognizione:} si sceglie una vittima e la si studia 
+    \item \textbf{Weaponization:} si mette un trojan che permette accesso remoto in un payload consegnabile (email, USB, web)
+    \item \textbf{Sfruttamento:} il codice malevolo viene attivato per portare a termine il suo scopo
+\end{itemize}
+
+
+
+\section{Differenza tra virus metamorfico e polimorfico}
+\subsection{Classificazione dei virus}
+È possibile classificare i virus in base alle \textbf{tecniche usate per superare i controlli 
+di sistema:}
+\begin{itemize}
+    \item \textbf{Cifratura del virus:} crea una chiave per \textit{"crittografarsi"}; quando viene 
+    chiamato un programma infetto, con tale chiave viene decifrato il virus. Per evitare pattern 
+    di bit, durante la propagazione la chiave viene cambiata
+    \item \textbf{Stealth virus:} si nasconde dal rilevamento da parte dell'antivirus, tramite mutazione 
+    o compressione del codice 
+    \item \textbf{Polymorphic virus:} durante la replica crea copie che svolgono la stessa funzione 
+    ma che hanno pattern di bit diversi 
+    \item \textbf{Metamorphic virus:} si riscrive completamente ad ogni iterazione per aumentare la 
+    difficoltà di rilevamento
+    \item \textbf{Compression virus:} comprimono il file eseguibile in modo che la versione infetta 
+    abbia la stessa dimensione di quella originale
+\end{itemize} 
+
+
+
+\chapter{Autenticazione}
+
+
+
+\chapter{Attacchi TCP}
+
+
+
+
+
+
+\chapter{Attacchi}
+
+
+
+
+\chapter{Scanning}
+
+
+
+\chapter{Network Scanning}
+
+
+
+
+
+\chapter{Firewall e NIDS}
+
+
+
+
+\end{document} 
