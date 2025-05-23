@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.2}Domanda MAC, DAC e RBAC}{4}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}DAC (Discretionary Access Control):}{4}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}MAC (Mandatory Access Control):}{5}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}RBAC (Role Based Access Control):}{5}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.3}RBAC (Role Based Access Control):}{6}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}Fare cenni sull'utilizzo di tali politiche nei Sistemi Operativi moderni}{6}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}Unix security model}{6}{subsection.1.3.1}%
 \contentsline {subsubsection}{Processi in Linux}{6}{section*.2}%
@@ -14,36 +14,37 @@
 \contentsline {subsection}{\numberline {1.3.2}Windows security architecture}{7}{subsection.1.3.2}%
 \contentsline {subsubsection}{Windows security model}{7}{section*.4}%
 \contentsline {subsubsection}{Security descriptor}{7}{section*.5}%
-\contentsline {chapter}{\numberline {2}Set-UID}{8}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Malware}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Differenza tra due tipologie di malware (virus e worm) + esempio}{9}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Trojan}{9}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Virus}{9}{subsection.3.1.2}%
-\contentsline {subsubsection}{Vettori di infezione}{10}{section*.6}%
-\contentsline {subsubsection}{Esempio noto in letteratura:}{10}{section*.7}%
-\contentsline {subsection}{\numberline {3.1.3}Worm}{10}{subsection.3.1.3}%
-\contentsline {subsubsection}{Esempio noto in litteratura:}{11}{section*.8}%
-\contentsline {subsection}{\numberline {3.1.4}Drive-by-download}{11}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}Clickjacking}{11}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Zombie e botnet}{11}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Rootkit}{11}{subsection.3.1.7}%
-\contentsline {subsection}{\numberline {3.1.8}Scareware}{11}{subsection.3.1.8}%
-\contentsline {subsection}{\numberline {3.1.9}Ransomware}{11}{subsection.3.1.9}%
-\contentsline {subsection}{\numberline {3.1.10}Vulnerabilità zero-day}{11}{subsection.3.1.10}%
-\contentsline {subsection}{\numberline {3.1.11}Spear phishing}{11}{subsection.3.1.11}%
-\contentsline {subsection}{\numberline {3.1.12}Spyware}{12}{subsection.3.1.12}%
-\contentsline {subsection}{\numberline {3.1.13}APT - Advanced Persistent Threats}{12}{subsection.3.1.13}%
-\contentsline {section}{\numberline {3.2}Differenza tra virus metamorfico e polimorfico}{12}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Classificazione dei virus}{12}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Discutere se le seguenti tecniche sono meccanismi di rilevamento utili rispettivamente per i virus polimorfici e metamorfici:}{13}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Static pattern matching}{13}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Pattern matching during emulation}{13}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Suspicious behaviour detection}{13}{subsection.3.3.3}%
-\contentsline {chapter}{\numberline {4}Autenticazione}{14}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Discutere le problematiche di autenticazione su Web e in dettaglio uno schema challenge-response}{14}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Attacchi TCP}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Descrivere in dettaglio in cosa consiste il ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure}{15}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Attacchi}{16}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Scanning}{17}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Network Scanning}{18}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Firewall e NIDS}{19}{chapter.9}%
+\contentsline {chapter}{\numberline {2}Set-UID}{9}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Malware}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Differenza tra due tipologie di malware (virus e worm) + esempio}{10}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Trojan}{10}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Virus}{10}{subsection.3.1.2}%
+\contentsline {subsubsection}{Vettori di infezione}{11}{section*.6}%
+\contentsline {subsubsection}{Esempio noto in letteratura:}{11}{section*.7}%
+\contentsline {subsection}{\numberline {3.1.3}Worm}{11}{subsection.3.1.3}%
+\contentsline {subsubsection}{Esempio noto in litteratura:}{12}{section*.8}%
+\contentsline {subsection}{\numberline {3.1.4}Drive-by-download}{12}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Clickjacking}{12}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Zombie e botnet}{12}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Rootkit}{12}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Scareware}{12}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}Ransomware}{12}{subsection.3.1.9}%
+\contentsline {subsection}{\numberline {3.1.10}Vulnerabilità zero-day}{12}{subsection.3.1.10}%
+\contentsline {subsection}{\numberline {3.1.11}Spear phishing}{12}{subsection.3.1.11}%
+\contentsline {subsection}{\numberline {3.1.12}Spyware}{13}{subsection.3.1.12}%
+\contentsline {subsection}{\numberline {3.1.13}APT - Advanced Persistent Threats}{13}{subsection.3.1.13}%
+\contentsline {section}{\numberline {3.2}Differenza tra virus metamorfico e polimorfico}{13}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Classificazione dei virus}{13}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Discutere se le seguenti tecniche sono meccanismi di rilevamento utili rispettivamente per i virus polimorfici e metamorfici:}{14}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Static pattern matching}{14}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Pattern matching during emulation}{14}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Suspicious behaviour detection}{14}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Autenticazione}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Discutere le problematiche di autenticazione su Web e in dettaglio uno schema challenge-response}{15}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Attacchi TCP}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure}{16}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Attacco TCP SYN flood e le sue contromisure + SYN-Cookie}{16}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Attacchi}{18}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Scanning}{19}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Network Scanning}{20}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Firewall e NIDS}{21}{chapter.9}%

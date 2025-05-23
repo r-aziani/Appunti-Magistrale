@@ -93,6 +93,7 @@ delle informazioni} che comprende le seguenti fasi:
     \end{itemize}
 \end{itemize}
 
+\noindent Definizione per domanda esame: Una politica di sicurezza dei sistemi e delle reti è l'insieme strutturato di regole, requisiti e comportamenti che un'organizzazione definisce affinché i propri sistemi informatici e le proprie infrastrutture di rete applichino in modo coerente misure di protezione contro accessi non autorizzati, abusi, perdite di dati e altri rischi. Essa rappresenta ciò che il sistema deve far rispettare, automatizzando e facendo valere controlli come l'autenticazione, l'autorizzazione, il monitoraggio delle attività e la gestione delle vulnerabilità, allo scopo di garantire la riservatezza, l’integrità e la disponibilità delle informazioni, secondo gli obiettivi stabiliti dall'organizzazione stessa.
 
 
 \section{Domanda MAC, DAC e RBAC}
@@ -441,9 +442,35 @@ che non si possa sfruttare una risposta già fornita con un replay attack.
 
 \chapter{Attacchi TCP}
 
-\section{Descrivere in dettaglio in cosa consiste il ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure}
+\section{ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure}
+\noindent Il protocollo ARP (Address Resolution Protocol) si occupa di connettere un indirizzo fisico (MAC address) con un indirizzo logico(IP address). Per farlo ogni nodo all'interno della rete invia dei messaggi in broadcast
+per segnalare la sua presenza, così che gli altri nodi possano andare a popolare e/o modificare una tabella interna chiamata \textit{ARP cache table}
 
+\noindent Viene fatta un'assunzione di trust nella LAN, dato che le richieste non vengono tracciate, gli annunci non sono autenticati, le macchine si fidano l'una dell'altra.
+In questo modo un possibile attaccante può utilizzare il meccanismo automatico di aggiornamento della ARP cache table (che si aggiorna anche se non ha inviato alcuna richiesta) per fingersi un altro dispositivo.
 
+\noindent \textbf{Conseguenze:} L'attaccante si impone tra due dispositivi permettendogli di intercettare il traffico (sniffing), modificarlo (per esempio per iniettare un malware) o
+bloccarlo (DoS).
+
+\noindent \textbf{Contromisure:} Alcune possibili contromisure possono essere:
+\begin{itemize}
+    \item ARP statici: si configurano manualmente le associazione degli indirizzi IP e MAC, ma non è pratico in reti dinamiche o di grandi dimensioni
+    \item Crittografia del traffico: anche se l'attaccante intercetta il traffico, non può leggerne il contenuto.
+    \item Strumenti di monitoraggio 
+\end{itemize}
+
+\section{Attacco TCP SYN flood e le sue contromisure + SYN-Cookie}
+\noindent L'attacco TCP SYN Flood è una forma di attacco DoS (Denial of Service) che mira a sovraccaricare un server esaurendone le risorse disponibili per le connessioni, impedendo così agli utenti legittimi di accedere ai servizi.
+L'idea è di sfruttare le vulnerabilità legate alla negoziazione di una comunicazione tra client e server durante il three-way handshake, l'attaccante \textbf{continua a iniviare richieste SYN al server} senza poi rispondere ai SYN/ACK ricevuti in risposta,
+il server dovrà quindi attendere andando a saturare il TCB (Trasmission Control Block), impedendo le connessioni legittime.
+
+\noindent \textbf{Contromisure:} ampliare la memoria del TCB in modo che possa ricevere più richieste, ridurre i timer prima che una richiesta SYN venga cancellata dalla memoria o utilizzo dei SYN-Cookie.
+
+\noindent \textit{SYN-Cookie:} Tenica per contrastare l'attacco SYN Flood, l'utilizzo di cookie permette a una sessione di restare attiva anche se la coda SYN è stata saturata da un attacco.
+Quando viene attivata una sessione con un three-way handshake, il server risponde a al pacchetto SYN del client con un SYN-ACK più il valore del cookie.
+Quando il client risponde con un ACK, il server decodifica il cookie per verificare la validità della richiesta e, solo allora, alloca le risorse necessarie per stabilire la connessione.
+
+\noindent Questo approccio consente al server di gestire un numero elevato di richieste SYN senza esaurire le risorse, poiché non mantiene stato per le connessioni incomplete.
 
 
 \chapter{Attacchi}

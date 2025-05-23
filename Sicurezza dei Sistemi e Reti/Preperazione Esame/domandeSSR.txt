@@ -48,12 +48,12 @@ a) Discutere le problematiche di autenticazione su Web e in dettaglio uno schema
 *******************
 *** TCP attacks ***
 *******************
-a) Descrivere in dettaglio in cosa consiste il ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure
+a) Descrivere in dettaglio in cosa consiste il ARP spoofing attack, quali sono le possibili conseguenze ed eventuali contromisure FATTO
 ---
 a) Elencare e descrivere alcuni attacchi a TCP 
 b) Descrivere in dettaglio in cosa consiste il TCP reset attack, facendo un esempio nel caso l'attaccante abbia intercettato l'ultimo pacchetto tra client e server qui raffigurato
----
-a) Si descriva in dettaglio il funzionamento di un attacco SYN flood 
+--- FATTO
+a) Si descriva in dettaglio il funzionamento di un attacco SYN flood
 b) Si descrivano alcune contromisure 
 c) Si descriva l'utilizzo dei Syn Cookie
 ---
