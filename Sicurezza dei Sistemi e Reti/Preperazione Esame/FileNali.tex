@@ -702,6 +702,64 @@ IDLE, guardare 7.1
 
 
 \chapter{Firewall e NIDS}
+\section{Descrivere come funziona un firewall stateful}
+Uno stateful firewall analizza ogni pacchetto che lo attraversa singolarmente e in più tiene traccia delle connessioni e del loro stato, grazie 
+a una tabella dello stato interna al firewall nella quale ogni connessione TCP e UDP viene rappresentata da due coppie formate da indirizzo IP e porta, 
+una per ciascun endpoint della comunicazione.
+
+\section{Cosa è un IDS? Descrivere una possibile integrazione tra IDS e firewall}
+L'IDS è un sistema di monitoraggio utilizzato per identificare accessi non autorizzati a pc o reti locali. Ha tecniche e metodi realizzati per rilevare pacchetti 
+dati sospetti a livello di rete, trasporto e applicazione. 
+
+\noindent Un IDS non può bloccare o filtrare i pacchetti in ingresso ed in uscita, né può modificarli.
+
+\noindent Una possibile integrazione tra firewall e IDS:
+
+\noindent Un IPS (intrusion prevention system) invece è comunemente considerato l’accoppiata tra firewall e IDS, cioè si parla di una tecnologia, che cerca di bloccare attacchi alle fasi 
+preliminari, facendo analisi predittiva sulla base di informazioni precedenti ricevute.
+
+\section{Cosa si intende per stateful firewall? Che differenza esiste con un firewall stateless?}
+\subsection{Stateful firewall}
+I firewall stateful sono in grado di riconoscere le connessioni e le trasmissioni e, ispezionandole, sono in grado di decidere cosa fare in base a molteplici parametri.
+\noindent Del traffico mantengono un log storico, con i dettagli relativi (indirizzi di origine e destinazione, numeri di porta, sequenze TCP, ecc.) e con questo sono in gradi di 
+aprire o chiudere dinamicamente delle porte per consentire o bloccare il traffico.
+
+\subsection{Stateless firewall}
+I firewall stateless invece bloccano o consentono una comunicazione soltanto sulla base delle caratteristiche di quest'ultima. 
+
+\noindent In pratica i pacchetti sono bloccati in base a delle regole statiche (ad es. l'indirizzo sorgente o quello di destinazione, la porta utilizzata) e di ciò non viene tenuta memoria.
+
+\section{Come funziona un IDS e quali sono le differenze rispetto ad un IPS}
+\subsection{IDS}
+Un IDS (intrusion detection system) è un sistema di monitoraggio utilizzato per identificare dei comportamenti malevoli, rilevando attacchi o altre violazioni alla sicurezza e 
+fornendo informazioni su intrusioni avvenute, grazie all'uso di sonde posizionate sugli host, oppure in certi punti della rete.
+
+\noindent Ci sono due tipologie di IDS: \textbf{passivi}, che fanno un controllo di firme, e \textbf{attivi}, che apprendono i dati del sistema e “imparano” dall’analisi statistica del funzionamento del sistema.
+
+\subsection{IPS}
+Un IPS (intrusion prevention system) invece è comunemente considerato l'accoppiata tra firewall e IDS, cioè si parla di una tecnologia, 
+che cerca di bloccare attacchi alle fasi preliminari, facendo analisi predittiva sulla base di informazioni precedenti ricevute.
+
+\section{Illustrare le differenze tra application-level gateway e circuit-level gateway}
+\subsection{application-level gateway}
+Un application-level gateway è composto da una serie di proxy che esaminano il contenuto dei pacchetti a \textbf{livello applicativo}, fornendo un livello di sicurezza maggiore (es. contro attacchi di buffer overflow): 
+posizionandosi tra client e server, impedisce la comunicazione diretta e può offrire anche servizi di load balancing del traffico.
+
+\subsection{circuit-level gateway}
+Un circuit-level gateway invece è un circuito tra client e server a  \textbf{livello di trasporto} (non applicativo), perciò non fa inspection del traffico che gli passa, ma si occupa solo di tenere traccia delle comunicazioni sul circuito. 
+Anch'esso spezza il modello client\textbackslash server, facendo da tramite, ma a tutti gli effetti non fornisce sicurezza lato applicativo.
+
+\section{Cosa si intende per deep packet inspection? Come si applicano a scenari di encrypted threats?}
+\subsection{deep packet inspection}
+La deep packet inspection è una tecnica di packet filtering che va a controllare il contenuto dei pacchetti in transito in maniera approfondita, per identificare codice malevolo, grazie al'intelligenza artificiale che sfrutta l'analisi
+di determinati pattern in memoria. In sostanza è un tipo di filtraggio applicativo e il suo funzionamento può essere paragonato a quello di un antivirus.
+
+\subsection{scenari di encrypted threats}
+In scenari di encrypted threats, la deep packet inspection può mettersi in mezzo a una comunicazione criptata in quanto è possibile abilitare la possibilità di far verificare un traffico cryptato per poter capire se è presente un man in the 
+middle che sta sfruttando un canale cifrato per attaccare una rete: la procedura consiste nell'inviare i pacchetti su un server in cloud che fa analisi e mi dice se la connessione è “pulita” o se sono presenti minacce. 
+
+\section{proxy firewall}
+
 
 
 

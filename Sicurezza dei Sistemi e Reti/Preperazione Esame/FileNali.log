@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  23 MAY 2025 15:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  23 MAY 2025 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,24 +555,24 @@ LaTeX Warning: No \author given.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.41 ...behaviour detection}{14}{subsection.3.3.3}
+l.41 ...behaviour detection}{15}{subsection.3.3.3}
                                                   % [1
 
-])
+]
+
+[2])
 \tf@toc=\write5
 \openout5 = `FileNali.toc'.
 
 
 
-[2]
+[3]
 Capitolo 1.
 
 
-[3
+[4
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-[4]
 
 [5]
 
@@ -581,26 +581,28 @@ Capitolo 1.
 [7]
 
 [8]
+
+[9]
 Capitolo 2.
-
-
-[9
-
-]
-Capitolo 3.
 
 
 [10
 
 ]
+Capitolo 3.
 
-[11]
+
+[11
+
+]
 
 [12]
 
 [13]
 
 [14]
+
+[15]
 Capitolo 4.
 
 Overfull \hbox (14.12961pt too wide) in paragraph at lines 428--428
@@ -609,23 +611,23 @@ Overfull \hbox (14.12961pt too wide) in paragraph at lines 428--428
 
 
 
-[15
+[16
 
 ]
 Capitolo 5.
 
 
-[16
+[17
 
 ]
-<images/codiceHijacking.png, id=410, 407.02063pt x 120.95187pt>
+<images/codiceHijacking.png, id=494, 407.02063pt x 120.95187pt>
 File: images/codiceHijacking.png Graphic file (type png)
 <use images/codiceHijacking.png>
 Package pdftex.def Info: images/codiceHijacking.png  used on input line 479.
 (pdftex.def)             Requested size: 345.0pt x 102.52534pt.
 
 
-[17 <./images/codiceHijacking.png>]
+[18 <./images/codiceHijacking.png>]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 511.
  (c:/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -634,80 +636,84 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 511.
 
 
-[18]
-<images/scansione.png, id=423, 184.18813pt x 97.86563pt>
+[19]
+<images/scansione.png, id=506, 184.18813pt x 97.86563pt>
 File: images/scansione.png Graphic file (type png)
 <use images/scansione.png>
 Package pdftex.def Info: images/scansione.png  used on input line 569.
 (pdftex.def)             Requested size: 345.0pt x 183.3094pt.
 
 
-[19]
-<images/reset.png, id=428, 456.70625pt x 105.89563pt>
+[20]
+<images/reset.png, id=511, 456.70625pt x 105.89563pt>
 File: images/reset.png Graphic file (type png)
 <use images/reset.png>
 Package pdftex.def Info: images/reset.png  used on input line 594.
 (pdftex.def)             Requested size: 345.0pt x 79.99675pt.
 
 
-[20 <./images/scansione.png>]
+[21 <./images/scansione.png>]
 
-[21 <./images/reset.png>]
+[22 <./images/reset.png>]
 Capitolo 6.
-
-
-[22
-
-]
-Capitolo 7.
 
 
 [23
 
 ]
+Capitolo 7.
 
-[24]
+
+[24
+
+]
+
+[25]
 Capitolo 8.
-<images/scanEvidenziato.png, id=454, 381.425pt x 151.06438pt>
+<images/scanEvidenziato.png, id=537, 381.425pt x 151.06438pt>
 File: images/scanEvidenziato.png Graphic file (type png)
 <use images/scanEvidenziato.png>
 Package pdftex.def Info: images/scanEvidenziato.png  used on input line 658.
 (pdftex.def)             Requested size: 345.0pt x 136.64357pt.
 
 
-[25
+[26
 
  <./images/scanEvidenziato.png>]
 
-[26]
-
 [27]
+
+[28]
 Capitolo 9.
 
 
-[28
+[29
 
-] (./FileNali.aux)
+]
+
+[30]
+
+[31] (./FileNali.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `FileNali.out' has not changed.
-(rerunfilecheck)             Checksum: 5D39FA10C90333C5D5F0C32F566576D7;15306.
+(rerunfilecheck)             Checksum: 4B746723DE549AA26B7CDD1911BDDFBA;19361.
  ) 
 Here is how much of TeX's memory you used:
- 22603 strings out of 473362
- 412976 string characters out of 5725050
- 808385 words of memory out of 5000000
- 45257 multiletter control sequences out of 15000+600000
+ 22636 strings out of 473362
+ 413437 string characters out of 5725050
+ 808400 words of memory out of 5000000
+ 45272 multiletter control sequences out of 15000+600000
  566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,1430b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on FileNali.pdf (29 pages, 411793 bytes).
+Output written on FileNali.pdf (32 pages, 420251 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 473 compressed objects within 5 object streams
- 103 named destinations out of 1000 (max. 500000)
- 513 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 630 PDF objects out of 1000 (max. 8388607)
+ 566 compressed objects within 6 object streams
+ 121 named destinations out of 1000 (max. 500000)
+ 633 words of extra memory for PDF output out of 10000 (max. 10000000)
 
