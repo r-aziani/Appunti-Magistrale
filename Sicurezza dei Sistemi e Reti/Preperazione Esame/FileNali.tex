@@ -599,19 +599,104 @@ Un attaccante, intercettando o osservando una connessione TCP, invia un pacchett
 
 
 
-
-
 \chapter{Attacchi}
 
 
 
 
 \chapter{Scanning}
+\section{tecnica IDLE scan illustrando con un esempio le risposte in caso di porta chiusa, aperta o filtrata}
+Nel IDLE SCAN abbiamo un \textbf{attaccante}, una \textbf{vittima} e uno \textbf{zombie}, vale a dire un terzo attore che verrà sfruttato dall'attaccante per colpire la vittima indirettamente
+e capire se una determinata porta è aperta, oppure no, utilizzando pacchetti TCP.
+
+\noindent L'attaccante manda un pacchetto TCP di tipo SYN\textbackslash ACK allo zombie. Quest'ultimo non si aspetta questo messaggio, perciò risponde con un pacchetto RST e un IPID, vale a dire l'identificativo del frame (es. 12345).
+
+\noindent L'attaccante invia un pacchetto SYN (con la porta da scansionare) spoofato, utilizzando come mittente l'indirizzo IP dello zombie, alla vittima: in questo caso, se la porta è in ascolto, la vittima risponderà 
+allo zombie con un pacchetto SYN\textbackslash ACK e un IPID incrementato (es. 12346), a cui lo zombie risponde con un pacchetto RST, in quanto non si aspetta questo genere di comunicazione.
+
+\noindent Infine l'attaccante invia un altro pacchetto di SYN\textbackslash ACK allo zombie, che gli risponde con un RST e un IPID incrementato (es. 12347): confrontando i valori di IPID, l'attaccante capisce che la porta è aperta.
+
+\noindent Se invece la porta fosse chiusa o filtrata, il valore di IPID sarebbe stato incrementato una sola volta, in quanto l'attaccante risponderebbe rispettivamente con un RST o non risponderebbe affatto al pacchetto 
+spoofato inviato dall'attaccante, fingendosi lo zombie. 
+Con il secondo SYN\textbackslash ACK allo zombie, ci sarebbe quindi solo questo incremento di IPID.
+
+\subsection{contesto della porta 23 della vittima sapendo che l'ultima risposta ottenuta dallo zombie ha id=42380}
+L'attaccante vuole capire lo stato della porta TCP 23 del target/vittima usando lo zombie
+quindi invia un pacchetto SYN al target con IP sorgente spoofato dello zombie.
+
+\section{ Descrivere sinteticamente i metodi di scansione stealth}
+\noindent I meccanismi di scansione stealth sono \textbf{tecniche usate per identificare porte aperte su un sistema senza suscitare allarmi o lasciare tracce evidenti nei log}, cercando di evitare il rilevamento da parte di firewall, IDS (Intrusion Detection System) o sistemi di logging.
+
+\noindent Principi base delle scansioni stealth:
+\begin{itemize}
+    \item \textbf{Evitare handshake completo:} invece di completare la connessione TCP (che è facilmente loggabile), si inviano pacchetti parziali o particolari per sondare la risposta
+    \item \textbf{Minimizzare i pacchetti inviati:} meno traffico significa meno probabilità di essere rilevati
+    \item \textbf{Usare pacchetti con flag TCP “particolari”:} per confondere filtri e firewall
+\end{itemize}
+
+\section{Differenza tra le tecniche scan stealth e non stealth}
+\noindent \textbf{\textit{NON} STEALTH:}
+\begin{itemize}
+    \item Completano il normale handshake TCP a 3 vie, aprendo una connessione completa con la porta target
+    \item Vengono registrate nei log del sistema target 
+    \item Facili da rilevare e bloccare, poichè utilizzano pacchetti standard senza trucchi particolari
+\end{itemize}
+
+\noindent \textbf{STEALTH:}
+\begin{itemize}
+    \item Non completano il handshake TCP o inviano pacchetti con flag TCP particolari per evitare di stabilire una connessione completa
+    \item Invia meno pacchetti o pacchetti meno “comuni” per confondere firewall e filtri
+    \item Ridotta probabilità di essere registrati nei log o rilevati da IDS
+\end{itemize}
 
 
 
 \chapter{Network Scanning}
+\section{Riconoscere e commentare il tipo di scan evidenziato in figura e aggiungere il caso mancante (porta chiusa/aperta)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/scanEvidenziato.png}
+\end{figure}
 
+\noindent Il tipo di attacco è conosciuto come IDLE scan in cui viene utilizzato 
+un client intermedio come \textbf{zombie} per rendere complicata risalire all'attaccante. 
+La sorgente manda un SYN/ACK allo zombie e aspetta un RST come risposta con IPID. 
+Successivamente l'attaccante invia un pacchetto SYN spoofato con IP sorgente del client zombie verso 
+la vittima con la porta che vuole scansionare. 
+Se la porta è aperta, la vittima risponderà con un SYN/ACK allo zombie. Quest'ultimo non si aspetta un SYN/ACK e risponde 
+perciò con un messaggio RST e con un IPID+1. 
+
+\noindent Infine l'attaccante manda nuovamente un pacchetto SYN/ACK al client zombie e, se IPID è aumentato, allora la porta è aperta.
+
+\noindent Manca il caso in cui la porta è chiusa o filtrata: in questo caso IPID non viene aumentato; quindi, l'attaccante capisce che non c'è traffico su quella specifica porta.
+
+\section{Descrivere quali sono le condizioni rilevabili di una porta come risultato di uno scanning e cosa indicano ad un potenziale avversario e 
+per ciascuno stato fare un esempio di un tipo di scan che produca quel tipo di stato}
+
+\subsection{condizioni rilevabili}
+Una porta può essere:
+\begin{itemize}
+    \item \textbf{aperta:} quindi un servizio è in ascolto su di essa
+    \item \textbf{chiusa:} quindi non c'è nulla in ascolto su di essa 
+    \item \textbf{filtrata:} cioè che è presente un firewall che permette l'accesso solo a determinate sorgenti (in quest'ultimo caso non è possibile definire se è aperta o chiusa)
+\end{itemize} 
+
+\subsection{esempio per tipo:}
+Per testare lo stato di una porta, si può fare un TCP SYN scan che consiste nell'inviare un pacchetto TCP di tipo SYN + la porta da scansionare,
+simulando un three-way handshake: se la porta restituisce un pacchetto SYN/ACK, 
+allora la porta è aperta, mentre se restituisco un RST, allora è chiusa. Nel caso di una porta filtrata, il comportamento dipende dal firewall.
+
+
+\section{obiettivi, natura degli approcci al port scanning}
+Guardare 5.4
+\subsection{risultati possibili per la scansione di una porta}
+Una porta può essere in tre stati: aperta, nel senso che c'è un protocollo in ascolto su di essa, pronto per far partire una comunicazione TCP.
+chiusa, vale a dire che non è presente nessun protocollo in ascolto e infine filtrata, cioè che è presente un firewall che lascia passare del traffico
+su una porta solo a determinate condizioni, come per esempio la provenienza da determinati indirizzi.
+In quest'ultimo caso non è possibile capire se un determinato protocollo è in ascolto o meno.
+
+\subsection{Descrivere in dettaglio un approccio allo scan}
+IDLE, guardare 7.1
 
 
 
