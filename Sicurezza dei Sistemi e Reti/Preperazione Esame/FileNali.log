@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  23 MAY 2025 10:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  23 MAY 2025 12:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -618,30 +618,63 @@ Capitolo 5.
 [16
 
 ]
+<images/codiceHijacking.png, id=349, 407.02063pt x 120.95187pt>
+File: images/codiceHijacking.png Graphic file (type png)
+<use images/codiceHijacking.png>
+Package pdftex.def Info: images/codiceHijacking.png  used on input line 479.
+(pdftex.def)             Requested size: 345.0pt x 102.52534pt.
 
-[17]
+
+[17 <./images/codiceHijacking.png>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 511.
+ (c:/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 511.
+
+
+[18]
+<images/scansione.png, id=361, 184.18813pt x 97.86563pt>
+File: images/scansione.png Graphic file (type png)
+<use images/scansione.png>
+Package pdftex.def Info: images/scansione.png  used on input line 569.
+(pdftex.def)             Requested size: 345.0pt x 183.3094pt.
+
+
+[19]
+<images/reset.png, id=366, 456.70625pt x 105.89563pt>
+File: images/reset.png Graphic file (type png)
+<use images/reset.png>
+Package pdftex.def Info: images/reset.png  used on input line 594.
+(pdftex.def)             Requested size: 345.0pt x 79.99675pt.
+
+
+[20 <./images/scansione.png>]
+
+[21 <./images/reset.png>]
 Capitolo 6.
 
 
-[18
+[22
 
 ]
 Capitolo 7.
 
 
-[19
+[23
 
 ]
 Capitolo 8.
 
 
-[20
+[24
 
 ]
 Capitolo 9.
 
 
-[21
+[25
 
 ] (./FileNali.aux)
  ***********
@@ -649,21 +682,21 @@ LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `FileNali.out' has not changed.
-(rerunfilecheck)             Checksum: 3007DA55C5832D7C2266C088CC769597;8364.
+(rerunfilecheck)             Checksum: 16F8D5486C49ED1488733403B2A8309A;10167.
  ) 
 Here is how much of TeX's memory you used:
- 22505 strings out of 473362
- 411135 string characters out of 5725050
- 805751 words of memory out of 5000000
- 45190 multiletter control sequences out of 15000+600000
+ 22571 strings out of 473362
+ 412411 string characters out of 5725050
+ 805758 words of memory out of 5000000
+ 45239 multiletter control sequences out of 15000+600000
  566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,890b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,7n,93p,890b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on FileNali.pdf (22 pages, 158347 bytes).
+Output written on FileNali.pdf (26 pages, 299676 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
- 75 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 454 PDF objects out of 1000 (max. 8388607)
+ 400 compressed objects within 4 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 420 words of extra memory for PDF output out of 10000 (max. 10000000)
 

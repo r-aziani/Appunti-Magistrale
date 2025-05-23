@@ -472,6 +472,134 @@ Quando il client risponde con un ACK, il server decodifica il cookie per verific
 
 \noindent Questo approccio consente al server di gestire un numero elevato di richieste SYN senza esaurire le risorse, poiché non mantiene stato per le connessioni incomplete.
 
+\section{TCP hijacking attack + codice}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/codiceHijacking.png}
+\end{figure}
+
+\subsection{TCP hijacking attack ed esempio rispetto al codice}
+Il TCP hijacking è un attacco in cui un attaccante prende il controllo di una sessione TCP già avviata tra due host, senza che uno dei due se ne accorga. L'attaccante invia pacchetti spoofati, fingendosi uno degli
+endpoint, sfruttando il fatto che TCP si basa su numeri di sequenza e acknowledgment per mantenere la connessione affidabile. L'obiettivo dell'attacco è quello di iniettare dati o comandi nella sessione o interromperla/alterarla.
+
+\noindent Nel nostro scenario ipotetico, l'attaccante intercetta un pacchetto proveniente dal server verso il client in una connessione Telnet. Anche se non conosce l'intero stato della sessione, dal pacchetto osservato può dedurre quale sarà il prossimo numero di sequenza atteso dal server.
+A quel punto, può costruire un pacchetto contraffatto, con IP e porta del client e valori di sequenza e acknowledgment coerenti, inserendo nel payload un comando arbitrario da far eseguire alla shell remota. 
+Poiché Telnet è un protocollo testuale non cifrato, il comando viene trasmesso come semplice testo ASCII e, se ben formato, sarà interpretato come input valido dal server.
+
+\subsection{Codice}
+Questo pacchetto è parte di una connessione Telnet attiva dal server verso il client. L'attaccante ha intercettato questo pacchetto e ora conosce i seguenti dati cruciali:
+\begin{itemize}
+    \item IP e porte della connessione
+    \item Numero di sequenza attuale del server (2737422009)
+    \item Numero di acknowledgment del server, che indica quale byte si aspetta dal client (718532383).
+    \item La dimensione del payload (24 byte) che è la differenza tra sequence number e next sequence number.
+\end{itemize}
+
+\begin{center}
+    \textbf{Qual è il pacchetto da da spedire per portare a termine l'attacco?}
+\end{center}
+\noindent L'attaccante vuole fingere di essere il client che invia dati al server. Per fare ciò, costruisce un pacchetto spoofato con questi campi:
+\begin{itemize}
+    \item \textbf{Src IP:} 10.0.2.68 (IP del client)
+    \item \textbf{Dst IP:} 10.0.2.69 (IP del server)
+    \item \textbf{Src Port:} 45634 (porta del client)
+    \item \textbf{Dst Port:} 23 (porta standard per Telnet)
+    \item \textbf{Sequence number:} 718532383 (numero di sequenza che il server si aspetta dal client)
+    \item \textbf{Acknowledgment number:} 2737422033
+    \item \textbf{Flags:} PSH,ACK
+    \item \textbf{Payload:} ls\textbackslash n (per esempio)
+\end{itemize}
+
+\noindent \textit{Note dell'autrice:} 
+\begin{itemize}
+    \item per trovare Src e Dst IP letteralmente inverti i due indirizzi iniziali
+    \item Src Port è quella che prima stava sotto la dicitura Destination Port
+    \item il Sequence number è quello che prima si chimava acknowledgment number 
+    \item l'acknowledgment number è il nezt sequence number
+    \item le flags le copiamo
+    \item Importante excursus sul payload: è necessario se vogliamo far eseguire al server un comando, va bene qualsiasi comando Telnet io ho mesos questo a caso
+\end{itemize}
+
+\begin{center}
+    \textbf{Nel caso si voglia far eseguire un comando al server, come si può procedere?}
+\end{center}
+\noindent La risposta a sto point è chiaramente il payload!!
+
+\noindent Per far sì che il server esegua un comando (es. in una sessione Telnet), è necessario
+inserire nel pacchetto un payload contenente il comando, terminato da un carattere di newline (\textbackslash n), come avverrebbe nella digitazione manuale da parte dell'utente,
+ricordandosi che il comando deve avere senso nel contesto della shell remota.
+
+
+
+
+
+
+\section{Approcci alla scansione + FTP bounce scan}
+\noindent La scansione all'interno di una rete viene eseguita per recuperare informazioni su determinati host o server, l'obiettivo principale è ottenere informazioni
+sulle porta utilizzate (TCP/UDP), ciò quali porte sono aperte e in ascolto su determinati nodi, oltre che determinare quale sistema operativo è presente e se esistono sistemi di filtraggio o 
+firewall in una determinata rete.
+
+\noindent Lo scanning può essere attivo o passivo:
+\begin{itemize}
+    \item \textbf{Attivo:} si immette traffico nella rete per recuperare informazioni
+    \item \textbf{Passivo:} si fa sniffing senza intervenire attivamente
+\end{itemize}
+
+\noindent Diversi approcci:
+\begin{itemize}
+    \item \textbf{Verticale:} host che fa scanning di più target 
+    \item \textbf{Orizzontale:} molti host fanno scanning sullo stesso target 
+    \item \textbf{Ibrido:} mix tra i due
+\end{itemize}
+
+\noindent Infine il target può essere \textbf{singolo}, cioè una macchina, o \textbf{multiplo}, cioè anche una porzione di rete (se non tutta).
+
+\subsection{FTP bounce scan}
+L'attacco FTP bounce scan è una tecnica utilizzata per eseguire una scansione delle porte (port scanning) di un host di destinazione indirettamente tramite un server FTP, è una delle tecniche più note di port scanning attraverso terze parti.
+
+\noindent L'attaccante invia al server FTP un comando PORT utilizzando l'indirizzo IP della vittima tramite un pacchetto spoofato.
+Se la porta del server è chiusa, quest'ultima risponderà con un pacchetto RST alla richiesta proveniente dal server FTP, mentre verrà eseguita una three-way handshake nel caso in cui la porta fosse aperta.
+
+
+\subsection{Commentare praticamente il risultato della seguente scansione}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/scansione.png}
+\end{figure}
+L'attaccante, utilizzando il comando port, riesce a capire che la porta 8080 è aperta (e quindi in ascolto), dato che viene indicato che è possibile trasferire file, mentre la porta 7777 non lo è, dato che non è stata stabilita nessuna connessione.
+
+\subsection{Due tecniche di scansione con TCP}
+\subsubsection{TCP Connect Scan}
+Questa tecnica tenta di stabilire una connessione TCP completa con la porta target inviando un pacchetto SYN, aspettando la risposta SYN-ACK e completando il handshake con un ACK.
+
+\noindent Se la connessione si stabilisce, la porta è aperta.
+Se riceve un pacchetto RST (reset), la porta è chiusa.
+
+\noindent E' semplice da implementare ma rumoroso.
+
+\subsubsection{SYN Scan (Half-open scan)}
+Invia un pacchetto SYN al target, ma non completa il handshake. Se riceve un SYN-ACK, invia un pacchetto RST per interrompere la connessione prima che venga completata.
+
+\noindent Se riceve un SYN-ACK la porta è aperta, se riceve RST allora è chiusa.
+
+\noindent Più furiva della connect scan poichè non comporta connessione, ma può essere rilevata da firewall 
+
+
+\section{Reset Attack}
+Un TCP Reset Attack (attacco di reset TCP) è una tecnica usata per interrompere una connessione TCP esistente inviando un pacchetto TCP con il flag RST (Reset) attivo.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/reset.png}
+\end{figure}
+\noindent In una normale comunicazione TCP, il flag RST viene usato per indicare che qualcosa è andato storto e che la connessione deve essere chiusa immediatamente.
+Un attaccante, intercettando o osservando una connessione TCP, invia un pacchetto con flag RST a uno o entrambi i lati della connessione.
+
+
+
+
+
 
 \chapter{Attacchi}
 

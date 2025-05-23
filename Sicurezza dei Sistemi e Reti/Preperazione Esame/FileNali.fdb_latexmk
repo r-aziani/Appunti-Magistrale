@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1747987400.89186 "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Sicurezza dei Sistemi e Reti/Preperazione Esame/FileNali.tex" "FileNali.pdf" "FileNali" 1747987402.20826 0
-  "FileNali.aux" 1747987402 7281 73fba93ecd9b7594e30093e026e5212f "pdflatex"
-  "FileNali.out" 1747987402 8364 3007da55c5832d7c2266c088cc769597 "pdflatex"
-  "FileNali.tex" 1747987398 25408 ea4d6c1eb12c186f02ea26ec86896d5b ""
-  "FileNali.toc" 1747987402 4386 c530dd6e124c84a4a2bfacf65c3eacc4 "pdflatex"
-  "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Sicurezza dei Sistemi e Reti/Preperazione Esame/FileNali.tex" 1747987398 25408 ea4d6c1eb12c186f02ea26ec86896d5b ""
+["pdflatex"] 1747994922.64406 "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Sicurezza dei Sistemi e Reti/Preperazione Esame/FileNali.tex" "FileNali.pdf" "FileNali" 1747994924.34302 0
+  "FileNali.aux" 1747994923 8616 9c022c2c0f28b1838bc27f912354abe3 "pdflatex"
+  "FileNali.out" 1747994924 10167 16f8d5486c49ed1488733403b2a8309a "pdflatex"
+  "FileNali.tex" 1747994920 32884 db30a0311f7d1b5dfefa4d1fc7424800 ""
+  "FileNali.toc" 1747994924 5311 bb85f7bb777f592fca59c5dfd9738148 "pdflatex"
+  "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Sicurezza dei Sistemi e Reti/Preperazione Esame/FileNali.tex" 1747994920 32884 db30a0311f7d1b5dfefa4d1fc7424800 ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1731680233 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1731681227 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1731680834 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -116,6 +116,7 @@
   "c:/texlive/2024/texmf-dist/tex/latex/atveryend/atveryend.sty" 1731679462 1695 be6b4d13b33db697fd3fd30b24716c1a ""
   "c:/texlive/2024/texmf-dist/tex/latex/base/atbegshi-ltx.sty" 1731682130 2963 e56732bbb93cfa019febfd0c7eaf1d21 ""
   "c:/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1731682130 2378 05fbb4f2b23b0e142f8cd3440c37e72e ""
+  "c:/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd" 1731682130 2469 74341109f164f230581718c66211c718 ""
   "c:/texlive/2024/texmf-dist/tex/latex/base/report.cls" 1731682130 23203 d4d3e9412db54ba08346475bccbac1f7 ""
   "c:/texlive/2024/texmf-dist/tex/latex/base/size10.clo" 1731682130 8448 bd43e47d84d3704b7eabd59a92e43bf1 ""
   "c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1731680958 13886 d1306dcf79a944f6988e688c1785f9ce ""
@@ -161,6 +162,9 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1731686946 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1731686682 3342992 0cf1a2dc9c7be7e0df8677991548346b ""
   "c:/texlive/2024/texmf.cnf" 1731686515 713 e69b156964470283e0530f5060668171 ""
+  "images/codiceHijacking.png" 1747990979 58602 ae375054f605fc0242e7e95bb1159833 ""
+  "images/reset.png" 1747994514 41231 b44a4a62ea2eb3d25ad8c55b5a28d076 ""
+  "images/scansione.png" 1747994304 72389 d14e1dce7ab2d69351ac845d584f165a ""
   (generated)
   "FileNali.aux"
   "FileNali.log"
