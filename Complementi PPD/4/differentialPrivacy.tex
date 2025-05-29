@@ -30,8 +30,8 @@
 \tableofcontents
 \newpage
 
-\chapter{Introduzione}
-Introdotto nel 2006, ha avuto un'esplosione di utilizzo di questo concetto negli ultimi anni.
+
+\noindent Introdotto nel 2006, ha avuto un'esplosione di utilizzo di questo concetto negli ultimi anni.
 
 \noindent L'idea è la protezione dei dati, i dati sono privati e non basta che siano semplicemente anonimizzati.
 
@@ -43,7 +43,7 @@ Introdotto nel 2006, ha avuto un'esplosione di utilizzo di questo concetto negli
     \end{figure}
 
 \begin{enumerate}
-    \item \textbf{D:}Bisogna avere molti dati (se no D.P. non funziona bene), pensiamo di avere tanti record e ciascun record riguarda dati sensibili di individui.
+    \item \textbf{D:} Bisogna avere molti dati (se no D.P. non funziona bene), pensiamo di avere tanti record e ciascun record riguarda dati sensibili di individui.
     \item \textbf{Curator/Sanitizer:} è una parte fidata che può accedere in chiaro ai dati
     \item \textbf{R:} Dati rilasciati 
 \end{enumerate}
@@ -58,26 +58,26 @@ Cosa vuol dire mantenere la privacy degli individui?
 \noindent \textbf{Problema:} Se gli individui non hanno impatto sui risultati allora i risultati non avrebbero utilità, serve equilibrio.
 
 \section{Differential privacy– Intuition}
-Quello che cerca di fare D.P. è che la presenza o l'assenza di un utente no cambi di molto il rischio di compromettere la sua privacy.
+Quello che cerca di fare D.P. è che la presenza o l'assenza di un utente non cambi di molto il rischio di compromettere la sua privacy.
 Chiaramente il rilascio di informazioni impone che un minimo cambiamento ci sia, però sia minimale.
-Le inferenze che io posso fare su un individuo da un rilascio R deve essere lo stesos che io posso inferire utilizzando i dati di qualunque altro utente.
+Le inferenze che io posso fare su un individuo da un rilascio R deve essere lo stesso che io posso inferire utilizzando i dati di qualunque altro utente.
 \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\linewidth]{images/intuition.png}
     \end{figure}
 
-\noindent Più questo $\epsilon$ è piccolo più la differenza dei dati con, o senza, un determinato individuo è minimale.
-Tutto questo viene fatto inniettando del rumore all'interno della mia computazione. Deve essere rumore casuale (NON deterministico)
+\noindent Più questo $\epsilon$ è piccolo più la differenza dei dati con o senza un determinato individuo è minimale.
+Tutto questo viene fatto iniettando del rumore all'interno della mia computazione. Deve essere rumore casuale (NON deterministico)
 
 \noindent Due principali complicazioni:
 \begin{itemize}
-    \item Capire quanto rumore inniettare
+    \item Capire quanto rumore iniettare
     \item Il risultato della computazione eseguita più volte sullo stesso dataset è sempre diverso, poichè ogni volta viene inserita una quantità di rumore diversa (se viene eseguita la stessa computazione troppe volte si riesce a inferire il valore corretto, da questo nasce
     la necessità del \textbf{Privacy budget})
 \end{itemize}
 
 \section{Definizione formale di Differential Privacy}
-\textit{Siano due databse $D$ e $D'$ due databse vicini (differiscono per un singolo individuo)}
+\textit{Siano due database $D$ e $D'$ due databse vicini (differiscono per un singolo individuo)}
 \begin{center}
    \textit{Un algoritmo A soddisfa $\epsilon$-Differential Privacy se per tutte le coppie di database vicini
    $D$, $D'$, e per tutti  gli outputs $o$:}
@@ -87,8 +87,8 @@ Tutto questo viene fatto inniettando del rumore all'interno della mia computazio
 
 \textbf{N.B.:} 
 \begin{itemize}
-    \item La definizione si riferisce a una computazione (non ai dati) quindi un algoritmo A, ed è l'algoritmo che soddisfa la definizone di D.P.
-    \item D.P. è soddisfatta quando qualcunque sia la coppia di dataset $D$ e $D'$ che vengono considerati (basta che siano vicini), quando applicando
+    \item La definizione si riferisce a una computazione (non ai dati) quindi ad un algoritmo A, ed è l'algoritmo che soddisfa la definizone di D.P.
+    \item D.P. è soddisfatta quando qualunque sia la coppia di dataset $D$ e $D'$ che vengono considerati (basta che siano vicini), quando applicando
     una determinata computazione su $D$, la probabilità di ottenere un determinato risultato più o meno deve essere uguale alla probabilità di ottenere lo stesso
     risultato applicando lo stesso algoritmo su $D'$
     \item La variazione dipende da questo parametro $\epsilon$
@@ -120,9 +120,7 @@ l'idea è quella di calibrare la quantità di rumore sulla base di qual è l'inf
     \item \textbf{Sensitività globale:} caratterizza l'entità dell'influenza di un singolo individuo (caso peggiore), e quindi la quantità di rumore che si deve aggiungere 
 \end{itemize}
 
-\begin{itemize}
-    \item  Esempio 1(scelto anche esempio di conteggio poichè sono quelli che funzionano meglio con questa tecnica):
-\end{itemize}
+\subsubsection{Esempio 1(scelto anche esempio di conteggio poichè sono quelli che funzionano meglio con questa tecnica)}
 
 \noindent Supponiamo di avere questi dati da un ospedale e di voler calcolare quanti pazienti hanno l'influenza:
 \begin{figure}[H]
@@ -139,11 +137,9 @@ Togliendo uno qualunque dei 50 pazienti ne avremmo 49, quindi noi vogliamo masch
 
 \noindent Per qualsiasi tipo di conteggio la global sensitivity sarà sempre 1. 
 
-\begin{itemize}
-    \item Esempio 2 (sulla stessa tabella):
-\end{itemize}
-\noindent Supponiamo di voler calcolare la somma di quanto di un determinato mediciale è stato somministrato ai pazienti
-In questo caso la global sensitivity, togliendo i dati di un individuo, raramente sarà pari a 1. Inoltre noi vogliamo stimare il \textbf{caso peggiore}
+\subsubsection{Esempio 2 (sulla stessa tabella)}
+
+\noindent Supponiamo di voler calcolare la somma di quanto di un determinato mediciale è stato somministrato ai pazienti. In questo caso la global sensitivity, togliendo i dati di un individuo, raramente sarà pari a 1. Inoltre noi vogliamo stimare il \textbf{caso peggiore}.
 
 \noindent Avendo solo i pazienti visibili in tabella, il paziente numero 4 sarebbe il caso peggiore ossia la G.S. sarebbe pari a 3.7, ma nel caso in cui venisse aggiunto un nuovo paziente
 più impattante la G.S. cambierebbe quindi non è semplice capire come calcolare la G.S, questo esempio per capire che già per una computazione piccola è difficile stimarla.
@@ -197,7 +193,7 @@ entrambi rispettano la proprietà di Differential Privacy}
 \begin{center}
     \textit{"Differential privacy si compone bene con se stessa" ma cosa vuol dire?}
 \end{center}
-\noindent \textbf{Composizione parallela:}sequenza di $m$ computazioni su sottoinsiemi disgiunti di una base di dati $D$
+\noindent \textbf{Composizione parallela:} sequenza di $m$ computazioni su sottoinsiemi disgiunti di una base di dati $D$
 
 \begin{figure}[H]
         \centering
@@ -214,7 +210,7 @@ entrambi rispettano la proprietà di Differential Privacy}
 Tutte le informazioni sono protette con un $\epsilon$ che è il massimo degli $\epsilon$ che è stato usato}
 
 \section{Composizione sequenziale}
-\noindent \textbf{Composizione sequanziale:}sequenza di $m$ computazioni su database $D$ con risultati sovrapposti
+\noindent \textbf{Composizione sequanziale:} sequenza di $m$ computazioni su database $D$ con risultati sovrapposti
 
 \begin{figure}[H]
         \centering
@@ -223,9 +219,10 @@ Tutte le informazioni sono protette con un $\epsilon$ che è il massimo degli $\
 
 \noindent La differenza rispetto al caso precedente è che riguardano individui non disgiunti, più computazioni sugli stessi individui.
 
-\noindent \textbf{In questo caso rilasciare tutte queste informazioni equivale a rilasciarne uns contenente tutte le informazioni, e $\epsilon$ verrà calcolato sommando i singoli $\epsilon$
+\noindent \textbf{In questo caso rilasciare tutte queste informazioni equivale a rilasciarne una contenente tutte le informazioni, e $\epsilon$ verrà calcolato sommando i singoli $\epsilon$
 utilizzati nelle singole computazioni}
 
+\newpage
 \section{Perchè $\epsilon$ è chiamato "Privacy budget"?}
 $\epsilon$ rappresenta il livello di protezione che voglio mantenere, ogni volta che eseguo una computazione, è come se utilizzassi parte di questo budget.
 
@@ -269,7 +266,7 @@ se e solo se per ogni input $x$,$x'$ e output $o$ di $A$:}
 
 \chapter{Differential Privacy nel mondo reale}
 \section{Privacy in practice}
-Differential privacy basta sul \textbf{Lancio della moneta} molto usata in Google e Apple.
+Differential privacy basata sul \textbf{Lancio della moneta} molto usata in Google e Apple.
 
 \noindent si basa sull'idea di lanciare la moneta
 \begin{figure}[H]

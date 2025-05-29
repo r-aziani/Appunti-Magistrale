@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1742285615.06228 "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/1/ac.tex" "ac.pdf" "ac" 1742285619.19617 0
+["pdflatex"] 1748508269.77823 "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/1/ac.tex" "ac.pdf" "ac" 1748508273.88748 0
   "/etc/texmf/web2c/texmf.cnf" 1728322784.33835 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/1/ac.tex" 1742285590.78145 40508 f990b4a5a14bc608dd4f9434a9ea9aa8 ""
+  "/home/azi/Desktop/Appunti-Magistrale/Complementi PPD/1/ac.tex" 1748508269.34742 40543 188957119c42f9fbc8211c5296dc0c84 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -162,10 +162,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1728322823.34097 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1728323065 8214324 2349c6972aa9b130e072b9fdd090f5e2 ""
-  "ac.aux" 1742285619.01073 8706 ed33fa27422c8c3ef46a2631deb2ad0a "pdflatex"
-  "ac.out" 1742285619.01373 8583 90b241ebbaa587206544978ab4673667 "pdflatex"
-  "ac.tex" 1742285590.78145 40508 f990b4a5a14bc608dd4f9434a9ea9aa8 ""
-  "ac.toc" 1742285619.01373 5384 8db362d387fb19ef511e907d23752b0d "pdflatex"
+  "ac.aux" 1748508273.6917 8706 ed33fa27422c8c3ef46a2631deb2ad0a "pdflatex"
+  "ac.out" 1748508273.6947 8583 90b241ebbaa587206544978ab4673667 "pdflatex"
+  "ac.tex" 1748508269.34742 40543 188957119c42f9fbc8211c5296dc0c84 ""
+  "ac.toc" 1748508273.6957 5384 8db362d387fb19ef511e907d23752b0d "pdflatex"
   "images/acl.png" 1740740705.30477 18836 50e8836f0bc9c532e22bd9e780212334 ""
   "images/auth-table.png" 1740740554.60162 41261 d0be3a7162625fd83ce0168a3700c2ba ""
   "images/blp-ss.png" 1741247999.64719 57521 86af42fd01201a0cf074bf9d8b296970 ""

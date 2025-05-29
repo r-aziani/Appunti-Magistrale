@@ -38,7 +38,7 @@
 utenti autenticati e, sulla base di \textit{regole di accesso} (definite all'interno)
 del sistema, determina se l'accesso sia garantito o negato.
 
-Si occupa solamente dell'\textbf{accesso diretto}. Si basa su due concetti:
+\noindent Si occupa solamente dell'\textbf{accesso diretto}. Si basa su due concetti:
 \begin{itemize}
     \item \textbf{Autenticazione/Identificazione} dell'utente che fa la richiesta
     \begin{itemize}
@@ -110,7 +110,7 @@ Una volta definito il modello, posso verificare due aspetti:
 
 \noindent Definite \textit{discrezionale} perché gli utenti che sono proprietari 
 dei dati possono amministrarli come vogliono, \textit{a loro discrezione}; tipicamente, 
-non ho un unico amminstratore, ma ci sono più amministratori proprietari delle risorse: è 
+non ho un unico amministratore, ma ci sono più amministratori proprietari delle risorse: è 
 in mano a qualcuno stabilire chi può accedere o meno alle risorse (non è escluso avere 
 un unico amministratore).
 
@@ -161,7 +161,7 @@ lo stato del sistema, dove:
 
 \section{Trasferimento dei privilegi}
 Il proprietario dei dati può dare il privilegio anche ad altri utenti.
-Può rappresentato in modo formale in due modi differenti:
+Può essere rappresentato in modo formale in due modi differenti:
 \begin{itemize}
     \item \textbf{Copy flag (*):} il soggetto trasferisce il privilegio ad altri; mantiene il privilegio
     \begin{figure}[H]
@@ -222,7 +222,7 @@ horses}, ovvero accessi indiretti.
 \noindent L'idea è che vengono lasciate delle \textit{operazioni nascoste} in una applicazione per 
 poter fare delle operazioni che normalmente non si avrebbe l'autorizzazioni di fare.
 
-$\rightarrow$ è un accesso indiretto; è il processo che Jane sta eseguendo a chiedere l'accesso ai file
+$\rightarrow$ è un accesso indiretto; è \textit{il processo che Jane sta eseguendo} a chiedere l'accesso ai file
 
 
 
@@ -234,7 +234,7 @@ che serve per bloccare i \textit{trojan horses}:
     \item \textbf{Soggetto:} processo nel sistema; opera per conto dell'utente; \textbf{non sono fidati} 
 \end{itemize}
 
-\noindent La politica più comune sono quelle \textbf{multilivello}: ogni soggetto e 
+\noindent La politica più comune è quella \textbf{multilivello}: ogni soggetto e 
 oggetto sono classificate con una etichetta. Si differenziano in politiche che si focalizzano su:
 \begin{itemize}
     \item confidenzialità (Bell La Padula)
@@ -266,7 +266,7 @@ Ogni soggetto ed oggetto è associato ad una coppia di elementi:
     $(L_1, C_1) \geq (L_2, C_2) \Leftrightarrow L_1 \geq L_2 \land C_1 \supseteq C_2$
 \end{center}
 
-Questa relazione soddisfa una serie di proprietà che, in matematica, permette di formare 
+\noindent Questa relazione soddisfa una serie di proprietà che, in matematica, permette di formare 
 un \textit{reticolo} (quando combinata fra tutte le classi); nel nostro caso parliamo 
 di \textbf{reticolo di classificazione}.
 
@@ -396,7 +396,7 @@ canali normalmente non usati per la comunicazione, ma che possono essere usati p
 comunicare in modo illegittimo delle informazioni.
 
 \noindent \textbf{Ogni risorsa del sistema condivisa tra processi di livelli diversi 
-può essere usata per creare un canale nascosto}. I canali nascosto possono essere di tipo:
+può essere usata per creare un canale nascosto}. I canali nascosti possono essere di tipo:
 \begin{itemize}
     \item \textbf{Storage:} ad esempio un soggetto top-secret crea un file se vuole comunicare 
     qualcosa, altrimenti no; un soggetto secret prova a scrivere tale file: dall'esistenza o meno 
