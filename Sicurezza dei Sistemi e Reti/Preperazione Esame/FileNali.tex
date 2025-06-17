@@ -239,11 +239,22 @@ in base al \textit{security descriptor} dell'oggetto.
 
 
 \chapter{Set-UID}
+\section{}
 
 
+\section{Ogni processo Unix process è associato con un real user ID (RUID) e un effective user ID (EUID). Spiegare la logica ed importanza del setuid.}
+Il \textbf{Real User ID} (RUID) , determina l'utente che ha avviato il processo, mentre l’Effective User ID (EUID), determina le autorizzazioni per il processo.
+Il \textbf{set user ID} (setuid) ha due funzioni principali: permette a un utente di eseguire un file o un processo con i privilegi dell’utente proprietario, oltre che ai suoi. Inoltre consente a programmi privilegiati di accedere a risorse generalmente non accessibili.
+Questo può comportare problematiche su sistemi, se impostato in maniera non corretta, oltre che essere una vulnerabilità che può essere sfruttata per attacchi.
 
+\section{Charlie ha trovato nel computer un file con i seguenti permessi:}
+\noindent \textbf{-rwsrwxrwx 1 root root 186 Oct 31 23:42 mioexe}
 
+\noindent \textbf{Spiegare la pericolosità del file mioexe.}
 
+\noindent Il file mioexe ha tutti i permessi settati, quindi sia l'owner, che il gruppo a cui appartiene, che tutti gli altri utenti, possono leggere, scrivere ed eseguire il file.
+Inoltre è impostato il SUID, un permesso speciale che indica al kernel di lanciare i comandi con i privilegi dell'owner del file: in questo caso l'owner è root, 
+perciò si potrebbe modificare il file mioexe per lanciare dei comandi dannosi come root.
 
 \chapter{Malware}
 \noindent Una definizione informale per malware potrebbe essere quella di \textit{programma malevolo},
