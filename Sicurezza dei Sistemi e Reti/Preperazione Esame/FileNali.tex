@@ -239,15 +239,30 @@ in base al \textit{security descriptor} dell'oggetto.
 
 
 \chapter{Set-UID}
-\section{}
+\section{Si definisca il funzionamento e possibili implicazioni per la sicurezza}
+Il meccanismo SETUID in Unix/Linux consente a un programma di essere eseguito con i privilegi dell’utente proprietario del file, anziché con quelli dell’utente che lo esegue. È spesso usato per permettere a utenti comuni di svolgere operazioni che richiedono privilegi elevati, come accedere a risorse di sistema. Tuttavia, questa funzionalità ha implicazioni di sicurezza importanti: se un programma con SETUID è vulnerabile o mal scritto, può essere sfruttato per ottenere privilegi superiori, fino a diventare root. Per questo motivo, l’uso di SETUID è considerato delicato e va limitato a programmi essenziali e attentamente controllati.
 
+\subsection{Esempio di utilizzo di SETUID}
+Un esempio semplice di utilizzo del SetUID è un programma che consente a un utente normale di scrivere in un file accessibile solo a root. Normalmente, un utente senza privilegi non potrebbe modificare file di sistema, ma se il programma è di proprietà di root e ha il bit SetUID attivo, verrà eseguito con i privilegi di root anche se l’utente che lo lancia non li possiede. In questo modo, il programma può svolgere un’operazione riservata, come scrivere in un file protetto, 
+senza dover dare all’utente l’accesso diretto a quei privilegi. Questo dimostra come SetUID possa essere usato per concedere temporaneamente diritti elevati in modo controllato.
 
 \section{Ogni processo Unix process è associato con un real user ID (RUID) e un effective user ID (EUID). Spiegare la logica ed importanza del setuid.}
-Il \textbf{Real User ID} (RUID) , determina l'utente che ha avviato il processo, mentre l’Effective User ID (EUID), determina le autorizzazioni per il processo.
-Il \textbf{set user ID} (setuid) ha due funzioni principali: permette a un utente di eseguire un file o un processo con i privilegi dell’utente proprietario, oltre che ai suoi. Inoltre consente a programmi privilegiati di accedere a risorse generalmente non accessibili.
+Il \textbf{Real User ID} (RUID) , determina l'utente che ha avviato il processo, mentre l'Effective User ID (EUID), determina le autorizzazioni per il processo.
+Il \textbf{set user ID} (setuid) ha due funzioni principali: permette a un utente di eseguire un file o un processo con i privilegi dell'utente proprietario, oltre che ai suoi. Inoltre consente a programmi privilegiati di accedere a risorse generalmente non accessibili.
 Questo può comportare problematiche su sistemi, se impostato in maniera non corretta, oltre che essere una vulnerabilità che può essere sfruttata per attacchi.
+\subsection{Quale tra RUID e EUID viene utilizzato dal sistema operativo per determinare se un processo
+ha il diritto di accedere a una risorsa o meno?}
+Il sistema operativo verifica il EUID per determinare se un processo ha diritto ad accedere a una risorsa o meno.
+\subsection{Nella maggior parte delle versioni di Unix, la famiglia di funzioni setuid consente di impostare l'EUID di un processo sul suo RUID. Riesci a pensare a un motivo per farlo in un processo in esecuzione come root (EUID=0)?}
+Quando si deve andare a modificare la password di un utente, si deve andare a modificare un file chiamato shadow: questo file è modificabile solo dall'utente root, perciò lanciando il comando passwd, il processo setta come ID quello di root, per permettere la modifica di questo file.
 
-\section{Charlie ha trovato nel computer un file con i seguenti permessi:}
+
+
+
+\section{Esercizi con codice}
+
+
+\subsection{Charlie ha trovato nel computer un file con i seguenti permessi:}
 \noindent \textbf{-rwsrwxrwx 1 root root 186 Oct 31 23:42 mioexe}
 
 \noindent \textbf{Spiegare la pericolosità del file mioexe.}
@@ -255,6 +270,49 @@ Questo può comportare problematiche su sistemi, se impostato in maniera non cor
 \noindent Il file mioexe ha tutti i permessi settati, quindi sia l'owner, che il gruppo a cui appartiene, che tutti gli altri utenti, possono leggere, scrivere ed eseguire il file.
 Inoltre è impostato il SUID, un permesso speciale che indica al kernel di lanciare i comandi con i privilegi dell'owner del file: in questo caso l'owner è root, 
 perciò si potrebbe modificare il file mioexe per lanciare dei comandi dannosi come root.
+
+\subsection{Come esempio si consideri /usr/bin/passwd : spiegare se tale comando ha il setuid settato e
+perché}
+Il comando `/usr/bin/passwd` ha il bit SETUID attivo perché permette a un utente normale di modificare la propria password, operazione che richiede l'accesso al file di sistema `/etc/shadow`, il quale è leggibile e scrivibile solo dall'utente root.
+
+\noindent Grazie al SETUID, quando un utente esegue `passwd`, il processo assume temporaneamente i privilegi di root (proprietario del file), così da poter aggiornare in sicurezza la password nel file protetto. Questo è un classico esempio di uso legittimo e necessario del SETUID, ma proprio per la sua sensibilità, il comando `passwd` deve essere scritto in modo estremamente sicuro per evitare rischi di escalation dei privilegi.
+
+\subsection{Commentare l'esecuzione di passwd dal seguente processo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/psswd.png}
+\end{figure}
+Lanciando il comando passwd, si indica al sistema operativo di voler cambiare la propria password utente. Questa password è presente in un file chiamato shadow, che è modificabile solo dall'utente root.
+Lanciando quindi il comando passwd, si va a indicare che il EUID è uguale a 0, cioè l'utente root, fornendo temporaneamente all'utente con RUID 500 di modificare la propria password.
+
+\subsection{Si consideri l'utente bob che appartiene solo al gruppo users. Per ognuno dei seguenti file, discutere se bob è capace di eseguire il file, se no spiegare perchè, se sì evidenziare i bit EUID e RUID dei corrispondenti processi.}
+\subsubsection{-rwsr--r-- 1 root root 213 Oct 12 11:10 file1.bin}
+Si, può eseguire il file perché, anche se potrebbe solo leggerlo, è impostato il setUID (s) e quindi può eseguirlo con i privilegi del owner (cioè di root). RUID è quello di Bob, mentre EUID è 0, cioè quello di root
+
+\subsubsection{-rwxr-xr-- 1 alice users 134 Oct 12 11:11 file2.bin}
+Si, può eseguire il file perché fa parte del gruppo del owner del file (alice, che è del gruppo users). Non potrà però scriverci, in quanto non dispone del privilegio (r-x). In questo caso RUID e EUID corrispondono e sono quelli di Bob.
+
+\subsubsection{-rwsr-xr-- 1 alice users 186 Oct 12 11:12 file3.bin}
+Si, può eseguire il file perché fa parte del gruppo del owner del file (alice, che è del gruppo users). A differenza di sopra però, è impostato il SETUID, perciò Bob lancia il comando come se fosse Alice. RUID = Bob, EUID = Alice
+
+\subsubsection{-r--rwxr-- 1 bob users 113 Oct 12 11:13 file4.bin}
+No, in questo caso l’owner del file è Bob, ma non ha i privilegi per poter eseguire il file. I membri del suo gruppo, users invece possono leggere, scrivere ed eseguirlo, il che è un po’ un controsenso.
+
+\subsection{Si immagini che un attaccante trovi una shell di root su un terminale e digiti le seguenti righe di codice, quali conseguenze potrebbe avere?}
+\subsubsection{\% cp $/$ bin$/$sh $/$tmp$/$ break-acct }
+\subsubsection{\% chmod 4755 $/$tmp$/$break-acct}
+L’attaccante, con il primo comando, copia la shell in una cartella temporanea. Con il secondo comando assegna il bit SetUID (il 4 davanti a 755), in modo che, quando un altro utente esegue quel file, la shell venga avviata con i privilegi del proprietario, cioè root. Questo permette a qualsiasi utente di ottenere una shell come root, con la possibilità di fare gravi danni al sistema.
+La parte 755 dei permessi indica che il proprietario può leggere, scrivere ed eseguire il file, mentre gli altri utenti (gruppo e altri) possono leggere ed eseguire (ma non scrivere).
+
+\subsection{Descrivere cosa succede al file readme.txt dopo l’esecuzione dei comandi visualizzati in figura}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/readme.png}
+\end{figure}
+Il file readme.txt ha subito un comando per modificarne i permessi (chmod) e gli è stato settato il bit “set Group ID” (2), mentre l’owner può leggere, scrivere ed eseguire il file (7). I membri del suo gruppo e tutti gli altri utenti invece possono solo eseguire il file.
+Readme.txt diventa quindi un file eseguibile chi lo esegue, lo fa come se fosse nel gruppo del owner, piuttosto che nel suo.
+
+
 
 \chapter{Malware}
 \noindent Una definizione informale per malware potrebbe essere quella di \textit{programma malevolo},
