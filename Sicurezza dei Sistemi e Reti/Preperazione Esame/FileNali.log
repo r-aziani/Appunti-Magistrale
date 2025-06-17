@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  17 JUN 2025 14:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  17 JUN 2025 14:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -602,7 +602,7 @@ Overfull \hbox (4.54306pt too wide) in paragraph at lines 280--280
 []\OT1/cmr/bx/n/12 Commentare l'e-se-cu-zio-ne di pas-swd dal se-guen-te pro-
  []
 
-<images/psswd.png, id=630, 214.30063pt x 89.33376pt>
+<images/psswd.png, id=635, 214.30063pt x 89.33376pt>
 File: images/psswd.png Graphic file (type png)
 <use images/psswd.png>
 Package pdftex.def Info: images/psswd.png  used on input line 283.
@@ -610,7 +610,7 @@ Package pdftex.def Info: images/psswd.png  used on input line 283.
 
 
 [13 <./images/psswd.png>]
-<images/readme.png, id=637, 196.23312pt x 88.83188pt>
+<images/readme.png, id=642, 196.23312pt x 88.83188pt>
 File: images/readme.png Graphic file (type png)
 <use images/readme.png>
 Package pdftex.def Info: images/readme.png  used on input line 310.
@@ -618,128 +618,134 @@ Package pdftex.def Info: images/readme.png  used on input line 310.
 
 
 [14]
+<images/setuidsettembre2024.png, id=654, 515.42563pt x 355.3275pt>
+File: images/setuidsettembre2024.png Graphic file (type png)
+<use images/setuidsettembre2024.png>
+Package pdftex.def Info: images/setuidsettembre2024.png  used on input line 318.
+(pdftex.def)             Requested size: 276.00105pt x 190.27454pt.
 
-[15 <./images/readme.png>]
+
+[15 <./images/readme.png> <./images/setuidsettembre2024.png>]
+
+[16]
 Capitolo 3.
 
 
-[16
+[17
 
 ]
-
-[17]
 
 [18]
 
 [19]
 
 [20]
+
+[21]
 Capitolo 4.
 
-Overfull \hbox (14.12961pt too wide) in paragraph at lines 497--497
+Overfull \hbox (14.12961pt too wide) in paragraph at lines 510--510
 \OT1/cmr/bx/n/14.4 ne su Web e in det-ta-glio uno sche-ma challenge-
  []
 
 
 
-[21
+[22
 
 ]
 Capitolo 5.
 
 
-[22
+[23
 
 ]
-<images/codiceHijacking.png, id=690, 407.02063pt x 120.95187pt>
+<images/codiceHijacking.png, id=701, 407.02063pt x 120.95187pt>
 File: images/codiceHijacking.png Graphic file (type png)
 <use images/codiceHijacking.png>
-Package pdftex.def Info: images/codiceHijacking.png  used on input line 548.
+Package pdftex.def Info: images/codiceHijacking.png  used on input line 561.
 (pdftex.def)             Requested size: 345.0pt x 102.52534pt.
 
 
-[23 <./images/codiceHijacking.png>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 580.
+[24 <./images/codiceHijacking.png>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 593.
  (c:/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 580.
-
-
-[24]
-<images/scansione.png, id=701, 184.18813pt x 97.86563pt>
-File: images/scansione.png Graphic file (type png)
-<use images/scansione.png>
-Package pdftex.def Info: images/scansione.png  used on input line 638.
-(pdftex.def)             Requested size: 345.0pt x 183.3094pt.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 593.
 
 
 [25]
-<images/reset.png, id=706, 456.70625pt x 105.89563pt>
+<images/scansione.png, id=713, 184.18813pt x 97.86563pt>
+File: images/scansione.png Graphic file (type png)
+<use images/scansione.png>
+Package pdftex.def Info: images/scansione.png  used on input line 651.
+(pdftex.def)             Requested size: 345.0pt x 183.3094pt.
+
+
+[26]
+<images/reset.png, id=718, 456.70625pt x 105.89563pt>
 File: images/reset.png Graphic file (type png)
 <use images/reset.png>
-Package pdftex.def Info: images/reset.png  used on input line 663.
+Package pdftex.def Info: images/reset.png  used on input line 676.
 (pdftex.def)             Requested size: 345.0pt x 79.99675pt.
 
 
-[26 <./images/scansione.png>]
+[27 <./images/scansione.png>]
 
-[27 <./images/reset.png>]
+[28 <./images/reset.png>]
 Capitolo 6.
 
-Overfull \hbox (8.35626pt too wide) in paragraph at lines 673--673
+Overfull \hbox (8.35626pt too wide) in paragraph at lines 686--686
 []\OT1/cmr/bx/n/14.4 Problematiche di si-cu-rez-za del pro-to-col-lo SSL 
  []
 
 
-Overfull \hbox (16.00632pt too wide) in paragraph at lines 684--684
+Overfull \hbox (16.00632pt too wide) in paragraph at lines 697--697
 []\OT1/cmr/bx/n/14.4 Problematiche di si-cu-rez-za del pro-to-col-lo ARP
  []
 
 
 
-[28
+[29
 
 ]
-Overfull \hbox (6.17279pt too wide) in paragraph at lines 695--695
+Overfull \hbox (6.17279pt too wide) in paragraph at lines 708--708
 \OT1/cmr/bx/n/14.4 MAC floo-ding, con-se-guen-ze ed even-tua-li con-
  []
 
 
 
-[29]
+[30]
 Capitolo 7.
 
 
-[30
+[31
 
 ]
 
-[31]
+[32]
 Capitolo 8.
-<images/scanEvidenziato.png, id=737, 381.425pt x 151.06438pt>
+<images/scanEvidenziato.png, id=748, 381.425pt x 151.06438pt>
 File: images/scanEvidenziato.png Graphic file (type png)
 <use images/scanEvidenziato.png>
-Package pdftex.def Info: images/scanEvidenziato.png  used on input line 755.
+Package pdftex.def Info: images/scanEvidenziato.png  used on input line 768.
 (pdftex.def)             Requested size: 345.0pt x 136.64357pt.
 
 
-[32
+[33
 
  <./images/scanEvidenziato.png>]
 
-[33]
-
 [34]
+
+[35]
 Capitolo 9.
 
 
-[35
+[36
 
 ]
-
-[36]
 
 [37]
 
@@ -751,27 +757,29 @@ Capitolo 9.
 
 [41]
 
-[42] (./FileNali.aux)
+[42]
+
+[43] (./FileNali.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `FileNali.out' has not changed.
-(rerunfilecheck)             Checksum: DCE19F0A69AFE3122FBE2B57E7D45A44;34706.
+(rerunfilecheck)             Checksum: 1F3695CD0F92C8B2EA24A606BF089916;34862.
  ) 
 Here is how much of TeX's memory you used:
- 22724 strings out of 473362
- 414712 string characters out of 5725050
+ 22734 strings out of 473362
+ 415011 string characters out of 5725050
  811542 words of memory out of 5000000
- 45313 multiletter control sequences out of 15000+600000
+ 45321 multiletter control sequences out of 15000+600000
  566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,1481b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on FileNali.pdf (43 pages, 550016 bytes).
+Output written on FileNali.pdf (44 pages, 594076 bytes).
 PDF statistics:
- 868 PDF objects out of 1000 (max. 8388607)
- 785 compressed objects within 8 object streams
- 168 named destinations out of 1000 (max. 500000)
- 859 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 880 PDF objects out of 1000 (max. 8388607)
+ 794 compressed objects within 8 object streams
+ 170 named destinations out of 1000 (max. 500000)
+ 872 words of extra memory for PDF output out of 10000 (max. 10000000)
 

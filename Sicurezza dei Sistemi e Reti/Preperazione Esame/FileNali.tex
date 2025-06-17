@@ -312,6 +312,19 @@ La parte 755 dei permessi indica che il proprietario può leggere, scrivere ed e
 Il file readme.txt ha subito un comando per modificarne i permessi (chmod) e gli è stato settato il bit “set Group ID” (2), mentre l’owner può leggere, scrivere ed eseguire il file (7). I membri del suo gruppo e tutti gli altri utenti invece possono solo eseguire il file.
 Readme.txt diventa quindi un file eseguibile chi lo esegue, lo fa come se fosse nel gruppo del owner, piuttosto che nel suo.
 
+\subsection{Programma catall.c}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/setuidsettembre2024.png}
+\end{figure}
+In questo caso, il programma `catall` viene compilato e poi configurato con il bit SetUID, rendendolo eseguibile con i privilegi di root. Il programma prende un argomento da linea di comando e lo concatena al comando `/bin/cat`, eseguendolo tramite `system()`. Il problema di sicurezza nasce dal fatto che l’argomento dell’utente viene inserito direttamente in una stringa di comando senza alcun controllo.
+
+Quando '’attaccante lancia `./catall "aa;/bin/sh"`, il programma esegue effettivamente due comandi: prima `cat aa`, poi, a causa del punto e virgola, viene eseguito anche `/bin/sh`. Poiché il programma ha i privilegi di root, anche la shell ottenuta è con privilegi di root. Questo permette all’attaccante di accedere a una shell di amministratore, aggirando le normali restrizioni. L'istruzione `whoami` confermerà infatti che l’utente è root. Questo è un esempio di escalation dei privilegi dovuto a un uso non sicuro della funzione `system()` in un programma SetUID.
+
+
+
+
+
 
 
 \chapter{Malware}
