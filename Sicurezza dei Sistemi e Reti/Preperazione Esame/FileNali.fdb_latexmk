@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1750164762.54178 "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Sicurezza dei Sistemi e Reti/Preperazione Esame/FileNali.tex" "FileNali.pdf" "FileNali" 1750164764.26506 0
-  "FileNali.aux" 1750164764 19556 7c1410786b3268cfc54689c8fd1d83c7 "pdflatex"
-  "FileNali.out" 1750164764 34862 1f3695cd0f92c8b2ea24a606bf089916 "pdflatex"
-  "FileNali.tex" 1750164759 67005 470cfd56c255419bab434ef020617819 ""
-  "FileNali.toc" 1750164764 13668 4e4f15b47388e3566eb29c7c27fcffdc "pdflatex"
-  "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Sicurezza dei Sistemi e Reti/Preperazione Esame/FileNali.tex" 1750164759 67005 470cfd56c255419bab434ef020617819 ""
+["pdflatex"] 1750165718.12978 "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Sicurezza dei Sistemi e Reti/Preperazione Esame/FileNali.tex" "FileNali.pdf" "FileNali" 1750165720.16338 0
+  "FileNali.aux" 1750165719 19917 e054ef869559f78be4d1b593175c1015 "pdflatex"
+  "FileNali.out" 1750165719 35739 430962cf59bcb8a23915ef02a1f2c033 "pdflatex"
+  "FileNali.tex" 1750165717 68523 84feb3930cbb294a69f8bcd922b6de5d ""
+  "FileNali.toc" 1750165719 13947 2fe0caf2401c69b706e9323a4c5d768c "pdflatex"
+  "c:/Users/annal/OneDrive/Desktop/magi/repo/Appunti-Magistrale/Sicurezza dei Sistemi e Reti/Preperazione Esame/FileNali.tex" 1750165717 68523 84feb3930cbb294a69f8bcd922b6de5d ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1731680233 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1731681227 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1731680834 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -163,7 +163,9 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1731686946 5521136 47e49b84c41d5ab3414c7e2d0ef6eb2b ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1731686682 3342992 0cf1a2dc9c7be7e0df8677991548346b ""
   "c:/texlive/2024/texmf.cnf" 1731686515 713 e69b156964470283e0530f5060668171 ""
+  "images/bobfile.png" 1750165359 88190 0ba130341b24a6ba000afe6c11028fe8 ""
   "images/codiceHijacking.png" 1747990979 58602 ae375054f605fc0242e7e95bb1159833 ""
+  "images/esedomanda.png" 1750164927 81062 9eeb6ce99d6d65425bd47159db73824d ""
   "images/psswd.png" 1750163298 26835 49fe62eda1964581bd180ebb1f67431e ""
   "images/readme.png" 1750164087 91569 470dad13347a4fe2f4c9c3e23b347e40 ""
   "images/reset.png" 1747994514 41231 b44a4a62ea2eb3d25ad8c55b5a28d076 ""

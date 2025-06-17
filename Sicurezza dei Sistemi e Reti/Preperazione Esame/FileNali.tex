@@ -322,8 +322,30 @@ In questo caso, il programma `catall` viene compilato e poi configurato con il b
 Quando '’attaccante lancia `./catall "aa;/bin/sh"`, il programma esegue effettivamente due comandi: prima `cat aa`, poi, a causa del punto e virgola, viene eseguito anche `/bin/sh`. Poiché il programma ha i privilegi di root, anche la shell ottenuta è con privilegi di root. Questo permette all’attaccante di accedere a una shell di amministratore, aggirando le normali restrizioni. L'istruzione `whoami` confermerà infatti che l’utente è root. Questo è un esempio di escalation dei privilegi dovuto a un uso non sicuro della funzione `system()` in un programma SetUID.
 
 
+\subsection{Si consideri il codice seguente uid.c compilato dallo user con id 1000, Completare sotto indicando ID corretto al posto di ???}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/esedomanda.png}
+\end{figure}
 
+\begin{itemize}
+    \item \textbf{riga 6:} 1000
+    \item \textbf{riga 7:} 1000
+    \item \textbf{riga 12:} 1000
+    \item \textbf{riga 13:} 0 (viene impostato il bit SetUID con chmod 4755, ossia privilegi del proprietario)
+\end{itemize}
 
+\subsection{File di bob}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{images/bobfile.png}
+\end{figure}
+
+\begin{enumerate}
+    \item Bob può usare vedi dati perché è il proprietario di entrambi i file e ha permessi di lettura sul file dati. Anche se vedi ha permessi 550 (r-x per owner e gruppo), Bob può eseguirlo e il programma, eseguito con i suoi privilegi, può aprire e leggere dati senza problemi.
+    \item Charlie, pur essendo nel gruppo 5000, non può leggere dati con vedi dati perché il file dati ha permessi 604, quindi il gruppo non ha permessi di lettura. Il programma vedi verrà eseguito con i privilegi di Charlie (poiché il bit SetUID non è attivo), quindi l’accesso al file sarà negato.
+    \item Se Bob imposta il bit SetUID su vedi, il programma eseguito da Charlie gira con l’effective UID di Bob (1700). In questo modo, anche se Charlie non ha permessi diretti su dati, può leggerlo perché il processo ha i privilegi di Bob. 
+\end{enumerate}
 
 
 
