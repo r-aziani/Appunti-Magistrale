@@ -601,6 +601,34 @@ Un attaccante, intercettando o osservando una connessione TCP, invia un pacchett
 
 \chapter{Attacchi}
 
+\section{Problematiche di sicurezza del protocollo SSL}
+\begin{itemize}
+    \item le preferenze sulla cipher suite non sono autenticate
+    \item usa MD5 come algoritmo hash per il MAC
+    \item tutti i messaggi dell'hashake non sono protetti
+    \item non supporta catene di certificazione o algoritmi non-RSA
+\end{itemize}
+
+E' inoltre possibile fare un man in the middle facendo ARP cache poisoning e posizionandosi come nodo
+tra client e server in maniera trasparente
+
+\section{Problematiche di sicurezza del protocollo ARP e discutere ARP poisoning attack}
+Il protocollo di ARP va ad associare un indirizzo fisico (MAC) a un indirizzo logico (IP): ogni client possiede una tabella cache in cui vengono inserite le associazioni già attive. Se non fosse presente una voce, viene fatta una richiesta in broadcast a tutti i nodi della LAN (viene chiesto chi ha un certo indirizzo IP).
+Questo genere di messaggi è vulnerabile ad attacchi di spoofing, in quanto si può impersonare un certo nodo della LAN e quindi eventualmente ricevere traffico che non sarebbe destinato all’attaccante.
+La tipologia di attacco definita ARP poisoning attack consiste nel generare diversi pacchetti spoofati di ARP request in modo da andare a riempire la tabella di cache di informazioni non corrette causando disservizi e rallentamenti nelle comunicazioni tra le LAN.
+
+\section{Descrivere in cosa consiste IP spoofing, e in dettaglio attacchi che fanno uso di tale tecnica}
+IP spoofing è un tipo di attacco in cui un client malevolo modifica un pacchetto andando a inserire un altro indirizzo IP rispetto al prossimo, con lo scopo di ingannare una vittima e fare il man in the middle in una determinata comunicazione, oppure può causare un denial of service in quanto può interrompere una connessione o causarne il congestionamento inviando diversi pacchetti.
+Esistono due tipologie di IP spoofing: non-blind, cioè che l'attaccante cerca di farsi passare per un host della sua stessa LAN, oppure blind, in cui l’attaccante cerca di farsi passare per un host di una qualsiasi sottorete.
+Gli attacchi di IP spoofing cercano di predirre il sequence number del target per potersi frapporre nella comunicazione, dopodiché si cerca di instaurare un three-way handshake per recuperare informazioni o anche solo causare denial of service.
+
+
+\section{Descrivere in dettaglio l'attacco basato su MAC flooding, conseguenze ed eventuali contromisure}
+Il MAC flooding consiste nell'inviare ad uno switch pacchetti appositamente costruiti per riempire la CAM table (Content Addressable Memory table) che permette di associare rapidamente un indirizzo MAC alla porta a cui è collegato il terminale dello switch, con indirizzi MAC fittizi.
+Le tabelle degli indirizzi MAC hanno dimensioni limitate. Il MAC flooding fa uso di questa limitazione per inviare allo switch un intero gruppo di indirizzi MAC di origine falsa in modo da saturare la tabella. Quando la tabella è satura lo switch entra in fail-open mode e si comporta come un hub, ovvero invia i pacchetti che riceve a tutti i nodi collegati allo switch
+
+
+
 
 
 
@@ -736,9 +764,20 @@ fornendo informazioni su intrusioni avvenute, grazie all'uso di sonde posizionat
 
 \noindent Ci sono due tipologie di IDS: \textbf{passivi}, che fanno un controllo di firme, e \textbf{attivi}, che apprendono i dati del sistema e “imparano” dall’analisi statistica del funzionamento del sistema.
 
+\subsubsection{Dove andrebbe posizionato in una rete che abbia due accessi ad internet}
+In una rete con due accessi a Internet, un IDS va posizionato in un punto centrale dove converga il traffico proveniente da entrambi i collegamenti, dietro i firewall o router, ma prima della rete interna. Questo permette di monitorare tutto il traffico in ingresso e in uscita, indipendentemente da quale connessione venga utilizzata, garantendo una rilevazione completa delle eventuali minacce. 
+Se i due accessi sono completamente separati, può essere necessario un IDS per ciascun punto o un sistema che raccolga il traffico da entrambi.
+
 \subsection{IPS}
 Un IPS (intrusion prevention system) invece è comunemente considerato l'accoppiata tra firewall e IDS, cioè si parla di una tecnologia, 
 che cerca di bloccare attacchi alle fasi preliminari, facendo analisi predittiva sulla base di informazioni precedenti ricevute.
+
+\noindent La prevenzione è intesa come velocizzazione dei tempi di risposta una volta che si individua un attacco, il problema relativo a questa tecnologia è il rischio di prendere decisioni sbagliate in automatico o il bloccaggio
+di traffico innocuo
+\subsubsection{Come realizzare IPS:}
+Per esempio si può utilizzare Snort (IDS open source molto noto e testato) in modalità inline mode, che riceve i pacchetti direttamente da iptable e collabora per bloccare il
+traffico sospetto.
+
 
 \section{Illustrare le differenze tra application-level gateway e circuit-level gateway}
 \subsection{application-level gateway}
@@ -749,18 +788,134 @@ posizionandosi tra client e server, impedisce la comunicazione diretta e può of
 Un circuit-level gateway invece è un circuito tra client e server a  \textbf{livello di trasporto} (non applicativo), perciò non fa inspection del traffico che gli passa, ma si occupa solo di tenere traccia delle comunicazioni sul circuito. 
 Anch'esso spezza il modello client\textbackslash server, facendo da tramite, ma a tutti gli effetti non fornisce sicurezza lato applicativo.
 
-\section{Cosa si intende per deep packet inspection? Come si applicano a scenari di encrypted threats?}
+\section{Cosa si intende per deep packet inspection? Quali funzioni addizionali si trovano
+generalmente integrate in firewall di questo tipo? Come si applicano a scenari di encrypted threats?}
 \subsection{deep packet inspection}
-La deep packet inspection è una tecnica di packet filtering che va a controllare il contenuto dei pacchetti in transito in maniera approfondita, per identificare codice malevolo, grazie al'intelligenza artificiale che sfrutta l'analisi
-di determinati pattern in memoria. In sostanza è un tipo di filtraggio applicativo e il suo funzionamento può essere paragonato a quello di un antivirus.
+La deep packet inspection è una tecnica di packet filtering che va a controllare il contenuto dei pacchetti in transito in maniera approfondita, per identificare codice malevolo.
+A differenza dei metodi tradizionali che si limitano a ispezionare intestazioni (header) di pacchetti IP, la DPI analizza il contenuto completo dei pacchetti, compreso il payload, per identificare protocolli, applicazioni, comportamenti sospetti o specifici pattern di dati.
+
+\subsection{funzioni addizionali}
+\begin{itemize}
+    \item \textbf{Application Control (Controllo delle applicazioni):} Permette di identificare e controllare il traffico in base all'applicazione, non solo in base alla porta o al protocollo.
+    \item \textbf{Intrusion Detection and Prevention (IDS/IPS):} Identifica comportamenti malevoli nel traffico di rete (es. exploit noti, attacchi buffer overflow).
+    \item \textbf{Data Loss Prevention (DLP):}Identifica tentativi di esfiltrazione di dati sensibili, come numeri di carte di credito, codici fiscali, documenti riservati.
+\end{itemize}
 
 \subsection{scenari di encrypted threats}
 In scenari di encrypted threats, la deep packet inspection può mettersi in mezzo a una comunicazione criptata in quanto è possibile abilitare la possibilità di far verificare un traffico cryptato per poter capire se è presente un man in the 
 middle che sta sfruttando un canale cifrato per attaccare una rete: la procedura consiste nell'inviare i pacchetti su un server in cloud che fa analisi e mi dice se la connessione è “pulita” o se sono presenti minacce. 
 
+\section{Principi inderogabili dei firewall}
+Sono 3:
+\begin{itemize}
+    \item un fireall deve essere l'unico punto di contatto della rete interna con quella esterna
+    \item solo il traffico autorizzato può attraversare il firewall
+    \item il firewall deve essere esso stesso un sistema altamente sicuro
+\end{itemize}
+
 \section{proxy firewall}
+Mediano connessioni applicative e gestiscono aspetti di sicurezza.
+un proxy firewall è generalmente composto da una serie di proxy che esaminano il contenuto dei
+pacchetti a livello applicativo.
+
+\noindent Nell'interazione con le applicazioni, usare un approccio con ALG richiede uno specifico proxy per
+ogni applicazione il che comporta un ritardo nel supporto, maggiore consumo di risorse e basse prestazioni.
+Ha però il vantaggio di rompere il modello client/server tipico, cosa che da maggiore protezione ai
+server.
+
+\noindent In breve i vantaggi sono:
+\begin{itemize}
+    \item non permette connessioni dirette tra interno e esterno
+    \item supporta l'autenticazione
+    \item analizza i comandi a livello applicativo
+    \item mantiene log del traffico e delle attività svolte
+    \item analisi migliore del traffico applicativo rispetto ad un firewall stateful
+\end{itemize}
+
+\subsection{Configurazione reverse proxy}
+Un reverse proxy è utilizzato per garantire l'accesso degli utenti esterni a risorse interne in modo sicuro e controllato. Si interpone tra i client e i server interni, inoltrando le richieste e nascondendo l'infrastruttura reale. 
+Questo permette di proteggere i sistemi interni, applicare regole di accesso centralizzate e gestire le comunicazioni in modo efficiente e sicuro.
+
+\section{Come funziona una honey pot? A cosa serve e come la potrei realizare?}
+Una honeypot è un sistema di sicurezza informatica progettato per attirare, rilevare, deviare o studiare attacchi informatici. Si tratta di un sistema fittizio che simula 
+una risorsa vulnerabile, come un server, un'applicazione o una rete, con l'obiettivo di ingannare gli attaccanti facendoli credere di aver trovato un bersaglio utile.
+viene realizzata una sorta di rete ”finta” (la honey pot) per attirare gli attacchi poichè quando un attaccante
+vuole entrare, di norma usa falle note, quindi si realizza una rete ad hoc per osservare come gli attacchi
+vengano perpetrati. per questa ragione, si realizza una DMZ (generalmente `e una sandbox) proprio a questo
+scopo.
+non sono molto usate, ma vengono quasi sempre usate dai provider di sistemi di sicurezza per osservare
+le vulnerabilità in un sistema e fare le patch occorrente. nell'honey pot di norma si mettono moltissimi
+sensori IDS per misurare tutto quello che avviene.
+
+\section{Descrivere come funziona iptables in dettaglio}
+E' uno strumento della suite netfilter di Linux usato per filtrare pacchetti di rete, NAT, forwarding e controllo del traffico. È ampiamente usato per creare firewall su sistemi Linux.
+E' organizzato in:
+\begin{itemize}
+    \item \textbf{Tabelle:} Ogni tabella contiene catene (chains) che a loro volta contengono regole.
+    \item \textbf{Catene:} Ogni tabella contiene catene predefinite (built-in) e personalizzate.
+    \item \textbf{Regole:} Ogni catena contiene una lista di regole che specificano:
+    \begin{itemize}
+        \item \textit{Condizioni: }cosa deve essere vero per applicare la regola
+        \item \textit{Azioni (target):} cosa fare se le condizioni corrispondono
+    \end{itemize}
+\end{itemize}
+
+\section{FTP Bounce Attack, dire di cosa si tratta e quale
+tipologia di firewall potrebbe bloccarlo e come}
+L'FTP Bounce Attack è un attacco che sfrutta una caratteristica del protocollo FTP in modalità passiva (PORT command) 
+per rimbalzare connessioni attraverso un server FTP verso altri host o porte.
+
+\noindent Questo tipo di attacco è risolvibile con uno stateful firewall. un FTP proxy potrebbe riconscere un uso
+imporprio del protocollo e terminare la connessione.
+Nella pratica il problema è stato risolto con aggiornamenti degli FTP server
+
+\section{Cosa è Snort e cosa permette di realizzare? Fare degli esempi di cosa si può ottenere}
+Snort è un IDS open source molto noto e testato, è in grado di funzionare sia in modalità sniffer (osserva il traffico e logga) sia in modalità IDS.
+
+\noindent Ha quattro modalità di utilizzo previste:
+\begin{itemize}
+    \item \textbf{sniffer mode:} legge i pacchetti dalla rete e li visualizza come un flusso continuo
+    \item \textbf{packet logger mode:} logga i pacchetti salvandoli sul disco 
+    \item \textbf{network intrusion detection system mode (funziona da NIDS):} utilizza regole snort-based per
+individuare pattern di traffico sospetti
+    \item \textbf{inline mode (funziona da IPS):} riceve i pacchetti direttamente da iptable e collabora per bloccare il
+traffico sospetto.
+\end{itemize}
 
 
+\section{Cooperazione tra firewall e IPS}
+Un firewall e un IPS (Intrusion Prevention System) sono entrambi dispositivi di sicurezza di rete, ma con funzioni complementari.
+\begin{itemize}
+    \item \textbf{Firewall:} Filtra il traffico in base a indirizzi IP, porte, protocolli, regole statiche
+    \item \textbf{IPS:} Analizza il contenuto del traffico in profondità (payload), rileva attacchi, blocca minacce conosciute
+\end{itemize}
+
+\noindent Nella pratica l'IPS controlla il traffico permesso dal firewall ispezionando i pacchetti più ne dettaglio, cercando firme di attacchi noti e comportamenti anomali.
+
+\subsubsection{Esempio pratico:}
+L'utilizzo di entrambi potrebbe essere utile tipo nel caso di attacco SQL injection 
+
+
+
+\section{Assumendo un firewall posizionato su un router, devono essere filtrati i traffici in
+ingresso al firewall stesso o solo quelli che devono essere "forwarded"? Spiegare le
+motivazioni constestualizzando lo scenario}
+Quando un firewall è posizionato su un router, è fondamentale filtrare sia il traffico destinato al router stesso (INPUT) sia quello che deve essere inoltrato verso altre reti (FORWARD). 
+Questo perché il router non è solo un punto di passaggio del traffico, ma anche un dispositivo esposto e potenzialmente attaccabile. Se non si filtrano le connessioni in ingresso dirette al router (come SSH, ping o interfacce web), un attaccante potrebbe comprometterne il controllo. 
+Allo stesso tempo, filtrare solo il traffico inoltrato non protegge l'infrastruttura di rete in modo completo. Per garantire una sicurezza efficace, quindi, bisogna gestire entrambe le tipologie di traffico con regole di firewall adeguate, riducendo la superficie di attacco e controllando l'accesso tra le varie zone della rete.
+
+
+\section{Descrivi tutti i tipi di firewall che conosci associando I diversi livelli ISO/OSI che sono in grado di analizzare}
+\begin{itemize}
+    \item \textbf{Firewall di tipo stateless:} forniscono packet filtering di tipo stateless, quindi un semplice controllo dei pacchetti in transito, basandosi su alcune regole preimpostate, principalmente legate a indirizzi di sorgente e destinazione (livello 3 ISO/OSI – Network).
+    \item \textbf{Firewall di tipo stateful:} forniscono packet filtering di tipo stateful, in cui vengono analizzate più informazioni del pacchetto, comprese le porte utilizzate, i protocolli e viene tenuta traccia tramite log delle azioni. Inoltre si ricordano se una sessione TCP era attiva, così da far passare i pacchetti successivi (livello 4 ISO/OSI – Transport).
+    \item \textbf{Application Gateway:} esaminano il contenuto dei pacchetti a livello applicativo, fornendo un livello di sicurezza maggiore (livello 7 – ISO/OSI – Application).
+\end{itemize}
+
+
+\section{Quali sistemi firewall riescono a controllare il traffico applicativo? Come funzionano?}
+Un application-level gateway è composto da una serie di proxy che esaminano il contenuto dei pacchetti a livello applicativo, fornendo un livello di sicurezza maggiore (es. contro attacchi di buffer overflow): posizionandosi tra client e server, impedisce la comunicazione diretta e può offrire anche servizi di load balancing del traffico.
+Se un firewall è un IDS (intrusion detection system) vengono utilizzati insieme, si può ottenere una tecnologia chiamata IPS (intrusion prevention system), che va a fare attività predittiva sulla base a informazioni ricevute in precedenza che permettono di bloccare certi attacchi sul nascere.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  23 MAY 2025 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.15)  17 JUN 2025 12:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -620,7 +620,7 @@ Capitolo 5.
 [17
 
 ]
-<images/codiceHijacking.png, id=494, 407.02063pt x 120.95187pt>
+<images/codiceHijacking.png, id=582, 407.02063pt x 120.95187pt>
 File: images/codiceHijacking.png Graphic file (type png)
 <use images/codiceHijacking.png>
 Package pdftex.def Info: images/codiceHijacking.png  used on input line 479.
@@ -637,7 +637,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 
 [19]
-<images/scansione.png, id=506, 184.18813pt x 97.86563pt>
+<images/scansione.png, id=594, 184.18813pt x 97.86563pt>
 File: images/scansione.png Graphic file (type png)
 <use images/scansione.png>
 Package pdftex.def Info: images/scansione.png  used on input line 569.
@@ -645,7 +645,7 @@ Package pdftex.def Info: images/scansione.png  used on input line 569.
 
 
 [20]
-<images/reset.png, id=511, 456.70625pt x 105.89563pt>
+<images/reset.png, id=599, 456.70625pt x 105.89563pt>
 File: images/reset.png Graphic file (type png)
 <use images/reset.png>
 Package pdftex.def Info: images/reset.png  used on input line 594.
@@ -657,63 +657,90 @@ Package pdftex.def Info: images/reset.png  used on input line 594.
 [22 <./images/reset.png>]
 Capitolo 6.
 
+Overfull \hbox (8.35626pt too wide) in paragraph at lines 604--604
+[]\OT1/cmr/bx/n/14.4 Problematiche di si-cu-rez-za del pro-to-col-lo SSL 
+ []
+
+
+Overfull \hbox (16.00632pt too wide) in paragraph at lines 615--615
+[]\OT1/cmr/bx/n/14.4 Problematiche di si-cu-rez-za del pro-to-col-lo ARP
+ []
+
+
 
 [23
 
 ]
+Overfull \hbox (6.17279pt too wide) in paragraph at lines 626--626
+\OT1/cmr/bx/n/14.4 MAC floo-ding, con-se-guen-ze ed even-tua-li con-
+ []
+
+
+
+[24]
 Capitolo 7.
 
 
-[24
+[25
 
 ]
 
-[25]
+[26]
 Capitolo 8.
-<images/scanEvidenziato.png, id=537, 381.425pt x 151.06438pt>
+<images/scanEvidenziato.png, id=629, 381.425pt x 151.06438pt>
 File: images/scanEvidenziato.png Graphic file (type png)
 <use images/scanEvidenziato.png>
-Package pdftex.def Info: images/scanEvidenziato.png  used on input line 658.
+Package pdftex.def Info: images/scanEvidenziato.png  used on input line 686.
 (pdftex.def)             Requested size: 345.0pt x 136.64357pt.
 
 
-[26
+[27
 
  <./images/scanEvidenziato.png>]
 
-[27]
-
 [28]
+
+[29]
 Capitolo 9.
 
 
-[29
+[30
 
 ]
 
-[30]
+[31]
 
-[31] (./FileNali.aux)
+[32]
+
+[33]
+
+[34]
+
+[35]
+
+[36]
+
+[37] (./FileNali.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `FileNali.out' has not changed.
-(rerunfilecheck)             Checksum: 4B746723DE549AA26B7CDD1911BDDFBA;19361.
+(rerunfilecheck)             Checksum: 1A557E9BCADBA2F25A8614EF33CA0596;26837.
  ) 
 Here is how much of TeX's memory you used:
- 22636 strings out of 473362
- 413437 string characters out of 5725050
- 808400 words of memory out of 5000000
- 45272 multiletter control sequences out of 15000+600000
+ 22675 strings out of 473362
+ 413906 string characters out of 5725050
+ 810407 words of memory out of 5000000
+ 45287 multiletter control sequences out of 15000+600000
  566017 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,1430b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on FileNali.pdf (32 pages, 420251 bytes).
+Output written on FileNali.pdf (38 pages, 438290 bytes).
 PDF statistics:
- 630 PDF objects out of 1000 (max. 8388607)
- 566 compressed objects within 6 object streams
- 121 named destinations out of 1000 (max. 500000)
- 633 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 753 PDF objects out of 1000 (max. 8388607)
+ 682 compressed objects within 7 object streams
+ 145 named destinations out of 1000 (max. 500000)
+ 753 words of extra memory for PDF output out of 10000 (max. 10000000)
 
