@@ -43,6 +43,40 @@ sono indipendenti tra loro; in termini probabilistici si può definire:
 \noindent ovvero che la distribuzione delle probabilità non è influenzata dal 
 fatto di conoscere il cifrato.
 
+\subsubsection{Principio di Kerckhoffs}
+
+La sicurezza di un crittosistema deve dipendere solo dalla sicurezza della chiave e non dalla segretezza 
+dell'algoritmo usato.
+
+
+\subsubsection{Tipi di attacco}
+
+Si può fare una distizione di diversi tipi di attacco in base alla conoscenza dell'avversario:
+\begin{itemize}
+    \item \textbf{\textit{Known Ciphertext Attack}}
+    \begin{itemize}
+        \item conosce solo il cifrato
+    \end{itemize}
+    \item \textbf{\textit{Known Plaintext Attack}}
+    \begin{itemize}
+        \item conosce anche il testo in chiaro; l'obiettivo è trovare la chiave 
+    \end{itemize}
+    \item \textbf{\textit{Chosen Plaintext Attack}}
+    \begin{itemize}
+        \item può interagire con il sistema a far cifrare un messaggio a sua scelta 
+    \end{itemize}
+    \item \textbf{\textit{Chosen Ciphertext Attack}}
+    \begin{itemize}
+        \item può interagire con il sistema e far decifrare un messaggio a sua scelta 
+    \end{itemize}
+    \item \textbf{\textit{Chosen Text Attack}}
+    \begin{itemize}
+        \item è a conoscenza di coppie chiaro-cifrato
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \section{Cifrari con shift}
 
@@ -58,13 +92,19 @@ Sono possibili solamente 25 chiavi, è vulnerabile ad un attacco di forza bruta.
 \section{Cifrari monoalfabetici}
 
 Viene fatta una sostituzione con un alfabeto cifrante. Sono possibili $26!$ chiavi 
-(tutte le possibili combinazioni per l'alfabeto cifrante), ovvero $2^88$.
+(tutte le possibili combinazioni per l'alfabeto cifrante), ovvero $2^{88}$.
 
 \subsection{Crittoanalisi}
 
 Potrei pensare di essere al sicuro perché abbiamo un ampio spazio delle chiavi 
-(in realtà ad oggi si considera sicuro $2^128$), ma questo schema si può rompere 
+(in realtà ad oggi si considera sicuro $2^{128}$), ma questo schema si può rompere 
 con una semplice tecnica di crittoanalisi: \textbf{analisi delle frequenze}.
+
+\noindent L'assunzione è che un simbolo molto frequente nell'alfabeto di origine 
+lo sarà anche in quello cifrato, shiftato di qualche lettera.
+
+\noindent Si possono fare dei ragionamenti di crittoanalisi anche sulle caratteristiche della lingua utilizzata 
+per risalire al testo in chiaro (ad esempio, in inglese dopo la $t$ spesso c'è l'$h$\dots).
 
 \section{Cifrario Affine}
 
@@ -109,7 +149,7 @@ ma è necessario un testo più ampio.
 
 \begin{figure}[H]
     \centering 
-    \includegraphics[width=0.8\linewidth]{chapters/chap02/images/playfair.png}
+    \includegraphics[width=0.6\linewidth]{chapters/chap02/images/playfair.png}
 \end{figure}
 
 \noindent Si costruisce un rettangolo $5x5$, mettendo per convenzione nella stessa 
@@ -147,15 +187,25 @@ La chiave del cifrario è la matrice, i cui coefficienti vengono scelti in modo 
 
 \begin{figure}[H]
     \centering 
-    \includegraphics[width=0.8\linewidth]{chapters/chap02/images/hill2.png}
+    \includegraphics[width=0.65\linewidth]{chapters/chap02/images/hill2.png}
 \end{figure}
 
 \noindent Le fasi di cifratura e decifratura, in generale, sono:
 
 \begin{figure}[H]
     \centering 
-    \includegraphics[width=0.8\linewidth]{chapters/chap02/images/hill3.png}
+    \includegraphics[width=0.2\linewidth]{chapters/chap02/images/hill3.png}
 \end{figure}
+
+\subsection{Crittoanalisi}
+È vulnerabile ad un attacco di tipo \textit{known plaintext}: conoscendo la coppia chiaro-cifrato, tramite 
+un calcolo matematico, è possibile calcolare la chiave.
+
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=0.65\linewidth]{chapters/chap02/images/hill4.png}
+\end{figure}
+
 
 
 \section{Cifrario di Vigenère}
@@ -178,6 +228,120 @@ cifrati che corrispondono a lettere in chiaro diverse e viceversa.
 
 \noindent Sono possibili $26^t$ chiavi, con $t$ lunghezza della chiave.
 
+
+\subsection{Crittoanalisi}
+
+È vulnerabile ad un attacco di tipo \textit{known ciphertext}. Sfrutta dei metodi statistici per:
+\begin{itemize}
+    \item determinare la lunghezza della chiave
+    \begin{itemize}
+        \item indice di coincidenza
+    \end{itemize}
+    \item determinare i caratteri della chiave 
+    \begin{itemize}
+        \item indice mutuo di coincidenza
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Indice di coincidenza}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapters/chap02/images/ic.png}
+\end{figure}
+
+\noindent L'indice di coincidenza è utile perché permette di capire qual è la lingua utilizzata; si fa 
+un calcolo con $n$ che tende ad infinito, e ciascuna lingua ha un suo valore per l'indice di coincidenza.
+
+
+\noindent \textit{Si ok ma...come funziona=?}
+
+\begin{itemize}
+    \item si prova calcolare l'IC ponendo la lunghezza della chiave $t=1$
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.65\linewidth]{chapters/chap02/images/ic2.png}
+        \caption{0.038 = caratteri casuali, 0.075 = italiano}
+    \end{figure}
+
+    \noindent se ottengo un valore noto vuol dire che ho trovato la lunghezza della chiave, altrimenti 
+    proseguo ponendo $t=2$
+
+    \item calcolo l'IC ponendo $t=2$
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.65\linewidth]{chapters/chap02/images/ic3.png}
+    \end{figure}
+    
+    \item \dots
+    \item si continua iterativamente fino ad ottenere un valore noto 
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{chapters/chap02/images/ic4.png}
+    \end{figure}   
+
+\end{itemize}
+
+
+\subsubsection{Indice mutuo di coincidenza}
+
+Si usa per determinare quali sono i caratteri che compongono la chiave.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapters/chap02/images/imc.png}
+\end{figure}  
+
+\textit{E questo come funziona?}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{chapters/chap02/images/imc2.png}
+\end{figure}  
+
+\begin{itemize}
+    \item provo a porre $K_0 - K_1 = 0$
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{chapters/chap02/images/imc3.png}
+    \end{figure}
+    
+    \item provo a porre $K_0 - K_1 = 1$
+    \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{chapters/chap02/images/imc4.png}
+    \end{figure}  
+
+    \item provo a porre $K_0 - K_1 = 1$
+    \begin{figure}[H]
+        \centering
+    \includegraphics[width=0.65\linewidth]{chapters/chap02/images/imc5.png}
+    \end{figure} 
+
+    \item \dots si continua iterativamente fissando un sottotesto e modificando l'altro 
+    sottraendogli da 0 a 25; quando si trova un valore di IMC vicino a 0.075 (lingua italiana) significa 
+    che abbiamo trovato il corretto valore di shift $k_i - k_j$
+
+\end{itemize}
+
+\noindent A questo punto si possono scrivere $t-1$ equazioni in $t$ incognite; si può riscrivere tutto in 
+funzione di $k_0$, provando tutti i possibili 26 valori e vedendo quale soddisfa il sistema.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{chapters/chap02/images/imc6.png}
+\end{figure} 
+
+\noindent In sintesi:
+
+\begin{figure}[H]
+    \includegraphics[width=0.7\linewidth]{chapters/chap02/images/vigenere3.png}
+\end{figure}
+
+\newpage
 \section{One-Time-Pad}
 
 È definibile come il cifrario perfetto: viene presa una chiave lunga 
@@ -191,7 +355,7 @@ senza poter stabilire qual è quella originale).
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{chapters/chap02/images/otp.png}
+    \includegraphics[width=0.7\linewidth]{chapters/chap02/images/otp.png}
 \end{figure}
 
 \noindent Il problema è che è necessario avere la chiave lunga quanto il messaggio che ci 

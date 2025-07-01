@@ -3,30 +3,49 @@
 \contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}%
 \contentsline {subsubsection}{Proprietà di sicurezza di un messaggio}{2}{section*.2}%
 \contentsline {chapter}{\numberline {2}Crittografia classica}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Cifrari simmetrici}{4}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Cifrari di shift}{4}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Cifrario affine}{5}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Cifrario Alberti}{5}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Cifrario Porta}{6}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Cifrario di Playfair}{6}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Cifrario di Hill}{7}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Cifrario di Vigenère}{8}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Cifrario di Vernam}{8}{subsection.2.1.8}%
-\contentsline {section}{\numberline {2.2}Probabilità}{8}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Crittoanalisi}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Cifrari a shift}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Cifrario di Hill}{10}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Cifrario di Vigenerè - Metodo Kasiski}{10}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Indice di coincidenza}{10}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Indice mutuo di coincidenza}{11}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Cifratura Simmetrica - DES}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Cifratura di Feistel}{12}{section.4.1}%
-\contentsline {subsubsection}{Caratteristiche}{13}{section*.3}%
-\contentsline {section}{\numberline {4.2}DES}{14}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Modalità operative}{15}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}Sicurezza dei cifrari moderni}{16}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Approccio concreto}{17}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Approccio asintotico}{17}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Crittoanalisi di DES}{17}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Forza bruta}{17}{subsection.4.4.1}%
-\contentsline {chapter}{\numberline {5}AES}{19}{chapter.5}%
+\contentsline {section}{\numberline {2.1}Informazioni generali}{4}{section.2.1}%
+\contentsline {subsubsection}{Operazioni di trasformazione}{4}{section*.3}%
+\contentsline {subsubsection}{Spazio delle chiavi}{4}{section*.4}%
+\contentsline {subsubsection}{Sicurezza}{4}{section*.5}%
+\contentsline {subsubsection}{Sicurezza perfetta}{5}{section*.6}%
+\contentsline {subsubsection}{Principio di Kerckhoffs}{5}{section*.7}%
+\contentsline {subsubsection}{Tipi di attacco}{5}{section*.8}%
+\contentsline {section}{\numberline {2.2}Cifrari con shift}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Cifrari monoalfabetici}{6}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Crittoanalisi}{6}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Cifrario Affine}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Crittoanalisi}{6}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}Cifrario di Playfair}{7}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Crittoanalisi}{7}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.6}Cifrario di Hill}{7}{section.2.6}%
+\contentsline {subsubsection}{Esempio}{8}{section*.9}%
+\contentsline {subsection}{\numberline {2.6.1}Crittoanalisi}{8}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Cifrario di Vigenère}{9}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Crittoanalisi}{9}{subsection.2.7.1}%
+\contentsline {subsubsection}{Indice di coincidenza}{10}{section*.10}%
+\contentsline {subsubsection}{Indice mutuo di coincidenza}{11}{section*.11}%
+\contentsline {section}{\numberline {2.8}One-Time-Pad}{14}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Cifrari a blocchi}{15}{chapter.3}%
+\contentsline {subsubsection}{Mappaggi}{15}{section*.12}%
+\contentsline {section}{\numberline {3.1}Cifratura di Feistel}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Principi di Shannon}{16}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Struttura di Feistel}{16}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}DES}{17}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Struttura di DES}{17}{subsection.3.2.1}%
+\contentsline {subsubsection}{IP e IP$^{-1}$}{18}{section*.13}%
+\contentsline {subsubsection}{Singola iterazione}{18}{section*.14}%
+\contentsline {subsubsection}{La funzione $f$}{18}{section*.15}%
+\contentsline {subsubsection}{S-Box}{19}{section*.16}%
+\contentsline {subsection}{\numberline {3.2.2}Decifratura}{19}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Caratteristiche di DES}{19}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Modalità operative}{20}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Crittoanalisi}{21}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}DES doppio}{21}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Attacco \textit {meet in the middle}}{21}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}DES-X}{22}{section.3.4}%
+\contentsline {section}{\numberline {3.5}AES}{22}{section.3.5}%
+\contentsline {subsubsection}{SubBytes}{22}{section*.17}%
+\contentsline {subsubsection}{ShiftRows}{23}{section*.18}%
+\contentsline {subsubsection}{MixColumns}{23}{section*.19}%
+\contentsline {subsubsection}{AddRoundKey}{23}{section*.20}%
+\contentsline {section}{\numberline {3.6}Considerazioni sulla sicurezza}{23}{section.3.6}%
