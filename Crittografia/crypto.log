@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  1 JUL 2025 23:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.7)  2 JUL 2025 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -491,7 +491,7 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box68
-) (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap02/classica.aux) (./chapters/chap03/block-cipher.aux))
+) (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap02/classica.aux) (./chapters/chap03/block-cipher.aux) (./chapters/chap04/asimettric.aux))
 \openout1 = `crypto.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -561,241 +561,257 @@ LaTeX Warning: No \author given.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./crypto.toc)
-\tf@toc=\write5
-\openout5 = `crypto.toc'.
-
-
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./crypto.toc
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 \newpage
-              [1
+l.57 ...rittosistema di El-Gamal}{27}{section.4.2}
+                                                  % [1
 
-]
+])
+\tf@toc=\write5
+\openout5 = `crypto.toc'.
+
+ [2]
 \openout2 = `chapters/chap1/intro.aux'.
 
  (./chapters/chap1/intro.tex
 Capitolo 1.
-[2
+[3
 
 
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [3]
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [4]
 \openout2 = `chapters/chap02/classica.aux'.
 
  (./chapters/chap02/classica.tex
 Capitolo 2.
-[4
+[5
 
 
 
 
 ]
-<chapters/chap02/images/shift.png, id=196, 493.845pt x 137.51375pt>
+<chapters/chap02/images/shift.png, id=240, 493.845pt x 137.51375pt>
 File: chapters/chap02/images/shift.png Graphic file (type png)
 <use chapters/chap02/images/shift.png>
 Package pdftex.def Info: chapters/chap02/images/shift.png  used on input line 87.
 (pdftex.def)             Requested size: 276.00105pt x 76.8519pt.
- [5 <./chapters/chap02/images/shift.png>] [6]
-<chapters/chap02/images/playfair.png, id=214, 319.1925pt x 252.945pt>
+ [6 <./chapters/chap02/images/shift.png>] [7]
+<chapters/chap02/images/playfair.png, id=258, 319.1925pt x 252.945pt>
 File: chapters/chap02/images/playfair.png Graphic file (type png)
 <use chapters/chap02/images/playfair.png>
 Package pdftex.def Info: chapters/chap02/images/playfair.png  used on input line 152.
 (pdftex.def)             Requested size: 207.0021pt x 164.03792pt.
-<chapters/chap02/images/hill.png, id=215, 494.84875pt x 107.40125pt>
+<chapters/chap02/images/hill.png, id=259, 494.84875pt x 107.40125pt>
 File: chapters/chap02/images/hill.png Graphic file (type png)
 <use chapters/chap02/images/hill.png>
 Package pdftex.def Info: chapters/chap02/images/hill.png  used on input line 181.
 (pdftex.def)             Requested size: 276.00105pt x 59.90173pt.
- [7 <./chapters/chap02/images/playfair.png> <./chapters/chap02/images/hill.png>]
-<chapters/chap02/images/hill2.png, id=222, 516.93124pt x 247.92625pt>
+ [8 <./chapters/chap02/images/playfair.png> <./chapters/chap02/images/hill.png>]
+<chapters/chap02/images/hill2.png, id=266, 516.93124pt x 247.92625pt>
 File: chapters/chap02/images/hill2.png Graphic file (type png)
 <use chapters/chap02/images/hill2.png>
 Package pdftex.def Info: chapters/chap02/images/hill2.png  used on input line 190.
 (pdftex.def)             Requested size: 224.2479pt x 107.55197pt.
-<chapters/chap02/images/hill3.png, id=223, 116.435pt x 70.2625pt>
+<chapters/chap02/images/hill3.png, id=267, 116.435pt x 70.2625pt>
 File: chapters/chap02/images/hill3.png Graphic file (type png)
 <use chapters/chap02/images/hill3.png>
 Package pdftex.def Info: chapters/chap02/images/hill3.png  used on input line 197.
 (pdftex.def)             Requested size: 68.99895pt x 41.6389pt.
-<chapters/chap02/images/hill4.png, id=224, 554.07pt x 302.12875pt>
+<chapters/chap02/images/hill4.png, id=268, 554.07pt x 302.12875pt>
 File: chapters/chap02/images/hill4.png Graphic file (type png)
 <use chapters/chap02/images/hill4.png>
 Package pdftex.def Info: chapters/chap02/images/hill4.png  used on input line 206.
 (pdftex.def)             Requested size: 224.2479pt x 122.27849pt.
-<chapters/chap02/images/vigenere.png, id=225, 439.6425pt x 102.3825pt>
+<chapters/chap02/images/vigenere.png, id=269, 439.6425pt x 102.3825pt>
 File: chapters/chap02/images/vigenere.png Graphic file (type png)
 <use chapters/chap02/images/vigenere.png>
 Package pdftex.def Info: chapters/chap02/images/vigenere.png  used on input line 215.
 (pdftex.def)             Requested size: 276.00105pt x 64.27635pt.
- [8 <./chapters/chap02/images/hill2.png> <./chapters/chap02/images/hill3.png> <./chapters/chap02/images/hill4.png>]
-<chapters/chap02/images/vigenere2.png, id=234, 532.99126pt x 123.46124pt>
+ [9 <./chapters/chap02/images/hill2.png> <./chapters/chap02/images/hill3.png> <./chapters/chap02/images/hill4.png>]
+<chapters/chap02/images/vigenere2.png, id=278, 532.99126pt x 123.46124pt>
 File: chapters/chap02/images/vigenere2.png Graphic file (type png)
 <use chapters/chap02/images/vigenere2.png>
 Package pdftex.def Info: chapters/chap02/images/vigenere2.png  used on input line 226.
 (pdftex.def)             Requested size: 276.00105pt x 63.93457pt.
-<chapters/chap02/images/ic.png, id=235, 560.0925pt x 286.06876pt>
+<chapters/chap02/images/ic.png, id=279, 560.0925pt x 286.06876pt>
 File: chapters/chap02/images/ic.png Graphic file (type png)
 <use chapters/chap02/images/ic.png>
 Package pdftex.def Info: chapters/chap02/images/ic.png  used on input line 250.
 (pdftex.def)             Requested size: 276.00105pt x 140.97371pt.
- [9 <./chapters/chap02/images/vigenere.png> <./chapters/chap02/images/vigenere2.png>]
-<chapters/chap02/images/ic2.png, id=242, 538.01pt x 284.06125pt>
+ [10 <./chapters/chap02/images/vigenere.png> <./chapters/chap02/images/vigenere2.png>]
+<chapters/chap02/images/ic2.png, id=286, 538.01pt x 284.06125pt>
 File: chapters/chap02/images/ic2.png Graphic file (type png)
 <use chapters/chap02/images/ic2.png>
 Package pdftex.def Info: chapters/chap02/images/ic2.png  used on input line 264.
 (pdftex.def)             Requested size: 224.2479pt x 118.399pt.
-<chapters/chap02/images/ic3.png, id=243, 533.995pt x 273.02pt>
+<chapters/chap02/images/ic3.png, id=287, 533.995pt x 273.02pt>
 File: chapters/chap02/images/ic3.png Graphic file (type png)
 <use chapters/chap02/images/ic3.png>
 Package pdftex.def Info: chapters/chap02/images/ic3.png  used on input line 275.
 (pdftex.def)             Requested size: 224.2479pt x 114.65096pt.
- [10
+ [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.277 
        <./chapters/chap02/images/ic.png> <./chapters/chap02/images/ic2.png>]
-<chapters/chap02/images/ic4.png, id=252, 434.62375pt x 302.12875pt>
+<chapters/chap02/images/ic4.png, id=296, 434.62375pt x 302.12875pt>
 File: chapters/chap02/images/ic4.png Graphic file (type png)
 <use chapters/chap02/images/ic4.png>
 Package pdftex.def Info: chapters/chap02/images/ic4.png  used on input line 283.
 (pdftex.def)             Requested size: 172.5pt x 119.9135pt.
-<chapters/chap02/images/imc.png, id=253, 554.07pt x 297.11pt>
+<chapters/chap02/images/imc.png, id=297, 554.07pt x 297.11pt>
 File: chapters/chap02/images/imc.png Graphic file (type png)
 <use chapters/chap02/images/imc.png>
 Package pdftex.def Info: chapters/chap02/images/imc.png  used on input line 295.
 (pdftex.def)             Requested size: 276.00105pt x 148.00154pt.
-<chapters/chap02/images/imc2.png, id=254, 537.00626pt x 293.095pt>
+<chapters/chap02/images/imc2.png, id=298, 537.00626pt x 293.095pt>
 File: chapters/chap02/images/imc2.png Graphic file (type png)
 <use chapters/chap02/images/imc2.png>
 Package pdftex.def Info: chapters/chap02/images/imc2.png  used on input line 302.
 (pdftex.def)             Requested size: 224.2479pt x 122.39243pt.
- [11 <./chapters/chap02/images/ic3.png> <./chapters/chap02/images/ic4.png> <./chapters/chap02/images/imc.png>]
-<chapters/chap02/images/imc3.png, id=263, 583.17876pt x 265.99374pt>
+ [12 <./chapters/chap02/images/ic3.png> <./chapters/chap02/images/ic4.png> <./chapters/chap02/images/imc.png>]
+<chapters/chap02/images/imc3.png, id=308, 583.17876pt x 265.99374pt>
 File: chapters/chap02/images/imc3.png Graphic file (type png)
 <use chapters/chap02/images/imc3.png>
 Package pdftex.def Info: chapters/chap02/images/imc3.png  used on input line 309.
 (pdftex.def)             Requested size: 224.2479pt x 102.28004pt.
-<chapters/chap02/images/imc4.png, id=264, 537.00626pt x 246.9225pt>
+<chapters/chap02/images/imc4.png, id=309, 537.00626pt x 246.9225pt>
 File: chapters/chap02/images/imc4.png Graphic file (type png)
 <use chapters/chap02/images/imc4.png>
 Package pdftex.def Info: chapters/chap02/images/imc4.png  used on input line 315.
 (pdftex.def)             Requested size: 224.2479pt x 103.11142pt.
-<chapters/chap02/images/imc5.png, id=265, 540.0175pt x 255.95625pt>
+<chapters/chap02/images/imc5.png, id=310, 540.0175pt x 255.95625pt>
 File: chapters/chap02/images/imc5.png Graphic file (type png)
 <use chapters/chap02/images/imc5.png>
 Package pdftex.def Info: chapters/chap02/images/imc5.png  used on input line 321.
 (pdftex.def)             Requested size: 224.2479pt x 106.28625pt.
- [12 <./chapters/chap02/images/imc2.png> <./chapters/chap02/images/imc3.png> <./chapters/chap02/images/imc4.png> <./chapters/chap02/images/imc5.png>]
-<chapters/chap02/images/imc6.png, id=275, 569.12625pt x 342.27875pt>
+ [13 <./chapters/chap02/images/imc2.png> <./chapters/chap02/images/imc3.png> <./chapters/chap02/images/imc4.png> <./chapters/chap02/images/imc5.png>]
+<chapters/chap02/images/imc6.png, id=319, 569.12625pt x 342.27875pt>
 File: chapters/chap02/images/imc6.png Graphic file (type png)
 <use chapters/chap02/images/imc6.png>
 Package pdftex.def Info: chapters/chap02/images/imc6.png  used on input line 335.
 (pdftex.def)             Requested size: 207.0021pt x 124.4946pt.
-<chapters/chap02/images/vigenere3.png, id=276, 557.08125pt x 232.87pt>
+<chapters/chap02/images/vigenere3.png, id=320, 557.08125pt x 232.87pt>
 File: chapters/chap02/images/vigenere3.png Graphic file (type png)
 <use chapters/chap02/images/vigenere3.png>
 Package pdftex.def Info: chapters/chap02/images/vigenere3.png  used on input line 341.
 (pdftex.def)             Requested size: 241.49895pt x 100.9494pt.
- [13 <./chapters/chap02/images/imc6.png> <./chapters/chap02/images/vigenere3.png>]
-<chapters/chap02/images/otp.png, id=283, 494.84875pt x 225.84375pt>
+ [14 <./chapters/chap02/images/imc6.png> <./chapters/chap02/images/vigenere3.png>]
+<chapters/chap02/images/otp.png, id=327, 494.84875pt x 225.84375pt>
 File: chapters/chap02/images/otp.png Graphic file (type png)
 <use chapters/chap02/images/otp.png>
 Package pdftex.def Info: chapters/chap02/images/otp.png  used on input line 358.
 (pdftex.def)             Requested size: 241.49895pt x 110.2164pt.
-) [14 <./chapters/chap02/images/otp.png>]
+) [15 <./chapters/chap02/images/otp.png>]
 \openout2 = `chapters/chap03/block-cipher.aux'.
 
  (./chapters/chap03/block-cipher.tex
 Capitolo 3.
-<chapters/chap03/images/mappaggi.png, id=289, 236.885pt x 157.58875pt>
+<chapters/chap03/images/mappaggi.png, id=333, 236.885pt x 157.58875pt>
 File: chapters/chap03/images/mappaggi.png Graphic file (type png)
 <use chapters/chap03/images/mappaggi.png>
 Package pdftex.def Info: chapters/chap03/images/mappaggi.png  used on input line 15.
 (pdftex.def)             Requested size: 103.50105pt x 68.85352pt.
-[15
+[16
 
 
 
 
  <./chapters/chap03/images/mappaggi.png>]
-<chapters/chap03/images/feistel.png, id=296, 476.78125pt x 213.79875pt>
+<chapters/chap03/images/feistel.png, id=341, 476.78125pt x 213.79875pt>
 File: chapters/chap03/images/feistel.png Graphic file (type png)
 <use chapters/chap03/images/feistel.png>
 Package pdftex.def Info: chapters/chap03/images/feistel.png  used on input line 56.
 (pdftex.def)             Requested size: 276.00105pt x 123.77173pt.
- [16 <./chapters/chap03/images/feistel.png>]
-<chapters/chap03/images/des.png, id=302, 486.81876pt x 185.69376pt>
+ [17 <./chapters/chap03/images/feistel.png>]
+<chapters/chap03/images/des.png, id=347, 486.81876pt x 185.69376pt>
 File: chapters/chap03/images/des.png Graphic file (type png)
 <use chapters/chap03/images/des.png>
 Package pdftex.def Info: chapters/chap03/images/des.png  used on input line 76.
 (pdftex.def)             Requested size: 276.00105pt x 105.27701pt.
-<chapters/chap03/images/des2.png, id=303, 393.47pt x 307.1475pt>
+<chapters/chap03/images/des2.png, id=348, 393.47pt x 307.1475pt>
 File: chapters/chap03/images/des2.png Graphic file (type png)
 <use chapters/chap03/images/des2.png>
 Package pdftex.def Info: chapters/chap03/images/des2.png  used on input line 94.
 (pdftex.def)             Requested size: 241.49895pt x 188.51262pt.
- [17 <./chapters/chap03/images/des.png> <./chapters/chap03/images/des2.png>]
-<chapters/chap03/images/des3.png, id=310, 451.6875pt x 260.975pt>
+ [18 <./chapters/chap03/images/des.png> <./chapters/chap03/images/des2.png>]
+<chapters/chap03/images/des3.png, id=356, 451.6875pt x 260.975pt>
 File: chapters/chap03/images/des3.png Graphic file (type png)
 <use chapters/chap03/images/des3.png>
 Package pdftex.def Info: chapters/chap03/images/des3.png  used on input line 106.
 (pdftex.def)             Requested size: 241.49895pt x 139.53462pt.
-<chapters/chap03/images/f.png, id=311, 408.52625pt x 301.125pt>
+<chapters/chap03/images/f.png, id=357, 408.52625pt x 301.125pt>
 File: chapters/chap03/images/f.png Graphic file (type png)
 <use chapters/chap03/images/f.png>
 Package pdftex.def Info: chapters/chap03/images/f.png  used on input line 118.
 (pdftex.def)             Requested size: 241.49895pt x 178.0114pt.
-<chapters/chap03/images/s-box.png, id=312, 509.905pt x 252.945pt>
+<chapters/chap03/images/s-box.png, id=358, 509.905pt x 252.945pt>
 File: chapters/chap03/images/s-box.png Graphic file (type png)
 <use chapters/chap03/images/s-box.png>
 Package pdftex.def Info: chapters/chap03/images/s-box.png  used on input line 128.
 (pdftex.def)             Requested size: 241.49895pt x 119.79889pt.
- [18 <./chapters/chap03/images/des3.png> <./chapters/chap03/images/f.png>]
-<chapters/chap03/images/des4.png, id=323, 503.8825pt x 294.09875pt>
+ [19 <./chapters/chap03/images/des3.png> <./chapters/chap03/images/f.png>]
+<chapters/chap03/images/des4.png, id=368, 503.8825pt x 294.09875pt>
 File: chapters/chap03/images/des4.png Graphic file (type png)
 <use chapters/chap03/images/des4.png>
 Package pdftex.def Info: chapters/chap03/images/des4.png  used on input line 144.
 (pdftex.def)             Requested size: 276.00105pt x 161.09064pt.
- [19 <./chapters/chap03/images/s-box.png> <./chapters/chap03/images/des4.png>]
-<chapters/chap03/images/cbc.png, id=331, 441.65pt x 173.64874pt>
+ [20 <./chapters/chap03/images/s-box.png> <./chapters/chap03/images/des4.png>]
+<chapters/chap03/images/cbc.png, id=376, 441.65pt x 173.64874pt>
 File: chapters/chap03/images/cbc.png Graphic file (type png)
 <use chapters/chap03/images/cbc.png>
 Package pdftex.def Info: chapters/chap03/images/cbc.png  used on input line 172.
 (pdftex.def)             Requested size: 207.0021pt x 81.3897pt.
-<chapters/chap03/images/ctr.png, id=332, 351.3125pt x 168.63pt>
+<chapters/chap03/images/ctr.png, id=377, 351.3125pt x 168.63pt>
 File: chapters/chap03/images/ctr.png Graphic file (type png)
 <use chapters/chap03/images/ctr.png>
 Package pdftex.def Info: chapters/chap03/images/ctr.png  used on input line 189.
 (pdftex.def)             Requested size: 207.0021pt x 99.36475pt.
- [20 <./chapters/chap03/images/cbc.png> <./chapters/chap03/images/ctr.png>]
-<chapters/chap03/images/des-d.png, id=340, 511.9125pt x 272.01625pt>
+ [21 <./chapters/chap03/images/cbc.png> <./chapters/chap03/images/ctr.png>]
+<chapters/chap03/images/des-d.png, id=384, 511.9125pt x 272.01625pt>
 File: chapters/chap03/images/des-d.png Graphic file (type png)
 <use chapters/chap03/images/des-d.png>
 Package pdftex.def Info: chapters/chap03/images/des-d.png  used on input line 221.
 (pdftex.def)             Requested size: 276.00105pt x 146.6583pt.
- [21 <./chapters/chap03/images/des-d.png>] [22]) [23] (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap02/classica.aux) (./chapters/chap03/block-cipher.aux))
+ [22 <./chapters/chap03/images/des-d.png>] [23]) [24]
+\openout2 = `chapters/chap04/asimettric.aux'.
+
+ (./chapters/chap04/asimettric.tex
+Capitolo 4.
+[25
+
+
+
+
+] [26]
+<chapters/chap04/images/generatore.png, id=421, 397.485pt x 237.88875pt>
+File: chapters/chap04/images/generatore.png Graphic file (type png)
+<use chapters/chap04/images/generatore.png>
+Package pdftex.def Info: chapters/chap04/images/generatore.png  used on input line 95.
+(pdftex.def)             Requested size: 207.0021pt x 123.8916pt.
+ [27 <./chapters/chap04/images/generatore.png>]) [28] (./crypto.aux (./chapters/chap1/intro.aux) (./chapters/chap02/classica.aux) (./chapters/chap03/block-cipher.aux) (./chapters/chap04/asimettric.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `crypto.out' has not changed.
-(rerunfilecheck)             Checksum: 65B61E17E0F35A362E707C9BB50739AD;4171.
+(rerunfilecheck)             Checksum: 22518587AF556366433998C08612DDEC;5339.
  ) 
 Here is how much of TeX's memory you used:
- 23187 strings out of 474222
- 426432 string characters out of 5748733
- 1934975 words of memory out of 5000000
- 44973 multiletter control sequences out of 15000+600000
+ 23248 strings out of 474222
+ 428091 string characters out of 5748733
+ 1935975 words of memory out of 5000000
+ 45006 multiletter control sequences out of 15000+600000
  568856 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,93p,458b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on crypto.pdf (24 pages, 985715 bytes).
+ 84i,7n,93p,458b,612s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on crypto.pdf (29 pages, 1051539 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
- 408 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 515 PDF objects out of 1000 (max. 8388607)
+ 388 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 477 words of extra memory for PDF output out of 10000 (max. 10000000)
 

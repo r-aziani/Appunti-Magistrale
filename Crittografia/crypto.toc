@@ -1,51 +1,62 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione}{2}{chapter.1}%
-\contentsline {subsubsection}{Proprietà di sicurezza di un messaggio}{2}{section*.2}%
-\contentsline {chapter}{\numberline {2}Crittografia classica}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Informazioni generali}{4}{section.2.1}%
-\contentsline {subsubsection}{Operazioni di trasformazione}{4}{section*.3}%
-\contentsline {subsubsection}{Spazio delle chiavi}{4}{section*.4}%
-\contentsline {subsubsection}{Sicurezza}{4}{section*.5}%
-\contentsline {subsubsection}{Sicurezza perfetta}{5}{section*.6}%
-\contentsline {subsubsection}{Principio di Kerckhoffs}{5}{section*.7}%
-\contentsline {subsubsection}{Tipi di attacco}{5}{section*.8}%
-\contentsline {section}{\numberline {2.2}Cifrari con shift}{5}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Cifrari monoalfabetici}{6}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Crittoanalisi}{6}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Cifrario Affine}{6}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Crittoanalisi}{6}{subsection.2.4.1}%
-\contentsline {section}{\numberline {2.5}Cifrario di Playfair}{7}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Crittoanalisi}{7}{subsection.2.5.1}%
-\contentsline {section}{\numberline {2.6}Cifrario di Hill}{7}{section.2.6}%
-\contentsline {subsubsection}{Esempio}{8}{section*.9}%
-\contentsline {subsection}{\numberline {2.6.1}Crittoanalisi}{8}{subsection.2.6.1}%
-\contentsline {section}{\numberline {2.7}Cifrario di Vigenère}{9}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Crittoanalisi}{9}{subsection.2.7.1}%
-\contentsline {subsubsection}{Indice di coincidenza}{10}{section*.10}%
-\contentsline {subsubsection}{Indice mutuo di coincidenza}{11}{section*.11}%
-\contentsline {section}{\numberline {2.8}One-Time-Pad}{14}{section.2.8}%
-\contentsline {chapter}{\numberline {3}Cifrari a blocchi}{15}{chapter.3}%
-\contentsline {subsubsection}{Mappaggi}{15}{section*.12}%
-\contentsline {section}{\numberline {3.1}Cifratura di Feistel}{15}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Principi di Shannon}{16}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Struttura di Feistel}{16}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}DES}{17}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Struttura di DES}{17}{subsection.3.2.1}%
-\contentsline {subsubsection}{IP e IP$^{-1}$}{18}{section*.13}%
-\contentsline {subsubsection}{Singola iterazione}{18}{section*.14}%
-\contentsline {subsubsection}{La funzione $f$}{18}{section*.15}%
-\contentsline {subsubsection}{S-Box}{19}{section*.16}%
-\contentsline {subsection}{\numberline {3.2.2}Decifratura}{19}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Caratteristiche di DES}{19}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Modalità operative}{20}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Crittoanalisi}{21}{subsection.3.2.5}%
-\contentsline {section}{\numberline {3.3}DES doppio}{21}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Attacco \textit {meet in the middle}}{21}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}DES-X}{22}{section.3.4}%
-\contentsline {section}{\numberline {3.5}AES}{22}{section.3.5}%
-\contentsline {subsubsection}{SubBytes}{22}{section*.17}%
-\contentsline {subsubsection}{ShiftRows}{23}{section*.18}%
-\contentsline {subsubsection}{MixColumns}{23}{section*.19}%
-\contentsline {subsubsection}{AddRoundKey}{23}{section*.20}%
-\contentsline {section}{\numberline {3.6}Considerazioni sulla sicurezza}{23}{section.3.6}%
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}%
+\contentsline {subsubsection}{Proprietà di sicurezza di un messaggio}{3}{section*.2}%
+\contentsline {chapter}{\numberline {2}Crittografia classica}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Informazioni generali}{5}{section.2.1}%
+\contentsline {subsubsection}{Operazioni di trasformazione}{5}{section*.3}%
+\contentsline {subsubsection}{Spazio delle chiavi}{5}{section*.4}%
+\contentsline {subsubsection}{Sicurezza}{5}{section*.5}%
+\contentsline {subsubsection}{Sicurezza perfetta}{6}{section*.6}%
+\contentsline {subsubsection}{Principio di Kerckhoffs}{6}{section*.7}%
+\contentsline {subsubsection}{Tipi di attacco}{6}{section*.8}%
+\contentsline {section}{\numberline {2.2}Cifrari con shift}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Cifrari monoalfabetici}{7}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Crittoanalisi}{7}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Cifrario Affine}{7}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Crittoanalisi}{7}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}Cifrario di Playfair}{8}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Crittoanalisi}{8}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.6}Cifrario di Hill}{8}{section.2.6}%
+\contentsline {subsubsection}{Esempio}{9}{section*.9}%
+\contentsline {subsection}{\numberline {2.6.1}Crittoanalisi}{9}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Cifrario di Vigenère}{10}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Crittoanalisi}{10}{subsection.2.7.1}%
+\contentsline {subsubsection}{Indice di coincidenza}{11}{section*.10}%
+\contentsline {subsubsection}{Indice mutuo di coincidenza}{12}{section*.11}%
+\contentsline {section}{\numberline {2.8}One-Time-Pad}{15}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Cifrari a blocchi}{16}{chapter.3}%
+\contentsline {subsubsection}{Mappaggi}{16}{section*.12}%
+\contentsline {section}{\numberline {3.1}Cifratura di Feistel}{16}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Principi di Shannon}{17}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Struttura di Feistel}{17}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}DES}{18}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Struttura di DES}{18}{subsection.3.2.1}%
+\contentsline {subsubsection}{IP e IP$^{-1}$}{19}{section*.13}%
+\contentsline {subsubsection}{Singola iterazione}{19}{section*.14}%
+\contentsline {subsubsection}{La funzione $f$}{19}{section*.15}%
+\contentsline {subsubsection}{S-Box}{20}{section*.16}%
+\contentsline {subsection}{\numberline {3.2.2}Decifratura}{20}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Caratteristiche di DES}{20}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Modalità operative}{21}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Crittoanalisi}{22}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}DES doppio}{22}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Attacco \textit {meet in the middle}}{22}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}DES-X}{23}{section.3.4}%
+\contentsline {section}{\numberline {3.5}AES}{23}{section.3.5}%
+\contentsline {subsubsection}{SubBytes}{23}{section*.17}%
+\contentsline {subsubsection}{ShiftRows}{24}{section*.18}%
+\contentsline {subsubsection}{MixColumns}{24}{section*.19}%
+\contentsline {subsubsection}{AddRoundKey}{24}{section*.20}%
+\contentsline {section}{\numberline {3.6}Considerazioni sulla sicurezza}{24}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Crittografia Asimmetrica}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}RSA}{25}{section.4.1}%
+\contentsline {subsubsection}{Generazione delle chiavi}{25}{section*.21}%
+\contentsline {subsubsection}{Cifratura e decifratura}{26}{section*.22}%
+\contentsline {subsubsection}{Calcolo dell'esponente}{26}{section*.23}%
+\contentsline {section}{\numberline {4.2}Crittosistema di El-Gamal}{27}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Concetto di logaritmo discreto}{27}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Generatori}{27}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Generazione delle chiavi}{27}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Cifratura}{28}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Decifratura}{28}{subsection.4.2.5}%
