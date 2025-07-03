@@ -1,0 +1,56 @@
+\chapter{Funzioni di hash}
+
+Una funzione di hash prende un messaggio di lunghezza arbitraria e restituisce 
+una stringa unica di lunghezza fissata; l'idea è che il valore di hash è una rappresentazione 
+non ambigua e non falsificabile di un messaggio.
+
+\noindent Una funzione di hash comprime i messaggi e deve essere facile da computare. Vengono 
+usate per:
+\begin{itemize}
+    \item firme digitali 
+    \item integrità dei dati 
+    \item certificazione del tempo
+\end{itemize}
+
+\subsubsection{Proprietà di sicurezza}
+
+\begin{itemize}
+    \item \textbf{\textit{One-Way:}} dato $y$ è computazionalmente difficile trovare $M$
+    tale che $y=h(M)$
+    \item \textbf{\textit{Sicurezza debole:}} dato $M$ è computazionalmente difficile trovare 
+    un altro $M'$ tale che $h(M)=h(M')$
+    \item \textbf{\textit{Sicurezza forte (collision resistance):}} è computazionalmente difficile trovare due 
+    messaggi con lo stesso valore di hash
+\end{itemize}
+
+\subsubsection{Attacco del compleanno}
+
+Questo attacco prende il nome dal \textit{paradosso del compleanno}, appartenente alla teoria del calcolo probabilistico.
+
+\noindent \textit{La probabilità che almeno due persone in
+un gruppo compiano gli anni lo stesso giorno è largamente superiore a quanto potrebbe dire l’intuito: infatti già in un
+gruppo di 23 persone la probabilità è circa 0,51 (51\%); con 30 persone essa supera 0,70 (70\%), con 50 persone tocca
+addirittura 0,97 (97\%), anche se per arrivare all’evento certo occorre considerare un gruppo di almeno 366 persone}
+
+\noindent Lo scopo dell'attacco è, data una funzione di hashing $h$, trovare due valori $x_1$
+e $x_2$ tali che $h(x_1)=h(x_2)$, ovvero una collisione.
+
+\noindent È dimostrato che, in media, il numero di messaggi da genere è $2^{\frac{n}{2}}$, dove $n$
+è la lunghezza in bit del \textit{digest} di $h$.
+
+$\Rightarrow$ dato che la soglia di sicurezza è di $2^{80}$, la dimensione minima di un digest 
+dovrebbe essere di almeno 160 bit.
+
+\noindent Questo attacco viene usato per alterare le \textbf{firme digitali}, dato che lavorano 
+applicando una cifratura sui \textit{digest} delle funzioni di hash:
+\begin{itemize}
+    \item prendo delle copie del documento originale, e faccio piccole modifiche insignificanti 
+    \item lo stesso viene fatto per il documento fraudolento, fino a trovare una corrispondenza nei 
+    valori di hash (collisione)
+\end{itemize}
+
+$\Rightarrow$ viene fatto firmare il documento originale, allegando però quello fraduloneto (che 
+passerà per vero dato che hanno lo stesso digest)
+
+
+

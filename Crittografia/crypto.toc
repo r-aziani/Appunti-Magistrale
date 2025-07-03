@@ -60,3 +60,8 @@
 \contentsline {subsection}{\numberline {4.2.3}Generazione delle chiavi}{27}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Cifratura}{28}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Decifratura}{28}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Crittosistemi su curve ellittiche}{28}{section.4.3}%
+\contentsline {subsubsection}{El-Gamal applicato a curve ellittiche}{28}{section*.24}%
+\contentsline {chapter}{\numberline {5}Funzioni di hash}{29}{chapter.5}%
+\contentsline {subsubsection}{Proprietà di sicurezza}{29}{section*.25}%
+\contentsline {subsubsection}{Attacco del compleanno}{29}{section*.26}%

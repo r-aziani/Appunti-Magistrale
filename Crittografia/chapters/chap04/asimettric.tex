@@ -126,3 +126,27 @@ $\Rightarrow$ il messaggio cifrato corrisponde alla coppia $(y_1, y_2)$
     \item calcolare $m = z^{-1} \cdot y_2$ $mod$ $p$, con $z^{-1}$ inverso modulare di $z$
 \end{itemize}
 
+
+\section{Crittosistemi su curve ellittiche}
+
+La sicurezza dei sistemi crittografici a chiave pubblica dipende dal problema matematico 
+su cui si basano; attualmente sono considerati sicuri sistemi basati su:
+\begin{itemize}
+    \item fattorizzazione dei numeri primi 
+    \item logaritmi discreti 
+    \item curve ellittiche
+\end{itemize}
+
+\noindent Nel caso delle curve ellittiche, le operazioni basate su aritmetica modulare sono 
+sostituite da operazioni su curve ellittiche; l'operazione di addizione forma un gruppo, e 
+tale gruppo viene usato per la costruzione di un crittosistema.
+
+\noindent Questi sistemi permettono di avere la stessa complessità ma con una lunghezza della 
+chiave minore.
+
+\subsubsection{El-Gamal applicato a curve ellittiche}
+
+Data una curva $E_p(a,b)$ un generatore $G$, e un
+punto sulla curva $z$ , il problema è calcolare l'intero $x$ tale che $x \cdot G = z$
+
+
