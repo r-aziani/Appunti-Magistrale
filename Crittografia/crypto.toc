@@ -43,12 +43,13 @@
 \contentsline {section}{\numberline {3.3}DES doppio}{22}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Attacco \textit {meet in the middle}}{22}{subsection.3.3.1}%
 \contentsline {section}{\numberline {3.4}DES-X}{23}{section.3.4}%
-\contentsline {section}{\numberline {3.5}AES}{23}{section.3.5}%
-\contentsline {subsubsection}{SubBytes}{23}{section*.17}%
+\contentsline {section}{\numberline {3.5}Blowfish}{23}{section.3.5}%
+\contentsline {section}{\numberline {3.6}AES}{23}{section.3.6}%
+\contentsline {subsubsection}{SubBytes}{24}{section*.17}%
 \contentsline {subsubsection}{ShiftRows}{24}{section*.18}%
 \contentsline {subsubsection}{MixColumns}{24}{section*.19}%
 \contentsline {subsubsection}{AddRoundKey}{24}{section*.20}%
-\contentsline {section}{\numberline {3.6}Considerazioni sulla sicurezza}{24}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Considerazioni sulla sicurezza}{24}{section.3.7}%
 \contentsline {chapter}{\numberline {4}Crittografia Asimmetrica}{25}{chapter.4}%
 \contentsline {section}{\numberline {4.1}RSA}{25}{section.4.1}%
 \contentsline {subsubsection}{Generazione delle chiavi}{25}{section*.21}%
@@ -65,3 +66,12 @@
 \contentsline {chapter}{\numberline {5}Funzioni di hash}{29}{chapter.5}%
 \contentsline {subsubsection}{Proprietà di sicurezza}{29}{section*.25}%
 \contentsline {subsubsection}{Attacco del compleanno}{29}{section*.26}%
+\contentsline {chapter}{\numberline {6}MAC}{31}{chapter.6}%
+\contentsline {subsubsection}{Proprietà}{32}{section*.27}%
+\contentsline {subsubsection}{Attacchi}{32}{section*.28}%
+\contentsline {section}{\numberline {6.1}HMAC}{33}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Digital Signature Standard}{34}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Certificati}{35}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Secret Sharing}{36}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Schema (\textit {n,n})}{36}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Schema (\textit {k,n})}{36}{section.9.2}%

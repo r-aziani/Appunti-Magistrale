@@ -1,0 +1,38 @@
+\chapter{Certificati}
+
+Un certificato è un documento elettronico che attesta \textbf{l'associazione univoca tra 
+una chiave pubblica e l'identità di un soggetto} (persona, compagnia, computer \dots), il quale 
+dichiara di usarla in procedura di cifratura asimmetrica e/o autenticazione tramite 
+firma digitale.
+
+\noindent Il certificato contiene informazioni sulla chiave, sull'identità del proprietario 
+e la firma digitale di un'autorità emittente che ha verificato il contenuto del certificato. I 
+certificati si rivelano utili quando la chiave pubblica viene usata su larga scala.
+
+\noindent Proprietà del certificato:
+\begin{itemize}
+    \item chiunque deve poter leggere e determinare nome e chiave pubblica 
+    \item chiunque deve poter verificare l'autenticità
+    \item solo l'autorità di certificazione (CA) può creare e aggiornare i certificati 
+\end{itemize}
+
+
+\noindent Un certificato può contenere altre informazioni, come ad esempio:
+\begin{itemize}
+    \item periodo di validità
+    \item id della chiave 
+    \item stato della chiave 
+    \item informazioni addizionale su chiave e utente
+\end{itemize}
+
+\noindent Dato che i certificati possono essere revocati, si deve verificare questa evenienza 
+consultando una lista dei certificati revocati (CRL), che deve essere aggiornata dalla CA. Una 
+revoca può essere richiesta per diversi motivi:
+\begin{itemize}
+    \item compromissione della chiave privata 
+    \item informazioni non più valide 
+    \item compromissione dell'algoritmo usato 
+\end{itemize}
+
+
+'

@@ -250,6 +250,26 @@ a forza bruta. Vengono applicati due XOR prima e dopo l’esecuzione dell’algo
 (una per XOR): $DES-X(M)=k_2 \oplus DES(M \oplus k_1)$ 
 
 
+\section{Blowfish}
+
+È un cifrario che utilizza diverse tecniche tra cui la rete di Feistel e s-box dipendenti 
+dalla chiave, cosa che lo rende uno degli algoritmim più sicuri in circolazione. 
+
+\noindent I blocchi hanno una dimensione di 64 bit, mentre la chiave va dai 32 ai 448 bit.
+
+\noindent L'algoritmo consiste in due fasi:
+\begin{enumerate}
+    \item \textbf{Espansione della chiave:} la chiave viene espansa in 18 sottochiavi a 32 bit e vengono 
+    generate 4 s-box dipendenti da essa 
+    \item \textbf{Cifratura:} sono previsti 16 round dove in ognuno viene usata una sottochiave; al termine 
+    dei round vengono usate le ultime due chiavi rimaste; la decifrazione funziona allo stesso modo 
+    ma usando le sottochiavi in ordine inverso
+\end{enumerate}
+
+\noindent Questo algoritmo è compatto e veloce; è inoltre resistente agli attacchi di forza 
+bruta dato che è possibile arrivare ad uno spazio delle chiavi di $2^{448}$
+
+
 \section{AES}
 
 Non è un cifrario di Feistel, ma opera in parallelo sull'intero blocco 

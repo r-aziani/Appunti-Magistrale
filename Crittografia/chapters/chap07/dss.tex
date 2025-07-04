@@ -1,0 +1,35 @@
+\chapter{Digital Signature Standard}
+
+DSS è un algoritmo di firma digitale basato sull'algoritmo di cifratura asimmetrica DSA (basato 
+sul logaritmo discreto); il suo funzionamento è:
+\begin{itemize}
+    \item scelta di un numero primo $q$ da 160 bit 
+    \item scelta di un numero primo $p$ di 1024 bit che sia multiplo di 64; inoltre, deve 
+    vale $p = qz +1$ per un qualsiasi intero $z$
+    \item viene scelto un $h$ casuale tale che $1<h<p-1$
+    \item $\alpha = h^z$ $mod$ $p$
+    \item si genera la chiave privata $s$ tale che $0<s<q$
+    \item si calcola la chiave pubblica $\beta = \alpha^z$ $mod$ $p$
+\end{itemize}
+
+\noindent I parametri $p, q, \alpha$ sono pubblici; il procedimento per il \textbf{calcolo 
+della firma} è:
+\begin{itemize}
+    \item generazione di un numero casuale $r$ compreso tra 0 e $q$
+    \item calcolo $y = (\alpha^r$ $mod$ $p)$ $mod$ $q$
+    \item calcolo $\delta = (r^{-1} \cdot (h(m) + s \cdot y))$ $mod$ $q$ , con:
+    \begin{itemize}
+        \item $h(m)$ funzione di hash applicata al messaggio
+        \item $r^{-1}$ inverso modualre di $r$
+    \end{itemize}
+    \item la firma è data dalla coppia $(y, \delta)$
+\end{itemize}
+
+\noindent Per la verifica della firma:
+\begin{itemize}
+    \item si calcola $e'' = y\delta^{-1}$ $mod$ $q$
+    \item si calcola $e' = (h(m) \cdot \delta^{-1})$ $mod$ $q$
+    \item si calcola $v = ((\alpha^{e'} \cdot \beta^{e''})$ $mod$ $p)$ $mod$ $q$
+    \item la firma è verificata se $v=y$
+\end{itemize}
+
