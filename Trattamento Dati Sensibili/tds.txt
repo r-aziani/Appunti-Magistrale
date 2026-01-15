@@ -1,0 +1,652 @@
+# 01
+
+Dati: i dati sono rappresentazioni originarie (cioè non interpretate) di un fenomeno, effettuate tramite simboli o combinazioni di simboli, o qualunque altra forma espressiva.
+
+Informazioni: l'informazione deriva da un dato i insieme di dati, sottoposti ad un processo di interpretazione che li ha resi significativi per il destinatario, cioè dotati di un significato che gli viene attribuito secondo codici definiti.
+
+Sistemi:
+	- la norma giuridica (norma prodotto dell'interpretazione) deve essere conoscibile e comprensibile al destinatario nelle forme previste dall'ordinamento
+	- un sistema informativo è un insieme di elementi, ordinato tramite regole, che interagendo tra loro elaborano, scambiano, archiviano ed emettono dati con lo scopo di produrre e distribuire dati nel momento e luogo desiderati 
+	- l'ordinamento giuridico è l'insieme di norme giuridiche che disciplinano i rapporti giuridici tra i membri di una collettività e gli organi dello stato; determina le istituzioni su cui si fonda la vita civile, con lo scopo di garantire la pacifica convivenza
+	
+
+ORDINAMENTO GIURIDICO
+	|
+	|
+     include
+        |
+        |
+INSIEME NORME GIURIDICHE  <--- determina --- ORGANIZZAZIONE SOCIALE
+	|
+	|
+    regolano
+        |
+        |
+COMPORTAMENTO PERSONE
+
+
+Datificazione: processo tecnologico che trasforma vari aspetti della vita sociale o della vita individuale in dati che vengono successivamente trasformati in informazioni dotate di nuove forme di valore 
+
+Trattamento: articolo 4 del GDPR definisce il trattamento dei dati personali come:
+	qualsiasi operazione o insieme di operazioni, compiute con o senza l'ausilio di processi automatizzati e applicate a dati personali o insieme di dati personali (es. raccolta, registrazione, conservazione, adattamento o modifica, estrazione, consultazione, uso, comunicazione mediante trasmissione, diffusione o qualsiasi altra forma di messa a disposizione, la limitazione, la cancellazione o la distruzione)
+
+Il diritto è:
+	- Sistema di norme dotato di esistenza oggettiva (law)
+		il diritto internazionale 
+	- Situazione di vantaggio soggettiva tutelata dal diritto oggettivo (right)
+		lo straniero cittadino di un paese terzo perseguitato ha diritto di asilo 
+	- Istituto previsto dall'ordinamento giuridico 
+		il diritto di proprietà è riconosciuto in Italia
+	- Automatismo organizzativo
+		in caso di morte del presidenteil vicepresidente subentra di diritto nella carica
+	- Compenso dovuto ad enti pubblici/privati in corrispettivo della prestazione di un servizio 
+		per la copia sono dovuti diritti di cancelleria
+
+Descrizioni del diritto oggettivo:
+	- concezione istituzionalistica
+	- concezione normativistica 
+	- concenzione realista
+	- concezione funzionalistica
+
+Diritto vivente - Ehrlich (1913): il diritto vivente è il diritto che, non formulato in proposizioni giuridiche, regola tuttavia la vita sociale. Le fonti di conoscenza di questo diritto sono:
+	- il documento giuridico
+	- l'osservazione diretta della vita sociale, degli scambi, consuetudini e usi di tutti i gruppi, non solo quelli riconosciuti giuridicamente ma anche di quelli ignorati o trascurati dal diritto
+
+Diritto vivente - Salvato (2015): Il diritto vivente è un'espressione usata in vari contesti per indicare l'insieme delle opinioni condivise che si sono consolidate sul modo in cui va intesa una norma. In pratica indica la posizione comune, maturata nei giudici e negli studiosi, sul significato da dare a una determinata disposizione
+	
+
+
+# 02
+
+Fonti del diritto:
+sono gli atti o fatti dai quali discendono norme giuridiche. Sono gli strumenti che regolano i rapporti sociali in un determinato ordinamento (es. ordinamento italiano). Esistono due tipi di ordinamenti giuridici:
+	- Civil Law: simili al nostro, sono dotati di sistemi costituzionali che producono, interpretano e applicano il diritto; si fondano su fonti di tipo scritto, ordinate da principi gerarchici
+	- Common Law: sono sistemi che pur avendo delle costituzioni scritte, tendono ad essere concentrati sui principi di diritto comune, che formano un sistema giurisdizionale basato su criteri gerarchici (es. giudici statali e federali negli USA; altri esempi sono ordinamenti UK, scandinavi e alcuni paesi africani)
+		--> le corti inferiori si devono adeguare alle corti superiori (regola dello 'stare decisis')
+	
+	* la struttura gerarchica delle corti permette di fare appello alle corti di livello superiore; in Italia esistono 3 gradi di appello
+
+Classificazione delle fonti del diritto:
+	- scritte (costituzione, leggi, regolamenti)
+	- non scritte (consuetudini)
+	- interne  (prodotte dall'ordinamento giuridico)
+		- internazionali
+		- produzione: atti o fatti che l'ordinamento ritiene idonei a produrre diritto; hanno lo scopo di produrre diritto
+		- cognizione: testi normativi contenenti norme giuridiche già formate di cui assicurano la conoscibilità legale; i cittadini hanno cognizione del diritto, sanno dove andare a trovarlo
+
+Gerarchia delle fonti:
+	1) Fonti di rango costituzionale:
+		- leggi internazionali
+		- leggi costituzionali: sono utilizzate per modificare o integrare la costituzione, seguendo un procedimento aggravato rispetto alle leggi ordinarie
+		- costituzione approvata nel 1948: è la fonte primaria e sovrana dell'ordinamento; stabilisce i diritti fondamentali, l'organizzazione dello Stato e delle sue istituzioni
+			- include una serie di principi fondamentali e diritti inviolabili
+			- è un testo rigido, per la modifica servono le cosidette maggioranze qualificate; alcune parti della costituzione NON possono essere modificate (nucleo rigido):
+				- articoli da 1 a 12 (principi fondamentali)
+				- diritti fondamentali
+				- forma repubblicana 
+	2) Fonti comunitarie:
+		- trattati (diritto primario)
+			le fonti primarie del diritto comunitario e dell'UE si collocano, a livello gerarchico, in posizione paritaria rispetto alle fonti costituzionali, e immediatamente sotto al nucleo rigido della costituzione
+		- regolamenti: solitamente intervengono da subito (diritto secondario)
+		- direttive: solitamente impongono dei risultati che devono essere raggiunti entro un certo intervallo di tempo; hanno lo scopo di uniformare per obiettivi ma lasciando libertà nei mezzi
+		* le decisioni sono pensate per regolamentare rapporti tra uno stato membro e un altro
+		--> la funzione legislativa è esercitata dal parlamento europeo e dalla commissione europea (i capi di stato/ministri degli stati membri); è quindi condiviso tra una rappresentazione del popolo (il parlamento) e i capi di stato (commissione)
+		* le fonti primarie del diritto 
+	3) Fonti di rango primario:
+		- leggi ordinarie dello stato / regionali: sono norme generali adottate dal Parlamento attraverso il procedimento legislativo ordinario
+			* devono rispettare la costituzione e le leggi costituzionali
+		- referendum abrogativi
+		- decreti legislativi: emanati dal governo su delega del parlamento
+		- decreti legge: sono una forma di delegazione del potere legislativo; sono atti di forza di legge adottati dal governo in caso di urgenza o situazione straordinaria; entrano subito in vigore ma se entro 60 giorni non vengono convertiti in legge dal parlamento, allora decadono
+		- statuti regionali
+		--> le fonti di rango primario devono essere coerenti con la costituzione; c'è una corte costituzionale che deve approvare la legge e un sistema di pesi e contrappesi (principio di separazione dei poteri con misure e contromisure che ne garantiscono un corretto equilibrio e funzionamento)
+	4) Fonti di rango secondario
+		- regolamenti: emanati dal governo e dagli enti locali, servono per l'attuazione delle leggi ordinarie; non possono derogare alle leggi
+		- statuti regionali
+		- decreti ministeriali
+		- DPCM 
+		--> solitamenti regolamenti approvati da un ministero / leggi emanate dalla regione nell'ambito delle loro competenze; non possono derogare dalle leggi ordinarie e devono / devono essere coerenti con lo statuto della regione (una sorta di costituzione della regione)
+	5) Fonti di rango terziario:
+		- circolari, interpretazioni, ordinanze
+		- consuetudini: si tratta tipicamente di norme giuridiche non scritte che si formano sulla base di comportamenti costanti e collettivi, ritenuti obbligatori; tutto il gruppo deve ritenere che tale comportamento sia giusto o almeno necessario
+	--> anche se siamo in fondo alla piramide può essere che si faccia fatica a capire i testi, per cui può essere fatta una circolare per capire come quel testo deve essere interpretato nella realtà
+	* devono essere conformi a tutto ciò che sta sopra nella piramide
+	
+	
+Il modo più semplice (da noi) per modificare l'ordinamento è tramite le leggi fatte dal parlamento; nella gazzetta ufficiale vengono pubblicate tutte le norme giuridiche, cosa è cambiato e da quando entra in vigore.
+
+È possibile fare appello alla corte costituzionale nel caso in cui venga fatta una legge (da qualsiasi fonte) considerata incostituzionale; se viene pronunciata come illegittima decade dal giorno in cui è entrata in vigore: in questo caso sorgono problemi nel caso in cui tale legge sia già stata applicata (in questi casi si prevede un riscarcimento).
+	
+La giurisprudenza è l'interpretazione della legge da parte dei giudici. La Corte Costituzionale svolge un ruolo chiave nel verificare la costituzionalità delle leggi.
+
+Il rapporto tra le fonti: secondo la costituzione, le fonti internazionali e le norme dell'UE prevalgono sulle leggi nazionali in caso di conflitto
+
+Risoluzione di contrasti tra leggi:
+	- Le legge superiore deroga (quindi prevale) su quella di rango inferiore (basandoci sulla piramide) --> annullamento (quella superiore annulla quella inferiore)
+	- Se sono sullo stesso livello, prevale l'ultima che è stata fatta --> abrogativo (se una legge è scritta bene, viene messo che quel testo abroga l'altro che lo precede; non sempre succede per cui si ritiene che l'effetto abrogativo sia implicito nel caso di contrasto evidente tra le due disposizioni)
+	- La legge specifica su una determinata questione ha precedenza su quella che si occupa della stessa questione ma in maniera più generale
+
+
+
+Lo scopo delle fonti del diritto è duplice:
+	-  costituire il sistema normativo di riferimento che regola la vita di una determinata collettività (il cosidetto diritto oggettivo)
+	- garantire la conoscibilità delle norme, in modo che chiunque possa averne contezza e rispettare le prescrizioni impartite
+
+
+
+# 03 
+
+Definizione di Privacy: spazio personale che non può essere oltrepassato senza un'autorizzazione o consenso; è legata al concetto di diritto. Di recente la privacy diventa un diritto umano fondamentale; è il diritto dell’individuo di decidere fino a che punto desidera condividere se stesso con gli altri, e di controllare il momento, il luogo e le circostanze in cui comunica con gli altri.
+È anche il diritto dell’individuo di controllare la diffusione delle informazioni che lo riguardano: si tratta di una sua proprietà personale.
+
+La privacy è sinonimo del diritto a essere lasciato in pace.
+
+Privatezza: precisi limiti all'azione dello stato e della sfera pubblica nei confronti dell'individuo
+
+Importanza della privacy:
+	- protegge l'autonomia e la libertà personale 
+	- difende dall'invasione e dall'abuso di potere e dalle intrusione ingiustificate dei terzi non autorizzati
+	- favorisce il controllo su ciò che viene condiviso e con chi
+
+
+
+Con William Blackstone (fine del 700) avviene un primo riconoscimento legale della privacy a protezione dell'individuo
+
+Panoptico di Bentham (fine 700): modello architetturale, basato su un gioco di specchi, per la sorveglianza costane di qualsiasi luogo sociale; permetteva ad un solo individuo di avere il controllo su tutti i detenuti
+	* la consapevolezza che qualcuno potrebbe guardarti fa sentire allo stesso modo costantemente osservato
+Critiche al panoptico da parte di Foucalt (1975):
+	- rappresentazione del potere moderno
+	- concetto di sorvegliare e punire
+	- simbolo della società di sorveglianza moderna
+	- critica alla normalizzazione del controllo sociale attraverso la sorveglianza e il potere disciplinare
+	
+
+
+# 04
+
+Modelli di sorveglianza; con Enrico V si dice che il re prende nota di tutte le intenzioni, con mezzi inimmaginabili; c'è la possibilità di rilevare 
+le intenzioni sulla base di comportamenti.
+
+--> con la tecnologia informatica, si va verso una società di sorveglianza (Gary Marx 1985)
+
+
+Le prime raccolte di dati (fine 800) servono per l'amministrazione dello stato (sicurezza, territorio, popolazione); il primo "esperimento" di sorveglianza è quello del censimento della popolazione, ha diversi funzioni:
+	- conta della popolazione nazionale
+	- organizzazione
+	- ordine/ordinamento
+	- tattica militare, gestione dell'esercito (contare di quante unità è composto l'esercito per una migliore organizzazione)
+	- gestione delle proprietà
+	- mappatura, fotografia di elementi di interesse per una determinata autorità (sia essa militare o civile)
+	
+Controllo istituzionale:
+	- è un'operazione proposta dalle istituzioni dotata di significativita e credibilità
+	- è durevole e visibile (sappiamo dove sono gli uffici dell'apparato statale, sono luoghi accessibili e non celati)
+	- designa i confini (simbolici) della normalità che non possono essere attraversati --> controllo formale
+	
+Controllo informale:
+	- funziona sulla base di una interazione sociale
+	- non ama mostrarsi, propone strutture orizzontali nascoste, invisibili
+	- ogni membro vigila ma allo stesso tempo è anche vigilato, affinché nessuno oltrepassi la sfera del lecito
+	
+Dimensioni della società moderna, 4 elementi su cui poggia l'organizzazione degli stati post rivoluzione industriale:
+	1) potere militare, nato con l'idea che i sovrani siano in conflitto con i prossimi per la gestione di territorio 
+	2) capitalismo (modello burocratico e organizzativo)
+	3) industrialismo (sorvegliante e sorvegliato)
+	4) sorveglianza (applicato ad altri aspetti della vita)
+
+
+Nella fabbrica di Carl Marx:
+	- metafora del mare: c'è una sovrastruttura che gestisce tutte le altre strutture che si poggiano su di essa (ad esempio tutto si poggia sui rapporti economici, che sono la variabile indipendente dal punto di vista sociale; la sovrastruttura riguarda i rapporti economici, che sono caratterizzati da rapporti di dominio (qualcuno è padrone di qualcosa); tutto il resto è costruito su questo rapporto, nel senso che la sovrastruttura caratterizza tutte le altre variabili)
+	- operaio ingranaggio di un sistema piu ampio: schiacciato dalla scienza delle macchine, sottomesso dal padrone
+	- delega della sorveglianza (operai che sorvegliano il lavoro / operai che sono sorvegliati); per fare in modo che possa funzionare i sorveglianti si sorvegliano tra di loro, ed inoltre si fa in modo che non sia noto ai sorvegliati chi siano i sorveglianti; c'è anche un sistema di sanzioni positive o negative
+		* specializzazione del lavoro --> la sorveglianza cosi diventa un lavoro specializzato, deve avere i suoi mezzi di produzioni, i suoi strumenti e il suo personale
+	- consenso: gli operai devono essere d'accordo affinche tutto questo funzioni --> è giusto che dato che siamo tutti pagati allo stesso modo dobbiamo lavorare tutti allo stesso modo; ed è giusto che ci sia qualcuno che ha il compito di sorvegliare
+	
+
+- Taylorismo (Frederick Taylor): segmentazione della produzione che viene affidata ad un singolo soggetto; per tale segmentazione c'è un tempo standard che deve essere rispettato
+	--> c'è una standardizzazione della produzione; c'è il concetto di cottimo, più produco e piu guadagno; se produci in tempo minore hai anche un vantaggio economico
+- Fordismo (Henry Ford): a partire dal taylorismo introduce l'innovazione tecnologica della catena di montaggio
+
+
+Max Weber - Burocratizzazione di massa; il mondo diventa composto di piccoli ingranaggi, ovvero piccoli uomini aggrappati a piccole occupazioni che ne mettono in moto altre più grandi --> questo porta alla disperazione e allo smembramento dell'anima
+
+Archeologia dei dati epistemici: è necessario fare un lavoro archeologico sui dati prodotti dalla burocrazia; ogni episteme è un quadro strutturale del sapere di un'epoca, che non è un fatto meramente teorico, ma sapere è potere; questo diventa poi biopotere, ovvero la possibilita di agire sulla vita e sul corpo
+
+
+Foucalt, storia della follia nell'età classica:
+	- pre classica: i folli sono al margine della societa ma riconosciuti come portatori di dati, messaggi, dal significato rilevante --> epoca dei supplizi
+	- classica: chi non è normale deve essere internato in luoghi di contenimento dedicati, e se capace usato come forza lavoro --> epoca della separazione, nasce la malattia mentale e il modello manicomiale
+	
+	
+Durkheim, due leggi dell'evoluzione penale:
+	- Legge quantitativa: l'intensità della pena è tanto più grande quanto più la società appartiene ad un tipo meno evoluto e quanto più il potere centrale ha un carattere assoluto
+	- Legge qualitativa: le pene privative della libertà e della libertà sola, per periodi di tempo variabili a seconda della gravità dei crimini, tendono a diventare il tipo normale di repressione
+	
+	--> man mano che le società si evolvono lo fa anche il diritto penale, si passa dai supplizi pubblici ad un risarcimento economico e il carcere
+	
+
+Il potere deve assolvere ad una delle funzioni che lo stato considera primaria: non più punire le infrazioni degli individui, bensì quella di correggere le loro devianze e di potenziali rischi connessi
+	--> tutte le opere architettoniche sono costruite in maniera tale da avere sempre la possibilità di osservare tutti i corpi
+
+
+Data(surv)veillance: uso indiscrimanto di telecamere ovunque, sia in luogo pubblici che privati; sono pratiche invasive che portano a possibili problematiche. La differenza di questi strumenti è che l'oggetto della sorveglianza è anche quello dei dati, ovvero quello che si può dedurre dal comportamento di un soggetto (profilazione della persona)
+
+
+
+# 05
+
+Articolo 4 del GDPR (è un regolamento il GDPR, atto di diritto secondario che ha effetto sugli stati membri:
+	- Dato personale = qualsiasi informazioni che riguardi una persona fisica identificata o identificabile (facendo riferimento a dati come nome, cognome, e altri elementi caratteristici della sua identità)
+	- Trattamento = qualsiasi tipo di operazione, con o senza l'ausilio di processi automatizzati, applicata a dati personali 
+
+Articolo 9: è vietato trattare dati personali che rivelino l'origine razziale o etnica, le opinioni politiche, religiose... ed anche dati biometrici o genetici che possano identificare in modo univoco una persona, dati relativi alla salute o all'orientamento sessuale di una persona
+	--> sono dati che riguardano una parte intima del soggetto, le sue convinzioni o personale
+
+Eccepibilità: con il consenso si definisce un perimetro del trattamento possibile (quando il consenso viene meno, il trattamento diventa illecito)
+
+
+Kentauros: è un sistema di sorveglianza implementato nella strutture di accoglienza per richiedenti asilo in Grecia; è il primo caso in cui un'autorità garante della protezione dei dati sanziona un ministero per la violazione di due articoli del GDPR
+	--> l'acquisizione dei dati non era lecita, venivano usati dati biometrici e algoritmi di analisi comportamentale
+
+
+Perché è importante parlare di trattenimento (immigrazione irregolare):
+	- sempre maggiore ricorso alla privazione della libertà per via amminstrativa 
+	- libertà di forme per gli strumenti usati per privare la libertà
+	- uso simbolico dello strumento
+	- cause respingenti che impediscono la partenza dal paese di origine
+
+Asimmetria nella detenzione amministrativa:
+	- trattare / trattenimento: c'è chi è in grado di trattenere qualcuno così come c'è chi ha il potere di trattare
+	- trattenimento = spazi fisici di inclusione ed esclusione sociale all'interno dei quali delle esistenze sono trattenute senza (almeno all'inizio) giustificazione normativa
+	
+
+
+Patto isituzionale con l'Albania: istituzione di centri di detenzione italiani in Albania; è possibile trasferire una persona al centro in Albania se proveniente da un paese sicuro; all'inizio i paesi terzi sicuri erano presi da un decreto interministeriale:
+	- Primo problema: c'è una differenza tra chi si trova nella stessa situazione in base al paese in cui provieni (migrante che raggiunge l'italia via mare); lo Stato ha diritto a trattare queste informazioni sensibili ma non a trattarle in maniera discriminatoria
+	- L'UE stabilisce che la valutazione del paese come sicuro o meno deve essere fatto caso per caso; magari ci sono paesi considerati sicuri, ma dove alcuni territori possono essere non sicuri per qualcuno
+	- A questo punto, per risolvere il problema, viene fatta una fonte di rango primario (e non più secondario) che i considera i paesi come sicuri per legge
+	- In realtà, di fronte a questo spostamento della fonte, non è cambiato niente perché rimane comunque sottoposta alla legge della corte di giustizia europea, quindi il problema (dal punto di vista del governo) non viene risolto
+	* Corte di giustizia europa 1 agosto 2025 --> se un paese non è sicuro per una determinata catagoria di persone, allora non puo essere considerato come sicuro in generale
+	
+	
+Il diritto d'asilo in Italia: è considerato tra i diritti fondamentali dell'uomo, la costituzione sansice che:
+	"lo straniero, al quale sia impedito nel suo paese l'effettivo esercizio delle libertà democratiche garantite dalla Costituzione italiana, ha diritto d'asilo nel territorio della Repubblica, secondo le condizioni stabilite dalla legge
+	--> secondo lo stato può fare domanda di asilo ciascun individuo a cui sia impedito, nel paese d'origine, l'esercizio delle libertà democratiche
+
+Attualmente l'Italia è sprovvista di una legge nazionale sul diritto d'asilo che dia attuazione all'articolo della costituzione; tuttavia, si fa affidamento alla convenzione di Ginevra del 1951 di cui l'Italia è firmataria
+	--> offre una definizione di rifugiato: chi ha un timore fondato di essere perseguitato per motivi di razza, religione, nazionalità, appartenenzna ad un determinato gruppo sociale o per le sue opinioni politiche, si trova fuori dal paese di cui è cittadino e non può o non vuole, a causa di questo timore, avvalersi della protezione di questo paese
+	* appartenenza ad un gruppo sociale = membri che condividono una caratteristica innata che non può essere mutata, oppure condividono una caratteristica così fondamentale per l'identità che una persona non dovrebbe essere costretta a rinunciarvi
+
+
+
+# 06
+
+Principio di non respingimento (art. 33 conv. di Ginevra): è un principio fondamentale del diritto internazionale; "ad un rifugiato non può essere impedito l'ingresso sul territorio né può essere esso deportato, espulso o trasferito verso territori in cui la sua vita o la sua libertà sarebbero minacciate"
+	- si applica indipendentemente che la persona sia stata riconosciuta rifugiata e/o dall'aver quest'ultima formalizzato o meno una domanda diretta ad ottenere tale riconoscimento
+	--> il respingimento consiste in qualsiasi forma di allontanamento forzao verso un paese non sicuro
+
+Requisiti per il riconoscimento dello status di rifugiato politico (secondo la conv. di Ginevra):
+	1) Fuga dal proprio paese; il rifugiato deve essere materialmente uscito dal proprio paese (fanno eccezioni i corridoi umanitari)
+	2) Il fondato timore di persecuzione; devono sussistere elemeni a sufficienza per ritenere che sia effettivamente a rischio di persecuzione nel proprio paese, indipendentemente dal fatto che le abbia subite o meno in passato 
+	3) Motivi specifici di persecuzione; la persecuzione deve essere operata in ragione di uno dei motivi indicati nell'articolo 1 (razza, religione, nazionalità, appartenenza ad un gruppo sociale, opinioni politiche), e deve consistere in minacce alla vita o alla libertà, in atti abbastanza gravi da costituire una violazione dei diritti umani fondamentali
+		* nell'esaminare se il timore di persecuzione sia giustificato, è irrilevante che il richiedente asilo abbia effettivamente le caratteristiche dell'articolo 1, purché gli vengano attribuite dall'autore delle persecuzioni
+	4) L'impossibilità di ricorrere alla protezione del proprio paese; si deve trovare nella posizione di non potere o non volere rivolgersi alle autorità del proprio paese
+		* l'agente persecutore potrebbe essere tollerato o non contrastato dallo stato, oppure lo stato stesso
+	
+Gli atti di persecuzione possono assumere la forma di:
+	- violenza fisica o psichica (compresa la violenza sessuale)
+	- provvedimenti legislativi, amministrativi, di polizia o giudiziari, discriminatorio per la loro natura o attuati in modo discriminatorio
+	- azioni giudiziarie o sanzioni penali sproporzionate o discriminatorie 
+	- rifiuto di accesso ai mezzi di tutela giuridici, con conseguente sanzione sproporzionata o discriminatoria
+	- azioni giudiziarie o sanzioni penali in conseguenza del rifiuto di prestare servizio militare in un conflitto, quando questo potrebbe comportare la commissione di crimini di guerra contro l'umanità
+	- atti specificatamente diretti contro un genere sessuale o contro l'infanzia
+
+Protezione sussidiaria: introdotto dal diritto dell'UE, rappresenta una forma di protezione internazionale a carattere secondario ed integrativo rispetto a quella dell'asilo politico. È da considerarsi benificiario "il cittadino di un paese terzo o apolide che non possiede i requisiti per essere riconosciuto come rifugiato, ma nei cui confronti sussistono fondati motivi per ritenere che, se tornasse nel paese di origine, correrebbe un rischio di subire un grave danno". Sono considerati danni gravi:
+	- la condanna a morte 
+	- la tortura o altra forma di pena o trattamento disumano o degradante
+	- minaccia alla vita
+
+Inizialmente esistevano alcune differenze di carattere amministrativo tra la condizione dei titolari di asilo politico e quelli di protezione sussidiaria, come la durata del relativo permesso di soggiorno. Tramite un decreto legislativo queste diseguaglianze sono state abolite, garantendo la creazione di uno status unitario.
+
+Centri per migranti in Albania: la domanda di asilo rende incompatibile la detenzione al di fuori dei confini nazionali, perché quando viene fatto lo status giuridico della persona cambia da soggetto destinato al rimpatrio a richiedente asilo, e dunque ha diritto a restare nel territorio nazionale fino a che la sua domanda viene esaminata (principio di non respingimento)
+
+Campo / Concentramento: è un mezzo supplementare di cui una società si doata per estromettere uomini e donne che ufficialmente non si sono macchiati di alcun crimine e che, per tale ragione, non possono essere giudicati dal normale apparato giudiziario. Esiste un modello quasi ideale, quello del campo militare: è la città artificiale, dove il potere viene esercitato con una sorveglianza precisa; vengono definite con precisione la geometria delle strade, il numero e la distribuzione delle tende...si disegna la rete degli sguardi che si controllano l'un l'altro
+
+Il soggetto accede ai CPR dopo aver svolto una visita medica che accerti l'assenza di patologie che rendano incompatibile l'ingresso e la permanenza nella struttura, come malattie infettive o disturbi psichiatrici, o tutto ciò che non potrebbe ricevere le cure adeguate; la certificazione di idoneità diventa quindi un presupposto necessario alla legalità del trattenimento.
+
+
+# 07
+I fatti: condannati dal tribunale distrettuale del distretto di Washington per concorso nella violazione del National Prohibition Act possedendo, trasportando e importando illegalmente liquori per la vendita degli stessi; Olmstead era il principale cospiratore e il direttore generale dell'azienda.
+
+In fatto (di prove): le informazioni che hanno portato alla scoperta della cospirazione sono state in gran parte ottenute intercettando i messaggi sui telefoni dei cospiratori da parte di quattro uffici federali; le intercettazioni sono state fatte senza violazione di alcuna proprietà degli imputati
+
+In diritto: contrabbando di sostanze alcoliche; gli imputati si sono opposti all'ammissione delle prove ottenute tramite intercettazioni telefoniche, sulla base del fatto che esse costituissero una perquisizione e un sequestro irragionevoli, in violazione del IV emendamento. Inoltre, l'uso come prova delle conversazioni costringeva gli imputati a testimoniare contro sé stessi, in violazione con il V emendamento
+
+Decisione della corte (5-4): stabilisce che non vi fu violazione del IV né del V emendamento, argomentando:
+	- Assenza di intrusione fisica: il IV emendamento parla di "persone, case, documenti ed effetti personali"; dato che gli agenti non sono entrati fisicamente nei locali, non c'è stata una perquisizione ai sensi della costituzione
+	- La conversazione come immateriale: la voce trasmessa venne considerata come non tangibile, e dunque non assimilabile ad un bene fisico che potesse essere sequestrato
+	- Nessuna coercizione personale: il V emendamento tutela dall'obbligo di auto-incriminarsi, ma in questo caso le parole furono pronunciate volontariamente da Olmstead
+	- Rispetto formale della legge: dato che non esisteva una lege che proibisse le intercettazioni telefoniche, l'azione del governo non poteva essere considerata illegale
+
+
+Le clausole che garantiscono alla persona la protezione contro specifici abusi di potere, devono avere una capacità di adattamento al mondo che cambia. 
+La legislazione è emanata da un'esperienza di mali, ma il suo linguaggio generale non deve essere limitato alla forma che il male aveva assunto fino a quel momento; un principio per essere vitale deve essere capace di un'applicazione più ampia del male che lo ha generato; questo è particolarmente vero per le costituzioni, che "sono progettate per avvicinare all'immortalità il più possibile le istituzioni umane".
+
+
+Right to privacy - Warren & Brandeis, 1890
+
+"le fotografie istantanee e la stampa stanno invadendo i luoghi della vita privata; e molti dispositivi meccanici minacciano di avverare la profezia secondo cui ciò che viene sussurato negli armadi sarà proclamato dai tetti"
+
+I due autori inquadrano la privacy come una cateogoria indipendente, che scaturisce dalla necessità di proteggere la natura dell'uomo; come la proprietà intellettuale, che godeva già di piena tutela nel sistema statunitense dell'800, riguarda beni astratti come le immagini, pensieri, emozioni, anche il diritto alla privacy si propone lo scopo di proteggere una proprietà spirituale dell'uomo
+	--> ogni uomo ha diritto a controllare la diffusione dei propri pensieri ed emozioni
+
+Privacy...:
+	* Privacy come evoluzione di common law 
+	* Protegge la sfera morale ed emotiva, non solo la proprietà
+	* Le tecnologie moderne richiedono un adattamento della legge
+	* Si fonda sul diritto ad essere lasciati soli
+
+
+# 08 - [seconda parte] 
+
+- Casistica di Charles Katz (1965), è utile per osservare l'evoluzione del diritto costituzionale. Era sospettato di essere coinvolto in attività di gioco d'azzardo; il tema è sempre quello delle intercettazioni telefoniche come prove: gli agenti federali attaccarono una cimice all'esterno della cabina telefonica da lui utilizzata, e le intercettazioni vennero usate per accusarlo di aver trasmesso informazioni illegali sulle scommesse, in violazione con una legge federale; Katz si appellò al IV emendamento, sostenendo che le prove fossero state raccolte in modo illegittimo.
+La Corte d'Appelllo negò che il contenuto delle registrazioni potesse godere della protezione del IV emendamento, dato che non c'era stata alcuna intrusione fisica all'interno della cabina telefonica; inoltre, dato che non ci fu nessun bene tangibile ad essere stato perquisito il IV emendamento non poteva essere applicato (la cabina telefonica è pubblica, dunque non rientra nella sfera di protezione della costituzione).
+Nel 1967 il caso arriva alla Corte Suprema, dove il caso venne rovesciato, ponendo al centro della decisione la legittimità dell'aspettativa di privacy di Katz, lesa dall'intercettazione telefonica.
+
+--> si rende necessaria una nuova interpretazione del IV emendamento, il quale "protegge le persone, non i luoghi; ciò che uno cerca di preservare come privato, anche se in un luogo accessibile al pubblico, gode di tutela costituzionale".
+
+Il giudice sostenne che l'errore della polizia federale fu quello di aver ignorato la procedura di autorizzazione preventiva (richiedere un mandato).
+
+- Test in due fasi: duplice requisito affinché un cittadino abbia diritto alla privacy:
+	- la persona ha mostrato un'effettiva (e soggettiva) aspettativa di privacy
+	- tale aspettativa di privacy è riconosciuta dalla società come ragionevole
+--> solo se la Corte risponde affermativamente ad entrambe le domande, si potrà fare riferimento alla protezione garantita dal IV emendamento
+
+- Esposizione volontaria: diviene necessario considerare non passivamente l'evoluzione tecnologica ed i riflessi sulla realtà, dove tutti i dettagli della vita di una persona sono rilevabili; se una persona espone volontariamente dati che la riguardano, l'eventuale aspettativa di privacy che questa persona potrebbe mostrare non è ragionevole
+
+
+- Caso Carpenter (2018): condannato a 116 anni di carcere per una serie di rapine, grazie a dati raccolti dal provider telefonico; questi dati sono stati raccolti in forza di una richiesta avanzata secondo lo Stored Communications Act, una legge che consente di ottenere i dati conservati online (senza i requisiti stringenti di un mandato)
+--> la differenza è che prima le operazioni di polizia non avevano alcuna base giuridica, si cercava di raccogliere informazione che soltanto dopo potessero diventare prove; ora invece le operazioni sono fondate su una norma di legge dello stato
+
+Si sta parlando di dati scambiati tramite la rete mobile, in particolare quelli scambiati quando il telefono si aggangia ad una cella della rete mobile: questi dati permettono di intercettare ovunque e costantemente, mettendo a disposizione degli investigatori una sorta di macchina del tempo.
+
+
+- Dottrina di terza parte: questi dati secondo molte corti possono essere richiesti senza alcun mandato di un giudice, per quella che la Corte Suprema chiama dottrina delle terze parti, la quale ruota attorno al concetto di "aspettativa ragionevole di privacy".
+
+--> Smith vs Maryland (1979): la corte stabilì che un sospettato di rapina non potesse avere alcuna aspettativa ragionevole che il suo diritto di privacy si estendesse ai numeri chiamati dal suo telefono fisso, perché digitando quel numero egli stava volontariamente consengando tale informazione alla compagnia telefonica (una terza parte); questo concetto fu poi esteso anche a dati condivisi con banche, provider, compagnie telefoniche
+
+Con il caso Riley vs California, la Corte ha dichiarato l'incostituzionalità dell'attività di perquisizione e raccolta di dati contenuti in un telefono cellulare senza il mandato di un giudice; tuttavia, nel caso Carpenter, si stanno trattando dati conservati da compagnie telefoniche: qual è il livello di protezione assicurato a questi dati? 
+
+Jones vs USA (2012): il giudice scrive che è necessario riconsiderare il principio dell'aspettativa ragionevole di privacy, che aveva senso nell'età analogica, ma va declinato in maniera diversa nell'era digitale (giudicando l'incostituzionalità dell'applicazione di un dispositivo GPS ad un'auto senza il mandato di un giudice).
+Tuttavia, il caso Carpenter mette in evidenza come il monitoraggio dei movimenti personali può rilevare particolari straordinariamente precisi su vita privata, orientamenti politici, sessuali, religiosi, condizioni di salute... 
+--> tali dati per questa ragione devono essere protetti; gli utilizzatori delle tecnologie odierne non possono impedire di trasmettere costantemente dati sensibili ai provider, ma hanno una legittima aspettativa che questi dati restino riservati
+--> le regole pensate per la privacy di un mondo analogico devono essere adattate al mondo digitale, e così anche le ragionevoli aspettative: la trasmissione di dati a terzi non può privarli della protezione assicurata dal IV emendamento
+
+	* Amicus Curiae: intervento rilevante di terze parti (università, associazioni per libertà di stampa, aziende come Airbnb, Google, Apple, Microsoft, Meta) per sostenere la posizione di un soggetto coinvolto in un procedimento
+
+L'innovazione nel caso Jones vs USA sta nel fatto che due giudici abbiano sostenuto che il IV emendamento fosse stato violato non per la violazione della proprietà privata, ma che essa discendesse dal principio della ragionevole aspettativa di privacy.
+L'attualità sta nel saper guardare con lucidità alla potenzionalità lesiva dei diritti fondamentali dovuta alle nuove tecnologie, e allo stesso tempo nel proporre un'interpretazione evolutiva del dettato letterale del IV emendamento, al fine di preservarne il senso ultimo e più profondo.
+
+
+
+Si passa dalla concezione di privacy come "diritto ad essere lasciati soli" a "diritto a mantenere il controllo sulle proprie informazioni"; in questo modo la privacy si proietta oltre il riserbo, dato che nella sfera personale rientrano informazioni personali su cui il soggetto intende mantenere un controllo.
+--> nuova accezione di privacy come "protezione delle scelte essenziali di vita", per cui privato non è più ciò che è segreto ma ciò che è personale.
+
+La CEDU rivendica che quello del diritto alla privacy debba essere una categoria aperta, "non suscettibile di una definizione esaustiva"; comprende l'integrità fisica e psicologica.
+
+Il diritto italiano definisce il Codice Privacy (codice = testo di riferimento completo per la disciplina di un determinato agormento; include anche pareri professionalmente referenziati), suddiviso in tre parti:
+	- disposizioni generali, in cui è possibile trovare tutte le regole
+	- parte speciale dedicata a specifici settori (es. dati sanitari)
+	- tutele amministrative e giurisdizionali, in cui vengono individuate le sanzioni amministrative e penali
+Ci sono due chiavi di lettura sul rapporto dati-informazioni:
+	1) i dati sono informazioni riferibili a persone e come tali vanno protetti
+	2) i dati non devono essere visti subito come informazioni riferibili alla persona; le informazioni sono il risultato di un lavoro interpretativo svolto sul dato, e si devono ricollegare alla categoria dei beni	
+-->  considerare i dati come beni (materiali) avrebbe portato fuori dalla tutela del codice privacy 
+
+
+
+# 9 - GDPR
+
+La necessità di adottare un regolamento in materia di privacy nasce dalla continua evoluzione dei diversi concetti di privacy e di protezione dei dati personali; si ha la necessità di proteggere gli individui e la loro sicurezza, insieme a quella degli Stati da rischi terroristici.
+
+--> Pacchetto Europeo Protezione dei Dati:
+	- inserisce l'obbligo dell'individuazione di un DPO (data protection officer), obbligo di valutazione di impatto sulla protezione dei dati per i casi in cui il trattamento presenta rischi elevati
+	- vengono definite dati personali (non esaustivamente) tutte le informazioni ricoduncibili ad una persona fisica, alla sua vita privata, professionale o pubblica... "ogni persona ha diritto alla protezione dei dati personali che la riguardano"
+	
+[*] Art. 1 - ambito di applicazione:
+	1) Il regolamento stabilisce norme relative alla protezione delle persone fisiche con riguardo al trattemento dei dati personali, oltre che norme relative alla libera circolazione di tali dati
+	2) Il regolamento protegge i diritti e le libertà fondamentali delle persone fisiche, in particolare il diritto alla protezione dei dati personali
+	3) La libera circolazione dei dati in UE non può essere limitata né vietata per motivi attinenti alla protezione delle persone fisiche con riguardo al trattamento dei dati personali
+
+[*] Art. 2 - ambito di applicazione materiale:
+	1) Il regolamento si applica al trattamento interamente o parzialmente automatizzato di dati personali e al trattamento non automatizzato di dati personali contenuti in un archivio
+
+Ambito di applicazione territoriale:
+	1) Il regolamento si applica al trattamento dei dati personali effettuato nell'ambito delle attività di uno stabilimento da parte di un titolare o responsabile del trattamento nell'Unione, indipendemente dal fatto che il trattamento sia effettuato o meno nell'Unione
+	2) Il regolamento si applica al trattamento dei dati personali di interessati che si trovano nell'Unione, effettuato da un titolare o responsabile del trattamento che non è stabilito nell'unione, quando le attività riguardano:
+		- l'offerta di beni o la prestazione di servizi ai suddetti interessati nell'Unione, indipendemente dall'obbligatorietà di un pagamento
+		- il monitoraggio del loro comportamento nella misura in cui tale comportamento ha luogo all'intero dell'Unione
+
+[*] Art. 4 - definizioni:
+	- Dato personale: qualsiasi informazione riguardante una persona fisica identificata o identificabile (interessato); si considera identificabile la persona fisica che può essere indentificata, direttamente o indirettamente, con particolare riferimento ad un identificativo come nome, cognome, SSN... o più elementi caratteristici della sua identità fisica, fisiologica, genetica, psischica, culturale o sociale
+	- Trattamento: qualsiasi operazione o insieme di operazione, compiute con o senza l'ausilio di processi automatizzati e applicate a dati personali o insieme di dati personali, come la raccolta, registrazione, modifica, conservazione...
+
+[*] Art. 9 - trattamento di categorie particolari di dati personali:
+	- è vietato trattare dati personali che rivelino l'origine razziale o etnica, le opinioni politiche, le convinzioni religiose o filosofiche, nonché trattare dati genetici, biometrici intesi ad identificare in modo univoco una persona fisica, dati relativi alla salute o alla vita sessuale o all'orientamento sessuale di una persona
+	
+
+
+Dati sensibili:
+	- Dati genetici: sono dati relativi alle caratteristiche genetiche che forniscono informazioni univoche sulla fisiologia o sulla salute di una persona fisica, e che risultano dall'analisi di un campione biologico della persona fisica in questione
+	- Dati biometrici: dati personali ottenuti da un trattamento tecnico specifico relativi alle caratteristiche fiosologiche o comportamentali di una persona fisica, che ne consentono l'identificazione univoca
+	
+	
+L'AI act definisce identificazione biometrica il riconoscimento automatizzato delle caratteristiche umane fisiche, fisiologiche, comportamentali o psicologiche allo scopo allo scopo di determinare l'identità di una persona fisica confrontando i suoi dati biometrici con quelli di individui memorizzati in una banca dati.
+Secondo il testo del regolamento europeo, i sistemi di IA saranno in grado non solo di raccogliere le emozioni a fini identificativi, ma anche le intenzioni dei soggetti a partire dai loro comportamenti.
+Vengono definiti:
+	- Sistema di identificazione biometrica remota: un sistema di IA finalizzato all'identificazione di persone fisiche, senza il loro coinvolgimento attivo, tipicamente a distanza mediante il confronto dei dati biometrici di una persona con dati biometrici contenenuti in una banca dati di riferimento
+	- Sistema di identificazione biometrica remota in tempo reale: un sistema di identificazione biometrica remota in cui il rilevamento dei dati biometrici, il confronto e l'identificazione avvengono senza ritardi significativi
+	- Sistema di identificazione biometrica remota a posteriori: a differenza di quello in tempo reale, è prevista la necessità/possibilità di procedere a posteriori
+	
+Dati relativi alla salute: riguardano la salute fisica o mentale di una persona compresa la prestazione di servizi di assistenza sanitaria che rivelino o siano idonee a rivelare informazioni relative al suo stato di salute; comprendono anche informazioni sulla persona fisica raccolte in fase di registrazione al fine di ricevere servizi di assistenza sanitaria.
+
+
+Eccezioni al divieto di trattamento dei dati sensibili:
+	a) l'interessato ha prestato il proprio consenso esplicito al trattamento di tali dati personali per una o più finalità specifiche
+	b) il trattamento è necessario per assolvere gli obblighi ed esercitare i diritti specifici del titolare del trattamento o dell'interessato in materia di diritto del lavoro e della sicurezza sociale e protezione sociale, nella misura in cui sia autorizzato dal diritto dell'Unione o degli Stati membri o da un contratto collettivo, in presenza di garanzie appropriate per i diritti fondamentali e gli interessi dell'interessato
+	c) il trattamento è necessario per tutelare un interesse vitale dell'interessato o di un'altra persona fisica qualora l'interessato si trovi nell'incapacità fisica o giuridica di prestare il proprio consenso
+	d) il trattamento è effettuato da una fondazione, associazione o altro organismo senza scopo di lucro che persegua finalità politiche, filosofiche, religiose o sindacali, a condizione che il trattamento riguardi unicamente i membri, ex membri, o persone che hanno regolari contatti con la fondazione, e che i dati personali non siano comunicati all'esterno senza il consenso dell'interessato
+	e) il trattamento riguarda dati personali resi manifestamente pubblici dall'interessato 
+	f) il trattamento è necessario per accertare esercitare o difendere un diritto in sede giudiziaria
+	g) il trattamento è necessario per motivi di interesse pubblico rilevante sulla base del diritto dell'Unione o degli Stati membri
+	h) il trattamento è necessario per finalità di medicina preventiva o di medicina del lavoro, valutazione della capacità lavorativa del dipendente
+	i) il trattamento è necessario per motivi di interesse pubblico nel settore della sanità pubblica, quali la protezione da gravi minacce per la salute a carattere transfrontaliero
+	j) il trattamento è necessario a fini di archiviazione nel pubblico interesse, di ricerca scientifica o storica o a fini statistici
+
+
+
+È prevista la necessità di subordinare il trattamento di dati genetici, biometrici, relativi alla salute alle misure di garanzia proposte dal Garante con provvedimento avente cadenza almeno biennale; sono particolarmente importanti:
+	- dati che permettono l'identificazione diretta o indiretta
+	- dati che rientrano in particolari categorie considerati sensibili (quelli che rivelano l'origine razziale o etnica, convizioni politiche o religiose...)
+	- dati relativi a condanne penali e reati
+Il provvedimento a cadenza biennale dovrà tenere conto di:
+	- linee guida, raccomandazioni e best practices
+	- evoluzione scientifica e tecnologica nel settore oggetto delle misure
+	- interesse della libera circolazione dei dati personali nell'UE
+
+
+Accountability: il regolamento si basa sull'accountability; talvolta non effettua scelte rimettendole al titolare del trattamento che è chiamato ad effettuare una valutazione, prendere una decisione e provare di aver adottato misure proporzionate ed efficaci, per la minimizzazione dei rischi legati alla raccolta e conservazione dei dati; è la capacità di dare conto.
+
+
+
+Il trattamento dei dati personali si basa su tre principi:
+	- Liceità
+	- Trasparenza
+	- Accountability
+La normativa UE in materia di protezione dei dati richiede che i dati siano trattati in modo lecito; la liceità del trattamento richiede il consenso dell'interessato o un'altra base legittima. 
+Oltre al consenso, il trattamento è lecito se è necessario per:
+	- l'esecuzione di un contratto 
+	- l'esecuzione di un compito connesso all'esercizio di pubblici poteri (indagini)
+	- adempiere ad un obbligo legale
+	- perseguimento del legittimo interesse del titolare del trattamento o di terzi (finalità di marketing diretto)
+	- la salvaguardia degli interessi vitali dell'interessato (epidemie, emergenze umanitarie)
+
+Secondo il diritto dell'UE il titolare del trattamento ha l'obbligo di informare l'interessato che tratterà i suoi dati in maniera lecita e trasparente e in grado di dimostrare la conformità delle operazioni con il GDPR (accountability).
+Inoltre, i responsabili dovrebbero, per quanto e ove possibile, agire in modo da conformarsi alla volontà dell'interessato, specialmente quando il suo consenso costituisce la base giuridica del trattamento
+
+
+Minimizzazione dei dati: principio secondo cui devono essere trattati solo i dati:
+	- adeguati
+	- pertinenti
+	- non eccessivi
+rispetto alle finalità per cui vengono rilevati o per cui vengono successivamente trattati
+
+Il titolare in possesso di dati deve garantire:
+	- protezione attraverso anonimizazzione del dato conservato 
+	- adottare misure tecniche e organizzative di sicurezza per proteggere i dati da accesso, uso, modifica... non autorizzato o comunque illegale
+	
+
+Caratteristiche del consenso:
+	- libero
+	- informato
+	- specifico
+	- inequivocabile
+Gli interessati devono essere in grado di scegliere per quali scopi acconsentono al trattamento. Le informazioni destinate all'interessato facilmente accessibili e di facile compresione, deve essere utilizzato un linguaggio semplice e chiaro (trasparenza)
+
+
+
+# 10 - Diritti degli interessati
+
+[*] Art. 15 - Diritto di accesso:
+1) L'interessato ha il diritto di ottenere dal titolare del trattamento la conferma che sia o meno in corso un trattamento di dati personali che lo riguardano e in tal caso, di ottenere l'accesso ai dati personali e alle seguenti informazioni:
+	a) finalità del trattamento 
+	b) categorie di dati personali in questione
+	c) destinatari o categorie di destinatari a cui i dati personali sono stati o saranno comunicati, in particolare se destinatari di paesi terzi o organizzazioni internazionali
+	d) il periodo di conservazione, o se non è possibile i criteri utilizzati per determinare tale periodo
+	e) l'esistenza del diritto dell'interessato di chiedere al titolare la rettifica o la cancellazione dei dati personali, o la limitazione del trattamento dei dati personali che lo riguardano o di opporsi al loro trattamento 
+	f) il diritto di proporre reclamo a un'autorità di controllo
+	g) qualora i dati non siano raccolti presso l'interessato, tutte le informazioni disponibili sulla loro origine
+	h) l'esistenza di un processo decisionale automatizzato, ed in tal caso informazioni sulla logica utilizzata
+2) Qualora i dati personali siano trasferiti ad un paese terzo o ad un'organizzazione internazionale, l'interessato ha il diritto di essere informato dell'esistenza di garanzie adeguate
+3) Il titolare del trattamento fornisce una copia dei dati personali oggetto di trattamento; in caso di ulteriori copie richieste, il titolare può addebitare un contributo spese ragionevole; se l'interessato presenta la richiesta mediante mezzi elettronici, le informazioni sono fornite in formato elettronico di uso comune
+4) Il diritto di ottenere una copia del paragrafo 3 non deve ledere diritti e libertà altrui
+
+Ove possibile, il titolare dovrebbe poter fornire l'accesso remoto a un sistema sicuro che consenta all'interessato di consultare direttamente i propri dati personali; tale diritto non deve ledere le libertà altrui compreso il segreto industriale e aziendale. Tuttavia, tali considerazioni non dovrebbero condurre a un diniego a fornire all'interessato tutte le informazioni.
+Se il titolare del trattamento tratta una notevole quantità di informazioni riguardanti l'interessato, il titolare dovrebbe poter richiedere che l'interessato precisi, prima che siano fornite le informazioni, a quali di esse o attività di trattamento si riferisce.
+Il titolare deve adottare tutte le misure ragionevoli per verificare l'identità dell'interessato che chieda l'accesso.
+Tutte le informazioni devono essere fornite in modo intelleggibile, cioè comprensibili all'interessato, ed di norma in modo gratuito; tuttavia, possono essere applicati costi purché ragionevoli.
+
+Termini: se non ottempera alla richiesta dell'interessato il titolare del trattamento deve darne informazione all'interessato senza ritardo e comunque entro 30gg dal ricevimento della richiesta e dovrà dare i motivi dell'inottemperanza e della possibilità di proporre reclamo ad un'autorità di controllo.
+
+Sono previste limitazioni all'accesso:
+	- quando incide o influisce su libertà o diritti altrui 
+	- sulla base di richieste manifestatamente infondate o eccessive
+	
+CGUE: 
+	- la restrizione a limiti temporali del diritto di accesso ai dati personali non deve essere indebita
+	- gli interessati devono poter avere una ragionevole possibilità di acquisire i dati e informazioni sulle operazioni di trattamento effettuate in passato
+	- il diritto di accesso è necessario affinché l'interessato possa esercitare il diritto di ottenere dal titolare del trattamento la rettifica, la cancellazione o il blocco del trattamento dei suoi dati o affinché egli notifichi tale rettifica, cancellazione o blocco a terzi cui tali dati sono stati comunicati 
+	- un effettivo diritto di accesso è necessario all'interessato anche al buon fine dell'esercizio del diritto di opposizione al trattamento dei suoi dati ovvero al diritto di presentare reclamo o richiedere il risarcimento del danno
+	- Dottrina degli effetti utili: per garantire l'effetto utile dei diritti conferiti agli interessati, tale diritto deve estendersi al passato, dato che in caso contrario l'interessato non sarebbe in grado di esercitare il suo diritto in modo efficace
+
+
+[Altri diritti]
+Rettifica: 
+L'interessato ha il diritto di ottenere dal titolare del trattamento la rettifica dei dati personali inesatti che lo riguardano senza ingiustificato ritardo. Tenuto conto delle finalità del trattamento, l'interessato ha il diritto di richiedere l'integrazione dei dati personali incompleti.
+La CEDU ha stabilito che "senza ritardo" corrisponde a 30 giorni, estendibile a 60 per particolari necessità o sulla base del numero di richieste.
+Nel caso in cui il titolare non intenda rettificare i dati in suo possesso, deve informare l'interessato evidenziando i motivi della sua decisione, ed informandolo della possibilità di presentare reclamo ad una autorità di controllo.
+La rettifica è particolarmente rilevante nei settori che hanno un impatto significativo sull'esistenza degli interessati (sanitario, finanziario...)
+
+
+Limitazione - art. 18:
+1) L'interessato ha il diritto di ottenere dal titolare del trattamento la limitazione del trattamento quando ricorre una delle seguenti ipotesi:
+	a) l'interessato contesta l'esattezza dei dati personali, per il periodo necessario al titolare del trattamento per verificare l'esattezza di tali dati personali
+	b) il trattamento è illecito e l'interessato si oppone alla cancellazione dei dati personali e chiede invece che ne sia limitato l'utilizzo
+	c) benché il titolare del trattamento non ne abbia più bisogno ai fini del trattamento, i dati personali sono necessari all'interessato per l'accertamento, l'esercizio o la difesa di un diritto in sede giudiziaria
+	d) l'interessato si è opposto al trattamento ai sensi dell'articolo 21
+2) Se il trattamento è limitato a norma del paragrafo 1, tali dati personali sono trattati, salvo che per la conservazione, soltanto con il consenso dell'interessato o per l'accertamento, esercizio o difesa di un diritto in sede giudiziaria oppure per tutelare i diritti di un'altra persona, o per motivi di interesse pubblico rilevante nell'Unione
+3) L'interessato che ha ottenuto la limitazione del trattamento a norma del paragrafo 1 è informato dal titolare del trattamento prima che detta limitazione sia revocata
+
+Modalità di limitazione da parte del titolare del trattamento: 
+	- trasferire temporaneamente i dati verso un altro sistema di trattamento
+	- rendere i dati inaccessibili agli utenti
+	- rimuovere i dati personali
+
+
+Diritto all'oblio: 
+L'interessato deve avere il diritto di chiedere che siano cancellati e non più sottoposti a trattamento i propri dati personali:
+	- che non siano più necessari per le finalità per cui sono stati raccolti o trattati
+	- quando abbia ritirato il consenso o si sia sottoposto al trattamento dei dati personali che lo riguardano
+	- quando il trattamento non sia conforme al regolamento
+Si tratta di un diritto particolarmente rilevante in alcune situazioni, ad esempio quando il consenso sia stato fornito quando l'interessato era minorenne
+
+Tuttavia, sono previste alcune eccezioni; dovrebbe essere lecita la conservazione dei dati qualora sia necessaria per:
+	- esercitare il diritto alla libertà di espressione e informazione
+	- adempiere ad un obbligo legale
+	- eseguire un compito di interesse pubblico, o nell'esecuzione dei pubblici poteri nell'ambito della sanità pubblica
+	- finalità di archiviazione per pubblico interesse, per finalità di ricerca scientifica, storica, statistica
+	- accertare, esercitare o difendere un diritto in sede giudiziaria
+
+Dottrina e diritto vivente del diritto all'oblio:
+è una forma di garanzia che prevede la non diffondibilità di dati/precedenti pregiudizievoli, in particolari dei precedenti giudiziari di una persona; è il diritto individuale ad essere dimenticato, o meglio, non più ricordato per fatti che in passato siano stati oggetto di cronaca: il presupposto è che l'interesse pubblico alla conoscenza di un fatto è circoscritto allo spazio temporale necessario ad informare la collettività, e con il trascorrere del tempo questo si affievolisce fino a scomparire
+
+
+Portabilità - art. 20:
+1) L'interessato ha il diritto di ricevere in un formato strutturato, di uso comune e leggibile da dispositivo automatico i dati personali che lo riguardano forniti ad un titolare del trattamento e ha il diritto di trasmettere tali dati ad un altro titolare del trattamento senza impedimenti da parte del titolare cui li ha forniti qualora:
+	a) il trattamento si basi sul consenso ai sensi dell'articolo 6, paragrafi ... , o su un contratto ...
+	b) il trattamento sia effettuato con mezzi automatizzati
+2) Nell'esercitare i propri diritti relativamente alla portabilità dei dati a norma del paragrafo 1, l'interessato ha il diritto di ottenere la trasmissione diretta dei dati personali da un titolare di trattamento all'altro, se tecnicamente fattibile
+3) L'esercizio del diritto di cui al paragrafo 1 lascia impregiudicato l'articolo 17 (oblio/cancellazione). Tale diritto non si applica al trattamento necessario per l'esecuzione di un compito di interesse pubblico o connesso all'esercizio di pubblici poteri di cui è investito il titolare del trattamento
+4) Il diritto di cui al paragrafo 1 non deve ledere i diritti e le libertà altrui
+
+Il titolare che trasferisce i dati ad un altro titolare è responsabile solo del trasferimento, ma non del trattamento gestito da terzi
+--> la scelta del titolare successivo è effettuata dall'interessato e non dal primo titolare
+
+È buona prassi:
+	- trasmissione diretta dell'intero insieme dei dati portabili 
+	- utilizzo di uno strumento automatizzato che consenta l'estrazione dei dati 
+
+Limitazione ai diritti: il diritto dell'unione e degli stati membri può imporre limitazioni a specifici principi e ai diritti; le limitazioni dovrebbero essere conformi alla Carta e alla Convenzione europea per la salvaguardia dei diritti dell'uomo e delle libertà fondamentali
+
+
+Art. 5:
+a) Trattati in modo lecito, corretto e trasparente nei confronti dell'interessato (liceità, correttezza e trasparenza)
+b) raccolti per finalità determinate, esplicite e legittime, e successivamente trattati in modo che non sia incompatibile con tali finalità (limitazione delle finalità)
+c) adeguati, pertinenti e limitati a quanto necessario rispetto alle finalità per le quali sono trattati (minimizzazione dei dati)
+d) esatti e, se necessario, aggiornati (esattezza)
+e) conservati in una forma che consenta l'identificazione degli interessati per un arco di tempo non superiore al conseguimento delle finalità per le quali sono trattati; i dati personali possono essere conservati per periodi più lunghi a condizione che siano trattati esclusivamente a fini di archiviazione nel pubblico interesse, di ricerca scientifica o storica o a fini statistici (limitazione della conservazione)
+f) trattati in maniera da garantire un'adeguata sicurezza dei dati personali (integrità e riservatezza)
+
+2) Il titolare del trattamento è competenente rispetto al paragrafo 1 ed è in grado di comprovarlo (responsabilizzazione)
+
+
+# NIS 2
+
+Si tratta di una direttiva del Parlamento Europeo e del Consiglio rivolta alla necessità di raggiungere un livello comune di cybersecurity in Unione Europea.
+Diverse analisi hanno inciso sulla necessità di ripensare le strategie europee (e nazionali) in tema di sicurezza informativa e di rete guardando ad una strutturazione a tre pilastri:
+	- coordination
+	- awareness
+	- partnership public-private
+Le infrastrutture critiche sono il target preferenziale degli attacchi; sono definite come una categoria aperta, nel seguente modo: è un sistema complesso distribuito geograficamente, caratterizzato da un comportamento dinamico e non lineare (anche piccoli eventi possono provocare una forte alterazione nelle funzionalità del sistema), e che interagisce con altre infrastrutture critiche sia con altri soggetti (gestori, utenti...); per molte di queste infrastrutture non esiste nessuna singola entità che abbia il completo controllo o anche solo la conoscenza del sistema, né di gestirlo in modo centralizzato.
+
+La direttiva ha lo scopo di rendere uniformi gli ordinamenti dei diversi Stati membri, superando le differenze tra diverse entità proponendo le categorie di soggetti essenziali (settori ad alta criticità) e soggetti importanti (ma non essenziali).
+
+Soggetti essenziali:
+	- settore bancario e finanziario
+	- infrastrutture e trasporti
+	- energia
+	- salute 
+Soggetti importanti:
+	- settore alimentare 
+	- servizi pubblici come postale, rifiuti
+	- industria chimica e farmaceutica
+	
+Possiamo ritenere la direttiva NIS 2 fondata su tre assi principali:
+	- ambito di applicazione e soggetti destinatari
+	- misure da adottare
+	- notifiche, ovvero soggetti obbligati, autorità destinatarie delle segnalazioni
+	
+Nel contesto della direttiva gli Stati membri sono tenuti ad adottare una strategia nazionale per la cyber sicurezza che definisca gli obiettivi strategici e le misure politico-normative volte a raggiungere un livello adeguato di tutela.
+La direttiva impone che tutti i soggetti che rientrano nell'ambito di applicazione della norma approvino misure di gestione dei rischi; sugli Stati grava anche l'obbligo di garantire che i soggetti notifichino alle autorità nazionali qualsiasi incidente di cyber sicurezza che abbia un impatto significativo
+
+
